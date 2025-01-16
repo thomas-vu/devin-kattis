@@ -31,9 +31,9 @@ def scrape_problem(problem_id):
         return False
 
 
-# Read the first 10 problems from problems.txt
+# Read all problems from problems.txt
 with open('problems.txt', 'r') as f:
-    problems = [line.strip() for line in f.readlines()[:10]]
+    problems = [line.strip() for line in f.readlines()]
 
 # Process each problem
 for problem_id in problems:
