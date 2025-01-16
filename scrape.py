@@ -1,14 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
-import os
+
 
 def scrape_problem(problem_id):
     # URL of the problem
     url = f'https://open.kattis.com/problems/{problem_id}'
-    
-    # Create directory if it doesn't exist
-    os.makedirs(problem_id, exist_ok=True)
-    
+
     try:
         # Send GET request to the URL
         response = requests.get(url)
@@ -32,6 +29,7 @@ def scrape_problem(problem_id):
     except Exception as e:
         print(f"Error processing {problem_id}: {str(e)}")
         return False
+
 
 # Read the first 10 problems from problems.txt
 with open('problems.txt', 'r') as f:
