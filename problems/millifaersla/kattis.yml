@@ -1,0 +1,11 @@
+---
+hostname: open.kattis.com
+problem: millifaersla
+files:
+  - main.py
+language: Python 3
+mainclass: ~
+build: []
+run:
+  - python3 main.py
+samples: "./samples"

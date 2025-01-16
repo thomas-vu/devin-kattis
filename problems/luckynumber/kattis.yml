@@ -1,0 +1,11 @@
+---
+hostname: open.kattis.com
+problem: luckynumber
+files:
+  - main.py
+language: Python 3
+mainclass: ~
+build: []
+run:
+  - python3 main.py
+samples: "./samples"

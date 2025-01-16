@@ -1,0 +1,6 @@
+var a = "Gon";
+var b = a;
+var c = `My name is ${a}`;
+print c;
+print `My name is ${b}`;
+end.

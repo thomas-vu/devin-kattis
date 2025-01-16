@@ -1,0 +1,18 @@
+16 3
+1 2 3
+add r0, r0, r0
+addi r0, r1, 1
+li r1, 100
+for 2
+for 3
+add r2, r0, r1
+move r1, r2
+rof
+for 4
+add r2, r0, r2
+move r1, r2
+move r0, r0
+rof
+rof
+li r2, 4234
+addi r2, r2, 4294966295

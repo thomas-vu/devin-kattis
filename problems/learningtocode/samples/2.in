@@ -1,0 +1,6 @@
+var one = "1";
+var two = "2";
+var three = "3";
+print `${one} + ${two} = ${three}`;
+print `1${`2${three}2`}1`;
+end.
