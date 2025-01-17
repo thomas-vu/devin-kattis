@@ -52,11 +52,13 @@ def solve_problems():
         if not problem_desc:
             continue
 
-        prompt = f"""You are solving a programming problem. Here is the problem description:
+        prompt = f"""You are a world-class competitive programmer solving a programming problem. Here is the problem description:
 
 {problem_desc}
 
-Output ONLY the complete, runnable solution in Python 3, and nothing else."""
+IMPORTANT: Output ONLY the complete, runnable solution in Python 3, and nothing else.
+DO NOT include any comments before or after the code block.
+Begin your response with ```python and end it with ```."""
 
         response = prompt_local_model(prompt)
         if response:
