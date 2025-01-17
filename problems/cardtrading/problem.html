@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>Anthony and Cora are playing Dominion, their favorite card
+    game. In Dominion, there are <span class="tex2jax_process">$T$</span> different card types, and each
+    player has a set of cards (known as a deck). A deck
+    <span class="tex2jax_process">$D$</span> is said to have
+    <span class="tex2jax_process">$C$</span> combos if <span class="tex2jax_process">$C$</span> is the largest integer such that
+    for <span class="tex2jax_process">$C$</span> different card
+    types in the game, <span class="tex2jax_process">$D$</span>
+    contains at least two cards of that type. Anthony currently has
+    <span class="tex2jax_process">$N$</span> cards and he wants to
+    trade cards with Cora such that he’ll have a deck with exactly
+    <span class="tex2jax_process">$K$</span> combos.</p>
+<p>For each card type <span class="tex2jax_process">$i$</span>
+    (<span class="tex2jax_process">$1\leq i\leq T$</span>), Anthony
+    can choose to perform at most one transaction. There are two
+    types of transaction:</p>
+<ol class="enumerate">
+<li>
+<p>Buy up to two cards of <span class="tex2jax_process">$i^{th}$</span> type from Cora at
+        <span class="tex2jax_process">$a_ i$</span> coins each</p>
+</li>
+<li>
+<p>Sell all his cards of <span class="tex2jax_process">$i^{th}$</span> type for <span class="tex2jax_process">$b_ i$</span> coins each</p>
+</li>
+</ol>
+<p>Anthony wants to maximize his profit while obtaining a
+    complete deck. Anthony is willing to spend coins in order to
+    obtain a complete deck if necessary, but of course he wants to
+    minimize his spending in that case. Note that he doesn’t care
+    about keeping the rest of his cards which don’t contribute to
+    the complete deck.</p>
+<p>Anthony has hired you to help him calculate how much money
+    he can make if he chooses the optimal strategy for obtaining
+    enough combos. If he has to spend money, output a negative
+    number.</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$T$</span>, and <span class="tex2jax_process">$K$</span>, <span class="tex2jax_process">$1\leq K\leq T\leq 100\, 000$</span>,
+    <span class="tex2jax_process">$1\leq N\leq 2T$</span>.</p>
+<p>The next line is a list of <span class="tex2jax_process">$N$</span> integers representing the cards in
+    Anthony’s deck. Each integer on this line is between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$T$</span> inclusive. It is guaranteed no
+    integers appear more than twice.</p>
+<p>Finally, each of the next <span class="tex2jax_process">$T$</span> lines of the input contains two
+    integers each. The <span class="tex2jax_process">$i^\mathrm
+    {th}$</span> line contains <span class="tex2jax_process">$a_
+    i$</span> and <span class="tex2jax_process">$b_ i$</span>,
+    <span class="tex2jax_process">$1\leq a_ i, b_ i\leq
+    10^9$</span>, corresponding to the price of buying and selling
+    a card of type <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer denoting Anthony’s profit assuming
+    he trades optimally.</p>
+<h2>Explanation of Sample Input</h2>
+<p>In the first example, Anthony should sell two of card
+    <span class="tex2jax_process">$1$</span> and buy one of card
+    <span class="tex2jax_process">$2$</span> and one of card
+    <span class="tex2jax_process">$3$</span> for a net profit of
+    <span class="tex2jax_process">$10$</span> coins. If he chooses
+    to sell one of card <span class="tex2jax_process">$3$</span>
+    and buy one of card <span class="tex2jax_process">$2$</span>,
+    then he’ll end up spending <span class="tex2jax_process">$20$</span> coins.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 2
+1 3 2 1 
+1 50
+50 20
+40 30
+</pre>
+</td>
+<td>
+<pre>10
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 2
+1 3 2 1 
+1 20
+50 20
+40 30
+</pre>
+</td>
+<td>
+<pre>-20
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

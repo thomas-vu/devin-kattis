@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/explosion/file/statement/en/img-0001.png" class="illustration" src="/problems/explosion/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://pixabay.com/en/explosion-detonation-boom-bomb-417894/">
+        Picture</a> by OpenClipart-Vectors on Pixabay, CC0
+      </div>
+</div>In a two player card game, you have <span class="tex2jax_process">$n$</span> minions on the board and the
+    opponent has <span class="tex2jax_process">$m$</span> minions.
+    Each minion has a health between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$6$</span>.
+    <p>You are contemplating your next move. You want to play an
+    “Explosion” spell which deals <span class="tex2jax_process">$d$</span> units of damage randomly
+    distributed across all minions. The damage is dealt one unit at
+    a time to some remaining minion on the board. Each living
+    minion (including your own) has the same chance of receiving
+    each unit of damage. When a minion receives a unit of damage,
+    its health is decreased by one. As soon as the health of a
+    minion reaches zero, it is immediately removed from the board,
+    before the next damage is dealt. If there are no minions left
+    on the board, any excess damage caused by the spell is
+    ignored.</p>
+<p>Given the current health of all minions, what is the
+    probability that the Explosion will remove all of the
+    opponent’s minions? Note that it does not matter if all your
+    own minions die in the process as well, and the damage
+    continues to be dealt even if all your own minions are
+    gone.</p>
+<h2>Input</h2>
+<p>The first line of input contains the three integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \le n, m \le 5$</span>, <span class="tex2jax_process">$1 \le d
+    \le 100$</span>). Then follows a line containing <span class="tex2jax_process">$n$</span> integers, the current health of
+    all your minions. Finally, the third line contains <span class="tex2jax_process">$m$</span> integers, the current health of
+    all the opponent’s minions. All healths are between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$6$</span> (inclusive).</p>
+<h2>Output</h2>
+<p>Output the probability that the Explosion removes all the
+    opponent’s minions, accurate up to an absolute error of
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 2
+2
+1 1
+</pre>
+</td>
+<td>
+<pre>0.3333333333
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 3 12
+3 2
+4 2 3
+</pre>
+</td>
+<td>
+<pre>0.1377380946
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/oceanmonument/file/statement/en/img-0001.png" class="illustration" src="/problems/oceanmonument/file/statement/en/img-0001.png"/>
+<div class="description">
+        Elder Guardian
+      </div>
+</div>
+<p>Steve has stumbled across an ocean monument and would like
+    to raid it. He has put on his best set of armor and brought his
+    favorite trident in search of the rumored sponge room.<br/></p>
+<p>The monument is protected by a lot of angry guardians and
+    elder guardians. The mobs are very strong, and Steve has found
+    that each time he enters the monument, he can either kill up to
+    two guardians or exactly one elder guardian before having to
+    retreat to heal. However, each time he retreats, a new guardian
+    spawns in the monument. Luckily, elder guardians never
+    respawn.</p>
+<p>Steve will need to slay all the mobs in the monument before
+    it is safe for him to loot it. He wants to kill the mobs in an
+    optimal way, such that he minimizes the total number of trips
+    to the monument required. Write a program that will help him
+    figure out the number of such optimal orders he can choose
+    from.<br/></p>
+<p>For example, if there were initially <span class="tex2jax_process">$1$</span> guardian and <span class="tex2jax_process">$2$</span> elder guardians in the monument,
+    there are <span class="tex2jax_process">$2$</span> optimal
+    orders that minimize the number of trips required: he could
+    either kill an elder guardian in both of the first two trips
+    and kill two guardians in the next two trips, or he could kill
+    an elder guardian in the first trip, kill two guardians in the
+    second trip, kill the second elder guardian in the third trip,
+    and kill two guardians in the fourth trip.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$1 \leq t \leq 500$</span>, giving the number
+    of test cases to follow. Each case consists of one line
+    containing two integers <span class="tex2jax_process">$0 \leq
+    g,e \leq 20$</span>, the number of guardians and elder
+    guardians respectively that are in the monument the first time
+    Steve enters.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing a single
+    number, the number of optimal orders in which Steve can kill
+    the mobs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2
+1 5
+2 3
+</pre>
+</td>
+<td>
+<pre>2
+42
+14
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>A well-known Canadian programming contest is always held on
+    a Friday in October each year. We need you to help choose the
+    dates for years <span class="tex2jax_process">$2019$</span>,
+    <span class="tex2jax_process">$2020$</span>, …, <span class="tex2jax_process">$2018+Z$</span>.</p>
+<p>There are Fridays when we cannot schedule the contest
+    because of conflicting events. In particular, the contest
+    cannot be held on the Friday before Canadian Thanksgiving; that
+    date is sacred. A list of additional “forbidden dates” is
+    provided, but every year there is at least one Friday in
+    October when the contest can be held.</p>
+<p>Not all contest schedules are equally good. People tend to
+    expect the contest to be held on or near the date it was held
+    in the previous year. For example, they don’t like to be
+    surprised when they expect a date in early October but the
+    contest runs late in the month, etc. There is a yearly
+    “surprise penalty” for holding the contest on October
+    <span class="tex2jax_process">$X$</span> one year when it had
+    been on October <span class="tex2jax_process">$Y$</span> the
+    year before, namely <span class="tex2jax_process">$(X-Y)^2$</span>, which penalizes big
+    surprises much more than little ones.</p>
+<p>Your goal is to find a schedule for the <span class="tex2jax_process">$Z$</span> years following <span class="tex2jax_process">$2018$</span> such that the total of the
+    yearly surprise penalties is as small as possible.</p>
+<h5>Useful facts:</h5>
+<ul class="itemize">
+<li>
+<p>Canadian Thanksgiving is always the second Monday in
+        October.</p>
+</li>
+<li>
+<p>January <span class="tex2jax_process">$1$</span>,
+        <span class="tex2jax_process">$2019$</span>, is a
+        Tuesday.</p>
+</li>
+<li>
+<p>Years have <span class="tex2jax_process">$365$</span>
+        days, except leap years, which have an extra day in
+        February.</p>
+</li>
+<li>
+<p>From <span class="tex2jax_process">$2018$</span> until
+        the year <span class="tex2jax_process">$2400$</span>
+        (exclusive), a leap year is any year divisible by
+        <span class="tex2jax_process">$4$</span> but not divisible
+        by <span class="tex2jax_process">$100$</span>.</p>
+</li>
+<li>
+<p>January <span class="tex2jax_process">$1$</span> is
+        the <span class="tex2jax_process">$1^{\textrm{st}}$</span>
+        day of the year, and October <span class="tex2jax_process">$1$</span> is the <span class="tex2jax_process">$274^{\textrm{th}}$</span> day of
+        <span class="tex2jax_process">$2018$</span>.</p>
+</li>
+<li>
+<p>October has <span class="tex2jax_process">$31$</span>
+        days.</p>
+</li>
+<li>
+<p>The contest was held on October <span class="tex2jax_process">$12$</span>, <span class="tex2jax_process">$2018$</span>.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line of the input is the integer <span class="tex2jax_process">$Z$</span> <span class="mbox" style="width:"><span class="tex2jax_process">$(1 \leq Z \leq
+        100)$</span></span>, the number of years following
+        <span class="tex2jax_process">$2018$</span> for which the
+        contest is to be scheduled.</p>
+</li>
+<li>
+<p>The second line contains an integer <span class="tex2jax_process">$F$</span> <span class="mbox" style="width:"><span class="tex2jax_process">$(0 \leq F \leq
+        50)$</span></span>, the number of forbidden dates.</p>
+</li>
+<li>
+<p>The following <span class="tex2jax_process">$F$</span>
+        lines contain the forbidden dates, one per line. Each
+        forbidden date is represented by three space-separated
+        numbers:</p>
+<ol class="enumerate">
+<li>
+<p>The first number consists of <span class="tex2jax_process">$4$</span> digits and represents the
+            year. It is between <span class="tex2jax_process">$2019$</span> and <span class="tex2jax_process">$2118$</span>, inclusive.</p>
+</li>
+<li>
+<p>The second number is always <span class="tex2jax_process">$10$</span>, representing
+            October.</p>
+</li>
+<li>
+<p>The third number consists of two digits and
+            represents the day in October. It ranges between
+            <span class="tex2jax_process">$01$</span> and
+            <span class="tex2jax_process">$31$</span>,
+            inclusive.</p>
+</li>
+</ol>
+<p>The dates are given in chronologically increasing order.
+        There is no guarantee that all forbidden dates are
+        Fridays.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>The first line of the output is an integer representing the
+    smallest total surprise penalty that any schedule can achieve.
+    The remaining <span class="tex2jax_process">$Z$</span> lines
+    contain the chosen dates of a schedule with this total surprise
+    penalty, one date per line, in chronologically increasing
+    order. Note that the input data is chosen so that this schedule
+    is unique. Dates should be formatted as in the input:
+    <span class="tex2jax_process">$4$</span> digits, a space, the
+    number <span class="tex2jax_process">$10$</span>, a space, and
+    <span class="tex2jax_process">$2$</span> digits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+5
+2019 10 18
+2019 10 19
+2020 10 02
+2020 10 16
+2020 10 23
+</pre>
+</td>
+<td>
+<pre>194
+2019 10 25
+2020 10 30
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+6
+2019 10 04
+2019 10 18
+2021 10 15
+2021 10 22
+2021 10 29
+2111 10 01
+</pre>
+</td>
+<td>
+<pre>475
+2019 10 25
+2020 10 16
+2021 10 01
+</pre>
+</td>
+</tr>
+</table>
+</div>

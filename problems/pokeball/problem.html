@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/pokeball/file/statement/en/img-0001.png" class="illustration" src="/problems/pokeball/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://pixabay.com/en/pokemon-go-pokemon-play-pokeball-1574003/">
+        succo</a>
+</div>
+</div>
+<p>Pokemon Go has become a recent trend. Zapray becomes
+    immediately addicted to the game after it comes out. Zapray’s
+    Pokemon journey begins with a bag of <span class="tex2jax_process">$100$</span> Pokeballs. Each time he
+    encounters a Pokemon, he keeps throwing Pokeballs to the
+    Pokemon until he either catches the Pokemon or runs out of
+    Pokeballs. Each Pokeball Zapray throws succeeds in catching the
+    Pokemon with a constant probability <span class="tex2jax_process">$P$</span>. If Zapray finds that he has no
+    Pokeballs when he tries to catch a Pokemon, he gives up on that
+    Pokemon (not catching it) and heads to the Pokeshop to buy a
+    new bag of <span class="tex2jax_process">$100$</span> Pokeballs
+    for <span class="tex2jax_process">$5$</span> dollars. Zapray
+    moves on to search for his next Pokemon after he refills the
+    Pokeballs. In particular, if Zapray successfully catches a
+    Pokemon with his last Pokeball, he does not refill his
+    Pokeballs until he encounters the next Pokemon and realizes
+    that he has run out of Pokeballs.</p>
+<p>Suppose Zapray encounters <span class="tex2jax_process">$N$</span> Pokemons in the next few days,
+    what is the expected amount of money he would spend on
+    Pokeballs?</p>
+<h2>Input</h2>
+<p>The input has an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1\leq N\leq 10^9$</span>) and a real number
+    <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$0 \leq P\leq 1$</span>). <span class="tex2jax_process">$P$</span> is given with exactly three digits
+    after the decimal point.</p>
+<h2>Output</h2>
+<p>Output the expected amount of money Zapray would spend on
+    Pokeballs. Your answer is considered correct if it has an
+    absolute or relative error of no more than <span class="tex2jax_process">$10^{-6}$</span> from the correct answer.</p>
+<h2>Note</h2>
+<p>Pokemon Go was developed by Niantic, Inc. Niantic does not
+    endorse and has no involvement with the ProgNova contest.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+50 0.125
+</pre>
+</td>
+<td>
+<pre>
+16.339203308
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+201 1.000
+</pre>
+</td>
+<td>
+<pre>
+5.000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 0.000
+</pre>
+</td>
+<td>
+<pre>
+35.000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

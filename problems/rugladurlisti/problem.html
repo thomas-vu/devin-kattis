@@ -1,0 +1,179 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/rugladurlisti/file/statement/en/img-0001.jpg" class="illustration" src="/problems/rugladurlisti/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture taken from <a href="https://www.flickr.com/photos/kimli/3942113170">flickr.com</a>
+</div>
+</div>
+<p>Dagur likes taking walks downtown and one day when Dagur was
+    on his daily walk, he bumped into an arcade machine in the
+    middle of the street. Since Dagur is very curious, he just had
+    to check this machine out. When he finally saw what was on the
+    screen, he could not believe his eyes. It has a scoreboard!
+    Since Dagur loves playing games, he really wanted to get his
+    name to the top of the scoreboard.</p>
+<p>Since Dagur did not know how this game worked, he decided to
+    start fiddling with the machine. Until he finally made it to a
+    screen which displayed the instructions for the game. The page
+    read:</p>
+<blockquote class="quote">
+      “Welcome to the newest version of scrambled list. Before you
+      start playing you’ll have to get familiar with the rules,
+      they are as follows. I (the arcade machine) will create a
+      list of size <span class="tex2jax_process">$n$</span> with
+      the values <span class="tex2jax_process">$[1, 2, \dots ,
+      n]$</span>, and then I will shuffle it. Next I will write an
+      integer <span class="tex2jax_process">$n$</span> to the
+      screen. Afterwards you can ask me about up to <span class="tex2jax_process">$n$</span> indices and I will write the
+      values in my scrambled list, however you will get them in
+      some shuffled order. Your goal is to find my list asking the
+      fewest amount of questions.”
+    </blockquote>
+<p>Dagur really wants to be at the top of the scoreboard, but
+    does not know how to do it. So he asks you to help him find the
+    shuffled list in as few guesses as possible.</p>
+<h2>Interaction</h2>
+<p>This is an interactive task. Your solution will be tested
+    against a dynamic judge, which reads the output from your
+    solution and writes to the input of your solution. This
+    interaction follows specific rules, which are the
+    following:</p>
+<p>The judge will first write out one line containing an
+    integer <span class="tex2jax_process">$n$</span>, the length of
+    the shuffled list. In the test cases, <span class="tex2jax_process">$n$</span> is always <span class="tex2jax_process">$10\, 000$</span>, but in the examples it is
+    less.</p>
+<p>Afterwards your solution can perform two types of actions.
+    The former is a query, which can be repeated many times. A
+    query starts with the symbol <tt class="ttfamily">?</tt>,
+    followed by a space and then an integer <span class="tex2jax_process">$k$</span>, representing the number of
+    indices which will be queried. There after, in the same line,
+    you shall write <span class="tex2jax_process">$k$</span>
+    indices, in the range <span class="tex2jax_process">$1$</span>
+    to <span class="tex2jax_process">$n$</span>, separated by a
+    space, of which you want the judge to give the values. The
+    judge then answers, in one line, containing the <span class="tex2jax_process">$k$</span> integeres, seperated by a space,
+    which represent the values at the indices, in shuffled order.
+    Each number the judge gives will be in the range from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span> and no number will appear more
+    than once.</p>
+<p>If any index, in any query, is not in the range <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, then your solution will be
+    considered incorrect. If <span class="tex2jax_process">$k &lt;
+    1$</span> or <span class="tex2jax_process">$n &lt; k$</span> in
+    any of the queries, then your solution will be considered
+    incorrect. If the same index appears more than once in the same
+    query, then your solution will be considered incorrect.</p>
+<p>When you think you know what the shuffled list looks like,
+    then you should write <tt class="ttfamily">!</tt> with a space
+    followed by all <span class="tex2jax_process">$n$</span> values
+    of the shuffled list, in the correct order. Then your program
+    should terminate. If you guess the correct order, then your
+    solution will be accepted and you will score points based on
+    the number of queries made.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on multiple testcases and the
+    average amount of points over all testcases will determine the
+    total score. In the following table you can see some guarantees
+    regarding scores for individual test cases based on the number
+    of queries made. If the number of queries lies between two rows
+    of the table then the score will be a linear combination of the
+    score in the same two rows.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Queries</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$&gt; 10\,
+          000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$10\, 000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$9\, 999$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$6\, 668$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3\, 334$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$80$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$\leq 14$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$100$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>3</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 2 1 2</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>3 2</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 3 3 2 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>2 1 3</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 1 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>3</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>! 3 2 1</pre>
+</div>
+</div>

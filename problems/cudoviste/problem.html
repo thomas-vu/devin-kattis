@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>Mirko got his driver’s license! To celebrate that joyous
+    occasion, his parents bought him his first car: a monster
+    truck! Mirko found out that even though having a car that can
+    squash all other cars is nice in traffic jams, parking a car
+    that is the size of <span class="tex2jax_process">$4$</span>
+    normal cars can be a bit tricky.</p>
+<p>His friend, Slavko, works part time in the city parking
+    company. He periodically sends Mirko a map of the city with
+    occupied parking spaces marked. The map can be represented as a
+    table with <span class="tex2jax_process">$R$</span> rows,
+    <span class="tex2jax_process">$C$</span> columns each. Each
+    cell can contain a building (symbol ‘<tt class="ttfamily">#</tt>’), a parked car (symbol ‘<tt class="ttfamily">X</tt>’) or a free parking space (symbol ‘<tt class="ttfamily">.</tt>’). A monster truck is quite huge,
+    <span class="tex2jax_process">$2$</span> by <span class="tex2jax_process">$2$</span> cells to be exact.</p>
+<p>Help Mirko calculate the number of possible parking spaces
+    grouped by the number of cars he needs to squash to park in
+    them. We are only interested in the number of cars Mirko will
+    squash on the parking space, not the number of cars he will
+    squash on the way over. However, Mirko can’t park on a
+    building. Not even a monster truck is large enough to squash
+    buildings!</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$2
+    \leq R, C \leq 50$</span>), the number of rows and columns of
+    the map. The next <span class="tex2jax_process">$R$</span>
+    lines contain <span class="tex2jax_process">$C$</span>
+    characters each. Only characters ‘<tt class="ttfamily">#</tt>’,
+    ‘<tt class="ttfamily">X</tt>’ and ‘<tt class="ttfamily">.</tt>’
+    appear in the input. Note that ‘<tt class="ttfamily">X</tt>’
+    will always be capital.</p>
+<h2>Output</h2>
+<p>The output consists of five lines, the total number of
+    parking spaces Mirko can park on if he squashes <span class="tex2jax_process">$0$</span> cars (first line), <span class="tex2jax_process">$1$</span> car (second line), <span class="tex2jax_process">$2$</span> cars (third line), <span class="tex2jax_process">$3$</span> cars (fourth line), <span class="tex2jax_process">$4$</span> cars (fifth line).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+#..#
+..X.
+..X.
+#XX#
+</pre>
+</td>
+<td>
+<pre>1
+1
+2
+1
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+....
+....
+....
+....
+</pre>
+</td>
+<td>
+<pre>9
+0
+0
+0
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+..XX.
+.#XX.
+..#..
+.....
+</pre>
+</td>
+<td>
+<pre>2
+1
+1
+0
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

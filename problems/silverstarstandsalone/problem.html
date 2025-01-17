@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>One of standard units of length used in Solar system
+    distance measurements is one astronomical unit, abbreviated as
+    AU. It is also used in the following problem.</p>
+<p>The exploration probe is being assembled on Mars and it will
+    be launched soon. The probe destination is an asteroid named
+    Silver Star after its unexpectedly bright ultraviolet albedo.
+    The journey of the probe will be long, and it may visit some
+    other asteroids on the way. The set of candidate asteroids to
+    be visited, including Silver Star, has been carefully chosen so
+    that they are on the path from Mars to Silver Star and the
+    sequence of their distances from Mars expressed in AU and
+    arranged in ascending order, is the sequence of the first few
+    prime numbers: <span class="tex2jax_process">$2, 3, 5, 7, 11,
+    \dots $</span>. On the journey, not necessarily all asteroids
+    between the launch site and Silver Star have to be visited. On
+    the other hand, the distance between two consecutive visited
+    asteroids can be at most <span class="tex2jax_process">$14$</span> AU, otherwise the probe would not
+    collect enough scientific data. There are two rules, neither of
+    which can be broken: First, the closest asteroid, which is in
+    distance <span class="tex2jax_process">$2$</span> AU, will be
+    visited, and second, Silver Star will be visited.</p>
+<p>There are many possible trajectories of the probe dictated
+    by the choice of particular asteroids to be visited. Two
+    trajectories are considered different if the sequences of
+    visited asteroids in each trajectory differ by at least one
+    asteroid. Otherwise they are considered equal. Each trajectory
+    contains the launch site asteroid and Silver Star. The probe
+    will be moving steadily towards Silver Star, it will never turn
+    back. The probe navigation team needs to evaluate the most
+    promising trajectories. For that aim, they first need to
+    calculate the number of all mutually different probe
+    trajectories.</p>
+<h2>Input</h2>
+<p>The input contains one line with one integer <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$2
+    \le P \le 211$</span>), the distance of the Silver Star from
+    Mars expressed in AU. <span class="tex2jax_process">$P$</span>
+    is a prime number.</p>
+<h2>Output</h2>
+<p>Print the number of different probe trajectories.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>31
+</pre>
+</td>
+<td>
+<pre>416
+</pre>
+</td>
+</tr>
+</table>
+</div>

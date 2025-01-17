@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:39.00%">
+<img alt="/problems/installingapps/file/statement/en/img-0001.jpg" class="illustration" src="/problems/installingapps/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Mobile radio telephone, public domain
+      </div>
+</div>Sandra recently bought her first smart phone. One of her
+    friends suggested a long list of applications (more commonly
+    known as “apps”) that she should install on the phone. Sandra
+    immediately started installing the apps from the list, but
+    after installing a few, the phone did not have enough disk
+    space to install any more apps. Sometimes, the app installation
+    failed because there was not even enough space to download the
+    installation package. Other apps could be downloaded just fine,
+    but had insufficient space to store the installed app.
+
+    <p>Each app that Sandra installs has a download size
+    <span class="tex2jax_process">$d$</span> and a storage size
+    <span class="tex2jax_process">$s$</span>. To download the app,
+    Sandra’s phone must have at least <span class="tex2jax_process">$d$</span> megabytes of free disk space.
+    After the app has been installed, it then uses <span class="tex2jax_process">$s$</span> megabytes of disk space on the
+    phone. The download size may be smaller than the storage size
+    (e.g., if the app data is heavily compressed) or larger than
+    the storage size (e.g., if the download contains material that
+    might not get used such as translations to different
+    languages). The installer is very efficient and can transform
+    the downloaded package to an installed app without using any
+    extra disk space. Thus, to install an app, the phone must have
+    at least <span class="tex2jax_process">$\max (d, s)$</span>
+    megabytes of free disk space.</p>
+<p>Sandra quickly realised that she may have run out of space
+    just because she installed apps in the wrong order. Thus, she
+    decided to give the installation another try. She uninstalled
+    all apps, and will now choose an installation order that lets
+    her install the largest number of apps from the list. Sandra
+    may not install any app more than once.</p>
+<p>Help her determine what apps on the list she should install,
+    and in what order.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1 \le n \le 500, 1 \le c \le 10\,
+        000$</span>), the number of available apps and the
+        available disk space of the phone in megabytes.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with two integers <span class="tex2jax_process">$d,
+        s$</span> (<span class="tex2jax_process">$1 \le d, s \le
+        10\, 000$</span>), the download size and storage size of an
+        app, in megabytes.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output one line with the maximum number of apps that can be
+    installed. Then output one line listing the numbers of those
+    apps, in the order that Sandra should install them. In the case
+    that no apps can be installed, this line can be omitted.</p>
+<p>The apps are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, in the order they are given in
+    the input. If there are multiple optimal solutions, output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 100
+99 1
+1 99
+</pre>
+</td>
+<td>
+<pre>
+2
+1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 100
+500 1
+1 500
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>Consider a positive integer <span class="tex2jax_process">$x$</span>. Multiply its nonzero digits and
+    you get another integer <span class="tex2jax_process">$y$</span>. Repeating this process, you
+    eventually arrive at a single digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>. Write a program that reads
+    <span class="tex2jax_process">$x$</span> and outputs the
+    resulting digit.</p>
+<h2>Input</h2>
+<p>An integer <span class="tex2jax_process">$x$</span> with
+    <span class="tex2jax_process">$10 \leq x \leq 1\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Print a digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>, the result of repeatedly
+    multiplying the nonzero digits of <span class="tex2jax_process">$x$</span> as described above.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In Sample Input <span class="tex2jax_process">$1$</span>, we
+    have <span class="tex2jax_process">$x = 808$</span>.
+    Multiplying <span class="tex2jax_process">$8$</span> and
+    <span class="tex2jax_process">$8$</span>, we arrive at
+    <span class="tex2jax_process">$64$</span>. Then we get
+    <span class="tex2jax_process">$6 \cdot 4 = 24$</span>, and
+    finally <span class="tex2jax_process">$2 \cdot 4 = 8$</span>,
+    which is the sample output.</p>
+<p>In Sample Input <span class="tex2jax_process">$2$</span>,
+    there is only a single nonzero digit, <span class="tex2jax_process">$2$</span>. The product of all digits in a
+    set containing only a single element is the digit itself. Thus
+    the answer is <span class="tex2jax_process">$2$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>808
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>20
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

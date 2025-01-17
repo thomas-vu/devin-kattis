@@ -1,0 +1,121 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/barcelona/file/statement/en/img-0001.jpg" class="illustration" src="/problems/barcelona/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/sandiegointernationalairport/4860291021/">
+        flickr.com</a>
+</div>
+</div>
+<p>Arnar, Benni and Unnar were at the airport in Barcelona on
+    their way to a competitive programming training camp. When the
+    plane had landed they exited and went to the baggage claim.
+    When they arrived there was no baggage on the conveyor belts.
+    After a few minutes the baggage started trickling in. When
+    Benni noticed this he loudly proclaimed “My bag’s first! No,
+    it’s second first! No... it’s fourth first. No wait...”</p>
+<p>Given a list of bags and a number denoting Benni’s bag, can
+    you help Benni find how first his bag is?</p>
+<h2>Input</h2>
+<p>First there is a line with two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, the number of bags and Benni’s
+    bag. It will always hold that <span class="tex2jax_process">$1
+    \leq n \leq 10^5$</span> and <span class="tex2jax_process">$-10^9 \leq k \leq 10^9$</span>. Next there
+    is a line with <span class="tex2jax_process">$n$</span>
+    integers separated by spaces, <span class="tex2jax_process">$a_1, a_2, \dotsc , a_ n$</span>. For each
+    <span class="tex2jax_process">$1 \leq i \leq n$</span> it holds
+    that <span class="tex2jax_process">$-10^9 \leq a_ i \leq
+    10^9$</span>. No two bags are given by the same number and
+    Benni’s bag always appears in the list.</p>
+<h2>Output</h2>
+<p>Print a single line. If Benni’s bag is first print
+    <tt class="ttfamily">fyrst</tt>, if it’s the second print
+    <tt class="ttfamily">naestfyrst</tt>. Otherwise print a single
+    number denoting how first it is followed by the word <tt class="ttfamily">fyrst</tt> after the number.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>90</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 0
+0 -1 2 -3 4 -5 6 -7
+</pre>
+</td>
+<td>
+<pre>fyrst
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 42
+1337 42 -6 9 420
+</pre>
+</td>
+<td>
+<pre>naestfyrst
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 7
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>7 fyrst
+</pre>
+</td>
+</tr>
+</table>
+</div>

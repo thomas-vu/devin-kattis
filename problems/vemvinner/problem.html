@@ -1,0 +1,126 @@
+<div class="problembody">
+<p>Johan and Abdullah are playing tic-tac-toe, but they are
+    having a hard time figuring out who won. To win in tic-tac-toe
+    you need to have three of your letter in a row, either
+    vertically, horizontally, or diagonally. Johan uses the letter
+    <tt class="ttfamily">X</tt> and makes the first move, and
+    Abdullah uses the letter <tt class="ttfamily">O</tt>. Help them
+    figure out who has won, if anyone.</p>
+<h2>Input</h2>
+<p>Input consists of a valid tic-tac-toe position, where an
+    underscore <tt class="ttfamily">_</tt> represents an empty
+    square, and the letters <tt class="ttfamily">X</tt> and
+    <tt class="ttfamily">O</tt> represent Johan’s and Abdullah’s
+    moves. The position is described by three rows, each containing
+    three space-separated characters each. It is guaranteed that at
+    most one player has won.</p>
+<h2>Output</h2>
+<p>Print the winner of the game. First print the name,
+    “<tt class="ttfamily">Johan</tt>”, “<tt class="ttfamily">Abdullah</tt>” or “<tt class="ttfamily">ingen</tt>”,
+    then “<tt class="ttfamily">har vunnit</tt>”.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Restrictions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>No player has three letters in a row along a
+          diagonal</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Abdullah is not the winner of any game</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>_ _ _
+X O _
+X X O
+</pre>
+</td>
+<td>
+<pre>ingen har vunnit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>_ X _
+O X _
+O X O
+</pre>
+</td>
+<td>
+<pre>Johan har vunnit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>_ _ O
+_ O X
+O X X
+</pre>
+</td>
+<td>
+<pre>Abdullah har vunnit
+</pre>
+</td>
+</tr>
+</table>
+</div>

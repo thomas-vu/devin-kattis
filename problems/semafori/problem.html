@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Luka is driving his truck along a long straight road with
+    many traffic lights. For each traffic light he knows how long
+    the red and green lights will be on (the cycle repeating
+    endlessly).</p>
+<p>When Luka starts his journey, all traffic lights are red and
+    just started their cycle. Luka moves one distance unit per
+    second. When a traffic light is red, he stops and waits until
+    it turns green.</p>
+<p>Write a program that determines how much time Luka needs to
+    reach the end of the road. The start of the road is at distance
+    zero, the end at distance <span class="tex2jax_process">$L$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1
+    \le N \le 100$</span>, <span class="tex2jax_process">$1 \le L
+    \le 1000$</span>), the number of traffic lights on the road and
+    the length of the road.</p>
+<p>Each of the next <span class="tex2jax_process">$N$</span>
+    lines contains three integers <span class="tex2jax_process">$D$</span>, <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$G$</span>, describing one traffic light
+    (<span class="tex2jax_process">$1 \le D &lt; L$</span>,
+    <span class="tex2jax_process">$1 \le R \le 100$</span>,
+    <span class="tex2jax_process">$1 \le G \le 100$</span>).
+    <span class="tex2jax_process">$D$</span> is the distance of the
+    traffic light from the start of the road. <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$G$</span> denote how long the red and green
+    lights are on, respectively.</p>
+<p>The traffic lights will be ordered in increasing order of
+    <span class="tex2jax_process">$D$</span>. No two traffic lights
+    will share the same position.</p>
+<h2>Output</h2>
+<p>Output the time (in seconds) Luka needs to reach the end of
+    the road.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 10
+3 5 5
+5 2 2
+</pre>
+</td>
+<td>
+<pre>
+12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 30
+7 13 5
+14 4 4
+15 3 10
+25 1 1
+</pre>
+</td>
+<td>
+<pre>
+36
+</pre>
+</td>
+</tr>
+</table>
+</div>

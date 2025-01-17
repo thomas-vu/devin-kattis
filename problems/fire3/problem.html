@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/fire3/file/statement/en/img-0001.png" class="illustration" src="/problems/fire3/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Joe works in a maze. Unfortunately, portions of the maze
+    have caught on fire, and the owner of the maze neglected to
+    create a fire escape plan. Help Joe escape the maze.</p>
+<p>Given Joe’s location in the maze and which squares of the
+    maze are on fire, you must determine whether Joe can exit the
+    maze before the fire reaches him, and how fast he can do
+    it.</p>
+<p>Joe and the fire each move one square per minute, vertically
+    or horizontally (not diagonally). The fire spreads all four
+    directions from each square that is on fire. Joe may exit the
+    maze from any square that borders the edge of the maze. Neither
+    Joe nor the fire may enter a square that is occupied by a
+    wall.</p>
+<h2>Input</h2>
+<p>The first line of input contains the two integers
+    <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span>, separated by spaces, with
+    <span class="tex2jax_process">$1 \le R, C \le 1000$</span>. The
+    following <span class="tex2jax_process">$R$</span> lines of
+    input each contain one row of the maze. Each of these lines
+    contains exactly <span class="tex2jax_process">$C$</span>
+    characters, and each of these characters is one of:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">#</tt>, a wall</p>
+</li>
+<li>
+<p><tt class="ttfamily">.</tt>, a passable square</p>
+</li>
+<li>
+<p><tt class="ttfamily">J</tt>, Joe’s initial position in
+        the maze, which is a passable square</p>
+</li>
+<li>
+<p><tt class="ttfamily">F</tt>, a square that is on
+        fire</p>
+</li>
+</ul>
+<p>There will be exactly one <tt class="ttfamily">J</tt> in the
+    input.</p>
+<h2>Output</h2>
+<p>Output a single line containing “<tt class="ttfamily">IMPOSSIBLE</tt>” if Joe cannot exit the maze before
+    the fire reaches him, or an integer giving the earliest time
+    Joe can safely exit the maze, in minutes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4
+####
+#JF#
+#..#
+#..#
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+###
+#J.
+#.F
+</pre>
+</td>
+<td>
+<pre>
+IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/magicalcows/file/statement/en/img-0001.jpg" class="illustration" src="/problems/magicalcows/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by Graeme Zinck, CC BY-SA
+      </div>
+</div>
+<p>Baxter Scott owns The Enlightened Dairy Co., a dairy company
+    with magical cows. Early each morning, he brushes his teeth,
+    strolls outside, and finds that the cows have doubled in
+    number. With double the number of cows, he can produce double
+    the quantity of milk. While he is ecstatic that he has so many
+    cows and so much milk, the Dairy Regulator forces him to keep
+    at most <span class="tex2jax_process">$C$</span> cows on any
+    given farm, which greatly complicates his business.</p>
+<p>At The Enlightened Dairy Co., Baxter has access to an
+    unlimited number of farms, each with a maximum capacity of
+    <span class="tex2jax_process">$C$</span> cows. On each farm,
+    cows reproduce at the same rate: they always double in number
+    when the clock strikes midnight. To stay within the Regulator’s
+    rules, whenever a farm has strictly more than <span class="tex2jax_process">$C$</span> cows, Baxter selects half of the
+    cows on that farm and moves them to an entirely new, empty
+    farm. More precisely, if there are <span class="tex2jax_process">$D \leq C$</span> cows on a farm, he leaves
+    all <span class="tex2jax_process">$D$</span> cows on the farm,
+    but if there are <span class="tex2jax_process">$D &gt;
+    C$</span> cows on a farm, he leaves <span class="tex2jax_process">$\left\lceil \frac{D}{2} \right\rceil
+    $</span> cows on the farm and takes <span class="tex2jax_process">$\left\lfloor \frac{D}{2} \right\rfloor
+    $</span> cows to a new, empty farm. (Here <span class="tex2jax_process">$\left\lceil \ \right\rceil $</span> and
+    <span class="tex2jax_process">$\left\lfloor \ \right\rfloor
+    $</span> denote the ceiling and floor functions, which round
+    up/down to the nearest integer, respectively.) He does this
+    early every morning, before the Regulator could possibly show
+    up, so that he can avoid paying hefty Moo Fees.</p>
+<p>The Regulator needs to know how many farms she will be
+    inspecting when she visits The Enlightened Dairy Co. The
+    Regulator inspects every farm that has at least one cow, and
+    does not inspect any farm with zero cows. Given the number of
+    cows on each farm with at least one cow on
+    Day <span class="tex2jax_process">$0$</span>, compute the
+    number of farms that need inspecting on any given day.</p>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers, <span class="tex2jax_process">$C$</span>,
+    <span class="tex2jax_process">$N$</span>, and <span class="tex2jax_process">$M$</span>, where <span class="tex2jax_process">$C$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq C \leq 1\,
+    000$</span>)</span> is the maximum number of cows allowed on a
+    farm, <span class="tex2jax_process">$N$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$0 \leq N
+    \leq 1\, 000$</span>)</span> is the number of farms with at
+    least one cow on Day <span class="tex2jax_process">$0$</span>, and <span class="tex2jax_process">$M$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq M \leq
+    50$</span>)</span> is the number of different days on which the
+    Regulator visits. The following <span class="tex2jax_process">$N$</span> lines of input each have a single
+    integer <span class="tex2jax_process">$c_ i$</span>
+<span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq c_ i \leq C$</span>)</span>,
+    representing the number of cows on the <span class="tex2jax_process">$i$</span>th of the <span class="tex2jax_process">$N$</span> farms on Day <span class="tex2jax_process">$0$</span>. The final <span class="tex2jax_process">$M$</span> lines each have a single integer
+    <span class="tex2jax_process">$d_ j$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$0 \leq d_
+    j \leq 50$</span>)</span>, representing a day when the
+    Regulator visits. All <span class="tex2jax_process">$d_
+    j$</span> are distinct.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$d_ j$</span>, output
+    one line with a single integer: the number of farms the
+    Regulator will inspect on Day <span class="tex2jax_process">$d_ j$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 5 5
+1
+1
+1
+1
+1
+0
+1
+2
+3
+4
+</pre>
+</td>
+<td>
+<pre>5
+10
+20
+40
+80
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 5 3
+1
+2
+1
+2
+1
+0
+1
+2
+</pre>
+</td>
+<td>
+<pre>5
+7
+14
+</pre>
+</td>
+</tr>
+</table>
+</div>

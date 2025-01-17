@@ -1,0 +1,174 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/framvindustika/file/statement/en/img-0001.png" class="illustration" src="/problems/framvindustika/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://xkcd.com/612">xkcd.com</a>
+</div>
+</div>
+<p>Erla works at a software company that has recently received
+    complaints from users. The users are unhappy with a specific
+    operation in the software which has a long runtime. The users
+    are uncertain whether the program is frozen or active after
+    starting the operation. The code for the operation was a
+    prototype which was only meant to be used for a presentation
+    within the company. When Erla’s superiors saw the prototype
+    they decided to ship the feature in the next version.</p>
+<p>Erla suggests reviewing the implementation of the operation
+    and researching whether an optimized version can be written in
+    its stead. She is certain that this is possible, but it might
+    be time consuming. Erla’s direct superior decides to conduct a
+    survey regarding user interface and user experience to
+    determine the next course of action.</p>
+<p>After a month of surveying, the result is in. When a project
+    takes a long time it helps the mental state of a person to
+    experience that some milestones are being met. The same applies
+    to users which are waiting for the computer to finish running
+    heavy computations. Based on the results of the survey, a
+    decision is made to add a progress bar to indicate to the user
+    that the computation is ongoing and to give the user a feeling
+    for how long until the operation finishes.</p>
+<p>Erla disagrees profusely with the decision and would rather
+    focus on improving the efficiency of the operation. She still
+    has to finish implementing the progress bar today. She asks for
+    your help, can you implement the progress bar for Erla so she
+    can dive deep into research?</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing two integers
+    <span class="tex2jax_process">$p$</span>, where <span class="tex2jax_process">$0 \leq p \leq 100$</span>, representing the
+    percentage of the operation which is finished, and <span class="tex2jax_process">$w$</span>, the width of the progress
+    bar.</p>
+<h2>Output</h2>
+<p>Print the current state of the progress bar. The progress
+    bar should be output in a single line and starts with the
+    symbol <tt class="ttfamily">[</tt>, then <span class="tex2jax_process">$w$</span> symbols, where the first
+    <span class="tex2jax_process">$p$</span> percent of them are
+    <tt class="ttfamily">#</tt> and the rest are <tt class="ttfamily">-</tt>, then <tt class="ttfamily">]</tt> follows.
+    Next comes a space, the symbol <tt class="ttfamily">|</tt>,
+    then another space and finally the percentage shall be written
+    next to the progress bar. The percentage shall be written right
+    justified with columns for four symbols.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$w = 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$w = 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq w \leq 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq w \leq
+          10^6$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0 10
+</pre>
+</td>
+<td>
+<pre>[----------] |   0%
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>33 10
+</pre>
+</td>
+<td>
+<pre>[###-------] |  33%
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>25 25
+</pre>
+</td>
+<td>
+<pre>[######-------------------] |  25%
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>100 20
+</pre>
+</td>
+<td>
+<pre>[####################] | 100%
+</pre>
+</td>
+</tr>
+</table>
+</div>

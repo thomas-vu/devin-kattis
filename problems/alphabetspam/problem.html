@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/alphabetspam/file/statement/en/img-0001.jpg" class="illustration" src="/problems/alphabetspam/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/File:Spam_2.jpg">Photo</a>
+        by Bodo Akdeniz via Wikimedia Commons, GFDL
+      </div>
+</div>About <span class="tex2jax_process">$90$</span> percent
+    of the 300 billion emails sent every day are spam. Thus, a fast
+    spam detection mechanism is crucial for large email providers.
+    Lots of spammers try to circumvent spam detection by rewriting
+    words like “<tt class="tt">M0n3y</tt>”, “<tt class="tt">Ca$h</tt>”, or “<tt class="tt">Lo||ery</tt>”.
+
+    <p>A very simple and fast spam detection mechanism is based on
+    the ratios between whitespace characters, lowercase letters,
+    uppercase letters, and symbols. Symbols are defined as
+    characters that do not fall in one of the first three
+    groups.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with a string consisting of at least
+        <span class="tex2jax_process">$1$</span> and at most
+        <span class="tex2jax_process">$100\, 000$</span>
+        characters.</p>
+</li>
+</ul>
+<p>A preprocessing step has already transformed all whitespace
+    characters to underscores (<tt class="tt">_</tt>), and the line
+    will consist solely of characters with ASCII codes between 33
+    and 126 (inclusive).</p>
+<h2>Output</h2>
+<p>Output four lines, containing the ratios of whitespace
+    characters, lowercase letters, uppercase letters, and symbols
+    (in that order). Your answer should have an absolute or
+    relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+Welcome_NWERC_participants!
+</pre>
+</td>
+<td>
+<pre>
+0.0740740740740741
+0.666666666666667
+0.222222222222222
+0.0370370370370370
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+\/\/in_US$100000_in_our_Ca$h_Lo||ery!!!
+</pre>
+</td>
+<td>
+<pre>
+0.128205128205128
+0.333333333333333
+0.102564102564103
+0.435897435897436
+</pre>
+</td>
+</tr>
+</table>
+</div>

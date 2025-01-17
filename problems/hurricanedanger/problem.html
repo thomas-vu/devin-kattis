@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Hurricanes can cause a lot of destruction when they pass
+    over land. Given the path that a hurricane takes and the
+    locations of a number of cities, find which city is in the most
+    danger of damage. That is, the city that is closest to the path
+    the hurricane takes. Assume that each hurricane travels in a
+    straight line, and that it has been traveling for a long time
+    and will continue to do so for a long time.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le n \le 500$</span> indicating the
+    number of test cases that follow. Each case starts with a line
+    containing four integers <span class="tex2jax_process">$x_1~
+    y_1~ x_2~ y_2$</span> indicating the coordinates of the two
+    different locations the hurricane was already spotted. The
+    second line contains an integer <span class="tex2jax_process">$1 \le m \le 100$</span> indicating the
+    number of cities for that case. The following <span class="tex2jax_process">$m$</span> lines each contain a unique city
+    name (<span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span> characters from a–z) and two
+    integers indicating the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates of that city. All
+    coordinates are in the range <span class="tex2jax_process">$[0,
+    1\, 000]$</span>.</p>
+<h2>Output</h2>
+<p>For each set of cities, print the name of the city that is
+    in the greatest danger. If more than one city is considered in
+    greatest danger, print them all separated by spaces in the
+    order they appear in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 1 2 1
+3
+Waco 5 3
+Lafayette 5 2
+Knoxville 7 4
+3 3 10 10
+3
+Tampa 5 5
+Rochester 12 12
+Duluth 15 16
+</pre>
+</td>
+<td>
+<pre>
+Lafayette
+Tampa Rochester
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>Yes, we know <span class="tex2jax_process">$\ldots $</span>
+    we’ve used Challenge <span class="tex2jax_process">$24$</span>
+    before for contest problems. In case you’ve never heard of
+    Challenge <span class="tex2jax_process">$24$</span> (or have a
+    very short memory) the object of the game is to take
+    <span class="tex2jax_process">$4$</span> given numbers (the
+    <em>base values</em>) and determine if there is a way to
+    produce the value <span class="tex2jax_process">$24$</span>
+    from them using the four basic arithmetic operations (and
+    parentheses if needed). For example, given the four base values
+    <tt>3 5 5 2</tt>, you can produce <span class="tex2jax_process">$24$</span> in many ways. Two of them are:
+    <tt>5*5-3+2</tt> and <tt>(3+5)*(5-2)</tt>. Recall that
+    multiplication and division have precedence over addition and
+    subtraction, and that equal-precedence operators are evaluated
+    left-to-right.</p>
+<p>This is all very familiar to most of you, but what you
+    probably don’t know is that you can <em>grade</em> the quality
+    of the expressions used to produce <span class="tex2jax_process">$24$</span>. In fact, we’re sure you don’t
+    know this since we’ve just made it up. Here’s how it works: A
+    perfect grade for an expression is <span class="tex2jax_process">$0$</span>. Each use of parentheses adds one
+    point to the grade. Furthermore, each inversion (that is, a
+    swap of two adjacent values) of the original ordering of the
+    four base values adds two points. The first expression above
+    has a grade of <span class="tex2jax_process">$4$</span>, since
+    two inversions are used to move the <span class="tex2jax_process">$3$</span> to the third position. The second
+    expression has a better grade of <span class="tex2jax_process">$2$</span> since it uses no inversions but
+    two sets of parentheses. As a further example, the initial set
+    of four base values <tt>3 6 2 3</tt> could produce an
+    expression of grade <span class="tex2jax_process">$3$</span> —
+    namely <tt>(3+6+3)*2</tt> — but it also has a perfect grade
+    <span class="tex2jax_process">$0$</span> expression — namely
+    <tt>3*6+2*3</tt>. Needless to say, the lower the grade the
+    “better” the expression.</p>
+<p>Two additional rules we’ll use: <span class="tex2jax_process">$1$</span>) you cannot use unary minus in any
+    expression, so you can’t take the base values <tt>3 5 5 2</tt>
+    and produce the expression <tt>-3+5*5+2</tt>, and <span class="tex2jax_process">$2$</span>) division can only be used if the
+    result is an integer, so you can’t take the base values <tt>2 3
+    4 9</tt> and produce the expression <tt>2/3*4*9</tt>.</p>
+<p>Given a sequence of base values, determine the lowest graded
+    expression resulting in the value <span class="tex2jax_process">$24$</span>. And by the way, the initial set
+    of base values <tt>3 5 5 2</tt> has a grade <span class="tex2jax_process">$1$</span> expression — can you find it?</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing <span class="tex2jax_process">$4$</span> base values. All base values are
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$100$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Display the lowest grade possible using the sequence of base
+    values. If it is not possible to produce <span class="tex2jax_process">$24$</span>, display <tt class="tt">impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5 5 2
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 1 1 1
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

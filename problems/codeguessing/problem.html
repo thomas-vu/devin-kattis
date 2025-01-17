@@ -1,0 +1,63 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/codeguessing/file/statement/en/img-0001.png" class="illustration" src="/problems/codeguessing/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Alice and Bob are playing a board game with a deck of
+    nine cards. For each digit between <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$9$</span>, there is one card with that digit
+    on it. Alice and Bob each draw two cards after shuffling the
+    cards, and see the digits on their own cards without revealing
+    the digits to each other. Then Alice gives her two cards to
+    Bob. Bob sees the digits on Alice’s cards and lays all the four
+    cards on the table in increasing order by the digits. Cards are
+    laid facing down.
+    <p>Bob tells Alice the positions of her two cards. The goal of
+    Alice is to guess the digits on Bob’s two cards. Can Alice
+    uniquely determine these two digits and guess them
+    correctly?</p>
+<h2>Input</h2>
+<p>The input has two integers <span class="tex2jax_process">$p,
+    q$</span> (<span class="tex2jax_process">$1 \leq p &lt; q \leq
+    9$</span>) on the first line, giving the digits on Alice’s
+    cards. The next line has a string containing two ‘<tt class="tt">A</tt>’s and two ‘<tt class="tt">B</tt>’s, giving the
+    positions of Alice’s and Bob’s cards on the table. It is
+    guaranteed that Bob correctly sorts the cards and gives the
+    correct positions of Alice’s cards.</p>
+<h2>Output</h2>
+<p>If Alice can uniquely determine the two digits on Bob’s
+    cards, output the two digits on a single line, starting with
+    the smaller digit. Otherwise, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 9
+ABBA
+</pre>
+</td>
+<td>
+<pre>7 8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+BAAB
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

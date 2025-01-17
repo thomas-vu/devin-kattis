@@ -1,0 +1,170 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/knapsackpacking/file/statement/en/img-0001.jpg" class="illustration" src="/problems/knapsackpacking/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>One of the most difficult things about going on a holiday is
+    making sure your luggage does not exceed the maximum weight.
+    You, chairman of the Backpacker’s Association for Packing
+    Carry-ons, are faced with exactly this problem. You are going
+    on a lovely holiday with one of your friends, but now most of
+    your time is spent in frustration while trying to pack your
+    backpack. In order to optimize this process, you and your
+    friend have independently set upon trying to find better ways
+    to pack.</p>
+<p>After some time you have a serious breakthrough! Somehow you
+    managed to solve the Knapsack problem in polynomial time,
+    defying expectations everywhere. You are not interested in any
+    theoretical applications, so you immediately return to your
+    friend’s apartment in order to now quickly pack your backpack
+    optimally.</p>
+<p>When you arrive there, you find that your friend has set
+    upon her own solution, namely to enumerate all possible
+    packings. This means that all items you possibly wanted to
+    bring are scattered across the entire apartment, and it would
+    take a really long time to get all the items back together.</p>
+<p>Luckily you can use the work your friend has done. For every
+    possible subset of items that you can possibly bring, she has
+    written down the total weight of these items. Alas, she did not
+    write down what items were part of this total, so you do not
+    know what items contributed to each total weight. If the
+    original weights of the items formed a collection <span class="tex2jax_process">$(a_1,\dotsc ,a_ n)$</span> of non-negative
+    integers, then your friend has written down the
+    multiset</p><span class="tex2jax_process">\[ S\big ((a_1,\dotsc
+    ,a_ n)\big ) := \left\{ \sum _{i \in I} a_ i \; \middle |\; I
+    \subseteq \{ 1, \dots , n\} \right\} . \]</span>
+<p>For example, if your friend had two items, and the weights
+    of those two items are <span class="tex2jax_process">$2,
+    3$</span>, then your friend has written down</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0$</span>, corresponding
+        to the empty set <span class="tex2jax_process">$\{ \}
+        $</span>;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span>, corresponding
+        to the subset <span class="tex2jax_process">$\{ 2\}
+        $</span>;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$3$</span>, corresponding
+        to the subset <span class="tex2jax_process">$\{ 3\}
+        $</span>;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$5$</span>, corresponding
+        to the subset <span class="tex2jax_process">$\{ 2, 3\}
+        $</span>.</p>
+</li>
+</ul>
+<p>You want to reconstruct the weights of all the individual
+    items so you can start using your Knapsack algorithm. It might
+    have happened that your friend made a mistake in adding all
+    these weights, so it might happen that her list is not
+    consistent.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing a single integer <span class="tex2jax_process">$1\leq n\leq 18$</span> the number of
+        items.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2^ n$</span> lines each
+        containing a single integer <span class="tex2jax_process">$0\leq w\leq 2^{28}$</span>, the combined
+        weight of a subset of the items. Every subset occurs
+        exactly once.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output non-negative integers <span class="tex2jax_process">$a_1, \dotsc , a_ n$</span> on <span class="tex2jax_process">$n$</span> lines in non-decreasing order such
+    that <span class="tex2jax_process">$S\big ((a_1,\dotsc ,a_
+    n)\big )=\{ b_1,\dotsc ,b_{2^ n}\} $</span>, provided that such
+    integers exist. Otherwise, output a single line containing
+    <tt class="ttfamily">impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+0
+5
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+7
+5
+2
+4
+1
+6
+3
+0
+</pre>
+</td>
+<td>
+<pre>1
+2
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0
+1
+2
+4
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0
+1
+1
+2
+</pre>
+</td>
+<td>
+<pre>1
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

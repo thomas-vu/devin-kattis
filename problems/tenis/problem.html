@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>After Borko’s second plan of taking over the village fell
+    through (because Mirko’s brother Stanko drank all the water),
+    young Zvonko decided to relax with sports. For this purpose he
+    stocked up on carrot juice and peanuts, and dived onto the
+    couch, ready to watch the next tennis match on television.</p>
+<p>While the two players are warming up, their statistics pop
+    up on the screen. Zvonko noticed that the match history of the
+    players contained invalid results. He had a brilliant idea
+    where you write him a program that checks the validity of
+    results, which he will then sell to the record keepers and
+    enjoy a leisurely life.</p>
+<p>A tennis match consists of sets, each set consisting of
+    games. The following rules apply:</p>
+<ul class="itemize">
+<li>
+<p>A player wins a set if he has <span class="tex2jax_process">$6$</span> or more games and at least two
+        games more than his opponent.</p>
+</li>
+<li>
+<p>Additionally, if the result is <span class="tex2jax_process">$6:6$</span> in the first or second set
+        (but not the third set), a single final game is played to
+        determine the winner of the set (the tie-break game).</p>
+</li>
+<li>
+<p>The match ends when either player has won 2 sets. That
+        player is the winner.</p>
+</li>
+</ul>
+<p>A match result is valid if a match could have been played by
+    the above rules and ended in the result. Additionally, if one
+    of the players is Roger Federer (designated as “<tt class="tt">federer</tt>” in the input), then a result in which he has
+    lost a set can’t be valid (Zvonko knows Federer is from outer
+    space).</p>
+<p>Write a program that checks the validity of all matches
+    between two players.</p>
+<h2>Input</h2>
+<p>The first line of input contains the names of the two
+    players separated by a single space. Both names will be strings
+    of at most <span class="tex2jax_process">$20$</span> lowercase
+    letters of the English alphabet. The names will be different.
+    The second line contains an integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 50)$</span>, how many matches the two players have
+    played.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains the result of a
+    single match, composed of the results of a number of sets
+    separated by single spaces. Each match result will contain
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$5$</span> sets. A set is given
+    in the format “<span class="tex2jax_process">$A$</span>:<span class="tex2jax_process">$B$</span>”, where <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are games won by each player.
+    These numbers are integers between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$99$</span> (inclusive).</p>
+<h2>Output</h2>
+<p>For each match, in the order they’re given in the input,
+    output “<tt class="tt">da</tt>” if the result is valid, or
+    “<tt class="tt">ne</tt>” if it isn’t.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+sampras agassi
+6
+6:2 6:4
+3:6 7:5 2:6
+6:5 7:4
+7:6 7:6
+6:2 3:6
+6:2 1:6 6:8
+</pre>
+</td>
+<td>
+<pre>
+da
+da
+ne
+da
+ne
+da
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+federer roddick
+1
+2:6 4:6
+</pre>
+</td>
+<td>
+<pre>
+ne
+</pre>
+</td>
+</tr>
+</table>
+</div>

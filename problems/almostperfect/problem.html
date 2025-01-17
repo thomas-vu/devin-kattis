@@ -1,0 +1,45 @@
+<div class="problembody">
+<p>A positive integer <span class="tex2jax_process">$p$</span>
+    is called a <i class="itshape">perfect number</i> if all the
+    proper divisors of <span class="tex2jax_process">$p$</span> sum
+    to <span class="tex2jax_process">$p$</span> exactly. Integer
+    <span class="tex2jax_process">$d$</span> is a proper divisor of
+    <span class="tex2jax_process">$p$</span> if <span class="tex2jax_process">$1 \le d \le p-1$</span> and <span class="tex2jax_process">$p$</span> is evenly divisible by
+    <span class="tex2jax_process">$d$</span>. For example, the
+    number <span class="tex2jax_process">$28$</span> is a perfect
+    number, since its proper divisors (which are <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$7$</span> and <span class="tex2jax_process">$14$</span>) add up to <span class="tex2jax_process">$28$</span>.</p>
+<p>Perfect numbers are rare; only <span class="tex2jax_process">$50$</span> of them are known (as of 2017).
+    Perhaps the definition of perfection is a little too strict.
+    Instead, we will consider numbers that we’ll call <i class="itshape">almost perfect</i>. Positive integer <span class="tex2jax_process">$p$</span> is almost perfect if the proper
+    divisors of <span class="tex2jax_process">$p$</span> sum to a
+    value that differs from <span class="tex2jax_process">$p$</span> by no more than two.</p>
+<h2>Input</h2>
+<p>Input consists of a sequence of up to <span class="tex2jax_process">$500$</span> integers, one per line. Each
+    integer is in the range <span class="tex2jax_process">$2$</span> to <span class="tex2jax_process">$10^9$</span> (inclusive). Input ends at end
+    of file.</p>
+<h2>Output</h2>
+<p>For each input value, output the same value and then one of
+    the following: “perfect” (if the number is perfect), “almost
+    perfect” (if it is almost perfect but not perfect), or “not
+    perfect” (otherwise).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+65
+650
+</pre>
+</td>
+<td>
+<pre>6 perfect
+65 not perfect
+650 almost perfect
+</pre>
+</td>
+</tr>
+</table>
+</div>

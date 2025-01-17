@@ -1,0 +1,147 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Undergraduate is a very studious cat. Currently,
+      SoCCat is writing their Bachelor’s Thesis!
+    </blockquote>
+<p>For SoCCat’s Final Year Project, SoCCat will write a thesis
+    studying the behaviour of a particular operation: the
+    <em>cat-split</em>.</p>
+<p>Initially, suppose SoCCat has an array of <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>, and an
+    integer <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq n$</span>). In one
+    <em>cat-split</em> operation, SoCCat will do all of the
+    following in order:</p>
+<ol class="enumerate">
+<li>
+<p>Choose any subsequence of <span class="tex2jax_process">$a$</span> which consists of
+        <em>exactly</em> <span class="tex2jax_process">$k$</span>
+        elements.</p>
+</li>
+<li>
+<p>Delete the chosen subsequence from the array
+        <span class="tex2jax_process">$a$</span>.</p>
+</li>
+<li>
+<p>Append the values of the chosen subsequence to the
+        <em>beginning</em> of the array <span class="tex2jax_process">$a$</span> in <em>reverse</em> order.</p>
+</li>
+</ol>
+<p>For example, for an array <span class="tex2jax_process">$a =
+    [5, 1, 4, 2, 3]$</span> and integer <span class="tex2jax_process">$k = 3$</span>, SoCCat can choose the
+    subsequence <span class="tex2jax_process">$[1, 4, 3]$</span>.
+    Next, SoCCat will remove the elements <span class="tex2jax_process">$[1,4,3]$</span> from <span class="tex2jax_process">$a$</span>, after which the array will become
+    <span class="tex2jax_process">$[5,2]$</span>. Finally, SoCCat
+    will prepend the elements <span class="tex2jax_process">$[1, 4,
+    3]$</span> in reverse order, after which the array will become
+    <span class="tex2jax_process">$[3,4,1,5,2]$</span>.</p>
+<p>SoCCat is interested in knowing the minimum possible number
+    of inversions in the array <span class="tex2jax_process">$a$</span> after doing the <em>cat-split</em>
+    operation between <span class="tex2jax_process">$0$</span> up
+    to <span class="tex2jax_process">$100\, 000$</span> times. As
+    SoCCat is busy studying other properties of the
+    <em>cat-split</em> operation, they turn to you for help!</p>
+<p>Note that you do not have to minimize the number of
+    <em>cat-split</em> operations, only the number of inversions in
+    the resulting array.</p>
+<p>As a reminder,</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$b_1, b_2, \ldots , b_
+        k$</span> is a subsequence of <span class="tex2jax_process">$a$</span> if and only if <span class="tex2jax_process">$b_1, b_2, \ldots , b_ k$</span> can be
+        obtained from <span class="tex2jax_process">$a$</span> by
+        deleting zero or more elements from it without changing the
+        order of the remaining elements.</p>
+</li>
+<li>
+<p>The inversion of an array <span class="tex2jax_process">$a$</span> is equal to the number of
+        pairs <span class="tex2jax_process">$(i, j)$</span> such
+        that <span class="tex2jax_process">$i &lt; j$</span> and
+        <span class="tex2jax_process">$a_ i &gt; a_ j$</span>.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, denoting the number of elements
+    in the array <span class="tex2jax_process">$a$</span> and the
+    specific number of elements chosen in the subsequence for each
+    <em>cat-split</em> operation (<span class="tex2jax_process">$1
+    \leq n \leq 100$</span>; <span class="tex2jax_process">$1 \leq
+    k \leq n$</span>).</p>
+<p>The following line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>, denoting
+    the elements of the array <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$1
+    \leq a_ i \leq 100$</span>).</p>
+<h2>Output</h2>
+<p>In the first line, output the minimum possible number of
+    inversions in the resulting array after doing the
+    <em>cat-split</em> operation between <span class="tex2jax_process">$0$</span> up to <span class="tex2jax_process">$100\, 000$</span> times.</p>
+<p>In the second line, output <span class="tex2jax_process">$l$</span>, denoting the number of
+    <em>cat-split</em> operations SoCCat should perform to obtain
+    the minimum number of inversions in the resulting array
+    (<span class="tex2jax_process">$0 \leq l \leq 100\,
+    000$</span>). You do not have to minimize <span class="tex2jax_process">$l$</span>.</p>
+<p>Each of the following <span class="tex2jax_process">$l$</span> lines should contain a binary
+    string of length <span class="tex2jax_process">$n$</span>,
+    denoting the subsequence SoCCat should choose for that
+    particular operation. The <span class="tex2jax_process">$i$</span>-th character of the binary string
+    should be <tt class="ttfamily">1</tt> if the <span class="tex2jax_process">$i$</span>-th element of the array is chosen
+    for the subsequence, and <tt class="ttfamily">0</tt> otherwise.
+    Note that each binary string should therefore contain exactly
+    <span class="tex2jax_process">$k$</span> <tt class="ttfamily">1</tt>’s.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+3 3 2 3
+</pre>
+</td>
+<td>
+<pre>1
+3
+1111
+1111
+1111
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+3 2 3 3
+</pre>
+</td>
+<td>
+<pre>1
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1 2 4 3 5
+</pre>
+</td>
+<td>
+<pre>0
+2
+01010
+01100
+</pre>
+</td>
+</tr>
+</table>
+</div>

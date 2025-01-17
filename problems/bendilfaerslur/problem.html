@@ -1,0 +1,186 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bendilfaerslur/file/statement/en/img-0001.png" class="illustration" src="/problems/bendilfaerslur/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://www.ripe.net/manage-ips-and-asns/db/support/configuring-reverse-dns">
+        RIPE NCC</a>
+</div>
+</div>
+<p>Níels is very forgetful and has a lot of domains. When he
+    was setting up his website he forgot what domain the site had,
+    but thankfully he had written down the IP address that the
+    website was on. Now Níels needs to use the IP address to look
+    up the domain so he can share the site with his friends. To do
+    this he performs a reverse DNS lookup. But first he needs to
+    convert his IP address to a PTR record (í. bendilfærslu), but
+    he needs your help because he’s too busy centering the div on
+    his website.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a string. This string
+    will be an IP address of either IPv4 or IPv6 form.</p>
+<p>An IPv4 address consists of four parts. Each part is an
+    integer from and including <span class="tex2jax_process">$0$</span> up to and including <span class="tex2jax_process">$255$</span> These parts are separated by a
+    single period.</p>
+<p>Some examples of valid IPv4 addresses are:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">10.100.80.13</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">255.255.255.255</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">255.160.134.0</tt></p>
+</li>
+</ul>
+<p>Some examples of invalid IPv4 addresses are:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">300.1.35.28</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">255.255.255.254.1</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">127,0,0,1</tt></p>
+</li>
+</ul>
+<p>An IPv6 address consists of eight parts. Each part is a four
+    digit hexadecimal number. These hexadecimal numbers use the
+    digits from <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$9$</span> and the letters from
+    <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$f$</span>. The eight parts are separated by
+    single colons. In each part you may omit writing the leading
+    zeros of the number. If two or more adjacent parts contain the
+    number <span class="tex2jax_process">$0$</span> they may be
+    omitted and in their place you write two colons. You are only
+    allowed to do this in one place in the IP address.</p>
+<p>Some examples of valid IPv6 addresses are:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">ffff:dead:1337:beef:4321:f33d:2f92:3419</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">2001:db8:0:0:0:ff00:42:8329</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">::1</tt></p>
+</li>
+</ul>
+<p>Some examples of invalid IPv6 addresses are:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">0123:4567:89ab:cdef:ghij:klmn:opqr:stuv</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">ffff:1234::f6b90::abcd</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">2001:db8:0:0:0:ff00:42:8329:1234</tt></p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>The output should contain, on a single line, the PTR record
+    for the IP address.</p>
+<p>The PTR record for an IPv4 address is such that the four
+    parts have been reversed and <tt class="ttfamily">in-addr.arpa.</tt> added to the end.</p>
+<p>The PTR record for an IPv6 address is such that the colons
+    are removed and a single period is placed between each symbol
+    in the numbers, and that is then reversed. Then <tt class="ttfamily">.ip6.arpa.</tt> is added to the end.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input consists solely of IPv4 addresses</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input consists solely of IPv6 addresses where no
+          zeros have been omitted</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>127.0.0.1
+</pre>
+</td>
+<td>
+<pre>1.0.0.127.in-addr.arpa.
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2001:db8:0:0:0:ff00:42:8329
+</pre>
+</td>
+<td>
+<pre>9.2.3.8.2.4.0.0.0.0.f.f.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa.
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>::1
+</pre>
+</td>
+<td>
+<pre>1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa.
+</pre>
+</td>
+</tr>
+</table>
+</div>

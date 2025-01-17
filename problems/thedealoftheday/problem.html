@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:15.00%">
+<img alt="/problems/thedealoftheday/file/statement/en/img-0001.png" class="illustration" src="/problems/thedealoftheday/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>A bored technician whose job requires inspecting each of
+    <span class="tex2jax_process">$10$</span> equipment stations on
+    a regular basis has tried to inject a little variety into his
+    days by creating a deck of cards, each card bearing a number in
+    the range <span class="tex2jax_process">$1..10$</span>. From
+    this deck he randomly deals out <span class="tex2jax_process">$K$</span> cards at the start of the day, and
+    uses the numbers on these to determine which stations and in
+    what order he will visit them on that day. (He has decided that
+    it is OK to visit the same station more than once in the same
+    day.)</p>
+<p>As time goes by, he adds cards for the number of stations
+    where he finds problems, so that he will visit them more often,
+    so the number of cards bearing each digit may vary
+    considerably.</p>
+<p>One day he deals out his cards, and notices that they have
+    come out in strictly ascending order. He starts to wonder just
+    how likely such an ordering would be.</p>
+<p>Find the number of ways to deal the cards that form a
+    strictly ascending sequence. (“Strictly ascending” in this
+    problem means that, for example <span class="tex2jax_process">$[2, 4, 5]$</span> would be accepted but
+    <span class="tex2jax_process">$[3, 1, 2]$</span> and
+    <span class="tex2jax_process">$[2, 2, 4]$</span> would
+    not.)</p>
+<h2>Input</h2>
+<p>The first line of input contains <span class="tex2jax_process">$10$</span> non-negative integers
+    <span class="tex2jax_process">$n_ i$</span>, each denoting the
+    number of cards bearing the number <span class="tex2jax_process">$i$</span>. The sum of these <span class="tex2jax_process">$10$</span> numbers is in the range
+    <span class="tex2jax_process">$1\ldots 1\, 000$</span>.</p>
+<p>This is followed by a line containing an integer
+    <span class="tex2jax_process">$K$</span>, <span class="tex2jax_process">$1 \leq K \leq 10$</span>, denoting the
+    number of cards to be dealt.</p>
+<h2>Output</h2>
+<p>Print a single line containing an integer denoting the
+    number of ways to deal <span class="tex2jax_process">$K$</span>
+    cards from that deck that would form a strictly ascending
+    sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 0 0 0 4 0 0 0 0 4
+3
+</pre>
+</td>
+<td>
+<pre>64
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 0 0 0 4 0 0 0 0 4
+4
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 10 10 20 0 10 10 10 10 10
+4
+</pre>
+</td>
+<td>
+<pre>1820000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>100 100 100 100 100 100 100 100 100 100
+10
+</pre>
+</td>
+<td>
+<pre>100000000000000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

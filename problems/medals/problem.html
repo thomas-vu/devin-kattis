@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/medals/file/statement/en/img-0001.jpg" class="illustration" src="/problems/medals/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>At the Olympic Games, countries are ranked according to
+    the number of medals their athletes won. However, there is more
+    than one possible way of ranking countries by their medals. In
+    Europe, for example, countries are first ranked by the number
+    of gold medals their athletes won. Ties are broken by looking
+    at silver medals, and then at bronze medals. In Canada,
+    however, because Canadian athletes do not win very many gold
+    medals, countries are ranked by the overall number of medals
+    won, giving the same weight to gold, silver, and bronze medals.
+
+    <p>In general, a ranking scheme can be thought of as a vector
+    of positive weights. This vector is multiplied with the vector
+    of medals won by each country, and the scalar product of the
+    two vectors defines the score of the respective country, which
+    is then used to produce the ranking. In this general scheme,
+    the European ranking technique corresponds to the weight vector
+    <span class="tex2jax_process">$(10^{20}, 10^{10}, 1)$</span>,
+    whereas the Canadian method corresponds to the vector
+    <span class="tex2jax_process">$(1, 1, 1)$</span>.</p>
+<p>In this problem, you will only need to consider weight
+    vectors of the form <span class="tex2jax_process">$(1/n^ j,
+    1/n^ k, 1/n^ l)$</span>, where <span class="tex2jax_process">$n$</span> is the total number of medals won
+    by all athletes in the Olympic Games, and <span class="tex2jax_process">$j$</span>, <span class="tex2jax_process">$k$</span>, and <span class="tex2jax_process">$l$</span> are integers.</p>
+<p>Given a list of countries and the number of gold, silver,
+    and bronze medals won by each country, print the line</p>
+<blockquote class="quote">
+<tt class="ttfamily">Canada wins!</tt>
+</blockquote>
+<p>if there is a weight vector of the above form such that
+    Canada ranks first (possibly tied with one or more other
+    countries) according to the ranking scheme defined by that
+    vector. Print the line</p>
+<blockquote class="quote">
+<tt class="ttfamily">Canada cannot win.</tt>
+</blockquote>
+<p>if no such vector exists.</p>
+<h2>Input</h2>
+<p>The input contains multiple test cases. Each test case
+    starts with an integer <span class="tex2jax_process">$c$</span>, the number of countries to
+    follow. Each of the following <span class="tex2jax_process">$c$</span> lines contains the name of a
+    country and three integers <span class="tex2jax_process">$g$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$b$</span> – the number of gold, silver, and
+    bronze medals won by the country. The last test case has
+    <span class="tex2jax_process">$c = 0$</span> and must not be
+    processed. It is guaranteed that each test case contains at
+    most <span class="tex2jax_process">$20$</span> different
+    countries and that the total number of medals smaller than
+    <span class="tex2jax_process">$100$</span>. Country names do
+    not contain whitespace characters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+Canada 3 2 1
+USA 1 2 3
+2
+USA 2 2 2
+Canada 1 1 1
+0
+</pre>
+</td>
+<td>
+<pre>
+Canada wins!
+Canada cannot win.
+</pre>
+</td>
+</tr>
+</table>
+</div>

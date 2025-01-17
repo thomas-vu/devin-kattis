@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Your boss gave you the task of creating a walking maze, and
+    you are evaluating different designs. Before you commit to one,
+    you want to know how quickly people can move in and out of each
+    different maze. After all, your boss is interested in making
+    money on this venture and, the faster people can move through,
+    the more paying customers you can handle.</p>
+<p>A maze is a set of numbered rooms and passages connecting
+    the rooms. The maze’s only entrance is at the lowest-numbered
+    room and the only exit is at the highest-numbered room.</p>
+<p>Each passage has a limit in the number of people that can
+    pass through at a time. For two rooms numbered <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, if <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> have a common factor greater than
+    one, then there is a passage between <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>. The largest common factor
+    <span class="tex2jax_process">$p$</span> is the number of
+    people per minute that can walk from <span class="tex2jax_process">$x$</span> to <span class="tex2jax_process">$y$</span>. Simultaneously, <span class="tex2jax_process">$p$</span> people per minute can also be
+    walking from <span class="tex2jax_process">$y$</span> to
+    <span class="tex2jax_process">$x$</span>. The entrance, exit,
+    and rooms can handle any number of people walking through at a
+    time. People want to get through the maze as quickly as
+    possible, so they do not wait around in the rooms.</p>
+<p>Here are illustrations of the two sample inputs. Boxes
+    represent the numbered rooms, and each arrow is a passage
+    labeled by the number of people per minute that can walk
+    through it.</p>
+<center>
+<img alt="\includegraphics[width=0.50\textwidth ]{sampleInput1}" src="/problems/mazemovement/file/statement/en/img-0001.png" style="width:50.00%"/><br/>
+<img alt="\includegraphics[width=0.75\textwidth ]{sampleInput2}" src="/problems/mazemovement/file/statement/en/img-0002.png" style="width:75.00%"/>
+</center>
+<h2>Input</h2>
+<p>Input is a single maze description. The first line is an
+    integer <span class="tex2jax_process">$2 \leq n \leq
+    1000$</span> indicating the number of rooms in the maze. This
+    is followed by <span class="tex2jax_process">$n$</span> unique
+    integers, one per line, which are the room numbers for the
+    maze. Each room number is in the range <span class="tex2jax_process">$[2,~ 2\times 10^9]$</span>.</p>
+<h2>Output</h2>
+<p>Print the maximum number of people per minute that can enter
+    the maze, assuming that people are exiting the maze at the same
+    speed as people entering. No maze supports more than
+    <span class="tex2jax_process">$10^9$</span> people entering per
+    minute.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+4
+6
+8
+9
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+25289
+17017
+2601
+325
+225
+55223
+190969
+</pre>
+</td>
+<td>
+<pre>
+18
+</pre>
+</td>
+</tr>
+</table>
+</div>

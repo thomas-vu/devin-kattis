@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>Let’s play a guessing game. I’m thinking of a positive
+    integer that’s greater than five and less than eleven and
+    divisible by three. Of course, I could be thinking of either
+    six or nine. Your job is to supply a program that can play
+    guessing games like this. Given a collection of clues, your
+    program should report all numbers that satisfy the clues.</p>
+<h2>Input</h2>
+<p>Input consists of a number of test cases (at most
+    <span class="tex2jax_process">$20$</span>). Each case starts
+    with a number <span class="tex2jax_process">$1 \leq n \leq
+    10$</span> on a line by itself. Next come <span class="tex2jax_process">$n$</span> clues, one per line. Clues have
+    the form “greater than <span class="tex2jax_process">$i$</span>”, “less than <span class="tex2jax_process">$i$</span>” or “divisible by <span class="tex2jax_process">$i$</span>” for some integer <span class="tex2jax_process">$1 \leq i \le 50\, 000$</span>. A value of
+    zero for <span class="tex2jax_process">$n$</span> marks the end
+    of all test cases.</p>
+<h2>Output</h2>
+<p>For each test case, your program should report all positive
+    integers that are consistent with the given clues. Values
+    should be given on a single line in ascending order, with one
+    space between consecutive values. If no values are consistent
+    with the clues, print “none”. If infinitely many values are
+    consistent with the clues, print out “infinite”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+less than 100
+divisible by 3
+divisible by 7
+3
+greater than 6
+less than 9
+divisible by 3
+3
+divisible by 1
+greater than 6
+greater than 500
+1
+less than 2
+0
+</pre>
+</td>
+<td>
+<pre>
+21 42 63 84
+none
+infinite
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

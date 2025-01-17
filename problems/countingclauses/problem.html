@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>It’s time for the annual 3-SAT competition, where the
+    contestants compete to answer as many instances of 3-SAT as
+    possible within the time limit. 3-SAT is a classic NP-complete
+    problem, where you are given a boolean formula in
+    <em>conjunctive normal form</em>, in which we have a set of
+    <em>clauses</em> each consisting of exactly three
+    <em>literals</em>. Each literal refer either positively or
+    negatively to a <em>variable</em>, which can be assigned a
+    value of either <tt class="ttfamily">True</tt> or <tt class="ttfamily">False</tt>. The question is whether there exists an
+    assignment to the variables such that every clause evaluates to
+    <tt class="ttfamily">True</tt>. No clause will contain
+    duplicates of a literal (however it is possible that a clause
+    contain both <span class="tex2jax_process">$\neg x_ i$</span>
+    and <span class="tex2jax_process">$x_ i$</span>). An example of
+    a 3-SAT instance is shown below (from sample input
+    1):</p><span class="tex2jax_process">\[ (\neg x_1 \vee x_2 \vee
+    x_3) \wedge (\neg x_1 \vee \neg x_2 \vee x_3) \wedge (x_1 \vee
+    \neg x_2 \vee x_3) \wedge (x_1 \vee \neg x_2 \vee \neg x_3)
+    \wedge (x_1 \vee x_2 \vee \neg x_3) \]</span>
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/countingclauses/file/statement/en/img-0001.png" class="illustration" src="/problems/countingclauses/file/statement/en/img-0001.png"/>
+<div class="description">
+        Illustration of the terminology
+      </div>
+</div>Øyvind is a judge in the competition, responsible for
+    verifying the quality of problem instances crafted by the other
+    judges before the contest starts. Øyvind hates 3-SAT instances
+    with less than eight clauses – as these are always satisfiable
+    they provide no real challenge for the contestants. Therefore,
+    he will deem such problem instances to be unsatisfactory.
+    Whenever Øyvind encounters an instance with eight or more
+    clauses he knows that it is a real challenge to figure out
+    whether this instance is satisfiable or not – and therefore he
+    will judge these problem instances to be satisfactory. Given an
+    instance of 3-SAT, can you help find Øyvind’s judgement?
+    <h2>Input</h2>
+<p>The input is a single instance of the 3-SAT problem. The
+    first line is two space-separated integers: <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq m \leq 20$</span>), the number of clauses and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3
+    \leq n \leq 20$</span>), the number of variables. Then
+    <span class="tex2jax_process">$m$</span> clauses follow, one
+    clause per line. Each clause consists of 3 distinct
+    space-separated integers in the range <span class="tex2jax_process">$[-n, n] \setminus \{ 0\} $</span>. For each
+    clause, the three values correspond to the three literals in
+    the clause. If the literal is negative, that means that the
+    clause is satisfied if the corresponding variable is set to
+    <tt class="ttfamily">False</tt>, and if it is positive the
+    clause is satisfied if the variable is set to <tt class="ttfamily">True</tt>.</p>
+<h2>Output</h2>
+<p>Print “<tt class="ttfamily">satisfactory</tt>” on a single
+    line if Øyvind finds the 3-SAT instance to be satisfactory, and
+    “<tt class="ttfamily">unsatisfactory</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+-1 2 3
+-1 -2 3
+1 -2 3
+1 -2 -3
+1 2 -3
+</pre>
+</td>
+<td>
+<pre>unsatisfactory
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 3
+1 2 3
+1 2 -3
+1 -2 3
+1 -2 -3
+-1 2 3
+-1 2 -3
+-1 -2 3
+-1 -2 -3
+</pre>
+</td>
+<td>
+<pre>satisfactory
+</pre>
+</td>
+</tr>
+</table>
+</div>

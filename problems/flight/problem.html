@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>The airline company NCPC Airways has flights to and from
+    <span class="tex2jax_process">$n$</span> cities, numbered from
+    1 to <span class="tex2jax_process">$n$</span>, around the
+    entire world. However, they only have <span class="tex2jax_process">$n - 1$</span> different flights (operating
+    in both directions), so in order to travel between any two
+    cities you might have to take several flights. In fact, since
+    the management has made sure that it’s possible to travel
+    between any pair of cities, there is exactly one set of flights
+    a passenger have to take in order to travel between two cities
+    (assuming you want to use the same airline).</p>
+<p>Recently many of NCPC Airways frequent flyers have
+    complained that they have had to change flights too often to
+    get to their final destination. Since NCPC Airways doesn’t want
+    to loose their customers to other airline companies, but still
+    keep the nice property of their flights, they have decided to
+    cancel one of their current flights and replace it with another
+    flight. Help the company by writing a program which finds the
+    best flight to cancel and the best new flight to add so that
+    the maximum number of flight changes a passenger might have to
+    make when travelling between any pair of cities in which NCPC
+    Airways operates is minimized.</p>
+<p><em>The input will be constructed so that it is always
+    possible to improve the maximum number of flight changes
+    needed.</em></p>
+<h2>Input</h2>
+<p>The first line in the input contains the integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$4 \leq n \leq 2\, 500$</span>), the number
+    of cities NCPC Airways operates in. Then follow <span class="tex2jax_process">$n - 1$</span> lines specifying the flights.
+    Each flight is given as a pair of cities <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \le a, b \le n$</span>).</p>
+<h2>Output</h2>
+<p>The output should consist of three lines. The first line
+    should contain an integer, the minimum number of flights needed
+    to take when travelling between any pair of cities after
+    changing one of the flights. The second line should contain two
+    integers, specifying the two cities between which the flight
+    should be canceled. The third line should contain two integers,
+    specifying the two cities where a new flight should be
+    added.</p>
+<p>If there are more than one optimal solution, any one of them
+    will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 2
+2 3
+3 4
+</pre>
+</td>
+<td>
+<pre>
+2
+3 4
+2 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+14
+1 2
+1 8
+2 3
+2 4
+8 9
+8 10
+8 11
+4 5
+4 6
+4 7
+10 12
+10 13
+13 14
+</pre>
+</td>
+<td>
+<pre>
+5
+1 8
+2 10
+</pre>
+</td>
+</tr>
+</table>
+</div>

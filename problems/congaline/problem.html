@@ -1,0 +1,318 @@
+<div class="problembody">
+<p>There’s currently a dance party being held in a nondescript
+    location. The party is joined by <span class="tex2jax_process">$N$</span> couples. To liven up the party,
+    the host, who is not dancing, has decided to perform a conga
+    line. As such, the host asks all the couples to stand in one
+    line.</p>
+<p>At first, each couple will be standing next to each other in
+    line. For example, let there be <span class="tex2jax_process">$2$</span> couples in the party, Amelia-Bubba
+    and Ollie-Udin. Thus, the line from front to back will be
+    Amelia, Bubba, Ollie, and Udin.</p>
+<p>Then, the host will pass off a mic to the person at the
+    front of the line, and will call out <span class="tex2jax_process">$Q$</span> instructions for the dancers to
+    follow, consisting of these <span class="tex2jax_process">$5$</span> types:</p>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\texttt{F}$</span>: The
+        mic holder will pass the mic to the person in front of
+        them. It is guaranteed that such a person exists.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{B}$</span>: The
+        mic holder will pass the mic to the person behind them. It
+        is guaranteed that such a person exists.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{R}$</span>: The
+        mic holder will pass the mic to the person behind them.
+        Then, they will move to the back of the line. In the case
+        that the mic holder is at the back of the line, the mic
+        will be passed to the person at the front of the line
+        instead.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{C}$</span>: The
+        mic holder will pass the mic to the person behind them.
+        Then, they will move to behind where their partner is
+        standing. In the case that the mic holder is at the back of
+        the line, the mic will be passed to the person at the front
+        of the line instead.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{P}$</span>: The
+        mic holder will yell their partner’s name into the mic.</p>
+</li>
+</ol>
+<p>Note that the list of instructions will be given to you as a
+    string of length <span class="tex2jax_process">$Q$</span>
+    consisting of the <span class="tex2jax_process">$5$</span>
+    characters written above.</p>
+<p>The host has also invited you to the party as an event
+    logger. Your task is to write down each name that is yelled
+    during the conga line as well as the final conga line after all
+    <span class="tex2jax_process">$Q$</span> instructions.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 250\, 000$</span>) and <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1
+    \le Q \le 1\, 000\, 000$</span>), denoting the number of
+    couples participating and the number of instructions
+    respectively.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    contain two names, the names of a couple participating in the
+    dance. The list of names will be given in accordance with the
+    order they will be standing in the conga line. Each name will
+    consist of at most <span class="tex2jax_process">$7$</span>
+    lower-case Latin alphabet characters (<span class="tex2jax_process">$\texttt{'a'}$</span>-<span class="tex2jax_process">$\texttt{'z'}$</span>). It is guaranteed that
+    the given names are unique.</p>
+<p>The final line will be a string of length <span class="tex2jax_process">$Q$</span>, representing the instructions
+    given by the host. It is guaranteed that the string will only
+    contain the characters <span class="tex2jax_process">$\texttt{F}$</span>, <span class="tex2jax_process">$\texttt{B}$</span>, <span class="tex2jax_process">$\texttt{R}$</span>, <span class="tex2jax_process">$\texttt{C}$</span>, and <span class="tex2jax_process">$\texttt{P}$</span>.</p>
+<h2>Output</h2>
+<p>For each name yelled, print the name on a separate line in
+    order. Then, print an empty line. Finally, print <span class="tex2jax_process">$2N$</span> lines, each containing the names
+    of the person in the line from front to back.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$15$</span> Points</b>): There will be no
+        <span class="tex2jax_process">$\texttt{P}$</span>-type,
+        <span class="tex2jax_process">$\texttt{R}$</span>-type, or
+        <span class="tex2jax_process">$\texttt{C}$</span>-type
+        instructions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$21$</span> Points</b>): There will be no
+        <span class="tex2jax_process">$\texttt{R}$</span>-type or
+        <span class="tex2jax_process">$\texttt{C}$</span>-type
+        instructions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): <span class="tex2jax_process">$N \le 100, Q \le 500$</span>. There will
+        be no <span class="tex2jax_process">$\texttt{C}$</span>-type
+        instructions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): <span class="tex2jax_process">$N \le 1\, 000, Q \le 3\, 000$</span>.
+        There will be no <span class="tex2jax_process">$\texttt{C}$</span>-type
+        instructions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$20$</span> Points</b>): There will be no
+        <span class="tex2jax_process">$\texttt{C}$</span>-type
+        instructions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): <span class="tex2jax_process">$N \le 1\, 000, Q \le 3\, 000$</span></p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): No additional
+        constraints.</p>
+</li>
+</ol>
+<h2>Explanation</h2>
+<p>For the explanation below, all names will have their first
+    character capitalized. However, all names in the input and
+    output will be in lower-case.</p>
+<p>In the first sample, the following illustration shows the
+    line at the start of the game:</p>
+<p><img alt="\includegraphics[height = 90px]{startState.PNG}" src="/problems/congaline/file/statement/en/img-0001.PNG" style="height:90px"/></p>
+<p>Then, the host calls out <span class="tex2jax_process">$6$</span> instructions as follows:</p>
+<ol class="enumerate">
+<li>
+<p>The mic holder, Amelia, yells their partner’s name,
+        Bubba. The following illustrates this instruction.<br/>
+<img alt="\includegraphics[height = 100px]{Poperation.PNG}" src="/problems/congaline/file/statement/en/img-0002.PNG" style="height:100px"/></p>
+</li>
+<li>
+<p>The mic is passed to the person behind Amelia, Bubba.
+        The following illustrates this instruction.<br/>
+<img alt="\includegraphics[height = 70px]{Boperation.PNG}" src="/problems/congaline/file/statement/en/img-0003.PNG" style="height:70px"/></p>
+</li>
+<li>
+<p>The mic is passed to the person behind Bubba, Kiryu.</p>
+</li>
+<li>
+<p>Kiryu yells their partner’s name, Coco.</p>
+</li>
+<li>
+<p>The mic is passed to the person in front of Kiryu,
+        Bubba. The following illustrates this instruction.<br/>
+<img alt="\includegraphics[height = 75px]{Foperation.PNG}" src="/problems/congaline/file/statement/en/img-0004.PNG" style="height:75px"/></p>
+</li>
+<li>
+<p>Bubba will yell their partner’s name, Amelia.</p>
+</li>
+</ol>
+<p>Since no one has moved, the line at the end of the
+    <span class="tex2jax_process">$6$</span> instructions will
+    still be the same.</p>
+<p>In the second sample, the line will at first be the same as
+    above. Then, the host calls out <span class="tex2jax_process">$16$</span> instructions as follows:</p>
+<ol class="enumerate">
+<li>
+<p>The mic is passed to the person behind Amelia,
+        Bubba.</p>
+</li>
+<li>
+<p>Bubba passes the mic to Kiryu, then moves to the back of
+        the line. The line formation is now Amelia, Kiryu, Coco,
+        Ollie, Udin, and Bubba. The following illustrates this
+        instruction.<br/>
+<img alt="\includegraphics[height = 85px]{Roperation.PNG}" src="/problems/congaline/file/statement/en/img-0005.PNG" style="height:85px"/></p>
+</li>
+<li>
+<p>Kiryu passes the mic to Coco. In the next instruction,
+        Coco yells "Kiryu" into the mic.</p>
+</li>
+<li>
+<p>Coco passes the mic to Ollie, then moves to the back of
+        the line. The line formation is now Amelia, Kiryu, Ollie,
+        Udin, Bubba, and Coco.</p>
+</li>
+<li>
+<p>Ollie passes the mic to Kiryu, who then passes it to
+        Amelia. In the next instruction, Amelia yells "Bubba" into
+        the mic.</p>
+</li>
+<li>
+<p>Amelia passes the mic to Kiryu, then moves to the back
+        of the line. The line formation is now Kiryu, Ollie, Udin,
+        Bubba, Coco, and Amelia.</p>
+</li>
+<li>
+<p>The next <span class="tex2jax_process">$5$</span>
+        operations moves the mic to the last person in line,
+        Amelia.</p>
+</li>
+<li>
+<p>Amelia passes the mic to Kiryu, then moves to the back
+        of the line. The line formation doesn’t change.</p>
+</li>
+<li>
+<p>Kiryu yells out their partner’s name, Coco.</p>
+</li>
+</ol>
+<p>Thus, at the end, the line will be Kiryu, Ollie, Udin,
+    Bubba, Coco, and Amelia.</p>
+<p>Note that the third sample is the second sample will
+    additional instructions appended, as such, we shall continue
+    from the <span class="tex2jax_process">$17$</span>-th operation
+    to the end. In the third sample, the host will call out the
+    last <span class="tex2jax_process">$6$</span> instructions as
+    follows:</p>
+<ol class="enumerate">
+<li>
+<p>Kiryu passes the mic to Ollie, then moves to behind
+        Coco. The line formation is now Ollie, Udin, Bubba, Coco,
+        Kiryu, and Amelia.<br/>
+<img alt="\includegraphics[height = 85px]{Coperation.PNG}" src="/problems/congaline/file/statement/en/img-0006.PNG" style="height:85px"/></p>
+</li>
+<li>
+<p>Ollie passes the mic to Udin, who then passes the mic to
+        Bubba.</p>
+</li>
+<li>
+<p>Bubba passes the mic to Coco, then moves to behind
+        Amelia. The line formation is now Ollie, Udin, Coco, Kiryu,
+        Amelia, and Bubba.</p>
+</li>
+<li>
+<p>Coco passes the mic to Udin.</p>
+</li>
+<li>
+<p>Udin yells out their partner’s name, Ollie.</p>
+</li>
+</ol>
+<p>Thus, at the end, the line formation will be Ollie, Udin,
+    Coco, Kiryu, Amelia, and Bubba.</p>
+<h2>Warning</h2>
+<p>The I/O files are large. Please use fast I/O methods.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+amelia bubba
+kiryu coco
+ollie udin
+PBBPFP
+</pre>
+</td>
+<td>
+<pre>bubba
+coco
+amelia
+
+amelia
+bubba
+kiryu
+coco
+ollie
+udin
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 16
+amelia bubba
+kiryu coco
+ollie udin
+BRBPRFFPRBBBBBRP
+</pre>
+</td>
+<td>
+<pre>kiryu
+bubba
+coco
+
+kiryu
+ollie
+udin
+bubba
+coco
+amelia
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 22
+amelia bubba
+kiryu coco
+ollie udin
+BRBPRFFPRBBBBBRPCBBCFP
+</pre>
+</td>
+<td>
+<pre>kiryu
+bubba
+coco
+ollie
+
+ollie
+udin
+coco
+kiryu
+amelia
+bubba
+</pre>
+</td>
+</tr>
+</table>
+</div>

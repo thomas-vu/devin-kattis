@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Mr. K. I. has a very big movie collection. He
+    has organized his collection in a big stack. Whenever he wants
+    to watch one of the movies, he locates the movie in this stack
+    and removes it carefully, ensuring that the stack doesn’t fall
+    over. After he finishes watching the movie, he places it at the
+    top of the stack.</p>
+<p>Since the stack of movies is so big, he needs to keep track
+    of the position of each movie. It is sufficient to know for
+    each movie how many movies are placed above it, since, with
+    this information, its position in the stack can be calculated.
+    Each movie is identified by a number printed on the movie
+    box.</p>
+<p>Your task is to implement a program which will keep track of
+    the position of each movie. In particular, each time
+    Mr. K. I. removes a movie box from the stack,
+    your program should print the number of movies that were placed
+    above it before it was removed.</p>
+<h2>Input</h2>
+<p>On the first line a positive integer: the number of test
+    cases, at most <span class="tex2jax_process">$100$</span>.
+    After that, for each test case output:</p>
+<ul class="itemize">
+<li>
+<p>one line with two integers <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$(1\le m, r\le 100\, 000)$</span>: the
+        number of movies in the stack and the number of locate
+        requests, and</p>
+</li>
+<li>
+<p>one line with <span class="tex2jax_process">$r$</span>
+        integers <span class="tex2jax_process">$a_1, \ldots , a_
+        r$</span> (<span class="tex2jax_process">$1 \le a_ i \le
+        m$</span>) representing the identification numbers of
+        movies that Mr. K. I. wants to watch.</p>
+</li>
+</ul>
+<p>For simplicity, assume that the initial stack contains the
+    movies with identification numbers <span class="tex2jax_process">$1, 2, \ldots , m$</span> in increasing
+    order, where the movie box with label <span class="tex2jax_process">$1$</span> is the top-most box.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with <span class="tex2jax_process">$r$</span>
+        integers, where the <span class="tex2jax_process">$i$</span>-th integer gives the number of
+        movie boxes above the box with label <span class="tex2jax_process">$a_ i$</span>, immediately before this
+        box is removed from the stack.</p>
+</li>
+</ul>
+<p>Note that after each locate request <span class="tex2jax_process">$a_ i$</span>, the movie box with label
+    <span class="tex2jax_process">$a_ i$</span> is placed at the
+    top of the stack.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 3
+3 1 1
+5 3
+4 4 5
+</pre>
+</td>
+<td>
+<pre>2 1 0
+3 0 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

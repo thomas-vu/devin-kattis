@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Little Ivica got himself a summer job at a company that
+    produces computer fonts. The branch of the company where Ivica
+    works at specialises in testing computer fonts and Ivica’s team
+    is responsible of testing only lowercase letters of the English
+    alphabet.</p>
+<p>The letters are tested so that various sentences using those
+    letters are printed out and then manually (more accurately,
+    visually) checked if everything is arranged properly. Only
+    sentences which contain all 26 lowercase letter of the English
+    alphabet (a–z) are used for testing purposes. These sentences
+    are called test sentences.</p>
+<p>You’ve probably already assumed that Ivica’s job is to find
+    test sentences. He has a dictionary which consists of
+    <span class="tex2jax_process">$N$</span> words and has to
+    calculate how many different test sentences can be made out of
+    those words. Every word from the dictionary can be used only
+    once in the sentence and the order of the words in the sentence
+    is irrelevant (i.e. “uvijek jedem sarmu” and “jedem sarmu
+    uvijek” are equal sentences).</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 25)$</span>, the number of words in the dictionary.
+    Each of the following <span class="tex2jax_process">$N$</span>
+    lines contains a single word from the dictionary, its length
+    not exceeding 100. All the words from the dictionary are going
+    to be unique.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    number from the task.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+9
+the
+quick
+brown
+fox
+jumps
+over
+a
+sleazy
+dog
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+a
+b
+c
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+15
+abcdefghijkl
+bcdefghijklm
+cdefghijklmn
+defghijklmno
+efghijklmnop
+fghijklmnopq
+ghijklmnopqr
+hijklmnopqrs
+ijklmnopqrst
+jklmnopqrstu
+klmnopqrstuv
+lmnopqrstuvw
+mnopqrstuvwx
+nopqrstuvwxy
+opqrstuvwxyz
+</pre>
+</td>
+<td>
+<pre>
+8189
+</pre>
+</td>
+</tr>
+</table>
+</div>

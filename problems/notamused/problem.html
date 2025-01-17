@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>Ordinarily, when you got to an amusement park, you pay for
+    your ticket, you ride as many rides as you like and then you
+    leave at the end of the day. If you leave early or get there
+    late you don’t get a discount. Bob’s Pretty Safe Playland is
+    ramping up a new plan to help attract more customers; you pay
+    in proportion to the amount of time you spend in the park.
+    Although Bob expects to lose some money on customers who just
+    stop by for a couple of rides, he expects to make it back on
+    the people who end up staying for a long time.</p>
+<p>Under Bob’s new pricing scheme, customers pay <span class="tex2jax_process">$\$ 0.10$</span> for each minute they spend
+    in the park. Bob will send a bill after a few days, and
+    customers can can pay at their convenience. Bob will use a
+    computer system to manage billing. It will notice when each
+    customer enters and leaves. For each day, it will generate a
+    report of how much each customer owes. Your job is to write
+    that program.</p>
+<h2>Input</h2>
+<p>Input consists of logs for up to <span class="tex2jax_process">$20$</span> days. The log for a given day
+    starts with the word “<tt class="ttfamily">OPEN</tt>” and ends
+    with the word “<tt class="ttfamily">CLOSE</tt>”. Between these
+    entries are lines describing when various customers enter and
+    leave the park. When a customer enters the park, it is recorded
+    with a line like “<tt class="ttfamily">ENTER Timmy 25</tt>”.
+    This indicates that Timmy entered the park <span class="tex2jax_process">$25$</span> minutes after it opened. When a
+    customer leaves the park, it is recorded like: “<tt class="ttfamily">EXIT Timmy 130</tt>”. This indicates that Timmy left
+    the park <span class="tex2jax_process">$130$</span> minutes
+    after it opened. In this case, Timmy spent <span class="tex2jax_process">$105$</span> minutes in the park.</p>
+<p>All distinct customers have different names consisting of
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span> lower or uppercase (a-z)
+    characters. At most <span class="tex2jax_process">$20$</span>
+    different customers visit the park during a day. Entry and exit
+    times are all in the range <span class="tex2jax_process">$[0,800]$</span>. Log entries for each day
+    are sorted by minute. The logging system is foolproof in that
+    each enter has a matching exit some time later the same day.
+    There are no <tt class="ttfamily">ENTER</tt> reports for a
+    customer who is already in the park, and there are no
+    <tt class="ttfamily">EXIT</tt> reports for a customer who was
+    not previously in the park. At the start and the end of each
+    day, the park is empty of customers.</p>
+<h2>Output</h2>
+<p>For each day, print out a report like the following. Give
+    the total bill for each customer. Sort your report
+    alphabetically by customer name and leave a blank line between
+    reports for consecutive days.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+OPEN
+ENTER Sam 0
+ENTER Alice 15
+EXIT Sam 20
+EXIT Alice 700
+CLOSE
+OPEN
+ENTER Sam 5
+ENTER Alice 10
+EXIT Sam 20
+EXIT Alice 35
+ENTER Sam 700
+EXIT Sam 710
+CLOSE
+</pre>
+</td>
+<td>
+<pre>
+Day 1
+Alice $68.50
+Sam $2.00
+
+Day 2
+Alice $2.50
+Sam $2.50
+</pre>
+</td>
+</tr>
+</table>
+</div>

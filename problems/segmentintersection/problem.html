@@ -1,0 +1,65 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$n
+    \leq 10000$</span>) giving the number of test cases. Then
+    follow <span class="tex2jax_process">$n$</span> lines each
+    containing 8 integers <span class="tex2jax_process">$x_1\ y_1\
+    x_2\ y_2\ x_3\ y_3\ x_4\ y_4$</span>, indicating a line segment
+    from <span class="tex2jax_process">$(x_1, y_1)$</span> to
+    <span class="tex2jax_process">$(x_2, y_2)$</span>, and a line
+    segment from <span class="tex2jax_process">$(x_3, y_3)$</span>
+    to <span class="tex2jax_process">$(x_4, y_4)$</span>.
+    Coordinates have absolute value at most 10000.</p>
+<h2>Output</h2>
+<p>For each test case, output the intersection between the two
+    line segments in the following format:</p>
+<ul class="itemize">
+<li>
+<p>If the intersection is empty (i.e. the segments do not
+        intersect), output the word “none”.</p>
+</li>
+<li>
+<p>If there is a unique intersection point <span class="tex2jax_process">$(X, Y)$</span>, output the numbers
+        <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> separated by a single
+        space.</p>
+</li>
+<li>
+<p>If the intersection is itself a line segment between two
+        points <span class="tex2jax_process">$(X1, Y1)$</span> and
+        <span class="tex2jax_process">$(X2, Y2)$</span>, output the
+        numbers <span class="tex2jax_process">$X_1\ Y_1\ X_2\
+        Y_2$</span> separated by spaces, in that order. Pick the
+        point with smallest <span class="tex2jax_process">$x$</span>-coordinate as the first point,
+        or the point with smallest <span class="tex2jax_process">$y$</span>-coordinate if both have the
+        same <span class="tex2jax_process">$x$</span>-coordinate.</p>
+</li>
+</ul>
+<p>Numbers should be given with 2 decimals of precision.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+-10 0 10 0 0 -10 0 10
+-10 0 10 0 -5 0 5 0
+1 1 1 1 1 1 2 1
+1 1 1 1 2 1 2 1
+1871 5789 216 -517 189 -518 3851 1895
+</pre>
+</td>
+<td>
+<pre>
+0.00 0.00
+-5.00 0.00 5.00 0.00
+1.00 1.00
+none
+221.33 -496.70
+</pre>
+</td>
+</tr>
+</table>
+</div>

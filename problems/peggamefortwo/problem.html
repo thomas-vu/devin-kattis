@@ -1,0 +1,150 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/peggamefortwo/file/statement/en/img-0001.jpg" class="illustration" src="/problems/peggamefortwo/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/ceratosaur/4213655702/in/photostream/">
+        ceratosaurrr.</a>
+</div>
+</div>
+<p>Jacquez and Alia’s parents take them on many road trips. To
+    keep themselves occupied, they play a triangular peg game,
+    meant for one player. In the original game, one player has an
+    equilateral triangle containing <span class="tex2jax_process">$15$</span> holes (five holes per side of the
+    triangle). Initially one hole is empty and the remaining
+    <span class="tex2jax_process">$14$</span> are filled with pegs.
+    The player moves by picking up a peg to “jump” it over an
+    adjacent peg, landing on an empty hole adjacent to the jumped
+    peg. Jumps must be in straight lines (horizontally or
+    diagonally). The peg that is jumped over is removed. The goal
+    of this game is to leave just one peg on the board. Figure 1
+    shows the result of a jump in this game.</p>
+<div class="figure" id="peggame:xo">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{example1}" src="/problems/peggamefortwo/file/statement/en/img-0002.png" style="width:30.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: One possible move in the original game. On
+        the left is an initial board, where <tt class="ttfamily">X</tt> represents a peg and <tt class="ttfamily">O</tt> represents an empty hole. The jump moves
+        the right peg in the second (from top) row diagonally down
+        and to the left, over the middle peg of the third row,
+        which is removed.
+      </div>
+</div>
+<p>Ultimately, Jacquez and Alia have gotten bored of playing
+    this game individually. They decide to invent a version that
+    they could play together. In the new version, each peg has a
+    positive point value, and they alternate turns. During a
+    player’s turn, they must make a jump if one is available. The
+    score for a jump is the product of the two pegs involved in the
+    jump.</p>
+<p>The total score of a player is the sum of the scores of
+    their jumps. The game ends when a player has no possible jumps
+    to make. Each player’s goal is to maximize their own total
+    score minus their opponent’s total score (at the end of the
+    game). For example, Jacquez would prefer to win with a score of
+    <span class="tex2jax_process">$100$</span> to Alia’s score of
+    <span class="tex2jax_process">$60$</span> (with a differential
+    of <span class="tex2jax_process">$40$</span>), than to win with
+    a score of <span class="tex2jax_process">$1\, 000$</span> to
+    Alia’s score of <span class="tex2jax_process">$998$</span>
+    (with a smaller differential of only <span class="tex2jax_process">$2$</span>). Similarly, Alia wants to win by
+    as much as possible over Jacquez.</p>
+<p>For this version of the game, we can display the game state
+    by replacing each <tt class="ttfamily">X</tt> shown above with
+    a corresponding value for that peg, and using a value of
+    <span class="tex2jax_process">$0$</span> (zero) for each of the
+    open holes. Figure 2 shows an example move.</p>
+<div class="figure" id="peggame:values">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{example2}" src="/problems/peggamefortwo/file/statement/en/img-0003.png" style="width:30.00%"/>
+</center>
+<div class="caption">
+<b>Figure 2</b>: One possible move in the new game, jumping
+        the peg with value <span class="tex2jax_process">$6$</span>
+        over the peg with value <span class="tex2jax_process">$7$</span>. This move is worth
+        <span class="tex2jax_process">$6\cdot 7 = 42$</span> for
+        Jacquez (since he moves first). The values are from the
+        first sample input.
+      </div>
+</div>
+<p>Jacquez has had some trouble winning. Write a program to
+    calculate the best he can do, assuming that he starts and both
+    players play optimally.</p>
+<h2>Input</h2>
+<p>The input consists of five lines, describing the initial
+    state of the board. The <span class="tex2jax_process">$i^\textrm {th}$</span> <span class="tex2jax_process">$(1 \le i \le 5)$</span> line contains
+    <span class="tex2jax_process">$i$</span> space separated
+    integers, representing the pegs and holes on the <span class="tex2jax_process">$i^\textrm {th}$</span> row. Each of these
+    integers is between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$100$</span>, inclusive. A
+    value of <span class="tex2jax_process">$0$</span> represents a
+    hole while the rest of the values represent pegs. It is
+    possible for two different pegs to have the same value. Of the
+    <span class="tex2jax_process">$15$</span> input values it is
+    guaranteed that exactly one is <span class="tex2jax_process">$0$</span>, thus all input boards start with
+    exactly one hole.</p>
+<h2>Output</h2>
+<p>Output the value of Jacquez’s score minus Alia’s score at
+    the end of the game, assuming Jacquez starts and both players
+    play optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 6
+1 7 8
+5 0 3 4
+9 3 2 1 9
+</pre>
+</td>
+<td>
+<pre>21
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+2 3
+4 5 6
+7 8 9 10
+11 12 0 13 14
+</pre>
+</td>
+<td>
+<pre>19
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>100
+1 17
+99 3 4
+0 76 33 42
+12 13 14 15 16
+</pre>
+</td>
+<td>
+<pre>2148
+</pre>
+</td>
+</tr>
+</table>
+</div>

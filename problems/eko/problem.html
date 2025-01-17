@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Lumberjack Mirko needs to chop down <span class="tex2jax_process">$M$</span> metres of wood. It is an easy job
+    for him since he has a nifty new woodcutting machine that can
+    take down forests like wildfire. However, Mirko is only allowed
+    to cut a single row of trees.</p>
+<p>Mirko’s machine works as follows: Mirko sets a height
+    parameter <span class="tex2jax_process">$H$</span> (in metres),
+    and the machine raises a giant sawblade to that height and cuts
+    off all tree parts higher than <span class="tex2jax_process">$H$</span> (of course, trees not higher than
+    <span class="tex2jax_process">$H$</span> meters remain intact).
+    Mirko then takes the parts that were cut off. For example, if
+    the tree row contains trees with heights of <span class="tex2jax_process">$20$</span>, <span class="tex2jax_process">$15$</span>, <span class="tex2jax_process">$10$</span>, and <span class="tex2jax_process">$17$</span> metres, and Mirko raises his
+    sawblade to <span class="tex2jax_process">$15$</span> metres,
+    the remaining tree heights after cutting will be <span class="tex2jax_process">$15$</span>, <span class="tex2jax_process">$15$</span>, <span class="tex2jax_process">$10$</span>, and <span class="tex2jax_process">$15$</span> metres, respectively, while Mirko
+    will take <span class="tex2jax_process">$5$</span> metres off
+    the first tree and <span class="tex2jax_process">$2$</span>
+    metres off the fourth tree (<span class="tex2jax_process">$7$</span> metres of wood in total).</p>
+<p>Mirko is ecologically minded, so he does not want to cut off
+    more wood than necessary. That is why he wants to set his
+    sawblade as high as possible. Help Mirko find the maximum
+    integer height of the sawblade that still allows him to cut off
+    at least <span class="tex2jax_process">$M$</span> metres of
+    wood.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    positive integers, <span class="tex2jax_process">$N$</span>
+    (the number of trees, <span class="tex2jax_process">$1 \le N
+    \le 1\, 000\, 000$</span>) and <span class="tex2jax_process">$M$</span> (Mirko’s required wood amount,
+    <span class="tex2jax_process">$1 \le M \le 2\, 000\, 000\,
+    000$</span>).</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> space-separated non-negative
+    integers less than <span class="tex2jax_process">$1\, 000\,
+    000\, 000$</span>, the heights of each tree (in metres). The
+    sum of all heights will exceed <span class="tex2jax_process">$M$</span>, thus Mirko will always be able to
+    obtain the required amount of wood.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    height setting.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 7
+20 15 10 17
+</pre>
+</td>
+<td>
+<pre>15
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 20
+4 42 40 26 46
+</pre>
+</td>
+<td>
+<pre>36
+</pre>
+</td>
+</tr>
+</table>
+</div>

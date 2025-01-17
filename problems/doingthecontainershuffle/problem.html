@@ -1,0 +1,178 @@
+<div class="problembody">
+<div class="illustration" style="width:36.00%">
+<img alt="/problems/doingthecontainershuffle/file/statement/en/img-0001.jpg" class="illustration" src="/problems/doingthecontainershuffle/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Cargo containers by Martini171 via <a href="https://en.wikipedia.org/wiki/File:Container_Augsburg.jpg">
+        Wikimedia Commons</a>, cc by-sa
+      </div>
+</div>Majestic cargo ships, each carrying thousands of shipping
+    containers, roam the world’s seas every day. They make modern
+    trade possible by being so efficient that shipping goods
+    halfway around the world costs only pennies.
+    <p>Once the ships reach their destination, their standard-size
+    cargo containers are unloaded from the ship onto stacks on
+    land, from which they are moved to trains or trucks that
+    deliver them to their destination. It turns out that moving
+    containers is expensive, so port operators try to minimize the
+    number of moves necessary for delivering cargo.</p>
+<p>In this problem, we consider such a container-unloading
+    <span class="mbox" style="width:">scenario</span>. We need to
+    unload <span class="tex2jax_process">$n$</span> containers,
+    which are placed into two stacks built from bottom to top. The
+    placement of each container is at random, with equal
+    probability it will be put onto the first or the second stack
+    (independently of other containers). Once all containers are
+    unloaded, they will be picked up by trucks in a given order.
+    When a truck wants to load a specific container, there are two
+    cases. If the container is on top of its stack, then the
+    container can be moved to the truck without moving any other
+    containers. Otherwise, containers have to be moved from one
+    stack to the other until the requested container is at the top
+    of its stack. At that point the container can be moved onto the
+    truck.</p>
+<p>As an example, consider a case of three containers that
+    arrive in order <tt class="tt">1</tt>, <tt class="tt">2</tt>,
+    <tt class="tt">3</tt>. Assume that <tt class="tt">1</tt> and
+    <tt class="tt">3</tt> are in the first stack, and <tt class="tt">2</tt> is in the second. If the containers are moved onto
+    trucks in order <tt class="tt">1</tt>, <tt class="tt">2</tt>,
+    <tt class="tt">3</tt>, then five moves of containers have to
+    take place:</p>
+<div class="table" id="a0000000004">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Stack 1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Stack 2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Comment</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">1 3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt class="tt">2</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Initial configuration (stacks bottom to top)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">1</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt class="tt">2 3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Move container <tt class="tt">3</tt> from stack 1
+              to stack 2</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt class="tt">2 3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Move container <tt class="tt">1</tt> to truck</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt class="tt">2</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Move container <tt class="tt">3</tt> from stack 2
+              to stack 1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Move container <tt class="tt">2</tt> to truck</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Move container <tt class="tt">3</tt> to truck</p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Table 1</b>: Example moves of containers requested in
+          order <tt class="tt">1 2 3</tt>.
+        </div>
+</center>
+</div>
+<p>We want to know how many moves are necessary to deliver all
+    containers to the customers. Assuming that container placement
+    is random, we ask you to compute the expected number of moves
+    necessary for a given truck-loading order.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^6$</span>), the number of containers. The
+    containers are numbered <span class="tex2jax_process">$1, 2,
+    \dots , n$</span>, and are unloaded from the ship in this
+    order. The second line of input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, \dots , a_ n$</span>. These numbers are
+    a permutation of <span class="tex2jax_process">$\{ 1, 2, \dots
+    , n \} $</span>, and specify the order in which the containers
+    are loaded onto trucks.</p>
+<h2>Output</h2>
+<p>Output the expected number of moves necessary to load the
+    containers onto the trucks — this excludes the cost of
+    unloading them from the ship, but includes both moves between
+    stacks and from a stack to a truck. Your answer should have an
+    absolute error of at most <span class="tex2jax_process">$10^{-3}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+4 2 5 3 1
+</pre>
+</td>
+<td>
+<pre>7.000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1 2 3 4 5 6
+</pre>
+</td>
+<td>
+<pre>13.500
+</pre>
+</td>
+</tr>
+</table>
+</div>

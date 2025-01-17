@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>The Math department has challenged the Computer Science
+    department at your University to solve a difficult puzzle in
+    Discrete Mathematics. With the pride of your Computer Science
+    department at stake, you must solve this puzzle!</p>
+<p>In this puzzle, you are given a sequence of <span class="tex2jax_process">$n$</span> positive integers. The sequence
+    must be partitioned into <span class="tex2jax_process">$k$</span> consecutive contiguous regions,
+    with at least 1 integer in each region. After finding a
+    partition, it is scored in a strange way. In each region, you
+    must find the largest prime number that divides every number in
+    that region. The Math department reminds you a prime number is
+    an integer greater than 1 where its only divisors are 1 and
+    itself. If you cannot find such a prime, your score for that
+    region is 0. Your total score for the partition is the minimum
+    over all regions.</p>
+<p>Your task is to find the maximum possible score. The Math
+    department will win if their score is better, so be sure to
+    find the maximum each time!</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs.
+    Each input begins with a line with two space-separated integers
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 20\, 000$</span>) and
+    <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \le k \le \min (100,n)$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of
+    positive integers in the original sequence, and <span class="tex2jax_process">$k$</span> is the number of regions in the
+    partition. The next line contains <span class="tex2jax_process">$n$</span> space-separated integers
+    <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1 \le v \le 1\, 000\, 000$</span>). This is
+    the sequence to be partitioned, in order.</p>
+<h2>Output</h2>
+<p>Output a single integer representing the maximum score
+    possible partitioning the sequence of <span class="tex2jax_process">$n$</span> positive integers into
+    <span class="tex2jax_process">$k$</span> regions.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+10 5 4 8 3
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+10 11 12 13 14
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

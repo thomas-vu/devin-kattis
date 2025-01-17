@@ -1,0 +1,186 @@
+<div class="problembody">
+<p>After a long day of studying at school, Jack is eager to get
+    home. But today, it seems like there are several roadworks in
+    the area where Jack usually walks. These are not just any
+    roadworks; they are special modular equation roadworks taking
+    place between the school and Jack’s house, blocking many of
+    Jack’s original paths home!</p>
+<p>"Oh no! What am I going to do now? I have no way to get home
+    now!" Jack thinks. But after a few thoughts, he realizes that
+    there might still be many ways home! Jack lives on an
+    <span class="tex2jax_process">$R \times C$</span> grid, where
+    the school is located at the top left cell with coordinates
+    <span class="tex2jax_process">$(0,0)$</span>, and Jack’s house
+    is located at the bottom right corner with coordinates
+    <span class="tex2jax_process">$(C-1,R-1)$</span>.</p>
+<p>All the cells Jack can be on have integer coordinates
+    <span class="tex2jax_process">$(x,y)$</span>. A modular
+    equation roadwork can be described with a pair of integers
+    <span class="tex2jax_process">$(r_i, m_i)$</span>. <span class="tex2jax_process">$(r_i, m_i)$</span> means that there is
+    roadwork going on at all cells <span class="tex2jax_process">$(x,y)$</span> that satisfy the modular
+    equation <span class="tex2jax_process">$x-y=r_i ~ (\text{mod} ~
+    m_i)$</span>.</p>
+<p>When Jack is on a cell <span class="tex2jax_process">$(x,y)$</span>, he can only move to a
+    neighboring cell, i.e., either <span class="tex2jax_process">$(x+1,y)$</span>, <span class="tex2jax_process">$(x,y+1)$</span>, <span class="tex2jax_process">$(x-1,y)$</span>, or <span class="tex2jax_process">$(x,y-1)$</span>. Jack is not allowed to move
+    to a cell where there is roadwork.</p>
+<p>Jack always wants to take the shortest path home and wonders
+    how many different paths there are for him to get home now that
+    there are <span class="tex2jax_process">$N$</span> different
+    modular equation roadworks. Since the number of different paths
+    home can be quite large, he is okay if the answer is given
+    modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<h2>Input</h2>
+<p>The first line consists of three integers, <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$C$</span> <span class="tex2jax_process">$(2
+    \leqslant R,C \leqslant 500)$</span>, and <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(0
+    \leqslant N \leqslant 10^5)$</span>. <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> are the number of rows and columns
+    in the grid, respectively, and <span class="tex2jax_process">$N$</span> is the number of different modular
+    equation roadworks. Then follow <span class="tex2jax_process">$N$</span> lines, where the <span class="tex2jax_process">$i$</span>-th line contains two integers,
+    <span class="tex2jax_process">$r_i, m_i$</span> <span class="tex2jax_process">$(1 \leqslant r_i &lt; m_i \leqslant
+    10^9)$</span>, the values for the <span class="tex2jax_process">$i$</span>-th modular equation roadwork, as
+    described above.</p>
+<h2>Output</h2>
+<p>Print an integer - The number of shortest paths for Jack to
+    get home without stepping on a modular equation roadwork. Print
+    the answer modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.<br/></p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leqslant
+          100$</span>, <span class="tex2jax_process">$R,C \leqslant
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$31$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$r_i = 1$</span>, for
+          all <span class="tex2jax_process">$1 \leqslant i
+          \leqslant N$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$21$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leqslant
+          1000$</span>, <span class="tex2jax_process">$R+C
+          \leqslant m_i$</span> for all <span class="tex2jax_process">$1 \leqslant i \leqslant N$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$28$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 1
+2 4
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 9 2
+4 9
+5 10
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>100 100 1
+12 34
+</pre>
+</td>
+<td>
+<pre>361294640
+</pre>
+</td>
+</tr>
+</table>
+</div>

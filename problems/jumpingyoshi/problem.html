@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>Yoshi is a frog. He lives in the ZOO under a log which was
+    specially transported there from a distant equatorial
+    rainforest. The log is big and wet and attracts the flies and
+    that is what makes Yoshi satisfied.</p>
+<p>There is also a line of pebbles which runs through the
+    wetland in front of the log. There are various dark spots on
+    the pebbles and sometimes Yoshi likes to look at them and dream
+    that they are not just spots but some really big flies
+    instead.</p>
+<p>Yesterday, Yoshi’s friend camel Addawser came to see him and
+    suggested to play a game.</p>
+<p>“Do you see those spots on the pebbles?” asked Addawser. “I
+    challenge you to start on the leftmost pebble and then do some
+    jumps from a pebble to another pebble but with some
+    restrictions. You can jump from a pebble to another one only if
+    the sum of numbers of spots on both pebbles is equal to the
+    distance between the pebbles. And you have to get to as distant
+    pebble as possible.”</p>
+<p>“All right, but you know that I can count at most to twenty
+    three and no more,” hesitated Yoshi.</p>
+<p>“No problem, I will help you with the bigger numbers,” said
+    Addawser.</p>
+<p>“Then, it’s easy,” said Yoshi, positioning himself on the
+    first pebble and looking inquisitively over the rest of the
+    line. “Although, one might not be quite so sure, after all,” he
+    added after a while.</p>
+<p>You are given the sequence of numbers of dark spots on the
+    pebbles in the line. You are asked to find the most distant
+    pebble which can be reached by a sequence of jumps. The first
+    jump starts at the first pebble in the line and a jump between
+    two pebbles is possible if and only if the sum of numbers of
+    spots on both pebbles is equal to the distance between them.
+    You may suppose that the line of pebbles is straight and that
+    the distance between each two neighboring pebbles is exactly
+    one frog distance unit.</p>
+<h2>Input</h2>
+<p>Each case starts with a line containing one integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 1\, 000\, 000$</span>)
+    representing the number of pebbles. The second line contains a
+    list of <span class="tex2jax_process">$N$</span> integers. The
+    order of the integers in the list is the same as the order of
+    the pebbles in the wetland, each integer represents the number
+    of spots on the corresponding pebble. No pebble contains more
+    than <span class="tex2jax_process">$10^9$</span> spots. Suppose
+    that Addawser knows all different pairs of pebbles where Yoshi
+    can perform a jump from one pebble to another one during his
+    sequence of jumps. You are guaranteed that the number of those
+    pairs of pebbles never exceeds <span class="tex2jax_process">$1\, 000\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Print a single line with one integer denoting the distance
+    of the pebble which can be reached by successive jumps
+    according to the given rules and which is the most distant from
+    the first pebble.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+2 1 0 1 2 3 3
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+7 6 1 4 1 2 1 4 1 4 5
+</pre>
+</td>
+<td>
+<pre>
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

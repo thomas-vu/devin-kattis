@@ -1,0 +1,105 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/lonerook/file/statement/en/img-0001.png" class="illustration" src="/problems/lonerook/file/statement/en/img-0001.png"/>
+<div class="description">
+        Rook and knight icons by <a href="https://en.wikipedia.org/wiki/Chess_piece">Cburnett</a>
+</div>
+</div>
+<p>On a chess board of <span class="tex2jax_process">$r$</span>
+    rows and <span class="tex2jax_process">$c$</span> columns there
+    is a lone white rook surrounded by a group of opponent’s black
+    knights. Each knight attacks <span class="tex2jax_process">$8$</span> squares as in a typical chess
+    game, which are shown in the figure – the knight on the red
+    square attacks the <span class="tex2jax_process">$8$</span>
+    squares with a red dot. The rook can move horizontally and
+    vertically by any number of squares. The rook can safely pass
+    through an empty square that is attacked by a knight, but it
+    must move to a square that is not attacked by any knight. The
+    rook cannot jump over a knight while moving. If the rook moves
+    to a square that contains a knight, it may capture it and
+    remove it from the board. The black knights never move. Can the
+    rook eventually safely move to the designated target
+    square?</p>
+<p>The figure illustrates how the white rook can move to the
+    blue target square at the top-right corner in the first sample
+    case. The rook captures one black knight at the bottom-right of
+    the board on its way.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$2
+    \leq r, c \leq 750$</span>). Each of the next <span class="tex2jax_process">$r$</span> lines describes one row of the
+    board using <span class="tex2jax_process">$c$</span>
+    characters: the letter ‘<tt class="tt">R</tt>’ represents the
+    white rook, a ‘<tt class="tt">K</tt>’ represents a black
+    knight, a dot ‘<tt class="tt">.</tt>’ represents an empty
+    square, and the letter ‘<tt class="tt">T</tt>’ represents the
+    white rook’s target square. There is exactly one ‘<tt class="tt">R</tt>’, exactly one ‘<tt class="tt">T</tt>’, and at least
+    one ‘<tt class="tt">K</tt>’ on the board. It is guaranteed that
+    the white rook starts in a square that is not attacked by any
+    knight. The target square may be attacked by a knight, in which
+    case the knight must be captured before the rook can safely
+    move to the target square.</p>
+<h2>Output</h2>
+<p>Output <tt class="tt">yes</tt> if the white rook can move to
+    the target square, or <tt class="tt">no</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 6
+.....T
+..K.K.
+K.K...
+....K.
+R..K..
+....K.
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+RK..
+KK..
+...T
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+.K..
+KR..
+K...
+.K.T
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

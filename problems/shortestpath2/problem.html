@@ -1,0 +1,73 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The input consists of several test cases. Each test case
+    starts with a line with four non-negative integers,
+    <span class="tex2jax_process">$1 \le n \le 10\, 000$</span>,
+    <span class="tex2jax_process">$0 \le m \le 20\, 000$</span>,
+    <span class="tex2jax_process">$1 \le q \le 100$</span> and
+    <span class="tex2jax_process">$0 \le s &lt; n$</span>,
+    separated by single spaces, where <span class="tex2jax_process">$n$</span> is the numbers of nodes in the
+    graph, <span class="tex2jax_process">$m$</span> the number of
+    edges, <span class="tex2jax_process">$q$</span> the number of
+    queries and <span class="tex2jax_process">$s$</span> the index
+    of the starting node. Nodes are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. Then follow <span class="tex2jax_process">$m$</span> lines, each line consisting of
+    five (space-separated) integers <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span>, <span class="tex2jax_process">$t_{0}$</span>, <span class="tex2jax_process">$P$</span> and <span class="tex2jax_process">$d$</span> indicating that there is an edge
+    from <span class="tex2jax_process">$u$</span> to <span class="tex2jax_process">$v$</span> in the graph which can be
+    traversed at time <span class="tex2jax_process">$t_{0} + t
+    \cdot P$</span> for all nonnegative integers <span class="tex2jax_process">$t$</span>, and that it takes <span class="tex2jax_process">$d$</span> time units to traverse the edge.
+    You may assume <span class="tex2jax_process">$0 \le t_0, P, d
+    \le 1000$</span>.</p>
+<p>For instance, the edge <tt class="ttfamily">3 8 15 10 5</tt>
+    indicates that at time <span class="tex2jax_process">$15, 25,
+    35, 45, \ldots $</span>, we can travel from node <span class="tex2jax_process">$3$</span> to node <span class="tex2jax_process">$8$</span> in <span class="tex2jax_process">$5$</span> time units. Note that it is
+    possible to stand still at a node, to wait for an edge to
+    become available. Also, note that if <span class="tex2jax_process">$P = 0$</span>, the edge can be used only at
+    time <span class="tex2jax_process">$t_{0}$</span> and never
+    again.</p>
+<p>Then follow <span class="tex2jax_process">$q$</span> lines
+    of queries, each consisting of a single non-negative integer,
+    asking for the minimum distance from node <span class="tex2jax_process">$s$</span> to the node number given on the
+    query line.</p>
+<p>Input will be terminated by a line containing four zeros,
+    this line should <em>not</em> be processed.</p>
+<h2>Output</h2>
+<p>For each query, output a single line containing the minimum
+    time to reach the node queried, assuming we start in node
+    <span class="tex2jax_process">$s$</span> at time <span class="tex2jax_process">$0$</span>, or the word “<tt class="ttfamily">Impossible</tt>” if there is no path from
+    <span class="tex2jax_process">$s$</span> to that node. For
+    clarity, the sample output has a blank line between the output
+    for different cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 4 0
+0 1 15 10 5
+1 2 15 10 5
+0 2 5 5 30
+3 0 0 1 1
+0
+1
+2
+3
+2 1 1 0
+0 1 100 0 5
+1
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>0
+20
+30
+Impossible
+
+105
+</pre>
+</td>
+</tr>
+</table>
+</div>

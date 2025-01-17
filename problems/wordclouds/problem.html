@@ -1,0 +1,123 @@
+<div class="problembody">
+<p>When we last visited with Tagg Johnson, he was developing
+    software to create images known as word clouds. Although we
+    will not consider all the details, a word cloud provides a
+    visual representation of textual data in which the size of the
+    bounding box for each word depends on the relative frequency of
+    that word in the original text.</p>
+<p>Tagg was surprised to stumble upon an oddity involving his
+    algorithm for laying out words in rows. A maximum width is
+    specified for the size of a word cloud, and Tagg’s desire is to
+    place the entries into the cloud in a way that minimizes the
+    overall height. Entries must be placed in a predetermined
+    order, with each subsequent entry either placed horizontally to
+    the right of the previous entry, or else to the far left of a
+    new row. The height of each row is equal to the maximum height
+    of all entries placed in that row, and the overall height of
+    the cloud is equal to the sum of the row heights.</p>
+<p>Because his goal is to minimize the height, Tagg’s original
+    algorithm would place each entry in the same row as the
+    previous entry, unless it did not physically fit because of the
+    given limit on the width of the cloud. As an example,
+    Figure 1 shows the layout Tagg’s original algorithm
+    produces for a particular cloud with a maximum width of
+    <span class="tex2jax_process">$260$</span> units.</p>
+<div class="figure" id="fig:greedy">
+<center>
+<img alt="\includegraphics[width=3.5in]{greedy.png}" src="/problems/wordclouds/file/statement/en/img-0001.png" style="width:3.5in"/>
+<div class="caption">
+<b>Figure 1</b>: Tagg’s original placement of entries for
+          his word cloud
+        </div>
+</center>
+</div>
+<p>The first, second, and third entries are placed in the first
+    row (totaling width <span class="tex2jax_process">$238$</span>). Then the fourth and fifth
+    entries are placed in a row together (totaling
+    width <span class="tex2jax_process">$193$</span>). The
+    sixth entry is by itself on a final row. The overall height of
+    this cloud is <span class="tex2jax_process">$48 + 43 + 23 =
+    114$</span> units (as the first row has
+    height <span class="tex2jax_process">$48$</span>, the
+    second row has height <span class="tex2jax_process">$43$</span>, and the third row has
+    height <span class="tex2jax_process">$23$</span>).</p>
+<p>However, Tagg later realized that an even better cloud was
+    possible for this same data set, as shown in Figure 2. By
+    placing the first and second entries in the first row, the
+    third and fourth entries in the second row, and the fifth and
+    sixth entries in a third row, the overall height of the cloud
+    is only <span class="tex2jax_process">$23+48+28 =
+    99$</span> units (while still respecting the overall limit
+    of <span class="tex2jax_process">$260$</span> on the width of
+    the cloud).</p>
+<div class="figure" id="fig:best">
+<center>
+<img alt="\includegraphics[width=3.5in]{best.png}" src="/problems/wordclouds/file/statement/en/img-0002.png" style="width:3.5in"/>
+<div class="caption">
+<b>Figure 2</b>: An optimal placement of the entries from
+          Figure 1
+        </div>
+</center>
+</div>
+<p>So now Tagg wants to redesign his software so that, given a
+    list of words and a specific maximum width, it builds a word
+    cloud with the minimum height.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$C$</span>, where <span class="tex2jax_process">$2 \leq N \leq 5000$</span> is the number of
+    entries to be placed, and <span class="tex2jax_process">$150
+    \leq C \leq 1000$</span> is the maximum width for the cloud.
+    Following that are <span class="tex2jax_process">$N$</span>
+    additional lines, each specifying the bounding box for one
+    entry, in the order in which those entries must be laid out in
+    the cloud. The line describing an entry contains two integers
+    <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span>, specifying the respective width
+    and height of the entry, such that <span class="tex2jax_process">$10 \leq w \leq 150$</span> and <span class="tex2jax_process">$10 \leq h \leq 150$</span>.</p>
+<h2>Output</h2>
+<p>Output the minimum height that is required for the word
+    cloud under the restrictions given above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 260
+65 23
+38 11
+135 48
+97 43
+95 28
+130 23
+</pre>
+</td>
+<td>
+<pre>
+99
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 309
+150 100
+10 10
+150 100
+</pre>
+</td>
+<td>
+<pre>
+200
+</pre>
+</td>
+</tr>
+</table>
+</div>

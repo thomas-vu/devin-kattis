@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>Running a taxi station is not all that simple. Apart from
+    the obvious demand for a centralised coordination of the cabs
+    in order to pick up the customers calling to get a cab as soon
+    as possible, there is also a need to schedule all the taxi
+    rides which have been booked in advance. Given a list of all
+    booked taxi rides for the next day, you want to minimise the
+    number of cabs needed to carry out all of the rides.</p>
+<p>For the sake of simplicity, we model a city as a rectangular
+    grid. An address in the city is denoted by two integers: the
+    street and avenue number. The time needed to get from the
+    address <span class="tex2jax_process">$(a,b)$</span> to
+    <span class="tex2jax_process">$(c,d)$</span> by taxi is
+    <span class="tex2jax_process">$|a - c| + |b - d|$</span>
+    minutes. A cab may carry out a booked ride if it is its first
+    ride of the day, or if it can get to the source address of the
+    new ride from its latest, at least one minute before the new
+    ride’s scheduled departure. Note that some rides may end after
+    midnight.</p>
+<h2>Input</h2>
+<p>On the first line of the input is a single positive integer
+    <span class="tex2jax_process">$1 \le N \le 20$</span>, telling
+    the number of test scenarios to follow. Each scenario begins
+    with a line containing an integer <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$0
+    &lt; M &lt; 500$</span>, being the number of booked taxi rides.
+    The following <span class="tex2jax_process">$M$</span> lines
+    contain the rides. Each ride is described by a departure time
+    on the format <tt class="ttfamily">hh:mm</tt> (hours ranging
+    from <tt class="ttfamily">00</tt> to <tt class="ttfamily">23</tt> and minutes ranging from <tt class="ttfamily">00</tt> to <tt class="ttfamily">59</tt>), two
+    integers <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> that are the
+    coordinates of the source address and two integers <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> that are the coordinates of the
+    destination address. All coordinates are at least <span class="tex2jax_process">$0$</span> and strictly smaller than
+    <span class="tex2jax_process">$200$</span>. The booked rides in
+    each scenario are sorted in order of increasing departure
+    time.</p>
+<h2>Output</h2>
+<p>For each scenario, output one line containing the minimum
+    number of cabs required to carry out all the booked taxi
+    rides.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+2
+08:00 10 11 9 16
+08:07 9 16 10 11
+2
+08:00 10 11 9 16
+08:06 9 16 10 11
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

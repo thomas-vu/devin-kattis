@@ -1,0 +1,133 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bordspil/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bordspil/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/131365673@N02/49958550753/in/photolist-2j7ECBk-9wayfP-q9ynKf-qbMney-nTQSnb-nFfPyg-2hXdMKJ-qVJJv8-jQDL2-qVP4Mh-41WAj-pUhAvf-5AGkTQ-fNwHGg-6ohiKS-dpR1A6-cBn8o-dpR1S8-rwutc5-9wdDxU-9wdCJA-7zSoEr-yWkrz-pAoJC-qTAB85-L6HWJy-pvUSSB-JZ4ZgF-K3YRa1-JZ4Zbk-JZ4Ze6-JF8pvJ-JZ4Z8V-JZ4Z4g-GH3Rux-nWMQ1e-PTyG5S-DXwBw7-7WWhw-689kXw-689kWY-2kmitS1-6i3qkz-ae3sKP-8KBgo8-3eRAso-5iXen9-8uCdZD-8uFhCW-5j7QdT">
+        flickr.com</a>
+</div>
+</div>
+<p>Arnar and Unnar recently bought a new board game. In the
+    game Arnar gets <span class="tex2jax_process">$n$</span> pieces
+    and Unnar gets <span class="tex2jax_process">$m$</span> pieces.
+    You can place pieces in three different spots. Arnar starts by
+    distributing all his piece on the spots and then Unnar does the
+    same. For each spot if Unnar has more pieces on it he gets a
+    point and if Arnar has more piece he gets a point. If there is
+    a tie Arnar gets the point.</p>
+<p>Who wins if both players play optimally?</p>
+<h2>Input</h2>
+<p>The only line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0
+    \leq n, m \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Print the name of the winner if both play optimally.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n,m \leq
+          3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n,m \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n,m \leq
+          4000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+</pre>
+</td>
+<td>
+<pre>Arnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+</pre>
+</td>
+<td>
+<pre>Unnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+</pre>
+</td>
+<td>
+<pre>Unnar
+</pre>
+</td>
+</tr>
+</table>
+</div>

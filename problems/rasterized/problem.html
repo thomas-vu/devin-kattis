@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>Tomáš is a computer graphics student. He has a homework
+    which is very easy for him. He is supposed to make a program
+    that draws a line from point <span class="tex2jax_process">$(0,
+    0)$</span> to <span class="tex2jax_process">$(a, b)$</span>,
+    where <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are positive integers given as the
+    input.</p>
+<p>He uses the following algorithm. He divides the plane into
+    squares <span class="tex2jax_process">$1\times 1$</span> –
+    these squares are pixels. When the line from <span class="tex2jax_process">$(0, 0)$</span> to <span class="tex2jax_process">$(a, b)$</span> intersects a square <em>in
+    more than one point</em>, the square (pixel) will be painted
+    black and otherwise it will be painted white.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{obrazok.pdf}" src="/problems/rasterized/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An example of an output of Tomáš’
+          algorithm
+        </div>
+</center>
+</div>
+<p>Tomáš did his homework in 30 minutes and now he is
+    interested in a slightly different problem. Given an integer
+    <span class="tex2jax_process">$N$</span>, for how many
+    different inputs does his algorithm produce exactly
+    <span class="tex2jax_process">$N$</span> black pixels?</p>
+<p>More precisely, he is only interested in lines beginning in
+    <span class="tex2jax_process">$(0, 0)$</span> and ending in
+    (<span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>), where both <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are positive integers. Given
+    <span class="tex2jax_process">$N$</span>, find out how many of
+    these lines will produce exactly <span class="tex2jax_process">$N$</span> black pixels.</p>
+<h2>Input</h2>
+<p>The first line of the input file contains an integer
+    <span class="tex2jax_process">$1 \le T \le 60$</span>
+    specifying the number of test cases.</p>
+<p>Each test case looks as follows. The one and only line
+    contains a positive integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$1
+    \le N \le 10^{14}$</span>. You can assume that number
+    <span class="tex2jax_process">$N$</span> has at most
+    <span class="tex2jax_process">$50$</span> divisors.</p>
+<h2>Output</h2>
+<p>For each test case output one line with one integer – the
+    number of lines that use exactly <span class="tex2jax_process">$N$</span> black pixels.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2
+6
+</pre>
+</td>
+<td>
+<pre>3
+11
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/farmersfield/file/statement/en/img-0001.jpg" class="illustration" src="/problems/farmersfield/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Taeko in safflower field
+      </div>
+</div>
+<p>Taeko Okajima is helping her relatives with their safflower
+    field. She needs your help eliminating weeds from the safflower
+    field. Her field is arranged in a <span class="tex2jax_process">$1$</span> dimensional line of units, where
+    each unit is either a safflower crop, empty space, or weed,
+    denoted by <span class="tex2jax_process">$C$</span>,
+    <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$W$</span> respectively. The first and last
+    units are crops.</p>
+<p>Taeko has herbicides, which kills all crops and weeds within
+    a radius <span class="tex2jax_process">$r$</span> of the
+    location it is sprayed. Specifically if herbicide is sprayed at
+    some location <span class="tex2jax_process">$i$</span>, then
+    all crops and weeds between <span class="tex2jax_process">$i+r$</span> and <span class="tex2jax_process">$i-r$</span> inclusive are killed. Taeko has
+    an infinite amount of herbicide, so she can spray at as many
+    locations as she wants.</p>
+<p>Your task is to inform Taeko whether it is possible to kill
+    all weeds without killing any of the safflower crops. Output a
+    single string “POSSIBLE” or “IMPOSSIBLE”.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$n \: (1 \leq n \leq 10^5)$</span>, the
+    number of units in the field. The second line contains a single
+    length <span class="tex2jax_process">$n$</span> string that
+    represents Taeko’s safflower field. This field consists of
+    <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$S$</span>, and <span class="tex2jax_process">$W$</span>, representing a crop <span class="tex2jax_process">$C$</span>, empty space <span class="tex2jax_process">$S$</span>, or weed <span class="tex2jax_process">$W$</span>, respectively. The third line
+    contains a single integer <span class="tex2jax_process">$r \: (
+    1\leq r \leq \lfloor \frac{n - 1}{2} \rfloor )$</span>, which
+    represents the radius of the herbicide.</p>
+<h2>Output</h2>
+<p>Output a single string “POSSIBLE” or “IMPOSSIBLE”. Output
+    “POSSIBLE” if it is possible to kill all weeds without killing
+    any of the safflower crops. Output “IMPOSSIBLE” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>25
+CCCCSWSSSCSSSWSSSCCSSSWSC
+2
+</pre>
+</td>
+<td>
+<pre>POSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>24
+CCCSSWSCCSSSWSSSWWSCSWCC
+2
+</pre>
+</td>
+<td>
+<pre>IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

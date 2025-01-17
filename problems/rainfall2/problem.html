@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Rainfall is measured in millimeters. The rain is collected
+    in a vertical transparent tube with millimeter markings, and
+    once the rain has stopped falling, one can check the height of
+    the water in the tube.</p>
+<p>In our problem, the tube unfortunately has a leak at height
+    <span class="tex2jax_process">$L$</span> millimeters (mm). If
+    the water level is above the leak then water drains from the
+    tube at a rate of <span class="tex2jax_process">$K$</span>
+    millimeters per hour (mm/h).</p>
+<p>We want to figure out how much rain fell during a particular
+    rainfall. <i class="itshape">We assume that the tube is high
+    enough that it does not overflow. We also assume that rain
+    falls at an (unknown) uniform rate during a rainfall, and that
+    water does not evaporate from the tube. The height of the leak
+    itself is also negligible.</i></p>
+<h2>Input</h2>
+<p>The input is a line with five positive numbers: <span class="tex2jax_process">$L$</span> <span class="tex2jax_process">$K$</span> <span class="tex2jax_process">$T_1$</span> <span class="tex2jax_process">$T_2$</span> <span class="tex2jax_process">$H$</span> where</p>
+<dl class="description">
+<dt><span class="tex2jax_process">$L$</span></dt>
+<dd>
+<p>is where the leak is (mm)</p>
+</dd>
+<dt><span class="tex2jax_process">$K$</span></dt>
+<dd>
+<p>is the rate at which water leaks (mm/h)</p>
+</dd>
+<dt><span class="tex2jax_process">$T_1$</span></dt>
+<dd>
+<p>is the duration of the rainfall (h)</p>
+</dd>
+<dt><span class="tex2jax_process">$T_2$</span></dt>
+<dd>
+<p>is the time between the end of the rainfall and the
+        observation of the water level (h)</p>
+</dd>
+<dt><span class="tex2jax_process">$H$</span></dt>
+<dd>
+<p>is the water level in the tube when we observe it
+        (mm)</p>
+</dd>
+</dl>
+<p>Each number is at least <span class="tex2jax_process">$0.01$</span> and at most <span class="tex2jax_process">$1000.00$</span>, and each is given with
+    exactly two decimals.</p>
+<h2>Output</h2>
+<p>One line with two floating point numbers <span class="tex2jax_process">$F_1$</span> <span class="tex2jax_process">$F_2$</span> where <span class="tex2jax_process">$F_1$</span> is the smallest rainfall in
+    millimeters that would result in the given observation, and
+    <span class="tex2jax_process">$F_2$</span> is the largest
+    rainfall in millimeters that would result in the given
+    observation. Values with either absolute or relative error
+    smaller than <span class="tex2jax_process">$10^{-6}$</span> are
+    acceptable.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+80.00 0.50 2.00 1.50 80.00
+</pre>
+</td>
+<td>
+<pre>
+80.000000 80.759403
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+150.00 1.00 100.00 150.00 100.00
+</pre>
+</td>
+<td>
+<pre>
+100.000000 100.000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,109 @@
+<div class="problembody">
+<p>Damir likes to rotate. Right now he is rotating tables of
+    letters. He wrote an <span class="tex2jax_process">$R\times
+    C$</span> table onto a piece of paper. He has also chosen an
+    angle <span class="tex2jax_process">$K$</span>, a multiple of
+    <span class="tex2jax_process">$45$</span>, and wants to rotate
+    his table that many degrees clockwise.</p>
+<p>It turns out this task is a bit too hard for Damir, so help
+    him out.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> separated by a space (<span class="tex2jax_process">$1 \leq R \leq 10$</span>, <span class="tex2jax_process">$1 \leq C \leq 10$</span>), the number of
+    rows and columns in Damir’s table. Each of the next
+    <span class="tex2jax_process">$R$</span> lines contains one row
+    of Damir’s table, a string of <span class="tex2jax_process">$C$</span> lowercase letters. The last line
+    contains an integer <span class="tex2jax_process">$K$</span>, a
+    multiple of <span class="tex2jax_process">$45$</span> between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$360$</span> (inclusive).</p>
+<h2>Output</h2>
+<p>Output Damir’s table rotated <span class="tex2jax_process">$K$</span> degrees clockwise, like shown in
+    the examples. The output should contain the smallest number of
+    rows necessary. Some rows may have leading spaces, but no rows
+    may have trailing spaces.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+damir
+marko
+darko
+45
+</pre>
+</td>
+<td>
+<pre>
+  d
+ m a
+d a m
+ a r i
+  r k r
+   k o
+    o
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+damir
+marko
+darko
+90
+</pre>
+</td>
+<td>
+<pre>
+dmd
+aaa
+rrm
+kki
+oor
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+abcde
+bcdef
+cdefg
+defgh
+efghi
+315
+</pre>
+</td>
+<td>
+<pre>
+    e
+   d f
+  c e g
+ b d f h
+a c e g i
+ b d f h
+  c e g
+   d f
+    e
+</pre>
+</td>
+</tr>
+</table>
+</div>

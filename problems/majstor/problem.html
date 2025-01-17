@@ -1,0 +1,108 @@
+<div class="problembody">
+<p>Rock-paper-scissors is a popular two-player game. In the
+    game, each of the players uses their hand to show one of three
+    symbols: rock, paper or scissors. If both players show the same
+    symbol, the game is a tie. Otherwise, scissors beat paper,
+    paper beats rock and rock beats scissors.</p>
+<p>Sven has been studying the psychological intricacies of the
+    game for years and has become a real master at the game, his
+    friends not standing a chance against him in one-on-one
+    games.</p>
+<p>With the world championships around the corner, Sven is
+    practicing his skills playing simultaneous games with
+    <span class="tex2jax_process">$N$</span> of his friends. One
+    such game consists of <span class="tex2jax_process">$R$</span>
+    rounds. In each round, Sven and each of his friends show one of
+    the three symbols.</p>
+<p>When calculating the score, in each round, Sven’s symbol is
+    independently compared to each of his friends’ symbols. Sven
+    scores two points for every win and one point for every tie.
+    Sven does not get points for losing.</p>
+<p>Write a program that calculates Sven’s total score, and also
+    his largest possible score had he known in advance all the
+    symbols his friends would show.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$1
+    \le R \le 50$</span>), the number of rounds played.</p>
+<p>The second line contains a string of <span class="tex2jax_process">$R$</span> letters ‘<tt class="ttfamily">S</tt>’, ‘<tt class="ttfamily">P</tt>’ or
+    ‘<tt class="ttfamily">R</tt>’. The string represents symbols
+    that Sven showed in each round. ‘<tt class="ttfamily">S</tt>’
+    is for scissors, ‘<tt class="ttfamily">P</tt>’ for paper,
+    ‘<tt class="ttfamily">R</tt>’ for rock.</p>
+<p>The third line contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 50$</span>), the number of friends.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains a string of
+    <span class="tex2jax_process">$R$</span> letters ‘<tt class="ttfamily">S</tt>’, ‘<tt class="ttfamily">P</tt>’ or
+    ‘<tt class="ttfamily">R</tt>’. These are the symbols shown by
+    each of the <span class="tex2jax_process">$N$</span> friends in
+    each of the <span class="tex2jax_process">$R$</span>
+    rounds.</p>
+<h2>Output</h2>
+<p>Output Sven’s actual score on the first line.</p>
+<p>Output his largest possible score on the second line,
+    assuming his friends didn’t change their symbols.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+SSPPR
+1
+SSPPR
+</pre>
+</td>
+<td>
+<pre>5
+10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+SSPPR
+2
+PPRRS
+RRSSP
+</pre>
+</td>
+<td>
+<pre>10
+15
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+SPRS
+4
+RPRP
+SRRR
+SSPR
+PSPS
+</pre>
+</td>
+<td>
+<pre>12
+21
+</pre>
+</td>
+</tr>
+</table>
+</div>

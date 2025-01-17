@@ -1,0 +1,157 @@
+<div class="problembody">
+<p>American Carnival Makers Inc. (ACM) has a long history of
+    designing rides and attractions. One of their more popular
+    attractions is a fun house that includes a room of mirrors.
+    Their trademark is to set up the room so that when looking
+    forward from the entry door, the exit door appears to be
+    directly ahead. However, the room has double-sided mirrors
+    placed throughout at 45 degree angles. So, the exit door can be
+    on any of the walls of the room. The set designer always places
+    the entry and mirrors, but can never seem to be bothered to
+    place the exit door. One of your jobs as part of the
+    construction crew is to determine the placement of the exit
+    door for the room given an original design.</p>
+<p>The final diagram for a sample room is given below. The
+    asterisk (<tt class="ttfamily">*</tt>) marks the entry way,
+    lower case x’s mark the walls, the mirrors are given by the
+    forward and backward slash characters (<tt class="ttfamily">/</tt> and <tt>\</tt>), open spaces with no visual
+    obstructions are marked by periods (<tt class="ttfamily">.</tt>), and the desired placement of the exit is
+    marked with an ampersand (<tt class="ttfamily">&amp;</tt>). In
+    the input diagram, there is an ’<tt class="ttfamily">x</tt>’ in
+    place of the ’<tt class="ttfamily">&amp;</tt>’, since the exit
+    has not yet been located. You need to alter the input diagram
+    by replacing the proper ’<tt class="ttfamily">x</tt>’ with an
+    ’<tt class="ttfamily">&amp;</tt>’ to identify the exit. Note
+    that entrances and exits can appear on any of the walls
+    (although never a corner), and that it is physically impossible
+    for the exit to be the same as the entrance. (You don’t need to
+    understand why this is so, although it may be fun to think
+    about.)</p>
+<pre>
+xxxxxxxxxxx
+x../..\...x
+x..../....x
+*../......x
+x.........x
+xxxxxx&amp;xxxx
+</pre>
+<h2>Input</h2>
+<p>The input is composed of <span class="tex2jax_process">$T$</span> test cases (<span class="tex2jax_process">$1 \leqslant T \leqslant 40$</span>), each
+    representing one room.</p>
+<p>Each room will be preceded by two integers, <span class="tex2jax_process">$W$</span> and <span class="tex2jax_process">$L$</span>, where <span class="tex2jax_process">$5 \leqslant W \leqslant 20$</span> is the
+    width of the room including the border walls and <span class="tex2jax_process">$5 \leqslant L \leqslant 20$</span> is the
+    length of the room including the border walls. Following the
+    specification of <span class="tex2jax_process">$W$</span> and
+    <span class="tex2jax_process">$L$</span> are <span class="tex2jax_process">$L$</span> additional lines containing the
+    room diagram, with each line having <span class="tex2jax_process">$W$</span> characters from the alphabet: {
+    <tt class="ttfamily">*</tt> , <tt class="ttfamily">x</tt> ,
+    <tt class="ttfamily">.</tt> , <tt class="ttfamily">/</tt> ,
+    <tt>\</tt> }. The perimeter will always be comprised of walls,
+    except for one asterisk (<tt class="ttfamily">*</tt>) which
+    marks the entrance; the exit is not (yet) marked.</p>
+<p>A line with two zeros indicates the end of input data.</p>
+<h2>Output</h2>
+<p>For each test case, the first line will contain the word,
+    <tt class="ttfamily">HOUSE</tt>, followed by a space and then
+    an integer that identifies the given fun house sequentially.
+    Following that should be a room diagram which includes the
+    proper placement of the exit door, as marked by an ampersand
+    (<tt class="ttfamily">&amp;</tt>).</p>
+<h2>Note</h2>
+<p>In both Java and C++ the backslash character (<tt>\</tt>)
+    has special meaning as an escape character within character and
+    string literals. You must use the combination <tt>\\</tt> to
+    express a single backslash within a character or string literal
+    within source code.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+11 6
+xxxxxxxxxxx
+x../..\...x
+x..../....x
+*../......x
+x.........x
+xxxxxxxxxxx
+5 5
+xxxxx
+*...x
+x...x
+x...x
+xxxxx
+5 5
+xxxxx
+x./\x
+*./.x
+x..\x
+xxxxx
+6 6
+xxx*xx
+x/...x
+x....x
+x/./.x
+x\./.x
+xxxxxx
+10 10
+xxxxxxxxxx
+x.../\...x
+x........x
+x........x
+x.../\..\x
+*...\/../x
+x........x
+x........x
+x...\/...x
+xxxxxxxxxx
+0 0
+</pre>
+</td>
+<td>
+<pre>
+HOUSE 1
+xxxxxxxxxxx
+x../..\...x
+x..../....x
+*../......x
+x.........x
+xxxxxx&amp;xxxx
+HOUSE 2
+xxxxx
+*...&amp;
+x...x
+x...x
+xxxxx
+HOUSE 3
+xxxxx
+x./\x
+*./.x
+x..\&amp;
+xxxxx
+HOUSE 4
+xxx*xx
+x/...x
+x....x
+x/./.&amp;
+x\./.x
+xxxxxx
+HOUSE 5
+xxxxxxxxxx
+x.../\...x
+x........x
+x........x
+&amp;.../\..\x
+*...\/../x
+x........x
+x........x
+x...\/...x
+xxxxxxxxxx
+</pre>
+</td>
+</tr>
+</table>
+</div>

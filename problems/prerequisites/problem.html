@@ -1,0 +1,57 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/prerequisites/file/statement/en/img-0001.png" class="illustration" src="/problems/prerequisites/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Freddie the frosh has chosen to take <span class="tex2jax_process">$k$</span> courses. To meet the degree
+    requirements, he must take courses from each of several
+    categories. Can you assure Freddie that he will graduate, based
+    on his course selection?</p>
+<h2>Input</h2>
+<p>Input consists of several test cases, at most <span class="tex2jax_process">$50$</span>. For each case, the first line of
+    input contains <span class="tex2jax_process">$1 \le k \le
+    100$</span>, the number of courses Freddie has chosen, and
+    <span class="tex2jax_process">$0 \le m \le 100$</span>, the
+    number of categories. A line follow containing <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$4$</span>-digit integers; each is the number
+    of a course selected by Freddie. Each category is represented
+    by a line containing <span class="tex2jax_process">$1 \le c \le
+    100$</span>, the number of courses in the category,
+    <span class="tex2jax_process">$0 \le r \le c$</span>, the
+    minimum number of courses from the category that must be taken,
+    and the <span class="tex2jax_process">$c$</span> course numbers
+    in the category. Each course number is a <span class="tex2jax_process">$4$</span>-digit integer. The same course may
+    fulfil several category requirements. Freddie’s selections, and
+    the course numbers in any particular category, are distinct. A
+    line containing <span class="tex2jax_process">$0$</span>
+    follows the last test case.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing “<tt class="ttfamily">yes</tt>” if Freddie’s course selection meets the
+    degree requirements; otherwise output “<tt class="ttfamily">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+0123 9876 2222
+2 1 8888 2222
+3 2 9876 2222 7654
+3 2
+0123 9876 2222
+2 2 8888 2222
+3 2 7654 9876 2222
+0
+</pre>
+</td>
+<td>
+<pre>
+yes
+no
+</pre>
+</td>
+</tr>
+</table>
+</div>

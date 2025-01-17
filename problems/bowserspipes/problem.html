@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/bowserspipes/file/statement/en/img-0001.png" class="illustration" src="/problems/bowserspipes/file/statement/en/img-0001.png"/>
+<div class="description">
+        This illustration matches sample input <span class="tex2jax_process">$1$</span>.
+      </div>
+</div>
+<p>Princess Peach is in trouble again! Of course, Mario is on a
+    quest to rescue her from Bowser. To save her, he has to collect
+    a number of coins located in coin rooms under the surface. To
+    get to a coin room, he must enter pipes on the surface which
+    send him to a room below.</p>
+<p>Unfortunately, some pipes don’t lead directly to a coin
+    room, but lead to a warp room instead: those warp rooms might
+    lead to other warp rooms in turn, until Mario eventually
+    reaches a coin room. Once Mario chooses a pipe to enter, he’ll
+    be warped through the pipes without regaining control until he
+    reaches a coin room.</p>
+<p>Mario doesn’t like getting warped and because of this, he is
+    asking his brother Luigi for help. He’s talked Luigi into
+    jumping down some of the pipes to find out to which coin room
+    they ultimately lead and share this information with him.</p>
+<p>Mario then will show off his best rescue skills by jumping
+    down the pipe that leads to the same coin room his brother
+    Luigi found, but which passes the smallest possible number of
+    warp rooms on the way, thus saving Mario from nausea and
+    impressing Princess Peach!</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$0
+    &lt; N \le 100\, 000$</span>), the combined number of pipes,
+    warp rooms, and coin rooms, which are numbered from
+    <span class="tex2jax_process">$0 \ldots N-1$</span>. The second
+    line contains <span class="tex2jax_process">$N$</span>
+    space-separated values <span class="tex2jax_process">$F_
+    i$</span> (<span class="tex2jax_process">$-1 \le F_ i &lt;
+    N$</span>) where <span class="tex2jax_process">$F_ i$</span>
+    indicates the number of the warp or coin room to which Mario is
+    propelled when he enters the pipe or the warp room with number
+    <span class="tex2jax_process">$i$</span>. <span class="tex2jax_process">$F_ i = -1$</span> indicates that Mario has
+    finally reached a coin room. Each warp room has at least one
+    pipe leading to it. You are guaranteed that Luigi will reach a
+    coin room after a finite number of steps, no matter which pipe
+    he jumps into.</p>
+<p>The third line of input contains an integer <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$0
+    &lt; A \le 100\, 000$</span>), the number of pipes Mario asks
+    Luigi to jump into. The following line contains <span class="tex2jax_process">$A$</span> numbers <span class="tex2jax_process">$D_ i$</span> (<span class="tex2jax_process">$0 \le D_ i &lt; N$</span>), each denoting
+    the number of a pipe that Luigi enters.</p>
+<h2>Output</h2>
+<p>For each pipe that Luigi enters, find out to which coin room
+    it leads, and then print the number of the pipe Mario should
+    enter to impress Princess Peach. This is the pipe that leads to
+    the same coin room, but with the smallest number of warp rooms
+    on the way. In the case of a tie, output the pipe with the
+    smallest number!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+-1 5 0 1 5 -1
+2
+2 3
+</pre>
+</td>
+<td>
+<pre>2
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

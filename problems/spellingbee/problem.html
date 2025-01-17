@@ -1,0 +1,105 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/spellingbee/file/statement/en/img-0001.png" class="illustration" src="/problems/spellingbee/file/statement/en/img-0001.png"/>
+<div class="description">
+        An example of the Daily NY Times Spelling Bee Puzzle
+      </div>
+</div>
+<p>The New York Times publishes a daily puzzle called the
+    “Spelling Bee.” In this puzzle, <span class="tex2jax_process">$7$</span> letters are shown in a hexagonal
+    arrangement of <span class="tex2jax_process">$6$</span> letters
+    around a center letter. The task is to come up with as many
+    words as possible that</p>
+<ul class="itemize">
+<li>
+<p>contain only letters that are displayed in the
+        hexagon,</p>
+</li>
+<li>
+<p>are at least of length <span class="tex2jax_process">$4$</span>, and</p>
+</li>
+<li>
+<p>contain the center letter.</p>
+</li>
+</ul>
+<p>A letter may be used more than once, and not all letters
+    need to be used.</p>
+<p>After playing for a while, you get stuck, but then you
+    remind yourself that the Linux distribution on your computer
+    comes with a machine-readable file of <span class="tex2jax_process">$102\, 305$</span> dictionary words in
+    <tt class="ttfamily">/usr/share/dict/words</tt>!</p>
+<p>You decide that even if you can’t excel at the Spelling Bee
+    you can still excel at programming, so you decide to write a
+    program that finds all solutions to a Spelling Bee puzzle from
+    your dictionary.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case, which starts with
+    a line with <span class="tex2jax_process">$7$</span> distinct
+    lowercase English letters. The first of these letters is the
+    center letter. The next line contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 102\, 305$</span>), the size of the dictionary. This
+    line is followed by <span class="tex2jax_process">$n$</span>
+    lines, each containing a dictionary word of <span class="tex2jax_process">$l$</span> lowercase English letters
+    (<span class="tex2jax_process">$1 \le l \le 24$</span>).</p>
+<h2>Output</h2>
+<p>Output the word list matching the Spelling Bee puzzle in the
+    order in which they appear in the dictionary. You are
+    guaranteed that at least one dictionary entry will match.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>drulyag
+27
+dryad
+duly
+spelling
+multiplexed
+janna
+lard
+dryly
+the
+instances
+gradual
+gradually
+dual
+inimically
+off
+dullard
+grad
+equipage
+gladly
+mauritania
+drug
+a
+drag
+pickering
+yard
+daddy
+on
+lallygag
+</pre>
+</td>
+<td>
+<pre>dryad
+duly
+lard
+dryly
+gradual
+gradually
+dual
+dullard
+grad
+gladly
+drug
+drag
+yard
+daddy
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,148 @@
+<div class="problembody">
+<p>For villains that intend to take over the world, a common
+    way to avoid getting caught is to clone themselves. You have
+    managed to catch an evil villain and her <span class="tex2jax_process">$N-1$</span> clones, and you are now trying
+    to figure out which one of them is the real villain.</p>
+<p>To your aid you have each person’s DNA sequence, consisting
+    of <span class="tex2jax_process">$M$</span> characters, each
+    being either <tt class="ttfamily">A</tt>, <tt class="ttfamily">C</tt>, <tt class="ttfamily">G</tt> or <tt class="ttfamily">T</tt>. You also know that the clones are not
+    perfectly made; rather, their sequences differ in exactly
+    <span class="tex2jax_process">$K$</span> places compared to the
+    real villain’s.</p>
+<p>Can you identify the real villain?</p>
+<h2>Input</h2>
+<p>The first line contains the three integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, and <span class="tex2jax_process">$K$</span>, where <span class="tex2jax_process">$1 \le K \le M$</span>. The following
+    <span class="tex2jax_process">$N$</span> lines represent the
+    DNA sequences. Each of these lines consists of <span class="tex2jax_process">$M$</span> characters, each of which is
+    either <tt class="ttfamily">A</tt>, <tt class="ttfamily">C</tt>, <tt class="ttfamily">G</tt> or <tt class="ttfamily">T</tt>.</p>
+<p>In the input, there is exactly one sequence that differs
+    from all the other sequences in exactly <span class="tex2jax_process">$K$</span> places.</p>
+<p>Warning: this problem has rather large amounts of input, and
+    will require fast IO in Java.</p>
+<h2>Output</h2>
+<p>Output an integer – the index of the DNA sequence that
+    belongs to the villain. The sequences are numbered starting
+    from <span class="tex2jax_process">$1$</span>.</p>
+<h2>Constraints</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group. Your final score will
+    be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Additional Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>27</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$3 \le N, M \le
+          100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$3 \le N, M \le
+          1800$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All characters are either <tt class="ttfamily">A</tt>
+          or <tt class="ttfamily">C</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>28</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$3 \le N, M \le
+          4100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All characters are either <tt class="ttfamily">A</tt>
+          or <tt class="ttfamily">C</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>26</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3 \le N, M \le
+          4100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+         </td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 1
+ACC
+CCA
+ACA
+AAA
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 3
+CATT
+CAAA
+ATGA
+TCTA
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

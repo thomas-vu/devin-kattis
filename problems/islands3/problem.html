@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>You are mapping a faraway planet using a satellite. The
+    planet’s surface can be modeled as a grid. The satellite has
+    captured an image of the surface. Each grid square is either
+    land (denoted as ‘<tt class="ttfamily">L</tt>’), water (denoted
+    as ‘<tt class="ttfamily">W</tt>’), or covered by clouds
+    (denoted as ‘<tt class="ttfamily">C</tt>’). Clouds mean that
+    the surface could either be land or water; you cannot tell.</p>
+<p>An island is a region of land where every grid cell in the
+    island is connected to every other by some path, and every leg
+    of the path only goes up, down, left or right.</p>
+<p>Given an image, determine the minimum number of islands that
+    is consistent with the given image.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains two integers, <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le r, c \le 50$</span>), which are the number of rows and the
+    number of columns of the image. The next <span class="tex2jax_process">$r$</span> lines will each contain exactly
+    <span class="tex2jax_process">$c$</span> characters, consisting
+    only of ‘<tt class="ttfamily">L</tt>’ (representing
+    <em>Land</em>), ‘<tt class="ttfamily">W</tt>’ (representing
+    <em>Water</em>), and ‘<tt class="ttfamily">C</tt>’
+    (representing <em>Clouds</em>).</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    islands possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+CCCCC
+CCCCC
+CCCCC
+CCCCC
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+LW
+CC
+WL
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

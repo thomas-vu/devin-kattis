@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>Ferries crossing the Strait of Gibraltar from Morocco to
+    Spain must carefully navigate to avoid the heavy ship traffic
+    along the strait. Write a program to help ferry captains find
+    the largest gaps in strait traffic for a safe crossing.</p>
+<p>Your program will use a simple model as follows. The strait
+    has several parallel shipping lanes in east-west direction.
+    Ships run with the same constant speed either eastbound or
+    westbound. All ships in the same lane run in the same
+    direction. Satellite data provides the positions of the ships
+    in each lane. The ships may have different lengths. Ships do
+    not change lanes and do not change speed for the crossing
+    ferry.</p>
+<p>The ferry waits for an appropriate time when there is an
+    adequate gap in the ship traffic. It then crosses the strait
+    heading northbound along a north-south line at a constant
+    speed. From the moment a ferry enters a lane until the moment
+    it leaves the lane, no ship in that lane may touch the crossing
+    line. Ferries are so small you can neglect their size. Figure 1
+    illustrates the lanes and ships for Sample Input 1. Your task
+    is to find the largest time interval within which the ferry can
+    safely cross the strait.</p>
+<div class="figure" id="fig:ship">
+<center>
+<img alt="\includegraphics[width=0.75\textwidth ]{example-fig}" src="/problems/ship/file/statement/en/img-0001.png" style="width:75.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample Input 1.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains six integers: the number of
+    lanes <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^5$</span>), the width
+    <span class="tex2jax_process">$w$</span> of each lane
+    (<span class="tex2jax_process">$1 \leq w \leq 1\, 000$</span>),
+    the speed <span class="tex2jax_process">$u$</span> of ships and
+    the speed <span class="tex2jax_process">$v$</span> of the ferry
+    (<span class="tex2jax_process">$1 \leq u, v \leq 100$</span>),
+    the ferry’s earliest start time <span class="tex2jax_process">$t_1$</span> and the ferry’s latest start
+    time <span class="tex2jax_process">$t_2$</span> (<span class="tex2jax_process">$0 \leq t_1 &lt; t_2 \leq 10^6$</span>). All
+    lengths are given in meters, all speeds are given in
+    meters/second, and all times are given in seconds.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains the data for one lane. Each line starts with
+    either <tt class="ttfamily">E</tt> or <tt class="ttfamily">W</tt>, where <tt class="ttfamily">E</tt> indicates
+    that ships in this lane are eastbound and <tt class="ttfamily">W</tt> indicates that ships in this lane are
+    westbound. Next in the line is an integer <span class="tex2jax_process">$m_ i$</span>, the number of ships in this
+    lane (<span class="tex2jax_process">$0 \leq m_ i \leq
+    10^5$</span> for each <span class="tex2jax_process">$1 \leq i
+    \leq n$</span>). It is followed by <span class="tex2jax_process">$m_ i$</span> pairs of integers <span class="tex2jax_process">$l_{ij}$</span> and <span class="tex2jax_process">$p_{ij}$</span> (<span class="tex2jax_process">$1 \leq l_{ij} \leq 1\, 000$</span> and
+    <span class="tex2jax_process">$-10^6 \leq p_{ij} \leq
+    10^6$</span>). The length of ship <span class="tex2jax_process">$j$</span> in lane <span class="tex2jax_process">$i$</span> is <span class="tex2jax_process">$l_{ij}$</span>, and <span class="tex2jax_process">$p_{ij}$</span> is the position at time
+    <span class="tex2jax_process">$0$</span> of its forward end,
+    that is, its front in the direction it moves.</p>
+<p>Ship positions within each lane are relative to the ferry’s
+    crossing line. Negative positions are west of the crossing line
+    and positive positions are east of it. Ships do not overlap or
+    touch, and are sorted in increasing order of their positions.
+    Lanes are ordered by increasing distance from the ferry’s
+    starting point, which is just south of the first lane. There is
+    no space between lanes. The total number of ships is at least
+    <span class="tex2jax_process">$1$</span> and at most
+    <span class="tex2jax_process">$10^5$</span>.</p>
+<h2>Output</h2>
+<p>Display the maximal value <span class="tex2jax_process">$d$</span> for which there is a time
+    <span class="tex2jax_process">$s$</span> such that the ferry
+    can start a crossing at any time <span class="tex2jax_process">$t$</span> with <span class="tex2jax_process">$s \leq t \leq s+d$</span>. Additionally the
+    crossing must not start before time <span class="tex2jax_process">$t_1$</span> and must start no later than
+    time <span class="tex2jax_process">$t_2$</span>. The output
+    must have an absolute or relative error of at most <span class="tex2jax_process">$10^{-3}$</span>. You may assume that there
+    is a time interval with <span class="tex2jax_process">$d &gt;
+    0.1$</span> seconds for the ferry to cross.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 100 5 10 0 100
+E 2 100 -300 50 -100
+W 3 10 60 50 200 200 400
+E 1 100 -300
+</pre>
+</td>
+<td>
+<pre>
+6.00000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 100 5 10 0 200
+W 4 100 100 100 300 100 700 100 900
+</pre>
+</td>
+<td>
+<pre>
+50.00000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

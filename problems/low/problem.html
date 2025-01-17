@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>You are building advanced chips for machines. Making the
+    chips is easy, but the power supply turns out to be an issue
+    since the available batteries have varied power outputs.</p>
+<p>Consider the problem of <span class="tex2jax_process">$n$</span> machines, each with two chips,
+    where each chip is powered by <span class="tex2jax_process">$k$</span> batteries. Surprisingly, it does
+    not matter how much power each chip gets, but a machine works
+    best when its two chips have power outputs as close as
+    possible. The power output of a chip is simply the smallest
+    power output of its <span class="tex2jax_process">$k$</span>
+    batteries.</p>
+<p>You have a stockpile of <span class="tex2jax_process">$2nk$</span> batteries that you want to
+    assign to the chips. It might not be possible to allocate the
+    batteries so that in every machine both chips have equal power
+    outputs, but you want to allocate them so that the differences
+    are as small as possible. To be precise, you want to tell your
+    customers that in all machines the difference of power outputs
+    of the two chips is at most <span class="tex2jax_process">$d$</span>, and you want to make <span class="tex2jax_process">$d$</span> as small as possible. To do this
+    you must determine an optimal allocation of the batteries to
+    the machines.</p>
+<p>Consider Sample Input 1. There are <span class="tex2jax_process">$2$</span> machines, each requiring
+    <span class="tex2jax_process">$3$</span> batteries per chip,
+    and a supply of batteries with power outputs <span class="tex2jax_process">$1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+    12$</span>. You can, for instance, assign the batteries with
+    power outputs <span class="tex2jax_process">$1, 3, 5$</span> to
+    one chip, those with power <span class="tex2jax_process">$2, 4,
+    12$</span> to the other chip of the same machine, those with
+    power <span class="tex2jax_process">$6, 8, 9$</span> to the
+    third chip, and those with power <span class="tex2jax_process">$7, 10, 11$</span> to the fourth. The power
+    outputs of the chips are <span class="tex2jax_process">$1, 2,
+    6$</span>, and <span class="tex2jax_process">$7$</span>,
+    respectively, and the difference between power outputs is
+    <span class="tex2jax_process">$1$</span> in both machines. Note
+    that there are many other ways to achieve this result.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. A test case
+    consists of two lines. The first line contains two positive
+    integers: the number of machines <span class="tex2jax_process">$n$</span> and the number of batteries per
+    chip <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$2nk \leq 10^6$</span>). The second line
+    contains <span class="tex2jax_process">$2nk$</span> integers
+    <span class="tex2jax_process">$p_ i$</span> specifying the
+    power outputs of the batteries (<span class="tex2jax_process">$1 \leq p_ i \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Display the smallest number <span class="tex2jax_process">$d$</span> such that you can allocate the
+    batteries so that the difference of power outputs of the two
+    chips in each machine is at most <span class="tex2jax_process">$d$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3
+1 2 3 4 5 6 7 8 9 10 11 12
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+3 1 3 3 3 3 3 3
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,221 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/hyperpyramids/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hyperpyramids/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>We programmers know and love Pascal’s triangle: an array of
+    numbers with <span class="tex2jax_process">$1$</span> at the
+    top and whose entries are the sum of the two numbers directly
+    above (except numbers at both ends, which are always
+    <span class="tex2jax_process">$1$</span>). For programming this
+    generation rule, the triangle is best represented left-aligned;
+    then the numbers on the left column and on the top row equal
+    <span class="tex2jax_process">$1$</span> and every other is the
+    sum of the numbers immediately above and to its left. The
+    numbers highlighted in bold correspond to the base of Pascal’s
+    triangle of height <span class="tex2jax_process">$5$</span>:</p><span class="tex2jax_process">\[ \begin{array}{|rrrrr} \hline 1 &amp; 1
+    &amp; 1 &amp; 1 &amp; \textbf{1}\\ 1 &amp; 2 &amp; 3 &amp;
+    \textbf{4} \\ 1 &amp; 3 &amp; \textbf{6} \\ 1 &amp; \textbf{4}
+    \\ \textbf{1} \end{array} \]</span>
+<p><i class="itshape">Pascal’s hyper-pyramids</i> generalize
+    the triangle to higher dimensions. In <span class="tex2jax_process">$3$</span> dimensions, the value at position
+    <span class="tex2jax_process">$(x, y, z)$</span> is the sum of
+    up to three other values:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$(x, y, z-1)$</span>, the
+        value immediately below it if we are not on the bottom face
+        (<span class="tex2jax_process">$z=0$</span>);</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$(x, y-1, z)$</span>, the
+        value immediately behind if we are not on the back face
+        (<span class="tex2jax_process">$y=0$</span>);</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$(x-1, y, z)$</span>, the
+        value immediately to the left if we are not on the leftmost
+        face (<span class="tex2jax_process">$x=0$</span>).</p>
+</li>
+</ul>
+<p>All values at the bottom, back, and leftmost faces are
+    <span class="tex2jax_process">$1$</span>.</p>
+<p>The following figure depicts Pascal’s 3D-pyramid of height
+    <span class="tex2jax_process">$5$</span> as a series of plane
+    cuts obtained by fixing the value of the <span class="tex2jax_process">$z$</span> coordinate.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p>    <span class="tex2jax_process">$z = 0$</span></p>
+</td>
+<td style="text-align:center">
+<p>     <span class="tex2jax_process">$z = 1$</span></p>
+</td>
+<td style="text-align:center">
+<p>      <span class="tex2jax_process">$z = 2$</span></p>
+</td>
+<td style="text-align:center">
+<p>       <span class="tex2jax_process">$z = 3$</span></p>
+</td>
+<td style="text-align:center">
+<p>
+                  <span class="tex2jax_process">$z
+          = 4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<div class="minipage" style="width:120.0pt">
+<span class="tex2jax_process">\[ \begin{array}{|rrrrr}
+            \hline 1 &amp; 1 &amp; 1 &amp; 1 &amp; \textbf{1} \\ 1
+            &amp; 2 &amp; 3 &amp; \textbf{4} \\ 1 &amp; 3 &amp;
+            \textbf{6} \\ 1 &amp; \textbf{4} \\ \textbf{1}
+            \end{array} \]</span>
+</div>
+</td>
+<td style="text-align:center">
+<div class="minipage" style="width:120.0pt">
+<span class="tex2jax_process">\[ \begin{array}{|rrrr}
+            \hline 1 &amp; 2 &amp; 3 &amp; \textbf{4} \\ 2 &amp; 6
+            &amp; \textbf{12} \\ 3 &amp; \textbf{12} \\ \textbf{4}
+            \end{array} \]</span>
+</div>
+</td>
+<td style="text-align:center">
+<div class="minipage" style="width:90.0pt">
+<span class="tex2jax_process">\[ \begin{array}{|rrr}
+            \hline 1 &amp; 3 &amp; \textbf{6} \\ 3 &amp;
+            \textbf{12} \\ \textbf{6} &amp; \end{array} \]</span>
+</div>
+</td>
+<td style="text-align:center">
+<div class="minipage" style="width:72.0pt">
+<span class="tex2jax_process">\[ \begin{array}{|rr}
+            \hline 1 &amp; \textbf{4} \\ \textbf{4} \\ \end{array}
+            \]</span>
+</div>
+</td>
+<td style="text-align:center">
+<div class="minipage" style="width:72.0pt">
+<span class="tex2jax_process">\[ \begin{array}{|c}
+            \hline \textbf{1} \end{array} \]</span>
+</div>
+</td>
+</tr>
+</table>
+<p>For example, the number at position <span class="tex2jax_process">$x=1$</span>, <span class="tex2jax_process">$y=2$</span>, <span class="tex2jax_process">$z=1$</span> is the sum of the values at
+    <span class="tex2jax_process">$(0, 2, 1)$</span>, <span class="tex2jax_process">$(1, 1, 1)$</span> and <span class="tex2jax_process">$(1, 2, 0)$</span>, namely, <span class="tex2jax_process">$6 + 3 + 3 = 12$</span>. The base of the
+    pyramid corresponds to a plane of positions such that
+    <span class="tex2jax_process">$x+y+z = 4$</span> (highlighted
+    in bold above).</p>
+<p>The size of each layer grows quadratically with the height
+    of the pyramid, but there are many repeated values due to
+    symmetries: numbers at positions that are permutations of one
+    another must be equal. For example, the numbers at positions
+    <span class="tex2jax_process">$(0,1,2)$</span>, <span class="tex2jax_process">$(1,2,0)$</span> and <span class="tex2jax_process">$(2,1,0)$</span> above are all equal to
+    <span class="tex2jax_process">$3$</span>.</p>
+<h2>Task</h2>
+<p>Write a program that, given the number of dimensions
+    <span class="tex2jax_process">$D$</span> of the hyper-space and
+    the height <span class="tex2jax_process">$H$</span> of a
+    hyper-pyramid, computes the set of numbers at the base.</p>
+<h2>Input</h2>
+<p>A single line with two positive integers: the number of
+    dimensions, <span class="tex2jax_process">$D$</span>, and the
+    height of the hyper-pyramid, <span class="tex2jax_process">$H$</span>.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\leq $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$D$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$&lt;$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$32$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of dimensions</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\leq $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$H$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$&lt;$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$32$</span></p>
+</td>
+<td style="text-align:left">
+<p>Height</p>
+</td>
+</tr>
+<tr>
+<td colspan="6" style="text-align:left">
+<p><span class="tex2jax_process">$D$</span> and
+          <span class="tex2jax_process">$H$</span> are such that
+          all numbers in the hyper-pyramid are less than
+          <span class="tex2jax_process">$2^{63}$</span>.</p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>The set of numbers at the base of the hyper-pyramid, with no
+    repetitions, one number per line, and in ascending order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5
+</pre>
+</td>
+<td>
+<pre>
+1
+4
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+</pre>
+</td>
+<td>
+<pre>
+1
+4
+6
+12
+</pre>
+</td>
+</tr>
+</table>
+</div>

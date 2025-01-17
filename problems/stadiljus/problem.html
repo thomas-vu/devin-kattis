@@ -1,0 +1,171 @@
+<div class="problembody">
+<p>To make the city more pleasant, the municipality of Lund has
+    decided to install light strips over the streets. The
+    municipality prefers to have lighting in as many places as
+    possible. There are many locations where light strips could be
+    installed, and since the city council is busy, you have been
+    asked to figure out where the light strips should be
+    placed.</p>
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/stadiljus/file/statement/en/img-0001.jpg" class="illustration" src="/problems/stadiljus/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Light strips in Lund, used with permission
+      </div>
+</div>
+<p>The streets in Lund vary in width, which means that the
+    light strips will need to be custom ordered. It is possible to
+    custom order light strips in lengths of whole meters, which
+    cost <span class="tex2jax_process">$x$</span> SEK per meter. To
+    avoid appearing wasteful, the municipality demands that the
+    average cost for each light strip ordered is at most
+    <span class="tex2jax_process">$y$</span> SEK per light
+    strip.</p>
+<p>The municipality has now provided you with a list of how
+    long the light strips need to be in order to be installed in
+    <span class="tex2jax_process">$N$</span> different locations in
+    the city. Can you help them set up as many as possible?</p>
+<h2>Input</h2>
+<p>The first line of the input contains the integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 10^5$</span>), the number of
+    spots where we might install a light strip.</p>
+<p>The second line contains the integer <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$1
+    \leq x \leq 30$</span>), the cost in SEK of buying one whole
+    meter of light strip.</p>
+<p>The third line contains the integer <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$1
+    \le y \le 1000$</span>), the highest average cost per light
+    strip the municipality is willing to pay for.</p>
+<p>Afterwards, there will be a line with <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$L_1, L_2, \dots , L_ n$</span> (<span class="tex2jax_process">$1&lt;=L_ i&lt;=20$</span>), where
+    <span class="tex2jax_process">$L_ i$</span> means that a light
+    strip must be exactly <span class="tex2jax_process">$L_
+    i$</span> meters to illuminate the <span class="tex2jax_process">$i$</span>:th location.</p>
+<h2>Output</h2>
+<p>Print an integer: the largest number of locations that can
+    be illuminated by light strips within the municipalitys
+    budget.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$L_ i=10$</span> for all
+          <span class="tex2jax_process">$i$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$L_ i=10$</span> or
+          <span class="tex2jax_process">$20$</span> for all
+          <span class="tex2jax_process">$i$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1</h2>
+<p>It is possible to buy the first 3 light strips. The average
+    cost will then be <span class="tex2jax_process">$\frac{6+9+12}{3}=9$</span> SEK, which barely
+    fits within the buget of at most <span class="tex2jax_process">$9$</span> SEK per light strip on
+    average.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+3
+9
+2 3 4 5
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+4
+50
+10 10
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4
+60
+20 20 10
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

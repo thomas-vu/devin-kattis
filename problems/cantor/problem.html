@@ -1,0 +1,61 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/cantor/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cantor/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Georg Cantor (public domain)
+      </div>
+</div>
+<p>The ternary expansion of a number is that number written in
+    base <span class="tex2jax_process">$3$</span>. A number can
+    have more than one ternary expansion. A ternary expansion is
+    indicated with a subscript <span class="tex2jax_process">$3$</span>. For example, <span class="tex2jax_process">$1 = 1_{3} = 0.222\ldots _{3}$</span>, and
+    <span class="tex2jax_process">$0.875 = 0.212121\ldots
+    _{3}$</span>.</p>
+<p>The Cantor set is defined as the real numbers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span> inclusive that have a ternary
+    expansion that does not contain a <span class="tex2jax_process">$1$</span>. If a number has more than one
+    ternary expansion, it is enough for a single one to not contain
+    a <span class="tex2jax_process">$1$</span>.</p>
+<p>For example, <span class="tex2jax_process">$0 = 0.000\ldots
+    _{3}$</span> and <span class="tex2jax_process">$1 = 0.222\ldots
+    _{3}$</span>, so they are in the Cantor set. But <span class="tex2jax_process">$0.875 = 0.212121\ldots _{3}$</span> and this
+    is its only ternary expansion, so it is not in the Cantor
+    set.</p>
+<p>Your task is to determine whether a given number is in the
+    Cantor set.</p>
+<h2>Input</h2>
+<p>The input consists of several test cases, at most
+    <span class="tex2jax_process">$10$</span>.</p>
+<p>Each test case consists of a single line containing a number
+    <span class="tex2jax_process">$x$</span> written in decimal
+    notation, with <span class="tex2jax_process">$0 \le x \le
+    1$</span>, and having at most <span class="tex2jax_process">$6$</span> digits after the decimal
+    point.</p>
+<p>The last line of input is <tt class="ttfamily">END</tt>.
+    This is not a test case.</p>
+<h2>Output</h2>
+<p>For each test case, output <tt class="ttfamily">MEMBER</tt>
+    if <span class="tex2jax_process">$x$</span> is in the Cantor
+    set, and <tt class="ttfamily">NON-MEMBER</tt> if <span class="tex2jax_process">$x$</span> is not in the Cantor set.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0
+1
+0.875
+END
+</pre>
+</td>
+<td>
+<pre>MEMBER
+MEMBER
+NON-MEMBER
+</pre>
+</td>
+</tr>
+</table>
+</div>

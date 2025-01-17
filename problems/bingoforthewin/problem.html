@@ -1,0 +1,180 @@
+<div class="problembody">
+<p>Bingo is a game of chance for multiple players. Each player
+    receives a sheet with some numbers, and a game master then
+    calls out these numbers in a random order. Players cross off
+    the numbers that they have heard, and the first player to cross
+    off all their numbers wins the game. This basic version of the
+    game has a reputation for being, well, a bit sedate. No
+    particular action is required of the players except for not
+    falling asleep.</p>
+<p>In this problem we will analyze a more dynamic version of
+    Bingo that requires quick thinking. In our version, called
+    Speed Bingo, the game master also calls out the numbers from
+    the sheets in a random order. However, whenever a number is
+    called out, only the first player to signal that he or she has
+    the number is allowed to cross it off their sheet. If a player
+    has the same number multiple times, only one copy may be
+    crossed off at a time. When multiple players have the same
+    number(s) on their sheets, whoever has the fastest reaction
+    time has an advantage in winning Speed Bingo. But how big an
+    advantage? That’s what we need your help to find out.</p>
+<p>Formally, there are <span class="tex2jax_process">$n$</span>
+    players, each receiving a (possibly) different sheet of
+    <span class="tex2jax_process">$k$</span> (not necessarily
+    distinct) numbers. Player 1 is faster to react than player 2,
+    who in turn is faster than player 3, and so on, with player
+    <span class="tex2jax_process">$n$</span> being the slowest.
+    Consider the following example, corresponding to the first
+    sample input, where three players receive four numbers
+    each:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">1</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="tt">2</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">4</tt></p>
+</td>
+</tr>
+</table>
+</td>
+<td style="text-align:center">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">1</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="tt">2</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">5</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">6</tt></p>
+</td>
+</tr>
+</table>
+</td>
+<td style="text-align:center">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="tt">3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="tt">4</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">7</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="tt">8</tt></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Player 1</p>
+</td>
+<td style="text-align:center">
+<p>Player 2</p>
+</td>
+<td style="text-align:center">
+<p>Player 3</p>
+</td>
+</tr>
+</table>
+</center>
+<p>When number “<tt class="tt">1</tt>” is called for the first
+    time, player 1—being faster—will get to cross it off their
+    sheet. The second time “<tt class="tt">1</tt>” is called,
+    player 2 will get to cross it off. So on average, we would
+    expect player 1 to do better than players 2 and 3, since both
+    of them will need some numbers that player 1 will get to first.
+    However, since players 2 and 3 have no numbers in common, their
+    performances will be independent of each other, even though
+    player 2 is faster than player 3.</p>
+<p>Suppose the game is played until all players have crossed
+    off all of their numbers, that is, until all <span class="tex2jax_process">$n \cdot k$</span> numbers on all of the
+    sheets (including appropriate repetitions) have been read.
+    Assuming the order of the numbers is uniformly random, how
+    likely is it for each player to finish last?</p>
+<h2>Input</h2>
+<p>The input describes a single game of Speed Bingo. The first
+    line contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, the number of players and number
+    of numbers on each sheet (<span class="tex2jax_process">$1 \leq
+    n \leq 100$</span>, <span class="tex2jax_process">$1 \leq k
+    \leq 1\, 000$</span>). This is followed by <span class="tex2jax_process">$n$</span> lines containing <span class="tex2jax_process">$k$</span> integers each, where the
+    <span class="tex2jax_process">$i^{\text{th}}$</span> line gives
+    the numbers on the sheet for the <span class="tex2jax_process">$i^{\text{th}}$</span> player. All those
+    numbers are between <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$10^9$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines, one
+    for each player. The <span class="tex2jax_process">$i^{\text{th}}$</span> line should contain
+    the probability that player <span class="tex2jax_process">$i$</span> finishes last. All values must be
+    accurate to an absolute error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+1 2 3 4
+1 2 5 6
+3 4 7 8
+</pre>
+</td>
+<td>
+<pre>0.000000000
+0.500000000
+0.500000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+1 2
+3 4
+10 5
+7 8
+</pre>
+</td>
+<td>
+<pre>0.250000000
+0.250000000
+0.250000000
+0.250000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

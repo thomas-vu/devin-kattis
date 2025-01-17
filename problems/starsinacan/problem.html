@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>Vera is an astronomer studying locality of nearby star
+    systems. The star systems can be thought of as 3D points in
+    space. Vera would like to place a can around the stars. In
+    other words, she would like to know what is the smallest volume
+    cylinder that encloses the stars. The cylinder can be oriented
+    in any direction. At least one base of the cylinder must have
+    at least three stars.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input will contain a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$4
+    \le n \le 1\, 000$</span>), representing the number of
+    stars.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines will contain three integers <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> and <span class="tex2jax_process">$z$</span> (<span class="tex2jax_process">$-1\, 000 \le x, y, z \le 1\, 000$</span>),
+    representing the position of a single star. No two stars will
+    be at the same position. No four stars will be coplanar.</p>
+<h2>Output</h2>
+<p>Output a floating point number representing the smallest
+    volume cylinder that can enclose all the stars. Your answer
+    must be accurate within a relative tolerance of <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 0 0
+1 1 0
+0 0 0
+0 0 1
+</pre>
+</td>
+<td>
+<pre>
+1.57079633
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+-100 0 0
+10 0 10
+-10 -10 -10
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+41938.65135885
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+10 20 30
+0 0 0
+-100 1000 -20
+100 -20 33
+8 -7 900
+-100 -223 -23
+3 0 3
+</pre>
+</td>
+<td>
+<pre>
+298192571.11934924
+</pre>
+</td>
+</tr>
+</table>
+</div>

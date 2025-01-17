@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>Annabel and Richard like to invent new games and play
+    against each other. One day Annabel has a new game for Richard.
+    In this game there is a game master and a player. The game
+    master draws <span class="tex2jax_process">$n$</span> points on
+    a piece of paper. The task for the player is to find a straight
+    line, such that at least <span class="tex2jax_process">$p$</span> percent of the points lie exactly
+    on that line. Richard and Annabel have very good tools for
+    measurement and drawing. Therefore they can check whether a
+    point lies exactly on a line or not. If the player can find
+    such a line then the player wins. Otherwise the game master
+    wins the game.</p>
+<p>There is just one problem. The game master can draw the
+    points in a way such that it is not possible at all to draw a
+    suitable line. They need an independent mechanism to check
+    whether there even exists a line containing at least
+    <span class="tex2jax_process">$p$</span> percent of the points,
+    i.e., <span class="tex2jax_process">$\left\lceil n\cdot p/100
+    \right\rceil $</span> points. Now it is up to you to help them
+    and write a program to solve this task.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\le n\le 10^5$</span>), the number of
+        points the game master has drawn;</p>
+</li>
+<li>
+<p>one line with one integer <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$20\le p \le 100$</span>), the percentage
+        of points which need to lie on the line;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each with
+        two integers <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0\le x,y\le 10^9$</span>), the
+        coordinates of a point.</p>
+</li>
+</ul>
+<p>No two points will coincide.</p>
+<h2>Output</h2>
+<p>Output one line containing either “<tt class="ttfamily">possible</tt>” if it is possible to find a suitable
+    line or “<tt class="ttfamily">impossible</tt>” otherwise.</p>
+<div class="figure" id="a0000000684">
+<center>
+<table class="subfigure" id="a0000000685" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=0.30\textwidth ]{sample1.pdf}" src="/problems/findinglines/file/statement/en/img-0001.png" style="width:30.00%"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(a) <span>Sample input 1:
+            A line with (at least) 3 of the points
+            exists.</span></td>
+</tr>
+</table>
+<table class="subfigure" id="a0000000686" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=0.30\textwidth ]{sample2.pdf}" src="/problems/findinglines/file/statement/en/img-0002.png" style="width:30.00%"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(b) <span>Sample input 2:
+            No line with at least 3 points exists.</span></td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the sample inputs
+        </div>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+55
+0 0
+10 10
+10 0
+0 10
+3 3
+</pre>
+</td>
+<td>
+<pre>
+possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+45
+0 0
+10 10
+10 0
+0 10
+3 4
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

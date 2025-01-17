@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>As humanity travels to extraterrestrial bodies, the need for
+    human or robotic explorers to determine their location on the
+    surface will be critical. Lighthouses offer a simple solution
+    as line-of-sight navigational beacons. An important measurement
+    for lighthouses is geographic range, the maximum visible,
+    line-of-sight distance between an observer and the lighthouse
+    before the lighthouse is obscured by the horizon due to the
+    curvature of the surface. The surface <i class="it">traveling</i> distance corresponding to the geographic
+    range is crucial for planning fuel and oxygen supplies to
+    ensure an accurate—and safe—return to base stations.</p>
+<p>Your team is to write a program that computes the maximum
+    surface distance that allows for a line-of-sight between an
+    observer and a lighthouse. Your program is to assume that
+    exoplanets are spherical with a known radius.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{lighthouse.png}" src="/problems/exoplanetlighthouse/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p><br/></p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \le t \le 20$</span>), which is the number
+    of test cases.</p>
+<p>Each of the next <span class="tex2jax_process">$t$</span>
+    lines is a separate test case which contains three real
+    numbers:</p>
+<center>
+<span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$100 \le R \le 20\, 000$</span>),
+      <span class="tex2jax_process">$h_1$</span> and <span class="tex2jax_process">$h_2$</span> (<span class="tex2jax_process">$1 \le h_1,h_2 \le 1\, 000$</span>)
+    </center>
+<p>Where <span class="tex2jax_process">$R$</span> is the radius
+    of the exoplanet in kilometers, <span class="tex2jax_process">$h_1$</span> is the height above the surface
+    of the exoplanet of the observer in meters, and <span class="tex2jax_process">$h_2$</span> is the height of the lighthouse
+    beacon above the surface of the planet in meters.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$t$</span> lines, one
+    for each test case. On each line output a single real number,
+    <span class="tex2jax_process">$D$</span>, which is the maximum
+    distance in kilometers on the surface of the exoplanet,
+    measured from the base of the observer to the base of the
+    lighthouse, that allows for a line-of-sight between the
+    observer and the lighthouse beacon. The answer must be accurate
+    to within one meter.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+6371.0 1.0 27.0
+6371.0 1.0 26.99
+6371 1.0 1.0
+1737.4 1 27
+</pre>
+</td>
+<td>
+<pre>22.117714375394343
+22.114279232261655
+7.139187161948777
+11.550070205049764
+</pre>
+</td>
+</tr>
+</table>
+</div>

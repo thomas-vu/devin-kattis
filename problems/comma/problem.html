@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:17.50%">
+<span class="parbox" style="width:600.0pt"><img alt="/problems/comma/file/statement/en/img-0001.jpg" class="illustration" src="/problems/comma/file/statement/en/img-0001.jpg"/></span>
+<div class="description">
+<span class="parbox" style="width:600.0pt">Photo by Tanya
+        Hart. Yarn pattern by Morgen Dämmerung.</span>
+</div>
+</div><span class="parbox" style="width:600.0pt">As practice
+    will tell you, the English rules for comma placement are
+    complex, frustrating, and often ambiguous. Many people, even
+    the English, will, in practice, ignore them, and, apply custom
+    rules, or, no rules, at all. Doctor Comma Sprinkler solved this
+    issue by developing a set of rules that sprinkles commas in a
+    sentence with no ambiguity and little simplicity. In this
+    problem you will help Dr. Sprinkler by producing an
+    algorithm to automatically apply her rules.</span>
+<p>Dr. Sprinkler’s rules for adding commas to an existing
+    piece of text are as follows:</p>
+<ol class="enumerate">
+<li>
+<p>If a word anywhere in the text is preceded by a comma,
+        find all occurrences of that word in the text, and put a
+        comma before each of those occurrences, except in the case
+        where such an occurrence is the first word of a sentence or
+        already preceded by a comma.</p>
+</li>
+<li>
+<p>If a word anywhere in the text is succeeded by a comma,
+        find all occurrences of that word in the text, and put a
+        comma after each of those occurrences, except in the case
+        where such an occurrence is the last word of a sentence or
+        already succeeded by a comma.</p>
+</li>
+<li>
+<p>Apply rules <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span> repeatedly until no new commas
+        can be added using either of them.</p>
+</li>
+</ol>
+<p>As an example, consider the text</p>
+<pre>
+please sit spot. sit spot, sit. spot here now here.
+</pre>
+<p>Because there is a comma after <tt class="tt">spot</tt> in
+    the second sentence, a comma should be added after <tt class="tt">spot</tt> in the third sentence as well (but not the first
+    sentence, since it is the last word of that sentence). Also,
+    because there is a comma before the word <tt class="tt">sit</tt> in the second sentence, one should be added
+    before that word in the first sentence (but no comma is added
+    before the word <tt class="tt">sit</tt> beginning the second
+    sentence because it is the first word of that sentence).
+    Finally, notice that once a comma is added after <tt class="tt">spot</tt> in the third sentence, there exists a comma
+    before the first occurrence of the word <tt class="tt">here</tt>. Therefore, a comma is also added before the
+    other occurrence of the word <tt class="tt">here</tt>. There
+    are no more commas to be added so the final result is</p>
+<pre>
+please, sit spot. sit spot, sit. spot, here now, here.
+</pre>
+<h2>Input</h2>
+<p>The input contains one line of text, containing at least
+    <span class="tex2jax_process">$2$</span> characters and at most
+    <span class="tex2jax_process">$1\, 000\, 000$</span>
+    characters. Each character is either a lowercase letter, a
+    comma, a period, or a space. We define a <em>word</em> to be a
+    maximal sequence of letters within the text. The text adheres
+    to the following constraints:</p>
+<ul class="itemize">
+<li>
+<p>The text begins with a word.</p>
+</li>
+<li>
+<p>Between every two words in the text, there is either a
+        single space, a comma followed by a space, or a period
+        followed by a space (denoting the end of a sentence and the
+        beginning of a new one).</p>
+</li>
+<li>
+<p>The last word of the text is followed by a period with
+        no trailing space.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Display the result after applying Dr. Sprinkler’s
+    algorithm to the original text.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>please sit spot. sit spot, sit. spot here now here.
+</pre>
+</td>
+<td>
+<pre>
+          please, sit spot. sit spot, sit. spot, here now, here.
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+          one, two. one tree. four tree. four four. five four. six five.
+</pre>
+</td>
+<td>
+<pre>
+          one, two. one, tree. four, tree. four, four. five, four. six five.
+</pre>
+</td>
+</tr>
+</table>
+</div>

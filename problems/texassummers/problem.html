@@ -1,0 +1,116 @@
+<div class="problembody">
+<p>Summer in Texas can be very hot. But Texans are tough, and
+    in a weird way some of them enjoy the heat; for even the heat
+    is bigger in Texas. But the heat can be quite uncomfortable for
+    computer science students who are new to Texas and are not used
+    to the sweating it can cause.</p>
+<p>These students want to minimize the amount they sweat while
+    walking from their dormitory to class. When they enter the
+    sunshine, they begin sweating at the rate <span class="tex2jax_process">$r_0$</span> gallons/hour (where <span class="tex2jax_process">$r_0 &gt; 0$</span>). The longer they stay in
+    the sun, the more they sweat. They sweat at a rate proportional
+    to the square of how long they have been continuously exposed
+    to the sun. Put another way, if they are exposed to the sun for
+    twice as long, they sweat four times as much. But if they find
+    a shady spot along the way, their continuous sun exposure is
+    broken and they stop sweating immediately. They can then sit in
+    the shade and cool off completely before continuing on their
+    journey to class. Of course, leaving the shade means they begin
+    sweating again, but starting at the lower rate <span class="tex2jax_process">$r_0$</span> (since they have cooled
+    off).</p>
+<p>Write a program that helps a student find a path from the
+    dormitory to class which minimizes the total amount of sweat
+    she expends.</p>
+<h2>Input</h2>
+<p>Input describes the locations of shady spots on campus as
+    well as the student’s dormitory and class locations. Input
+    begins with a line containing an integer <span class="tex2jax_process">$0 \leq n \leq 2500$</span>, the number of
+    shady spots. Each of the next <span class="tex2jax_process">$n$</span> lines contains a pair of integers
+    <span class="tex2jax_process">$x~ y$</span> specifying the
+    coordinates of a shady spot. No two shady spots have the same
+    coordinates. Following the shady spots are two more lines in
+    the same format which specify the coordinates of the student’s
+    dormitory and class, respectively.</p>
+<h2>Output</h2>
+<p>Print a path the student can take to get from her dormitory
+    to class. The path should minimize the total sweat produced
+    along the whole path. Print the path as indexes of the shady
+    spots (from the order given in the input, with the first shady
+    spot having index 0). If the best path contains no shady spots,
+    output a single ‘-’. If there are multiple paths that minimize
+    the total sweat, print any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 1
+2 -2
+5 -1
+0 0
+9 0
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+8 2
+4 0
+8 0
+4 -1
+7 -1
+6 -2
+2 1
+9 2
+</pre>
+</td>
+<td>
+<pre>
+1
+3
+5
+4
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+-5 -5
+0 0
+10 10
+</pre>
+</td>
+<td>
+<pre>
+-
+</pre>
+</td>
+</tr>
+</table>
+</div>

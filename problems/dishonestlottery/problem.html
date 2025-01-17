@@ -1,0 +1,54 @@
+<div class="problembody">
+<p>You suspect your local lottery of cheating! Some numbers are
+    coming up too often!</p>
+<p>Each week, the lottery randomly selects five numbers in the
+    range from one to fifty. So, each number should appear about
+    <span class="tex2jax_process">$10\% $</span> of the time if the
+    numbers are truly chosen randomly. If a number appears far more
+    than that, it’s suspicious!</p>
+<p>Determine if a set of lottery drawings is suspicious by
+    listing all numbers that appear too often. To allow for random
+    error, you’ll need to flag any number that appears more than
+    <span class="tex2jax_process">$20\% $</span> of the time.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 1\, 000$</span>). There will be
+    <span class="tex2jax_process">$10 \cdot n$</span> lottery
+    results for you to analyze.</p>
+<p>Each of the next <span class="tex2jax_process">$10 \cdot
+    n$</span> lines contains <span class="tex2jax_process">$5$</span> integers <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$1
+    \le x \le 50$</span>). Each line represents a drawing. All
+    values on a line are unique.</p>
+<h2>Output</h2>
+<p>On a single line, output all numbers that appear strictly
+    more than <span class="tex2jax_process">$2 \cdot n$</span>
+    times in the list. If there is more than one, output them
+    space-separated, in sorted order from smallest to largest. If
+    there aren’t any, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+32 30 16 45 27
+34 45 35 31 42
+1 12 26 50 13
+34 50 36 21 39
+47 7 41 18 45
+28 48 2 8 4
+16 40 17 2 19
+50 4 30 15 6
+31 13 33 46 18
+49 23 24 17 48
+</pre>
+</td>
+<td>
+<pre>45 50
+</pre>
+</td>
+</tr>
+</table>
+</div>

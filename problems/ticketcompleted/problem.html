@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{ttr-board.png}" src="/problems/ticketcompleted/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+</div>
+<p>Many are familiar with the board game Ticket To Ride<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> where players compete to build a
+    railway empire, claiming routes between cities. The game
+    consists of a map of cities and various rail segments each
+    connecting two adjacent cities.</p>
+<p>A key way to score points towards winning the game is to
+    complete <i class="itshape">Destination Tickets</i>. Each
+    ticket specifies two distinct cities. A player earns the points
+    that are indicated on the ticket if they have claimed one or
+    more rail segments that form a path connecting the two
+    cities.</p>
+<p>There is one ticket for each distinct unordered pair of
+    cities. In our version of the game, each player is randomly
+    given a ticket and they have an equal probability of receiving
+    any ticket. Given a list of rail segments you have already
+    claimed, determine the probability you earn points from the
+    ticket you are given.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 10^5$</span>), which is the number of cities, and
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0 \leq M \leq 10^6$</span>), which is the
+    number of rail segments you have claimed.</p>
+<p>The next <span class="tex2jax_process">$M$</span> lines
+    describe your claimed rail segments. Each line contains two
+    distinct integers <span class="tex2jax_process">$i$</span>
+    (<span class="tex2jax_process">$1 \leq i \leq N$</span>) and
+    <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1 \leq j \leq N$</span>), which are the
+    cities that this rail segment connects.</p>
+<h2>Output</h2>
+<p>Display the probability you earn points from the ticket you
+    are given.</p>
+<p>Your answer should have an absolute error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+1 2
+3 4
+</pre>
+</td>
+<td>
+<pre>0.33333333333333333333
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+1 5
+2 3
+2 4
+3 4
+</pre>
+</td>
+<td>
+<pre>0.4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 5
+1 2
+2 3
+3 4
+5 6
+6 7
+</pre>
+</td>
+<td>
+<pre>0.42857142857142857143
+</pre>
+</td>
+</tr>
+</table>
+</div>

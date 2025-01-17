@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>A <em>factor-free tree</em> is a rooted binary tree where
+    every node in the tree contains a positive integer value that
+    is coprime with all of the values of its ancestors. Two
+    positive integers are coprime if their greatest common divisor
+    equals <span class="tex2jax_process">$1$</span>.</p>
+<p>The <em>inorder sequence</em> of a rooted binary tree can be
+    generated recursively by traversing first the left subtree,
+    then the root, then the right subtree. See Figure 1 below for
+    the inorder sequence of one factor-free tree.</p>
+<div class="figure" id="fig:inorder">
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{sample1}" src="/problems/factorfree/file/statement/en/img-0001.png" style="width:45.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample 1. The tree is
+          factor-free; for example, the value of the node marked
+          “<span class="tex2jax_process">$5$</span>” is coprime
+          with all of the values of its ancestors, marked
+          “<span class="tex2jax_process">$9$</span>”, “<span class="tex2jax_process">$8$</span>”, and “<span class="tex2jax_process">$7$</span>”.
+        </div>
+</center>
+</div>
+<p>Given a sequence <span class="tex2jax_process">$a_1, a_2,
+    \ldots , a_ n$</span>, decide if it is the inorder sequence of
+    some factor-free tree and if so construct such a tree.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^6$</span>), the length
+        of the sequence.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$a_1, \ldots , a_
+        n$</span> (<span class="tex2jax_process">$1 \leq a_ i \leq
+        10^7$</span> for each <span class="tex2jax_process">$i$</span>), the elements of the
+        sequence.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If there exists a factor-free tree whose inorder sequence is
+    the given sequence, output <span class="tex2jax_process">$n$</span> values. For each value in the
+    sequence, give the <span class="tex2jax_process">$1$</span>-based index of its parent, or
+    <span class="tex2jax_process">$0$</span> if it is the root. If
+    there are multiple valid answers, print any one of them.</p>
+<p>If no such tree exists, output “<tt class="ttfamily">impossible</tt>” instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+2 7 15 8 9 5
+</pre>
+</td>
+<td>
+<pre>
+2 0 4 2 4 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+2 7 15 8 9 6
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,174 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/mnist2class/file/statement/en/img-0001.png" class="illustration" src="/problems/mnist2class/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST
+        handwritten digits – <span class="tex2jax_process">$0$</span> and not-<span class="tex2jax_process">$0$</span>.</a>
+</div>
+</div>
+<p>The objective of this problem is to train a Binary Neural
+    Network to classify images. The training occurs on your own
+    computer, and you should submit a program which simply outputs
+    the trained weights.</p>
+<p>The images are of handwritten digits from the well-known
+    MNIST dataset. Your task is to classify each image into one of
+    <b class="bfseries">two</b> classes: either the digit
+    <span class="tex2jax_process">$0$</span>, or <em>not</em> the
+    digit <span class="tex2jax_process">$0$</span> (i.e. digits
+    <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$9$</span>).</p>
+<p>An MNIST image is originally a collection of <span class="tex2jax_process">$28\times 28$</span> pixels, each pixel being
+    a byte, but for this problem it is given to us in a compressed
+    form of <span class="tex2jax_process">$51$</span> bits. For the
+    <span class="tex2jax_process">$m^\textrm {th}$</span> image,
+    the input is denoted by</p><span class="tex2jax_process">\[
+    x^m=\{ x_n^m\} _{n=0,\ldots ,50} \in \{ -1,1\} ^{51}, \]</span>
+<p>that is, <span class="tex2jax_process">$x^m$</span> is a
+    vector of <span class="tex2jax_process">$51$</span> values
+    (either <span class="tex2jax_process">$-1$</span> or
+    <span class="tex2jax_process">$1$</span>). Its corresponding
+    label is <span class="tex2jax_process">$y^m=0$</span> if the
+    image is of digit <span class="tex2jax_process">$0$</span>, or
+    <span class="tex2jax_process">$1$</span> if it is not of digit
+    <span class="tex2jax_process">$0$</span>. There are a number of
+    labelled images given for training, and a separate set of
+    images reserved for testing (and known only to the judging
+    software). The goal is to maximize the classification accuracy
+    on the test images using a binary neural network, which we
+    explain next.</p>
+<h2>Binary Neural Network Architecture</h2>
+<p>For this problem, we use the following binary neural network
+    architecture, illustrated below. After the input layer, there
+    are three layers:</p>
+<ol class="enumerate">
+<li>
+<p>a layer with <span class="tex2jax_process">$30$</span>
+        binary ‘perceptron nodes’, each fully connected to the
+        <span class="tex2jax_process">$51$</span> inputs via
+        configurable weighted connections;</p>
+</li>
+<li>
+<p>a layer with <span class="tex2jax_process">$2$</span>
+        ‘sum nodes’ (one per class), each connected to the outputs
+        of <span class="tex2jax_process">$15$</span> different
+        perceptron nodes; and</p>
+</li>
+<li>
+<p>a layer with one ‘argmax node’ connected to both sum
+        nodes.</p>
+</li>
+</ol>
+<p>Next, we describe how these nodes work in detail.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{bnn_2class.pdf}" src="/problems/mnist2class/file/statement/en/img-0002.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The binary neural network architecture
+          for classifying digits.
+        </div>
+</center>
+</div>
+<h3>Perceptron Node</h3>
+<p>The weights for each perceptron node are configurable. Each
+    node <span class="tex2jax_process">$k$</span> has <span class="tex2jax_process">$51$</span> weights</p><span class="tex2jax_process">\[ w^k=\{ w_n^k\} _{n=0,\ldots ,50}\in \{
+    -1,1\} ^{51}. \]</span>
+<p>The output <span class="tex2jax_process">$y^{km}\in \{
+    -1,1\} $</span> of perceptron node <span class="tex2jax_process">$k$</span> for input <span class="tex2jax_process">$x^m$</span> is:</p><span class="tex2jax_process">\begin{equation}
+    \label{mnist0_perceptron_output} y^{km}=\operatorname
+    *{sign}\left(\sum _{n=0}^{50}w_n^k x_n^m\right),
+    \end{equation}</span>
+<p>where the <span class="tex2jax_process">$\operatorname
+    *{sign}(\cdot )$</span> function takes value <span class="tex2jax_process">$1$</span> if its argument is positive and
+    <span class="tex2jax_process">$-1$</span> otherwise (note:
+    according to this definition, <span class="tex2jax_process">$\operatorname *{sign}(0)=-1$</span>). For
+    example, if <span class="tex2jax_process">$\sum _{n=0}^{50}
+    w_n^k x_n^m=-7$</span>, then <span class="tex2jax_process">$y^{km}=-1$</span>.</p>
+<h3>Sum Node</h3>
+<p>There is one sum node per class. The behavior of the sum
+    nodes is always the same. Each produces the sum of the outputs
+    of the <span class="tex2jax_process">$15$</span> perceptron
+    nodes it is connected to. Thus, its output is an integer in the
+    range <span class="tex2jax_process">$[-15,15]$</span>, where a
+    high value indicates confidence in class corresponding to the
+    sum node.</p>
+<h3>Argmax Node</h3>
+<p>The output of the argmax node is the output of the network.
+    It simply produces the class corresponding to the sum node with
+    the largest output. For example, if the outputs of the sum
+    nodes are given by the vector <span class="tex2jax_process">$[-15,+9]$</span>, then the output of the
+    argmax node is <span class="tex2jax_process">$1$</span>
+    (corresponding to the value <span class="tex2jax_process">$+9$</span>).</p>
+<p>For a set of weights and an input <span class="tex2jax_process">$x^m$</span>, the network computes the
+    results of the perceptron and sum nodes to produce the
+    <i class="itshape">predicted</i> label <span class="tex2jax_process">$\hat{y}^m$</span>:</p><span class="tex2jax_process">\begin{equation}
+    \label{mnist0_prediction_output} \hat{y}^m = \operatorname
+    *{argmax}_{i\in \{ 0,1\} } \left(\sum _{k=15i}^{15i+14} y^{km}
+    \right). \end{equation}</span>
+<p>In case both sum nodes produce the same value, the argmax
+    node breaks the tie by choosing to output <span class="tex2jax_process">$0$</span>.</p>
+<h2>Classification Accuracy and Training</h2>
+<p>The goal is to train the binary neural network and maximize
+    the ‘accuracy’ <span class="tex2jax_process">$A$</span> on the
+    test dataset of <span class="tex2jax_process">$M$</span>
+    images. Accuracy is defined as:</p><span class="tex2jax_process">\begin{equation} \label{mnist0_accuracy} A =
+    \frac{100}{M}\sum _{m=1}^M 1\left(y^m=\hat{y}^m \right),
+    \end{equation}</span>
+<p>where <span class="tex2jax_process">$\hat{y}^m$</span> is
+    the predicted label of the binary neural network on input
+    <span class="tex2jax_process">$x^m$</span>, <span class="tex2jax_process">$y^m$</span> is the true label of
+    <span class="tex2jax_process">$x^m$</span>, and <span class="tex2jax_process">$1(\cdot )$</span> is the indicator function,
+    which produces <span class="tex2jax_process">$1$</span> if its
+    argument is true and <span class="tex2jax_process">$0$</span>
+    otherwise.</p>
+<p>You are provided with training images with their correct
+    classes and should devise a training algorithm to choose
+    perceptron node weights <span class="tex2jax_process">$w^0,
+    w^1, \ldots , w^{29}$</span> that give good accuracy on the
+    secret testing data.</p>
+<h2>Training Data and Evaluation Script</h2>
+<p>Use the links on the top right of the web page for this
+    problem to download the training data to your own computer and
+    a script to help evaluate accuracy on the training data. The
+    training data comes as a text file with one example per line.
+    Line number <span class="tex2jax_process">$m$</span> has
+    example <span class="tex2jax_process">$x^m$</span> followed by
+    <span class="tex2jax_process">$y^m$</span>. Therefore, it has
+    <span class="tex2jax_process">$51$</span> values from
+    <span class="tex2jax_process">$\{ -1,1\} $</span>, followed by
+    a label of <span class="tex2jax_process">$0$</span> or
+    <span class="tex2jax_process">$1$</span>.</p>
+<h2>Input</h2>
+<p>The program you submit should read no input.</p>
+<h2>Output and Scoring</h2>
+<p>Your program must output <span class="tex2jax_process">$30$</span> lines, one per perceptron weight
+    vector, each containing <span class="tex2jax_process">$51$</span> space-separated numbers (either
+    <span class="tex2jax_process">$-1$</span> or <span class="tex2jax_process">$1$</span>). (If your program produces some
+    other number <span class="tex2jax_process">$v \not\in \{ -1,1\}
+    $</span>, the judging software converts it to <span class="tex2jax_process">$\operatorname *{sign}(v)$</span> according
+    to the above definition of <span class="tex2jax_process">$\operatorname *{sign}$</span>.)</p>
+<p>The judge uses your weights on a different dataset, the test
+    dataset, which consists of between <span class="tex2jax_process">$1\, 000$</span> and <span class="tex2jax_process">$2\, 000$</span> images. The judge calculates
+    the accuracy of your algorithm using the equation given
+    earlier.</p>
+<p>The distribution of image labels in the training data is the
+    same as the distribution in the secret testing data. Images
+    labeled <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span> (non-<span class="tex2jax_process">$0$</span> digits) appear with roughly the
+    same frequency.</p>
+<p>Your score on the problem is the accuracy on the test
+    dataset, measured in percent, rounded to two decimal digits of
+    precision.</p>
+<h2>Motivation</h2>
+<p>The motivation for using binary neural networks is that they
+    greatly simplify the forward convolution operations and
+    dramatically reduce the on-chip consumed energy (<span class="tex2jax_process">$60$</span> times improvement) over more
+    general networks. Therefore, a candidate architecture for
+    performing inference in future mobile phones is to train the
+    binary neural network model on the cloud and then download the
+    weights to the mobile phone for inference. Indeed, in this
+    problem, your algorithm plays the role of the cloud training,
+    and our tester plays the role of the mobile phone
+    inference.</p>
+<p>A brute force search would reveal the best weights, but
+    unfortunately there are <span class="tex2jax_process">$2^{30\cdot 51}=2^{1\, 530}$</span> possible
+    weight combinations!</p>
+</div>

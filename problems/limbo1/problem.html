@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Dominick Cobb and Arthur are “extractors" who perform
+    corporate espionage. Using experimental military technology
+    that gives them access to shared dream worlds, they infiltrate
+    their targets’ subconscious to extract valuable information.
+    Cobb and his entourage are contacted by a mysterious Japanese
+    syndicate and given a seemingly impossible task: instead of
+    extracting information, do the opposite – plant a new idea in
+    the target’s mind.<br/></p>
+<p>Cobb notes that when using dream-sharing technology, time
+    slows down by different factors depending on whose dream is
+    being entered. Their target is to convince Cepshun, the heir of
+    an energy conglomerate, to dissolve his father’s company.
+    Before Cobb starts, he notes that it would be important to
+    figure out the passage of time to ensure that the operation can
+    be completed smoothly.<br/></p>
+<p>In Cepshun’s dreams, there are multiple different layers of
+    consciousness, each of which controls a different area of
+    Cepshun’s dreams and memories. Cobb needs to move between
+    several dreams to reach his destination dream – some of them
+    belonging to Cepshun, and some of them belonging to his
+    entourage. The factor by which time slows down on each level is
+    best visualized by all of the positive integers arranged in an
+    infinite triangle, where the first row has the single integer
+    <span class="tex2jax_process">$1$</span>, the second row has
+    the next two integers, the third row has the next three, and so
+    forth. The first <span class="tex2jax_process">$4$</span>
+    levels are depicted below:</p>
+<pre>
+      1
+     2 3
+    4 5 6
+   7 8 9 10
+    etc...
+</pre>
+<p>The initial time factor for reality is <span class="tex2jax_process">$1$</span>. To enter the next dream level,
+    Cobb can either descend left (into a dream by Cepshun) or right
+    (into a dream by his entourage). For example, if he descends
+    right, left, right, then he’ll end up at dreams with time
+    factors of <span class="tex2jax_process">$3$</span>, then
+    <span class="tex2jax_process">$5$</span>, and finally
+    <span class="tex2jax_process">$9$</span>. Note the interesting
+    property that for any pair of whole numbers <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span>, Cobb will always end up on the
+    same time factor if he moves left <span class="tex2jax_process">$L$</span> times total and right <span class="tex2jax_process">$R$</span> times total, regardless of the
+    order in which he makes the moves.<br/></p>
+<p>Cobb wants to know the slowness of time inside his target
+    dream, which he can reach by descending left <span class="tex2jax_process">$L$</span> times and right <span class="tex2jax_process">$R$</span> times.</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 100$</span>), the number of
+    test cases.<br/>
+<span class="tex2jax_process">$T$</span> lines follow, each of
+    which is a test case consisting of two space-separated
+    integers, <span class="tex2jax_process">$L$</span> and
+    <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$0 \leq L, R \leq 10^{9}$</span>), specifying
+    the number of times Cobb needs to descend left and right,
+    respectively.</p>
+<h2>Output</h2>
+<p>For each test case, print, on a separate line, the factor by
+    which time slows down in the target’s dream at <span class="tex2jax_process">$(L, R)$</span>.<br/>
+    Note: the answer can be large, and may not necessarily fit in a
+    32-bit integer.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2
+2 3
+5 8
+</pre>
+</td>
+<td>
+<pre>9
+19
+100
+</pre>
+</td>
+</tr>
+</table>
+</div>

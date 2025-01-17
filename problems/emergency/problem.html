@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>Löpkass is out running in the forest again. He loves running
+    in the forest. However, there is a programming competition
+    starting in a couple of hours, and he needs to calculate how
+    long it will take him to get home (so that he can stay in the
+    fresh air as long as possible). You have to help him out.</p>
+<p>The forest is modelled as a graph with <span class="tex2jax_process">$n$</span> nodes. Nodes are numbered
+    <span class="tex2jax_process">$0, 1, ..., n-1$</span>. Löpkass
+    is located in node <span class="tex2jax_process">$0$</span>,
+    and his home is located in node <span class="tex2jax_process">$n-1$</span>. Two nodes <span class="tex2jax_process">$v,w$</span> are connected if <span class="tex2jax_process">$v+1 = w$</span>. Additionally, two nodes are
+    connected if they are both a multiple of some integer
+    <span class="tex2jax_process">$K$</span>. In this problem, we
+    do not consider <span class="tex2jax_process">$0$</span> to be
+    a multiple of <span class="tex2jax_process">$K$</span>.</p>
+<h2>Input</h2>
+<p>One line with two integers, the number of nodes <span class="tex2jax_process">$1 \leq n \leq 10^{18}$</span>, and the
+    number <span class="tex2jax_process">$1 \leq K \leq
+    10^{18}$</span>.</p>
+<h2>Output</h2>
+<p>Print a single integer on a single line: the shortest path
+    from node 0 to node <span class="tex2jax_process">$n-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 2
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

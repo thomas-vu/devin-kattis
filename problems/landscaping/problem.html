@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>Preparations for a good harvest in Spring start now and
+    farmer John is preparing his field for a good season. He went
+    over-budget last year, as the tractors moving up and down the
+    hills needed more fuel than he expected.</p>
+<p>When harvesting, his tractors need to move both horizontally
+    and vertically across all the land. In the image, you can see a
+    region at low altitude in light green and a region at high
+    altitude in dark green. When harvesting, his tractors will have
+    to cross all the hills marked in red and they will have to go
+    up or down <span class="tex2jax_process">$8$</span> times.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{Landscaping.png}" src="/problems/landscaping/file/statement/en/img-0001.png" style="width:40.00%"/>
+</center>
+</div>
+<p>This year, he is wondering whether he should level some
+    parts of his field before sowing in order to lower his
+    harvesting costs later on. Can you help him decide where the
+    bulldozers should work in order to lower his costs?</p>
+<p>Farmer John knows that his tractors need <span class="tex2jax_process">$A$</span> additional euros when moving
+    between adjacent patches of land at different heights. He can
+    also pay <span class="tex2jax_process">$B$</span> euros to
+    either increase or decrease the height of any patch in his
+    field.</p>
+<p>What is the minimum amount of money he will have to pay this
+    season?</p>
+<h2>Task</h2>
+<p>Given a description of the field, the price to change the
+    height of a patch of land and the price his tractors pay when
+    moving between adjacent patches, the goal is to find out the
+    minimum amount that farmer John will have to pay this year.</p>
+<h2>Input</h2>
+<p>The first line consists of <span class="tex2jax_process">$4$</span> space separated integers,
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> represent the dimensions of his
+    <span class="tex2jax_process">$N\times M$</span> field,
+    <span class="tex2jax_process">$A$</span> represents the cost to
+    move between adjacent patches of land at different levels and
+    <span class="tex2jax_process">$B$</span> is the cost to change
+    any patch of land.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    have <span class="tex2jax_process">$M$</span> characters and
+    represent farmer John’s field. A ’.’ signals a patch of land at
+    a low level and a ’#’ represents a patch of land at a high
+    level.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq N,M \leq
+          50$</span></p>
+</td>
+<td style="text-align:left">
+<p>Size of the field.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq A,B \leq 100\,
+          000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Cost to change any height or to move between adjacent
+          patches.</p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>You should output a single line with a single integer
+    representing the minimum amount of money that farmer John will
+    have to pay.</p>
+<h2>Sample Output Explanation</h2>
+<p>Farmer John has a <span class="tex2jax_process">$5\times
+    4$</span> field. Moving between adjacent patches at a different
+    level requires €<span class="tex2jax_process">$1000$</span> in
+    fuel, while changing the height of a patch costs €<span class="tex2jax_process">$2000$</span>.</p>
+<p>Farmer John needs €<span class="tex2jax_process">$11000$</span>: €<span class="tex2jax_process">$2000$</span> to change the isolated patch to
+    a lower level and €<span class="tex2jax_process">$9000$</span>
+    for the fuel needed to move between patches of land at
+    different levels.</p>
+<p>Not changing any patch would cost him €<span class="tex2jax_process">$12000$</span>, changing all the high patches
+    to low would cost him €<span class="tex2jax_process">$18000$</span>, and changing all the low
+    patches to high would cost him €<span class="tex2jax_process">$22000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4 1000 2000
+...#
+#..#
+...#
+##..
+###.
+</pre>
+</td>
+<td>
+<pre>
+11000
+</pre>
+</td>
+</tr>
+</table>
+</div>

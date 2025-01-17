@@ -1,0 +1,174 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/hittast/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hittast/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://pixels-cache.icelandair.com/upload/w_3200%2Cg_auto%2Cc_fill%2Cf_auto%2Cq_auto/icelandair/bltc8254562698160cd.jpg">
+        icelandair.com</a> with permission
+      </div>
+</div>
+<p>Álfur and Benedikt are in love and want nothing more than to
+    spend their time together. Sadly, they don’t live close to each
+    other. Álfur lives in Helsinki but Benedikt lives in Buenos
+    Aires. So they can’t meet up whenever they want. They decided
+    to coordinate where and when to meet up next.</p>
+<p>A date has been decided, but not a location. They have no
+    preference for location, as long as they are together. But
+    Álfur is a university student, so his budget is limited.
+    They’ve asked you to find the cheapest solution for them.</p>
+<p>Benedikt has written down all possible meeting locations and
+    found the cheapest lodging option at each location. He also
+    found various different travel options between the locations.
+    Álfur and Benedikt have different credit cards, so they may not
+    get the same prices. Can you use this information to find the
+    cheapest option for these love birds.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 10^5$</span>), the number of
+    locations, and <span class="tex2jax_process">$m$</span>
+    (<span class="tex2jax_process">$1 \leq m \leq 10^5$</span>),
+    the number of travel options between locations. Helsinki is
+    location <span class="tex2jax_process">$1$</span> and Buenos
+    Aires is location <span class="tex2jax_process">$n$</span>. The
+    second line contains <span class="tex2jax_process">$n$</span>
+    integers, <span class="tex2jax_process">$g_1, \dotsc , g_
+    n$</span>, where <span class="tex2jax_process">$g_ i$</span> is
+    the lodging price at location <span class="tex2jax_process">$i$</span>.</p>
+<p>The follow <span class="tex2jax_process">$m$</span> lines,
+    each containing four integers <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span>, <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, indicating that you can travel
+    from <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> in both directions, that the cost
+    for Álfur is <span class="tex2jax_process">$a$</span>, and that
+    the cost for Benedikt is <span class="tex2jax_process">$b$</span>. We have <span class="tex2jax_process">$1 \leq u, v \leq n$</span> and <span class="tex2jax_process">$u \neq v$</span>. Benedikt was only
+    interested in the cheapest travel option between the locations,
+    so each pair <span class="tex2jax_process">$u, v$</span>
+    appears at most once.</p>
+<p>All prices in the input are at least <span class="tex2jax_process">$0$</span> and at most <span class="tex2jax_process">$10^4$</span>.</p>
+<p>You may assume that all locations are reachable from all
+    other locations.</p>
+<h2>Output</h2>
+<p>Print a single integer, the cheapest cost for Álfur and
+    Benedikt to meet.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The only locations are Helsinki and Buenos Aires:
+          <span class="tex2jax_process">$n = 2, m = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There is no travel cost, only lodging cost</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2 \leq n \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+10 1
+1 2 50 60
+</pre>
+</td>
+<td>
+<pre>51
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 6
+1000 400 450 900
+3 4 0 0
+1 2 0 0
+1 4 0 0
+3 1 0 0
+2 3 0 0
+4 2 0 0
+</pre>
+</td>
+<td>
+<pre>400
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 6
+0 4 5 0
+3 4 1 2
+1 2 2 3
+1 4 9 9
+3 1 3 3
+2 3 2 1
+4 2 5 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

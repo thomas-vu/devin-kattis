@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>Bob Roberts is part of a crack espionage team working for
+    the CIA (Chocolate Institute of Alabama) and he is working on
+    decrypting the encoded messages of their arch rivals at the NSA
+    (Nougat Society of Arkansas). Fortunately, the NSA’s espionage
+    staff is not nearly as crack as Bob’s as they are using the
+    Hill encryption scheme (described in the previous problem)
+    which is susceptible to a known-plaintext attack. Bob has
+    intercepted a plaintext/ciphertext pair and has knowledge of
+    the size of the encryption matrix used by his not-so-sweet
+    enemies. Given these Bob knows that there is a way to determine
+    the encryption matrix, but no one on his staff is exactly sure
+    how (hmmm <span class="tex2jax_process">$\ldots $</span> not
+    quite as crack as they thought). Bob’s come to you to solve
+    this problem for them. One complication is that there might not
+    be enough data to uniquely determine the NSA’s encryption
+    matrix, and the data they intercepted might have been corrupted
+    leading to no solution to the problem.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing a positive integer
+    <span class="tex2jax_process">$n \leq 10$</span> indicating the
+    size of the matrix and the vectors to use in the encryption.
+    After this are two lines: the first of these contains the
+    plaintext and the second the ciphertext. Both of these lines
+    will consist of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$2\, 000$</span> characters in
+    the set <tt class="tt">A</tt>, <span class="tex2jax_process">$\ldots $</span>, <tt class="tt">Z,0</tt>,
+    <span class="tex2jax_process">$\ldots $</span>, <tt class="tt">9</tt> and the space character. The lengths of both
+    strings are identical and are multiples of <span class="tex2jax_process">$n$</span>. Both of these strings may include
+    trailing blanks.</p>
+<h2>Output</h2>
+<p>Output one of three possible answers. If the input does not
+    admit any possible encryption matrix output <tt class="tt">No
+    solution</tt>. Otherwise if the input does not uniquely
+    determine the encryption matrix output <tt class="tt">Too many
+    solutions</tt>. Otherwise output the encryption matrix, one row
+    per line with a single space between values on a line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+ATTACK AT DAWN 
+FPLSFA4SUK2W9K3
+</pre>
+</td>
+<td>
+<pre>30 1 9
+4 23 7
+5 9 13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+ATTACK
+FPLSFA
+</pre>
+</td>
+<td>
+<pre>Too many solutions
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+ATTACK AT DAWN 
+EPLSFA4SUK2W9K3
+</pre>
+</td>
+<td>
+<pre>No solution
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/importspaghetti/file/statement/en/img-0001.png" class="illustration" src="/problems/importspaghetti/file/statement/en/img-0001.png"/>
+<div class="description">
+        cc-by NCPC 2017
+      </div>
+</div>You just graduated from programming school and nailed a
+    Python programming job. The first day at work you realize that
+    you have inherited a mess. The <em>spaghetti</em> design
+    pattern was chosen by the previous maintainer, who recently
+    fled the country. You try to make sense of the code, but
+    immediately discover that different files depend cyclically on
+    each other. Testing the code, in fact running the code, has not
+    yet been attempted.
+
+    <p>As you sit down and think, you decide that the first thing
+    to do is to eliminate the cycles in the dependency graph. So
+    you start by finding a shortest dependency cycle.</p>
+<h2>Input</h2>
+<p>The first line of input contains a number <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \le n \le 500$</span>, the number of files. Then follows one
+    line with <span class="tex2jax_process">$n$</span>
+    distinct names of files. Each name is a string with at least
+    <span class="tex2jax_process">$1$</span> and at most
+    <span class="tex2jax_process">$8$</span> lower case letters
+    ‘<tt class="ttfamily">a</tt>’ to ‘<tt class="ttfamily">z</tt>’.
+    Then follow <span class="tex2jax_process">$n$</span>
+    sections, one section per file name, in the order they were
+    given on the second line. Each section starts with one line
+    containing the name of the file and an
+    integer <span class="tex2jax_process">$k$</span>, followed
+    by <span class="tex2jax_process">$k$</span> lines, each
+    starting with “<tt class="ttfamily">import</tt>”.</p>
+<p>Each “<tt class="ttfamily">import</tt>” line is a
+    comma-space separated line of dependencies. No file imports the
+    same file more than once, and every file imported is listed in
+    the second line of the input. Comma-space separated means that
+    every line will start with “<tt class="ttfamily">import</tt>”,
+    then have a list of file names separated by <tt class="ttfamily">“, ”</tt> (see sample inputs for examples). Each
+    import statement is followed by at least one file name.</p>
+<h2>Output</h2>
+<p>If the code base has no cyclic dependencies, output
+    “<tt class="ttfamily">SHIP IT</tt>”. Otherwise, output a line
+    containing the names of files in a shortest cycle, in the order
+    of the cycle (i.e., the <span class="tex2jax_process">$i$</span>th file listed must import the
+    <span class="tex2jax_process">$(i+1)$</span>st file listed, and
+    the last file listed must import the first). If there are many
+    shortest cycles, any one will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+a b c d
+a 1
+import d, b, c
+b 2
+import d
+import c
+c 1
+import c
+d 0
+</pre>
+</td>
+<td>
+<pre>
+c
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+classa classb myfilec execd libe
+classa 2
+import classb
+import myfilec, libe
+classb 1
+import execd
+myfilec 1
+import libe
+execd 1
+import libe
+libe 0
+</pre>
+</td>
+<td>
+<pre>
+SHIP IT
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+classa classb myfilec execd libe
+classa 2
+import classb
+import myfilec, libe
+classb 1
+import execd
+myfilec 1
+import libe
+execd 1
+import libe, classa
+libe 0
+</pre>
+</td>
+<td>
+<pre>
+classa classb execd
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,71 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/spider/file/statement/en/img-0001.png" class="illustration" src="/problems/spider/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>In the <em>Mosquito</em> problem, you have seen that the
+    potential reproductive capabilities of insects are very high.
+    Fortunately for us humans, the insects also have natural
+    enemies that help to reduce their population. Spiders belong
+    among the best known insect predators, so there is no wonder we
+    included them in this problem set.
+    <p>Simon the Spider ate many insects this summer and got fat.
+    The threads of his web will soon be too thin to carry him and
+    so he needs to reinforce them. Since fat spiders are also lazy,
+    Simon wants to use as little material as possible — well, you
+    know that spiders have to produce the material for building
+    webs by themselves. Finally, he decided to reinforce only some
+    of the threads, but it is important that every node of his web
+    must be reachable over the reinforced links.</p>
+<p>Additionally, Simon plans to spend his free time on one of
+    the reinforced links and he wants this one link to be long.
+    Therefore, when calculating the total length of all reinforced
+    links, the length of the longest reinforced link will be
+    <em>subtracted</em> instead of added. Help Simon to decide
+    which links should be reinforced to have the lowest possible
+    total length under these circumstances.</p>
+<h2>Input</h2>
+<p>The input consists of descriptions of up to <span class="tex2jax_process">$35$</span> webs. The first line of each
+    description contains two numbers: the number <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 1\, 000$</span>) of nodes in the web and the number
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \le M \le 1\, 000\, 000$</span>) of the
+    links between pairs of nodes. Each of the following
+    <span class="tex2jax_process">$M$</span> lines describes one
+    link. The description of each link contains three positive
+    integers <span class="tex2jax_process">$u_ i, v_ i, \ell _
+    i$</span>, where <span class="tex2jax_process">$u_ i$</span>
+    and <span class="tex2jax_process">$v_ i$</span> (<span class="tex2jax_process">$1 \le u_ i, v_ i \le N$</span> and
+    <span class="tex2jax_process">$u_ i \neq v_ i$</span>) are the
+    two nodes connected by the link and <span class="tex2jax_process">$\ell _ i$</span> is its length (<span class="tex2jax_process">$1 \le \ell _ i \le 100\, 000$</span>).</p>
+<h2>Output</h2>
+<p>For each web, print a single line with the minimum
+    possible total length of reinforced links under all given
+    conditions. Remember that the total length is the sum of the
+    lengths of all reinforced links <em>minus</em> twice the length
+    of the longest reinforced link.</p>
+<p>If it is not possible to reach every node from every other
+    node through a sequence of links, then print <tt class="tt">disconnected</tt> instead of the cost.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+1 2 5
+4 5
+1 2 5
+2 3 6
+3 4 8
+3 4 4
+1 4 2
+</pre>
+</td>
+<td>
+<pre>disconnected
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

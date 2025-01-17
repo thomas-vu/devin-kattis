@@ -1,0 +1,131 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/veggjakalli/file/statement/en/img-0001.jpg" class="illustration" src="/problems/veggjakalli/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://pixabay.com/photos/wall-the-wall-stone-walls-3517692/">
+        pixabay.com</a>
+</div>
+</div>
+<p>Kalli is quite the carpenter and has a particular penchant
+    for walls. Today Kalli received a new project. An apartment is
+    being built, the plans for which are given by <span class="tex2jax_process">$N$</span> elements. Each element denotes a
+    cell which is either a wall, denoted by <i class="itshape">#</i>, or an open space, denoted by <i class="itshape">.</i>. The leftmost and rightmost cells are always
+    walls.</p>
+<p>Kalli was asked to break the minimum amount of walls such
+    that there would be a room of size exactly <span class="tex2jax_process">$M$</span>. That is to say that there are
+    exactly <span class="tex2jax_process">$M$</span> open cells
+    side by side, neither less than or more than <span class="tex2jax_process">$M$</span>. Kalli is not allowed to break the
+    leftmost or rightmost walls since then the apartment is open to
+    the elements.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq N \leq 5\cdot 10^5$</span>), the number of cells
+    and the size of the room Kalli should make.</p>
+<p>The next line contains a string with <span class="tex2jax_process">$N$</span> letters describing the
+    apartment.</p>
+<h2>Output</h2>
+<p>A single line containing the minimum number of walls Kalli
+    needs to break to satisfy the requirements should be printed.
+    If no such number exists the program should instead print
+    <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>28</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>32</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 3\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 2
+#-#-#-#
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 3
+#-###--#
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+#--#
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

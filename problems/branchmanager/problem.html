@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>You are managing a transportation network of one-way roads
+    between cities. People travel through the transportation
+    network one by one in order all starting from the same city,
+    and each person waits for the person before them to stop moving
+    before starting. The people follow a simple algorithm until
+    they reach their destination: they will look at all the
+    outgoing roads from the current city, and choose the one that
+    leads to the city with the smallest label. A person will stop
+    when they either reach their destination, or reach a city with
+    no outgoing roads. If at any point someone fails to reach their
+    destination, the rest of the people still waiting in line will
+    leave.</p>
+<p>Before each person enters the transportation network, you
+    can permanently close down any subset of roads to guarantee
+    they reach their destination. The roads that you choose to
+    close down will not be available for future people.</p>
+<p>There are <span class="tex2jax_process">$n$</span> cities,
+    labeled from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. There are
+    <span class="tex2jax_process">$n-1$</span> directed roads, and
+    each road will always be from a lower labeled city to a higher
+    labeled one. The network will form a rooted tree with city
+    <span class="tex2jax_process">$1$</span> as the root. There are
+    <span class="tex2jax_process">$m$</span> people that want to
+    travel through the network. Each person starts from city
+    <span class="tex2jax_process">$1$</span>, and has a specific
+    destination city <span class="tex2jax_process">$d$</span> in
+    mind. These people will line up in the given order. What is the
+    maximum number of people you can route correctly to their
+    destination if you close roads optimally?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \le n,m \le 2 \times 10^5$</span>), where <span class="tex2jax_process">$n$</span> is the number of cities and
+    <span class="tex2jax_process">$m$</span> is the number of
+    people.</p>
+<p>Each of the next <span class="tex2jax_process">$n-1$</span>
+    lines contains two integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \le a &lt; b \le n$</span>), denoting a directed road from city
+    <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$b$</span>. These roads will describe a
+    rooted tree with city <span class="tex2jax_process">$1$</span>
+    as the root.</p>
+<p>Each of the next <span class="tex2jax_process">$m$</span>
+    lines contains a single integer <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$2
+    \le d \le n$</span>), denoting the destination city of the next
+    person in line.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the maximum number of
+    people you can route to the correct destination.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 5
+1 2
+4 8
+4 6
+1 4
+2 5
+4 7
+2 3
+5
+2
+6
+4
+8
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2
+1 3
+1 4
+3
+2
+3
+4
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

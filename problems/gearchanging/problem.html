@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Lucy is making her road bike ready for the season. All parts
+    have been checked for wear and tear and washed clean and she is
+    ready to put the beauty back together again. There is only one
+    thing troubling her. During the winter she has been to several
+    motivational talks by previous professional cyclists. They have
+    all talked about the importance of correct cadence while
+    cycling. The cadence is the frequency your feet are pedaling at
+    when you are cycling. Lucy is now wondering if she should
+    change her gears setup before she reassembles the bike and goes
+    on her first ride for the year.</p>
+<p>Bike gears typically consist of a set of different-sized
+    gears on the crank (the thing connected to the pedals) and a
+    set of different-sized gears on the back wheel. These are
+    connected by the chain to drive the bike forward. Can you help
+    her figure out if she can keep her current setup and still
+    change to all gears without it affecting her cadence too much?
+    Specifically she does not want her cadence to be increased by
+    more than <span class="tex2jax_process">$P$</span>% when
+    changing to the next lighter gear. We assume that the bicycle
+    will continue at the same speed immediately after the gear
+    change.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of three integers
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$P$</span> representing the number of gears
+    on the crank, the numbers of gears on the back wheel, and the
+    maximum cadence change in percentage Lucy will tolerate when
+    changing gears.<br/>
+    Then follows a line with <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$C_ i$</span> each representing the number of
+    teeth on each of the gears on the crank.<br/>
+    Then follows a line with <span class="tex2jax_process">$M$</span> integers <span class="tex2jax_process">$D_ j$</span> each representing the number of
+    teeth on each of the gears on the back wheel.<br/></p>
+<h2>Output</h2>
+<p>Output a single line with the text <tt class="ttfamily">Ride
+    on!</tt> if Lucy can change through all the gears from heaviest
+    to lightest in her current setup and <tt class="ttfamily">Time
+    to change gears!</tt> if she cannot.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N, M \leq
+        100$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq P \leq 1\,
+        000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$3 \leq C, D \leq 100\,
+        000$</span></p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 11 15
+50 34
+11 12 13 14 16 18 20 22 25 28 32
+</pre>
+</td>
+<td>
+<pre>Ride on!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 8 10
+30 39 48
+10 13 16 22 25 28 32 35
+</pre>
+</td>
+<td>
+<pre>Time to change gears!
+</pre>
+</td>
+</tr>
+</table>
+</div>

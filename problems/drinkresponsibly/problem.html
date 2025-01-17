@@ -1,0 +1,121 @@
+<div class="problembody">
+<p>The University of Lagado is organising events for the
+    upcoming Fresher’s week and has been told — much to the
+    surprise of its staff — that some of the undergraduates may
+    enjoy a beer tasting. While sourcing a wide variety of drinks
+    for the students to taste, the university realised that in the
+    interests of safety there should be a limit on the alcohol
+    consumption of any student, enforced by a strict limit on the
+    amount any individual is allowed to spend.</p>
+<p>In common with many popular establishments, the drinks with
+    varying strengths are served in varying amounts: Either a
+    litre, a half litre or a third of a litre to limit possible
+    intoxication. <span class="tex2jax_process">$1\% $</span> of a
+    litre at <span class="tex2jax_process">$100\% $</span> strength
+    equals one unit of alcohol.</p>
+<p>The students are looking forward to the event, but in order
+    to make the most of their money and still be bright-eyed and
+    bushy tailed for the first week of morning lectures, they don’t
+    wish to get too drunk. How can the students spend all their
+    money and consume in full their self-imposed alcohol limit for
+    the night?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing three numbers:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$m$</span>
+            (<span class="tex2jax_process">$0.00 \le m \le
+            10.00$</span>), the amount of money they can spend to
+            two decimal places;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$u$</span>
+            (<span class="tex2jax_process">$0.0 \le u \le
+            20.0$</span>), the number of units they aim to drink to
+            one decimal place;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$d$</span>
+            (<span class="tex2jax_process">$1 \le d \le 8$</span>),
+            the number of different drinks available.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Another <span class="tex2jax_process">$d$</span> lines,
+        each containing:</p>
+<ul class="itemize">
+<li>
+<p>up to <span class="tex2jax_process">$20$</span>
+            lowercase latin letters (the name of the drink);</p>
+</li>
+<li>
+<p>an integer between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span> (its strength as a
+            percentage);</p>
+</li>
+<li>
+<p>its size (either ‘<span class="tex2jax_process">$1/1$</span>’ for a litre,
+            ‘<span class="tex2jax_process">$1/2$</span>’ for a half
+            or ‘<span class="tex2jax_process">$1/3$</span>’ for a
+            third);</p>
+</li>
+<li>
+<p>a real number to two decimal places; its cost.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Name, strength, price and cost will be separated by
+    spaces.</p>
+<h2>Output</h2>
+<p>If the students’ aims are possible, write one or more lines,
+    each listing the name of the drink purchased followed by the
+    positive integer count of how many drinks of that type were
+    bought. If there are several solutions, output any.</p>
+<p>Otherwise, output a single line containing the word
+    <tt class="ttfamily">IMPOSSIBLE</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10.00 9.0 2
+fire 2 1/1 4.00
+water 10 1/2 2.00
+</pre>
+</td>
+<td>
+<pre>
+fire 2
+water 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2.00 3.0 3
+firewater 1 1/1 1.00
+windwater 1 1/1 1.00
+earthwater 1 1/1 1.00
+</pre>
+</td>
+<td>
+<pre>
+IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

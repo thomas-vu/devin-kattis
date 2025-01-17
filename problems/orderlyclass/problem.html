@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>Ms. Thomas is managing her class of <span class="tex2jax_process">$n$</span> students.</p>
+<p>She placed all her students in a line, and gave the
+    <span class="tex2jax_process">$i$</span>-th student from the
+    left a card with the letter <span class="tex2jax_process">$a_
+    i$</span> written on it.</p>
+<p>She would now like to rearrange the students so that the
+    <span class="tex2jax_process">$i$</span>-th student from the
+    left has a card with the letter <span class="tex2jax_process">$b_ i$</span> written on it.</p>
+<p>To do this, she will choose some consecutive group of
+    students, and reverse their order. Students will hold on to
+    their original cards during this process.</p>
+<p>She’s now wondering, what is the number of valid ways to do
+    this? (It may be impossible, in which case, the answer is
+    zero).</p>
+<p>With sequences <span class="tex2jax_process">$abba$</span>
+    and <span class="tex2jax_process">$aabb$</span>, Ms. Thomas can
+    choose the group <span class="tex2jax_process">$a(bba)$</span>.
+    With sequences <span class="tex2jax_process">$caxcab$</span>
+    and <span class="tex2jax_process">$cacxab$</span>, Ms. Thomas
+    can choose <span class="tex2jax_process">$ca(xc)ab$</span> or
+    <span class="tex2jax_process">$c(axca)b$</span>. With sequences
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$z$</span>, there are clearly no
+    solutions.</p>
+<h2>Input</h2>
+<p>The input is two lines of lowercase letters, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. The <span class="tex2jax_process">$i$</span>-th character of <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> represent <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$b_ i$</span> respectively. It is guaranteed
+    that <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> have the same positive length, and
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are not identical. The common
+    length is allowed to be as large as <span class="tex2jax_process">$100\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a single integer, the number of
+    ways Ms. Thomas can reverse some consecutive group of
+    <span class="tex2jax_process">$A$</span> to form the line
+    specified by string <span class="tex2jax_process">$B$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+abba
+aabb
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+caxcab
+cacxab
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+a
+z
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

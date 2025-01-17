@@ -1,0 +1,112 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/sottkvi/file/statement/en/img-0001.jpg" class="illustration" src="/problems/sottkvi/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flickr.com/photos/126462061@N07/50514734732/in/photolist-2jXPdJh-Jmfs7N-25dKjRM-CniKWn-bmhQ9h-paewAz-8K1F5u-4Gjedo-22yqcqN-83SLWN-6H3ftz-4WBV7Q-4WBUad-XMeG6b-QiJBXJ-6QkN6Q-5m5bop-KpaL-5aysLF-4WxCg2-HkGzJH-59KEwV-7gG9yW-4WBU7N-XfjZU7-2iXdqiC-2fX1tuK-2iGu99G-B4fpYi-9Sdqy-2c2RGD3-atQPjg-RLbFwR-68iyxF-XRktsi-rXnbt-7vzqiw-QeCTs8-7C6Qdi-XfnSky-GFufiv-cCz2xo-CnaT5N-5ZKX8x-8pkAqR-x4uumN-2jyEtnS-o43p9g-ptSW2j-7sziXU">
+        flickr.com</a>
+</div>
+</div>
+<p>Hannes’s birthday is in <span class="tex2jax_process">$k$</span> days but unfortunately all his
+    friends had to go into quarantine. Hannes wants to know how
+    many of his friends will make it to the party and looks to you
+    for help.</p>
+<p>Given when Hannes’s friends went into quarantine, print how
+    many of his friends will make it to the party.</p>
+<p>Note that an individual has to be quarantined for
+    <span class="tex2jax_process">$14$</span> days before leaving
+    quarantine.</p>
+<h2>Input</h2>
+<p>The first line in the input contains three integers
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^3)$</span>, the number of
+    friends Hannes has, <span class="tex2jax_process">$k$</span>
+    (<span class="tex2jax_process">$1 \leq k \leq 10^3)$</span>,
+    the number of days until Hannes’s birthday and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \leq d \leq 10^3)$</span>, what day it is today.</p>
+<p>Then there are <span class="tex2jax_process">$n$</span>
+    lines, one for each friend, where the <span class="tex2jax_process">$i$</span>-th line contains one integer
+    <span class="tex2jax_process">$d_ i$</span> (<span class="tex2jax_process">$1 \leq d_ i \leq d$</span>), the day when
+    the <span class="tex2jax_process">$i$</span>-th friend went
+    into quarantine.</p>
+<h2>Output</h2>
+<p>Print how many of Hannes’s friends will make it to the
+    party. If a friend is freed from quarantine on the day of the
+    party, then that friend will make it to the party.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 14
+1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 14 1
+1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 5 12
+1
+3
+5
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

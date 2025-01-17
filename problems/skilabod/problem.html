@@ -1,0 +1,132 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/skilabod/file/statement/en/img-0001.png" class="illustration" src="/problems/skilabod/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from Pixabay
+      </div>
+</div>You are located in the exact center of the universe at
+    coordinates <span class="tex2jax_process">$(0, 0)$</span> and
+    want to send a message to every person in the world, and as
+    everyone knows there are only a million people in the world.
+    Unfortunately some transmitters don’t have a very good range.
+    Luckily you have a bunch of different transmitters of different
+    power levels. A transmitter reaches <span class="tex2jax_process">$d$</span> units away if its power is
+    <span class="tex2jax_process">$d$</span>. That is to say, if
+    the Euclidean distance between you and some other person is not
+    greater than <span class="tex2jax_process">$d$</span>, then
+    that person gets your message. With the help of The Department
+    of National Security you know exactly where everyone is located
+    and now you want to know for each transmitter how many people
+    would get your message if you used that transmitter.
+    <h2>Input</h2>
+<p>The input begins with a line with a single integer
+    <span class="tex2jax_process">$N$</span>. Next there are
+    <span class="tex2jax_process">$N$</span> lines with two
+    integers each, <span class="tex2jax_process">$x_i$</span> and
+    <span class="tex2jax_process">$y_i$</span>, where the values in
+    line <span class="tex2jax_process">$i$</span> denotes the
+    location of person <span class="tex2jax_process">$i$</span>,
+    <span class="tex2jax_process">$|x_i|, |y_i| \leq 10^9$</span>.
+    Then there is a line with a single integer <span class="tex2jax_process">$Q$</span>. Finally there are <span class="tex2jax_process">$Q$</span> lines, each with one integer
+    <span class="tex2jax_process">$d_i$</span> where <span class="tex2jax_process">$d_i$</span> is the power of transmitter
+    <span class="tex2jax_process">$i$</span>, <span class="tex2jax_process">$0 \leq d_i \leq 10^9$</span>.</p>
+<h2>Output</h2>
+<p><span class="tex2jax_process">$Q$</span> lines with one
+    integer each, the value in line <span class="tex2jax_process">$i$</span> giving how many people would
+    receive the message if transmitter <span class="tex2jax_process">$i$</span> were used.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N, Q \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1000 &lt; N, Q \leq
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+1 1
+2 2
+3 2
+2 3
+4 6
+3
+1
+2
+3
+</pre>
+</td>
+<td>
+<pre>0
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+-1 10
+45 29
+-499 -142
+599 -10
+5
+1
+29
+142
+599
+1000
+</pre>
+</td>
+<td>
+<pre>0
+1
+2
+3
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

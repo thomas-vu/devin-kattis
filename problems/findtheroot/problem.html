@@ -1,0 +1,79 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/findtheroot/file/statement/en/img-0001.png" class="illustration" src="/problems/findtheroot/file/statement/en/img-0001.png"/>
+<div class="description">
+        Full Binary Tree Example
+      </div>
+</div>
+<p>There is a full binary tree <span class="tex2jax_process">$T$</span> of size <span class="tex2jax_process">$n &gt; 1$</span>. Recall that a full binary
+    tree is a binary tree in which every node has either
+    <span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$2$</span> children.</p>
+<p>Let <span class="tex2jax_process">$r$</span> denote the root
+    of <span class="tex2jax_process">$T$</span>. Note that
+    <span class="tex2jax_process">$T$</span> qualifies as a full
+    binary tree if and only if it is rooted at <span class="tex2jax_process">$r$</span>. Let <span class="tex2jax_process">$f$</span> be a function which takes a node
+    <span class="tex2jax_process">$u$</span> and returns the median
+    of the sizes of the subtrees of <span class="tex2jax_process">$u$</span> if <span class="tex2jax_process">$T$</span> were rooted at <span class="tex2jax_process">$u$</span> instead. Recall that the median of
+    a list of even size is the mean of the 2 middle elements.</p>
+<p>For example, in the illustrated example, <span class="tex2jax_process">$r = 1$</span>. <span class="tex2jax_process">$f(1)=3$</span>, since <span class="tex2jax_process">$1$</span> has two subtrees of sizes
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$5$</span>, the median of which is
+    <span class="tex2jax_process">$3$</span>. <span class="tex2jax_process">$f(5)=1$</span>, since the tree rooted at
+    node <span class="tex2jax_process">$5$</span> has 3 subtrees,
+    of sizes <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$1$</span>, and <span class="tex2jax_process">$4$</span>.</p>
+<p>A subset <span class="tex2jax_process">$S = \left\{ u_1,
+    u_2, \dots , u_ m \right\} $</span> of the nodes of
+    <span class="tex2jax_process">$T$</span> is chosen with
+    <span class="tex2jax_process">$n / 2 &lt; m \leq n$</span>. You
+    are given the list <span class="tex2jax_process">$[f(u_1),
+    f(u_2), \dots , f(u_ m)]$</span> and you have to determine
+    whether <span class="tex2jax_process">$r$</span> is in
+    <span class="tex2jax_process">$S$</span>.</p>
+<h2>Input</h2>
+<p>The first line consists of an integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \leq m \leq 2 \cdot 10^5$</span>), the size of <span class="tex2jax_process">$S$</span>. The second line consists of
+    <span class="tex2jax_process">$m$</span> integers, the outputs
+    of <span class="tex2jax_process">$f$</span> on each node in
+    <span class="tex2jax_process">$S$</span>. It is guaranteed that
+    a valid full binary tree <span class="tex2jax_process">$T$</span> was used in generating test data
+    for this problem.</p>
+<h2>Output</h2>
+<p>Print “yes” if <span class="tex2jax_process">$r$</span> is
+    in <span class="tex2jax_process">$S$</span> and “no” if
+    <span class="tex2jax_process">$r$</span> is not in <span class="tex2jax_process">$S$</span>. If you cannot determine whether
+    <span class="tex2jax_process">$r$</span> is in <span class="tex2jax_process">$S$</span> from the given information, print
+    “impossible”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 2
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 6 6
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

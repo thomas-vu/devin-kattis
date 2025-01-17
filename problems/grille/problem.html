@@ -1,0 +1,115 @@
+<div class="problembody">
+<p>The <em>grille cipher </em> is a technique that dates back
+    to 1550 when it was first described by Girolamo Cardano. The
+    version we’ll be dealing with comes from the late 1800’s and
+    works as follows. The message to be encoded is written on an
+    <span class="tex2jax_process">$n \times n$</span> grid
+    row-wise, top to bottom, and is overlaid with a card with a set
+    of holes punched out of it (this is the grille).</p>
+<p>The message is encrypted by writing down the letters that
+    appear in the holes, row by row, then rotating the grille 90
+    degrees clockwise, writing the new letters that appear, and
+    repeating this process two more times. Of course the holes in
+    the grille must be chosen so that every letter in the message
+    will eventually appear in a hole (this is actually not that
+    hard to arrange).</p>
+<p>An example is shown below, where the message “Send more
+    monkeys” is encrypted as “noeesrksdmnyemoj”, after adding a
+    random letter to fill out the grid (this example corresponds to
+    the first sample input.)</p>
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{grille.png}" src="/problems/grille/file/statement/en/img-0001.png" style="width:80.00%"/><br/>
+      Figure I.1
+    </center>
+<p>If the message is larger than the <span class="tex2jax_process">$n \times n$</span> grid, then the first
+    <span class="tex2jax_process">$n^2$</span> letters are written
+    in the grid and encrypted, then the next <span class="tex2jax_process">$n^2$</span> are encrypted, and so on, always
+    filling the last grid with random letters if needed. Here, we
+    will only be dealing with messages of length <span class="tex2jax_process">$n^2$</span>.</p>
+<p>Your job, should you choose to accept it, is to take an
+    encrypted message and the corresponding grille and decrypt it.
+    And we’ll add one additional twist: the grille given might be
+    invalid, i.e., the holes used do not allow every location in
+    the grid to be used during the encryption process. If this is
+    the case, then you must indicate that you can’t decrypt the
+    message.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing a positive integer
+    <span class="tex2jax_process">$n\le 10$</span> indicating the
+    size of the grid and grille. The next <span class="tex2jax_process">$n$</span> lines will specify the grille,
+    using ‘.’ for a hole and ‘X’ for a non-hole. Following this
+    will be a line containing the encrypted message, consisting
+    solely of lowercase alphabetic characters. The number of
+    characters in this line will always be <span class="tex2jax_process">$n^2$</span>.<br/></p>
+<h2>Output</h2>
+<p>Output the decrypted text as a single string with no spaces,
+    or the phrase “<tt class="ttfamily">invalid grille</tt>” if the
+    grille is invalid.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+XX.X
+X.X.
+XXXX
+.XXX
+noeesrksdmnyemoj
+</pre>
+</td>
+<td>
+<pre>
+sendmoremonkeysj
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+.XX.
+XXXX
+XXXX
+.XX.
+abcdefghijklmnop
+</pre>
+</td>
+<td>
+<pre>
+invalid grille
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+X.
+XX
+aybb
+</pre>
+</td>
+<td>
+<pre>
+baby
+</pre>
+</td>
+</tr>
+</table>
+</div>

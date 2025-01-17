@@ -1,0 +1,331 @@
+<div class="problembody">
+<p>Semantic analysis is one of the intermediate steps a
+    compiler takes when compiling a program. In this problem, you
+    will be implementing some of the checks done by a compiler
+    during semantic analysis.</p>
+<p>When a variable is declared, a compiler has to check that
+    there is no other variable already declared with the same name,
+    in the same block. A <i class="itshape">block</i> is the list
+    of statements enclosed within a pair of braces {}.</p>
+<p>Blocks can contain other blocks, and you can declare 2
+    variables with the same name if one declaration is in the outer
+    block and another is in the inner block.</p>
+<p>For example, the first code block is valid, while the second
+    one is not.</p>
+<pre>
+{
+    int a;
+    int b;
+    {
+        float a;
+    }
+}
+</pre>
+<pre>
+{
+    int a;
+    int b;
+    float a; // Multiple declaration
+}
+</pre>
+<p>At various points in the code, the compiler needs to check
+    the data type of a variable. To do that, it first checks among
+    the variables declared in the current block. If the variable
+    was declared in the current block, the compiler can determine
+    its type, and the algorithm terminates. If the variable is not
+    found in the current block, it goes up one level to the parent
+    block and recursively repeats the process, until either a match
+    is found or the compiler reaches the outermost block. If no
+    match is found even in the outermost block, that means the
+    variable has not been declared.</p>
+<p>The input file represents a simplified program code. Your
+    task is to:</p>
+<ol class="enumerate">
+<li>
+<p>Check that all variable declarations are valid.</p>
+</li>
+<li>
+<p>Print the type of a variable when queried.</p>
+</li>
+</ol>
+<p>The following sections will describe this in more
+    detail.</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$1 \le N \le 200\, 000$</span>, the number of
+    lines in the program.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines can
+    be of the following 4 types:</p>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">{</b> - Represents entering a new
+        block of code.</p>
+</li>
+<li>
+<p><b class="bfseries">}</b> - Represents exiting the
+        current block of code.</p>
+</li>
+<li>
+<p><b class="bfseries">DECLARE &lt;identifier&gt;
+        &lt;type&gt;</b> - Represents the declaration of a variable
+        with name <b class="bfseries">&lt;identifier&gt;</b> and
+        data type <b class="bfseries">&lt;type&gt;</b>.</p>
+</li>
+<li>
+<p><b class="bfseries">TYPEOF &lt;identifier&gt;</b> -
+        Represents a query to print the type of the variable with
+        name <b class="bfseries">&lt;identifier&gt;</b>.</p>
+</li>
+</ol>
+<p>All variable identifiers and types are strings consisting of
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$6$</span> lowercase letters.
+    <b class="bfseries">Note</b>: The types can be any string and
+    are not restricted to the common data types in programming
+    languages.</p>
+<p>It is guaranteed that the braces are properly matched.</p>
+<h2>Output</h2>
+<p>For each <b class="bfseries">DECLARE</b> line, if the
+    declaration is valid, don’t print anything. If there already
+    exists a variable declared with the same name in the same
+    block, print the string <b class="bfseries">"MULTIPLE
+    DECLARATION"</b> and exit the program <b class="bfseries">without printing anything else</b>.</p>
+<p>For each <b class="bfseries">TYPEOF</b> line, print the data
+    type of the variable followed by a newline. Follow the rules
+    described above in the case of nested blocks. If the variable
+    has not been declared, print the string <b class="bfseries">"UNDECLARED"</b> followed by a newline.</p>
+<h2>Example</h2>
+<p>The following code snippet written in C syntax represents
+    sample input <span class="tex2jax_process">$4$</span>. The
+    <b class="bfseries">TYPEOF</b> queries along with the expected
+    outputs are indicated with comments.</p>
+<pre>
+int apple;
+double banana;
+{
+    float apple;
+    char orange;
+    // TYPEOF apple -&gt; float
+    // TYPEOF banana -&gt; double
+    // TYPEOF orange -&gt; char
+}
+// TYPEOF apple -&gt; int
+// TYPEOF banana -&gt; double
+// TYPEOF orange -&gt; UNDECLARED
+char orange;
+// TYPEOF orange -&gt; char
+char banana; // MULTIPLE DECLARATION
+// TYPEOF banana -&gt; STATEMENT NOT REACHED
+</pre>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \le 1\, 000$</span>. There are no
+        statements of type <span class="tex2jax_process">$1$</span>
+        or <span class="tex2jax_process">$2$</span> in the input.
+        That is, there are no nested blocks.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \le 200\, 000$</span>. There are no
+        statements of type <span class="tex2jax_process">$1$</span>
+        or <span class="tex2jax_process">$2$</span> in the input.
+        That is, there are no nested blocks.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \le 200\, 000$</span>. The level of
+        nesting of blocks is at most <span class="tex2jax_process">$10$</span> levels deep.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): No additional
+        constraint.</p>
+</li>
+</ol>
+<p><b class="bfseries">Note:</b> Sample Inputs <span class="tex2jax_process">$4$</span> - <span class="tex2jax_process">$6$</span> correspond to Subtask <span class="tex2jax_process">$3$</span>. You can ignore them if you are
+    only attempting Subtask <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span>.</p>
+<h2>Warning</h2>
+<p><b class="bfseries">The input files are large. Please use
+    fast I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8
+TYPEOF a
+TYPEOF b
+DECLARE a int
+TYPEOF a
+TYPEOF b
+DECLARE b float
+TYPEOF a
+TYPEOF b
+</pre>
+</td>
+<td>
+<pre>UNDECLARED
+UNDECLARED
+int
+UNDECLARED
+int
+float
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+DECLARE a int
+DECLARE a float
+TYPEOF a
+DECLARE a double
+TYPEOF a
+</pre>
+</td>
+<td>
+<pre>MULTIPLE DECLARATION
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+DECLARE aaaa bbbb
+DECLARE cccc dddd
+TYPEOF aaaa
+TYPEOF bbbb
+TYPEOF cccc
+TYPEOF dddd
+</pre>
+</td>
+<td>
+<pre>bbbb
+UNDECLARED
+dddd
+UNDECLARED
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>16
+DECLARE apple int
+DECLARE banana double
+{
+DECLARE apple float
+DECLARE orange char
+TYPEOF apple
+TYPEOF banana
+TYPEOF orange
+}
+TYPEOF apple
+TYPEOF banana
+TYPEOF orange
+DECLARE orange char
+TYPEOF orange
+DECLARE banana char
+TYPEOF banana
+</pre>
+</td>
+<td>
+<pre>float
+double
+char
+int
+double
+UNDECLARED
+char
+MULTIPLE DECLARATION
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>18
+{
+DECLARE x a
+{
+DECLARE x b
+{
+{
+DECLARE x c
+{
+TYPEOF x
+}
+TYPEOF x
+}
+}
+TYPEOF x
+}
+TYPEOF x
+}
+TYPEOF x
+</pre>
+</td>
+<td>
+<pre>c
+c
+b
+a
+UNDECLARED
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>12
+{
+DECLARE x abc
+TYPEOF x
+}
+{
+TYPEOF x
+DECLARE x abc
+DECLARE y abc
+TYPEOF x
+TYPEOF y
+DECLARE y abc
+}
+</pre>
+</td>
+<td>
+<pre>abc
+UNDECLARED
+abc
+abc
+MULTIPLE DECLARATION
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,115 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/kinahvisl/file/statement/en/img-0001.jpg" class="illustration" src="/problems/kinahvisl/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.pxfuel.com/en/free-photo-eukij">pxfuel.com</a>
+</div>
+</div>
+<p>Bartosz and his friends are playing a whispering game at
+    their preschool.</p>
+<p>The whispering games plays out with <span class="tex2jax_process">$N$</span> people sitting in a circle. Some
+    particular person (lets number them <span class="tex2jax_process">$1$</span>) thinks of a word and whispers it
+    to the person on their left, person <span class="tex2jax_process">$2$</span>. Person <span class="tex2jax_process">$2$</span> then whispers the word to the
+    person on their left, person <span class="tex2jax_process">$3$</span>. This continues until the person
+    to the right of person <span class="tex2jax_process">$1$</span>, let’s number them <span class="tex2jax_process">$N$</span>, has a word whispered to them. At
+    that point person <span class="tex2jax_process">$N$</span>
+    announces out loud what they heard and person <span class="tex2jax_process">$1$</span> tells everyone what word they
+    thought of in the beginning.</p>
+<p>In this preschool all the kids hear the word whispered to
+    them correctly, aside from a single letter, which gets
+    changed.</p>
+<h2>Input</h2>
+<p>The first line of the input is the word person <span class="tex2jax_process">$1$</span> thought of, referred to as the
+    initial word. On the second line is the word that person
+    <span class="tex2jax_process">$N$</span> heard, referred to as
+    the final word. The initial and final words are the same
+    length. Only English lower case letters are used.</p>
+<h2>Úttak</h2>
+<p>One line containing the minimum possible value of
+    <span class="tex2jax_process">$N$</span>. That is to say, the
+    lowest number of kids that would be needed for the initial word
+    to turn into the final word by playing the whispering game.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The initial and final words are equal</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The length of the initial and final words are both
+          <span class="tex2jax_process">$\leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>70</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>The length of the initial and final words are both
+          <span class="tex2jax_process">$\leq 10^6$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>tommi
+dommi
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>pogger
+pepega
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

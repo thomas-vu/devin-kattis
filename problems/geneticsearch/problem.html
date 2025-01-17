@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>Technology has greatly changed the field of biology in the
+    last decade, since biological information can be digitized and
+    analyzed by computer. One of the most basic analysis tasks is
+    counting the number of occurrences (or near-occurrences) of a
+    search string <span class="tex2jax_process">$S$</span> inside
+    of another string <span class="tex2jax_process">$L$</span> that
+    is at least as long as <span class="tex2jax_process">$S$</span>.</p>
+<p>For this problem, you are given pairs of strings
+    <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$L$</span>. Both strings contain only the
+    uppercase characters A, G, C, and T. For each of the following
+    types of search strings, count the number of times that type
+    occurs as an exact substring of <span class="tex2jax_process">$L$</span>:</p>
+<ul class="itemize">
+<li>
+<p>Type 1: <span class="tex2jax_process">$S$</span>,
+        without any changes.</p>
+</li>
+<li>
+<p>Type 2: All unique strings that can be made by deleting
+        one character from <span class="tex2jax_process">$S$</span>
+        (for example, AGC can become AG, AC, or GC).</p>
+</li>
+<li>
+<p>Type 3: All unique strings that can be made by inserting
+        one character in <span class="tex2jax_process">$S$</span>
+        (for example, AG can become any of the following: AAG, GAG,
+        CAG, TAG, AGG, ACG, ATG, AGA, AGC, or AGT).</p>
+</li>
+</ul>
+<p>If two or more different modifications of <span class="tex2jax_process">$S$</span> result in the same string, count
+    only the occurrences of that string once.</p>
+<h2>Input</h2>
+<p>The input contains up to <span class="tex2jax_process">$250$</span> test cases, each of which is a
+    line containing strings <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$L$</span>, separated by a single space. The
+    constraints are <span class="tex2jax_process">$2 \le |S| \le
+    |L| \le 100$</span>. Each string consists only of the
+    characters A, G, C, and T. The last test case is followed by a
+    line containing a single zero.</p>
+<h2>Output</h2>
+<p>For each test case, output the number of occurrences of Type
+    1, then Type 2, then Type 3.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+AGCT AGCTAGCT
+AAA AAAAAAAAAA
+AGC TTTTGT
+0
+</pre>
+</td>
+<td>
+<pre>
+2 4 2
+8 9 7
+0 0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>Given a sequence of positive integers, count all contiguous
+    subsequences (sometimes called <em>substrings</em>, in contrast
+    to <em>subsequences</em>, which may leave out elements) the sum
+    of which is divisible by a given number. These subsequences may
+    overlap. For example, the sequence (see sample
+    input)</p><span class="tex2jax_process">\[ 2, 1, 2, 1, 1, 2, 1,
+    2 \]</span>
+<p>contains six contiguous subsequences the sum of which is
+    divisible by four: the first to eighth number, the second to
+    fourth number, the second to seventh number, the third to fifth
+    number, the fourth to sixth number, and the fifth to seventh
+    number.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of an integer
+    <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(1 \leq c \leq 200)$</span>, the number of
+    test cases. Then follow two lines per test case.</p>
+<p>Each test case starts with a line consisting of two integers
+    <span class="tex2jax_process">$d$</span> <span class="tex2jax_process">$(1 \leq d \leq 1\, 000\, 000)$</span> and
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \leq n \leq 50\, 000)$</span>, the
+    divisor of the sum of the subsequences and the length of the
+    sequence, respectively. The second line of a test case contains
+    the elements of the sequence, which are integers between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000\, 000\, 000$</span>,
+    inclusively.</p>
+<h2>Output</h2>
+<p>For each test case, print a single line consisting of a
+    single integer, the number of contiguous subsequences the sum
+    of which is divisible by <span class="tex2jax_process">$d$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+7 3
+1 2 3
+4 8
+2 1 2 1 1 2 1 2
+</pre>
+</td>
+<td>
+<pre>
+0
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

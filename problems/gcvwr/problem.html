@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>You are looking to buy a new camper, but you are a bit
+    concerned that your truck might not be able to safely pull the
+    camper you are currently interested in purchasing. So you do
+    some calculations.</p>
+<p>First, you look up your truck’s Gross Combined Vehicle
+    Weight Rating (GCVWR); the maximum total weight it can haul
+    including the weight of the truck itself. You also have a list
+    of items you would want to bring on a camping trip.</p>
+<p>But wait! You want a bit of wiggle room too in case you want
+    to bring any extra items with you. So you want to reserve a bit
+    of towing capacity, after factoring in the weight of the
+    vehicle. That is, the total weight of the trailer and goods you
+    want to bring should not exceed <span class="tex2jax_process">$90\% $</span> of the towing capacity
+    remaining after factoring in the truck.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$G$</span> (<span class="tex2jax_process">$5\, 000 \leq G \leq 25\, 000)$</span>,
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$3\, 000 \leq T \leq 12\, 000$</span>), and
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 100$</span>). Here,
+    <span class="tex2jax_process">$G$</span> is the GCVWR in lbs,
+    <span class="tex2jax_process">$T$</span> is the weight of your
+    truck in lbs, and <span class="tex2jax_process">$N$</span> is
+    the number of items you want to bring camping. You are
+    guaranteed both <span class="tex2jax_process">$G$</span> and
+    <span class="tex2jax_process">$T$</span> are multiples of
+    <span class="tex2jax_process">$10$</span>.</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$w_1, \ldots , w_ N$</span>. For
+    each <span class="tex2jax_process">$1 \leq i \leq N$</span>,
+    <span class="tex2jax_process">$w_ i$</span> (<span class="tex2jax_process">$1 \leq w_ i \leq 500$</span>) is the weight
+    (in lbs) of the <span class="tex2jax_process">$i$</span>’th
+    item you want to bring on the trip.</p>
+<p>You are further guaranteed <span class="tex2jax_process">$T
+    \leq G - 2\, 000$</span> and that the total weight of all items
+    is at most <span class="tex2jax_process">$90\% $</span> of the
+    towing capacity that remains after subtracting the weight of
+    the truck from the GCVWR.</p>
+<h2>Output</h2>
+<p>Output a single line containing a single integer that is the
+    maximum possible weight of a trailer you can pull subject to
+    the restrictions described above.</p>
+<h2>Explanation of First Sample</h2>
+<p>The remaining towing capacity after subtracting out the
+    weight of the truck is <span class="tex2jax_process">$G-T = 9\,
+    000$</span> lbs, so the weight of the items plus the weight of
+    the trailer you want to purchase should not exceed <span class="tex2jax_process">$90\% $</span> of this, namely <span class="tex2jax_process">$8\, 100$</span> lbs.</p>
+<p>The total weight of items you want to bring is <span class="tex2jax_process">$1\, 205$</span>, so the weight of the
+    trailer you want to purchase should not exceed <span class="tex2jax_process">$6\, 895$</span> lbs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>12000 3000 5
+400 25 200 80 500
+</pre>
+</td>
+<td>
+<pre>6895
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10000 4000 7
+110 10 20 10 5 3 5
+</pre>
+</td>
+<td>
+<pre>5237
+</pre>
+</td>
+</tr>
+</table>
+</div>

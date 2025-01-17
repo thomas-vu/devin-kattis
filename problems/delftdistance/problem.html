@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/delftdistance/file/statement/en/img-0001.jpg" class="illustration" src="/problems/delftdistance/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Delft water tower.<br/>
+        CC BY-SA 3.0 by Michiel1972 on <a href="https://commons.wikimedia.org/wiki/File:Delft_-_Watertoren_(2010).jpg">
+        Wikipedia</a>
+</div>
+</div>You are currently in your hotel at the north-west corner
+    of Delft, and want to go to the contest site at the university
+    in the south-east corner of Delft. To get there, you have to go
+    right through the historical centre of the city. Like
+    Manhattan, the city consists of a grid of <span class="tex2jax_process">$h \times w$</span> buildings. But unlike
+    Manhattan, the city does not only contain square residential
+    buildings but also some round medieval towers. All the square
+    buildings are axis aligned with a side length of <span class="tex2jax_process">$10~ \text {m}$</span> and all round towers
+    have a diameter of <span class="tex2jax_process">$10~ \text
+    {m}$</span>. There is just enough space for a small alley of
+    negligible width between two neighbouring buildings.
+    <p>Since you are already late for the contest start, you need
+    to find a shortest path from your hotel to the contest site.
+    Fortunately, you have a map of the city. See Figure 1 for
+    an example.</p>
+<div class="figure" id="fig:d">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{sample}" src="/problems/delftdistance/file/statement/en/img-0002.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1, with a
+          shortest path shown in red.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$1 \leq h,w \leq 700$</span>), the number
+        of rows and the number of columns of buildings shown on the
+        map of the city.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$h$</span> lines, each
+        with <span class="tex2jax_process">$w$</span> characters
+        which are either ‘<tt class="ttfamily">O</tt>’ (for round
+        towers) or ‘<tt class="ttfamily">X</tt>’ (for square
+        buildings) describing the shapes of the buildings.</p>
+</li>
+</ul>
+<p>The map is oriented with the north side up.</p>
+<h2>Output</h2>
+<p>Output the length of a shortest path from the north-west
+    corner to the south-east corner of Delft in metres. Your answer
+    may have a relative or absolute error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+XOOXO
+OXOXO
+XXXXO
+</pre>
+</td>
+<td>
+<pre>71.4159265359
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 4
+XOOX
+</pre>
+</td>
+<td>
+<pre>45.7079632679
+</pre>
+</td>
+</tr>
+</table>
+</div>

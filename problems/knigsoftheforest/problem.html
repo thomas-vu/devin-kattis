@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/knigsoftheforest/file/statement/en/img-0001.jpg" class="illustration" src="/problems/knigsoftheforest/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>All moose are knigs of the forest, but your latest
+    moose-friend, Karl-Älgtav, is more interesting than most. In
+    part because of his fondness of fermented blueberries, and in
+    part because of the tribe he lives in. Each year his tribe
+    holds a tournament to determine that year’s alpha-moose. The
+    winner gets to lead the tribe for a year, and then permanently
+    leaves the tribe. The pool of contenders stays constant over
+    the years, apart from the old alpha-moose being replaced by a
+    newcomer in each tournament.</p>
+<p>Karl-Älgtav has recently begun to wonder when it will be his
+    turn to win, and has asked you to help him determine this. He
+    has supplied a list of the strength of each of the other moose
+    in his tribe that will compete during the next <span class="tex2jax_process">$n - 1$</span> years, along with their time
+    of entry into the tournament. Assuming that the winner each
+    year is the moose with greatest strength, determine when
+    Karl-Älgtav becomes the alpha-moose.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space separated
+    integers <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq 10^5$</span>) and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^5$</span>), denoting the size of the tournament
+    pool and the number of years for which you have been supplied
+    sufficient information.</p>
+<p>Next is a single line describing Karl-Älgtav, containing the
+    two integers <span class="tex2jax_process">$y$</span>
+    (<span class="tex2jax_process">$2011 \leq y \leq 2011 + n -
+    1$</span>) and <span class="tex2jax_process">$p$</span>
+    (<span class="tex2jax_process">$0 \leq p \leq
+    2^{31}-1$</span>). These are his year of entry into the
+    tournament and his strength, respectively.</p>
+<p>Then follow <span class="tex2jax_process">$n + k - 2$</span>
+    lines describing each of the other moose, in the same format as
+    for Karl-Älgtav.</p>
+<p><em>Note that exactly <span class="tex2jax_process">$k$</span> of the moose will have
+    <span class="tex2jax_process">$2011$</span> as their year of
+    entry, and that the remaining <span class="tex2jax_process">$n-1$</span> moose will have unique years of
+    entry.</em></p>
+<p><em>You may assume that the strength of each moose is
+    unique.</em></p>
+<h2>Output</h2>
+<p>The year Karl-Älgtav wins the tournament, or <tt class="ttfamily">unknown</tt> if the given data is insufficient for
+    determining this.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+2013 2
+2011 1
+2011 3
+2014 4
+2012 6
+</pre>
+</td>
+<td>
+<pre>
+2013
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+2011 1
+2013 2
+2012 4
+2011 5
+2014 3
+</pre>
+</td>
+<td>
+<pre>
+unknown
+</pre>
+</td>
+</tr>
+</table>
+</div>

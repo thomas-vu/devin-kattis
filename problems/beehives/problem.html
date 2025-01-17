@@ -1,0 +1,62 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/beehives/file/statement/en/img-0001.jpg" class="illustration" src="/problems/beehives/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>Bill the beekeeper has a problem! His bees like to fight
+    with each other instead of producing honey. If the bees fight
+    each other, then the honey turns out sour. The only way to stop
+    the bees from fighting and keep the honey sweet is to ensure
+    that the hives are not too close together. Help Bill figure out
+    how many of this season’s hives will produce sour honey.
+
+    <p>Bill’s hives all exist on a plane, and he knows some
+    distance d such that two hives within <span class="tex2jax_process">$d$</span> of each other will fight, and both
+    will produce sour honey. If a hive does not fight with any
+    other hives, it produces sweet honey. Given <span class="tex2jax_process">$d$</span> and the positions of <span class="tex2jax_process">$N$</span> beehives, output how many hives
+    will produce sweet honey and how many hives will produce sour
+    honey.</p>
+<h2>Input</h2>
+<p>Input will be provided on multiple lines. There may be up to
+    <span class="tex2jax_process">$10$</span> test cases in the
+    input. Each case will begin with a floating point number
+    <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0 &lt; d &lt; 1000$</span>), the distance
+    within which hives will fight, followed by an integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 100$</span>), the number of
+    hives in that case. The next <span class="tex2jax_process">$N$</span> lines will contain two floating
+    point numbers separated by a single space, <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$-1000 \le x,y \le 1000$</span>), which give
+    the position of each hive. No two hives will be at the exact
+    same location. Input will be terminated by a line containing
+    the string <tt class="ttfamily">0.0 0</tt>.</p>
+<h2>Output</h2>
+<p>For each case output a line of the following form:
+    <tt class="ttfamily">a sour, b sweet</tt> where <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are the number of hives producing
+    sour and sweet honey, respectively.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10.0 3
+3.0 3.0
+3.5 4.5
+20.0 20.0
+5.0 4
+2.0 1.0
+2.0 4.0
+2.0 8.0
+2.0 12.0
+0.0 0
+</pre>
+</td>
+<td>
+<pre>
+2 sour, 1 sweet
+4 sour, 0 sweet
+</pre>
+</td>
+</tr>
+</table>
+</div>

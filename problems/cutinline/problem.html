@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>You are currently standing in line, waiting to buy some
+    algorithm books at the university book shop. Of course, the
+    line is incredibly long. Even worse, some of your fellow
+    university students keep cutting in line! In fact, this has
+    been going on for such a long time you are unsure of your
+    current position in the line.</p>
+<p>Up until now, you have memorized how the line looked when
+    you entered the line, what people have entered the line, and
+    what people have left the line. Not only the first person in
+    the line can leave – someone in the middle can leave if they
+    grow tired of waiting.</p>
+<p>Write a program where you can input the data of how the line
+    changed, and output how the line currently looks.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 1000$</span>), the number of
+    people currently in line. The next <span class="tex2jax_process">$N$</span> lines contains the names of the
+    person initially in the line, from the first to the last.</p>
+<p>The next line contains the integer <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$0
+    \le C \le 1000$</span>) – the number of people who entered or
+    left the line.</p>
+<p>The next <span class="tex2jax_process">$C$</span> lines
+    contain the events, in the order that the events happened. If
+    someone cut in line, the event will be <tt class="ttfamily">cut
+    a b</tt>, where <tt class="ttfamily">a</tt> is the name of the
+    person who cut in line, and <tt class="ttfamily">b</tt> is the
+    name of the person they stand in front of. If someone left the
+    line, the event will be <tt class="ttfamily">leave a</tt>,
+    where <tt class="ttfamily">a</tt> is the name of the person who
+    left the line.</p>
+<p>All names are single words of length at most <span class="tex2jax_process">$20$</span> containing only lower-case
+    letters <tt class="ttfamily">a-z</tt>. No two people will have
+    the same name. Nobody will ever leave the queue and then enter
+    it again.</p>
+<h2>Output</h2>
+<p>Output the names of everyone in the line after all the
+    events in the order they stand from first to last, one name per
+    line.</p>
+<h2>Explanation of sample 1</h2>
+<p>In the first example, the queue looks like this throughout
+    the events:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">a b c d</tt> (initial)</p>
+</li>
+<li>
+<p><tt class="ttfamily">a e b c d</tt> (<tt class="ttfamily">e</tt> cuts in front of <tt class="ttfamily">b</tt>)</p>
+</li>
+<li>
+<p><tt class="ttfamily">a e b c</tt> (<tt class="ttfamily">d</tt> leaves)</p>
+</li>
+<li>
+<p><tt class="ttfamily">e b c</tt> (<tt class="ttfamily">a</tt> leaves)</p>
+</li>
+<li>
+<p><tt class="ttfamily">f e b c</tt> (<tt class="ttfamily">f</tt> cuts in front of <tt class="ttfamily">e</tt>).</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+a
+b
+c
+d
+4
+cut e b
+leave d
+leave a
+cut f e
+</pre>
+</td>
+<td>
+<pre>f
+e
+b
+c
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+alf
+beata
+cornelius
+dagmar
+eloise
+5
+leave eloise
+cut fritiof cornelius
+leave dagmar
+cut germund alf
+leave cornelius
+</pre>
+</td>
+<td>
+<pre>germund
+alf
+beata
+fritiof
+</pre>
+</td>
+</tr>
+</table>
+</div>

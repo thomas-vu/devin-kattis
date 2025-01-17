@@ -1,0 +1,57 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/tunnelingtheearth/file/statement/en/img-0001.jpg" class="illustration" src="/problems/tunnelingtheearth/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>There are different methods of transporting people from
+    place to place: cars, bikes, boats, trains, planes, etc. For
+    very long distances, people generally fly in a plane. But this
+    has the disadvantage that the plane must fly around the curved
+    surface of the earth. A distance travelled would be shorter if
+    the traveller followed a straight line from one point to the
+    other through a tunnel through the earth.
+    <p>For example, travelling from Waterloo to Cairo requires a
+    distance of <span class="tex2jax_process">$9\, 293\,
+    521$</span> metres following the great circle route around the
+    earth, but only <span class="tex2jax_process">$8\, 491\,
+    188$</span> metres following the straight line through the
+    earth.</p>
+<p>For this problem, assume that the earth is a perfect sphere
+    with radius of exactly <span class="tex2jax_process">$6\, 371\,
+    009$</span> metres.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$1 \le T \le 1000$</span>, the
+    number of test cases to follow. Each test case is one line
+    containing four floating point numbers <span class="tex2jax_process">$\text {lat}_1$</span>, <span class="tex2jax_process">$\text {long}_1$</span>, <span class="tex2jax_process">$\text {lat}_2$</span> and <span class="tex2jax_process">$\text {long}_2$</span> (<span class="tex2jax_process">$-90 \le \text {lat}_1, \text {lat}_2 \le
+    90$</span>, <span class="tex2jax_process">$-180 \le \text
+    {long}_1, \text {long}_2 \le 180$</span>), where <span class="tex2jax_process">$\text {lat}_1$</span>, <span class="tex2jax_process">$\text {long}_1$</span> are the latitude and
+    longitude of the origin of the trip, and <span class="tex2jax_process">$\text {lat}_2, \text {long}_2$</span> are
+    the latitude and longitude of the destination of the trip. All
+    of these measurements are in degrees. Positive numbers indicate
+    North latitude and East longitude, while negative numbers
+    indicate South latitude and West longitude.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing a single real
+    number, the difference in the distance between the two points
+    following the great circle route around the surface of the
+    earth and following the straight line through the earth, in
+    metres. Your answer should have an absolute or relative error
+    of at most <span class="tex2jax_process">$10^{-7}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+43.466667 -80.516667 30.058056 31.228889
+</pre>
+</td>
+<td>
+<pre>802332.5872422839
+</pre>
+</td>
+</tr>
+</table>
+</div>

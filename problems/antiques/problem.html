@@ -1,0 +1,141 @@
+<div class="problembody">
+<p>You are hosting a fancy party for fancy friends. And, like
+    any fancy party, you need to buy some fancy antiques to put up
+    around the venue (your house).</p>
+<p>There is a set of <span class="tex2jax_process">$n$</span>
+    fancy antiques that you need to buy. And there is a set of
+    <span class="tex2jax_process">$m$</span> fancy antique shops in
+    the city. Because these antiques are extremely rare, each fancy
+    antique can only be found at a single fancy antique shop.
+    However, the fancy antique shops can also sell “knock-off”
+    (duplicate) versions of some of the antiques. And of course,
+    for any fancy antique, there is only a single fancy antique
+    shop in the city that holds a knock-off version of that antique
+    (this is to maintain the rareness of the antiques). The shop
+    that sells the original is not always the same shop that holds
+    the knock-off.</p>
+<p>It turns out that even though you can tell the difference,
+    most people cannot tell the original version from the knock-off
+    version of any given antique. And, because the shops can get
+    away with it, sometimes the knock-off is more expensive than
+    the original! Since the party is tomorrow, you only have time
+    to visit <span class="tex2jax_process">$k$</span> shops. You
+    would like to buy one version (either the original or the
+    knock-off) of each of the <span class="tex2jax_process">$n$</span> antiques.</p>
+<p>Suppose that there are three shops, and three antiques we
+    would like to buy.</p>
+<ul class="itemize">
+<li>
+<p>Antique <span class="tex2jax_process">$\# 1$</span>
+        sells for <span class="tex2jax_process">$30$</span> at shop
+        <span class="tex2jax_process">$\# 1$</span>. Its knockoff
+        sells for <span class="tex2jax_process">$50$</span> at shop
+        <span class="tex2jax_process">$\# 2$</span>.</p>
+</li>
+<li>
+<p>Antique <span class="tex2jax_process">$\# 2$</span>
+        sells for <span class="tex2jax_process">$70$</span> at shop
+        <span class="tex2jax_process">$\# 2$</span>. Its knockoff
+        sells for <span class="tex2jax_process">$10$</span> at shop
+        <span class="tex2jax_process">$\# 3$</span>.</p>
+</li>
+<li>
+<p>Antique <span class="tex2jax_process">$\# 3$</span>
+        sells for <span class="tex2jax_process">$20$</span> at shop
+        <span class="tex2jax_process">$\# 3$</span>. Its knockoff
+        sells for <span class="tex2jax_process">$80$</span> at shop
+        <span class="tex2jax_process">$\# 1$</span>.</p>
+</li>
+</ul>
+<p>Suppose you only have time to go to two shops. You can go to
+    shops <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$3$</span>. You can buy the original of
+    antique <span class="tex2jax_process">$1$</span> with cost
+    <span class="tex2jax_process">$30$</span> at shop <span class="tex2jax_process">$1$</span>, the original of antique
+    <span class="tex2jax_process">$3$</span> with cost <span class="tex2jax_process">$20$</span> at shop <span class="tex2jax_process">$3$</span>, and the knock-off of antique
+    <span class="tex2jax_process">$2$</span> at shop <span class="tex2jax_process">$3$</span> with cost <span class="tex2jax_process">$10$</span>. The total cost to buy these
+    items is <span class="tex2jax_process">$60$</span>, which is
+    the minimum possible.</p>
+<p>If you only have time to visit one shop, then it is
+    impossible. You cannot buy a version of all three items by
+    visiting a single shop.</p>
+<p>Given the costs of the antiques/knock-offs at the shops,
+    what is the minimum total cost to buy one version of each
+    antique?</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input will consist of three space-separated
+    integers: <span class="tex2jax_process">$n$</span>,
+    <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le n \le 100$</span>, <span class="tex2jax_process">$1 \le k
+    \le m \le 40$</span>). The next <span class="tex2jax_process">$n$</span> lines will each have four space
+    separated integers, <span class="tex2jax_process">$a$</span>,
+    <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$q$</span>, describing an antique, where:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$a$</span> is the index of
+        the shop that sells the original version of the antique
+        (<span class="tex2jax_process">$1 \le a \le m$</span>)</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$p$</span> is the price of
+        the original version of the antique at shop <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$1 \le p \le 10^7$</span>)</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$b$</span> is the index of
+        the shop that sells the knock-off version of the antique
+        (<span class="tex2jax_process">$1 \le b \le m$</span>)</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$q$</span> is the price of
+        the knock-off version of the antique at shop <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le q \le 10^7$</span>)</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If it is possible to collect all of the antiques while
+    visiting no more than <span class="tex2jax_process">$k$</span>
+    stores, then output the minimum cost. If it is not possible,
+    output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3 2
+1 30 2 50
+2 70 3 10
+3 20 1 80
+</pre>
+</td>
+<td>
+<pre>
+60
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3 1
+1 30 2 50
+2 70 3 10
+3 20 1 80
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

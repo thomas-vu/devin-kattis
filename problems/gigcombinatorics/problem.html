@@ -1,0 +1,63 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/gigcombinatorics/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gigcombinatorics/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Esk%C3%BCv%C5%91i_dj_technika.jpg">
+        Picture</a> by Veress Attila Esküvői, cc by-sa
+      </div>
+</div>Your friend Tóti is an aspiring musician. He has written
+    <span class="tex2jax_process">$n$</span> songs, each of which
+    has a <em>hype rating</em> of either <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, or <span class="tex2jax_process">$3$</span>. A higher hype rating means the
+    song has more energy. Tóti is planning his first live
+    performance and needs your help. He wants to know how many
+    <em>setlists</em> he can make. A setlist consist of at least
+    three songs, the first song must have hype rating <span class="tex2jax_process">$1$</span>, the last song must have hype
+    rating <span class="tex2jax_process">$3$</span>, and all other
+    songs must have hype rating <span class="tex2jax_process">$2$</span>. Tóti also wants to play the songs
+    in the same order he wrote them.
+    <p>Given the hype rating of each of Tóti’s songs in the order
+    he wrote them, how many setlists can he make?</p>
+<h2>Input</h2>
+<p>The first line of input consists of an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^6$</span>), the number of songs Tóti has
+    written. The second line consists of <span class="tex2jax_process">$n$</span> integers, each in <span class="tex2jax_process">$\{ 1, 2, 3\} $</span>, giving the hype
+    ratings of the <span class="tex2jax_process">$n$</span> songs
+    in the order they were written.</p>
+<h2>Output</h2>
+<p>Output the number of setlists Tóti can make. Since this
+    number can be large, print it modulo <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9
+1 1 1 2 2 2 3 3 3
+</pre>
+</td>
+<td>
+<pre>63
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+1 2 1 2 3 1 2 3
+</pre>
+</td>
+<td>
+<pre>15
+</pre>
+</td>
+</tr>
+</table>
+</div>

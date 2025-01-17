@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>You are developing software for a new generation of robotic
+    floor vacuums. Being an inexpensive, mass market robot, this
+    device has a fairly simple way of navigating around the room.
+    It can turn by some angle to the left or right and then move
+    forward in a straight line. A plan for the robot consists of a
+    sequence of these straight-line segments. The robot starts at
+    the origin, facing in the positive <span class="tex2jax_process">$Y$</span> direction. Your job is to try to
+    predict where the robot will be after following a plan.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{path}" src="/problems/vacuumba/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<h2>Input</h2>
+<p>Input consists of several test cases. The first line
+    contains an integer <span class="tex2jax_process">$1 \leq n
+    \leq 25$</span> telling how many. Each of the following test
+    cases begins with an integer, <span class="tex2jax_process">$1
+    \leq m \leq 10$</span>, giving the number of segments in the
+    robot’s plan. This is followed by <span class="tex2jax_process">$m$</span> lines, each describing a segment
+    in the plan. Each segment is described by a pair of real
+    numbers, a rotation angle in degrees followed by a distance.
+    The angle is in the range <span class="tex2jax_process">$[-360,360]$</span> and the distance is in
+    the range <span class="tex2jax_process">$[-100,100]$</span>.
+    The rotation angle tells how much the robot should turn before
+    moving forward the given distance. A positive rotation angle
+    indicates a counter-clockwise turn. A negative angle indicates
+    a clockwise turn. All real numbers have at most <span class="tex2jax_process">$8$</span> digits past the decimal.</p>
+<h2>Output</h2>
+<p>For each test case, print out the expected <span class="tex2jax_process">$X \; Y$</span> location of the robot after
+    following the path. Your answer should be accurate to within
+    <span class="tex2jax_process">$10^{-3}$</span> for each
+    coordinate.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+2
+0 10.5
+90 5
+1
+-45 10
+</pre>
+</td>
+<td>
+<pre>
+-5.000000 10.500000
+7.071068 7.071068
+</pre>
+</td>
+</tr>
+</table>
+</div>

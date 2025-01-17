@@ -1,0 +1,57 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/pseudoprime/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pseudoprime/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Fermat’s theorem states that for any prime number
+    <span class="tex2jax_process">$p$</span> and for any integer
+    <span class="tex2jax_process">$a \ge 0$</span>, <span class="tex2jax_process">$a^ p \equiv a \pmod{p}$</span>. That is, if
+    we raise <span class="tex2jax_process">$a$</span> to the
+    <span class="tex2jax_process">$p$</span>th power and divide by
+    <span class="tex2jax_process">$p$</span>, the remainder is
+    <span class="tex2jax_process">$a$</span>. Some (but not very
+    many) non-prime values of <span class="tex2jax_process">$p$</span>, known as <em>base-<span class="tex2jax_process">$a$</span> pseudoprimes</em>, have this
+    property for some <span class="tex2jax_process">$a$</span>.
+    (And some, known as Carmichael Numbers, are base-<span class="tex2jax_process">$a$</span> pseudoprimes for all <span class="tex2jax_process">$a$</span>.)</p>
+<p>Given <span class="tex2jax_process">$2 &lt; p \le 1\, 000\,
+    000\, 000$</span> and <span class="tex2jax_process">$1 &lt; a
+    &lt; p$</span>, determine whether or not <span class="tex2jax_process">$p$</span> is a <em>base-<span class="tex2jax_process">$a$</span> pseudoprime</em>.</p>
+<h2>Input</h2>
+<p>Input contains several test cases followed by a line
+    containing “0 0”. Each test case consists of a line containing
+    <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$a$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output “<tt class="ttfamily">yes</tt>”
+    if <span class="tex2jax_process">$p$</span> is a
+    base-<span class="tex2jax_process">$a$</span> pseudoprime;
+    otherwise output “<tt class="ttfamily">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+10 3
+341 2
+341 3
+1105 2
+1105 3
+0 0
+</pre>
+</td>
+<td>
+<pre>
+no
+no
+yes
+no
+yes
+yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

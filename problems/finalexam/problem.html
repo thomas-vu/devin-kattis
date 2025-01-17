@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>In the final round of the Hunter Exam, candidates must prove
+    their ability to process big data as well as geometry
+    knowledge.</p>
+<p>In the Examination Hall, the candidates can find three piles
+    of segments:</p>
+<ul class="itemize">
+<li>
+<p>The first pile has <span class="tex2jax_process">$n_
+        a$</span> segments, and the <span class="tex2jax_process">$i$</span>-th segment has length
+        <span class="tex2jax_process">$A_ i$</span>.</p>
+</li>
+<li>
+<p>The second pile has <span class="tex2jax_process">$n_
+        b$</span> segments, and the <span class="tex2jax_process">$j$</span>-th segment has length
+        <span class="tex2jax_process">$B_ j$</span>.</p>
+</li>
+<li>
+<p>The third pile has <span class="tex2jax_process">$n_
+        c$</span> segments, and the <span class="tex2jax_process">$k$</span>-th segment has length
+        <span class="tex2jax_process">$C_ k$</span>.</p>
+</li>
+</ul>
+<p>The candidates must quickly select three segments, one
+    segment from each pile, such that:</p>
+<ul class="itemize">
+<li>
+<p>The three segments can be used to form a <b class="bfseries">right triangle</b>.</p>
+</li>
+<li>
+<p>The segment chosen from the third pile must be
+        longest.</p>
+</li>
+</ul>
+<p>As the organizer of the Hunter Exam, you need to make sure
+    that the difficulty is right for the final round. Thus you want
+    to know the number of ways to select three segments, satisfying
+    the conditions above?</p>
+<h2>Input</h2>
+<p>The first line of the input contains exactly three integers:
+    <span class="tex2jax_process">$n_ a$</span>, <span class="tex2jax_process">$n_ b$</span> and <span class="tex2jax_process">$n_ c$</span> <span class="tex2jax_process">$(1 \le n_ a, n_ b, n_ c \le 3 \cdot
+    10^5)$</span>.</p>
+<p>The second line of the input contains exactly <span class="tex2jax_process">$n_ a$</span> integers — the lengths of
+    the segments in the first pile.</p>
+<p>The third line of the input contains exactly <span class="tex2jax_process">$n_ b$</span> integers — the lengths of
+    the segments in the second pile.</p>
+<p>The fourth line of the input contains exactly <span class="tex2jax_process">$n_ c$</span> integers — the lengths of
+    the segments in the third pile.</p>
+<p>All the lengths of the segments are between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$3 \cdot 10^7$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Print exactly one integer — the number of triplets.</p>
+<h2>Explanation of sample test</h2>
+<p>There are <span class="tex2jax_process">$4$</span> different
+    ways to select three segments: <span class="tex2jax_process">$(3, 4, 5)$</span>, <span class="tex2jax_process">$(3, 4, 5)$</span>, <span class="tex2jax_process">$(4, 3, 5)$</span> and <span class="tex2jax_process">$(4, 3, 5)$</span>.</p>
+<p>Selecting <span class="tex2jax_process">$(5, 4, 3)$</span>
+    is not valid, as the segment from the third pile must be the
+    longest segment.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 3
+3 4 5
+4 3
+5 5 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

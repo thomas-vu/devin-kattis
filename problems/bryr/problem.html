@@ -1,0 +1,185 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bryr/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bryr/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://upload.wikimedia.org/wikipedia/commons/1/1a/Einbreid_Bru.jpg">
+        Wikimedia Commons</a>
+</div>
+</div>
+<p>As everyone knows from last year, Eva and Stefán live in
+    Vestmannaeyjar. You helped Eva find the best travel plan to
+    tour the entire country with Stefán in the least amount of
+    time. Now Eva wants to visit Egilsstaðir, but travelling around
+    the country lead to them finding out that Stefán HATES
+    single-lane bridges. Thus Eva looks to you once more to keep
+    Stefán in a good mood.</p>
+<p>Can you help Eva find the way from Vestmannaeyjar to
+    Egilsstaðir using the least amount of single-lane bridges?</p>
+<h2>Input</h2>
+<p>On the first line there are two integers, <span class="tex2jax_process">$2 \leq n \leq 10^5$</span>, the number of
+    locations, and <span class="tex2jax_process">$n-1 \leq m \leq
+    \min {(2\cdot 10^5, n(n-1)/2)}$</span>, the number of roads.
+    Next there are <span class="tex2jax_process">$m$</span> lines,
+    each with three integers <span class="tex2jax_process">$1 \leq
+    a, b \leq n$</span> and <span class="tex2jax_process">$c \in \{
+    0, 1\} $</span> which means there is a road between location
+    <span class="tex2jax_process">$a$</span> and location
+    <span class="tex2jax_process">$b$</span> which contains a
+    single-lane bridge if <span class="tex2jax_process">$c =
+    1$</span> but a double-lane bridge if <span class="tex2jax_process">$c = 0$</span>. Vestmannaeyjar will always be
+    location <span class="tex2jax_process">$1$</span> and
+    Egilstaðir location <span class="tex2jax_process">$n$</span>.
+    You can assume Iceland’s road system is connected, i.e. it’s
+    possible to get from any location to any other. You can also
+    assume that any pair <span class="tex2jax_process">$a,
+    b$</span> appears at most once in the input.</p>
+<h2>Output</h2>
+<p>One line containing the minimal number of single-lane
+    bridges Stefán and Eva have to cross to get to their
+    destination.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          100$</span>, <span class="tex2jax_process">$n =
+          m$</span>, Iceland’s road system consists of a single
+          cycle of single-lane bridges (<span class="tex2jax_process">$c = 1$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          100$</span>, all roads contain a single-lane bridge
+          (<span class="tex2jax_process">$c = 1$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All roads contain a single-lane bridge (<span class="tex2jax_process">$c = 1$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+3 1 1
+1 2 1
+2 3 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 6
+5 6 1
+5 4 1
+2 1 1
+2 3 1
+4 3 1
+1 4 1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 13
+7 3 0
+7 10 1
+8 2 0
+10 2 1
+4 6 0
+4 1 0
+9 5 1
+6 9 0
+7 6 1
+3 10 0
+4 5 0
+5 7 1
+4 8 0
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

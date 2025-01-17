@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>Vjekoslav the Wolf is running away from a bunch of blood
+    hungry hunters. The hunters are smart and hide behind trees.
+    Vjekoslav knows this, but doesn’t know which trees. He would
+    like to run to his comfortable, civilized cottage (as opposed
+    to the hunters quite uncivilized den, yes I am rooting for the
+    Wolf here) staying as far away as possible from any trees.</p>
+<p>The forest can be represented as an <span class="tex2jax_process">$N$</span> by <span class="tex2jax_process">$M$</span> grid. Let us mark empty meadow
+    patches with ‘<tt class="ttfamily">.</tt>’, patches with a tree
+    in the middle with ‘<tt class="ttfamily">+</tt>’, Vjekoslav’s
+    current position with ‘<tt class="ttfamily">V</tt>’ and the
+    position of his cottage with ‘<tt class="ttfamily">J</tt>’.
+    Vjekoslav can run from his current patch to any other patch
+    north, east, south or west from him, even if it contains a
+    tree.</p>
+<p>If Vjekoslav is standing in <span class="tex2jax_process">$R$</span>-th row and <span class="tex2jax_process">$C$</span>-th column on the grid and there is
+    a tree in the <span class="tex2jax_process">$A$</span>-th row
+    and <span class="tex2jax_process">$B$</span>-th column then the
+    distance between Vjekoslav and that tree is</p><span class="tex2jax_process">\[ \lvert R-A \rvert + \lvert C-B \rvert
+    \]</span>
+<p>Help Vjekoslav find the best route to his cottage. The best
+    route is any route that maximizes the minimal distance between
+    Vjekoslav and all trees at any given moment.</p>
+<p>Note that Vjekoslav’s cottage doesn’t occupy the entire
+    patch so that patch must also be included in the route.</p>
+<h2>Input</h2>
+<p>The first line of input contains integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq N, M \leq 500$</span>), the grid dimensions.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    contain <span class="tex2jax_process">$M$</span> characters,
+    each being one of ‘<tt class="ttfamily">.</tt>’, ‘<tt class="ttfamily">+</tt>’, ‘<tt class="ttfamily">V</tt>’, and
+    ‘<tt class="ttfamily">J</tt>’.</p>
+<p>The input will contain exactly one each of the characters
+    ‘<tt class="ttfamily">V</tt>’ and ‘<tt class="ttfamily">J</tt>’, and at least one character ‘<tt class="ttfamily">+</tt>’.</p>
+<h2>Output</h2>
+<p>Output a single integer, the minimal distance from a tree in
+    the optimal route.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4
++...
+....
+....
+V..J
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5
+.....
+.+++.
+.+.+.
+V+.J+
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 6
+.++...
+J.+.+.
+.+.+..
+....+.
++++.+.
+...+.V
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

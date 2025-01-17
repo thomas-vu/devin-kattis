@@ -1,0 +1,157 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/distracted/file/statement/en/img-0001.jpg" class="illustration" src="/problems/distracted/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Charles Chaplin in <em>Pay Day</em> (1922).
+      </div>
+</div>
+<p>Everybody is either married or unmarried. Can you determine
+    if a married person is looking at an unmarried person?</p>
+<h2>Input</h2>
+<p>The first line of input consists of two integers: the total
+    number <span class="tex2jax_process">$N$</span> of people, and
+    the number <span class="tex2jax_process">$L$</span> of these
+    people who are looking at somebody else. You can assume
+    <span class="tex2jax_process">$0&lt; N$</span> and <span class="tex2jax_process">$0\leq L\leq N$</span>. Then follow
+    <span class="tex2jax_process">$N$</span> lines, one for every
+    person, giving the person’s name followed by their marital
+    status. People have unique names consisting of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$10$</span> letters from the English
+    alphabet. Their marital status is given as “m” if you know that
+    they are married, “u” if you know that they are unmarried, and
+    “?” if their marital status is unknown to you — even though
+    these people are either married or unmarried, you don’t know
+    which. Then follow <span class="tex2jax_process">$L$</span>
+    lines of the form “<tt class="ttfamily">Alice -&gt;
+    Charlie</tt>”, meaning that Alice is looking at Charlie. You
+    have complete information about who is looking at whom, nobody
+    is looking at themselves, and nobody is looking at more than
+    one other person.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">1</tt> if some married person is
+    looking at an unmarried person. Print <tt class="ttfamily">0</tt> if no married person is looking at an
+    unmarried person. If this cannot be determined, print
+    <tt class="ttfamily">?</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$N\leq 3$</span>,
+          everybody’s marital status is known</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>24</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$N \leq 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>25</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$N \leq 12$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>4</p>
+</td>
+<td style="text-align:left">
+<p>28</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$N \leq 50\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+Alice m
+Bobbie u
+Charlie m
+Alice -&gt; Charlie
+Charlie -&gt; Bobbie
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+Alice m
+Bobbie ?
+Charlie m
+Alice -&gt; Charlie
+Charlie -&gt; Bobbie
+</pre>
+</td>
+<td>
+<pre>?
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+Alice m
+Bobbie m
+Charlie m
+Alice -&gt; Charlie
+Charlie -&gt; Bobbie
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

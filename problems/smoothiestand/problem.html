@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Olivia runs a very famous and profitable smoothie stand. On
+    any given day, she will always sell out (that is, she will sell
+    as many smoothies as she has ingredients to make), regardless
+    of what smoothie recipe she offers. Therefore, to simplify
+    things, she has decided she will only make one type of smoothie
+    per day. Now she has come to you to help her decide which of
+    her recipes she should use today, given the ingredients she has
+    on hand and the sale price of each type of smoothie.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$k$</span> and <span class="tex2jax_process">$r$</span>, separated by a space. The value
+    <span class="tex2jax_process">$k$</span> is the number of
+    different ingredients Olivia uses in her smoothies and
+    <span class="tex2jax_process">$r$</span> is the number of
+    different recipes she makes. You may assume <span class="tex2jax_process">$1\leq k\leq 100\, 000$</span>, <span class="tex2jax_process">$1\leq r\leq 100\, 000$</span>, and
+    <span class="tex2jax_process">$1\leq kr\leq 100\, 000$</span>.
+    The second line contains <span class="tex2jax_process">$k$</span> integers, which represent the
+    amount of each ingredient she currently has on hand. This is
+    followed by <span class="tex2jax_process">$r$</span> lines,
+    each of which represents a recipe. On each such line, the first
+    <span class="tex2jax_process">$k$</span> space-separated
+    integers represent the amount of each ingredient used in that
+    recipe. This is followed by one integer representing the price
+    charged for one smoothie of that recipe.</p>
+<p>You may assume that all values, except possibly <span class="tex2jax_process">$k$</span> and <span class="tex2jax_process">$r$</span>, are nonnegative integers less
+    than or equal to <span class="tex2jax_process">$10^4$</span>.
+    It is guaranteed that each recipe uses at least one
+    ingredient.</p>
+<h2>Output</h2>
+<p>Output the largest total sales revenue that can be obtained
+    by choosing a single recipe and making as many of that recipe
+    as possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+5 10 10
+1 4 1 5
+3 3 3 3
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+10 9 8 7
+0 1 2 4 10
+3 1 1 2 4
+2 0 3 3 5
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+</div>

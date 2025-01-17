@@ -1,0 +1,130 @@
+<div class="problembody">
+<p>The “eight queens puzzle” is a classic puzzle where you have
+    to place eight queens on a chess board in such a way that no
+    queen can attack another queen. Remember that, in chess, queens
+    can move in any direction (horizontal, vertical, and diagonal),
+    which means the eight queens would have to be laid out in such
+    a way that no two queens are on the same row, column, or
+    diagonal.</p>
+<p>This puzzle actually has multiple solutions. The following
+    is one possible solution:</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{board1.png}" src="/problems/queens/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>Finding the solutions to the “eight queens puzzle” is
+    actually an interesting computational problem. However, that’s
+    not the problem you will be solving here. Instead, you will be
+    solving a much simpler problem: given a proposed solution to
+    the puzzle, you must <em>verify</em> whether it is a valid
+    solution (i.e., whether no queen can attack another queen).</p>
+<p>When referring to specific squares on the board, we will
+    assume that the bottom-left square is the <span class="tex2jax_process">$(0,0)$</span> square, and that the
+    <span class="tex2jax_process">$x$</span> coordinate increases
+    as you move right, and the <span class="tex2jax_process">$y$</span> coordinate increases as you move
+    up.</p>
+<p>In other words, something like this:</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{board2.png}" src="/problems/queens/file/statement/en/img-0002.png" style="width:50.00%"/>
+</center>
+<p>Furthermore, we will consider the more general “<span class="tex2jax_process">$N$</span>-queens puzzle”, where the
+    chessboard can have <span class="tex2jax_process">$N\times
+    N$</span> squares, and there will be <span class="tex2jax_process">$N$</span> queens on the board. For example,
+    this would be a <em>correct</em> solution to the 4-queens
+    puzzle:</p>
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{small1.png}" src="/problems/queens/file/statement/en/img-0003.png" style="width:30.00%"/>
+</center>
+<p>And this would be an <em>incorrect</em> solution to the
+    4-queens puzzle:</p>
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{small2.png}" src="/problems/queens/file/statement/en/img-0004.png" style="width:30.00%"/>
+</center>
+<p>Notice how the queen in (2,2) can attack the queen in (0,2)
+    and the queen in (2,3).</p>
+<h2>Input</h2>
+<p>The input begins with a line containing a single integer:
+    the value of <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$0 &lt; N \le 5\, 000$</span>).
+    This is followed by <span class="tex2jax_process">$N$</span>
+    lines, each containing the position of a queen as two integers:
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (separated by a single space),
+    where <span class="tex2jax_process">$0 \le x, y &lt;
+    N$</span>.</p>
+<h2>Output</h2>
+<p>The output contains either <tt class="ttfamily">CORRECT</tt>
+    if the positions of the queens is a solution to the
+    <span class="tex2jax_process">$N$</span>-queens puzzle, and
+    <tt class="ttfamily">INCORRECT</tt> otherwise.</p>
+<p>Note that the sample data presented below corresponds to the
+    three boards shows earlier.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+1 5
+6 2
+3 1
+5 0
+4 6
+0 3
+2 7
+7 4
+</pre>
+</td>
+<td>
+<pre>
+CORRECT
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 3
+1 0
+0 2
+3 1
+</pre>
+</td>
+<td>
+<pre>
+CORRECT
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 3
+0 2
+1 0
+2 2
+</pre>
+</td>
+<td>
+<pre>
+INCORRECT
+</pre>
+</td>
+</tr>
+</table>
+</div>

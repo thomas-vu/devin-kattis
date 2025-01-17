@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>You’ve landed yourself in a real mess, or more accurately a
+    cave filled with dilapidated and unstable pillars. You are
+    luckily standing on a solid rock in the middle of the cave. You
+    know there is a valuable artifact on one of the pillars in the
+    cave, but you aren’t sure which one yet. While you wait for the
+    results of a scan of the cave, you start building a robot to
+    help you retrieve the artifact.</p>
+<p>The robot you build will be light, and it will assuredly be
+    able to land and jump from any pillar at least once. To build
+    the robot, you need to determine how powerful it needs to be in
+    terms of its jump distance. If the robot is too weak, then it
+    might not be able to reach a pillar. If the robot is too
+    strong, then it will cause a lot of damage when jumping and
+    landing.</p>
+<p>Luckily you have already mapped out where all the pillars
+    are located with respect to your starting point at <span class="tex2jax_process">$(0, 0)$</span>. You don’t know yet which
+    pillar contains the artifact, and you need to finish building
+    the robot first before the scan finishes.</p>
+<p>Given the locations of the pillars, you’d like to determine
+    the smallest jump distance to guarantee that your robot can
+    reach any pillar and return back to the start, without landing
+    on a pillar twice.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \le n \le 1,000)$</span>, which is the
+    number of pillars.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains two integers, <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> <span class="tex2jax_process">$(-10^9 \le x, y \le 10^9)$</span>. These are
+    the (<span class="tex2jax_process">$x$</span>,<span class="tex2jax_process">$y$</span>) coordinates of the pillars. All
+    pillar locations will be distinct, and no pillar will be at
+    <span class="tex2jax_process">$(0, 0)$</span>.</p>
+<h2>Output</h2>
+<p>Output a single number, which is the minimum jump distance
+    needed to guarantee that a robot could reach any pillar and
+    return back to your starting point, without landing on a pillar
+    twice. Your answer will be accepted if it has an absolute or
+    relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1
+1 0
+</pre>
+</td>
+<td>
+<pre>1.414213562373095
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+1 1
+0 1
+1 0
+2 0
+0 2
+2 1
+1 2
+2 2
+</pre>
+</td>
+<td>
+<pre>1.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

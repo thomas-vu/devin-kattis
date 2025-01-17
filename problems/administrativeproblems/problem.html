@@ -1,0 +1,151 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/administrativeproblems/file/statement/en/img-0001.jpg" class="illustration" src="/problems/administrativeproblems/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>It is difficult for a spy to do his job without a decent
+    car. The Bureau of Administrative Personnel for Cars (BAPC)
+    spy-car rental company has a large collection of cars that
+    spies can use and handles the resulting administration. Using
+    cars obviously costs money: they require gasoline to operate
+    and repairs are needed quite often, because spies tend to cause
+    accidents a little more often than other drivers.</p>
+<p>At the end of the year, all spies need to be billed for the
+    usage of cars in the past year. Last week, there was a major
+    crash in the billing system, rendering it unusable. All that
+    could be recovered was a list of all available types of cars
+    and a log of events for the past year. Using this information,
+    the spy-car rental company wants to obtain a list of the costs
+    for car usage for every spy on record. This list can then be
+    used to send out the bills manually.</p>
+<p>Every type of car is registered with a catalog price, the
+    cost to pick up the car and the cost of driving that car per
+    kilometer. The event list contains three types of events:
+    pick-ups, returns and accidents. When a spy picks up a car, he
+    or she must pay the pick-up cost for that car. Once the car is
+    returned, the number of kilometers driven in the car is
+    recorded and the spy must pay for these kilometers. If an
+    accident occurred when the spy was using the car, repairs need
+    to be paid for. Every accident is rated with a severity as a
+    percentage. To repair the car, this percentage of the catalog
+    price is billed to the spy who caused the accident. If any
+    billed cost is fractional, it is rounded up to the next integer
+    before being added to the bill.</p>
+<p>The list of all available types of cars is complete.
+    However, because of the crash, some events in the recovered
+    event log might be missing. The spy-car rental company does not
+    want to present spies with an inconsistent bill, so you should
+    detect inconsistencies in the log entries for each spy. The
+    following conditions hold for a consistent event log:</p>
+<ul class="itemize">
+<li>
+<p>A spy will pick up a car before returning it.</p>
+</li>
+<li>
+<p>A spy will always return a car they picked up.</p>
+</li>
+<li>
+<p>A spy can use at most one car at a time.</p>
+</li>
+<li>
+<p>Accidents can only happen when a spy is using a car.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most <span class="tex2jax_process">$100$</span>.
+    After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0 \leq n \leq 500$</span> and
+        <span class="tex2jax_process">$0 \leq m \leq 10\,
+        000$</span>): the number of types of cars, and the number
+        of events, respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines with a
+        string <span class="tex2jax_process">$N$</span> and three
+        integers <span class="tex2jax_process">$p$</span>,
+        <span class="tex2jax_process">$q$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq p \leq 100\, 000, 1 \leq q \leq
+        1\, 000, 1 \leq k \leq 100$</span>), all separated by a
+        space: for each type of car, its unique name, its catalog
+        price, its pick-up cost, and its cost per kilometer driven,
+        respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines starting
+        with one integer <span class="tex2jax_process">$t$</span>
+        (<span class="tex2jax_process">$0 \leq t \leq 100\,
+        000$</span>), a string <span class="tex2jax_process">$S$</span> and one character <span class="tex2jax_process">$e$</span>, all separated by a space: the
+        time of the event, the name of the involved spy, and the
+        type of event, followed by:</p>
+<ul class="itemize">
+<li>
+<p>if <span class="tex2jax_process">$e$</span> =
+            ‘<tt>p</tt>’ (pick-up): a string <span class="tex2jax_process">$C$</span>: the name of the type of
+            car picked up.</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$e$</span> =
+            ‘<tt>r</tt>’ (return): an integer <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0 \leq d \leq 1\, 000$</span>): the
+            distance covered in the car last picked up by spy
+            <span class="tex2jax_process">$S$</span>, in
+            kilometers.</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$e$</span> =
+            ‘<tt>a</tt>’ (accident): an integer <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$0 \leq s \leq 100$</span>): the
+            severity of the accident, in percents.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>All names of cars and spies consist of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$40$</span> lowercase letters. There will be
+    at most <span class="tex2jax_process">$500$</span> unique spy
+    names in each test case. The events are given in chronological
+    order.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line for every spy referenced in any of the events,
+        containing a string and one integer, separated by a space:
+        the name of the spy and his total car cost. If the event
+        log for the spy is inconsistent, the total cost should be
+        replaced by the string “<tt>INCONSISTENT</tt>”. The lines
+        should be sorted alphabetically by the name of the spy.</p>
+</li>
+</ul>
+<p>You do not need to separate the output of consecutive test
+    cases with empty lines.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+2 8
+bmw 5000 150 10
+jaguar 7000 200 25
+10 mallory p bmw
+15 jb p jaguar
+20 jb r 500
+35 badluckbrian a 100
+50 mallory a 10
+55 silva p jaguar
+60 mallory r 100
+110 silva a 30
+</pre>
+</td>
+<td>
+<pre>badluckbrian INCONSISTENT
+jb 12700
+mallory 1650
+silva INCONSISTENT
+</pre>
+</td>
+</tr>
+</table>
+</div>

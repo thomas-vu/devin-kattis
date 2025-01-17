@@ -1,0 +1,131 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/worstweather/file/statement/en/img-0001.jpg" class="illustration" src="/problems/worstweather/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>“Man, this year has the worst weather ever!”, David said as
+    he sat crouched in the small cave where we had sought shelter
+    from yet another sudden rainstorm.</p>
+<p>“Nuh-uh!”, Diana immediately replied in her traditional
+    know-it-all manner.</p>
+<p>“Is too!”, David countered cunningly.</p>
+<p>Terrific. Not only were we stuck in this cave, now we would
+    have to listen to those two nagging for at least an hour. It
+    was time to cut this discussion short.</p>
+<p>“Big nuh-uh. In fact, 93 years ago it had already rained
+    five times as much by this time of year.”</p>
+<p>“Duh”, David capitulated, “so it’s the worst weather in 93
+    years then.”</p>
+<p>“Nuh-uh, this is actually the worst weather in 23 years.”,
+    Diana again broke in.</p>
+<p>“Yeah, well, whatever”, David sighed, “Who cares
+    anyway?”.</p>
+<p>Well, dear contestants, you care, don’t you?</p>
+<h2>The Problem</h2>
+<p>Your task is to, given information about the amount of rain
+    during different years in the history of the universe, and a
+    series of statements in the form “Year <span class="tex2jax_process">$X$</span> had the most rain since year
+    <span class="tex2jax_process">$Y$</span>”, determine whether
+    these are true, might be true, or are false. We say that such a
+    statement is true if:</p>
+<ul class="itemize">
+<li>
+<p>The amount of rain during these two years and all years
+        between them is known.</p>
+</li>
+<li>
+<p>It rained at most as much during year <span class="tex2jax_process">$X$</span> as it did during year
+        <span class="tex2jax_process">$Y$</span>.</p>
+</li>
+<li>
+<p>For every year <span class="tex2jax_process">$Z$</span>
+        satisfying <span class="tex2jax_process">$Y &lt; Z &lt;
+        X$</span>, the amount of rain during year <span class="tex2jax_process">$Z$</span> was less than the amount of
+        rain during year <span class="tex2jax_process">$X$</span>.</p>
+</li>
+</ul>
+<p>We say that such a statement might be true if there is an
+    assignment of amounts of rain to years for which there is no
+    information, such that the statement becomes true. We say that
+    the statement is false otherwise.</p>
+<h2>Input</h2>
+<p>The input will consist of several test cases, each
+    consisting of two parts.</p>
+<p>The first part begins with an integer <span class="tex2jax_process">$1 \leq n \leq 50\, 000$</span>, indicating
+    the number of different years for which there is information.
+    Next follow <span class="tex2jax_process">$n$</span> lines. The
+    <span class="tex2jax_process">$i$</span>th of these contains
+    two integers <span class="tex2jax_process">$-10^9 \leq y_ i
+    \leq 10^9$</span> and <span class="tex2jax_process">$1 \leq r_
+    i \leq 10^9$</span> indicating that there was <span class="tex2jax_process">$r_ i$</span> millilitres of rain during year
+    <span class="tex2jax_process">$y_ i$</span> (note that the
+    amount of rain during a year can be any nonnegative integer,
+    the limitation on <span class="tex2jax_process">$r_ i$</span>
+    is just a limitation on the input). You may assume that
+    <span class="tex2jax_process">$y_ i &lt; y_{i+1}$</span> for
+    <span class="tex2jax_process">$1 \leq i &lt; n$</span>.</p>
+<p>The second part of a test case starts with an integer
+    <span class="tex2jax_process">$1 \leq m \leq 10\, 000$</span>,
+    indicating the number of queries to process. The following
+    <span class="tex2jax_process">$m$</span> lines each contain two
+    integers <span class="tex2jax_process">$-10^9 \leq Y &lt; X
+    \leq 10^9$</span> indicating two years.</p>
+<p>There is a blank line between test cases. The input is
+    terminated by a case where <span class="tex2jax_process">$n =
+    0$</span> and <span class="tex2jax_process">$m = 0$</span>.
+    This case should not be processed.</p>
+<p>Technical note: Due to the size of the input, the use of
+    cin/cout in C++ might be too slow in this problem. Use
+    scanf/printf instead. In Java, make sure that both input and
+    output is buffered.</p>
+<h2>Output</h2>
+<p>There should be <span class="tex2jax_process">$m$</span>
+    lines of output for each test case, corresponding to the
+    <span class="tex2jax_process">$m$</span> queries. Queries
+    should be answered with “<tt class="ttfamily">true</tt>” if the
+    statement is true, “<tt class="ttfamily">maybe</tt>” if the
+    statement might be true, and “<tt class="ttfamily">false</tt>”
+    if the statement is false.</p>
+<p>Separate the output of two different test cases by a blank
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2002 4920
+2003 5901
+2004 2832
+2005 3890
+2
+2002 2005
+2003 2005
+
+3
+1985 5782
+1995 3048
+2005 4890
+2
+1985 2005
+2005 2015
+
+0
+0
+</pre>
+</td>
+<td>
+<pre>
+false
+true
+
+maybe
+maybe
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Anthony is just now learning basic math, how exciting! He
+    first learns about addition</p><span class="tex2jax_process">\[
+    a+n=a+\underbrace{1+1+\cdots +1}_ n, \]</span>
+<p>then multiplication</p><span class="tex2jax_process">\[
+    a\times n=\underbrace{a+a+\cdots +a}_ n, \]</span>
+<p>exponentiation</p><span class="tex2jax_process">\[ a^
+    n=\underbrace{a\times a\times \cdots \times a}_ n. \]</span>
+<p>and finally, <em>tetration</em></p><span class="tex2jax_process">\[ ^ na=\underbrace{a^{a^{\cdot ^{\cdot
+    ^{\cdot ^{a}}}}}}_ n. \]</span>
+<p>Very quickly, Anthony becomes interested in infinite
+    tetrations, namely</p><span class="tex2jax_process">\[ ^\infty
+    a={a^{a^{\cdot ^{\cdot ^{\cdot }}}}}. \]</span>
+<p>Anthony wonders, given an arbitrary real number <span class="tex2jax_process">$N$</span>, what is the solution to
+    <span class="tex2jax_process">$^\infty a=N$</span>? Unable to
+    figure it out, Anthony has asked you to write a program to help
+    him!</p>
+<p>Here’s a fun fact: A solution only exists for <span class="tex2jax_process">$\frac{1}{e}\leq N\leq e$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains one real number
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$0.36788\leq N\leq 2.718281$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line containing a real number <span class="tex2jax_process">$a$</span>, such that <span class="tex2jax_process">$^\infty a=N$</span>. Your answer will be
+    considered correct if its absolute or relative error doesn’t
+    exceed <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2.000000
+</pre>
+</td>
+<td>
+<pre>
+1.414214
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.000000
+</pre>
+</td>
+<td>
+<pre>
+1.000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.500000
+</pre>
+</td>
+<td>
+<pre>
+1.310371
+</pre>
+</td>
+</tr>
+</table>
+</div>

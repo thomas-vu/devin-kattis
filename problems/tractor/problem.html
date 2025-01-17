@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>Bessie the Cow has stolen Farmer John’s tractor and is
+    running wild on the coordinate plane! She, however, is a
+    terrible driver, and can only move according to the following
+    rules:</p>
+<ol class="enumerate">
+<li>
+<p>Each of her movements is in the same direction as either
+        the positive <span class="tex2jax_process">$x$</span>-axis
+        or the positive <span class="tex2jax_process">$y$</span>-axis.</p>
+</li>
+<li>
+<p>Her <span class="tex2jax_process">$n$</span>th movement
+        takes her <span class="tex2jax_process">$2^{n-1}$</span>
+        units forward in her chosen direction. (On her first
+        movement, <span class="tex2jax_process">$n=1$</span>, so
+        she moves <span class="tex2jax_process">$1$</span>
+        unit.)</p>
+</li>
+</ol>
+<p>Farmer John’s farm is on the coordinate plane, in the shape
+    of a rectangle with corners at <span class="tex2jax_process">$(0,0)$</span>, <span class="tex2jax_process">$(A,0)$</span>, <span class="tex2jax_process">$(0,B)$</span> and <span class="tex2jax_process">$(A,B)$</span>. If Bessie starts at
+    <span class="tex2jax_process">$(0,0)$</span>, how many points
+    inside the farm, including the boundary, could she reach?</p>
+<h2>Input</h2>
+<p>The input begins with an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N\le 100$</span>) on a line by itself, indicating the
+    number of test cases that follow. Each of the following
+    <span class="tex2jax_process">$N$</span> lines contains two
+    space separated integers <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1\le A, B\le 10^8$</span>), describing the
+    upper-right corner of Farmer John’s farm.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span> lines, with
+    the <span class="tex2jax_process">$N$</span>th line containing
+    the number of points that Bessie could possibly reach in the
+    <span class="tex2jax_process">$N$</span>th test case.</p>
+<p>In the first test case of the sample, Bessie can reach the
+    following six points: <span class="tex2jax_process">$(0,0)$</span>, <span class="tex2jax_process">$(0,1)$</span>, <span class="tex2jax_process">$(1,0)$</span>, <span class="tex2jax_process">$(1,2)$</span>, <span class="tex2jax_process">$(2,1)$</span> and <span class="tex2jax_process">$(0,3)$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 3
+7 7
+</pre>
+</td>
+<td>
+<pre>6
+15
+</pre>
+</td>
+</tr>
+</table>
+</div>

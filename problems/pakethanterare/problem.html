@@ -1,0 +1,203 @@
+<div class="problembody">
+<p>Doris has started her work as a packagemanager at the Pacman
+    company (a part of the Sudo group). Her job is to make sure
+    each of their stores has the most recent model of envelope,
+    cardboard box, etc. Doris would however like to automate this
+    task.</p>
+<p>She has a list of all types of packages the company has, as
+    well as the latest versions of these. For each store she also
+    has a list of the packagetype they have in stock, and which
+    versions they are. If any store has a type of package, but not
+    the latest version, she has to alert them!</p>
+<h2>Input</h2>
+<p>Starts with a row of two integers, the number of
+    packagetypes, <span class="tex2jax_process">$t$</span>, and the
+    number of stores, <span class="tex2jax_process">$b &lt;
+    10^3$</span> (<span class="tex2jax_process">$t \cdot b &lt;
+    10^6$</span>). Next follows a row of <span class="tex2jax_process">$b$</span> integers <span class="tex2jax_process">$t_ i \leq t$</span>, the number of
+    packagetypes each store has. At last follows rows describing
+    each package consisting of a name (consisting of a-z with
+    length 3-10), a string, and a versionnumber, an integer
+    <span class="tex2jax_process">$0 &lt; v \leq 10^3$</span>. The
+    first <span class="tex2jax_process">$t$</span> such lines
+    represents every package and their latest version, followed by
+    <span class="tex2jax_process">$t_1, t_2, \dots $</span> rows
+    representing the first, second <span class="tex2jax_process">$\dots $</span> store’s packagetypes and
+    versionnumbers (guaranteed to be <span class="tex2jax_process">$\leq $</span> the latest version). Note that
+    every package has a unique name and is mentioned at most once
+    for each store.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$b$</span> rows with one
+    integer each, the number of versionsteps that has to be updated
+    in total for each store.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on a number of testgroups. To
+    earn points in a testgroup all tests in it must succeed.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$t = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All stores has exactly one package with the wrong
+          version</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$t, b \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 3
+1 1 1
+envelope 5
+envelope 4
+envelope 3
+envelope 2
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+2
+shopbag 5
+backpack 5
+paperbag 5
+paperbag 5
+backpack 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+1 2 1 2
+easteregg 5
+sock 12
+easteregg 2
+sock 11
+easteregg 5
+easteregg 1
+easteregg 4
+sock 12
+</pre>
+</td>
+<td>
+<pre>3
+1
+4
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 2
+largebox 13
+smallbox 4
+flatpack 5
+smallbox 4
+largebox 10
+flatpack 4
+</pre>
+</td>
+<td>
+<pre>0
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

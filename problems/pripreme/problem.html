@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Ante and Goran are preparing <span class="tex2jax_process">$N$</span> teams of young ambitious students
+    for a student programming competition of students from
+    University of Zagreb. Both of them have one algorithm they
+    <em>have to explain to each team</em>. Of course, both can’t
+    work with the same team at the same time and none of them can
+    work with multiple teams simultaneously.</p>
+<p>You are given the time it takes for each team to understand
+    and implement an algorithm. Each algorithm lecture has to be
+    done without interruption. Determine the minimal time required
+    for Ante and Goran to do their lectures!</p>
+<p>For additional explanation, consult the sample test
+    clarifications.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span>, the number of teams.</p>
+<p>The following line contains <span class="tex2jax_process">$N$</span> space separated integers, where
+    the <span class="tex2jax_process">$i$</span>’th integer denotes
+    the time required for the <span class="tex2jax_process">$i$</span>’th team to understand and
+    implement an algorithm.</p>
+<p>All numbers in the input belong to the interval <span class="tex2jax_process">$[1, 3 \cdot 10^5]$</span>.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    number from the task.</p>
+<p><b class="bfseries">Clarification of the first example</b>:
+    Each team needs <span class="tex2jax_process">$2$</span> units
+    of time to understand and implement an algorithm. One of the
+    possible schedules is that Ante gives his lectures to team
+    <span class="tex2jax_process">$1$</span>, team <span class="tex2jax_process">$2$</span> and team <span class="tex2jax_process">$3$</span>, respectively, and Goran to team
+    <span class="tex2jax_process">$3$</span>, team <span class="tex2jax_process">$1$</span> and team <span class="tex2jax_process">$2$</span>, respectively.</p>
+<p><b class="bfseries">Clarification of the second example</b>:
+    One of the optimal schedules is that Ante gives lectures to
+    team <span class="tex2jax_process">$2$</span>, team
+    <span class="tex2jax_process">$3$</span> and team <span class="tex2jax_process">$1$</span>, respectively, but with a pause
+    lasting <span class="tex2jax_process">$1$</span> unit of time
+    between team <span class="tex2jax_process">$3$</span> and team
+    <span class="tex2jax_process">$1$</span>. Goran will give
+    lectures to team <span class="tex2jax_process">$1$</span>, team
+    <span class="tex2jax_process">$3$</span> and team <span class="tex2jax_process">$2$</span>, respectively.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2 2 2
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4 1 2
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 3 2 1
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

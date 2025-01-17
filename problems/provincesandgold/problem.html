@@ -1,0 +1,122 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/provincesandgold/file/statement/en/img-0001.jpg" class="illustration" src="/problems/provincesandgold/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://commons.wikimedia.org/wiki/File:Guaiana_ofte_de_Provincien_tusschen_Rio_de_las_Amazonas_ende_Rio_de_Yuiapari_ofte_Orinoque.jpg">
+        Wikipedia, public domain</a>
+</div>
+</div>
+<p>Jake is learning how to play the card game Dominion. In
+    Dominion, you can buy a variety of treasure, action, and
+    victory point cards – at the end of the game, the player with
+    the most victory points wins!</p>
+<p>Each turn, each player draws <span class="tex2jax_process">$5$</span> cards and can use their action and
+    treasure cards to obtain buying power in order to buy more
+    cards. Since Jake is just starting out, he’s decided to buy
+    only treasure and victory point cards.</p>
+<p>There are <span class="tex2jax_process">$3$</span> kinds of
+    victory cards in Dominion:</p>
+<ul class="itemize">
+<li>
+<p>Province (costs <span class="tex2jax_process">$8$</span>, worth <span class="tex2jax_process">$6$</span> victory points)</p>
+</li>
+<li>
+<p>Duchy (costs <span class="tex2jax_process">$5$</span>,
+        worth <span class="tex2jax_process">$3$</span> victory
+        points)</p>
+</li>
+<li>
+<p>Estate (costs <span class="tex2jax_process">$2$</span>,
+        worth <span class="tex2jax_process">$1$</span> victory
+        point)</p>
+</li>
+</ul>
+<p>And, there are <span class="tex2jax_process">$3$</span>
+    kinds of treasure cards:</p>
+<ul class="itemize">
+<li>
+<p>Gold (costs <span class="tex2jax_process">$6$</span>,
+        worth <span class="tex2jax_process">$3$</span> buying
+        power)</p>
+</li>
+<li>
+<p>Silver (costs <span class="tex2jax_process">$3$</span>,
+        worth <span class="tex2jax_process">$2$</span> buying
+        power)</p>
+</li>
+<li>
+<p>Copper (costs <span class="tex2jax_process">$0$</span>,
+        worth <span class="tex2jax_process">$1$</span> buying
+        power)</p>
+</li>
+</ul>
+<p>At the start of Jake’s turn, he draws <span class="tex2jax_process">$5$</span> of these cards. Given the number
+    of Golds, Silvers, and Coppers in Jake’s hand, calculate the
+    best victory card and best treasure card he could buy that
+    turn. Note that Jake can buy only one card.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case on a single line,
+    which contains three non-negative integers <span class="tex2jax_process">$G$</span>, <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$G
+    + S + C \le 5$</span>) indicating the number of Golds, Silvers,
+    and Coppers Jake draws in his hand.</p>
+<h2>Output</h2>
+<p>Output the best victory card (<tt class="ttfamily">Province</tt>, <tt class="ttfamily">Duchy</tt>, or
+    <tt class="ttfamily">Estate</tt>) and the best treasure card
+    (<tt class="ttfamily">Gold</tt>, <tt class="ttfamily">Silver</tt>, or <tt class="ttfamily">Copper</tt>)
+    Jake can buy this turn, separated with <tt class="ttfamily">"
+    or "</tt>, in this order. If Jake cannot afford any victory
+    cards, output only the best treasure card he can buy.</p>
+<h2>Sample Explanation</h2>
+<p>In Sample Input <span class="tex2jax_process">$1$</span>,
+    Jake has <span class="tex2jax_process">$1$</span> Silver in his
+    hand, which means he has <span class="tex2jax_process">$2$</span> buying power. This would allow him
+    to either buy an Estate or a Copper.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0 1 0
+</pre>
+</td>
+<td>
+<pre>Estate or Copper
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1 0
+</pre>
+</td>
+<td>
+<pre>Province or Gold
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0 0 1
+</pre>
+</td>
+<td>
+<pre>Copper
+</pre>
+</td>
+</tr>
+</table>
+</div>

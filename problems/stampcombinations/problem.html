@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/stampcombinations/file/statement/en/img-0001.jpg" class="illustration" src="/problems/stampcombinations/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by John Keyser
+      </div>
+</div>
+<p>You’re on your way to pick up a package from the store, wrap
+    it, and mail it. You want to bring a certain number of stamps
+    to mail it, and you have a long roll of stamps that you can
+    use. Now, over time, you’ve occasionally pulled off a stamp
+    from somewhere in the middle of the roll, and now you’re left
+    with a strip where stamps are clustered in groups, separated by
+    empty spaces.</p>
+<p>Being practical, you don’t want to tear individual stamps,
+    and so you’ll only tear the roll in between the clusters of
+    stamps. And, you don’t want to be left with multiple rolls of
+    stamps, so you can only pull these groups off of the beginning
+    or end of the roll. Is it possible to do this with the roll of
+    stamps you have?</p>
+<h2>Input</h2>
+<p>The first line of input consists of two integers,
+    <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \le m, n \le 10^6$</span>, <span class="tex2jax_process">$1 \le
+    m \cdot n \le 10^7$</span>, giving the number of clusters of
+    stamps and the number of queries you will have.</p>
+<p>The second line contains <span class="tex2jax_process">$m$</span> integers, <span class="tex2jax_process">$a_ i, 1 \le a_ i \le 100$</span>, separated
+    by spaces. These give the number of stamps in each cluster, in
+    order from the beginning to the end of the roll.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines each
+    contain one integer, <span class="tex2jax_process">$q$</span>,
+    <span class="tex2jax_process">$0 \le q \le 10^8$</span>, giving
+    a query, where a query is the number of stamps needed to mail a
+    package.</p>
+<h2>Output</h2>
+<p>For each query, output one line containing “<tt class="ttfamily">Yes</tt>” if it is possible to bring that number of
+    stamps, or ‘<tt class="ttfamily">No</tt>” if it is not possible
+    to bring that number of stamps.</p>
+<h2>Explanation of Sample</h2>
+<p>The roll contains <span class="tex2jax_process">$5$</span>
+    clusters of stamps.</p>
+<p>A group of <span class="tex2jax_process">$2$</span> stamps
+    can be taken by tearing just the first cluster of stamps off of
+    the roll.</p>
+<p>A group of <span class="tex2jax_process">$10$</span> stamps
+    can be taken by tearing the first two clusters of stamps off of
+    the roll.</p>
+<p>A group of <span class="tex2jax_process">$5$</span> stamps
+    can be taken by tearing the first cluster (of <span class="tex2jax_process">$2$</span>) and the last cluster (of
+    <span class="tex2jax_process">$3$</span>) off of the roll.</p>
+<p>A group of <span class="tex2jax_process">$17$</span> stamps
+    can be taken by taking the entire roll.</p>
+<p>It is not possible to take just <span class="tex2jax_process">$1$</span> stamp, since tearing the roll to
+    take the single stamp in the middle of the roll would not leave
+    you with a single roll of stamps, and it is not possible to
+    tear in the middle of a cluster.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+2 8 1 3 3
+2
+10
+5
+17
+1
+</pre>
+</td>
+<td>
+<pre>Yes
+Yes
+Yes
+Yes
+No
+</pre>
+</td>
+</tr>
+</table>
+</div>

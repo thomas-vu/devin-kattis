@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>A piano tuner indeed has a hard time earning his living.
+    (Un)fortunately, most people want their pianos tuned only when
+    they move to a new place, and thus also someone to help them
+    move the piano. Therefore, quite a few piano -tuners combine
+    their profession with lifting and transporting pianos. However,
+    as you might guess, they are not all that keen on doing a lot
+    of heavy-weight carrying in a day, and they certainly don’t
+    want to work weekends! In the city of Hampstead, the small
+    group of piano tuners have joined forces, and they help each
+    other by taking turns in moving the pianos. No piano tuner
+    transports more than one piano a day under any circumstance,
+    and they always work in pairs.</p>
+<p>As with most craftsmen, you seldom get to know precisely
+    when the job you request will be carried out. Instead, when
+    ordering a piano move, you are given an arbitrary long time
+    interval containing your desired moving day, during which your
+    piano is guaranteed to be moved by the piano tuners. This
+    strategy often makes the scheduling task easy, but this time
+    they just might have put themselves in some trouble. During the
+    last days, the piano tuners have received a lot of piano move
+    orders for the next <span class="tex2jax_process">$100$</span>
+    days, and they are afraid that even if they work weekends they
+    cannot keep their promises. To help them see if this is the
+    case, and to avoid it in the future, they would like a computer
+    program testing different scenarios.</p>
+<h2>Input</h2>
+<p>On the first line is a single positive integer <span class="tex2jax_process">$n \le 100$</span>, specifying the number of
+    test scenarios to follow. Each scenario begin with two positive
+    integers <span class="tex2jax_process">$m$</span> and
+    <span class="tex2jax_process">$p$</span> on a line of their
+    own, <span class="tex2jax_process">$m \le 1000$</span>, telling
+    the number of pianos to be moved, and <span class="tex2jax_process">$p \le 2000$</span> the number of piano
+    tuners. Then follow <span class="tex2jax_process">$m$</span>
+    lines, each containing a piano move order on the format of two
+    integers <span class="tex2jax_process">$b_ i$</span> and
+    <span class="tex2jax_process">$e_ i$</span> with <span class="tex2jax_process">$1 \le b_ i \le e_ i \le 100$</span> meaning
+    that between the beginning of day <span class="tex2jax_process">$b_ i$</span> and the end of day <span class="tex2jax_process">$e_ i$</span>, the piano <span class="tex2jax_process">$i$</span> must be moved. Day 1 is always a
+    Monday, 2 a Tuesday and so on.</p>
+<h2>Output</h2>
+<p>For each test scenario, output the text “<tt class="ttfamily">serious trouble</tt>” if the list of piano move
+    orders cannot be executed as promised even if all the
+    <span class="tex2jax_process">$p$</span> pianotuners worked
+    every day, the text “<tt class="ttfamily">weekend work</tt>” if
+    at least two piano tuners have to work some Saturday or Sunday,
+    or the text “<tt class="ttfamily">fine</tt>” if it is possible
+    to carry out all the moves during the five working days of the
+    weeks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3 2
+4 5
+5 6
+5 7
+2 5
+49 50
+50 50
+4 2
+8 10
+8 10
+8 10
+8 10
+</pre>
+</td>
+<td>
+<pre>
+weekend work
+fine
+serious trouble
+</pre>
+</td>
+</tr>
+</table>
+</div>

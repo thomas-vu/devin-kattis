@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>A large shipment of doodads has just arrived, and each
+    doodad has a suggested retail price of <span class="tex2jax_process">$b$</span> cents. You’ve noticed that
+    consumers are much more likely to purchase goods when most of
+    the trailing digits are the same. For example, items are more
+    likely to be priced at <span class="tex2jax_process">$99$</span> cents rather than <span class="tex2jax_process">$57$</span> cents. So to make your goods more
+    appealing, you’ve decided to sell your goods in bundles. To
+    make a bundle, you choose a positive integer <span class="tex2jax_process">$k$</span>, and sell <span class="tex2jax_process">$k$</span> doodads for <span class="tex2jax_process">$k \times b$</span> cents. With an
+    appropriate choice of <span class="tex2jax_process">$k$</span>
+    you can have a more pleasing price. For example, selling
+    <span class="tex2jax_process">$57$</span>-cent doodads in
+    bundles of size <span class="tex2jax_process">$7$</span> means
+    that each bundle sells for <span class="tex2jax_process">$399$</span> cents, which has two trailing
+    <span class="tex2jax_process">$9$</span>s, rather than no
+    trailing <span class="tex2jax_process">$9$</span>s of
+    <span class="tex2jax_process">$57$</span>. This idea of
+    trailing <span class="tex2jax_process">$9$</span>s can be
+    generalized to any other trailing digit: bundles of
+    <span class="tex2jax_process">$692$</span> <span class="tex2jax_process">$57$</span>-cent doodads sell for
+    <span class="tex2jax_process">$39\, 444$</span> cents (three
+    trailing <span class="tex2jax_process">$4$</span>s) and bundles
+    of one million doodads sell for <span class="tex2jax_process">$57\, 000\, 000$</span> cents (six trailing
+    <span class="tex2jax_process">$0$</span>s).</p>
+<p>After a little thought, you realize that you do not want to
+    make your bundles too large—not only can the price be
+    excessive, but who really needs several million doodads? For
+    any type of doodad, your marketing department has a maximum
+    bundle price of <span class="tex2jax_process">$a$</span>.</p>
+<p>Given the price of a doodad, the desired trailing digit, and
+    the maximum price of a bundle, write a program that optimizes
+    the trailing digits.</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing three integers
+    <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$d$</span>, and <span class="tex2jax_process">$a$</span>, where <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \leq b &lt; 10^{6}$</span>) is the price of a doodad in cents,
+    <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0 \leq d \leq 9$</span>) is the desired
+    trailing digit, and <span class="tex2jax_process">$a$</span>
+    (<span class="tex2jax_process">$b \leq a &lt; 10^{10\,
+    000}$</span>) is the maximum price of a bundle.</p>
+<h2>Output</h2>
+<p>Output the maximum number of consecutive occurrences of
+    <span class="tex2jax_process">$d$</span> that can appear at the
+    end of a bundle price, given that the price of the bundle
+    cannot exceed <span class="tex2jax_process">$a$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>57 9 1000
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>57 4 40000
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>57 4 39000
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

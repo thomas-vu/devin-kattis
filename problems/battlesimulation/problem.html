@@ -1,0 +1,123 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/battlesimulation/file/statement/en/img-0001.jpg" class="illustration" src="/problems/battlesimulation/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Godzilla_-_PS4-PS3_-_Ultimate_mayhem_(E3_Trailer)_-_Kiryu_v_Goji.png">
+<small class="tiny">Picture by Bandai Namco via Wikimedia
+        Commons</small></a>
+</div>
+</div>
+<p>A terrible monster is rampaging through Neo Tokyo 5! The
+    Earth Defense Force (EDF) has sent a mech unit<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> to defeat the monster. Because there
+    is only a single mech unit available after previous monster
+    rampages, the EDF has decided to simulate the upcoming battle
+    between the mech and the monster before launching an assault.
+    The EDF noted that the monster’s attack pattern can be
+    simulated by a series of moves that it performs in succession.
+    When denoting each of its moves with a single letter, the
+    attack pattern can be simulated as a single string, which
+    should be read from left to right. The monster has the
+    following moves:</p>
+<ul class="itemize">
+<li>
+<p>Rake, denoted by the letter ‘<tt class="ttfamily">R</tt>’;</p>
+</li>
+<li>
+<p>Bite, denoted by the letter ‘<tt class="ttfamily">B</tt>’;</p>
+</li>
+<li>
+<p>Laser breath, denoted by the letter ‘<tt class="ttfamily">L</tt>’.</p>
+</li>
+</ul>
+<p>In order to defeat the monster, the mech must perform a
+    counter move per move that the monster makes:</p>
+<ul class="itemize">
+<li>
+<p>Slice, denoted by the letter ‘<tt class="ttfamily">S</tt>’, counters the monster’s rake;</p>
+</li>
+<li>
+<p>Kick, denoted by the letter ‘<tt class="ttfamily">K</tt>’, counters the monster’s bite;</p>
+</li>
+<li>
+<p>Shield, denoted by the letter ‘<tt class="ttfamily">H</tt>’, counters the monster’s laser
+        breath;</p>
+</li>
+</ul>
+<p>However, there is one catch. When the monster performs a
+    subsequent combination of the three moves <em>Rake</em>,
+    <em>Bite</em> and <em>Laser breath</em>, in any order, it
+    becomes a very powerful attack for which the mech must perform
+    a single counter move called <em>Combo breaker</em>, denoted by
+    the letter ‘<tt class="ttfamily">C</tt>’. A single <em>Combo
+    breaker</em> absorbs the entire combination of three moves. Any
+    following moves from the monster will have to be countered
+    separately or as part of a new combination. A move of the
+    monster can never be part of more than one combination.</p>
+<p>Through extensive analysis of the monster’s past behaviour,
+    the EDF is now able to reliably predict the actions of the
+    monster ahead of time. You are given a string representing the
+    moves that the monster will use when battling the mech. The EDF
+    needs you to write a program that outputs the sequence of moves
+    that the mech must perform in order to defeat the monster.</p>
+<h2>Input</h2>
+<p>A single line containing a string of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$1\, 000\, 000$</span> characters, consisting
+    of the letters ‘<tt class="ttfamily">R</tt>’, ‘<tt class="ttfamily">B</tt>’ and ‘<tt class="ttfamily">L</tt>’.</p>
+<h2>Output</h2>
+<p>Output a single string consisting of the letters denoting
+    the moves that are to be made in succession by the mech in
+    order to defeat the monster.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+RRBBBLLR
+</pre>
+</td>
+<td>
+<pre>
+SSKKKHHS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+RBLLLBRR
+</pre>
+</td>
+<td>
+<pre>
+CHCS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+RBLBR
+</pre>
+</td>
+<td>
+<pre>
+CKS
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,44 @@
+<div class="problembody">
+<p>You are given a sequence, in the form of a string with
+    characters ‘<tt class="ttfamily">0</tt>’, ‘<tt class="ttfamily">1</tt>’, and ‘<tt class="ttfamily">?</tt>’ only.
+    Suppose there are <span class="tex2jax_process">$k$</span>
+    ‘<tt class="ttfamily">?</tt>’s. Then there are <span class="tex2jax_process">$2^ k$</span> ways to replace each
+    ‘<tt class="ttfamily">?</tt>’ by a ‘<tt class="ttfamily">0</tt>’ or a ‘<tt class="ttfamily">1</tt>’, giving
+    <span class="tex2jax_process">$2^ k$</span> different 0-1
+    sequences (0-1 sequences are sequences with only zeroes and
+    ones).</p>
+<p>For each 0-1 sequence, define its number of inversions as
+    the minimum number of adjacent swaps required to sort the
+    sequence in non-decreasing order. In this problem, the sequence
+    is sorted in non-decreasing order precisely when all the zeroes
+    occur before all the ones. For example, the sequence <tt class="ttfamily">11010</tt> has <span class="tex2jax_process">$5$</span> inversions. We can sort it by the
+    following moves: <tt class="ttfamily">11010</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">11001</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">10101</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">01101</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">01011</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">00111</tt>.</p>
+<p>Find the sum of the number of inversions of the <span class="tex2jax_process">$2^ k$</span> sequences, modulo <span class="tex2jax_process">$1\, 000\, 000\, 007$</span> (<span class="tex2jax_process">$10^9 + 7$</span>).</p>
+<h2>Input</h2>
+<p>The first and only line of input contains the input string,
+    consisting of characters ‘<tt class="ttfamily">0</tt>’,
+    ‘<tt class="ttfamily">1</tt>’, and ‘<tt class="ttfamily">?</tt>’ only, and the input string has between
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$500\, 000$</span> characters, inclusive.</p>
+<h2>Output</h2>
+<p>Output an integer indicating the aforementioned number of
+    inversions modulo <span class="tex2jax_process">$1\, 000\,
+    000\, 007$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+?0?
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

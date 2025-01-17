@@ -1,0 +1,186 @@
+<div class="problembody">
+<p>Nowadays, there are smartphone applications that instantly
+    translate text and even solve math problems if you just point
+    your phone’s camera at them. Your job is to implement a much
+    simpler functionality reminiscent of the past – add two
+    integers written down as ASCII art.</p>
+<p>An ASCII art is a matrix of characters, exactly <span class="tex2jax_process">$7$</span> rows high, with each individual
+    character either a dot or the lowercase letter <tt class="ttfamily">x</tt>.</p>
+<p>An expression of the form <span class="tex2jax_process">$a +
+    b$</span> is given, where both <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are positive integers. The
+    expression is converted into ASCII art by writing all the
+    expression characters (the digits of <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> as well as the <tt class="ttfamily">+</tt> sign) as <span class="tex2jax_process">$7
+    \times 5$</span> matrices, and concatenating the matrices
+    together with a single column of dot characters between
+    consecutive individual matrices. The exact matrices
+    corresponding to the digits and the <tt class="ttfamily">+</tt>
+    sign are as folows:</p>
+<div class="figure">
+<center>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+x...x
+x...x
+x...x
+x...x
+x...x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+....x
+....x
+....x
+....x
+....x
+....x
+....x
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+....x
+....x
+xxxxx
+x....
+x....
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+....x
+....x
+xxxxx
+....x
+....x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+x...x
+x...x
+x...x
+xxxxx
+....x
+....x
+....x
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+x....
+x....
+xxxxx
+....x
+....x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+x....
+x....
+xxxxx
+x...x
+x...x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+....x
+....x
+....x
+....x
+....x
+....x
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+x...x
+x...x
+xxxxx
+x...x
+x...x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+xxxxx
+x...x
+x...x
+xxxxx
+....x
+....x
+xxxxx
+</pre>
+</div>
+<div class="minipage" style="width:51.0pt">
+<pre>
+.....
+..x..
+..x..
+xxxxx
+..x..
+..x..
+.....
+</pre>
+</div>
+</center>
+</div>
+<p>Given an ASCII art for an expression of the form
+    <span class="tex2jax_process">$a + b$</span>, find the result
+    of the addition and write it out in the ASCII art form.</p>
+<h2>Input</h2>
+<p>Input consists of exactly <span class="tex2jax_process">$7$</span> lines and contains the ASCII art
+    for an expression of the form <span class="tex2jax_process">$a
+    + b$</span>, where both <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are positive integers consisting
+    of at most <span class="tex2jax_process">$9$</span> decimal
+    digits and written without leading zeros.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$7$</span> lines
+    containing ASCII art corresponding to the result of the
+    addition, without leading zeros.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+....x.xxxxx.xxxxx.x...x.xxxxx.xxxxx.xxxxx.......xxxxx.xxxxx.xxxxx
+....x.....x.....x.x...x.x.....x.........x...x...x...x.x...x.x...x
+....x.....x.....x.x...x.x.....x.........x...x...x...x.x...x.x...x
+....x.xxxxx.xxxxx.xxxxx.xxxxx.xxxxx.....x.xxxxx.xxxxx.xxxxx.x...x
+....x.x.........x.....x.....x.x...x.....x...x...x...x.....x.x...x
+....x.x.........x.....x.....x.x...x.....x...x...x...x.....x.x...x
+....x.xxxxx.xxxxx.....x.xxxxx.xxxxx.....x.......xxxxx.xxxxx.xxxxx
+</pre>
+</td>
+<td>
+<pre>
+....x.xxxxx.xxxxx.xxxxx.x...x.xxxxx.xxxxx
+....x.....x.....x.x.....x...x.x.........x
+....x.....x.....x.x.....x...x.x.........x
+....x.xxxxx.xxxxx.xxxxx.xxxxx.xxxxx.....x
+....x.x.........x.....x.....x.....x.....x
+....x.x.........x.....x.....x.....x.....x
+....x.xxxxx.xxxxx.xxxxx.....x.xxxxx.....x
+</pre>
+</td>
+</tr>
+</table>
+</div>

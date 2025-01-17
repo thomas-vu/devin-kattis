@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>A strictly increasing sequence is a sequence of numbers
+    <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>
+    such that, for <span class="tex2jax_process">$1 &lt; i \le
+    n$</span>, <span class="tex2jax_process">$a_{i-1} &lt; a_
+    i$</span>. A subsequence of <span class="tex2jax_process">$a_1,
+    a_2, \ldots , a_ n$</span> is identified by a strictly
+    increasing sequence of indices, <span class="tex2jax_process">$x_1, x_2, \ldots , x_ m$</span> where
+    <span class="tex2jax_process">$1 \leq x_1$</span> and
+    <span class="tex2jax_process">$x_ m \leq n$</span>. We say
+    <span class="tex2jax_process">$a_{x_1}, a_{x_2}, \ldots , a_{x_
+    m}$</span> is a subsequence of <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>. For
+    example, given the sequence <span class="tex2jax_process">$8,
+    90, 4, 10\, 000, 2, 18, 60, 172, 99$</span>, we can say that
+    <span class="tex2jax_process">$90, 4, 10\, 000, 18$</span> is a
+    subsequence but <span class="tex2jax_process">$8, 90, 18, 2,
+    60$</span> is not. The subsequence <span class="tex2jax_process">$4, 18, 60, 172$</span> is a subsequence that
+    is, itself, strictly increasing.</p>
+<p>Given a sequence of numbers, can you write a program to find
+    a strictly increasing subsequence that is as long as
+    possible?</p>
+<h2>Input</h2>
+<p>Input has up to <span class="tex2jax_process">$200$</span>
+    test cases, one per line. Each test case starts with an integer
+    <span class="tex2jax_process">$1 \le n \le 200$</span>,
+    followed by <span class="tex2jax_process">$n$</span> integer
+    values, all in the range <span class="tex2jax_process">$[0,10^8]$</span>. A value of zero for
+    <span class="tex2jax_process">$n$</span> marks the end of
+    input.</p>
+<h2>Output</h2>
+<p>For each test case, output the length of the longest
+    strictly increasing subsequence, followed the values of the
+    lexicographically-earliest such sequence. A sequence
+    <span class="tex2jax_process">$a_1, a_2, \ldots , a_ m$</span>
+    is lexicographically earlier than <span class="tex2jax_process">$b_1, b_2, \ldots , b_ m$</span> if some
+    <span class="tex2jax_process">$a_ i &lt; b_ i$</span> and
+    <span class="tex2jax_process">$a_ j = b_ j$</span> for all
+    <span class="tex2jax_process">$j &lt; i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 1 25 2 3
+4 1 2 2 3
+8 90 4 10000 2 18 60 172 99
+0
+</pre>
+</td>
+<td>
+<pre>3 1 2 3
+3 1 2 3
+4 2 18 60 99
+</pre>
+</td>
+</tr>
+</table>
+</div>

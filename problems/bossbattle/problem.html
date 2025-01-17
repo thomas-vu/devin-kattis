@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>You are stuck at a boss level of your favourite video game.
+    The boss battle happens in a circular room with <span class="tex2jax_process">$n$</span> indestructible pillars arranged
+    evenly around the room. The boss hides behind an unknown
+    pillar. Then the two of you proceed in turns.</p>
+<ul class="itemize">
+<li>
+<p>First, in your turn, you can throw a bomb past one of
+        the pillars. The bomb will defeat the boss if it is behind
+        that pillar, or either of the adjacent pillars.</p>
+</li>
+<li>
+<p>Next, if the boss was not defeated, it may either stay
+        where it is, or use its turn to move to a pillar that is
+        adjacent to its current position. With the smoke of the
+        explosion you cannot see this movement.</p>
+</li>
+</ul>
+<p>The last time you tried to beat the boss you failed because
+    you ran out of bombs. This time you want to gather enough bombs
+    to make sure that whatever the boss does you will be able to
+    beat it. What is the minimum number of bombs you need in order
+    to defeat the boss in the worst case? See Figure 1 for an
+    example.</p>
+<div class="figure" id="fig:boss">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{fig}" src="/problems/bossbattle/file/statement/en/img-0001.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Example for <span class="tex2jax_process">$n=4$</span>. In this case <span class="tex2jax_process">$2$</span> bombs are enough. Grey
+          pillars represent pillars where the boss cannot be
+          hiding. The bomb is represented in black.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 100$</span>), the number
+        of pillars in the room.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the minimum number of bombs needed to defeat the boss
+    in the worst case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

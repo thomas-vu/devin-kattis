@@ -1,0 +1,138 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/conveyorbelts2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/conveyorbelts2/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You are an employee of the Boxing And Processing Company and
+    you are tasked with distributing boxes in one of the company’s
+    enormous warehouses. At BAPC Ltd., boxes travel by conveyor
+    belt. Two conveyor belts can be merged into one by letting one
+    drop its content onto the other. On the other hand, a belt can
+    be split into two by using a splitter, which sends a specific
+    portion of its input to its first output and the rest to its
+    second output. Normally your splitters are adjustable, being
+    able to distribute its input over its output belts in any
+    conceivable ratio, but in an attempt to cut costs your boss has
+    ordered cheap knock-off splitters which can only distribute its
+    input in a fixed ratio <span class="tex2jax_process">$a:b$</span>. Instead of arguing with your
+    boss about how you really need some <span class="tex2jax_process">$c:d$</span> splitters, you decide to make
+    them yourself.</p>
+<p>Of course, with your frugal boss, you have to watch your
+    costs. You cannot build your splitter system in such a way that
+    there are boxes that never leave the system. Nor can you use
+    splitters that never receive any boxes. Finally, you cannot use
+    too many <span class="tex2jax_process">$a: b$</span> splitters
+    in total.</p>
+<p>Given the ratios <span class="tex2jax_process">$a:b$</span>
+    and <span class="tex2jax_process">$c:d$</span>, construct a
+    network of belts and at most <span class="tex2jax_process">$200$</span> knock-off <span class="tex2jax_process">$a:b$</span> splitters that has a single
+    global input belt and two global output belts over which the
+    global input is distributed in a ratio <span class="tex2jax_process">$c:d$</span>.</p>
+<p>Note that a splitter of ratio <span class="tex2jax_process">$x : y$</span> sends exactly <span class="tex2jax_process">$\frac x{x+y}$</span> of the incoming boxes
+    to the first output and exactly <span class="tex2jax_process">$\frac y{x+y}$</span> of them to the second
+    output.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains two integers <span class="tex2jax_process">$1\leq a,b\leq 10^9$</span> with
+        <span class="tex2jax_process">$a+b\leq 10^9$</span>
+        denoting the ratio <span class="tex2jax_process">$a:b$</span> of your knock-off
+        splitter.</p>
+</li>
+<li>
+<p>The second line contains two integers <span class="tex2jax_process">$1\leq c,d\leq 10^9$</span> with
+        <span class="tex2jax_process">$c+d\leq 10^9$</span>
+        denoting the ratio <span class="tex2jax_process">$c:d$</span> of your desired
+        splitter.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains an integer <span class="tex2jax_process">$1\leq n\leq 200$</span>, the number of
+        <span class="tex2jax_process">$a:b$</span> splitters
+        used.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$n$</span>
+        lines, the <span class="tex2jax_process">$i$</span>-th of
+        which contains two integers <span class="tex2jax_process">$-2\leq l_ i,r_ i&lt;n$</span>.</p>
+</li>
+</ul>
+<p>Here <span class="tex2jax_process">$l_ i$</span> is the
+    index of the splitter connected to the left output of the
+    <span class="tex2jax_process">$i$</span>-th splitter, where it
+    deposits <span class="tex2jax_process">$a/(a+b)$</span> of its
+    input. Similarly <span class="tex2jax_process">$r_ i$</span> is
+    the index of the splitter receiving <span class="tex2jax_process">$b/(a+b)$</span> of the input of the
+    <span class="tex2jax_process">$i$</span>-th splitter. The
+    splitters are indexed starting from <span class="tex2jax_process">$0$</span>. The global input is connected to
+    splitter <span class="tex2jax_process">$0$</span>. The special
+    values <span class="tex2jax_process">$-1$</span> and
+    <span class="tex2jax_process">$-2$</span> for <span class="tex2jax_process">$l_ i$</span> and <span class="tex2jax_process">$r_ i$</span> correspond to the first and
+    second global output, which need to receive <span class="tex2jax_process">$c/(c+d)$</span> and <span class="tex2jax_process">$d/(c+d)$</span> of the global input
+    respectively.</p>
+<p>Note that you cannot place a splitter in such a way that no
+    box ever reaches it, nor in such a way that a box that passes
+    through it will never reach the output.</p>
+<p>If there are multiple possible solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+3 2
+</pre>
+</td>
+<td>
+<pre>1
+-2 -1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+3 4
+</pre>
+</td>
+<td>
+<pre>3
+-1 1
+2 1
+0 -2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+1 2
+</pre>
+</td>
+<td>
+<pre>3
+-2 1
+2 0
+1 -1
+</pre>
+</td>
+</tr>
+</table>
+</div>

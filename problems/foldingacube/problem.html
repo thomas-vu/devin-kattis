@@ -1,0 +1,116 @@
+<div class="problembody">
+<p>It is well known that a set of six unit squares that are
+    attached together in a “cross” can be folded into a cube.</p>
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{folding-1.png}" src="/problems/foldingacube/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+<p>But what about other initial shapes? That is, given six unit
+    squares that are attached together along some of their sides,
+    can we form a unit cube by folding this arrangement?</p>
+<h2>Input</h2>
+<p>Input consists of <span class="tex2jax_process">$6$</span>
+    lines each containing <span class="tex2jax_process">$6$</span>
+    characters, describing the initial arrangement of unit squares.
+    Each character is either a <tt>.</tt>, meaning it is empty, or
+    a <tt>#</tt> meaning it is a unit square.</p>
+<p>There are precisely <span class="tex2jax_process">$6$</span>
+    occurrences of <tt>#</tt> indicating the unit squares. These
+    form a connected component, meaning it is possible to reach any
+    <tt>#</tt> from any other <tt>#</tt> without touching a
+    <tt>.</tt> by making only horizontal and vertical movements.
+    Furthermore, there is no <span class="tex2jax_process">$2
+    \times 2$</span> subsquare consisting of only <tt>#</tt>. That
+    is, the pattern</p>
+<pre>
+##
+##
+</pre>
+<p>does not appear in the input.</p>
+<h2>Output</h2>
+<p>If you can fold the unit squares into a cube, display
+    <tt>can fold</tt>. Otherwise display <tt>cannot fold</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>......
+......
+######
+......
+......
+......
+</pre>
+</td>
+<td>
+<pre>cannot fold
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>......
+#.....
+####..
+#.....
+......
+......
+</pre>
+</td>
+<td>
+<pre>can fold
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>..##..
+...#..
+..##..
+...#..
+......
+......
+</pre>
+</td>
+<td>
+<pre>cannot fold
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>......
+...#..
+...#..
+..###.
+..#...
+......
+</pre>
+</td>
+<td>
+<pre>can fold
+</pre>
+</td>
+</tr>
+</table>
+</div>

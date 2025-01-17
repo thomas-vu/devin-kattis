@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>Psychologists at Wassamatta University believe that humans
+    are able to more easily deal with words than with numbers. So
+    they have devised experiments to find out if this is true. In
+    an interesting twist, one of their experiments deals with using
+    words which represent numbers. Rather than adding numbers, they
+    want to add words. You are a research programmer on the
+    project, and your job is to write a program that demonstrates
+    this ability.</p>
+<h2>Input</h2>
+<p>Input is a sequence of up to <span class="tex2jax_process">$2000$</span> commands, one per line, ending
+    at end of file. Each command is a definition, a calculation, or
+    a clear. All tokens within a command are separated by single
+    spaces.</p>
+<p>A definition has the format <tt class="tt">def x y</tt>
+    where <tt class="tt">x</tt> is a variable name and <tt class="tt">y</tt> is a an integer in the range <span class="tex2jax_process">$[-1\, 000, 1\, 000]$</span>. No two
+    variables are ever defined to have the same numeric value at
+    the same time. If <tt class="tt">x</tt> had been defined
+    previously, defining it again erases its old definition.
+    Variable names are up to <span class="tex2jax_process">$30$</span> lowercase characters, each
+    character from the range a to z.</p>
+<p>A calculation command starts with the word <tt class="tt">calc</tt>, and is followed by one to <span class="tex2jax_process">$15$</span> more variable names separated by
+    addition or subtraction operators. The end of a <tt class="tt">calc</tt> command is an equals sign. For example:</p>
+<center>
+<tt class="tt">calc foo + bar - car =</tt>
+</center>
+<p>The <tt class="tt">clear</tt> command instructs your program
+    to forget all of its definitions.</p>
+<h2>Output</h2>
+<p>Your program should produce no output for definitions, but
+    for calculations it should produce the value of the
+    calculation. If there is not a word for the result, or some
+    word in the calculation has not been defined, then the result
+    of the calculation should be <tt class="tt">unknown</tt>. The
+    word <tt class="tt">unknown</tt> is never used as a variable in
+    the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+def foo 3
+calc foo + bar =
+def bar 7
+def programming 10
+calc foo + bar =
+def is 4
+def fun 8
+calc programming - is + fun =
+def fun 1
+calc programming - is + fun =
+clear
+</pre>
+</td>
+<td>
+<pre>
+foo + bar = unknown
+foo + bar = programming
+programming - is + fun = unknown
+programming - is + fun = bar
+</pre>
+</td>
+</tr>
+</table>
+</div>

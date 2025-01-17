@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Two thieves (who strongly “recommended” us not to reveal
+    their names) has broken into the central bank of Logland, where
+    the country’s cash reserve is stored. In Logland, the currency
+    has the <span class="tex2jax_process">$k$</span> denominations
+    <span class="tex2jax_process">$1, 2, 4, 8, \ldots , 2^{k -
+    1}$</span>, and the bank currently stores <span class="tex2jax_process">$x_ i$</span> coins of denominations
+    <span class="tex2jax_process">$2^ i$</span>.</p>
+<p>Thieves live by a very strict honor code, which stipulates
+    that any loot grabbed must be divided evenly between the
+    theives. Unfortunately (for the thieves), this may mean that
+    some loot must be left behind. For example, if the bank
+    contained a single coin of denomination <span class="tex2jax_process">$8$</span>, and two coins of denomination
+    <span class="tex2jax_process">$2$</span>, there is no way they
+    could bring the <span class="tex2jax_process">$8$</span> coin.
+    Instead, they would have to take one coin of value <span class="tex2jax_process">$2$</span> each, leaving more than half of
+    the possible loot!</p>
+<p>Since neither leaving loot nor solving NP-hard problems are
+    things thieves like to do, they have asked you to compute the
+    minimum value of the loot they must leave behind, in order to
+    be able to split the remaining loot evenly.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$1 \le k \le 10^6$</span> – the number of
+    denominations in Logland. The next line contains the
+    <span class="tex2jax_process">$k$</span> integers <span class="tex2jax_process">$0 \le x_0, x_1, \dots , x_{k-1} \le
+    2^{30}$</span>, the number of coins of the denominations
+    <span class="tex2jax_process">$2^0, 2^1, \dots , 2^{k -
+    1}$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line, the minimum amount of money the
+    thieves must leave behind. Since this number may be very large,
+    output it modulo the prime number <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+0 2 0 1
+</pre>
+</td>
+<td>
+<pre>
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+1000000 1 1 1 1
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+3 3 3 3 3
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

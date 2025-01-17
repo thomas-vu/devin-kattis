@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Vi is a coach for her university’s ICPC organization and is
+    working on creating teams for their upcoming regional contest.
+    They recently competed in the North America Qualifier and Vi is
+    using the results as well as each person’s preferences to
+    create as many teams of three as possible to send to
+    regionals.</p>
+<p>More specifically, <span class="tex2jax_process">$n$</span>
+    people from Vi’s university competed in the North America
+    Qualifier (NAQ), and each person got a unique rank from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. The person at rank <span class="tex2jax_process">$r$</span> has two parameters, <span class="tex2jax_process">$a_ r$</span> and <span class="tex2jax_process">$b_ r$</span>, where <span class="tex2jax_process">$a_ r \le r \le b_ r$</span>, indicating that
+    their two teammates must have a rank between <span class="tex2jax_process">$a_ r$</span> and <span class="tex2jax_process">$b_ r$</span>, inclusive. Teams must have
+    exactly three people.</p>
+<p>Due to the collaborative environment, Vi notes that for
+    every pair of individuals at ranks <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span>, if <span class="tex2jax_process">$i &lt; j$</span>, then <span class="tex2jax_process">$a_ i \le a_ j$</span> and <span class="tex2jax_process">$b_ i \le b_ j$</span>.</p>
+<p>Compute the maximum number of teams that Vi can send to
+    regionals</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3 \le n \le 50$</span>), which is the number
+    of competitors in the local contest.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains two integers <span class="tex2jax_process">$a_
+    r$</span> and <span class="tex2jax_process">$b_ r$</span>
+    (<span class="tex2jax_process">$a_ r \le r \le b_ r$</span>),
+    where <span class="tex2jax_process">$r$</span> is the
+    competitor’s rank. These are the limits of the ranks of the
+    competitors that can be teamed with this competitor. The
+    competitors are given in rank order, from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. If <span class="tex2jax_process">$i &lt; j$</span>, then <span class="tex2jax_process">$a_ i \le a_ j$</span> and <span class="tex2jax_process">$b_ i \le b_ j$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the maximum number of
+    teams Vi can send to the regional contest.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1 2
+1 2
+2 5
+2 6
+2 6
+5 6
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

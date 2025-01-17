@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>In Tree City, there are <span class="tex2jax_process">$n$</span> tourist attractions uniquely
+    labeled <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. The attractions are
+    connected by a set of <span class="tex2jax_process">$n-1$</span> bidirectional roads in such a
+    way that a tourist can get from any attraction to any other
+    using some path of roads.</p>
+<p>You are a member of the Tree City planning committee. After
+    much research into tourism, your committee has discovered a
+    very interesting fact about tourists: they LOVE number theory!
+    A tourist who visits an attraction with label <span class="tex2jax_process">$x$</span> will then visit another attraction
+    with label <span class="tex2jax_process">$y$</span> if
+    <span class="tex2jax_process">$y&gt;x$</span> and <span class="tex2jax_process">$y$</span> is a multiple of <span class="tex2jax_process">$x$</span>. Moreover, if the two attractions
+    are not directly connected by a road the tourist will
+    necessarily visit all of the attractions on the path connecting
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, even if they aren’t multiples of
+    <span class="tex2jax_process">$x$</span>. The number of
+    attractions visited includes <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> themselves. Call this the
+    <span class="tex2jax_process">$length$</span> of a path.</p>
+<p>Consider this city map:</p>
+<center>
+<img alt="\includegraphics{tourists.jpg}" src="/problems/tourists/file/statement/en/img-0001.jpg" style="width:; height:"/>
+</center>
+<p>Here are all the paths that tourists might take, with the
+    lengths for each:<br/>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 2=4$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 3=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 4=2$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 5=2$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 6=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 7=4$</span>,</span><br/>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 8=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 9=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$1 \rightarrow 10=2$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$2 \rightarrow 4=5$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$2 \rightarrow 6=6$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$2 \rightarrow 8=2$</span>,</span><br/>
+<span class="mbox" style="width:"><span class="tex2jax_process">$2 \rightarrow 10=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$3 \rightarrow 6=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$3 \rightarrow 9=3$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$4 \rightarrow 8=4$</span>,</span>
+<span class="mbox" style="width:"><span class="tex2jax_process">$5 \rightarrow 10=3$</span></span></p>
+<p>To take advantage of this phenomenon of tourist behavior,
+    the committee would like to determine the number of attractions
+    on paths from an attraction <span class="tex2jax_process">$x$</span> to an attraction <span class="tex2jax_process">$y$</span> such that <span class="tex2jax_process">$y&gt;x$</span> and <span class="tex2jax_process">$y$</span> is a multiple of <span class="tex2jax_process">$x$</span>. You are to compute the <b class="bf">sum</b> of the lengths of all such paths. For the example
+    above, this is: <span class="tex2jax_process">$4+3+2+2+3+4+3+3+2+5+6+2+3+3+3+4+3=55$</span>.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input will consist of an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \le n \le 200\, 000$</span>) indicating the number of
+    attractions. Each of the following <span class="tex2jax_process">$n-1$</span> lines will consist of a pair of
+    space-separated integers <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1
+    \le i&lt;j \le n$</span>), denoting that attraction
+    <span class="tex2jax_process">$i$</span> and attraction
+    <span class="tex2jax_process">$j$</span> are directly connected
+    by a road. It is guaranteed that the set of attractions is
+    connected.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the sum of the lengths of
+    all paths between two attractions <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> such that <span class="tex2jax_process">$y&gt;x$</span> and <span class="tex2jax_process">$y$</span> is a multiple of <span class="tex2jax_process">$x$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+3 4
+3 7
+1 4
+4 6
+1 10
+8 10
+2 8
+1 5
+4 9
+</pre>
+</td>
+<td>
+<pre>
+55
+</pre>
+</td>
+</tr>
+</table>
+</div>

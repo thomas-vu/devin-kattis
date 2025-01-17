@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/whacamole/file/statement/en/img-0001.png" class="illustration" src="/problems/whacamole/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>While visiting a traveling fun fair you suddenly have an
+    urge to break the high score in the Whac-a-Mole game. The goal
+    of the Whac-a-Mole game is to... well... whack moles. With a
+    hammer. To make the job easier you have first consulted the
+    fortune teller and now you know the exact appearance patterns
+    of the moles.
+
+    <p>The moles appear out of holes occupying the <span class="tex2jax_process">$n^2$</span> integer points <span class="tex2jax_process">$(x, y)$</span> satisfying <span class="tex2jax_process">$0 \le x,y &lt; n$</span> in a
+    two-dimensional coordinate system. At each time step, some
+    moles will appear and then disappear again before the next time
+    step. After the moles appear but before they disappear, you are
+    able to move your hammer in a straight line to any position
+    <span class="tex2jax_process">$(x_2, y_2)$</span> that is at
+    distance at most <span class="tex2jax_process">$d$</span> from
+    your current position <span class="tex2jax_process">$(x_1,
+    y_1)$</span>. For simplicity, we assume that you can only move
+    your hammer to a point having integer coordinates. A mole is
+    whacked if the center of the hole it appears out of is located
+    on the line between <span class="tex2jax_process">$(x_1,
+    y_1)$</span> and <span class="tex2jax_process">$(x_2,
+    y_2)$</span> (including the two endpoints). Every mole whacked
+    earns you a point. When the game starts, before the first time
+    step, you are able to place your hammer anywhere you see
+    fit.</p>
+<h2>Input</h2>
+<p>The input consists of several test cases. Each test case
+    starts with a line containing three integers <span class="tex2jax_process">$n,d$</span> and <span class="tex2jax_process">$m$</span>, where <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$d$</span> are as described above, and
+    <span class="tex2jax_process">$m$</span> is the total number of
+    moles that will appear (<span class="tex2jax_process">$1 \leq n
+    \leq 20$</span>, <span class="tex2jax_process">$1 \leq d \le
+    5$</span>, and <span class="tex2jax_process">$1 \leq m \leq 1\,
+    000$</span>). Then follow <span class="tex2jax_process">$m$</span> lines, each containing three
+    integers <span class="tex2jax_process">$x, y$</span> and
+    <span class="tex2jax_process">$t$</span> giving the position
+    and time of the appearance of a mole (<span class="tex2jax_process">$0 \leq x, y &lt; n$</span> and <span class="tex2jax_process">$1 \leq t \leq 10$</span>). No two moles will
+    appear at the same place at the same time.</p>
+<p>The input is ended with a test case where <span class="tex2jax_process">$n = d = m = 0$</span>. This case should not
+    be processed.</p>
+<h2>Output</h2>
+<p>For each test case output a single line containing a single
+    integer, the maximum possible score achievable.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 2 6
+0 0 1
+3 1 3
+0 1 2
+0 2 2
+1 0 2
+2 0 2
+5 4 3
+0 0 1
+1 2 1
+2 4 1
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+4
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

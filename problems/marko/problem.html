@@ -1,0 +1,169 @@
+<div class="problembody">
+<p>Good old Marko came across a new feature on his mobile phone
+    – T9 input! His phone has a keyboard consisting of numbers
+    looking like this:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>abc</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p>def</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>ghi</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p>jkl</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p>mno</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>8</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>9</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>pqrs</p>
+</td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>tuv</p>
+</td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>wxyz</p>
+</td>
+</tr>
+</table>
+</center>
+<p>In order to input a word using this keyboard, one needs to
+    press a key multiple times for the required letter. More
+    specifically, if the required letter is the first letter mapped
+    to the key, one key press is needed, if it’s the second, two
+    key presses are needed and so on. For instance, if we want to
+    input the word “giht”, we will press the following keys: g-4
+    i-444 h-44 t-8. The new possibility Marko discovered enables
+    you to input text more easily because you don’t need several
+    presses per letter anymore, just one. The software will try to
+    figure out what word from the dictionary you are trying to
+    input.</p>
+<p>Marko is quite sceptical of new technologies (at least new
+    for him) and he is afraid that errors will be frequent. That is
+    the reason why he decided to test his hypothesis that the
+    errors are frequent. Marko knows by heart the whole dictionary
+    in the mobile phone. The dictionary consists of <span class="tex2jax_process">$N$</span> words consisting of lowercase
+    letters from the English alphabet, the total length of the
+    words not exceeding <span class="tex2jax_process">$1\, 000\,
+    000$</span> characters. He will give an array of key presses
+    <span class="tex2jax_process">$S$</span>, of total length at
+    most <span class="tex2jax_process">$1\, 000$</span>, and wants
+    to know how many words from the dictionary can be mapped to the
+    given array of key presses if the T9 input feature is used.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span>, the number of words in the
+    dictionary. (<span class="tex2jax_process">$1 \leq N \leq 1\,
+    000$</span>). Each of the following <span class="tex2jax_process">$N$</span> lines contains a unique word of
+    length between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$1\, 000$</span> letters, using
+    only the characters a–z. The last line of input contains the
+    string <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$1 \leq |S| \leq 1\, 000$</span>) consisting
+    of digits <span class="tex2jax_process">$2$</span>–<span class="tex2jax_process">$9$</span>.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the number of
+    words from the dictionary possible to construct from the
+    letters on the keys determined by the string <span class="tex2jax_process">$S$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+tomo
+mono
+dak
+6666
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+ja
+la
+52
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+dom
+fon
+tom
+366
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

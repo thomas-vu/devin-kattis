@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>Pero is a passionate lover of riddles. The newest type of
+    riddles he has come across requires the solver to check whether
+    the given word is a multigram.</p>
+<p>A multigram is a word that consists of concatenating two or
+    more words that are all mutually anagrams. The first of these
+    words is called the root of the multigram. For instance, the
+    word <tt class="ttfamily">bbabab</tt> is a multigram with the
+    root <tt class="ttfamily">bba</tt> because it consists of
+    anagrams <tt class="ttfamily">bba</tt> and <tt class="ttfamily">bab</tt>.</p>
+<p>Help Pero solve the riddle by determining whether his word
+    is a multigram and determining its root in case it is. If there
+    are multiple possible roots of the multigram, output the
+    shortest.</p>
+<p>Note: Two words are mutually anagrams if one of them can be
+    obtained from the other by changing the letter order.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains a word of length
+    at most <span class="tex2jax_process">$100\, 000$</span>
+    lowercase English characters.</p>
+<h2>Output</h2>
+<p>If the given word is not a multigram, output <tt class="ttfamily">-1</tt>. Otherwise, output the shortest root of the
+    given word in one line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+aaaa
+</pre>
+</td>
+<td>
+<pre>
+a
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+ab
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+bbabab
+</pre>
+</td>
+<td>
+<pre>
+bba
+</pre>
+</td>
+</tr>
+</table>
+</div>

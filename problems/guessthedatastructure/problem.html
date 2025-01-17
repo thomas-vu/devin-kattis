@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>There is a bag-like data structure, supporting two
+    operations:</p>
+<p><span class="tex2jax_process">$1\ x$</span>: Throw an
+    element <span class="tex2jax_process">$x$</span> into the
+    bag.</p>
+<p><span class="tex2jax_process">$2$</span>: Take out an
+    element from the bag.</p>
+<p>Given a sequence of operations with return values, you’re
+    going to guess the data structure. It is a stack (Last-In,
+    First-Out), a queue (First-In, First-Out), a priority-queue
+    (Always take out larger elements first) or something else that
+    you can hardly imagine!</p>
+<h2>Input</h2>
+<p>There are several test cases. Each test case begins with a
+    line containing a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n\leq 1000$</span>). Each of the next
+    <span class="tex2jax_process">$n$</span> lines is either a
+    type-1 command, or an integer <span class="tex2jax_process">$2$</span> followed by an integer
+    <span class="tex2jax_process">$x$</span>. This means that
+    executing the type-2 command returned the element <span class="tex2jax_process">$x$</span>. The value of <span class="tex2jax_process">$x$</span> is always a positive integer not
+    larger than <span class="tex2jax_process">$100$</span>. The
+    input is terminated by end-of-file (EOF). The size of input
+    file does not exceed 1MB.</p>
+<h2>Output</h2>
+<p>For each test case, output one of the following:</p>
+<p><tt class="ttfamily">stack</tt><br/>
+    It’s definitely a stack.</p>
+<p><tt class="ttfamily">queue</tt><br/>
+    It’s definitely a queue.</p>
+<p><tt class="ttfamily">priority queue</tt><br/>
+    It’s definitely a priority queue.</p>
+<p><tt class="ttfamily">impossible</tt><br/>
+    It can’t be a stack, a queue or a priority queue.</p>
+<p><tt class="ttfamily">not sure</tt><br/>
+    It can be more than one of the three data structures mentioned
+    above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+6
+1 1
+1 2
+1 3
+2 3
+2 2
+2 1
+2
+1 1
+2 2
+4
+1 2
+1 1
+2 1
+2 2
+7
+1 2
+1 5
+1 1
+1 3
+2 5
+1 4
+2 4
+1
+2 1
+</pre>
+</td>
+<td>
+<pre>
+queue
+not sure
+impossible
+stack
+priority queue
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>After the zombie invasion, everything in the country of
+    Aabelrt was destroyed. To rebuild as quickly as possible, the
+    government of Aabelrt decided to build the minimum possible
+    number of roads between cities to make sure each city can reach
+    every other city. Unfortunately, there is more construction
+    work to be done—now that there are roads between cities, some
+    residents are having trouble telling when they have crossed
+    from one city into another. To remedy this, the government of
+    Aabelrt has decided to give each city a number from
+    <span class="tex2jax_process">$\{ 1, 2, \ldots , k\} $</span>,
+    making sure that pairs of cities with a road between them get
+    different numbers. But this process is not free—when a city is
+    given a number, there is a significant amount of rebranding and
+    construction to be done. The cost of assigning a city the
+    number <span class="tex2jax_process">$x$</span> is <span class="tex2jax_process">$x$</span> coins. To keep with the tradition
+    of efficiency, the government would like to assign numbers in
+    the cheapest way possible.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers <span class="tex2jax_process">$1 \leq n \leq
+    10^5$</span> and <span class="tex2jax_process">$1 \leq k \leq
+    20$</span>, representing the number of cities and the largest
+    number available to assign to cities.</p>
+<p>The following <span class="tex2jax_process">$n - 1$</span>
+    lines of input each contain two space-separated integers
+    <span class="tex2jax_process">$1 \leq u, v \leq n$</span>
+    (<span class="tex2jax_process">$u \neq v$</span>) indicating
+    there is a bidirectional road between cities <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>.</p>
+<p>It is guaranteed that each city is reachable from every
+    other city.</p>
+<h2>Output</h2>
+<p>If it is possible to assign numbers such that each adjacent
+    pair of cities get different numbers, output how many coins
+    will be used in the cheapest way to do so. If it is impossible
+    to do so, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 2
+3 1
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 2
+1 4
+2 5
+3 4
+4 5
+5 6
+4 7
+5 8
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 3
+1 4
+2 5
+3 4
+4 5
+5 6
+4 7
+5 8
+</pre>
+</td>
+<td>
+<pre>11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+1 2
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

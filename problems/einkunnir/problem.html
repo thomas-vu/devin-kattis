@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>Karen has to review the multiple choice exams some students
+    turned in. For each question there is exactly one correct
+    answer. Each question is worth equally much in terms of the
+    grade and there is no penalty for wrong answers. Karen doesn’t
+    enjoy going over this by hand and has thus made a little
+    program where the students mark a cross in each question. The
+    program is designed so that you can not turn in the exam unless
+    exactly one cross is marked in each question. Help Karen
+    calculate the grades.</p>
+<h2>Input</h2>
+<p>On the first line there are two integers <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$N$</span> denoting the number of questions
+    on the exam and the number of students. On the next line the
+    answer key is given, upper case letters from <tt class="ttfamily">A</tt> to <tt class="ttfamily">Z</tt> separated by
+    spaces, where for example <tt class="ttfamily">A D E</tt> means
+    the answers to questions <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> on a three question exam are
+    <tt class="ttfamily">A</tt>, <tt class="ttfamily">D</tt> and
+    <tt class="ttfamily">E</tt> in that order. Then there are
+    <span class="tex2jax_process">$2N$</span> lines giving the
+    student submissions. First there is a line with the student’s
+    name, the length of the name is at most <span class="tex2jax_process">$20$</span> characters, and then a line with
+    the student’s answers in the same format as the answer key.</p>
+<h2>Output</h2>
+<p>Output one line for each student containing their name and
+    their grade. The grades are on the scale from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$10$</span> and they should be printed in the
+    same order as they are given in the input. Grades are given as
+    either whole numbers or a whole number plus a half, given with
+    exactly one trailing digit. Grades are rounded up on values
+    equally far from two possible values, e.g. <span class="tex2jax_process">$8.25$</span> would be rounded to
+    <span class="tex2jax_process">$8.5$</span> but <span class="tex2jax_process">$7.24$</span> would be rounded to
+    <span class="tex2jax_process">$7$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq S \leq 5 \cdot
+          10^3, 1 \leq N \leq 100$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+C C C C B
+Valdi
+C C C C B
+Arnkell
+C C C C A
+Emma
+C C B B A
+</pre>
+</td>
+<td>
+<pre>Valdi: 10.0
+Arnkell: 8.0
+Emma: 4.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 5
+C A C D B C C A D C
+Gunnar
+C C B C D A A C D D
+Agla
+C A C D B C C A D C
+Abela
+A A D A D A C A B C
+Herluf
+C A B D C C C D D A
+Britt
+C C D D A C C D C C
+</pre>
+</td>
+<td>
+<pre>Gunnar: 2.0
+Agla: 10.0
+Abela: 4.0
+Herluf: 6.0
+Britt: 5.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,114 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/collapse/file/statement/en/img-0001.jpg" class="illustration" src="/problems/collapse/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.geograph.org.uk/photo/2052741">Paul
+        Buckingham</a>
+</div>
+</div>Trouble has come to the remote group of islands known as
+    Insumulia. Due to an unfortunate combination of
+    over-consumption, natural climate variations, and generally
+    difficult conditions, the island of Incunabula has run out of
+    trees. Because several other Insumulian islands depended on
+    trees from Incunabula through trade, its collapse will have
+    repercussions all over Insumulia. In this problem, we’ll
+    simulate a (highly oversimplified) model of the situation to
+    determine the effects of the collapse of Incunabula.
+
+    <p>We model the situation as follows. Each island has a
+    <em>threshold</em> <span class="tex2jax_process">$T_ i$</span>
+    on the amount of incoming goods (for simplicity we assume that
+    there is only a single commodity of goods) it needs to receive
+    per lunar cycle in order for the society of the island to
+    sustain itself. If the amount of incoming goods drops below the
+    threshold, society on the island will collapse and die out, and
+    the island will no longer provide goods to other islands,
+    thereby potentially causing them to collapse as well. Each
+    island provides some amount of goods to a number of other
+    islands. If an island collapses, we assume that goods that
+    would have been delivered to that island is effectively lost;
+    it does not get redistributed and delivered to other islands
+    instead. Also, once an island dies out it is not repopulated
+    (until possibly long after the ongoing collapses have
+    finished).</p>
+<p>Your job is to write a program to compute the number of
+    islands that survive after the potential chain reaction of
+    collapses that is caused by the collapse of Incunabula.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100\, 000$</span>), the number of islands in
+    Insumulia.</p>
+<p>Then follow <span class="tex2jax_process">$N$</span> lines,
+    describing each island. The <span class="tex2jax_process">$i$</span>’th such description starts with
+    two integers <span class="tex2jax_process">$T_ i$</span>,
+    <span class="tex2jax_process">$K_ i$</span>, where <span class="tex2jax_process">$0 \le T_ i \le 50\, 000$</span> is the
+    amount of goods the <span class="tex2jax_process">$i$</span>’th
+    island needs to receive in order to survive, and <span class="tex2jax_process">$0 \le K_ i \le N-1$</span> is the number of
+    other islands the <span class="tex2jax_process">$i$</span>’th
+    islands receives goods from. The remainder of the description
+    of the <span class="tex2jax_process">$i$</span>’th island is a
+    list of <span class="tex2jax_process">$K_ i$</span> pairs of
+    integers. The <span class="tex2jax_process">$j$</span>’th such
+    pair, <span class="tex2jax_process">$S_{ij}$</span>,
+    <span class="tex2jax_process">$V_{ij}$</span>, indicates that
+    island <span class="tex2jax_process">$i$</span> receives
+    <span class="tex2jax_process">$V_{ij}$</span> units of goods
+    from island <span class="tex2jax_process">$S_{ij}$</span> each
+    lunar cycle. You may assume that the <span class="tex2jax_process">$S_{ij}$</span>’s are distinct and between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span> (inclusive), and that none of them
+    equals <span class="tex2jax_process">$i$</span>. The values
+    <span class="tex2jax_process">$V_{ij}$</span> satisfy
+    <span class="tex2jax_process">$1 \le V_{ij} \le 1000$</span>
+    and their sum is at least <span class="tex2jax_process">$T_
+    i$</span>. The sum of all the <span class="tex2jax_process">$K_
+    i$</span>’s for all the <span class="tex2jax_process">$N$</span> islands is at most <span class="tex2jax_process">$500\, 000$</span>.</p>
+<p>Islands are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>, and Incunabula is island number
+    <span class="tex2jax_process">$1$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of islands surviving the
+    collapses.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+0 0
+25 3 1 10 3 10 4 10
+10 1 2 10
+10 1 2 10
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+0 0
+20 3 1 10 3 10 4 10
+10 1 2 10
+10 1 2 10
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,170 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/leidangur/file/statement/en/img-0001.jpg" class="illustration" src="/problems/leidangur/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/AQgXd4">flickr.com</a>
+</div>
+</div>
+<p>Little Óli is going off on a journey. On the way he will
+    enounter three types of things: money, gold and jewels. When he
+    encounters one of these things he can put it at the top in his
+    backpack, if he wants to. But Óli will also encounter bad guys
+    on the way. There are three kinds of bad guys and all of them
+    will demand Óli gives them something. Evil bankers will demand
+    money, evil gold diggers will demand gold and evil jewelers
+    will demand jewels.</p>
+<p>Óli doesn’t have much choice and has to placate these bad
+    guys, needing to give each of them one instance of the thing
+    they demand. But Óli’s backpack is quite narrow so he can only
+    reach for the item that’s at the top of his bag, that is to say
+    the item he last put in the bag. If Óli wants an item further
+    down in the bag he has to throw away the items above it first,
+    unable to recover them later. If Óli doesn’t have the item the
+    bad guy asks for, then he will be unable to complete his
+    journey.</p>
+<p>Help Óli check if he can complete his journey, and if so,
+    how many things he can bring home at a maximum.</p>
+<h2>Input</h2>
+<p>The input contains one line denoting Óli’s journey and
+    consists of the following letters:</p>
+<ul class="itemize">
+<li>
+<p>‘<tt class="ttfamily">p</tt>’ denotes money Óli can pick
+        up.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">g</tt>’ denotes gold Óli can pick
+        up.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">o</tt>’ denotes jewels Óli can
+        pick up.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">P</tt>’ denotes an evil
+        banker.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">G</tt>’ denotes an evil gold
+        digger.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">O</tt>’ denotes an evil
+        jeweler.</p>
+</li>
+<li>
+<p>‘<tt class="ttfamily">.</tt>’ denotes an empty
+        space.</p>
+</li>
+</ul>
+<p>Óli starts on the cell furthest to the left and always walks
+    to the right, so if Óli leaves an item behind, then he cannot
+    return and pick it up later. The journey is over when Óli
+    reaches the cell furthest to the right.</p>
+<p>The journey contains at least <span class="tex2jax_process">$1$</span> cell and at most <span class="tex2jax_process">$10^6$</span> cells.</p>
+<h2>Output</h2>
+<p>If Óli can’t finish the journey, print a single line
+    containing <tt class="ttfamily">Neibb</tt>. Otherwise print
+    three integers, each on their own line, the maximum amount of
+    money, gold and jewels Óli can bring home after the
+    journey.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are no bad guys.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The journey is at most <span class="tex2jax_process">$20$</span> cells.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>..pg.P.g..
+</pre>
+</td>
+<td>
+<pre>0
+1
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>pgo..OPG
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>.pooop......
+</pre>
+</td>
+<td>
+<pre>2
+0
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

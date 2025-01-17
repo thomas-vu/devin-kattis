@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>The player starts with a prize of $1, and is asked a
+    sequence of <span class="tex2jax_process">$n$</span> questions.
+    For each question, he may</p>
+<ul class="itemize">
+<li>
+<p>quit and keep his prize.</p>
+</li>
+<li>
+<p>answer the question. If wrong, he quits with nothing. If
+        correct, the prize is doubled, and he continues with the
+        next question.</p>
+</li>
+</ul>
+<p>After the last question, he quits with his prize. The player
+    wants to maximize his expected prize.</p>
+<p>Once each question is asked, the player is able to assess
+    the probability <span class="tex2jax_process">$p$</span> that
+    he will be able to answer it. For each question independently,
+    we assume that <span class="tex2jax_process">$p$</span> is a
+    random variable uniformly distributed over the range
+    <span class="tex2jax_process">$t \ldots 1$</span>.</p>
+<h2>Input</h2>
+<p>Input is a number of lines, each with two numbers: an
+    integer <span class="tex2jax_process">$1 \le n \le 30$</span>,
+    and a real <span class="tex2jax_process">$0 \le t \le
+    1$</span>. Input is terminated by a line containing <tt class="ttfamily">0 0</tt>. This line should not be processed. There
+    are at most <span class="tex2jax_process">$300$</span> test
+    cases.</p>
+<h2>Output</h2>
+<p>For each input <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$t$</span>, print the player’s
+    expected prize, if he plays the best strategy. Output should be
+    rounded to three fractional digits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 0.3
+2 0.6
+24 0.25
+0 0
+</pre>
+</td>
+<td>
+<pre>
+1.357
+2.560
+230.138
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/primematrix/file/statement/en/img-0001.jpg" class="illustration" src="/problems/primematrix/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.flickr.com/photos/chrisinplymouth/4262775481">Chris</a>
+</div>
+</div>
+<p>A <i class="it">Prime Matrix</i> is defined as an
+    <span class="tex2jax_process">$n \times n$</span> square matrix
+    satisfying:</p>
+<ul class="itemize">
+<li>
+<p>All numbers in the matrix are positive integers, and</p>
+</li>
+<li>
+<p>The numbers in each row are distinct, and</p>
+</li>
+<li>
+<p>The numbers in each column are distinct, and</p>
+</li>
+<li>
+<p>The sum of numbers in each row is a prime number,
+        and</p>
+</li>
+<li>
+<p>The sum of numbers in each column is a prime number.</p>
+</li>
+</ul>
+<p>There may be multiple valid prime matrices out there, but
+    you don’t want the numbers in the matrix to be too large. Given
+    a bound <span class="tex2jax_process">$b$</span>, can you find
+    a prime matrix so that it contains only integers between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$b$</span>?</p>
+<h2>Input</h2>
+<p>The input has a single line with two integers: <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 50$</span>) and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$2
+    \leq b \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Output any valid <span class="tex2jax_process">$n \times
+    n$</span> prime matrix. The output must have <span class="tex2jax_process">$n$</span> rows. Each row must have
+    <span class="tex2jax_process">$n$</span> space-separated
+    integers between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$b$</span> without leading
+    zeroes. If no such matrix exists, output “<tt class="tt">impossible</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 9
+</pre>
+</td>
+<td>
+<pre>
+1 2 8
+7 1 3
+3 4 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

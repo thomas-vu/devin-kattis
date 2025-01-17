@@ -1,0 +1,71 @@
+<div class="problembody">
+<p><em>Note that this is an easier version of the problem
+    armystrengthhard.</em></p>
+<p>The next MechaGodzilla invasion is on its way to Earth. And
+    once again, Earth will be the battleground for an epic war.
+    MechaGodzilla’s army consists of many nasty alien monsters,
+    such as Space Godzilla, King Gidorah, and MechaGodzilla
+    herself. To stop them and defend Earth, Godzilla and her
+    friends are preparing for the battle.</p>
+<p>Each army consists of many different monsters. Each monster
+    has a strength that can be described by a positive integer. The
+    larger the value, the stronger the monster. The war will
+    consist of a series of battles. In each battle, the weakest of
+    all the monsters that are still alive is killed. If there are
+    several weakest monsters, but all of them in the same army, one
+    of them is killed at random. If both armies have at least one
+    of the weakest monsters, a random weakest monster of
+    MechaGodzilla’s army is killed. The war is over if in one of
+    the armies all monsters are dead. The dead army lost, the other
+    one won. You are given the strengths of all the monsters. Find
+    out who wins the war.</p>
+<h2>Input</h2>
+<p>The first line of the input file contains an integer
+    <span class="tex2jax_process">$T\leq 50$</span> specifying the
+    number of test cases. Each test case is preceded by a blank
+    line.</p>
+<p>Each test case starts with line containing two positive
+    integers <span class="tex2jax_process">$N_ G$</span> and
+    <span class="tex2jax_process">$N_ M$</span> – the number of
+    monsters in Godzilla’s and in MechaGodzilla’s army. You can
+    assume that <span class="tex2jax_process">$N_ G, N_ M\leq
+    500$</span>.</p>
+<p>Two lines follow. The first one contains <span class="tex2jax_process">$N_ G$</span> positive integers – the
+    strengths of the monsters in Godzilla’s army. Similarly, the
+    second one contains <span class="tex2jax_process">$N_ M$</span>
+    positive integers – the strengths of the monsters in
+    MechaGodzilla’s army. All strengths are at most <span class="tex2jax_process">$10\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line with a string that
+    describes the outcome of the battle. If it is sure that
+    Godzilla’s army wins, output the string “<tt class="tt">Godzilla</tt>”. If it is sure that MechaGodzilla’s army
+    wins, output the string “<tt class="tt">MechaGodzilla</tt>”.
+    Otherwise, output the string “<tt class="tt">uncertain</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+
+1 1
+1
+1
+
+3 2
+1 3 2
+5 5
+</pre>
+</td>
+<td>
+<pre>
+Godzilla
+MechaGodzilla
+</pre>
+</td>
+</tr>
+</table>
+</div>

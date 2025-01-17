@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>You are sharing a large, circular pizza with <span class="tex2jax_process">$n-1$</span> of your friends. Your technique
+    for slicing the pizza is shown in Figure 1; you rotate the
+    pizza clockwise about its center by angle <span class="tex2jax_process">$\theta $</span>, and then you make a slice
+    from the center of the pizza straight to the right. You repeat
+    this process, rotating by the same angle <span class="tex2jax_process">$\theta $</span> and slicing to the right
+    until you have done it a total of <span class="tex2jax_process">$n$</span> times.</p>
+<div class="figure" id="fig:slice">
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{slice}" src="/problems/biggest/file/statement/en/img-0001.png" style="width:35.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Rotate-and-slice pizza division technique.
+      </div>
+</div>
+<p>Of course, this isn’t really a good way to divide a pizza
+    (unless <span class="tex2jax_process">$\theta $</span> is
+    well-chosen). Some of the resulting slices may be larger than
+    others, and you may not even end up with <span class="tex2jax_process">$n$</span> different slices. You don’t care
+    so much about fairness. You just want to know how big the
+    largest slice will be, so you can take it for yourself.</p>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$1 \leq m \leq 200$</span> indicating the
+    number of test cases that follow. The following <span class="tex2jax_process">$m$</span> lines each contain one test case.
+    Each test case gives the pizza radius in centimeters,
+    <span class="tex2jax_process">$r$</span>, followed by the
+    number of people sharing the pizza, <span class="tex2jax_process">$n$</span>, followed by the rotation angle,
+    <span class="tex2jax_process">$\theta $</span>. The quantities
+    <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$\theta $</span> are all positive. The value
+    <span class="tex2jax_process">$r$</span> is an integer no
+    greater than 100, and <span class="tex2jax_process">$n$</span>
+    is an integer no greater than <span class="tex2jax_process">$10^8$</span>. The angle <span class="tex2jax_process">$\theta $</span> is given as an integer
+    number of degrees, followed by an integer number of minutes and
+    an integer number of seconds. Degrees are between 0 and 359
+    (inclusive), while minutes and seconds are between 0 and 59
+    (inclusive).</p>
+<h2>Output</h2>
+<p>For each test case, print the area in square centimeters of
+    the largest resulting slice of pizza. You do not need to worry
+    about the precise formatting of the answer (e.g. number of
+    places past the decimal), but the absolute error of your output
+    must be smaller than <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+20 6 60 0 0
+20 6 59 59 59
+30 20 33 30 0
+40 200 120 0 0
+</pre>
+</td>
+<td>
+<pre>
+209.439510
+209.444358
+263.108385
+1675.516082
+</pre>
+</td>
+</tr>
+</table>
+</div>

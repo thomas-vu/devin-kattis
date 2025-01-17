@@ -1,0 +1,150 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/laegdyfirlandinu/file/statement/en/img-0001.jpg" class="illustration" src="/problems/laegdyfirlandinu/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/67pJnh">flickr.com</a>
+</div>
+</div>
+<p>Oh boy, oh dear. Is there a low pressure system over the
+    country or what?</p>
+<p>Little Siggi is going mad over the terrible weather that has
+    been ravaging the country as of late. He then learned it was
+    the fault of all these damned low pressure systems, but low
+    pressure systems form, as the name implies, when the area has a
+    lower air pressure than the air around it.</p>
+<p>Tomorrow he wants to go out to play, but is scared that
+    there will be a low pressure system over the country. On
+    vedur.is he finds a forecast which is divided into cells, with
+    each cell showing the expected air pressure in that area
+    tomorrow. Can you help Siggi check if the forecast for tomorrow
+    contains any low pressure systems?</p>
+<p>A cell on the foreceast is considered to be a low pressure
+    syste if its pressure is lower than all four of its neighbours,
+    below, above, left and to the right (not diagonally). Note that
+    cells on the boundary of the forecast can’t contain a low
+    pressure system since they do not have four neighbours.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$3
+    \leq n,m \leq 50$</span>), the number of rows and the number of
+    columns of the forecast.</p>
+<p>Then there are <span class="tex2jax_process">$n$</span>
+    lines, one for each row, where each line contains <span class="tex2jax_process">$m$</span> integers, one for each column.
+    Each integer denotes the air pressure in millibars in that cell
+    and the values are in the interval from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$10^9$</span>. The forecast will never
+    contain two adjacent cells with the same air pressure.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">Jebb</tt> if the forecast
+    contains a low pressure system, otherwise print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 3$</span>,
+          <span class="tex2jax_process">$m = 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>45</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+1 2 3 4 5
+1 4 6 3 5
+1 2 3 4 5
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+10 12 10 16 14
+12 14 15 17 15
+13 15 18 18 16
+13 15 19 18 17
+10 14 16 15 10
+10 12 20 13 10
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+10 12 13 16 14
+12 14 15 17 15
+13 15 18 18 16
+13 15 14 18 17
+10 13 16 15 10
+10 12 15 13 10
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+</div>

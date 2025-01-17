@@ -1,0 +1,75 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Competitive Programmer is very tired of reading
+      long statements unrelated to the actual problem. So, here’s a
+      problem statement that’s just a single sentence!
+    </blockquote>
+<p>Given an array <span class="tex2jax_process">$a_1, a_2,
+    \ldots , a_ n$</span> of integers, find the following value,
+    modulo <span class="tex2jax_process">$1\, 000\, 003\,
+    233$</span>:</p><span class="tex2jax_process">\[ \sum _{i =
+    1}^{n} \sum _{j=i}^{n} \min \{ a_ i, a_{i+1}, \ldots , a_ j\}
+    \times \max \{ a_ i, a_{i+1}, \ldots , a_ j\} \]</span>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span>, denoting the size of the array
+    (<span class="tex2jax_process">$1 \leq n \leq 300\,
+    000$</span>).</p>
+<p>The second line of input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>, denoting
+    the integers in the array (<span class="tex2jax_process">$1
+    \leq a_ i \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Output a single integer denoting the value of the expression
+    above, modulo <span class="tex2jax_process">$1\, 000\, 003\,
+    233$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 3
+</pre>
+</td>
+<td>
+<pre>25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 1 2
+</pre>
+</td>
+<td>
+<pre>22
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1 1 1 1 1 1
+</pre>
+</td>
+<td>
+<pre>21
+</pre>
+</td>
+</tr>
+</table>
+</div>

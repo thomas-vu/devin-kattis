@@ -1,0 +1,111 @@
+<div class="problembody">
+<p>Consider a black and white image, where every pixel has a
+    value of either 0 or 1. Define a region of the image as a
+    collection of pixels that all have the same value, and are
+    interconnected. Specifically, for any two pixels in a region,
+    there is a path between them only going up, down, left or
+    right, and only going through other pixels with the same
+    value.</p>
+<p>You wish to see a border completely around every region in
+    the image. You can choose certain regions to draw a border
+    around; when you do, you draw a border around the entire
+    region, including any internal “holes” (regions entirely
+    contained within the region). If two regions are adjacent, then
+    you can supply the border between then by drawing the border
+    around one, or the other, or both. What is the minimum number
+    of regions you need to draw a border around in order to ensure
+    that every region has a border?</p>
+<p>Consider these examples:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=1.0\textwidth ]{borders.png}" src="/problems/borders/file/statement/en/img-0001.png" style="width:100.00%"/>
+</center>
+</div>
+<ul class="itemize">
+<li>
+<p>In the first case, the minimum is three. Because they’re
+        on the edges, there is no choice but to draw a border
+        around all three.</p>
+</li>
+<li>
+<p>In the second case, the minimum is one. Drawing a border
+        around the 0 region puts a border around the 1 region.</p>
+</li>
+<li>
+<p>In the third case, the answer is eight. Drawing a border
+        around all of the regions on the edges puts a border around
+        the center region.</p>
+</li>
+</ul>
+<p><br/></p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le n,m \le 100$</span>), where <span class="tex2jax_process">$n$</span> is the number of rows in the
+    image, and <span class="tex2jax_process">$m$</span> is the
+    number of columns.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains a single string of length <span class="tex2jax_process">$m$</span>, consisting only of the characters
+    ‘<tt class="tt">0</tt>’ and ‘<tt class="tt">1</tt>’. This is
+    the image.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    regions you must draw a border around to ensure that every
+    region has a border.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+000
+111
+000
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+000
+010
+000
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+010
+101
+010
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+</div>

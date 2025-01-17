@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Most styles of graphical user interface make use of lots of
+    rectangles. Buttons are rectangular, menus are rectangular and
+    windows are rectangular. Some styles of user interface exhibit
+    a softer appearance by using rounded rectangles for some
+    components. As illustrated below, a rounded rectangle replaces
+    the sharp corners of an ordinary rectangle with a smooth
+    quarter circles.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{rect}" src="/problems/roundedbuttons/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>Using a coordinate system with the <span class="tex2jax_process">$X$</span> axis pointing to the right and the
+    <span class="tex2jax_process">$Y$</span> axis pointing down, a
+    rounded rectangle is described by giving the <span class="tex2jax_process">$x, y$</span> locations of the left and top
+    edges. The width, <span class="tex2jax_process">$w$</span>,
+    describes the distance between the left and right edges, and
+    the height, <span class="tex2jax_process">$h$</span>, describes
+    the distance between the top and the bottom edges. The radius
+    used for the quarter-circle rounded corners is given by the
+    <span class="tex2jax_process">$r$</span> parameter.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing an integer <span class="tex2jax_process">$1 \le n \le 100$</span>. The next
+    <span class="tex2jax_process">$n$</span> lines each contain one
+    test case. A test case has a rounded rectangle description and
+    mouse click locations. The rectangle is given by <span class="tex2jax_process">$5$</span> real numbers for the parameters
+    <span class="tex2jax_process">$x$</span> <span class="tex2jax_process">$y$</span> <span class="tex2jax_process">$w$</span> <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$r$</span>. These parameters always describe
+    a legal rounded rectangle. In particular, it is guaranteed that
+    <span class="tex2jax_process">$0 \le x, y \le 1\, 000$</span>,
+    <span class="tex2jax_process">$0 &lt; w, h \le 1\, 000$</span>,
+    and <span class="tex2jax_process">$0 \leq 2r \leq \min
+    (w,h)$</span>. After the rectangle description is an integer
+    <span class="tex2jax_process">$0 \le m \le 1\, 000$</span>.
+    Following this on the same line are <span class="tex2jax_process">$m$</span> pairs of real numbers, each pair
+    representing the <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> coordinates of a mouse
+    click. All mouse clicks are in the range <span class="tex2jax_process">$0 \leq x, y \leq 2\, 000$</span>. All real
+    numbers given as input have at most <span class="tex2jax_process">$3$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>For each mouse click location, output <tt class="ttfamily">inside</tt> if the location is inside the rounded
+    rectangle, or <tt class="ttfamily">outside</tt> otherwise. A
+    mouse click right on the edge of a rounded rectangle should be
+    classified as inside.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 8 14 13 3 5 8 6 15 8 12 11 14 21 2.5 20
+2 2 13 14 4 5 4 4 4 16 13 14 3 3 3 9
+85.7 114.7 3.2 6.0 1.2 3 86.3 114.8 88.1 118.2 85.9 120.7
+</pre>
+</td>
+<td>
+<pre>
+outside
+outside
+inside
+outside
+inside
+
+inside
+outside
+inside
+outside
+inside
+
+outside
+inside
+outside
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

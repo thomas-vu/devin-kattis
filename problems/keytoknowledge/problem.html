@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/keytoknowledge/file/statement/en/img-0001.png" class="illustration" src="/problems/keytoknowledge/file/statement/en/img-0001.png"/>
+<div class="description">
+        source: xkcd.com/1289
+      </div>
+</div>
+<p>A while ago a class of students took an exam. It consisted
+    of true-or-false questions only, but the questions were really
+    tough! Even afterward, with the help of the book, lecture notes
+    and each other, the students are not sure what all the correct
+    answers were. They could ask the professor of course, but he is
+    not the kind of guy you would dare to disturb with questions
+    that betray your ignorance. Anyway, the students at least have
+    an idea of how they performed.</p>
+<p>The professor has just returned the exams, but the results
+    are not quite as expected. Unfortunately, he did not indicate
+    on their exams which answers were right or wrong, he has simply
+    put the number of correct answers at the top. So what were the
+    correct answers according to the professor then? Given how far
+    off some of the grades are from expected, there is a suspicion
+    among some of the students that the professor did not count the
+    correct answers properly.</p>
+<p>Given, for each student, the answers he/she gave and the
+    number of correct answers, can you work out what set of correct
+    answers matches the results?</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq n \leq 12$</span> and
+        <span class="tex2jax_process">$1 \leq m \leq 30$</span>):
+        the number of students and the number of questions in the
+        exam, respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with <span class="tex2jax_process">$m$</span> digits, each
+        digit either <tt>0</tt> or <tt>1</tt>: the answers given by
+        each student, with <tt>0</tt> representing “false” and
+        <tt>1</tt> representing “true”. This is followed by a space
+        and a single integer <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0 \leq c \leq m$</span>): the number of
+        correct answers for that student.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with <span class="tex2jax_process">$m$</span>
+        digits, each one either <tt>0</tt> or <tt>1</tt>: the
+        unique set of correct answers that could account for all
+        the results. If there is not exactly one such set, the line
+        should read “<tt># solutions</tt>” instead, with the number
+        of solutions in place of ‘<tt>#</tt>’.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3 5
+01101 4
+10100 3
+00011 3
+3 5
+01101 0
+10100 3
+00011 2
+4 4
+0000 2
+1010 2
+0101 2
+1111 2
+</pre>
+</td>
+<td>
+<pre>
+00101
+0 solutions
+4 solutions
+</pre>
+</td>
+</tr>
+</table>
+</div>

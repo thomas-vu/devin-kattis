@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>You are head of operations at FlixNet, and you are
+    responsible for transmitting just the title of movies to
+    consumers. All movie titles on FlixNet are a single word and
+    consist only of alphabetic characters.</p>
+<p>The aggregate cost for transmitting a particular title is
+    just equal to the number of letters in that title, except that
+    your interweb service preventer has agreed to cap that cost at
+    a given (floating point) value.</p>
+<p>Given the title of a movie and the value of that cap,
+    calculate your cost to transmit that movie title to your
+    consumers.</p>
+<h2>Input</h2>
+<p>The input is a single line containing the name of the movie
+    <span class="tex2jax_process">$s$</span> and the cap on the
+    cost <span class="tex2jax_process">$c$</span>. The name of the
+    movie will contain between 1 and 30 characters, inclusive, and
+    consist solely of uppercase or lowercase letters. The cost will
+    be a floating point value with <span class="tex2jax_process">$0\le c\le 100$</span>.</p>
+<h2>Output</h2>
+<p>Output a single floating point value, which is the minimum
+    of the length of the title and the cap on the cost. Your
+    solution will be judged correct if it is within 1e-8 absolute
+    or relative error of the correct answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>GoneWithTheWind 13.341
+</pre>
+</td>
+<td>
+<pre>13.341
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>Gigi 93.7
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>PieHard 3.14159265358979323846
+</pre>
+</td>
+<td>
+<pre>3.14159265358979
+</pre>
+</td>
+</tr>
+</table>
+</div>

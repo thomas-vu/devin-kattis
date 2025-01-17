@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>Fires can spread in a forest more easily if the trees in the
+    forest are densely packed – it makes it easy for the fire to
+    jump from tree to tree. Write a forest fire simulator which
+    ‘grows’ a forest tree-by-tree. As the forest grows, your
+    simulator should answer queries about whether a fire starting
+    at tree <span class="tex2jax_process">$A$</span> can spread to
+    tree <span class="tex2jax_process">$B$</span> (where trees
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> may vary with each query).</p>
+<p>The forest is modeled as a grid of size <span class="tex2jax_process">$100 \times 100$</span>, where each grid
+    square can hold exactly one tree. The bottom-left grid square
+    is <span class="tex2jax_process">$(0,0)$</span> and the
+    top-right is at <span class="tex2jax_process">$(99,99)$</span>.
+    Each square has an associated number, with square at
+    <span class="tex2jax_process">$(x,y)$</span> numbered
+    <span class="tex2jax_process">$100 x + y$</span>.</p>
+<p>Fire spreads directly from tree <span class="tex2jax_process">$A$</span> to <span class="tex2jax_process">$B$</span> if <span class="tex2jax_process">$A$</span> is on fire and <span class="tex2jax_process">$B$</span> is adjacent vertically or
+    horizontally to <span class="tex2jax_process">$A$</span>. Fire
+    continues to spread until has reached all the trees it can
+    reach in the forest. Note that we are only interested in
+    whether a fire is able to reach from tree <span class="tex2jax_process">$A$</span> to tree <span class="tex2jax_process">$B$</span>, but we do not actually remove any
+    trees related to the query.</p>
+<p>The simulator relies on a random number generator, which is
+    defined as:</p><span class="tex2jax_process">\[ r \leftarrow (r
+    * 5\, 171 + 13\, 297) \mod 50\, 021 \]</span>
+<p>where each simulation starts with a different ‘seed’ for
+    <span class="tex2jax_process">$r$</span>. Every time a random
+    number is needed, including the first time, this generator is
+    used to generate a new value for <span class="tex2jax_process">$r$</span>.</p>
+<p>Given a seed <span class="tex2jax_process">$r$</span> and
+    length of simulation <span class="tex2jax_process">$n$</span>,
+    the simulator should proceed as follows:</p>
+<ol class="enumerate">
+<li>
+<p>Initialize: let <span class="tex2jax_process">$i
+        \leftarrow 0$</span>.</p>
+</li>
+<li>
+<p>Stopping condition: if <span class="tex2jax_process">$i
+        \geq n$</span>, then stop.</p>
+</li>
+<li>
+<p>Place a tree: choose a random square <span class="tex2jax_process">$m \leftarrow r \mod 10\, 000$</span>
+        from the random number generator. If the square numbered
+        <span class="tex2jax_process">$m$</span> is occupied by a
+        tree, generate another value of <span class="tex2jax_process">$m$</span> in the same way. Keep doing
+        this until <span class="tex2jax_process">$m$</span> is for
+        an unoccupied square. Place a tree at square <span class="tex2jax_process">$m$</span>, and call this tree
+        <span class="tex2jax_process">$t_ i$</span>.</p>
+</li>
+<li>
+<p>Choose <span class="tex2jax_process">$A$</span>: compute
+        <span class="tex2jax_process">$a \leftarrow r\mod
+        (i+1)$</span>, and let <span class="tex2jax_process">$A
+        \leftarrow t_ a$</span>.</p>
+</li>
+<li>
+<p>Choose <span class="tex2jax_process">$B$</span>: compute
+        <span class="tex2jax_process">$b \leftarrow r\mod
+        (i+1)$</span>, and let <span class="tex2jax_process">$B
+        \leftarrow t_ b$</span>. It is okay if <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> represent the same tree.</p>
+</li>
+<li>
+<p>Fire query: discover whether a fire started at tree
+        <span class="tex2jax_process">$A$</span> can burn to tree
+        <span class="tex2jax_process">$B$</span>.</p>
+</li>
+<li>
+<p>Increment: let <span class="tex2jax_process">$i
+        \leftarrow i + 1$</span>.</p>
+</li>
+<li>
+<p>Loop: go back to step 2.</p>
+</li>
+</ol>
+<p>Report a summary of the fire queries every <span class="tex2jax_process">$100$</span> iterations during the
+    simulation.</p>
+<h2>Input</h2>
+<p>Input contains up to <span class="tex2jax_process">$200$</span> test cases. Each test case is a
+    line containing two integer values <span class="tex2jax_process">$0 \le r &lt; 50\, 021$</span>, representing
+    the seed value of the random number generator, and <span class="tex2jax_process">$0 \le n \le 10\, 000$</span>, representing
+    the number of times the main simulation loop should execute.
+    Also, <span class="tex2jax_process">$n$</span> is a multiple of
+    <span class="tex2jax_process">$100$</span>. Input ends at end
+    of file.</p>
+<h2>Output</h2>
+<p>For each test case, after each set of <span class="tex2jax_process">$100$</span> iterations, output the number of
+    fire queries (step <span class="tex2jax_process">$6$</span>
+    above) which succeeded. That is, the first block is between
+    <span class="tex2jax_process">$i=0$</span> and <span class="tex2jax_process">$i=99$</span>, the second block is between
+    <span class="tex2jax_process">$i=100$</span> and <span class="tex2jax_process">$i=199$</span>, etc.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 1000
+22 2000
+25 1000
+</pre>
+</td>
+<td>
+<pre>
+9 1 0 0 0 0 0 0 0 0
+7 1 0 0 1 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0
+1 2 0 0 0 0 1 1 0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

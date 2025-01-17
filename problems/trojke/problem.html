@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>Mirko and Slavko are playing a new game, “Trojke” (Triplets,
+    in English). First they use a chalk to draw an <span class="tex2jax_process">$N \times N$</span> square grid on the road.
+    Then they write letters into some of the squares. No letter is
+    written more than once in the grid.</p>
+<p>The game consists of trying to find three letters on a line
+    as fast as possible. Three letters are considered to be on the
+    same line if there is a line going through the centre of each
+    of the three squares.</p>
+<p>After a while it gets harder to find new triplets. Mirko and
+    Slavko need a program that counts all the triplets, so that
+    they know if the game is over or they need to search
+    further.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$3
+    \le N \le 100$</span>), the dimension of the grid.</p>
+<p>Each of the <span class="tex2jax_process">$N$</span>
+    following lines contains <span class="tex2jax_process">$N$</span> characters describing the grid –
+    uppercase letters and the character <tt class="ttfamily">’.’</tt> which marks an empty square.</p>
+<h2>Output</h2>
+<p>Output the number of triples on a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+...D
+..C.
+.B..
+A...
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+..T..
+A....
+.FE.R
+....X
+S....
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+....AB....
+..C....D..
+.E......F.
+...G..H...
+I........J
+K........L
+...M..N...
+.O......P.
+..Q....R..
+....ST....
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/password/file/statement/en/img-0001.jpg" class="illustration" src="/problems/password/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/132889348@N07/">Photo</a> by
+        christiaan colen cc by-sa 2.0
+      </div>
+</div>We all know that passwords are not very secure unless
+    users are disciplined enough to use passwords that are
+    difficult to guess. But most users are not so careful, and
+    happily use passwords such as “123456”. In fact, there are
+    lists of commonly used passwords that hackers can use for
+    breaking into systems, and these passwords often work.
+
+    <p>You have done a lot of hacking using such lists, and you
+    have a good idea of how likely each password in the list is the
+    correct one (you are very surprised by the number of people
+    using “123456” as their passwords). You have a new account to
+    hack, and you have decided to try each of the passwords in the
+    list one at a time, until the correct one is found. You are
+    absolutely sure that the account you want to hack uses a
+    password in the given list.</p>
+<p>What is the expected number of attempts to find the correct
+    passwords, assuming that you try these passwords in the optimal
+    order?</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$N$</span>, the number of
+    passwords in the list. Each of the next <span class="tex2jax_process">$N$</span> lines gives the password, followed
+    by a space, followed by the probability that the password is
+    the correct one. Each password consists only of alphanumeric
+    characters and is <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$12$</span> characters long. Each
+    probability is a real number with <span class="tex2jax_process">$4$</span> decimal places. You may assume
+    that there are at most <span class="tex2jax_process">$500$</span> passwords in the list, and that
+    the sum of all probabilities equals <span class="tex2jax_process">$1$</span>. No two passwords in the list are
+    the same.</p>
+<h2>Output</h2>
+<p>Output on a single line the expected number of attempts to
+    find the correct passwords using the optimal order. Answers
+    within <span class="tex2jax_process">$10^{-4}$</span> of the
+    correct answer will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+123456 0.6666
+qwerty 0.3334
+</pre>
+</td>
+<td>
+<pre>
+1.3334
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+qwerty 0.5432
+123456 0.3334
+password 0.1234
+</pre>
+</td>
+<td>
+<pre>
+1.5802
+</pre>
+</td>
+</tr>
+</table>
+</div>

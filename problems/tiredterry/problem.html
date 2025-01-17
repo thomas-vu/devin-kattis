@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>Terry is feeling tired and he suspects it is because of a
+    lack of sleep. He created a device that records his sleeping
+    pattern over a period of time measured in seconds.</p>
+<p>Assuming that the recorded sleeping pattern keeps repeating,
+    help Terry by letting him know how often he is tired during
+    each of the repeating time periods.</p>
+<p>More precisely, for integers <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$d$</span>, we say that Terry is tired at
+    second <span class="tex2jax_process">$i$</span> if from second
+    <span class="tex2jax_process">$i-p+1$</span> to second
+    <span class="tex2jax_process">$i$</span> (inclusive) he has
+    slept for less than <span class="tex2jax_process">$d$</span>
+    seconds.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 86\, 400$</span>), the length of Terry’s sleep
+    pattern, <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1 \leq p \leq n$</span>), and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \leq d \leq p$</span>) as described above.</p>
+<p>The second line of input contains a single string of length
+    <span class="tex2jax_process">$n$</span> which describes the
+    period of time that is recorded. The <span class="tex2jax_process">$i^\textrm {th}$</span> such character is a
+    <tt class="ttfamily">W</tt> if Terry is awake at the
+    <span class="tex2jax_process">$i^\textrm {th}$</span> second,
+    or is a <tt class="ttfamily">Z</tt> if Terry is asleep at the
+    <span class="tex2jax_process">$i^\textrm {th}$</span>
+    second.</p>
+<h2>Output</h2>
+<p>Display a single integer which represents the number of
+    seconds that Terry is tired during each of the repeating time
+    periods.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1 1
+WZ
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 2
+WZWWZ
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,138 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/askmarilyn/file/statement/en/img-0001.jpg" class="illustration" src="/problems/askmarilyn/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Marilyn vos Savant. Photo for <em>Parade</em> magazine
+        2017. Author: Ethan Hill. Wikimedia Commons, licensed under
+        cc-by-sa-2.0.
+      </div>
+</div>
+<p>Marilyn is by far your favourite bartender, because she
+    turns every order into a game.</p>
+<p>At the bar, there are three small boxes with doors labelled
+    A, B, and C. When you buy a drink, Marilyn places the bottle in
+    one of the boxes; you don’t know which. Then the following
+    ritual unfolds. You point to one of the three doors. Marilyn
+    will then smile enigmatically and open one of the other doors,
+    showing its contents. You then get to change your original
+    decision: maybe you now pick the door Marilyn just opened (in
+    particular if you can see the bottle there!), or you stick with
+    your first choice, or you pick the remaining door. Whatever you
+    finally choose is what you get.</p>
+<p>This entire ritual -– you choose, Marilyn opens, you make
+    your final decision – is called a <em>round</em>. It’s been a
+    long week, so you’ll play <span class="tex2jax_process">$1\,
+    000$</span> rounds. You need to get as many drinks as you
+    can.</p>
+<h2>Interaction</h2>
+<p>Your program interacts with Marilyn using standard input and
+    output. You start each round by printing your initial choice of
+    door, as a single letter on a line:</p>
+<blockquote class="quote">
+<em>you</em><span class="tex2jax_process">$\rangle $</span>
+<tt>A</tt> – meaning “My initial choice is door A”
+    </blockquote>
+<p>Now Marilyn will pick one of the other two doors – she may
+    be in a good mood and pick the door with a drink behind it, or
+    she may pick a door with no drink behind it; she may choose
+    randomly, or helpfully, or she may want to deliberately confuse
+    you. Being a good bartender, Marilyn knows where the drink is,
+    and she knows you well enough to know your strategy, both of
+    which she may take into account or not. She’ll print her door
+    name, followed by the number of bottles (<span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$1$</span>) behind that door. For instance,
+    if she chose to open door C, she will truthfully respond
+    with either of:</p>
+<ul class="itemize">
+<li>
+<p><em>marilyn</em><span class="tex2jax_process">$\rangle
+        $</span> <tt>C 0</tt> – meaning “Well, wouldn’t you know
+        it? There is nothing behind door C.”</p>
+</li>
+<li>
+<p><em>marilyn</em><span class="tex2jax_process">$\rangle
+        $</span> <tt>C 1</tt> – meaning “Huh. Looks like the bottle
+        is behind door C.”</p>
+</li>
+</ul>
+<p>We let her output just those two symbols—instead of her
+    actual charming, varied, and loquacious banter—to make it easy
+    to parse. You’d have to meet her in person for the real
+    experience.</p>
+<p>After that you print another letter, namely your final
+    choice of door. Let’s say you pick door A:</p>
+<blockquote class="quote">
+<em>you</em><span class="tex2jax_process">$\rangle $</span>
+<tt>A</tt> – meaning “I’ll take whatever is behind door A
+      now.”
+    </blockquote>
+<p>Marilyn will respond with one of two lines, depending on
+    whether there was a drink behind your final choice of door or
+    not. The format is the number of bottles you receive
+    (<span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$1$</span>) followed by the door that
+    actually concealed the bottle.</p>
+<ul class="itemize">
+<li>
+<p><em>marilyn</em><span class="tex2jax_process">$\rangle
+        $</span> <tt>1 A</tt> – meaning “Door A was a great choice.
+        You’re always so clever. Enjoy your drink.”</p>
+</li>
+<li>
+<p><em>marilyn</em><span class="tex2jax_process">$\rangle
+        $</span> <tt>0 B</tt> – meaning “Oh, what a shame. The
+        bottle was actually behind door B.”</p>
+</li>
+</ul>
+<p>After <span class="tex2jax_process">$1\, 000$</span> rounds,
+    your program must exit. If you end up with at least
+    <span class="tex2jax_process">$600$</span> drinks, no matter
+    which strategy Marilyn uses, your program is accepted.
+    Otherwise it is judged as <em>wrong answer</em>.</p>
+<p>Below is an example of the first three rounds of
+    interaction. In each of the rounds, the drink is behind
+    door A. You got <span class="tex2jax_process">$2$</span>
+    of the <span class="tex2jax_process">$3$</span> drinks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre>A</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>B 0 </pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>A</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1 A</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>A</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>B 0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>C</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0 A</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>B</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>A 1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>A</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1 A</pre>
+</div>
+</div>

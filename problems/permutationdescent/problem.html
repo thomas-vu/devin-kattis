@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>Given a positive integer, <span class="tex2jax_process">$N$</span>, a permutation of order
+    <span class="tex2jax_process">$N$</span> is a one-to-one (and
+    thus onto) function from the set of integers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> to itself. If <span class="tex2jax_process">$p$</span> is such a function, we represent
+    the function by a list of its values:</p><span class="tex2jax_process">\[ [ \, p(1) \, p(2) \, \ldots \, p(N) \, ]
+    \]</span>
+<p>For example, <span class="tex2jax_process">$[5 \, 6 \, 2 \,
+    4 \, 7 \, 1 \, 3]$</span> represents the function from
+    <span class="tex2jax_process">${ 1 \ldots 7 }$</span> to itself
+    which takes <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$2$</span> to <span class="tex2jax_process">$6$</span>, ... , <span class="tex2jax_process">$7$</span> to <span class="tex2jax_process">$3$</span>.</p>
+<p>For any permutation <span class="tex2jax_process">$p$</span>, a descent of <span class="tex2jax_process">$p$</span> is an integer <span class="tex2jax_process">$k$</span> for which <span class="tex2jax_process">$p(k) &gt; p(k+1)$</span>. For example, the
+    permutation <span class="tex2jax_process">$[5 \, 6 \, 2 \, 4 \,
+    7 \, 1 \, 3]$</span> has a descent at <span class="tex2jax_process">$2$</span> (<span class="tex2jax_process">$6
+    &gt; 2$</span>) and <span class="tex2jax_process">$5$</span>
+    (<span class="tex2jax_process">$7 &gt; 1$</span>).</p>
+<p>For permutation <span class="tex2jax_process">$p$</span>,
+    <span class="tex2jax_process">$\text {des}(p)$</span> is the
+    number of descents in <span class="tex2jax_process">$p$</span>.
+    For example, <span class="tex2jax_process">$\text {des}([5 \, 6
+    \, 2 \, 4 \, 7 \, 1 \, 3]) = 2$</span>. The identity
+    permutation is the only permutation with <span class="tex2jax_process">$\text {des}(p) = 0$</span>. The reversing
+    permutation with <span class="tex2jax_process">$p(k) = N + 1 -
+    k$</span> is the only permutation with <span class="tex2jax_process">$\text {des}(p) = N - 1$</span>.</p>
+<p>The permutation descent count (PDC) for given order
+    <span class="tex2jax_process">$N$</span> and value <span class="tex2jax_process">$v$</span> is the number of permutations
+    <span class="tex2jax_process">$p$</span> of order <span class="tex2jax_process">$N$</span> with <span class="tex2jax_process">$\text {des}(p) = v$</span>. For example:</p>
+<pre>
+        PDC(3, 0) = 1 { [ 1 2 3 ] }
+        PDC(3, 1) = 4 { [ 1 3 2 ], [ 2 1 3 ], [ 2 3 1 ], 3 1 2 ] }
+        PDC(3, 2) = 1 { [ 3 2 1 ] }
+</pre>
+<p>Write a program to compute the PDC for inputs <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$v$</span>. To avoid having to deal with very
+    large numbers, your answer (and your intermediate calculations)
+    will be computed modulo <span class="tex2jax_process">$1001113$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 1\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by the integer order,
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \le N \le 100$</span>), followed by an
+    integer value, <span class="tex2jax_process">$v$</span>
+    (<span class="tex2jax_process">$0 \le v \le N-1$</span>).</p>
+<h2>Output</h2>
+<p>For each data set there is a single line of output. The
+    single output line consists of the data set number,
+    <span class="tex2jax_process">$K$</span>, followed by a single
+    space followed by the PDC of <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$v$</span> as a decimal integer number modulo
+    <span class="tex2jax_process">$1001113$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 3 1
+2 5 2
+3 8 3
+4 99 50
+</pre>
+</td>
+<td>
+<pre>
+1 4
+2 66
+3 15619
+4 325091
+</pre>
+</td>
+</tr>
+</table>
+</div>

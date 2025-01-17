@@ -1,0 +1,260 @@
+<div class="problembody">
+<p>Welcome to the world of <em>Heroes of Velmar</em>, the
+    critically acclaimed trading card game developed by <em>Sidney
+    Games</em>! After the tremendous success of the physical card
+    game, Sidney Games has decided to take it to the next level and
+    transform it into an immersive video game experience.</p>
+<p>As Sidney Games embarks on this ambitious video game
+    project, they seek the expertise of talented developers like
+    you to bring this digital version to life. The challenge lies
+    in coding the algorithm that determines the winner in the
+    virtual battles that unfold between players. The video game
+    will need to retain the same core mechanics as the original
+    card game, where players compete on three distinct locations
+    over six turns, with abilities and power levels shaping the
+    outcomes.</p>
+<p>The full rules of the game are listed below. You are given
+    the state of the locations after <em>Setup</em> and
+    <em>Gameplay</em> have finished and the <em>End of the
+    Game</em> has been reached. Sidney Games has tasked you with
+    implementing the <em>Location Resolution</em> part of the game
+    rules, including the application of <em>Special Abilities</em>,
+    to determine the winner.</p>
+<p>The game designers have provided you with images of the
+    cards as well as a JSON file with their specifications.</p>
+<h2>Heroes of Velmar - Game Rules</h2>
+<h3>Objective</h3>
+<p>The objective of the two-player card game <em>Heroes of
+    Velmar</em> is to win more locations than the opponent over six
+    turns. If there is a tie, the total power level across all
+    locations acts as a tiebreaker.</p>
+<h3>Setup</h3>
+<ol class="enumerate">
+<li>
+<p>Each player selects a deck of cards containing heroes
+        with different abilities and power levels.</p>
+</li>
+<li>
+<p>The players shuffle their decks and draw a starting hand
+        of 7 cards each.</p>
+</li>
+<li>
+<p>Designate three distinct locations for the battle. Each
+        location will have its own separate battlefield.</p>
+</li>
+</ol>
+<h3>Gameplay</h3>
+<ol class="enumerate">
+<li>
+<p>Each player draws 1 card from the deck, to their hand,
+        if possible. Maximum cards per hand is 7.</p>
+</li>
+<li>
+<p>Players take turns playing cards from their hand on any
+        of the three locations.</p>
+</li>
+<li>
+<p>On each turn, players have energy equal to the turn
+        number, for example, on Turn 3, they have 3 energy to
+        spend.</p>
+</li>
+<li>
+<p>Each card has a cost that must be paid using energy to
+        play it on a location.</p>
+</li>
+<li>
+<p>Players can play as many cards as they want as long as
+        the following conditions are met:</p>
+<ol class="enumerate">
+<li>
+<p>They have sufficient energy to spend on the
+            card.</p>
+</li>
+<li>
+<p>The location has an empty spot. Each player has 4
+            available spots per location.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>The power level of each card represents its strength in
+        the game.</p>
+</li>
+<li>
+<p>When the turn ends, the energy not used is lost.</p>
+</li>
+</ol>
+<h3>End of the Game</h3>
+<ol class="enumerate">
+<li>
+<p>The game ends after six turns, at which point locations
+        are resolved, with each location having a winner or a
+        tie.</p>
+</li>
+<li>
+<p>The player who wins the most locations is the overall
+        winner.</p>
+</li>
+<li>
+<p>If the players win an equal number of locations, the
+        total power level across all locations is used as a
+        tiebreaker to determine the winner.</p>
+</li>
+<li>
+<p>If the total power level across all locations is also
+        tied, then the game results in a tie.</p>
+</li>
+</ol>
+<h3>Location Resolution</h3>
+<ol class="enumerate">
+<li>
+<p>Locations are resolved separately at the end of the
+        game.</p>
+</li>
+<li>
+<p>Compare the total power levels of all cards played by
+        each player at the location after applying special
+        abilities.</p>
+</li>
+<li>
+<p>The player with the higher total power level wins the
+        location.</p>
+</li>
+<li>
+<p>If there is a tie, no one wins the location.</p>
+</li>
+</ol>
+<h3>Special Abilities</h3>
+<ol class="enumerate">
+<li>
+<p>Some cards have special abilities that can affect the
+        game. These abilities trigger at the end of the game,
+        before location resolution.</p>
+</li>
+<li>
+<p>Abilities can buff the card’s power level, interact with
+        other cards, or manipulate the game state.</p>
+</li>
+<li>
+<p>Two cards that portray the same character are considered
+        to portray distinct characters for the sake of
+        abilities.</p>
+</li>
+</ol>
+<p>The game <em>Heroes of Velmar</em> offers a mix of strategic
+    card play, resource management, and tactical decision-making.
+    Players must choose their heroes wisely, coordinate their
+    plays, and employ their unique abilities to outwit their
+    opponents and emerge victorious in the epic battle for control
+    over Velmar!</p>
+<h3>Card design</h3>
+<p><b class="bfseries">Card Explanation:</b></p>
+<ul class="itemize">
+<li>
+<p><b class="bfseries">Top Left Corner:</b> The energy cost
+        required to play the card on the battlefield.</p>
+</li>
+<li>
+<p><b class="bfseries">Top Right Corner:</b> The power
+        level of the card, representing its strength.</p>
+</li>
+<li>
+<p><b class="bfseries">Text on the Bottom:</b> The name of
+        the card, identifying its character.</p>
+</li>
+<li>
+<p><b class="bfseries">Text Underneath:</b> The card’s
+        ability, describing its unique effect during gameplay.</p>
+</li>
+</ul>
+<div class="figure">
+<center>
+<p><img alt="\includegraphics[width=0.29\textwidth ]{imgs/shadow.png}" src="/problems/heroesofvelmar/file/statement/en/img-0001.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/gale.png}" src="/problems/heroesofvelmar/file/statement/en/img-0002.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/ranger.png}" src="/problems/heroesofvelmar/file/statement/en/img-0003.png" style="width:29.00%"/></p>
+<p><img alt="\includegraphics[width=0.29\textwidth ]{imgs/anvil.png}" src="/problems/heroesofvelmar/file/statement/en/img-0004.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/vexia.png}" src="/problems/heroesofvelmar/file/statement/en/img-0005.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/guardian.png}" src="/problems/heroesofvelmar/file/statement/en/img-0006.png" style="width:29.00%"/></p>
+<p><img alt="\includegraphics[width=0.29\textwidth ]{imgs/thunderheart.png}" src="/problems/heroesofvelmar/file/statement/en/img-0007.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/frostwhisper.png}" src="/problems/heroesofvelmar/file/statement/en/img-0008.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/voidclaw.png}" src="/problems/heroesofvelmar/file/statement/en/img-0009.png" style="width:29.00%"/></p>
+<p><img alt="\includegraphics[width=0.29\textwidth ]{imgs/ironwood.png}" src="/problems/heroesofvelmar/file/statement/en/img-0010.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/zenith.png}" src="/problems/heroesofvelmar/file/statement/en/img-0011.png" style="width:29.00%"/> <img alt="\includegraphics[width=0.29\textwidth ]{imgs/seraphina.png}" src="/problems/heroesofvelmar/file/statement/en/img-0012.png" style="width:29.00%"/></p>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input consists of six lines representing the state of the
+    three locations after six turns of play. This means that there
+    will be at most 24 cards total listed in the input.</p>
+<p>First the left location is described, then the center
+    location is described, and finally the right location is
+    described. Each location is described by two lines, the first
+    of which represents player 1’s cards and the second of which
+    represents player 2’s cards. Each line lists the number of
+    cards in the line and then the names of the cards played by the
+    player, separated by spaces. There will be at most four cards
+    in each line.</p>
+<p>Note that a player may leave a location empty. Each input is
+    guaranteed to be a valid reachable final game state according
+    to the game rules.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">"Player 1"</tt> if player 1 won,
+    <tt class="ttfamily">"Player 2"</tt> if player 2 won, or
+    <tt class="ttfamily">"Tie"</tt> if there was no victor.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 Shadow Seraphina Ironwood
+2 Voidclaw Voidclaw
+1 Vexia
+0
+1 Ranger
+0
+</pre>
+</td>
+<td>
+<pre>Player 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 Guardian
+1 Anvil
+2 Seraphina Seraphina
+1 Ranger
+2 Ironwood Ranger
+1 Guardian
+</pre>
+</td>
+<td>
+<pre>Tie
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 Guardian
+1 Anvil
+2 Seraphina Seraphina
+1 Ranger
+1 Ironwood
+1 Guardian
+</pre>
+</td>
+<td>
+<pre>Player 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

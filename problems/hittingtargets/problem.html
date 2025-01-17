@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>A fundamental operation in computational geometry is
+    determining whether two objects touch. For example, in a game
+    that involves shooting, we want to determine if a player’s shot
+    hits a target. A shot is a two dimensional point, and a target
+    is a two dimensional enclosed area. A shot hits a target if it
+    is inside the target. The boundary of a target is inside the
+    target. Since it is possible for targets to overlap, we want to
+    identify how many targets a shot hits.</p>
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{sampleImage}" src="/problems/hittingtargets/file/statement/en/img-0001.png" style="width:40.00%"/>
+</center>
+<p>The figure above illustrates the targets (large unfilled
+    rectangles and circles) and shots (filled circles) of the
+    sample input. The origin <span class="tex2jax_process">$(0,
+    0)$</span> is indicated by a small unfilled circle near the
+    center.</p>
+<h2>Input</h2>
+<p>Input starts with an integer <span class="tex2jax_process">$1 \leq m \leq 30$</span> indicating the
+    number of targets. Each of the next <span class="tex2jax_process">$m$</span> lines begins with the word
+    <tt class="tt">rectangle</tt> or <tt class="tt">circle</tt> and
+    then a description of the target boundary. A rectangular
+    target’s boundary is given as four integers <span class="tex2jax_process">$x_1~ y_1~ x_2~ y_2$</span>, where
+    <span class="tex2jax_process">$x_1&lt;x_2$</span> and
+    <span class="tex2jax_process">$y_1&lt;y_2$</span>. The points
+    <span class="tex2jax_process">$(x_1,y_1)$</span> and
+    <span class="tex2jax_process">$(x_2,y_2)$</span> are the
+    bottom-left and top-right corners of the rectangle,
+    respectively. A circular target’s boundary is given as three
+    integers <span class="tex2jax_process">$x~ y~ r$</span>. The
+    center of the circle is at <span class="tex2jax_process">$(x,y)$</span> and the <span class="tex2jax_process">$0&lt;r\leq 1\, 000$</span> is the radius of
+    the circle.</p>
+<p>After the target descriptions is an integer <span class="tex2jax_process">$1 \leq n \leq 100$</span> indicating the
+    number of shots that follow. The next <span class="tex2jax_process">$n$</span> lines each contain two integers
+    <span class="tex2jax_process">$x~ y$</span>, indicating the
+    coordinates of a shot. All <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates for targets and shots
+    are in the range <span class="tex2jax_process">$[-1\, 000,1\,
+    000]$</span>.</p>
+<h2>Output</h2>
+<p>For each of the <span class="tex2jax_process">$n$</span>
+    shots, print the total number of targets the shot hits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+rectangle 1 1 10 5
+circle 5 0 8
+rectangle -5 3 5 8
+5
+1 1
+4 5
+10 10
+-10 -1
+4 -3
+</pre>
+</td>
+<td>
+<pre>
+2
+3
+0
+0
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

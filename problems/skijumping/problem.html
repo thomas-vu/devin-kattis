@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Ski jumping is one of the most popular winter sport
+    competitions. In the chase of records, ski jumping hills become
+    larger and larger. To ensure the safety of the competitors,
+    landing speed and angle must not exceed critical margins
+    defined by the FIS. Today, it’s your task to assess these
+    values for a newly constructed ski jumping arena shown in the
+    figure.</p>
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{skijump.png}" src="/problems/skijumping/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+<p>Instead of doing measurements in the field, you can use a
+    little math to solve your problem, since the hill has the
+    following shape:</p><span class="tex2jax_process">\begin{equation} h(l) = \begin{cases} H &amp;
+    \; \, l &lt; 0 \\ H\cdot \left( 1 - 2 \cdot
+    \left(\frac{l}{L}\right)^2 \right) &amp; \; 0 \le l &lt;
+    \frac{L}{2} \\ 2H\cdot \left( \frac{l}{L} - 1 \right)^2 &amp;
+    \frac{L}{2} \le l &lt; L \\ 0 &amp; \, L \le l \end{cases} \,
+    \end{equation}</span>
+<p>where <span class="tex2jax_process">$l$</span> is the
+    position on the x-axis with its origin in the beginning of the
+    hill. <span class="tex2jax_process">$H$</span> is the height
+    and <span class="tex2jax_process">$L$</span> is the width of
+    the hill; <span class="tex2jax_process">$j$</span> is the
+    maximum starting height of the ski-jump and <span class="tex2jax_process">$p$</span> is the height difference between
+    the end of the (ski-jump) approach and the top of the hill.
+    Assuming that friction plays no important role and since the
+    critical margins are defined for a flight without any influence
+    of wind, you may utilize the following flight
+    curve:</p><span class="tex2jax_process">\begin{equation} f(l) =
+    -\frac{g}{2}\cdot \left(\frac{l}{v_0}\right)^2 + H + p \qquad
+    \left(\; 0 \le l \; \wedge \; f(l) \ge h(l) \; \right) \,
+    \end{equation}</span>
+<p>where <span class="tex2jax_process">$v_0$</span> is the
+    speed gained in the approach. You can obtain this value from
+    the law of energy conservation. Potential and kinetic energy
+    are defined as follows:</p><span class="tex2jax_process">\begin{equation} E_\mathrm {kin} =
+    \frac{1}{2} \times \mathrm{mass} \times \mathrm{speed}^2 \,
+    ,\qquad E_\mathrm {pot} = \mathrm{mass} \times g \times
+    \mathrm{height} \, . \end{equation}</span>
+<p>In all equations, <span class="tex2jax_process">$g$</span>
+    is the gravitational constant (<span class="tex2jax_process">$g\approx 9.81\, \mathrm{m\,
+    s}^{-2}$</span>).</p>
+<p><b class="bfseries">Hints:</b></p>
+<p>The inner product of two vectors <span class="tex2jax_process">$\vec{a}$</span> and <span class="tex2jax_process">$\vec{b}$</span> is defined
+    as:</p><span class="tex2jax_process">\begin{equation}
+    \vec{a}\cdot \vec{b} = |\vec{a}|\cdot |{\vec{b}}|\cdot \cos
+    \measuredangle (\vec{a},\vec{b}) \end{equation}</span>
+<h2>Input</h2>
+<p>Input starts with the number of test cases <span class="tex2jax_process">$t$</span> on a single line (<span class="tex2jax_process">$0 &lt; t &lt; 160\, 000$</span>).</p>
+<p>Every test case consists of a single line containing four
+    positive integers <span class="tex2jax_process">$j$</span>,
+    <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$H$</span>, and <span class="tex2jax_process">$L$</span> as defined in the problem
+    statement (<span class="tex2jax_process">$0 &lt; j,p,H,L \le
+    500$</span>). The unit of all values is meter.</p>
+<h2>Output</h2>
+<p>For every test case, print one line containing</p>
+<ul class="itemize">
+<li>
+<p>the landing position <span class="tex2jax_process">$l$</span> on the x-axis,</p>
+</li>
+<li>
+<p>the landing speed <span class="tex2jax_process">$|v_
+        l|$</span> of the jumper (in meters per second), and</p>
+</li>
+<li>
+<p>the speed-angle <span class="tex2jax_process">$\alpha
+        $</span> (in degree) with respect to the hill (see the
+        figure).</p>
+</li>
+</ul>
+<p>The values must be separated by a single blank. An absolute
+    or relative error of <span class="tex2jax_process">$10^{-4}$</span> is tolerated.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+50 5 10 100
+50 5 30 100
+50 5 50 100
+</pre>
+</td>
+<td>
+<pre>
+40.82482905 33.83045965 12.93315449
+81.04978134 40.31656580 26.21334827
+104.8808848 45.38832449 46.36470132
+</pre>
+</td>
+</tr>
+</table>
+</div>

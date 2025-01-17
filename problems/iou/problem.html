@@ -1,0 +1,125 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/iou/file/statement/en/img-0001.jpg" class="illustration" src="/problems/iou/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplashutm_medium=referralutm_content=creditCopyText">
+        Photo by Sharon McCutcheon on Unsplash</a>
+</div>
+</div>
+<p>You are developing a new app intended to simplify
+    expense-sharing among groups of friends. This app will allow
+    them to keep track of who encountered an expense and how it
+    should be shared with others through the form of IOUs. For
+    instance, if Alice pays for a meal shared with Bob and Carol,
+    and Bob’s and Carol’s shares were <span class="tex2jax_process">$\$ 5$</span> and <span class="tex2jax_process">$\$ 10$</span>, respectively, then Bob would
+    issue an IOU for <span class="tex2jax_process">$\$ 5$</span> to
+    Alice and Carol would issue an IOU for <span class="tex2jax_process">$\$ 10$</span> to Alice.</p>
+<p>Your app will maintain a ledger of who owes whom. Note that
+    cycles can occur: For instance, if Bob initially owes Alice
+    <span class="tex2jax_process">$\$ 10$</span> and later pays a
+    <span class="tex2jax_process">$\$ 5$</span> expense on behalf
+    of Alice, Alice would issue an IOU for <span class="tex2jax_process">$\$ 5$</span> to Bob. This IOU would then
+    cancel out, or reduce, the IOU Alice holds from Bob from
+    <span class="tex2jax_process">$\$ 10$</span> to <span class="tex2jax_process">$\$ 5$</span>. It’s also possible for cycles
+    to involve more than <span class="tex2jax_process">$2$</span>
+    people.</p>
+<p>Your app will be given a list of IOUs issued and settle them
+    as much as possible by considering all cycles and reducing each
+    debt in a cycle by the minimum amount of debt occurring in the
+    cycle. After all cycles are considered and canceled, your app
+    should output who owes whom how much. If there are multiple
+    ways in which cancelation can occur, you may choose any of them
+    as long as there are no cycles left at the end. However, you
+    may not introduce IOUs between friends that never gave an IOU
+    to each other, e.g., if Alice owes Bob money, and Bob owes the
+    same amount to Carol, you cannot remove Bob from the picture
+    and declare that Alice now owes Carol.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    contains two integers <span class="tex2jax_process">$n$</span>
+    and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le n \le 100, 0 \le m \le 10\,
+    000$</span>), where <span class="tex2jax_process">$n$</span>
+    denotes the number of friends and <span class="tex2jax_process">$m$</span> denotes the number of IOUs issued.
+    Friends are numbered <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$n-1$</span>. This is followed
+    by <span class="tex2jax_process">$m$</span> lines containing
+    three integers <span class="tex2jax_process">$a$</span>,
+    <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    \le a &lt; n, 0 \le b &lt; n, a \ne b, 0 &lt; c \le 1\,
+    000$</span>) denoting an IOU given by friend <span class="tex2jax_process">$a$</span> to friend <span class="tex2jax_process">$b$</span> for <span class="tex2jax_process">$c$</span> dollars. Any friend <span class="tex2jax_process">$i$</span> holds at most one IOU from any
+    friend <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$i \ne j$</span>), but friend <span class="tex2jax_process">$i$</span> may hold an IOU from friend
+    <span class="tex2jax_process">$j$</span> at the same time that
+    friend <span class="tex2jax_process">$j$</span> holds an IOU
+    from <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>First, output a single number <span class="tex2jax_process">$p$</span>, denoting the number of IOUs left
+    after canceling all cycles. Then, on the following <span class="tex2jax_process">$p$</span> lines, output the IOUs that are
+    left in the same form in which they appear in the input (e.g.
+    using <span class="tex2jax_process">$3$</span> integers
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span> denoting that friend <span class="tex2jax_process">$a$</span> owes friend <span class="tex2jax_process">$b$</span> <span class="tex2jax_process">$c$</span> dollars). Do not include any IOUs
+    fully canceled, i.e., all the IOUs you output must have
+    <span class="tex2jax_process">$c &gt; 0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+0 1 10
+1 2 10
+0 3 10
+3 2 10
+2 0 20
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+0 1 20
+1 0 5
+</pre>
+</td>
+<td>
+<pre>1
+0 1 15
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+0 1 10
+1 2 10
+0 3 10
+3 2 10
+2 0 10
+</pre>
+</td>
+<td>
+<pre>2
+3 2 10
+0 3 10
+</pre>
+</td>
+</tr>
+</table>
+</div>

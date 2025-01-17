@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/convoy/file/statement/en/img-0001.jpg" class="illustration" src="/problems/convoy/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://upload.wikimedia.org/wikipedia/commons/6/69/Miami_traffic_jam%2C_I-95_North_rush_hour.jpg">
+        Photo by B137</a>
+</div>
+</div>
+<p>You and your friends have gathered at your house to prepare
+    for the Big Game, which you all plan to attend in the afternoon
+    at the football stadium across town. The problem: you only have
+    <span class="tex2jax_process">$k$</span> cars between you, with
+    each car seating five people (including the driver), so you
+    might have to take multiple trips to get all <span class="tex2jax_process">$n$</span> people to the stadium. In
+    addition, some of your friends know the city better than
+    others, and so take different amounts of time to drive to the
+    stadium from your house. You’d like to procrastinate as long as
+    possible before hitting the road: can you concoct a
+    transportation plan that gets all people to the stadium in the
+    shortest amount of time possible?</p>
+<p>More specifically, each person <span class="tex2jax_process">$i$</span> currently at your house can drive
+    to the stadium in <span class="tex2jax_process">$t_ i$</span>
+    minutes. All <span class="tex2jax_process">$k$</span> cars are
+    currently parked at your house. Any person can drive any car
+    (so the cars are interchangeable). After a car arrives at the
+    stadium, any person currently at the stadium can immediately
+    start driving back to your house (and it takes person
+    <span class="tex2jax_process">$i$</span> the same amount of
+    time <span class="tex2jax_process">$t_ i$</span> to drive back
+    as to drive to the stadium), or alternatively, cars can be
+    temporarily or permanently parked at the stadium. Drivers
+    driving to the stadium can take up to four passengers with
+    them, but drivers driving back can <em>NOT</em> take any
+    passenger. You care only about getting all <span class="tex2jax_process">$n$</span> people from your house to the
+    stadium—you do <em>NOT</em> need to park all <span class="tex2jax_process">$k$</span> cars at the stadium, if doing so
+    would require more time than an alternative plan that leaves
+    some cars at your house.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$(1 \leq n,k \leq 20\, 000)$</span>, the
+    number of people at your house and the number of available
+    cars. Then follow <span class="tex2jax_process">$n$</span>
+    lines containing a single integer each; the <span class="tex2jax_process">$i$</span>th such integer is the number of
+    seconds <span class="tex2jax_process">$t_ i$</span>
+<span class="tex2jax_process">$(1 \leq t_ i \leq 1\, 000\,
+    000)$</span> that it takes person <span class="tex2jax_process">$i$</span> to drive from your house to the
+    stadium, or vice-versa.</p>
+<h2>Output</h2>
+<p>Print the minimum number of seconds it takes to move all
+    <span class="tex2jax_process">$n$</span> people from your house
+    to the stadium, if all people coordinate and drive
+    optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>11 2
+12000
+9000
+4500
+10000
+12000
+11000
+12000
+18000
+10000
+9000
+12000
+</pre>
+</td>
+<td>
+<pre>13500
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 2
+1000
+2000
+3000
+4000
+5000
+6000
+</pre>
+</td>
+<td>
+<pre>2000
+</pre>
+</td>
+</tr>
+</table>
+</div>

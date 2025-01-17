@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/cuckoocuckoo/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cuckoocuckoo/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The cuckoo bird pops out of the cuckoo clock and sounds
+    off once on the quarter hour, half hour, and three-quarter
+    hour. At the beginning of each hour, it sounds off the hour
+    (1–12). Given the current time and a target number <span class="tex2jax_process">$N$</span>, your task is to determine what
+    time it will be when the cuckoo bird finishes sounding off
+    <span class="tex2jax_process">$N$</span> times. If the cuckoo
+    bird would be sounding off at the starting time, include those
+    sounds in the count.
+    <p>If the count is reached on the hour, report the time at the
+    start of that hour. That is, you may assume the cuckoo finishes
+    sounding off before the minute is up.</p>
+<h2>Input</h2>
+<p>The input consists of 2 lines. The first line contains the
+    current time in the form <tt>HH:MM</tt> where <span class="tex2jax_process">$1 \leq \texttt{HH} \leq 12$</span> and
+    <span class="tex2jax_process">$0 \leq \texttt{MM} \leq
+    59$</span>, with leading 0’s if necessary. The second line
+    contains a single integer representing the target number
+    <span class="tex2jax_process">$N$</span> such that <span class="tex2jax_process">$1 \leq N \leq 200$</span>.</p>
+<h2>Output</h2>
+<p>Print the time at which the cuckoo bird has sounded off
+    <span class="tex2jax_process">$N$</span> times. The time should
+    be printed in the same format as the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>02:36
+1
+</pre>
+</td>
+<td>
+<pre>02:45
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12:00
+13
+</pre>
+</td>
+<td>
+<pre>12:15
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>11:00
+30
+</pre>
+</td>
+<td>
+<pre>01:00
+</pre>
+</td>
+</tr>
+</table>
+</div>

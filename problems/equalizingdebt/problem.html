@@ -1,0 +1,205 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/equalizingdebt/file/statement/en/img-0001.jpg" class="illustration" src="/problems/equalizingdebt/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by Gnangarra; license CC BY-SA.
+      </div>
+</div>
+<p>It is common practice among your friends to buy drinks for
+    each other.</p>
+<p>This all works great as long as everyone takes turns buying
+    drinks. However, some of your friends are being accused of
+    being cheap, since they haven’t paid for drinks in return. They
+    defend themselves saying they bought many drinks for
+    others.</p>
+<p>You all agree that everyone should receive as many drinks as
+    they have bought. But you also agree that it does not matter
+    who bought drinks for whom. For example, assume Alice bought a
+    drink for Mallory and Mallory bought a drink for Bob. If now
+    Bob buys a drink for Alice then everyone has bought and
+    received one drink and all outstanding debt is settled.</p>
+<p>The bartenders are very busy, so you decide to settle all
+    debt but order as few total drinks as possible.</p>
+<h2>Input</h2>
+<p>The first line contains the number <span class="tex2jax_process">$m$</span> of transactions, with <span class="tex2jax_process">$1 \leq m \leq 100\, 000$</span>. The next
+    <span class="tex2jax_process">$m$</span> lines consist of three
+    values <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span> and <span class="tex2jax_process">$d$</span>, separated by spaces. This means
+    that <span class="tex2jax_process">$u$</span> bought
+    <span class="tex2jax_process">$d$</span> drinks for
+    <span class="tex2jax_process">$v$</span>, where <span class="tex2jax_process">$d$</span> is an integer with <span class="tex2jax_process">$1\leq d\leq 156$</span>. Both <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> are different names; each name
+    consists of at most <span class="tex2jax_process">$10$</span>
+    characters from the English alphabet; the first letter is
+    uppercase and there are no spaces in a name. There are at most
+    <span class="tex2jax_process">$200$</span> different names in
+    the input.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$k$</span> lines of
+    three space separated values <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span> and <span class="tex2jax_process">$d$</span>. This means that <span class="tex2jax_process">$u$</span> should buy <span class="tex2jax_process">$d$</span> drinks for <span class="tex2jax_process">$v$</span>, where <span class="tex2jax_process">$d$</span> is an integer with <span class="tex2jax_process">$1\leq d$</span>. The number of lines must
+    satisfy <span class="tex2jax_process">$0\leq k\leq
+    \frac12n(n-1)$</span>, where <span class="tex2jax_process">$n$</span> is the number of different people
+    in the input.</p>
+<p>This is followed by the word “settled” on a single, final
+    line.</p>
+<p>If there are multiple valid answers, output any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+Jakob Johan 1
+Oskar Thore 1
+</pre>
+</td>
+<td>
+<pre>Johan Jakob 1
+Thore Oskar 1
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+Johan Jakob 1
+Thore Oskar 1
+</pre>
+</td>
+<td>
+<pre>Oskar Johan 1
+Jakob Thore 1
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+Alice Mallory 1
+Mallory Bob 1
+</pre>
+</td>
+<td>
+<pre>Bob Alice 1
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4
+Thore Christian 50
+Thore Christian 150
+Christian Thore 50
+Thore Christian 50
+</pre>
+</td>
+<td>
+<pre>Christian Thore 200
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Alice Bob 1
+Bob Carol 2
+Carol David 3
+</pre>
+</td>
+<td>
+<pre>David Alice 1
+David Bob 1
+David Carol 1
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Alice Bob 1
+Alice Charlie 1
+Dorothy Charlie 1
+</pre>
+</td>
+<td>
+<pre>Bob Alice 1
+Charlie Alice 1
+Charlie Dorothy 1
+settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 7</th>
+<th>Sample Output 7</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Karl John 7
+John Karl 10
+Karl John 3
+</pre>
+</td>
+<td>
+<pre>settled
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 8</th>
+<th>Sample Output 8</th>
+</tr>
+<tr>
+<td>
+<pre>1
+Hogan Andre 156
+</pre>
+</td>
+<td>
+<pre>Andre Hogan 156
+settled
+</pre>
+</td>
+</tr>
+</table>
+</div>

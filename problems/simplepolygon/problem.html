@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>Write a program that constructs a polygon from a given set
+    of points in the plane. Each point of the set has to be a
+    vertex of the polygon, and the polygon must not have any other
+    vertices. No two line segments of the polygon may have any
+    point in common, except for the middle vertex of two
+    consecutive line segments. For example, given the points on the
+    left-hand side, a valid polygon is shown on the right-hand
+    side:</p>
+<center>
+<img alt="\includegraphics[width=11cm]{polygon-fig}" src="/problems/simplepolygon/file/statement/en/img-0001.png" style="width:11cm"/>
+</center>
+<p>A valid polygon is guaranteed to exist, and any valid
+    polygon will be accepted as a correct answer. Moreover, no two
+    points will share the same location, and not all points will be
+    collinear.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of an integer
+    <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(1 \leq c \leq 200)$</span>, the number of
+    test cases. Then follow the test cases, one per line.</p>
+<p>Each test case starts with an integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(3
+    \leq n \leq 2\, 000)$</span>, the number of given points. Then
+    follow, on the same line, the coordinates of the points. Each
+    point is specified by two integers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> in the range <span class="tex2jax_process">$-10\, 000$</span> to <span class="tex2jax_process">$10\, 000$</span>, inclusively.</p>
+<h2>Output</h2>
+<p>For each test case, print a single line containing a
+    permutation of the numbers <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. Each of these numbers
+    represents the index of a point, in the same order as given in
+    the input. When drawing line segments between consecutive
+    points in the order given by this permutation, the result must
+    be a valid polygon.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 0 0 2 0 0 1 1 0
+5 0 0 10 0 10 5 5 -1 0 5
+</pre>
+</td>
+<td>
+<pre>
+0 3 1 2
+3 1 2 4 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

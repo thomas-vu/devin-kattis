@@ -1,0 +1,123 @@
+<div class="problembody">
+<p>Mirko is trying to debug a piece of his code. First he
+    creates an array of <span class="tex2jax_process">$N$</span>
+    integers and fills it with zeros. Then he repeatedly calls the
+    following C++ procedure:</p>
+<pre>
+void something( int jump ) {
+  int i = 0;
+  while( i &lt; N ) {
+    seq[i] = seq[i] + 1;
+    i = i + jump;
+  }
+}
+</pre>
+<p>As you can see, this procedure increases by one all elements
+    in the array whose indices are divisible by <tt class="ttfamily">jump</tt>.</p>
+<p>Mirko calls the procedure exactly <span class="tex2jax_process">$K$</span> times, using the sequence
+    <span class="tex2jax_process">$X_1,X_2,X_3, \ldots , X_
+    k$</span> as arguments.</p>
+<p>After this, Mirko has a list of <span class="tex2jax_process">$Q$</span> special parts of the array he
+    needs to check to verify that his code is working as it should
+    be. Each of these parts is defined by two numbers, <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$L
+    \leq R$</span>) the left and right bound of the special part.
+    To check the code, Mirko must compute the sum of all elements
+    of seq between and including <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span>. In other words <span class="tex2jax_process">$\mathtt{seq}[L] + \mathtt{seq}[L+1] +
+    \mathtt{seq}[L+2] + \ldots + \mathtt{seq}[R]$</span>. Since he
+    needs to know the answer in advance in order to check it, he
+    asked you to help him.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10^6$</span>), the size of the array, and
+    <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1 \leq K \leq 10^6$</span>), the number of
+    calls to <tt class="ttfamily">something</tt> that Mirko
+    makes.</p>
+<p>The second line contains <span class="tex2jax_process">$K$</span> integers: <span class="tex2jax_process">$X_1,X_2,X_3, \ldots ,X_ k$</span>, the
+    arguments passed to the procedure (<span class="tex2jax_process">$1 \leq X_ i &lt; N$</span>).</p>
+<p>The third line contains one integer <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1
+    \leq Q \leq 10^6$</span>), the number of special parts of the
+    array Mirko needs to check.</p>
+<p>The next <span class="tex2jax_process">$Q$</span> lines
+    contain two integers each <span class="tex2jax_process">$L_
+    i$</span> and <span class="tex2jax_process">$R_ i$</span>
+    (<span class="tex2jax_process">$0 \leq L_ i \leq R_ i &lt;
+    N$</span>), the bounds of each special part.</p>
+<h2>Output</h2>
+<p>The output should contain exactly <span class="tex2jax_process">$Q$</span> lines. The <span class="tex2jax_process">$i$</span>-th line should contain the sum of
+    elements <span class="tex2jax_process">$\mathtt{seq}[L_ i] +
+    \mathtt{seq}[L_ i+1] + \mathtt{seq}[L_ i+2] + \ldots +
+    \mathtt{seq}[R_ i]$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 4
+1 1 2 1
+3
+0 9
+2 6
+7 7
+</pre>
+</td>
+<td>
+<pre>
+35
+18
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11 3
+3 7 10
+3
+0 10
+2 6
+7 7
+</pre>
+</td>
+<td>
+<pre>
+8
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1000000 6
+12 3 21 436 2 19
+2
+12 16124
+692 29021
+</pre>
+</td>
+<td>
+<pre>
+16422
+28874
+</pre>
+</td>
+</tr>
+</table>
+</div>

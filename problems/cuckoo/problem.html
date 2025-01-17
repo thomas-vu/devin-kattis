@@ -1,0 +1,112 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/cuckoo/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cuckoo/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>One of the most fundamental data structure problems is
+    the dictionary problem: given a set <span class="tex2jax_process">${D}$</span> of words you want to be able to
+    quickly determine if any given query string <span class="tex2jax_process">$q$</span> is present in the dictionary
+    <span class="tex2jax_process">${D}$</span> or not. Hashing is a
+    well-known solution for the problem. The idea is to create a
+    function <span class="tex2jax_process">$h:\Sigma ^*\rightarrow
+    [0..n-1]$</span> from all strings to the integer range
+    <span class="tex2jax_process">$0,1,..,n-1$</span>, i.e. you
+    describe a fast deterministic program which takes a string as
+    input and outputs an integer between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$n-1$</span>. Next you allocate an empty hash
+    table <span class="tex2jax_process">$T$</span> of size
+    <span class="tex2jax_process">$n$</span> and for each word
+    <span class="tex2jax_process">$w$</span> in <span class="tex2jax_process">${D}$</span>, you set <span class="tex2jax_process">$T[h(w)]=w$</span>. Thus, given a query
+    string <span class="tex2jax_process">$q$</span>, you only need
+    to calculate <span class="tex2jax_process">$h(q)$</span> and
+    see if <span class="tex2jax_process">$T[h(q)]$</span> equals
+    <span class="tex2jax_process">$q$</span>, to determine if
+    <span class="tex2jax_process">$q$</span> is in the dictionary.
+    Seems simple enough, but aren’t we forgetting something? Of
+    course, what if two words in <span class="tex2jax_process">${D}$</span> map to the same location in the
+    table? This phenomenon, called collision, happens fairly often
+    (remember the Birthday paradox: in a class of 24 pupils there
+    is more than <span class="tex2jax_process">$50$</span>% chance
+    that two of them share birthday). On average you will only be
+    able to put roughly <span class="tex2jax_process">$\sqrt
+    {n}$</span>-sized dictionaries into the table without getting
+    collisions, quite poor space usage!
+
+    <p>A stronger variant is Cuckoo Hashing<a class="footnote" href="#a0000000440"><sup class="footnotemark">1</sup></a>. The
+    idea is to use two hash functions <span class="tex2jax_process">$h_1$</span> and <span class="tex2jax_process">$h_2$</span>. Thus each string maps to two
+    positions in the table. A query string <span class="tex2jax_process">$q$</span> is now handled as follows: you
+    compute both <span class="tex2jax_process">$h_1(q)$</span> and
+    <span class="tex2jax_process">$h_2(q)$</span>, and if
+    <span class="tex2jax_process">$T[h_1(q)]=q$</span>, <em>or</em>
+<span class="tex2jax_process">$T[h_2(q)]=q$</span>, you
+    conclude that <span class="tex2jax_process">$q$</span> is in
+    <span class="tex2jax_process">${D}$</span>. The name “Cuckoo
+    Hashing” stems from the process of creating the table.
+    Initially you have an empty table. You iterate over the words
+    <span class="tex2jax_process">$d$</span> in <span class="tex2jax_process">${D}$</span>, and insert them one by one. If
+    <span class="tex2jax_process">$T[h_1(d)]$</span> is free, you
+    set <span class="tex2jax_process">$T[h_1(d)]=d$</span>.
+    Otherwise if <span class="tex2jax_process">$T[h_2(d)]$</span>
+    is free, you set <span class="tex2jax_process">$T[h_2(d)]=d$</span>. If both are occupied
+    however, just like the cuckoo with other birds’ eggs, you evict
+    the word <span class="tex2jax_process">$r$</span> in
+    <span class="tex2jax_process">$T[h_1(d)]$</span> and set
+    <span class="tex2jax_process">$T[h_1(d)]=d$</span>. Next you
+    put <span class="tex2jax_process">$r$</span> back into the
+    table in its alternative place (and if that entry was already
+    occupied you evict that word and move it to its alternative
+    place, and so on). Of course, we may end up in an infinite loop
+    here, in which case we need to rebuild the table with other
+    choices of hash functions. The good news is that this will not
+    happen with great probability even if <span class="tex2jax_process">${D}$</span> contains up to <span class="tex2jax_process">$n/2$</span> words!</p>
+<h2>Input</h2>
+<p>On the first line of input is a single positive integer
+    <span class="tex2jax_process">$1\leq t \leq 50$</span>
+    specifying the number of test cases to follow. Each test case
+    begins with two positive integers <span class="tex2jax_process">$1 \leq m \leq n \leq 10000$</span> on a line
+    of itself, <span class="tex2jax_process">$m$</span> telling the
+    number of words in the dictionary and <span class="tex2jax_process">$n$</span> the size of the hash table in the
+    test case. Next follow <span class="tex2jax_process">$m$</span>
+    lines of which the <span class="tex2jax_process">$i$</span>:th
+    describes the <span class="tex2jax_process">$i$</span>:th word
+    <span class="tex2jax_process">$d_ i$</span> in the dictionary
+    <span class="tex2jax_process">${D}$</span> by two non-negative
+    integers <span class="tex2jax_process">$h_1(d_ i)$</span> and
+    <span class="tex2jax_process">$h_2(d_ i)$</span> less than
+    <span class="tex2jax_process">$n$</span> giving the two hash
+    function values of the word <span class="tex2jax_process">$d_
+    i$</span>. The two values may be identical.</p>
+<h2>Output</h2>
+<p>For each test case there should be exactly one line of
+    output either containing the string “<tt class="ttfamily">successful hashing</tt>” if it is possible to insert
+    all words in the given order into the table, or the string
+    “<tt class="ttfamily">rehash necessary</tt>” if it is
+    impossible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3 3
+0 1
+1 2
+2 0
+5 6
+2 3
+3 1
+1 2
+5 1
+2 5
+</pre>
+</td>
+<td>
+<pre>
+successful hashing
+rehash necessary
+</pre>
+</td>
+</tr>
+</table>
+</div>

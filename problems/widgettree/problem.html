@@ -1,0 +1,249 @@
+<div class="problembody">
+<p>Alice got bored when staying at home for several months due
+    to the pandemic and decided to learn about front-end
+    development. She learnt that project components are often
+    modeled as a widget, and decided to write a program to
+    calculate the cost of building and updating them.</p>
+<p>In a particular project that she is interested in, there are
+    <span class="tex2jax_process">$N$</span> types of widgets
+    numbered from <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$N-1$</span>. Each widget may
+    depend on at most <span class="tex2jax_process">$10$</span>
+    other distinct types of widget. All dependencies of a widget
+    must be built before the widget itself could be built.</p>
+<p>Firstly, Alice is interested in calculating the cost of
+    building widget <span class="tex2jax_process">$0$</span>, which
+    is equivalent to the size of its dependency tree.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{graph0.png}" src="/problems/widgettree/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+<p>In the example above, <span class="tex2jax_process">$N =
+    3$</span>, widget type <span class="tex2jax_process">$0$</span>
+    depends on two widgets of type <span class="tex2jax_process">$1$</span>, and widget type <span class="tex2jax_process">$1$</span> depends on two widgets of type
+    <span class="tex2jax_process">$2$</span>. The size of the
+    dependency tree is <span class="tex2jax_process">$7$</span>,
+    which is also the required cost of building widget <span class="tex2jax_process">$0$</span>.</p>
+<p>Secondly, Alice is interested in calculating the cost of
+    maintaining widget type <span class="tex2jax_process">$0$</span> when updates occur. There are
+    <span class="tex2jax_process">$Q$</span> update queries in
+    total. In each query, there are <span class="tex2jax_process">$X_ i$</span> (<span class="tex2jax_process">$1 \leq i \leq Q$</span>) types of widgets to
+    be updated. Note that there might be multiple widgets
+    associated with a particular type and Alice only cares for
+    widgets that belong to the dependency tree of widget type
+    <span class="tex2jax_process">$0$</span>.</p>
+<p>For each query, you need to output the number of widgets
+    that need to be rebuilt. A rebuild must be performed for a
+    widget if it satisfies at least one of the following
+    conditions:</p>
+<ol class="enumerate">
+<li>
+<p>The widget type is updated in the query.</p>
+</li>
+<li>
+<p>At least one of its descendants or ancestors in the
+        dependency tree has a widget type that needs to be updated
+        in the query.</p>
+</li>
+</ol>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{graph1.png}" src="/problems/widgettree/file/statement/en/img-0002.png" style="width:60.00%"/>
+</center>
+<p>In the example above, the cost of initial build for this
+    dependency tree is <span class="tex2jax_process">$7$</span>.
+    Next, suppose that there is a query where widgets with type
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> need to be updated. Based on the
+    first condition, we know that there are two widgets that need
+    to be rebuilt, which are those of type <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span>. Afterward, based on the second
+    condition, we discover four more widgets that need to be
+    rebuilt:</p>
+<ul class="itemize">
+<li>
+<p>Two widgets of type <span class="tex2jax_process">$4$</span>, which are the descendants of
+        widget with type <span class="tex2jax_process">$2$</span>.</p>
+</li>
+<li>
+<p>One widget of type <span class="tex2jax_process">$1$</span>, which is the ancestor of
+        widget with type <span class="tex2jax_process">$3$</span>.</p>
+</li>
+<li>
+<p>One widget of type <span class="tex2jax_process">$0$</span>, which is the ancestor of
+        widget with type <span class="tex2jax_process">$2$</span>
+        and <span class="tex2jax_process">$3$</span>.</p>
+</li>
+</ul>
+<p>Hence, in total, there are <span class="tex2jax_process">$6$</span> widgets that should be rebuilt. As
+    this value may be large when we have a bigger dependency tree,
+    you only need to output the value in modulo of <span class="tex2jax_process">$M$</span>.</p>
+<p>If it is impossible to build widget <span class="tex2jax_process">$0$</span>, you only need to output a single
+    line of string “Invalid”.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of two integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 1\, 000$</span>) and
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \leq M \leq 10^{9}$</span>). Each of the
+    next <span class="tex2jax_process">$N$</span> lines consists of
+    a single integer <span class="tex2jax_process">$C_ i$</span>
+    (<span class="tex2jax_process">$0 \leq C_ i \leq 200$</span>),
+    the number of dependencies for widget of type <span class="tex2jax_process">$i$</span>. It is followed by <span class="tex2jax_process">$C_ i$</span> integers, where <span class="tex2jax_process">$D_{i,j}$</span> (<span class="tex2jax_process">$0 \leq D_{i,j} \leq N-1$</span>) is the
+    <span class="tex2jax_process">$j$</span>-th dependency for
+    widget of type <span class="tex2jax_process">$i$</span>. There
+    are at most <span class="tex2jax_process">$10$</span> distinct
+    types of widget among the dependencies of a single widget.</p>
+<p>The next line of the input will contain two integers
+    <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$0 \leq Q \leq 1\, 000$</span>) and
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$T = 0$</span> or <span class="tex2jax_process">$1$</span>, explained in the output section).
+    Each of the next <span class="tex2jax_process">$Q$</span> lines
+    consists of a single integer <span class="tex2jax_process">$X_
+    i$</span> (<span class="tex2jax_process">$0 \leq X_ i \leq
+    200$</span>), the number of widget types to be updated for
+    query <span class="tex2jax_process">$i$</span>. It is followed
+    by <span class="tex2jax_process">$X_ i$</span> integers, where
+    <span class="tex2jax_process">$Y_{i,j}$</span> (<span class="tex2jax_process">$0 \leq Y_{i,j} \leq N-1$</span>) is the
+    <span class="tex2jax_process">$j$</span>-th type that needs to
+    be updated for the <span class="tex2jax_process">$i$</span>-th
+    query.</p>
+<h2>Output</h2>
+<p>For <span class="tex2jax_process">$T = 0$</span>:</p>
+<p>If it is not possible to build widget <span class="tex2jax_process">$0$</span>, output a single line with string
+    “Invalid”. Otherwise:</p>
+<p>The first line of the output must consist of a single
+    integer, the cost of the initial build in modulo <span class="tex2jax_process">$M$</span>. The next <span class="tex2jax_process">$Q$</span> lines of the output must also
+    consist of a single integer, the answer for each query in
+    modulo <span class="tex2jax_process">$M$</span>.</p>
+<p>For <span class="tex2jax_process">$T = 1$</span>,
+    <span class="tex2jax_process">$Q$</span> is always <span class="tex2jax_process">$0$</span>:</p>
+<p>If it is not possible to build widget <span class="tex2jax_process">$0$</span>, output a single line with string
+    “Invalid”. Otherwise, output a single line with string
+    “Valid”.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$3$</span> Points)</b>: Sample.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$10$</span> Points)</b>: <span class="tex2jax_process">$T = 1$</span> and <span class="tex2jax_process">$Q = 0$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$25$</span> Points)</b>: <span class="tex2jax_process">$T = 0$</span> and <span class="tex2jax_process">$Q = 0$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$22$</span> Points)</b>: <span class="tex2jax_process">$T = 0$</span> and <span class="tex2jax_process">$N \leq 10$</span> and <span class="tex2jax_process">$C_ i \leq 3$</span> (<span class="tex2jax_process">$0 \leq i \leq N-1$</span>).</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$25$</span> Points)</b>: <span class="tex2jax_process">$T = 0$</span> and <span class="tex2jax_process">$N \leq 500$</span> and <span class="tex2jax_process">$C_ i \leq 20$</span> (<span class="tex2jax_process">$0 \leq i \leq N-1$</span>).</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$15$</span> Points)</b>: <span class="tex2jax_process">$T = 0$</span>.</p>
+</li>
+</ol>
+<h2>Visualization</h2>
+<p>To help you visualize the input in the given sample test
+    cases, you can refer to the following images which represent
+    the dependency tree of widget <span class="tex2jax_process">$0$</span> for sample <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$3$</span>, respectively.</p>
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{graph2.png}" src="/problems/widgettree/file/statement/en/img-0003.png" style="width:20.00%"/>
+</center>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{graph3.png}" src="/problems/widgettree/file/statement/en/img-0004.png" style="width:50.00%"/>
+</center>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{graph4.png}" src="/problems/widgettree/file/statement/en/img-0005.png" style="width:60.00%"/>
+</center>
+<h2>Warning</h2>
+<p><b class="bfseries">The I/O files are large. Please use fast
+    I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1000000
+1 1
+1 2
+1 0
+0 0
+</pre>
+</td>
+<td>
+<pre>Invalid
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 1000000
+2 1 2
+2 4 2
+2 3 4
+0
+0
+3 1 4 3
+3 2 3 4
+3 0
+1 4
+2 2 3
+2 3 4
+</pre>
+</td>
+<td>
+<pre>9
+7
+8
+9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 1000000
+2 5 3
+1 6
+2 6 1
+2 4 6
+2 5 7
+0
+3 5 5 5
+1 6
+10 0
+2 7 3
+3 4 3 1
+1 2
+2 1 4
+1 5
+2 2 5
+1 6
+1 5
+1 5
+3 1 7 5
+</pre>
+</td>
+<td>
+<pre>14
+13
+13
+0
+9
+14
+14
+12
+14
+14
+14
+</pre>
+</td>
+</tr>
+</table>
+</div>

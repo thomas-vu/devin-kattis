@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Fourth Great and Bountiful Human Empire is developing a
+    transconduit tunnel network connecting all it’s planets. The
+    Empire consists of <span class="tex2jax_process">$N$</span>
+    planets, represented as points in the 3D space. The cost of
+    forming a transconduit tunnel between planets <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> is:</p><span class="tex2jax_process">\[ \operatorname {TunnelCost}(A,B) = \min \{
+    |x_ A - x_ B |, |y_ A -y_ B |, |z_ A -z_ B | \} \]</span>
+<p>where <span class="tex2jax_process">$(x_ A, y_ A, z_
+    A)$</span> are the 3D coordinates of planet <span class="tex2jax_process">$A$</span>, and <span class="tex2jax_process">$(x_ B, y_ B, z_ B)$</span> are coordinates
+    of planet <span class="tex2jax_process">$B$</span>. The Empire
+    needs to build exactly <span class="tex2jax_process">$N -
+    1$</span> tunnels in order to fully connect all planets, either
+    by direct links or by chain of links. You need to come up with
+    the lowest possible cost of successfully completing this
+    project.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100\, 000$</span>), the number of planets.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    contain exactly <span class="tex2jax_process">$3$</span>
+    integers each. All integers are between <span class="tex2jax_process">$-10^9$</span> and <span class="tex2jax_process">$10^9$</span> inclusive. Each line contains
+    the <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$z$</span> coordinate of one planet (in
+    order).</p>
+<p>No two planets will occupy the exact same point in
+    space.</p>
+<h2>Output</h2>
+<p>The first and only line of output should contain the minimal
+    cost of forming the network of tunnels.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 5 10
+7 8 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+-1 -1 -1
+5 5 5
+10 10 10
+</pre>
+</td>
+<td>
+<pre>11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+11 -15 -15
+14 -5 -15
+-1 -1 -5
+10 -4 -1
+19 -4 19
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

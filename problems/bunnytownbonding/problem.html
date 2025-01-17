@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:41.00%">
+<img alt="/problems/bunnytownbonding/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bunnytownbonding/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://paperhouseproductions.com/products/row-of-bunnies-diecut-card">
+        Paper House Productions</a>; Used with permission
+      </div>
+</div>
+<p>As long as anyone can remember, Bunny Town has been home to
+    many happy and friendly bunnies living together peacefully.
+    However, a recent misunderstanding has led to serious disputes
+    and relationship issues. Now most of the bunnies have stopped
+    talking to each other, and even try to avoid being near each
+    other in public places. Deeply concerned by this unpleasant
+    development, the King of Bunny Town has instituted several
+    guidelines to restore community bonding. One of the guidelines
+    states: <em>“Bunnies should not allow any vacant seat(s) among
+    themselves when two or more bunnies sit in a row in an
+    entertainment venue such as a theater.”</em> You are a Bunny
+    Town volunteer who has been selected by the King to oversee the
+    implementation of this guideline. Your job is to find bunnies
+    sitting in a row of seats, and then move individual bunnies
+    until there are no empty seats among them, while keeping
+    overall movements to a minimum. That is, given a row of
+    <span class="tex2jax_process">$N$</span> seats specified by a
+    sequence of <b class="bfseries"><tt class="ttfamily">B</tt></b>’s and <b class="bfseries"><tt class="ttfamily">E</tt></b>’s, where <b class="bfseries"><tt class="ttfamily">B</tt></b> represents a seat that is occupied by a
+    bunny and <b class="bfseries"><tt class="ttfamily">E</tt></b>
+    represents an empty seat, find the minimum number of moves so
+    that all the bunnies in the row are sitting together (i.e.,
+    occupy a contiguous portion of the row). Note that moving a
+    bunny one position to its immediate left or right is considered
+    a single move, and also note that while moving a bunny, it can
+    temporarily be located on top of another bunny, but must
+    ultimately end up in a seat by itself.</p>
+<h2>Input</h2>
+<p>The input is a single line containing a string of length
+    <span class="tex2jax_process">$N$</span>, where <span class="tex2jax_process">$2 \leq N \leq 2\, 000$</span>. The string
+    consists exclusively of the characters ‘<tt class="ttfamily">E</tt>’ and ‘<tt class="ttfamily">B</tt>’. The
+    number of ‘<tt class="ttfamily">B</tt>’ characters in the
+    string is guaranteed to be at least <span class="tex2jax_process">$2$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the minimum number of moves
+    required to arrange the bunnies in the row so that there are no
+    empty seats among them.</p>
+<h3>Explanation of Sample Input/Output 1</h3>
+<p>If we move the rightmost bunny leftward <span class="tex2jax_process">$5$</span> positions, i.e., into the
+    <span class="tex2jax_process">$4^\mathrm {th}$</span> seat
+    (counting from the left), all the bunnies are now sitting
+    together, and this is the minimum number of moves possible to
+    achieve this.</p>
+<h3>Explanation of Sample Input/Output 2</h3>
+<p>One solution is to move the bunny in the <span class="tex2jax_process">$1^\mathrm {st}$</span> seat (counting from
+    the left) <span class="tex2jax_process">$8$</span> positions rightward into the
+    the <span class="tex2jax_process">$9^\mathrm {th}$</span> seat,
+    move the bunny in the <span class="tex2jax_process">$2^\mathrm
+    {nd}$</span> seat <span class="tex2jax_process">$8$</span> positions rightward into the
+    <span class="tex2jax_process">$10^\mathrm {th}$</span> seat,
+    and move the bunny in the <span class="tex2jax_process">$3^\mathrm {rd}$</span> seat <span class="tex2jax_process">$8$</span> positions rightward into the
+    <span class="tex2jax_process">$11^\mathrm {th}$</span> seat.
+    Then the total number of moves is <span class="tex2jax_process">$8 + 8 + 8 = 24$</span>, and this is the
+    minimum possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>EBBEBEEEB
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>BBBEEEEEEEEBBBBBB
+</pre>
+</td>
+<td>
+<pre>24
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,116 @@
+<div class="problembody">
+<p>After a recent disaster at the Easter party karaoke, you are
+    working on improving your singing. To gauge how well you are
+    doing, you would like to measure how much the pitch and timing
+    of your singing differs from the target melody you were trying
+    to perform.</p>
+<p>We model the melody in a simplified manner as a
+    piecewise-constant function <span class="tex2jax_process">$f$</span>, where at time <span class="tex2jax_process">$x$</span> the melody has pitch <span class="tex2jax_process">$f(x)$</span>. In other words from time
+    <span class="tex2jax_process">$0$</span> up to some time
+    <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$f(x)$</span> is some constant value
+    <span class="tex2jax_process">$y_1$</span>, and then at time
+    <span class="tex2jax_process">$x_1$</span> it changes to some
+    other value <span class="tex2jax_process">$y_2$</span> and
+    remains at that value until some time <span class="tex2jax_process">$x_2 &gt; x_1$</span>, and so on.</p>
+<p>Your voice, on the other hand, is of a more wavering nature,
+    and you may generally not be able to hold an exact constant
+    pitch for any period of time, sometimes breaking off into an
+    unwelcome falsetto and sometimes croaking on those low tones.
+    The pitch of your voice can be modeled in a highly simplistic
+    way as a piecewise-quadratic function <span class="tex2jax_process">$g$</span>. In other words from time
+    <span class="tex2jax_process">$0$</span> up to <span class="tex2jax_process">$x_1$</span> (not necessarily the same
+    <span class="tex2jax_process">$x_1$</span> as for the function
+    <span class="tex2jax_process">$f$</span>), your pitch
+    <span class="tex2jax_process">$g(x)$</span> agrees with some
+    quadratic polynomial, and then from time <span class="tex2jax_process">$x_1$</span> to <span class="tex2jax_process">$x_2$</span> with some other quadratic
+    polynomial, and so on.</p>
+<p>The difference between your performance <span class="tex2jax_process">$g$</span> and the target melody <span class="tex2jax_process">$f$</span> is the area between these two
+    functions. See Figure 1 for an example. Given the melody
+    <span class="tex2jax_process">$f$</span> and your performance
+    <span class="tex2jax_process">$g$</span>, compute their
+    difference.</p>
+<div class="figure" id="fig:pitch">
+<p><img alt="\includegraphics[width=0.73\textwidth ]{sample1.pdf}" src="/problems/pitchperformance/file/statement/en/img-0001.png" style="width:73.00%"/></p>
+<center>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1. The
+          difference between <span class="tex2jax_process">$f$</span> and <span class="tex2jax_process">$g$</span> is the area of the shaded
+          region in the figure.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 500$</span>), the number of pieces in the target
+    melody function <span class="tex2jax_process">$f$</span>. Then
+    follow <span class="tex2jax_process">$n$</span> lines
+    describing <span class="tex2jax_process">$f$</span>. The
+    <span class="tex2jax_process">$i$</span>’th such line contains
+    two integers <span class="tex2jax_process">$x_ i$</span> and
+    <span class="tex2jax_process">$y_ i$</span> (<span class="tex2jax_process">$x_{i-1} &lt; x_ i \le 10^4$</span> and
+    <span class="tex2jax_process">$0 \le y_ i \le 10^4$</span>).
+    For all <span class="tex2jax_process">$x$</span> in the
+    half-open interval <span class="tex2jax_process">$[x_{i-1}, x_
+    i)$</span>, the value of <span class="tex2jax_process">$f(x)$</span> equals <span class="tex2jax_process">$y_ i$</span>. For the first interval we
+    define <span class="tex2jax_process">$x_0 = 0$</span>.</p>
+<p>Then follows a line containing an integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le m \le 500$</span>), the number of pieces in the function
+    <span class="tex2jax_process">$g$</span> describing your
+    performance. The next <span class="tex2jax_process">$m$</span>
+    lines contain the description of <span class="tex2jax_process">$g$</span>. The <span class="tex2jax_process">$i$</span>’th such line contains four
+    integers <span class="tex2jax_process">$x’_ i$</span>,
+    <span class="tex2jax_process">$a_ i$</span>, <span class="tex2jax_process">$b_ i$</span> and <span class="tex2jax_process">$c_ i$</span> (<span class="tex2jax_process">$x’_{i-1} &lt; x’_ i \le 10^4$</span> and
+    <span class="tex2jax_process">$-10^{7} \le a_ i, b_ i, c_ i \le
+    10^{7}$</span>). For all <span class="tex2jax_process">$x$</span> in the half-open interval
+    <span class="tex2jax_process">$[x’_{i-1}, x’_ i)$</span>, the
+    value of <span class="tex2jax_process">$g(x)$</span> equals
+    <span class="tex2jax_process">$a_ ix^2 + b_ ix + c_ i$</span>.
+    For the first interval we define <span class="tex2jax_process">$x’_0 = 0$</span>.</p>
+<p>You may assume that <span class="tex2jax_process">$0 \le
+    g(x) \le 10^4$</span> for all <span class="tex2jax_process">$x’_0 \le x \le x’_ m$</span> and that the
+    two functions end at the same time (i.e., <span class="tex2jax_process">$x_ n = x’_ m$</span>).</p>
+<h2>Output</h2>
+<p>Output the difference between <span class="tex2jax_process">$f$</span> and <span class="tex2jax_process">$g$</span>. Your output should be correct to
+    within an absolute or relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 20
+10 10
+3
+2 2 0 14
+4 -4 16 8
+10 0 -1 18
+</pre>
+</td>
+<td>
+<pre>24.7785420704411
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+20 50
+1
+20 1 -20 100
+</pre>
+</td>
+<td>
+<pre>609.47570824873
+</pre>
+</td>
+</tr>
+</table>
+</div>

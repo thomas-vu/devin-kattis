@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/cheatingstudents/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cheatingstudents/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You are a member of the “Cohort of Cheating and Sneaky
+    Students at UCLA” or “CS Students” for short. Your goal? In
+    every exam, you want to cheat in the most efficient way
+    possible. The Leader of your cohort is somehow able to acquire
+    the answers to all the questions five minutes before the exam
+    (it is unclear how the leader manages to do so but the members
+    suspect some insider TA play at hand). Thus, the cohort needs a
+    way to somehow share the answers DURING the exam!</p>
+<p>The cohort’s cheating strategy is simple. One of the members
+    of the cohort gets up from their seat and sneakily walks toward
+    another member of the cohort to share all the answers they
+    know. Once a student learns of an answer, they remember it
+    forever and can share it with the next student. There are
+    <span class="tex2jax_process">$N$</span> students represented
+    as points in the plane and you may assume the shortest distance
+    between any two students <span class="tex2jax_process">$(x_ i,
+    y_ i)$</span> and <span class="tex2jax_process">$(x_ j, y_
+    j)$</span> is their manhattan distance <span class="tex2jax_process">$|x_ i - x_ j| + |y_ i - y_ j|$</span>. Every
+    student takes <span class="tex2jax_process">$d$</span> seconds
+    to travel a distance of <span class="tex2jax_process">$d$</span>. After sharing answers with
+    another student, the student then returns to their seat
+    (students may inform only one student before returning to their
+    seat). To avoid the professor’s gaze, before a student gets up,
+    anyone from the cohort asks a question which the professor
+    turns around and clarifies on the whiteboard so you needn’t
+    worry about the student getting caught. But you must be
+    careful! Only one student may get up at a time and must return
+    directly to their seat else the professor will find out, and
+    you will sadly be dubbed the “Cohort of Colossally Stupid
+    Students at UCLA”.</p>
+<p>The professor has already fixed the seating layout before
+    the exam and shared it with the class. Given this seating
+    layout as a list of <span class="tex2jax_process">$N$</span>
+    points <span class="tex2jax_process">$(x_ i, y_ i)$</span> in
+    the plane, can you help everyone in the cohort get all the
+    answers as quickly as possible to ensure everyone finishes on
+    time?</p>
+<h2>Input</h2>
+<p>The first line contains a single integer, <span class="tex2jax_process">$N$</span>, the number of students in the
+    cohort taking the exam. The next <span class="tex2jax_process">$N$</span> lines contain two space-separated
+    integers each <span class="tex2jax_process">$x_ i$</span> and
+    <span class="tex2jax_process">$y_ i$</span> denoting the
+    <span class="tex2jax_process">$i^{\text {th}}$</span> student’s
+    position in the examination hall. (<span class="tex2jax_process">$1 \leq N \leq 2\, 000$</span>, <span class="tex2jax_process">$-1\, 000 \leq x_ i,\ y_ i \leq 1\,
+    000$</span>)</p>
+<h2>Output</h2>
+<p>Output a single line containing a single integer, the
+    minimum amount of time (in seconds) required to ensure everyone
+    gets all the answers to the exam.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 0
+0 1
+1 1
+-1 0
+0 -1
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 0
+4 2
+6 1
+7 7
+7 0
+</pre>
+</td>
+<td>
+<pre>36
+</pre>
+</td>
+</tr>
+</table>
+</div>

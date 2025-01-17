@@ -1,0 +1,122 @@
+<div class="problembody">
+<p>Jaap is playing darts at the local pub with a group of
+    friends. His darts throwing skills are not that great, so he
+    just tries to aim at the center of the dartboard. His
+    mathematical skills are better though, and he wonders what is
+    his expected score for one dart.</p>
+<p>After a while Jaap estimates that his darts hit the
+    dartboard (or often miss it) with a probability distribution
+    that depends only on the radius <span class="tex2jax_process">$r$</span> from the center of the board, and
+    has the Gaussian form<a class="footnote" href="#a0000000490"><sup class="footnotemark">1</sup></a></p><span class="tex2jax_process">\[
+    f(r) = \frac{1}{2\pi \sigma ^2} e^{-\frac{r^2}{2\sigma ^2}}.
+    \]</span>
+<p>That is, the probability of hitting a small surface area
+    <span class="tex2jax_process">$\Delta x\! \cdot \! \Delta
+    y$</span> at a distance <span class="tex2jax_process">$r$</span> from the center is given by
+    <span class="tex2jax_process">$f(r) \Delta x\! \cdot \! \Delta
+    y$</span>. Here <span class="tex2jax_process">$\sigma $</span>
+    denotes the standard deviation, and Jaap found out that this
+    depends strongly on how many beers he has had.</p>
+<p>For those not familiar with the game of darts, a dartboard
+    is depicted below. The score for hitting each of the regions of
+    the dartboard is as follows:</p>
+<ul class="itemize">
+<li>
+<p>the inner <em>bull’s eye</em> is worth <span class="tex2jax_process">$50$</span> points;</p>
+</li>
+<li>
+<p>the <em>bull</em> annulus is <span class="tex2jax_process">$25$</span> points;</p>
+</li>
+<li>
+<p>each pie has worth of the respective number <span class="tex2jax_process">$1$</span> up to <span class="tex2jax_process">$20$</span>, but</p>
+</li>
+<li>
+<p>the inner <em>triple ring</em> has triple the worth of
+        the pie, while</p>
+</li>
+<li>
+<p>the outer <em>double ring</em> has double the worth.</p>
+</li>
+</ul>
+<p>Finally, if the dart lands outside the double ring, the
+    score is zero. Note that the pies of all numbers have equal
+    area.</p>
+<div class="figure" id="fig:dartboard">
+<center>
+<img alt="\includegraphics[width=6cm]{dartboard}" src="/problems/dartboard/file/statement/en/img-0001.png" style="width:6cm"/>
+<div class="caption">
+<b>Figure 1</b>: A standard dartboard (from Wikimedia, CC
+          BY-SA 3.0 licensed by Tijmen Stam).
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line contains 6 floating point numbers of strictly
+    increasing size: the radii of the <em>bull’s eye</em>,
+    <em>bull</em>, inner and outer <em>triple ring</em>, and inner
+    and outer <em>double ring</em>, all in centimeters. The second
+    line contains the standard deviation <span class="tex2jax_process">$\sigma $</span> in centimeters as a floating
+    point number. All floating point numbers are in the range
+    <span class="tex2jax_process">$[10^{-3}, 100]$</span>.</p>
+<h2>Output</h2>
+<p>Print the expected score of one dart for Jaap as a floating
+    point number on a single line. The answer should be correct up
+    to either a relative or absolute error of <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.27 3.1 10.9 11.7 16.2 17.0
+17.0
+</pre>
+</td>
+<td>
+<pre>
+5.266210658
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.27 3.1 10.9 11.7 16.2 17.0
+0.5
+</pre>
+</td>
+<td>
+<pre>
+49.00690019
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+0.1 0.2 0.3 0.4 99.9 100
+20
+</pre>
+</td>
+<td>
+<pre>
+10.50283655
+</pre>
+</td>
+</tr>
+</table>
+</div>

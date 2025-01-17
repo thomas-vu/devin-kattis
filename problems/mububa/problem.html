@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>You are the boss of <span class="scshape">ACM</span>
+    (Association for the Country of Mububa), an upstanding company
+    with a single goal of world domination.</p>
+<p>Today, you have conquered the unnamed country of Mububa (how
+    an unnamed country has a name is, of course, outside the scope
+    of this problem). Mububa is known for its great, great,
+    bananas. In light of this monumental achievement, you have
+    decided to reward your executives with Mububa’s greatest
+    treasure (which is obviously, bananas). You have prepared
+    <span class="tex2jax_process">$N$</span> briefcases, each
+    contains a number of bananas. These briefcases are numbered
+    from <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$N$</span>.</p>
+<p>You reward your executives one by one in order from the
+    least evil executive, to the most evil executive (still not
+    comparably evil to you, of course). No two executives are
+    equally evil. For each executive, you first decide how many
+    briefcases you want to give him. If you decide to give an
+    executive <span class="tex2jax_process">$a$</span> briefcases,
+    you give him the <span class="tex2jax_process">$a$</span>
+    briefcases with lowest numbers that you still have. Each
+    executive you reward must receive at least one briefcase.</p>
+<p>It is important to be fair when distributing rewards. You do
+    not want your executives to stage a hunger strike, after all.
+    Thus, the rewards the executives received must reflect how evil
+    they are. More rigorously, if executive <span class="tex2jax_process">$A$</span> is more evil than executive
+    <span class="tex2jax_process">$B$</span>, then the total number
+    of bananas received by executive <span class="tex2jax_process">$A$</span> must be at least as large as the
+    total number of bananas received by executive <span class="tex2jax_process">$B$</span>.</p>
+<p>You know the number of bananas inside all of the briefcases.
+    You want to reward as many executives as possible, but wants
+    the distribution to still be fair (i.e. following the previous
+    requirement) amongst them. What is the maximum number of
+    executives you can reward this way?</p>
+<h2>Input</h2>
+<p>The first line contains a non-negative integer <span class="tex2jax_process">$2 \leq N \leq 3\, 000$</span>, giving the
+    number of briefcases you have. Then follows a line with
+    <span class="tex2jax_process">$N$</span> integers, the
+    <span class="tex2jax_process">$i$</span>-th of which denotes
+    the number of bananas in briefcase number <span class="tex2jax_process">$i$</span>. Each briefcase contains between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10^9$</span> bananas, inclusively.</p>
+<h2>Output</h2>
+<p>Print the maximum number of executives you can reward with
+    bananas.</p>
+<h3>Sample Data explanation</h3>
+<p>In the first example, give briefcase <span class="tex2jax_process">$1$</span> to the least evil executive,
+    briefcase <span class="tex2jax_process">$2$</span> to the
+    second least evil executive, and briefcases <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span> to the most evil executive.</p>
+<p>In the second example, give briefcase <span class="tex2jax_process">$1$</span> to the least evil executive,
+    briefcases <span class="tex2jax_process">$2$</span> and
+    <span class="tex2jax_process">$3$</span> to the second least
+    evil executive, and briefcases <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$5$</span>, and <span class="tex2jax_process">$6$</span> to the most evil executive.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 2 1 2
+</pre>
+</td>
+<td>
+<pre>
+3
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+6 4 2 2 2 2
+</pre>
+</td>
+<td>
+<pre>
+3
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

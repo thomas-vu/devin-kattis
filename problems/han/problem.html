@@ -1,0 +1,144 @@
+<div class="problembody">
+<p>Han didn’t want to study solo so he invited his friend
+    Dominik to come over. After an eventful evening that will be
+    remembered for a record number of solved tasks from the field
+    of electronics, Dominik went home. To his surprise, the police
+    stopped him thinking he was drunk. It is known that in these
+    situations sobriety is proven by solving a series of carefully
+    crafted tasks that test a man’s cognitive abilities. If we can
+    trust Dominik, the conversation went something like this:</p>
+<dl class="description">
+<dt>Policeman</dt>
+<dd>
+<p>Something easy to begin with… What is the
+        complexity of bubble sort?</p>
+</dd>
+<dt>Dominik</dt>
+<dd>
+<p>That is really easy, <span class="tex2jax_process">$\mathrm{O}(n^2)$</span>.</p>
+</dd>
+<dt>Policeman</dt>
+<dd>
+<p>Say the English alphabet in reverse.</p>
+</dd>
+<dt>Dominik</dt>
+<dd>
+<p>Trivial, zyxwvutsrqponmlkjihgfedcba.</p>
+</dd>
+<dt>Policeman</dt>
+<dd>
+<p>You learned that by heart. Now imagine that all the
+        letters of the English alphabet from ‘a’ to ‘z’ are
+        respectively written clockwise in a circle. Begin with the
+        letter ‘a’ and say the letters clockwise. After each spoken
+        letter, I can tell you to continue saying the alphabet in
+        reverse order or I can ask you how many times so far you’ve
+        said a certain letter. Are you ready? 3, 2, 1, Go!</p>
+</dd>
+<dt>Dominik</dt>
+<dd>
+<p>Um… a, b, c…</p>
+</dd>
+</dl>
+<p>Write a programme that solves Dominik’s problem.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1
+    \leq Q \leq 100\, 000$</span>), the number of policeman’s
+    orders. Each of the following <span class="tex2jax_process">$Q$</span> lines contains one of the
+    policeman’s order in the form of “<tt class="ttfamily">SMJER</tt> <span class="tex2jax_process">$n$</span>”
+    (Croatian for direction) or “<tt class="ttfamily">UPIT</tt>
+<span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$x$</span>” (Croatian for query). The order
+    in the form “<tt class="ttfamily">SMJER</tt> <span class="tex2jax_process">$n$</span>” means that, after the nth spoken
+    letter, Dominik must start saying the alphabet in reverse,
+    whereas the order in the form “<tt class="ttfamily">UPIT</tt>
+<span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$x$</span>” means that Dominik must say how
+    many times so far he’s said the letter <span class="tex2jax_process">$x$</span> in the first <span class="tex2jax_process">$n$</span> spoken letters.</p>
+<p>The policeman’s order will be given chronologically in the
+    input, or, the numbers <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \leq n \leq 10^9 $</span>)
+    from the orders will be strictly ascending. The character
+    <span class="tex2jax_process">$x$</span> from the order in the
+    form of “<tt class="ttfamily">UPIT</tt> <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$x$</span>” is a lowercase letter of the
+    English alphabet.</p>
+<h2>Output</h2>
+<p>For each order in the form of “<tt class="ttfamily">UPIT</tt> <span class="tex2jax_process">$n$</span>
+<span class="tex2jax_process">$x$</span>”, output how many
+    times Dominik has said the letter <span class="tex2jax_process">$x$</span> in the first <span class="tex2jax_process">$n$</span> spoken letters. The answer to each
+    query needs to be written in a separate line, and the queries
+    need to be answered in the order given in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+UPIT 1 b
+UPIT 3 b
+SMJER 4
+UPIT 7 a
+UPIT 10 z
+</pre>
+</td>
+<td>
+<pre>
+0
+1
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+SMJER 1
+SMJER 2
+SMJER 3
+UPIT 5 a
+UPIT 7 w
+</pre>
+</td>
+<td>
+<pre>
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+UPIT 100 a
+UPIT 200 c
+UPIT 300 a
+UPIT 400 b
+</pre>
+</td>
+<td>
+<pre>
+4
+8
+12
+16
+</pre>
+</td>
+</tr>
+</table>
+</div>

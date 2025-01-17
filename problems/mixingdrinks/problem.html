@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Pia is a famous bartender at the hip Stockholm night club
+    Supernova. One of her most impressive feats is the mixing a
+    series of drinks using each of the <span class="tex2jax_process">$N$</span> distinct drink ingredients in the
+    bar exactly once. She does this in the following way.</p>
+<p>First, Pia chooses a number of drinks to make. Each of the
+    drink ingredients are then lined up in front of her in order
+    <span class="tex2jax_process">$1, 2, \dots , N$</span>. For the
+    first drink, she uses some positive number <span class="tex2jax_process">$K$</span> of ingredients starting from the
+    left, i.e. <span class="tex2jax_process">$1, 2, ..., K$</span>.
+    For the next drink, she uses some positive number <span class="tex2jax_process">$L$</span> of ingredients starting from the
+    first unused ingredient, i.e. <span class="tex2jax_process">$K
+    + 1, K + 2, \dots , K + L$</span>. She continues this process
+    until the final drink, which uses some set of ingredients
+    <span class="tex2jax_process">$N - M, N - M + 1, \dots ,
+    N$</span>.</p>
+<p>However, not every pair of ingredients work well in a drink.
+    For example, milk and water would not go very well together.
+    She may not include a bad pair of ingredients in any drink.</p>
+<p>So far, she has managed to make a different set of drinks
+    every night. For how many nights can she mix a new set of
+    drinks? We call two sets of drinks different if they do not
+    consist of the exact same drinks (though they are allowed to
+    have drinks in common).</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \le N \le 100\, 000$</span>
+    and <span class="tex2jax_process">$0 \le P \le 100\,
+    000$</span>, the number of ingredients and bad pairs of
+    ingredients.</p>
+<p>Each of the next <span class="tex2jax_process">$P$</span>
+    lines contains two integers <span class="tex2jax_process">$1
+    \le a \not= b \le N$</span>, two ingredients that do not work
+    well together in a drink. The same pair of ingredients may
+    appear multiple times in this list.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of nights Pia can
+    construct a different set of drinks. Since this number may be
+    large, output the remainder when divided by <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+1 3
+4 5
+2 4
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 0
+</pre>
+</td>
+<td>
+<pre>
+16
+</pre>
+</td>
+</tr>
+</table>
+</div>

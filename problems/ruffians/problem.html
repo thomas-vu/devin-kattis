@@ -1,0 +1,56 @@
+<div class="problembody">
+<p>Ashley and Brandon are playing the new hit card game,
+    Ruffians!</p>
+<p>In Ruffians, ten cards are dealt out in a grid of two rows
+    and five columns. Each card has a number on it from 1 to 9.
+    Ashley and Brandon are both looking for a pair of cards that
+    have the same number.</p>
+<p>After playing this game for a while, they realize that there
+    is always a pair of cards that have the same number. To make
+    the game harder, they require that they find a pair of cards
+    with the same number, and that the two cards are in different
+    rows and different columns.</p>
+<p>Given an arrangement of cards, determine if such a pair
+    exists or not.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1\leq t \leq 10^3$</span>). This is the
+    number of test cases.</p>
+<p>Each test case is represented on two lines.</p>
+<p>The first line of each test case contains five integers,
+    each between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$9$</span>. The second line of
+    the test case also contains five integers, each between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>. These two lines combined form the
+    grid of two rows and five columns of cards.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$t$</span> lines, one
+    for each test case.</p>
+<p>For each test case, if there exists a pair of cards with the
+    same number in different rows and different columns, output
+    <tt class="ttfamily">YES</tt>. Otherwise, output <tt class="ttfamily">NO</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+2 6 7 8 9
+5 5 5 5 5
+5 5 5 5 5
+</pre>
+</td>
+<td>
+<pre>NO
+YES
+YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

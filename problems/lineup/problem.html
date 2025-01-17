@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>An eccentric coach asks players on the team to line up
+    alphabetically at the start of practice. The coach does not
+    tell the players whether they need to line up in increasing or
+    decreasing order, so they guess. If they guess wrong, the coach
+    makes them run laps before practice. Given a list of names, you
+    are to determine if the list is in increasing alphabetical
+    order, decreasing alphabetical order or neither.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    will contain the number <span class="tex2jax_process">$N$</span> of people on the team
+    (<span class="tex2jax_process">$2 \leq N \leq 20$</span>).
+    Following that are <span class="tex2jax_process">$N$</span>
+    lines, each containing the name of one person. A name will be
+    at least two characters and at most <span class="tex2jax_process">$12$</span> characters in length and
+    will consist only of capital letters, and with no white spaces
+    (sorry BILLY BOB and MARY JOE). Duplicates names will
+    not be allowed on a team.</p>
+<h2>Output</h2>
+<p>Output a single word: <span class="mbox" style="width:"><tt class="ttfamily">INCREASING</tt></span> if the list
+    is in increasing alphabetical order, <span class="mbox" style="width:"><tt class="ttfamily">DECREASING</tt></span> if it
+    is in decreasing alphabetical order, and otherwise <span class="mbox" style="width:"><tt class="ttfamily">NEITHER</tt></span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+JOE
+BOB
+ANDY
+AL
+ADAM
+</pre>
+</td>
+<td>
+<pre>
+DECREASING
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+HOPE
+ALI
+BECKY
+JULIE
+MEGHAN
+LAUREN
+MORGAN
+CARLI
+MEGAN
+ALEX
+TOBIN
+</pre>
+</td>
+<td>
+<pre>
+NEITHER
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+GEORGE
+JOHN
+PAUL
+RINGO
+</pre>
+</td>
+<td>
+<pre>
+INCREASING
+</pre>
+</td>
+</tr>
+</table>
+</div>

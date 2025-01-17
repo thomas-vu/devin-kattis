@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Aivar is very good at number theory. In fact, it is the only
+    thing he is good at, but this doesn’t stop him from achieving
+    great things. However, if Aivar wants to solve any problem in
+    life, he first needs to convert it to number theory.</p>
+<p>For example, consider a rooted tree with <span class="tex2jax_process">$N$</span> vertices. In order to deal with
+    such structures, Aivar first constructs a <i class="itshape">divisor labelling</i> of the tree. A divisor
+    labelling is a way to label each vertex <span class="tex2jax_process">$v$</span> with a positive integer
+    <span class="tex2jax_process">$x_ v$</span> so that
+    <span class="tex2jax_process">$v$</span> is an ancestor of
+    <span class="tex2jax_process">$u$</span> if and only if
+    <span class="tex2jax_process">$x_ v$</span> divides
+    <span class="tex2jax_process">$x_ u$</span>.</p>
+<p>After constructing such a labelling, Aivar can simply forget
+    about the tree and just think about the list of numbers
+    <span class="tex2jax_process">$x_1, x_2, \dots , x_
+    N$</span>.</p>
+<p>You are given a rooted tree with <span class="tex2jax_process">$N$</span> vertices, and your task is to find
+    a divisor labelling. The vertices are numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>, and <span class="tex2jax_process">$1$</span> is the root.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 60$</span>).</p>
+<p>The following <span class="tex2jax_process">$N-1$</span>
+    lines each contain two integers <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1
+    \leq u, v \leq N$</span>, <span class="tex2jax_process">$u \neq
+    v$</span>), meaning that an edge goes between vertices
+    <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>. These edges will form a tree.</p>
+<h2>Output</h2>
+<p>Print one line with <span class="tex2jax_process">$N$</span>
+    integers, the numbers <span class="tex2jax_process">$x_1, x_2,
+    \dots x_ N$</span>. These numbers must satisfy <span class="tex2jax_process">$1 \leq x_ i \leq 10^{18}$</span>. It can be
+    shown that under these constraints, an answer always
+    exists.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+1 2
+1 3
+3 4
+3 5
+</pre>
+</td>
+<td>
+<pre>1 2 3 21 33
+</pre>
+</td>
+</tr>
+</table>
+</div>

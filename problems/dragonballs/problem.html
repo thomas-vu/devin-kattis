@@ -1,0 +1,114 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/dragonballs/file/statement/en/img-0001.png" class="illustration" src="/problems/dragonballs/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://www.skyringecrafts.com/dragon-ball/anime-dragon-ball-z-resin-acrylic-dragon-ball.html">
+        Dragon Balls</a> by Skyringe Crafts
+      </div>
+</div>During the showdown with Frieza on Namek, Krillin died
+    yet again and needs to be brought back to life using the
+    <em>Dragon Balls</em>. As everybody else is still busy fighting
+    Frieza, the task of retrieving all seven Dragon Balls has
+    fallen to you.
+    <p>The balls are hidden at unknown locations in a 2D plane and
+    you have been handed a Dragon Radar, designed by Bulma, that
+    you must use to locate them. You can repeatedly fly to
+    arbitrary locations, and the radar will then inform you about
+    the distance to the closest Dragon Ball. If this distance is
+    <span class="tex2jax_process">$0$</span> this means that you
+    found one of the balls and you can then recalibrate the radar
+    so that it ignores the ball you just found.</p>
+<p>With the battle still going on, and the radar having limited
+    energy, you are obviously in a great hurry. You need to make
+    sure to collect all the balls by using the radar no more than
+    <span class="tex2jax_process">$1\, 000$</span> times.</p>
+<h2>Interaction</h2>
+<p>This is an interactive problem. Your submission will be run
+    against an <em>interactor</em>, which reads the standard output
+    of your submission and writes to the standard input of your
+    submission. This interaction needs to follow a specific
+    protocol:</p>
+<p>The interactor first sends an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 7$</span>), the number of Dragon Balls you still need
+    to find. The <span class="tex2jax_process">$n$</span> balls are
+    hidden at integer locations <span class="tex2jax_process">$(x,y)$</span> with <span class="tex2jax_process">$0 \le x,y \le 10^6$</span>. Your submission
+    may not guess outside this area.</p>
+<p>Your submission then repeatedly sends such an integer
+    location <span class="tex2jax_process">$(x,y)$</span> and the
+    interactor replies with an integer <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0
+    \le d \le 2\cdot 10^{12}$</span>), the square of the distance
+    from <span class="tex2jax_process">$(x,y)$</span> to the
+    closest remaining ball.</p>
+<p>If <span class="tex2jax_process">$d = 0$</span>, the ball at
+    <span class="tex2jax_process">$(x,y)$</span> is considered
+    found and ignored in further guesses. When all balls are found,
+    your submission should exit. Each location holds at most one
+    ball.</p>
+<p>Make sure you flush the buffer after each write.</p>
+<p>A testing tool is provided to help you develop your
+    solution.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>25</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>3 4</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>2</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>4 3</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>2</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>2 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>8</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>5 5</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>4 2</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>4 3</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+</div>

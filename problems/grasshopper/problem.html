@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>Gregory is a grasshopper. His favourite food are clover
+    leafs—he can simply never have enough of them. Whenever he
+    spots such a leaf, he wants to eat it as quickly as possible.
+    Gregory is also lazy, so he wants to move to the leaf with
+    minimal effort. Your task is to help him to find the shortest
+    way to a clover leaf.</p>
+<p>For simplicity, we will assume that Gregory lives on a
+    rectangular grid consisting of unit squares. As a grasshopper,
+    he prefers to move by jumping (or, more exactly, hopping) from
+    one square to the other. Each hop takes him to a square that is
+    in the adjacent row or column in one direction, and two columns
+    or rows away in the other direction. So, his hops resemble the
+    moves of a knight on a chessboard.</p>
+<div class="figure" id="fig:hops">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{hops.pdf}" src="/problems/grasshopper/file/statement/en/img-0001.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Hops of a grasshopper
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of several test cases, at most
+    <span class="tex2jax_process">$1\, 200$</span>, each of them
+    specified by six integer numbers on one line: <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$G_
+    R$</span>, <span class="tex2jax_process">$G_ C$</span>,
+    <span class="tex2jax_process">$L_ R$</span>, and <span class="tex2jax_process">$L_ C$</span>. <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> specify the size of the grid in
+    unit squares, <span class="tex2jax_process">$1 \leq R, C \leq
+    100$</span>. Gregory cannot hop outside a rectangle of this
+    size, because it would be too dangerous. The values of
+    <span class="tex2jax_process">$G_ R$</span>, <span class="tex2jax_process">$G_ C$</span> are the coordinates of the
+    square that Gregory is standing on, and <span class="tex2jax_process">$L_ R$</span>, <span class="tex2jax_process">$L_ C$</span> are the coordinates of the
+    square with the delicious clover leaf. (<span class="tex2jax_process">$1 \leq G_ R, L_ R \leq R$</span>;
+    <span class="tex2jax_process">$1 \leq G_ C, L_ C \leq
+    C$</span>)</p>
+<h2>Output</h2>
+<p>For each test case, print one integer number—the minimal
+    number of hops that Gregory needs to reach the square with his
+    beloved delicacy. If it is not possible to reach that square at
+    all, print the word “<tt class="ttfamily">impossible</tt>”
+    instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 10 10 10 1 1
+2 2 1 1 1 2
+8 8 1 1 1 2
+</pre>
+</td>
+<td>
+<pre>6
+impossible
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

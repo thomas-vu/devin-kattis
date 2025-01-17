@@ -1,0 +1,49 @@
+<div class="problembody">
+<p>You have just moved from a quiet Waterloo neighbourhood to a
+    big, noisy city. Instead of getting to ride your bike to school
+    every day, you now get to walk and take the subway. Because you
+    don’t want to be late for class, you want to know how long it
+    will take you to get to school.</p>
+<p>You walk at a speed of <span class="tex2jax_process">$10$</span> km/h. The subway travels at
+    <span class="tex2jax_process">$40$</span> km/h. Assume that you
+    are lucky, and whenever you arrive at a subway station, a train
+    is there that you can board immediately. You may get on and off
+    the subway any number of times, and you may switch between
+    different subway lines if you wish. All subway lines go in both
+    directions.</p>
+<h2>Input</h2>
+<p>Input consists of the <span class="tex2jax_process">$(x,y)$</span> coordinates of your home and
+    your school, followed by specifications of several subway
+    lines. Each subway line consists of the non-negative integer
+    <span class="tex2jax_process">$(x,y)$</span> coordinates of
+    each stop on the line, in order. You may assume the subway runs
+    in a straight line between adjacent stops, and the coordinates
+    represent an integral number of metres. Each line has at least
+    two stops. The end of each subway line is followed by the dummy
+    coordinate pair <span class="tex2jax_process">$(-1,-1)$</span>.
+    In total there are at most <span class="tex2jax_process">$200$</span> subway stops in the city.</p>
+<h2>Output</h2>
+<p>Output is the number of minutes it will take you to get to
+    school, rounded to the nearest minute, taking the fastest
+    route.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 0 10000 1000
+0 200 5000 200 7000 200 -1 -1
+2000 600 5000 600 10000 600 -1 -1
+</pre>
+</td>
+<td>
+<pre>
+21
+</pre>
+</td>
+</tr>
+</table>
+</div>

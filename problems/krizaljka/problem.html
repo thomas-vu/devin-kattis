@@ -1,0 +1,104 @@
+<div class="problembody">
+<p>Since ACTA has entered into force, Slavko has been spending
+    his time offline, solving crosswords. Having solved almost all
+    that he could get his hands on, he wants to make a few
+    crosswords of his own. However, he is too sloppy for such fine
+    work, so he has asked you to help him generate the
+    crosswords.</p>
+<p>You are given two words, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. The word <span class="tex2jax_process">$A$</span> must be output horizontally, and
+    the word <span class="tex2jax_process">$B$</span> vertically,
+    so that the two words cross (i.e., share exactly one letter).
+    The shared letter must be the first letter in <span class="tex2jax_process">$A$</span> that is also contained in
+    <span class="tex2jax_process">$B$</span>, more specifically the
+    first occurrence of that letter in each word.</p>
+<p>For example, given the words <span class="tex2jax_process">$A = \texttt{ABBA}$</span> and <span class="tex2jax_process">$B = \texttt{CCBB}$</span>, you need to
+    output <span class="tex2jax_process">$4$</span> lines as shown
+    below:</p>
+<pre>
+.C..
+.C..
+ABBA
+.B..
+</pre>
+<h2>Input</h2>
+<p>The first and only line of input contains two words,
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, not more than <span class="tex2jax_process">$30$</span> characters long, separated by a
+    single space. Both words will contain only uppercase English
+    letters. There will be at least one letter contained in both
+    words.</p>
+<h2>Output</h2>
+<p>Let <span class="tex2jax_process">$N$</span> be the length
+    of word <span class="tex2jax_process">$A$</span>, and
+    <span class="tex2jax_process">$M$</span> the length of word
+    <span class="tex2jax_process">$B$</span>. The output must
+    contain <span class="tex2jax_process">$M$</span> lines, each
+    containing <span class="tex2jax_process">$N$</span> characters.
+    The character grid must contain the two words crossed as
+    described above. All other characters in the grid must be
+    periods (the character “<tt class="ttfamily">.</tt>”, without
+    quotes), thus padding all lines to the length of <span class="tex2jax_process">$N$</span> characters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>BANANA PIDZAMA
+</pre>
+</td>
+<td>
+<pre>.P....
+.I....
+.D....
+.Z....
+BANANA
+.M....
+.A....
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>MAMA TATA
+</pre>
+</td>
+<td>
+<pre>.T..
+MAMA
+.T..
+.A..
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>REPUBLIKA HRVATSKA
+</pre>
+</td>
+<td>
+<pre>H........
+REPUBLIKA
+V........
+A........
+T........
+S........
+K........
+A........
+</pre>
+</td>
+</tr>
+</table>
+</div>

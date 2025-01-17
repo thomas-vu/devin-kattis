@@ -1,0 +1,74 @@
+<div class="problembody">
+<p><b class="bfseries">RILEY VASHTEE</b>: [<i class="itshape">reading from display</i>] Find the next number in the
+    sequence:</p>
+<center>
+<b class="bfseries">313 331 367 ...? What?</b>
+</center>
+<p><b class="bfseries">THE DOCTOR: 379.</b></p>
+<p><b class="bfseries">MARTHA JONES:</b> What?</p>
+<p><b class="bfseries">THE DOCTOR:</b> It’s a sequence of happy
+    primes – <b class="bfseries">379</b>.</p>
+<p><b class="bfseries">MARTHA JONES:</b> Happy <i class="itshape">what?</i></p>
+<p><b class="bfseries">THE DOCTOR</b>: Any number that reduces
+    to one when you take the sum of the square of its digits and
+    continue iterating it until it yields <span class="tex2jax_process">$1$</span> is a happy number. Any number that
+    doesn’t, isn’t. A <em>happy</em> prime is both happy and
+    prime.</p>
+<p><b class="bfseries">THE DOCTOR</b>: I dunno, talk about
+    <em>dumbing down</em>. Don’t they teach recreational
+    mathematics anymore?</p>
+<p>Excerpted from “<i class="itshape">Dr. Who</i>,” Episode 42
+    (2007).</p>
+<p>The number 7 is certainly prime. But is it
+    happy?</p><span class="tex2jax_process">\begin{eqnarray*} 7
+    &amp; \rightarrow &amp; 7^2 = 49 \\ 49 &amp; \rightarrow &amp;
+    4^2 + 9^2 = 97 \\ 97 &amp; \rightarrow &amp; 9^2 + 7^2 = 130 \\
+    130 &amp; \rightarrow &amp; 1^2 + 3^2 = 10 \\ 10 &amp;
+    \rightarrow &amp; 1^2 + 0^2 = 1 \\ \end{eqnarray*}</span>
+<p>It is happy <tt class="ttfamily">:-)</tt> As it happens, 7
+    is the smallest happy prime. Please note that for the purposes
+    of this problem, 1 is <em>not</em> prime.</p>
+<p>For this problem you will write a program to determine if a
+    number is a happy prime.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 10\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by the happy prime
+    candidate, <span class="tex2jax_process">$m$</span>,
+    (<span class="tex2jax_process">$1 \le m \le 10\,
+    000$</span>).</p>
+<h2>Output</h2>
+<p>For each data set there is a single line of output. The
+    single output line consists of the data set number,
+    <span class="tex2jax_process">$K$</span>, followed by a single
+    space followed by the candidate, <span class="tex2jax_process">$m$</span>, followed by a single space,
+    followed by <tt class="ttfamily">YES</tt> or <tt class="ttfamily">NO</tt>, indicating whether <span class="tex2jax_process">$m$</span> is a happy prime.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 1
+2 7
+3 383
+4 1000
+</pre>
+</td>
+<td>
+<pre>
+1 1 NO
+2 7 YES
+3 383 YES
+4 1000 NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/softpasswords/file/statement/en/img-0001.jpg" class="illustration" src="/problems/softpasswords/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/illustrations/password-app-application-business-2781614/">
+        pixabay image</a>
+</div>
+</div>
+<p>Your favourite social media website is changing their policy
+    on login password validation: a slight error when logging in is
+    now acceptable! In particular, assuming the password you chose
+    when creating the account is <span class="tex2jax_process">$S$</span>, a password <span class="tex2jax_process">$P$</span> entered while logging in will be
+    accepted if any of the following conditions are met:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$P$</span> and
+        <span class="tex2jax_process">$S$</span> are identical;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S$</span> can be formed
+        from <span class="tex2jax_process">$P$</span> by prepending
+        a single digit (<tt class="ttfamily">0</tt>–<tt class="ttfamily">9</tt>);</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S$</span> can be formed
+        from <span class="tex2jax_process">$P$</span> by appending
+        a single digit;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S$</span> is equal to
+        <span class="tex2jax_process">$P$</span> after reversing
+        the case of all letters in <span class="tex2jax_process">$P$</span>.</p>
+</li>
+</ul>
+<p>To reverse the case of a string, replace all uppercase
+    letters with their equivalent lowercase letters, and all
+    lowercase letters with their equivalent uppercase letters,
+    while leaving all other characters the same. For example, the
+    case-reversal of <tt class="ttfamily">pa55WORD</tt> is
+    <tt class="ttfamily">PA55word</tt>.</p>
+<p>Any other attempted password <span class="tex2jax_process">$P$</span> will be rejected. So for example,
+    if <span class="tex2jax_process">$S$</span> is <tt class="ttfamily">c0deninja5</tt>, then <tt class="ttfamily">c0deninja</tt> will be accepted, but not <tt class="ttfamily">C0deninja5</tt> or <tt class="ttfamily">c0deninja51</tt>.</p>
+<p>Write a program which, given alphanumeric strings
+    <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$P$</span>, determines whether <span class="tex2jax_process">$P$</span> should be accepted.</p>
+<h2>Input</h2>
+<p>The first line of the input is the string <span class="tex2jax_process">$S$</span>, the stored password, and the
+    second line of input is the password <span class="tex2jax_process">$P$</span> that a user has entered while
+    attempting to log in. Each string consists of only digits
+    <tt class="ttfamily">0</tt>–<tt class="ttfamily">9</tt>,
+    lowercase letters <tt class="ttfamily">a</tt>–<tt class="ttfamily">z</tt>, and uppercase letters <tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>. The strings
+    won’t contain spaces or any other extraneous characters, and
+    will each contain at least one and at most <span class="tex2jax_process">$101$</span> characters.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">Yes</tt> if <span class="tex2jax_process">$P$</span> should be accepted according to
+    the above rules, and <tt class="ttfamily">No</tt>
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>123
+123a
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>abc
+ABC
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

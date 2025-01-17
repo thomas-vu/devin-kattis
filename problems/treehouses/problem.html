@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>In a rainforest there are <span class="tex2jax_process">$n$</span> treehouses high in the forest
+    canopy on different trees (numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>). The <span class="tex2jax_process">$i$</span>-th tree’s location is at
+    <span class="tex2jax_process">$(x_ i, y_ i)$</span>. The first
+    <span class="tex2jax_process">$e$</span> of them in the list
+    are close enough to neighboring open land around the rainforest
+    so that transportation between all of them is easy by foot.
+    Some treehouses may already be connected by direct straight
+    cables through the air that can allow transport between
+    them.</p>
+<p>Residents want easy transportation between all the
+    treehouses and the open land, by some combination of walking
+    (between those near the open land), and using one or more
+    cables between treehouses. This may require the addition of
+    more cables. Since the cables are expensive, they would like to
+    add the smallest possible length of cable.</p>
+<p>The height of a cable up two trees can be set so cables can
+    criss-cross other cables, and not allow any snags or crashes.
+    It is not safe to try to switch between two criss-crossed
+    cables in mid-air!</p>
+<h2>Input</h2>
+<p>The input will start with the three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 1\, 000$</span>), <span class="tex2jax_process">$e$</span> (<span class="tex2jax_process">$1
+    \le e \le n$</span>), and <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$0
+    \le p \le 1\, 000$</span>), where <span class="tex2jax_process">$p$</span> is the number of cables in place
+    already.</p>
+<p>Next come <span class="tex2jax_process">$n$</span> lines,
+    each with two real numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$|x|, |y| \le 10\, 000$</span>) giving the
+    location of a treehouse. The <span class="tex2jax_process">$i$</span>-th coordinate pair is for the
+    treehouse with ID <span class="tex2jax_process">$i$</span>. All
+    coordinate pairs are unique. Real numbers are stated as
+    integers or include one digit after a decimal point.</p>
+<p>Next come <span class="tex2jax_process">$p$</span> lines,
+    each with two integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, where <span class="tex2jax_process">$1 \le a &lt; b \le n$</span>, giving the two
+    treehouse ids of an existing cable between their trees. No ID
+    pair will be repeated.</p>
+<h2>Output</h2>
+<p>The output is the minimum total length of new cable that
+    achieves the connection goal, expressed with absolute or
+    relative error less than <span class="tex2jax_process">$0.001$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1 0
+0.0 0.0
+2.0 0.0
+1.0 2.0
+</pre>
+</td>
+<td>
+<pre>4.236067
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 1 1
+0.0 0.0
+0.5 2.0
+2.5 2.0
+1 2
+</pre>
+</td>
+<td>
+<pre>2.000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 0
+0.0 0.0
+2.0 0.0
+1.0 2.0
+</pre>
+</td>
+<td>
+<pre>2.236067
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>This is an array problem.</p>
+<p>Given <span class="tex2jax_process">$N$</span> numbers,
+    <span class="tex2jax_process">$A_1, \dots A_ N$</span>, answer
+    <span class="tex2jax_process">$Q$</span> queries as
+    follows:</p>
+<p>Given <span class="tex2jax_process">$L, R$</span> where
+    <span class="tex2jax_process">$R - L + 1 \geq 4$</span>, among
+    all possible <span class="tex2jax_process">$L &lt; X &lt; Y
+    &lt; R$</span>, maximise <span class="tex2jax_process">$A_ L
+    \times A_ X \times A_ Y \times A_ R$</span>. Output on a single
+    line this maximised value.</p>
+<h2>Constraints</h2>
+<p><span class="tex2jax_process">$1 \leq N, Q \leq 5 \times
+    10^5$</span><br/>
+<span class="tex2jax_process">$-10^4 \leq A_ i \leq
+    10^4$</span><br/>
+<span class="tex2jax_process">$1 \leq L_ i &lt; L_ i+3 \leq R_
+    i \leq N$</span></p>
+<h2>Input</h2>
+<p>The first line contains two space-separated integers,
+    <span class="tex2jax_process">$N$</span>, the number of
+    numbers, and <span class="tex2jax_process">$Q$</span>, the
+    number of queries<br/>
+    The second line contains <span class="tex2jax_process">$N$</span> space-separated integers,
+    <span class="tex2jax_process">$A_1, A_2, \dots , A_
+    N$</span><br/>
+<span class="tex2jax_process">$Q$</span> lines follow, the
+    <span class="tex2jax_process">$i^{th}$</span> line contains 2
+    space-separated integers, <span class="tex2jax_process">$L_ i,
+    R_ i$</span>, which are the <span class="tex2jax_process">$L,
+    R$</span> values for the <span class="tex2jax_process">$i^{th}$</span> query</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$Q$</span> lines, each
+    containing a single integer which is the answer for the
+    <span class="tex2jax_process">$i^{th}$</span> query.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 3
+-1 2 1 4 -2 -3 2 
+1 7
+2 7
+1 6
+</pre>
+</td>
+<td>
+<pre>24
+24
+24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 10
+564 7167 -4069 -3244 579 199 -9838 2913 9796 4734 
+2 6
+1 6
+2 7
+1 7
+4 10
+1 9
+5 10
+1 7
+4 9
+5 9
+</pre>
+</td>
+<td>
+<pre>18826041697788
+1481496793296
+166115621837646
+161812108318536
+1480010149948608
+221168049823968
+78216085767528
+161812108318536
+910703330545056
+3287917420308
+</pre>
+</td>
+</tr>
+</table>
+</div>

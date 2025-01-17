@@ -1,0 +1,121 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/smartphone/file/statement/en/img-0001.jpg" class="illustration" src="/problems/smartphone/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You have a very smart phone. Here is the user experience
+    when entering a word:</p>
+<ol class="enumerate">
+<li>
+<p>You decide on the word you want to write.</p>
+</li>
+<li>
+<p>You start typing it.</p>
+</li>
+<li>
+<p>At some point, three suggestions appear. The list of
+        suggestions never changes after it has first been
+        presented, even if you keep typing.</p>
+</li>
+</ol>
+<p>You always only get three suggestions. This would mean that
+    the suggestions would not always fit on the screen. However,
+    when this happens they are read aloud by a text to speech
+    plugin that cost $9.99. Yes, it reads all the suggestions for
+    every character you enter until you take one of the
+    suggestions.</p>
+<p>Since it’s a very smart phone, you can only do the
+    following:</p>
+<ul class="itemize">
+<li>
+<p>Replace what you have written so far with one of the
+        suggestions.</p>
+</li>
+<li>
+<p>Hit the backspace button.</p>
+</li>
+<li>
+<p>Enter a letter.</p>
+</li>
+</ul>
+<p>Each of these options takes one keypress. An example: you
+    want to enter the text CAKEEATER. When the suggestions appear,
+    you had gotten to CAK. Let’s say you decide to take the
+    suggestion CAKEMONSTER, remove MONSTER and enter EATER. This
+    would mean that you used 1+7+5=13 keypresses to get to the word
+    CAKEEATER. The only time you would want to do this is when you
+    want to annoy the cookie monster. Also, a lot of keypresses
+    could have been avoided here if we had made different
+    decisions.</p>
+<p>Write a program that <em>minimize</em> the amount of
+    keypresses given the current input, the desired word and the
+    three suggestions from your very smart phone.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of a single integer,
+    <span class="tex2jax_process">$T$</span>, the number of test
+    cases.<br/>
+    For each test case there will be five lines:</p>
+<ul class="itemize">
+<li>
+<p>The word you want to type.</p>
+</li>
+<li>
+<p>What has been written so far.</p>
+</li>
+<li>
+<p>Suggestion 1</p>
+</li>
+<li>
+<p>Suggestion 2</p>
+</li>
+<li>
+<p>Suggestion 3.</p>
+</li>
+</ul>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq T \leq
+        50$</span></p>
+</li>
+<li>
+<p>All line lengths will be greater than zero, and less
+        than or equal to 25.</p>
+</li>
+<li>
+<p>All lines consist of only uppercase characters from the
+        English alphabet (<tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>).</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each test case, output the minimum number of keypresses
+    needed to get to the desired word.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+CAKEEATER
+CAK
+CAKEMONSTER
+CARNIVAL
+CAKEEATUR
+IDIOPEN
+HODOR
+KEG
+IPHONE
+FLUXCAPACITATOR
+</pre>
+</td>
+<td>
+<pre>
+5
+11
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,105 @@
+<div class="problembody">
+<p><i class="itshape">“[There] is a reason why the most
+    successful trial lawyers are often master storytellers, making
+    their cases come to life for their jurors.” ­–G. Christopher
+    Ritter.</i></p>
+<p>A good lawyer can take an incomplete set of facts and turn
+    it into a convincing story.</p>
+<p>Last night, a major robbery occurred at a bank, and,
+    luckily, the robber seems to have been successfully arrested.
+    Unfortunately, it is neither clear what the order of events
+    was, nor whether the man they caught is even really the right
+    guy. It is necessary to reconstruct the correct order of events
+    to convince the jury that the accused is guilty beyond
+    reasonable doubt for a conviction to be reached.</p>
+<p>It is known that there are <span class="tex2jax_process">$N$</span> material events that are relevant
+    to the case. For simplicity, we label the events <span class="tex2jax_process">$1, 2, \dots , N$</span>. The prosecution
+    claims that these events happened in the order <span class="tex2jax_process">$P_1, P_2, \dots , P_ N$</span>, while the
+    defense claims that these events instead happened in the order
+    <span class="tex2jax_process">$D_1, D_2, \dots , D_ N$</span>.
+    It is guaranteed that exactly one of the two is right; in
+    particular, this also means that the prosecution and defense do
+    not claim the exact same order of events; that is, there exists
+    some <span class="tex2jax_process">$i$</span> such that
+    <span class="tex2jax_process">$P_ i \neq D_ i$</span>.</p>
+<p>Define a <i class="itshape">consistent recollection</i> as a
+    subset of the <span class="tex2jax_process">$N$</span> events,
+    in some order, such that these events happening in this order
+    is consistent with at least one of the two parties’ claims.
+    (That is, at least one of the parties claimed that this subset
+    of events did happen in this order, although it is possible
+    that some other events happened before, after, or in between.)
+    You need to determine</p>
+<ol class="enumerate">
+<li>
+<p>the <i class="itshape">minimum</i> <span class="tex2jax_process">$k_ p$</span> such that there is some
+        consistent recollection of <span class="tex2jax_process">$k_ p$</span> events where it is possible
+        to determine for sure who is right, and</p>
+</li>
+<li>
+<p>the <i class="itshape">minimum</i> <span class="tex2jax_process">$k_ r$</span> such that for <i class="itshape">any</i> consistent recollection of <span class="tex2jax_process">$k_ r$</span> events, it is possible to
+        determine for sure who is right.</p>
+</li>
+</ol>
+<p>By finding these numbers, you can help the prosecution
+    estimate the minimum amount of evidence they need to make their
+    case, and the minimum amount of evidence they need to make
+    their case foolproof. (Or determine that the man they have is
+    really innocent.) Please help!</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \leq N \leq 200\, 000$</span>), the number
+    of events.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> integers, <span class="tex2jax_process">$P_1, P_2, \dots , P_ N$</span> (<span class="tex2jax_process">$1 \leq P_ i \leq N$</span>; all <span class="tex2jax_process">$P_ i$</span> are distinct), the order of
+    events according to the prosecution. That is, according to the
+    prosecution, the <span class="tex2jax_process">$i^\text
+    {th}$</span> event was the event labelled <span class="tex2jax_process">$P_ i$</span>.</p>
+<p>The third line of input contains <span class="tex2jax_process">$N$</span> integers, <span class="tex2jax_process">$D_1, D_2, \dots , D_ N$</span> (<span class="tex2jax_process">$1 \leq D_ i \leq N$</span>; all <span class="tex2jax_process">$D_ i$</span> are distinct), the order of
+    events according to the defense. That is, according to the
+    defense, the <span class="tex2jax_process">$i^\text
+    {th}$</span> event was the event labelled <span class="tex2jax_process">$D_ i$</span>.</p>
+<p>It is guaranteed that the prosecution and defense do not
+    claim the exact same order of events; that is, there exists
+    some <span class="tex2jax_process">$i$</span> such that
+    <span class="tex2jax_process">$P_ i \neq D_ i$</span>.</p>
+<h2>Output</h2>
+<p>Output two integers on a single line, the minimum values of
+    <span class="tex2jax_process">$k_ p$</span> and <span class="tex2jax_process">$k_ r$</span>, respectively, as described in
+    the problem statement.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+3 2 4 1
+1 3 4 2
+</pre>
+</td>
+<td>
+<pre>2 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 2
+2 1
+</pre>
+</td>
+<td>
+<pre>2 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,102 @@
+<div class="problembody">
+<p>Bees are one of the most industrious insects. Since they
+    collect nectar and pollen from flowers, they have to rely on
+    the trees in the forest. For simplicity they numbered the
+    <span class="tex2jax_process">$n$</span> trees from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n - 1$</span>. Instead of roaming around all
+    over the forest, they use a particular list of paths. A path is
+    based on two trees, and they can move either way i.e. from one
+    tree to another in straight line. They don’t use paths that are
+    not in their list.</p>
+<p>As technology has been improved a lot, they also changed
+    their working strategy. Instead of hovering over all the trees
+    in the forest, they are targeting particular trees, mainly
+    trees with lots of flowers. So, they planned that they will
+    build some new hives in some targeted trees. After that they
+    will only collect their foods from these trees. They will also
+    remove some paths from their list so that they don’t have to go
+    to a tree with no hive in it.</p>
+<p>Now, they want to build the hives such that if one of the
+    paths in their new list go down (some birds or animals disturbs
+    them in that path) it’s still possible to go from any hive to
+    another using the existing paths.</p>
+<p>They don’t want to choose less than two trees and as
+    hive-building requires a lot of work, they need to keep the
+    number of hives as low as possible. Now you are given the trees
+    with the paths they use, your task is to propose a new bee hive
+    colony for them.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 500$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0
+    \leq m \leq 20\, 000$</span>), where <span class="tex2jax_process">$n$</span> denotes the number of trees and
+    <span class="tex2jax_process">$m$</span> denotes the number of
+    paths. Each of the next <span class="tex2jax_process">$m$</span> lines contains two integers
+    <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0
+    \leq u, v &lt; n, u \neq v$</span>) meaning that there is a
+    path between tree <span class="tex2jax_process">$u$</span> and
+    <span class="tex2jax_process">$v$</span>. Assume that there can
+    be at most one path between tree <span class="tex2jax_process">$u$</span> to <span class="tex2jax_process">$v$</span>, and needless to say that a path
+    will not be given more than once in the input.</p>
+<h2>Output</h2>
+<p>Print the number of beehives in the proposed colony or
+    ‘<tt class="ttfamily">impossible</tt>’ if its impossible to
+    find such a colony.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+0 1
+1 2
+2 0
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+0 1
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 6
+0 1
+1 2
+1 3
+2 3
+0 4
+3 4
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

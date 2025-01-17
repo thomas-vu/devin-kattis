@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>Your judges are preparing a problem set, and they’re trying
+    to evaluate a problem for inclusion in the set. Each judge
+    rates the problem with an integer between <span class="tex2jax_process">$-3$</span> and <span class="tex2jax_process">$3$</span>, where:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="text-align:left">
+<p>means: I <em>really</em> like this problem!</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$-3$</span></p>
+</td>
+<td style="text-align:left">
+<p>means: I <em>really don’t</em> like this
+            problem!</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="text-align:left">
+<p>means: Meh. I don’t care if we use this problem or
+            not.</p>
+</td>
+</tr>
+</table>
+</center>
+<p>The overall rating of the problem is the average of all of
+    the judges’ ratings—that is, the sum of the ratings divided by
+    the number of judges providing a rating.</p>
+<p>Some judges have already rated the problem. Compute the
+    minimum and maximum possible overall rating that the problem
+    can end up with after the other judges submit their
+    ratings.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10$</span>) and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$0
+    \le k \le n$</span>), where <span class="tex2jax_process">$n$</span> is the total number of judges, and
+    <span class="tex2jax_process">$k$</span> is the number of
+    judges who have already rated the problem.</p>
+<p>Each of the next <span class="tex2jax_process">$k$</span>
+    lines contains a single integer <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$-3
+    \le r \le 3$</span>). These are the ratings of the <span class="tex2jax_process">$k$</span> judges that have already rated the
+    problem.</p>
+<h2>Output</h2>
+<p>Output two space-separated floating point numbers on a
+    single line, which are the minimum and maximum overall rating
+    the problem could achieve after the remaining judges rate the
+    problem, minimum first. These values must be accurate to an
+    absolute or relative error of <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1
+2
+</pre>
+</td>
+<td>
+<pre>-1.2 2.4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+-3
+-3
+-2
+-3
+</pre>
+</td>
+<td>
+<pre>-2.75 -2.75
+</pre>
+</td>
+</tr>
+</table>
+</div>

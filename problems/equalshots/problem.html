@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/equalshots/file/statement/en/img-0001.jpg" class="illustration" src="/problems/equalshots/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Assorted shots. Photo by the Culinary Geek.
+      </div>
+</div>
+<p>Your bartending skills have much improved since you joined
+    ScrollBar. In particular, you have learned a wide variety of
+    recipes for small drinks called <em>shots</em>. Shots are
+    typically mixed from different liquids containing varying
+    levels of alcohol. For reasons of fairness towards your
+    customers, you want to compare the alcohol contents of your
+    recipies.</p>
+<p>Given two shot recipes, determine if they have the same
+    alcohol content or not.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>: the number of ingredients in the
+    first shot and the second shot, respectively. Both <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$10$</span>. The next <span class="tex2jax_process">$a$</span> lines describes the ingredients in
+    the first shot, followed by <span class="tex2jax_process">$b$</span> lines with the ingredients in the
+    second shot.</p>
+<p>An ingredient is described by two integers: the amount
+    <span class="tex2jax_process">$v$</span> that was used (in
+    centilitres), and its alcohol content <span class="tex2jax_process">$c$</span> (by volume) in precent. We have
+    <span class="tex2jax_process">$1\leq v\leq 100$</span> and
+    <span class="tex2jax_process">$0\leq c\leq 100$</span>.</p>
+<p>There are at most <span class="tex2jax_process">$100$</span>
+    centilitres in each shot.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">different</tt> if the shots
+    differ in alcohol content, and <tt class="ttfamily">same</tt>
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+2 40
+2 20
+4 30
+</pre>
+</td>
+<td>
+<pre>same
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+2 40
+2 20
+2 30
+2 30
+</pre>
+</td>
+<td>
+<pre>same
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+2 40
+2 18
+</pre>
+</td>
+<td>
+<pre>different
+</pre>
+</td>
+</tr>
+</table>
+</div>

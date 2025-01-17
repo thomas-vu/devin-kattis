@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>The Archeologists of the Current Millenium (ACM) now and
+    then discover ancient artifacts located at vertices of regular
+    polygons. (Recall that an <span class="tex2jax_process">$n$</span>-sided regular polygon is a polygon
+    where all <span class="tex2jax_process">$n$</span> sides have
+    the same lengths, and the <span class="tex2jax_process">$n$</span> internal angles where two sides
+    meet are all equal.)</p>
+<p>The moving sand dunes of the desert render the excavations
+    difficult and thus once three vertices of a polygon are
+    discovered there is a need to cover the entire polygon with
+    protective fabric.</p>
+<h2>Input</h2>
+<p>Input contains multiple test cases, at most <span class="tex2jax_process">$50$</span>.</p>
+<p>Each case describes one polygon. It starts with an integer
+    <span class="tex2jax_process">$3 \le n \le 50$</span>, the
+    number of vertices in the polygon, followed by three pairs of
+    real numbers giving the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates of three vertices of
+    the polygon. The coordinates have absolute value at most
+    <span class="tex2jax_process">$1000$</span> and at most
+    <span class="tex2jax_process">$5$</span> digits after the
+    decimal point.</p>
+<p>The input ends with a dummy case having <span class="tex2jax_process">$n = 0$</span>, this case should not be
+    processed.</p>
+<h2>Output</h2>
+<p>For each test case, output one line giving the smallest area
+    of a rectangle which can cover all the vertices of the polygon
+    and whose sides are parallel to the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> axes. You may assume that this
+    area is at most <span class="tex2jax_process">$100\,
+    000$</span>. Your answers should have an absolute or relative
+    error of at most <span class="tex2jax_process">$10^{-9}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+10.00000 0.00000
+0.00000 -10.00000
+-10.00000 0.00000
+6
+22.23086 0.42320
+-4.87328 11.92822
+1.76914 27.57680
+23
+156.71567 -13.63236
+139.03195 -22.04236
+137.96925 -11.70517
+0
+</pre>
+</td>
+<td>
+<pre>400.0000000000
+1056.1719423660
+397.6729693617
+</pre>
+</td>
+</tr>
+</table>
+</div>

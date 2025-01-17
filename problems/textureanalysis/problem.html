@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>You are writing an analysis program that identifies textures
+    in black-and-white images. One subroutine in this program is
+    supposed to detect whether an entire row of pixels is covered
+    by a pattern of regularly-spaced black pixels. That is, it
+    determines if every pair of adjacent black pixels is separated
+    by the same number of white pixels.</p>
+<p>Write a program that simulates this subroutine using a
+    textual input representation. Each row of image pixels is
+    represented by a single line of text. Each asterisk (<tt class="tt">*</tt>) represents a black pixel, while each period
+    (<tt class="tt">.</tt>) represents a white pixel.</p>
+<p>The following line is an example of evenly-spaced black
+    pixels, since each pair of adjacent black pixels are separated
+    by two white pixels.</p>
+<center>
+<tt>*..*..*..*..*..*..*</tt>
+</center>
+<p>The following line is NOT an example of evenly-spaced black
+    pixels, since the two leftmost black pixels are separated by
+    four white pixels, but each remaining pair of adjacent black
+    pixels are separated by three white pixels.</p>
+<center>
+<tt>*....*...*...*...*</tt>
+</center>
+<h2>Input</h2>
+<p>Input to your program consists of a sequence of lines, at
+    most <span class="tex2jax_process">$2\, 000$</span>. Each line
+    is one row of pixels to be analyzed. Every line will start and
+    end with a black pixel, and every line will contain only black
+    pixels and white pixels. No line will have more than
+    <span class="tex2jax_process">$1\, 000$</span> characters.</p>
+<p>The last line to process is followed by a line containing
+    the word <tt class="ttfamily">END</tt>.</p>
+<h2>Output</h2>
+<p>For each line, print the line number followed by <tt class="tt">EVEN</tt> if the black pixels on that line are
+    evenly-spaced, or <tt class="tt">NOT EVEN</tt> if they are
+    not.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+*.*.*.*.*.*.*.*.*
+*..*.*.*.*.*.*.*.*
+*..*..*
+*
+***
+*.**
+END
+</pre>
+</td>
+<td>
+<pre>
+1 EVEN
+2 NOT EVEN
+3 EVEN
+4 EVEN
+5 EVEN
+6 NOT EVEN
+</pre>
+</td>
+</tr>
+</table>
+</div>

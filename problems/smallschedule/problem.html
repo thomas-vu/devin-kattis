@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/smallschedule/file/statement/en/img-0001.jpg" class="illustration" src="/problems/smallschedule/file/statement/en/img-0001.jpg"/>
+<div class="description">
+         
+      </div>
+</div>
+<p>Everybody is into cloud computing these days, so quite a few
+    different business models are being experimented with. You are
+    trying a very simple one: you sell time on your machines in one
+    of two batches called <em>slots</em>. A customer can buy one
+    second of CPU time or <span class="tex2jax_process">$Q$</span>
+    seconds for some integer <span class="tex2jax_process">$Q$</span>.</p>
+<p>Each time slot a customer purchases must be completed on a
+    single machine, but you get to decide how to allocate the
+    purchased time slots between machines.</p>
+<p>After coming back from a long vacation, you see that all of
+    your machines are idle and a variety of orders have come in. To
+    keep customers happy, you must decide how to distribute these
+    requests between machines in a way that minimizes the time when
+    the purchased time slots are finally all completed.</p>
+<p>What is the smallest amount of time in which you can
+    complete all of the purchased time slots?</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing four integers
+    <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$2 \leq Q \leq 1\, 000$</span>), which is the
+    time needed to complete the longer batches, <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \leq M \leq 1\, 000\, 000$</span>), which
+    is the number of machines owned by your company, <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$0 \leq S \leq 1\, 000\, 000$</span>), which
+    is the number of 1-second time slots purchased, and
+    <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$0 \leq L \leq 1\, 000\, 000$</span>), which
+    is the number of <span class="tex2jax_process">$Q$</span>-second time slots purchased.</p>
+<h2>Output</h2>
+<p>Display the smallest amount of time in which you can
+    complete all of the purchased time slots.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4 3 6
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 3 5
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 2 0 1
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

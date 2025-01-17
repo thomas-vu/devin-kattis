@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>You know how it is. At the end of the workday you have a lot
+    of errands to run. You have to drive from place to place
+    picking up this or dropping off that and it may take you quite
+    a while to get home. Naturally, you want to get these errands
+    done as quickly as possible, so you want to minimize your
+    driving time going from place to place. Your problem is
+    simplified by the fact that you live in a vast, sparsely
+    populated, featureless wasteland. If you need to drive from the
+    pharmacy to the kwik-ee burger (or any two locations), you can
+    drive at a constant speed in a straight line between them.</p>
+<h2>Input</h2>
+<p>Input begins with a description of points of interest in
+    your town. This description starts with the number of locations
+    <span class="tex2jax_process">$3 \le n \le 100$</span>. This is
+    followed by <span class="tex2jax_process">$n$</span> lines,
+    each giving the name and <span class="tex2jax_process">$x,
+    y$</span> coordinates of some location. Location names are
+    strings of up to <span class="tex2jax_process">$20$</span>
+    lowercase alphabetic (a–z) or hyphen (-) characters and the
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates are real numbers in
+    the range <span class="tex2jax_process">$[-100, 100]$</span>
+    with at most five digits past the decimal point. No two
+    different locations have the same name. Both “home” and “work”
+    are part of the <span class="tex2jax_process">$n$</span>
+    locations.</p>
+<p>The town description is followed by up to <span class="tex2jax_process">$30$</span> lines, each containing a
+    space-separated list of the names of the one to <span class="tex2jax_process">$10$</span> unique places you have to visit
+    on your way home on a particular day, not including home or
+    work. Input terminates at the end of file.</p>
+<h2>Output</h2>
+<p>For each day, report on a single line the best order to
+    visit the locations requested. Here, best is defined as the
+    order that minimizes your driving time without repeating any
+    stop. If there are multiple equivalent best orders, choose any
+    one of them. Your trip always starts at the location named
+    “work” and ends at “home”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+home 0 0
+work 5 5
+kwik-ee-burger 4 5
+flagpole 2.5 2.5
+cleaners 0 1
+cleaners kwik-ee-burger
+flagpole kwik-ee-burger cleaners
+</pre>
+</td>
+<td>
+<pre>kwik-ee-burger cleaners
+kwik-ee-burger flagpole cleaners
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>Pichuu, the Pokemon Master, faced a dilemma after destroying
+    Team Galactic, becoming the champion and catching every
+    legendary Pokemon. He realized he had lost his town map, a
+    precious item given to him by his mother and also a Key Item!
+    To avoid her scolding, Pichuu decided to reconstruct the
+    map.<br/></p>
+<p>The town map was originally a bidirectional connected graph
+    with <span class="tex2jax_process">$N$</span> towns, each
+    labeled distinctly from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>, where there was exactly one path
+    between any two towns. Pichuu, unfortunately, forgot the direct
+    connections between towns. While distraught, he discovered a
+    useful feature on his trusty Poketch – it recorded the paths he
+    took.<br/></p>
+<p>However, for each path from town <span class="tex2jax_process">$i$</span> to town <span class="tex2jax_process">$j$</span>, the Poketch only recorded the
+    town with the minimum label on the path, <span class="tex2jax_process">$A_{i, j}$</span>. (The Poketch Company is
+    still working out the bugs). For example, if the path on the
+    map was <span class="tex2jax_process">$4 \to 2 \to 3 \to
+    5$</span>, the Poketch will record <span class="tex2jax_process">$2$</span> for the path from <span class="tex2jax_process">$4$</span> to <span class="tex2jax_process">$5$</span><br/></p>
+<p>Working with what he got, Pichuu trys to reconstruct a fake
+    Town Map that satisfies the records made by the Poketch. Pichuu
+    however is a Pokemon Master, not a Graph Master. Please help
+    him recover his town map.<br/></p>
+<p>Namely, construct a tree that satisfies the condition that
+    the minimum label on the path from town <span class="tex2jax_process">$i$</span> to <span class="tex2jax_process">$j$</span> is <span class="tex2jax_process">$A_{i, j}$</span></p>
+<h2>Constraints</h2>
+<p><span class="tex2jax_process">$1 \leq N \leq
+    1500$</span>.<br/>
+<span class="tex2jax_process">$1 \leq A_{i, j} \leq
+    N$</span></p>
+<h2>Input</h2>
+<p>The first line contains a single integers, <span class="tex2jax_process">$N$</span>, the number of towns.<br/>
+<span class="tex2jax_process">$N$</span> lines follows, the
+    <span class="tex2jax_process">$i^{th}$</span> line contains
+    <span class="tex2jax_process">$N$</span> space-separated
+    integers, <span class="tex2jax_process">$A_{i, 1} A_{i, 2}
+    \dots A_{i, N}$</span> where <span class="tex2jax_process">$A_{i, j}$</span> is the town with the
+    smallest label on the path from town <span class="tex2jax_process">$i$</span> to <span class="tex2jax_process">$j$</span>.<br/>
+    It is guaranteed there exists a solution given the provided
+    values.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N-1$</span> lines,
+    each with two space-separated integers <span class="tex2jax_process">$A_ i B_ i$</span> representing an edge in
+    your reconstructed town map.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1 1 
+1 2 1 
+1 1 3 
+</pre>
+</td>
+<td>
+<pre>2 1
+3 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1 1 1 1 1 1 
+1 2 2 2 2 2 
+1 2 3 2 2 2 
+1 2 2 4 2 2 
+1 2 2 2 5 2 
+1 2 2 2 2 6 
+</pre>
+</td>
+<td>
+<pre>2 3
+2 4
+2 5
+2 6
+1 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

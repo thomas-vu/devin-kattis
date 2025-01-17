@@ -1,0 +1,254 @@
+<div class="problembody">
+<p>Vidar wants to know how large Sweden is. After a lot of
+    effort, he has managed to launch a satellite into the
+    atmosphere that can take several low-resolution images of
+    Sweden for him. Unfortunately, the satellite’s camera is very
+    poor. Each square in the image will either consist of
+    “<tt class="ttfamily">#</tt>”, which means the square contains
+    land, or “<tt class="ttfamily">.</tt>” if it contains
+    water.</p>
+<p>Vidar is a huge scaredy-cat when it comes to swimming, so in
+    his opinion, Sweden’s landmass is only the number of land
+    squares that can be reached from Stockholm without ever
+    swimming. More precisely, it is the number of squares that can
+    be reached from Stockholm by moving upward, rightward,
+    downward, or leftward without ever walking over a square that
+    contains water. Note that the square containing Stockholm,
+    <b class="bfseries"><tt class="ttfamily">S</tt></b>, also
+    counts as land.</p>
+<p>Vidar now wants your help to write a program that calculates
+    Sweden’s landmass given a satellite image where he has marked
+    the location of Stockholm with an <b class="bfseries"><tt class="ttfamily">S</tt></b>. Then, he will wait
+    for the satellite to take pictures from new angles. By looking
+    at the new images, he sometimes realizes that a square that
+    used to be water is actually land. When he enters this change
+    into your program, you should immediately print new
+    landmass.</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$1
+    \le R \le 500$</span>), the number of rows in Vidar’s
+    image.</p>
+<p>The next line contains an integer <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$1
+    \le C \le 500$</span>), the number of columns in Vidar’s
+    image.</p>
+<p>The next line contains an integer <span class="tex2jax_process">$U$</span> (<span class="tex2jax_process">$0
+    \le U \le 100,000$</span>), the number of times Vidar changes a
+    square from being water to land.</p>
+<p>Then follow <span class="tex2jax_process">$R$</span> lines,
+    each containing <span class="tex2jax_process">$C$</span>
+    letters, describing the satellite image Vidar is working with.
+    Each letter is either “<tt class="ttfamily">#</tt>”,
+    “<tt class="ttfamily">.</tt>” or “<b class="bfseries"><tt class="ttfamily">S</tt></b>”. Exactly one square
+    will contain the letter <b class="bfseries"><tt class="ttfamily">S</tt></b>.</p>
+<p>If <span class="tex2jax_process">$U$</span> is not 0,
+    <span class="tex2jax_process">$U$</span> lines will follow.
+    Each one will contain two integers <span class="tex2jax_process">$i, j$</span> (<span class="tex2jax_process">$1 \le i \le R$</span>, <span class="tex2jax_process">$1 \le j \le C$</span>), which means the
+    square in the <span class="tex2jax_process">$i$</span>-th row
+    and <span class="tex2jax_process">$j$</span>-th column is
+    changed from water to land.</p>
+<h2>Output</h2>
+<p>First, print an integer: Sweden’s total landmass. Then print
+    <span class="tex2jax_process">$U$</span> integers: Sweden’s
+    total landmass after each time Vidar changes the image.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Grupp</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Poäng</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Gränser</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$U=0$</span> and the
+          subtask consist of a single testcase, the one on our
+          poster (<a href="https://www.progolymp.se/2024/affisch.pdf">https://www.progolymp.se/2024/affisch.pdf</a>).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$13$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R=1, U=0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R=1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$26$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$U=0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$13$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R,C \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$19$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1</h2>
+<p>At first, it’s possible to reach 8 land squares from
+    Stockholm. Since Stockholm is also counted as land, Sweden’s
+    landmass is 9. After the first update, the grid looks like
+    this:</p>
+<pre>
+  .#...#
+  .###..
+  .#S##.
+  ..##..
+  ......
+</pre>
+<p>Since you can now reach a new piece of land, the answer
+    becomes 10. After the next two updates, you can’t reach the new
+    land, so the answer does not change. After the final update,
+    you can reach the newly created land, and the map looks like
+    this:</p>
+<pre>
+  .#...#
+  .###..
+  .#S##.
+  ..###.
+  ....##
+</pre>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+6
+4
+.....#
+.###..
+.#S##.
+..##..
+......
+1 2
+5 6
+5 5
+4 5
+</pre>
+</td>
+<td>
+<pre>9
+10
+10
+10
+13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>18
+20
+0
+....................
+...........######...
+.........########...
+........##########..
+.......###########..
+......##########....
+.....#########......
+.....#########......
+...########.........
+...#######..........
+...######...........
+...######...........
+...#########..#.....
+..######S#..........
+..#######....#......
+...#####.#..#.......
+....##..............
+....................
+</pre>
+</td>
+<td>
+<pre>121
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1
+5
+3
+#S...
+1 3
+1 5
+1 4
+</pre>
+</td>
+<td>
+<pre>2
+3
+3
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

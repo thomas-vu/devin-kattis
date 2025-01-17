@@ -1,0 +1,49 @@
+<div class="problembody">
+<p>When implementing an open addressing hash table, we can use
+    many different types of collision resolution strategies. One
+    such strategy is quadratic probing. If we use quadratic
+    probing, it’s very important that the size of the hash table is
+    a prime number. If it is a prime number and the table is less
+    than half full, then we can prove that the quadratic probing
+    algorithm will always be able to find an empty slot. That’s
+    necessary because finding an empty slot is the way the
+    algorithm knows when to stop probing. However, if the table
+    size is not prime, then even if the table is much less than
+    half full, the probing algorithm may probe the same slots
+    repeatedly and not find any empty slots.</p>
+<p>Of course, even if the table size is prime, when the table
+    gets half-full, the table size needs to increase to a larger
+    prime. Our strategy for increasing the table size is to pick
+    the smallest prime number larger than <span class="tex2jax_process">$2n$</span>, where <span class="tex2jax_process">$n$</span> was the old table size.</p>
+<h2>Input</h2>
+<p>Input is a sequence of up to <span class="tex2jax_process">$1\, 000$</span> table sizes, one per line.
+    Each is given as an integer <span class="tex2jax_process">$2
+    \le n &lt; 2^{30}$</span>. The end of input is indicated by
+    <span class="tex2jax_process">$n=0$</span>, which should not be
+    processed.</p>
+<h2>Output</h2>
+<p>Output the smallest prime number larger than <span class="tex2jax_process">$2n$</span>. Also, if <span class="tex2jax_process">$n$</span> happens not to be prime, add the
+    parenthetical note ‘(<span class="tex2jax_process">$n$</span>
+    is not prime)’.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+29
+33
+0
+</pre>
+</td>
+<td>
+<pre>
+59
+67 (33 is not prime)
+</pre>
+</td>
+</tr>
+</table>
+</div>

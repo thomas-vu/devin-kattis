@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>The two friends Barack and Mitt have both decided to set up
+    their own hot dog stand in Manhattan. They wish to find the two
+    optimal locations for their stands.</p>
+<p>First of all, they both want to put their stand at an
+    intersection, since that gives them maximum exposure. Also,
+    this being Manhattan, there are already quite a few stands in
+    the city, also at intersections. If they put up a stand close
+    to another (or each other’s) stand, they might not get that
+    many customers. They would therefore like to put their stands
+    as far from other stands as possible.</p>
+<p>We model Manhattan as a finite square grid, consisting of
+    <span class="tex2jax_process">$w$</span> vertical streets and
+    <span class="tex2jax_process">$h$</span> horizontal streets.
+    The vertical streets run from <span class="tex2jax_process">$x=0$</span> to <span class="tex2jax_process">$x=w-1$</span>, while horizontal streets run
+    from <span class="tex2jax_process">$y=0$</span> to <span class="tex2jax_process">$y=h-1$</span>. All pairs of consecutive
+    parallel streets are separated by the same distance, which we
+    set as the unit distance. The distance between two
+    intersections <span class="tex2jax_process">$(x_1, y_1)$</span>
+    and <span class="tex2jax_process">$(x_2, y_2)$</span> is then
+    given by <span class="tex2jax_process">$|x_1 - x_2| + |y_1 -
+    y_2|$</span>.</p>
+<p>We indicate an intersection’s suitability by its
+    <em>privacy</em>, which is the minimum of all distances from
+    this intersection to all other hot dog stands. Barack and Mitt
+    would like to find two intersections with the maximum amount of
+    privacy, i.e. such that the smallest of the two privacies
+    is as large as possible. Note that the privacy of Barack’s
+    location can be determined by the distance to Mitt’s location
+    and vice versa.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with three space-separated integers
+        <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$0 \leq n \leq 1\, 000$</span> and
+        <span class="tex2jax_process">$2 \leq w, h \leq 1\,
+        000$</span>): the number of hot dog stands already in place
+        and the number of vertical and horizontal streets,
+        respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with two space-separated integers <span class="tex2jax_process">$x_ i$</span> and <span class="tex2jax_process">$y_ i$</span> (<span class="tex2jax_process">$0 \leq x_ i &lt; w$</span> and
+        <span class="tex2jax_process">$0 \leq y_ i &lt; h$</span>):
+        the intersection where the <span class="tex2jax_process">$i$</span>-th hot dog stand is
+        located.</p>
+</li>
+</ul>
+<p>All hot dog stands are at different intersections. At least
+    two intersections do not contain a stand.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with one integer: the maximum privacy that
+        Barack and Mitt can both obtain.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 4 4
+0 1
+6 6 6
+0 0
+1 1
+2 2
+3 3
+4 4
+5 5
+2 8 3
+0 0
+7 0
+</pre>
+</td>
+<td>
+<pre>
+4
+5
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,67 @@
+<div class="problembody">
+<p><em>Note that this is an easier version of the problem
+    welcomehard</em>.</p>
+<p>So you’ve registered. We sent you a welcoming email, to
+    welcome you to code jam. But it’s possible that you still don’t
+    feel welcomed to code jam. That’s why we decided to name a
+    problem “welcome to code jam.” After solving this problem, we
+    hope that you’ll feel very welcome. Very welcome, that is, to
+    code jam.</p>
+<p>If you read the previous paragraph, you’re probably
+    wondering why it’s there. But if you read it very carefully,
+    you might notice that we have written the words “welcome to
+    code jam” several times: <span class="tex2jax_process">$400\,
+    263\, 727$</span> times in total. After all, it’s easy to look
+    through the paragraph and find a ‘w’; then find an ‘e’ later in
+    the paragraph; then find an ‘l’ after that, and so on. Your
+    task is to write a program that can take any text and print out
+    how many times that text contains the phrase “welcome to code
+    jam”.</p>
+<p>To be more precise, given a text string, you are to
+    determine how many times the string “welcome to code jam”
+    appears as a sub-sequence of that string. In other words, find
+    a sequence <span class="tex2jax_process">$s$</span> of
+    increasing indices into the input string such that the
+    concatenation of <span class="tex2jax_process">$\textrm{input}[s[0]], \textrm{input}[s[1]],
+    \dots , \textrm{input}[s[18]]$</span> is the string “welcome to
+    code jam”.</p>
+<p>The result of your calculation might be huge, so for
+    convenience we would only like you to find the last
+    <span class="tex2jax_process">$4$</span> digits.</p>
+<h2>Input</h2>
+<p>The first line of input gives the number of test cases
+    <span class="tex2jax_process">$T, 1 \le T \le 100$</span>. The
+    next <span class="tex2jax_process">$N$</span> lines of input
+    contain one test case each. Each test case is a single line of
+    text of length at most <span class="tex2jax_process">$30$</span>, containing only lower-case
+    letters and spaces. No line will start with a space, and no
+    line will end with a space.</p>
+<h2>Output</h2>
+<p>For each test case, “Case #<span class="tex2jax_process">$x$</span>: <span class="tex2jax_process">$dddd$</span>”, where <span class="tex2jax_process">$x$</span> is the case number, and
+    <span class="tex2jax_process">$dddd$</span> is the last four
+    digits of the answer. If the answer has fewer than <span class="tex2jax_process">$4$</span> digits, please add zeroes at the
+    front of your answer to make it exactly 4 digits long.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+elcomew elcome to code jam
+wweellccoommee to code qps jam
+welcome to codejam
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 0001
+Case #2: 0256
+Case #3: 0000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,139 @@
+<div class="problembody">
+<p>You are a judge, again! The contest you’re judging includes
+    the following problem:</p>
+<blockquote class="quote">
+      “You have one L-shaped triomino of each of <span class="tex2jax_process">$\frac{4^ n-1}{3}$</span> different colors.
+      Tile a <span class="tex2jax_process">$2^ n$</span> by
+      <span class="tex2jax_process">$2^ n$</span> grid using each
+      of these triominos such that there is exactly one blank
+      square and all other squares are covered by exactly one
+      square of such a triomino. All triominos must be used.”
+    </blockquote>
+<p>Your team is to write a checker for this problem. Validation
+    of the input values and format has already taken place. You
+    will be given a purported tiling of a <span class="tex2jax_process">$2^ n$</span> by <span class="tex2jax_process">$2^ n$</span> grid, where each square in the
+    grid is either 0 or a positive integer from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$\frac{4^ n-1}{3}$</span> representing one of
+    the colors. Determine if it is, indeed, a covering of the grid
+    with <span class="tex2jax_process">$\frac{4^ n-1}{3}$</span>
+    unique triominos and a single empty space.</p>
+<p>L-shaped triominos look like this:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:left"> </td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:left"> </td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\blacksquare
+            $</span></p>
+</td>
+</tr>
+</table>
+</center>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 10$</span>), which is the
+    <span class="tex2jax_process">$n$</span> of the
+    description.</p>
+<p>Each of the next <span class="tex2jax_process">$2^ n$</span>
+    lines contains <span class="tex2jax_process">$2^ n$</span>
+    integers <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$0 \le x \le \frac{4^ n-1}{3}$</span>), where
+    0 represents an empty space, and any positive number is a
+    unique identifier of a triomino.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is <span class="tex2jax_process">$1$</span> if the given grid is covered with
+    <span class="tex2jax_process">$\frac{4^ n-1}{3}$</span> unique
+    triominos and a single empty space. Otherwise, output
+    <span class="tex2jax_process">$0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1 2 2
+1 3 3 2
+4 4 3 5
+4 0 5 5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1 1
+1 1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

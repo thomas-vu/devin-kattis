@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>Using credit cards for your purchases is convenient, but
+    they have high interest rates if you do not pay your balance in
+    full each month.</p>
+<p>The interest rate is commonly quoted in terms of “annual
+    percentage rate” (APR) which is then applied to the outstanding
+    balance each month. The APR can be converted to a monthly
+    interest rate <span class="tex2jax_process">$R$</span>. At the
+    end of each month, the monthly interest rate is applied to the
+    outstanding balance and the interest is added to the total
+    balance. Any payment made will be applied to the balance in the
+    following month. The monthly interest is rounded to the nearest
+    cent (rounding up <span class="tex2jax_process">$0.5$</span>
+    cent and above) in the calculations.</p>
+<p>You have unfortunately accumulated an outstanding balance
+    <span class="tex2jax_process">$B$</span> at the end of the
+    month and you can only afford to pay up to some amount
+    <span class="tex2jax_process">$M$</span> every month. If you do
+    not make any more purchases with the credit card, what is the
+    minimum number of payments needed to completely eliminate the
+    outstanding balance? It is possible that you cannot pay off the
+    balance in <span class="tex2jax_process">$100$</span> years
+    (<span class="tex2jax_process">$1\, 200$</span> payments).</p>
+<h2>Input</h2>
+<p>The input consists of multiple test cases. The first line of
+    input is a single integer, not more than <span class="tex2jax_process">$1\, 000$</span>, indicating the number of
+    test cases to follow. Each of the following lines specify the
+    input for one case. Each line contains three positive real
+    numbers separated by single spaces: <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$B$</span>, and <span class="tex2jax_process">$M$</span>. The real numbers have two digits
+    after the decimal point, satisfying <span class="tex2jax_process">$R \leq 50.00$</span> and <span class="tex2jax_process">$B, M \leq 50\, 000.00$</span>. <span class="tex2jax_process">$R$</span> is the monthly interest rate and
+    is specified as a percentage.</p>
+<h2>Output</h2>
+<p>For each case, display on a line the minimum number of
+    payments needed to eliminate the outstanding balance. If this
+    cannot be done in at most <span class="tex2jax_process">$1\,
+    200$</span> payments, print instead <tt>impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+2.00 100.00 105.00
+2.00 100.00 102.00
+2.00 100.00 100.00
+2.00 100.00 4.00
+2.00 100.00 3.00
+2.00 100.00 1.00
+2.00 100.00 2.00
+9.56 5462.50 522.22
+12.50 29876.44 33610.99
+5.50 1.00 1.05
+14.78 40181.09 46119.86
+</pre>
+</td>
+<td>
+<pre>
+1
+1
+2
+36
+56
+impossible
+impossible
+impossible
+2
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

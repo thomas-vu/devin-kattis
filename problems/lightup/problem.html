@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>Light Up is a pencil puzzle. Your job will not be to play
+    Light Up, but simply to judge whether a player’s solution is
+    correct.</p>
+<p>The game is played on a square grid. Some of the cells are
+    blocked, and some of the blocked cells have a number from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$4$</span>. The player must place light bulbs
+    in open cells. Each light bulb can light all of the open cells
+    above, below, left, and right (but not diagonally) until the
+    light reaches the edge of the grid or a blocked cell. The
+    player must place light bulbs so that:</p>
+<ul class="itemize">
+<li>
+<p>Every open cell is lit.</p>
+</li>
+<li>
+<p>No two light bulbs can shine on each other.</p>
+</li>
+<li>
+<p>Any blocked cell with a number in it must have exactly
+        that number of light bulbs immediately adjacent above,
+        below, left, or right. Diagonals do not count.</p>
+</li>
+</ul>
+<p>The following is an example grid with its solution:</p>
+<center>
+<img alt="\includegraphics[width=0.65\textwidth ]{lightup.jpg}" src="/problems/lightup/file/statement/en/img-0001.jpg" style="width:65.00%"/>
+</center>
+<p>Given a grid with light bulbs placed, determine whether it
+    is, in fact, a solution. Note that if a grid has no open cells,
+    and does not violate any other constraints, it is trivially
+    solved.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 30$</span>), which is the number
+    of rows and columns in the grid.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains exactly <span class="tex2jax_process">$n$</span>
+    characters from the set {‘<tt class="ttfamily">.</tt>’,‘<tt class="ttfamily">X</tt>’,‘<tt class="ttfamily">?</tt>’,‘<tt class="ttfamily">0</tt>’,‘<tt class="ttfamily">1</tt>’,‘<tt class="ttfamily">2</tt>’,‘<tt class="ttfamily">3</tt>’,‘<tt class="ttfamily">4</tt>’}. This is the
+    grid, with ‘<tt class="ttfamily">.</tt>’ representing an open
+    cell, ‘<tt class="ttfamily">X</tt>’ representing a blocked
+    cell, ‘<tt class="ttfamily">?</tt>’ representing a light bulb,
+    and the numbers ‘<tt class="ttfamily">0</tt>’,‘<tt class="ttfamily">1</tt>’,‘<tt class="ttfamily">2</tt>’,‘<tt class="ttfamily">3</tt>’,‘<tt class="ttfamily">4</tt>’ representing a
+    blocked cell with a constraint on the number of adjacent light
+    bulbs.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is <span class="tex2jax_process">$1$</span> if the input is a valid solution,
+    and <span class="tex2jax_process">$0$</span> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+.?.0..?
+..X.1?.
+.X.?.2.
+.....?.
+?3?..2.
+.?3.X?.
+..?X?..
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+.?.0..?
+..X.1?.
+.X...2.
+.....?.
+?3?..2.
+.?3.X?.
+..?X?..
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

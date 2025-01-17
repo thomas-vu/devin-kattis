@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>Guess Who is a two-player board game in which a number of
+    characters are uniquely identified by a set of attributes (e.g.
+    wearing glasses), and each player attempts to guess the other
+    player’s hidden character by asking a number of yes/no
+    questions such as “does the person wear glasses?”</p>
+<p>In our variation of this game, there are <span class="tex2jax_process">$N$</span> characters, each of which is
+    uniquely identified by a set of <span class="tex2jax_process">$M$</span> attributes. The value of each
+    attribute is either YES or NO. You will be provided with a list
+    of the characters and their attributes, together with a series
+    of <span class="tex2jax_process">$Q$</span> questions and the
+    corresponding responses. Your task is to determine the hidden
+    character, if possible.</p>
+<h2>Input</h2>
+<p>Input begins with three space-separated integers
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, and <span class="tex2jax_process">$Q$</span>, satisfying <span class="tex2jax_process">$1 \leq N \leq 1\, 000$</span>, <span class="tex2jax_process">$1 \leq M \leq 15$</span>, and <span class="tex2jax_process">$1 \leq Q \leq M$</span>. The next
+    <span class="tex2jax_process">$N$</span> lines each contains a
+    string of <span class="tex2jax_process">$M$</span> characters
+    that are either <tt>Y</tt> or <tt>N</tt>. The <span class="tex2jax_process">$i$</span>th line specifies the values of the
+    <span class="tex2jax_process">$M$</span> attributes of the
+    <span class="tex2jax_process">$i$</span>th character. Each of
+    the next <span class="tex2jax_process">$Q$</span> lines
+    contains an integer <span class="tex2jax_process">$1 \leq A
+    \leq M$</span>, followed by a space, followed by a single
+    character <tt>Y</tt> or <tt>N</tt>. This indicates the question
+    is about attribute <span class="tex2jax_process">$A$</span>,
+    and the response that the attribute of the hidden character is
+    YES or NO. There is at most one question for each of the
+    attribute. At least one of the listed characters has attributes
+    consistent with the responses of the queries.</p>
+<h2>Output</h2>
+<p>In the first line, output one of <tt>unique</tt> or
+    <tt>ambiguous</tt>, indicating if there is a uniquely
+    identifiable hidden character, or if there are multiple
+    possible hidden characters.</p>
+<p>In the case in which the hidden character is uniquely
+    identifiable, output on the second line the index (between 1
+    and <span class="tex2jax_process">$N$</span>) of the hidden
+    character. If there are multiple possible hidden characters,
+    output on the second line the number of possible hidden
+    characters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 3
+YYYYY
+NNNNN
+YNYNY
+YYYNN
+NNYYY
+1 N
+2 N
+3 Y
+</pre>
+</td>
+<td>
+<pre>unique
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 3
+YYYYY
+NNNNN
+YNYNY
+YYNNN
+NNNYY
+1 Y
+5 Y
+3 Y
+</pre>
+</td>
+<td>
+<pre>ambiguous
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

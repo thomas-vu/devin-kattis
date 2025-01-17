@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Like so many good stories, this one begins with a claim that
+    Kari is a faster runner than Ola, who of course challenges Kari
+    to a run-down. Dubbed (rather ironically) Non-Competitive Pace
+    Challenge, they want to see who can run the furthest in a
+    certain amount of time <span class="tex2jax_process">$t$</span>. Clearly they both choose to run
+    in straight lines with constant speed.</p>
+<p>Kari wrote an app to make sure that Ola does not cheat, but
+    the app requires that their phones constantly communicate over
+    Bluetooth.</p>
+<p>After their run, Kari needs to ensure that they were never
+    too far apart from each other at any time during the run. Write
+    a program that computes the maximum distance between Kari and
+    Ola at any point during the run.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing eight
+    integers describing four points:</p>
+<ul class="itemize">
+<li>
+<p>the starting position of Kari,</p>
+</li>
+<li>
+<p>the starting position of Ola,</p>
+</li>
+<li>
+<p>the ending position of Kari, and</p>
+</li>
+<li>
+<p>the ending position of Ola,</p>
+</li>
+</ul>
+<p>in that order. Each point is given by two integers
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0
+    \le x, y \le 10^4$</span>), the coordinates of the point.</p>
+<h2>Output</h2>
+<p>Output the maximum distance between Kari and Ola during
+    their run, with an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0 0 0 0 1 1 2 2
+</pre>
+</td>
+<td>
+<pre>1.4142135624
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 0 0 1 0 2 2 1
+</pre>
+</td>
+<td>
+<pre>2.2360679775
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 0 10 0 5 0 10 0
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

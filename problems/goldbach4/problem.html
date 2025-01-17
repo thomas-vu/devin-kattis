@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>The integer <span class="tex2jax_process">$P$</span> is
+    called prime if the only integers dividing it are <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$P$</span> itself. As an example <span class="tex2jax_process">$20$</span> is not prime since it’s divisible
+    by <span class="tex2jax_process">$5$</span>. On the other hand
+    <span class="tex2jax_process">$11$</span> is prime since only
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$11$</span> divide <span class="tex2jax_process">$11$</span>.</p>
+<p>There is a famous conjecture about primes, Goldbach’s
+    conjecture, which says:</p>
+<blockquote class="quote">
+      All even integers greater than <span class="tex2jax_process">$2$</span> can be written as the sum of two
+      primes.
+    </blockquote>
+<p>This conjecture is from the year 1742. To this day no one
+    has proved it nor found a counterexample. We considered making
+    you prove it, but that would be too easy.</p>
+<p>Instead we introduced a harder conjecture known as
+    Goldbach’s second conjecture:</p>
+<blockquote class="quote">
+      All odd numbers greater than <span class="tex2jax_process">$5$</span> can be written as the sum of
+      three primes.
+    </blockquote>
+<p>In this problem we provide the odd integer <span class="tex2jax_process">$N &gt; 5$</span>. We ask you to find three
+    primes <span class="tex2jax_process">$P_1$</span>, <span class="tex2jax_process">$P_2$</span> and <span class="tex2jax_process">$P_3$</span> such that <span class="tex2jax_process">$P_1 + P_2 + P_3 = N$</span> or to announce
+    that <span class="tex2jax_process">$N$</span> is in violation
+    of Goldbach’s second conjecture.</p>
+<h2>Input</h2>
+<p>The input contains one odd integer <span class="tex2jax_process">$N &gt; 5$</span>.</p>
+<h2>Output</h2>
+<p>Print three primes separated by spaces such that their sum
+    is <span class="tex2jax_process">$N$</span>. If there are
+    several options you may print any of them. If no such primes
+    exist, instead print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample <span class="tex2jax_process">$N =
+    65$</span>. If you look at the output you can see that all of
+    the numbers are prime and have sum <span class="tex2jax_process">$65$</span>. These could have been printed in
+    any order. Other possible solutions are <tt class="ttfamily">11
+    37 17</tt> and <tt class="ttfamily">11 11 43</tt>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 31$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 10^4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 2 \cdot
+          10^8$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \le
+          10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>65
+</pre>
+</td>
+<td>
+<pre>2 2 61
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14846458157
+</pre>
+</td>
+<td>
+<pre>5 11 14846458141
+</pre>
+</td>
+</tr>
+</table>
+</div>

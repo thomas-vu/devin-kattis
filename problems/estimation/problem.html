@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>“There are too many numbers here!” your boss bellows. “How
+    am I supposed to make sense of all of this? Pare it down!
+    Estimate!”</p>
+<p>You are disappointed. It took a lot of work to generate
+    those numbers. But, you’ll do what your boss asks.</p>
+<p>You decide to estimate in the following way: You have an
+    array <span class="tex2jax_process">$A$</span> of numbers. You
+    will partition it into <span class="tex2jax_process">$k$</span>
+    contiguous sections, which won’t necessarily be of the same
+    size. Then, you’ll use a single number to estimate an entire
+    section. In other words, for your array <span class="tex2jax_process">$A$</span> of size <span class="tex2jax_process">$n$</span>, you want to create another array
+    <span class="tex2jax_process">$B$</span> of size <span class="tex2jax_process">$n$</span>, which has <span class="tex2jax_process">$k$</span> contiguous sections. If
+    <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> are in the same section, then
+    <span class="tex2jax_process">$B[i]=B[j]$</span>. You want to
+    minimize the error, expressed as the sum of the absolute values
+    of the differences <span class="tex2jax_process">$\sum
+    |A[i]-B[i]|$</span>.</p>
+<h2>Input</h2>
+<p>There will be a single test case in the input. This test
+    case will begin with two integers on a line, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 2\, 000$</span>) and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le k \le 25$</span>, <span class="tex2jax_process">$k \le
+    n$</span>), where <span class="tex2jax_process">$n$</span> is
+    the size of the array, and <span class="tex2jax_process">$k$</span> is the number of contiguous
+    sections to use in estimation. The array <span class="tex2jax_process">$A$</span> will be on the next <span class="tex2jax_process">$n$</span> lines, one integer per line. Each
+    integer element of <span class="tex2jax_process">$A$</span>
+    will be in the range from <span class="tex2jax_process">$-10\,
+    000$</span> to <span class="tex2jax_process">$10\, 000$</span>,
+    inclusive.</p>
+<h2>Output</h2>
+<p>Output a single integer on its own line, which is the
+    minimum error you can achieve. All possible inputs yield
+    answers which will fit in a signed 64-bit integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 2
+6
+5
+4
+3
+2
+1
+7
+</pre>
+</td>
+<td>
+<pre>
+9
+</pre>
+</td>
+</tr>
+</table>
+</div>

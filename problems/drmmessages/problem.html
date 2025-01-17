@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>DRM Encryption is a new kind of encryption. Given an
+    encrypted string (which we’ll call a <em>DRM message</em>), the
+    decryption process involves three steps: Divide, Rotate and
+    Merge. This process is described in the following example with
+    the DRM message “EWPGAJRB”:</p>
+<dl class="description">
+<dt>Divide</dt>
+<dd>
+<p>– First, divide the message in half to “EWPG” and
+        “AJRB”.</p>
+</dd>
+<dt>Rotate</dt>
+<dd>
+<p>– For each half, calculate its rotation value by summing
+        up the values of each character (<span class="tex2jax_process">$\textrm{A} = 0, \textrm{B} = 1, \ldots ,
+        \textrm{Z} = 25$</span>). The rotation value of “EWPG” is
+        <span class="tex2jax_process">$4 + 22 + 15 + 6 =
+        47$</span>. Rotate each character in “EWPG” <span class="tex2jax_process">$47$</span> positions forward (wrapping
+        from Z to A when necessary) to obtain the new string
+        “ZRKB”. Following the same process on “AJRB” results in
+        “BKSC”.</p>
+</dd>
+<dt>Merge</dt>
+<dd>
+<p>– The last step is to combine these new strings (“ZRKB”
+        and “BKSC”) by rotating each character in the first string
+        by the value of the corresponding character in the second
+        string. For the first position, rotating ‘Z’ by ‘B’ means
+        moving it forward 1 character, which wraps it around to
+        ‘A’. Continuing this process for every character results in
+        the final decrypted message, “ABCD”.</p>
+</dd>
+</dl>
+<h2>Input</h2>
+<p>The input contains a single DRM message to be decrypted. All
+    characters in the string are uppercase letters and the string’s
+    length is even and <span class="tex2jax_process">$\leq 15\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Display the decrypted DRM message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+EWPGAJRB
+</pre>
+</td>
+<td>
+<pre>
+ABCD
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+UEQBJPJCBUDGBNKCAHXCVERXUCVK
+</pre>
+</td>
+<td>
+<pre>
+ACMECNACONTEST
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Have you ever wondered what the average ASCII character of
+    any given string is? No? Never? Really? Well, is it a character
+    in the string or something else?</p>
+<p>Would you do this calculation by hand with an ASCII table?
+    Probably not! All modern programming languages include
+    functions for converting an ASCII character to an integer, and
+    to convert an integer to an ASCII character. Of course, these
+    functions often also handle unicode characters as well, but
+    that is not part of this problem.</p>
+<p>Given a string of ASCII characters, compute the average
+    character. If the average character lies between two integer
+    ASCII values, return the smaller one.</p>
+<h2>Input</h2>
+<p>The single line of input contains a single string
+    <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1 \le |s| \le 100$</span>), which consists
+    of ASCII text. All of the characters of <span class="tex2jax_process">$s$</span> will be printable ASCII, between
+    ASCII <span class="tex2jax_process">$32$</span>
+    (space:<tt class="ttfamily">‘ ’</tt>) and ASCII <span class="tex2jax_process">$126$</span> (tilde:<tt class="ttfamily">‘~’</tt>). It will <b class="bfseries">NOT</b>
+    contain any control characters such as carriage returns, line
+    feeds, tabs, etc. It is <b class="bfseries">NOT</b> guaranteed
+    to begin, end, or even contain a non-space character.</p>
+<h2>Output</h2>
+<p>Output a single ASCII character, which is the average of all
+    of the ASCII characters in <span class="tex2jax_process">$s$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ABCDE
+</pre>
+</td>
+<td>
+<pre>C
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>AbCdE
+</pre>
+</td>
+<td>
+<pre>O
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>aBcDe
+</pre>
+</td>
+<td>
+<pre>V
+</pre>
+</td>
+</tr>
+</table>
+</div>

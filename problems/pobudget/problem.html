@@ -1,0 +1,192 @@
+<div class="problembody">
+<p>Programmeringsolympiaden (PO) must write a budget every
+    year, which then needs to be approved by the treasurer Emil.
+    This year, the PO leadership has proposed some rather wild
+    ideas, such as buying 2000 ducks and purchasing a PO-yacht to
+    sail to the IOI (the world finals of competitive programming).
+    Emil finds it difficult to determine whether the budget is
+    reasonable or not.</p>
+<p>A budget consists of several revenues and expenses. To
+    assess whether the budget is reasonable, Emil wants to
+    calculate whether the proposed budget would result in
+    Programmeringsolympiaden making a profit, a loss, or breaking
+    even financially. Can you write a program to help Emil decide
+    this?</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 30$</span>), the number of revenues/expenses in the
+    budget.</p>
+<p>This is followed by all <span class="tex2jax_process">$N$</span> revenues/expenses. Each is
+    described over two lines: first, a description of what it is, a
+    string of at most 30 characters. For simplicity, the string
+    contains no spaces. The next line contains an integer
+    <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$-10^7 \leq K \leq 10^7$</span>). If
+    <span class="tex2jax_process">$K$</span> is positive, it
+    represents a revenue of <span class="tex2jax_process">$K$</span> kronor; otherwise, it is an
+    expense of <span class="tex2jax_process">$-K$</span>
+    kronor.</p>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>If the budget would lead to PO making money, print
+        “Usch, vinst”. This translates to “Ew, profit”.</p>
+</li>
+<li>
+<p>If the budget breaks even, print “Lagom”. This
+        translates to “Just right”.</p>
+</li>
+<li>
+<p>If the budget would lead to a loss, print “Nekad”. This
+        translates to “Denied”.</p>
+</li>
+</ul>
+<p>Note that you should not print the quotation marks.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K = 0$</span> for all
+          <span class="tex2jax_process">$K$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \geq 0$</span> for
+          all <span class="tex2jax_process">$K$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p>Since the yacht costs much more than what PO receives from
+    the sponsorship, the budget results in a loss, and thus the
+    correct answer is <tt class="ttfamily">Nekad</tt>.</p>
+<h2>Explanation of Sample 2</h2>
+<p>Even though there are some expenses, their total is less
+    than the revenue from the sponsorship.</p>
+<h2>Explanation of Sample 3</h2>
+<p>If there is no PO at all, there are neither revenues nor
+    expenses, which results in breaking even.</p>
+<h2>Explanation of Sample 4</h2>
+<p>Here, the revenues exactly match the expenses, which also
+    results in breaking even.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+sponsring
+70000
+PO_yacht
+-1000000
+</pre>
+</td>
+<td>
+<pre>Nekad
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+sponsring
+70000
+2000_ankor
+-5000
+Lite_fika
+-1000
+500_affischer
+-10000
+</pre>
+</td>
+<td>
+<pre>Usch, vinst
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1
+inget_PO
+0
+</pre>
+</td>
+<td>
+<pre>Lagom
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2
+sponsring
+70000
+final
+-70000
+</pre>
+</td>
+<td>
+<pre>Lagom
+</pre>
+</td>
+</tr>
+</table>
+</div>

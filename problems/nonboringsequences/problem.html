@@ -1,0 +1,54 @@
+<div class="problembody">
+<p><em>We were afraid of making this problem statement too
+    boring, so we decided to keep it short</em>. A sequence is
+    called <em>non-boring</em> if its every connected subsequence
+    contains a unique element, i.e. an element such that no other
+    element of that subsequence has the same value. Given a
+    sequence of integers, decide whether it is
+    <em>non-boring</em>.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the number of test
+    cases <span class="tex2jax_process">$T$</span>, where
+    <span class="tex2jax_process">$1 \le T \le 100\, 000$</span>.
+    The descriptions of the test cases follow:</p>
+<p>Each test case starts with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 200\, 000$</span>) denoting the length of the
+    sequence. In the next line the <span class="tex2jax_process">$n$</span> elements of the sequence follow,
+    separated with single spaces. The elements are non-negative
+    integers less than <span class="tex2jax_process">$10^9$</span>.
+    The sum of <span class="tex2jax_process">$n$</span> over all
+    <span class="tex2jax_process">$T$</span> test cases is at most
+    <span class="tex2jax_process">$1\, 500\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Print the answers to the test cases in the order in which
+    they appear in the input. For each test case print a single
+    line containing the word <tt>non-boring</tt> or
+    <tt>boring</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+5
+1 2 3 4 5
+5
+1 1 1 1 1
+5
+1 2 3 2 1
+5
+1 1 2 1 1
+</pre>
+</td>
+<td>
+<pre>non-boring
+boring
+non-boring
+boring
+</pre>
+</td>
+</tr>
+</table>
+</div>

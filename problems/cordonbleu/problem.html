@@ -1,0 +1,127 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/cordonbleu/file/statement/en/img-0001.png" class="illustration" src="/problems/cordonbleu/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>A Parisian entrepreneur has just opened a new restaurant
+    “Au bon cordon bleu”, named after a famous
+    French recipe. However, no one has any idea of which wine would
+    be appropriate with such a dish. The entrepreneur plans to
+    sample many different wines in order to build the wine
+    menu.</p>
+<p>The various bottles of wine he plans to taste can be
+    obtained from different wine merchants located in or around
+    Paris. Being a very sensitive product, high-quality wine can
+    only be transported by highly trained couriers on motorbikes.
+    Therefore, those couriers are very expensive.</p>
+<p>A courier can be used for the transportation of several wine
+    bottles, but can transport only one bottle at a time. All
+    couriers get paid at the same fixed rate: one euro per
+    kilometer. The distance function used is the Manhattan distance
+    (also known as taxicab metric) of every individual segment of
+    the trip: the distance from a point <span class="tex2jax_process">$(x_1, y_1)$</span> to a point <span class="tex2jax_process">$(x_2, y_2)$</span> is <span class="tex2jax_process">$|x_1-x_2|+|y_1-y_2|$</span>.</p>
+<p>A courier in charge of transporting a single wine bottle
+    will get paid as many euros as the sum of the following two
+    (Manhattan) distances: from her base to the wine merchant
+    place, and from the wine merchant place to the restaurant.</p>
+<p>Consider a more complex example: a courier in charge of
+    transporting two wine bottles, one after the other. The amount
+    paid will be the sum of the following distances: from his base
+    to the location of the first bottle, then to the restaurant,
+    then to the location of the second bottle, then to the
+    restaurant.</p>
+<p>Help the entrepreneur minimize the costs of hiring the
+    couriers. Given a set of Cartesian coordinates corresponding to
+    available couriers, a set of Cartesian coordinates
+    corresponding to the locations of the precious wine bottles
+    they need to collect, and the location of the restaurant,
+    compute the smallest number of kilometers that the couriers
+    will be paid for. There is no obligation to use all available
+    couriers, and bottles can be collected in an arbitrary
+    order.</p>
+<h3>Input</h3>
+<p>The input comprises several lines, each consisting of
+    integers separated with single spaces:</p>
+<ul class="itemize">
+<li>
+<p>The first line consists of the number <span class="tex2jax_process">$N$</span> of wine bottles to collect and
+        the number <span class="tex2jax_process">$M$</span> of
+        available couriers.</p>
+</li>
+<li>
+<p>The <span class="tex2jax_process">$N$</span> following
+        lines consist of the coordinates of each bottle as two
+        integers <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span>.</p>
+</li>
+<li>
+<p>The <span class="tex2jax_process">$M$</span> following
+        lines consist of the coordinates of each courier’s base as
+        two integers <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span>.</p>
+</li>
+<li>
+<p>The last line contains the coordinates of the restaurant
+        as two integers <span class="tex2jax_process">$x$</span>
+        and <span class="tex2jax_process">$y$</span>.</p>
+</li>
+</ul>
+<h3>Limits</h3>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq 1\,
+        000$</span>;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq M \leq 1\,
+        000$</span>;</p>
+</li>
+<li>
+<p>all coordinates <span class="tex2jax_process">$(x,y)$</span> verify <span class="tex2jax_process">$-1\, 000 \leq x \leq 1\, 000$</span> and
+        <span class="tex2jax_process">$-1\, 000 \leq y \leq 1\,
+        000$</span>.</p>
+</li>
+</ul>
+<h3>Output</h3>
+<p>A single integer: the smallest number of euros that needs to
+    be paid to collect all bottles.</p>
+<h3>Notes</h3>
+<p>There might be more than one item at the same initial
+    location. For example, it would be possible for two bottles,
+    ten couriers, and the restaurant to share the same starting
+    position.</p>
+<h3>Example</h3>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=.4\textwidth ]{cordonbluesketch.png}" src="/problems/cordonbleu/file/statement/en/img-0002.png" style="width:40.00%"/>
+</center>
+</div>
+<p>On this example, only one courier (<span class="tex2jax_process">$C_2$</span>) is used to retrieve the two
+    bottles <span class="tex2jax_process">$B_1$</span> and
+    <span class="tex2jax_process">$B_2$</span>, and bring them to
+    the restaurant <span class="tex2jax_process">$R$</span> by
+    performing the moves labeled <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$4$</span> in succession. The total number of
+    kilometers is <span class="tex2jax_process">$5$</span>. This is
+    one of the optimal solutions.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+1 0
+0 -1
+-1 1
+2 -1
+0 0
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/caching/file/statement/en/img-0001.jpg" class="illustration" src="/problems/caching/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="http://www.flickr.com/photos/63766699@N00/76729617">Photo</a>
+        by suneko on Flickr
+      </div>
+</div>In a distributed system, data is never where you need it,
+    and fetching data over a network takes time and consumes
+    bandwidth. The problem can be mitigated by adding a cache,
+    where a node stores some resources locally and if those
+    resources need to be used again, it can simply take them from
+    its cache rather than asking someone else for them.
+    <p>However, caches have a nasty tendency to fill up, so at some
+    point, objects must be evicted from the cache to make room for
+    new objects. Choosing what object to remove from the cache is
+    not easy and there are several different algorithms to choose
+    from.</p>
+<p>The marvelous Apes in Computing Machinery have come up with
+    a fantastic new algorithm, the Introspective Caching Algorithm,
+    named after a city of Peru. It consists of some extra hardware
+    (a very small, precognitive monkey) which helps making
+    decisions. Since the monkey can see into the future, she knows
+    exactly what objects will be accessed and in what order, and
+    using this information she will make optimal decisions on what
+    objects to remove from the cache. Optimality here means that
+    she will minimize the number of times an object is read into
+    the cache.</p>
+<p>All object accesses go through the cache, so every time an
+    object is accessed, it must be inserted into the cache if it
+    was not already there. All objects are of equal size, and no
+    writes occur in the system, so a cached object is always valid.
+    When the system starts, the cache is empty.</p>
+<p>You have been tasked with evaluating the monkey’s
+    performance, and feeding her the occasional banana.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers, separated
+    by single spaces, telling you how many objects fit in the
+    cache, <span class="tex2jax_process">$0 &lt; c \le 10\,
+    000$</span>, how many different objects are in the system,
+    <span class="tex2jax_process">$c \le n \le 100\, 000$</span>,
+    and how many accesses, <span class="tex2jax_process">$0 \le a
+    \le 100\, 000$</span>, will occur. The following <span class="tex2jax_process">$a$</span> lines contain a single integer
+    between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$n-1$</span> (inclusive)
+    indicating what object is accessed. The first line corresponds
+    to the first object accessed access and the last line to the
+    last.</p>
+<h2>Output</h2>
+<p>Output the least number of times an object must be read into
+    the cache to handle the accesses listed in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 3
+0
+0
+1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 8
+0
+1
+2
+3
+3
+2
+1
+0
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

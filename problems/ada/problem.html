@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>While mostly known for the programs she wrote for Charles
+    Babbage’s Analytic Engine, Augusta Ada King-Noel, Countess of
+    Lovelace, described how the method of finite differences could
+    be used to solve all types of problems involving number
+    sequences and series. These techniques were implemented in
+    Babbage’s Difference Engine.</p>
+<p>The algorithm: If we compute the difference between
+    consecutive values in a numeric sequence, we will obtain a new
+    sequence which is related to the derivative of the function
+    implied by the original sequence. For sequences generated from
+    first-order polynomials (linear functions) the successive
+    differences will be a list of identical values, (i.e., a
+    constant difference). For second-order polynomial functions the
+    lists of differences will be a new sequence whose values change
+    linearly. In turn, the list of differences of the values in
+    this generated list (i.e., the finite differences of the list
+    of differences) will be constant, and so on for higher-order
+    polynomials. In general the <span class="tex2jax_process">$n^{\text {th}}$</span> row of differences
+    will be constant for an <span class="tex2jax_process">$n^{\text
+    {th}}$</span> degree polynomial.</p>
+<p>For example, the first-order polynomial <span class="tex2jax_process">$3x + 3$</span> produces the sequence below
+    at <span class="tex2jax_process">$x=0,1,2,3,4$</span>, and the
+    first differences are shown on the following line.</p>
+<pre>
+3     6     9    12    15  
+   3     3     3     3
+</pre>
+<p>As another example, the polynomial <span class="tex2jax_process">$x^2$</span>, if evaluated at inputs
+    <span class="tex2jax_process">$x=3, 5, 7, 9,$</span> produces
+    the sequence below.</p>
+<pre>
+9    25    49    81
+  16    24    32
+      8     8
+</pre>
+<p>Furthermore, if we consider a minimum-order polynomial that
+    produces the original sequence, its value at the next regularly
+    spaced input can be predicted by extending the difference
+    table.</p>
+<h2>Input</h2>
+<p>The input consists of a value <span class="tex2jax_process">$n$</span>, designating the number of
+    polynomial evaluations given with <span class="tex2jax_process">$2 \leq n \leq 10$</span>, follwed by
+    <span class="tex2jax_process">$n$</span> values <span class="tex2jax_process">$v_1, v_2, \ldots , v_{n}$</span> which
+    represent the value of a polynomial when evaluated at
+    <span class="tex2jax_process">$n$</span> regularly spaced input
+    values. Each <span class="tex2jax_process">$v_ j$</span> will
+    satisfy <span class="tex2jax_process">$-2\, 000\, 000 \leq v_ j
+    \leq 2\, 000\, 000$</span> and at least two of those values
+    will differ from each other.</p>
+<h2>Output</h2>
+<p>Output two integer values <span class="tex2jax_process">$d$</span> and <span class="tex2jax_process">$v_{n+1}$</span>, separated by a space. The
+    value <span class="tex2jax_process">$d$</span> must be the
+    degree of a minimal-degree polynomial producing the original
+    sequence, and <span class="tex2jax_process">$v_{n+1}$</span>
+    must be the value of the polynomial if evaluated at the next
+    regularly spaced input value.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 6 9 12 15
+</pre>
+</td>
+<td>
+<pre>1 18
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 9 25 49 81
+</pre>
+</td>
+<td>
+<pre>2 121
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 39 6 -3 0 3 -6
+</pre>
+</td>
+<td>
+<pre>3 -39
+</pre>
+</td>
+</tr>
+</table>
+</div>

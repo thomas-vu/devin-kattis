@@ -1,0 +1,171 @@
+<div class="problembody">
+<div class="illustration" style="width:49.00%">
+<img alt="/problems/kitchencombinatorics/file/statement/en/img-0001.jpg" class="illustration" src="/problems/kitchencombinatorics/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/harshlight/196883446">Picture</a>
+        by HarshLight via Flickr
+      </div>
+</div>The world-renowned Swedish Chef is planning a gourmet
+    three-course dinner for some muppets: a starter course, a main
+    course, and a dessert. His famous Swedish cook-book offers a
+    wide variety of choices for each of these three courses, though
+    some of them do not go well together (for instance, you of
+    course cannot serve chocolate moose and sooted shreemp at the
+    same dinner).
+
+    <p>Each potential dish has a list of ingredients. Each
+    ingredient is in turn available from a few different brands.
+    Each brand is of course unique in its own special way, so using
+    a particular brand of an ingredient will always result in a
+    completely different dinner experience than using another brand
+    of the same ingredient.</p>
+<p>Some common ingredients such as pølårber may appear in two
+    of the three chosen dishes, or in all three of them. When an
+    ingredient is used in more than one of the three selected
+    dishes, Swedish Chef will use the same brand of the ingredient
+    in all of them.</p>
+<p>While waiting for the meecaroo, Swedish Chef starts
+    wondering: how many different dinner experiences are there that
+    he could make, by different choices of dishes and brands for
+    the ingredients?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line containing five integers <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$1 \le r \le 1\, 000$</span> is the
+        number of different ingredients that exist, <span class="tex2jax_process">$1 \le s, m, d \le 25$</span> are the
+        number of available starter dishes, main dishes, and
+        desserts, respectively, and <span class="tex2jax_process">$0 \le n \le 2\, 000$</span> is the
+        number of pairs of dishes that do not go well together.</p>
+</li>
+<li>
+<p>one line containing <span class="tex2jax_process">$r$</span> integers <span class="tex2jax_process">$b_1, \ldots , b_ r$</span>, where
+        <span class="tex2jax_process">$1 \le b_ i \le 100$</span>
+        is the number of different brands of ingredient
+        <span class="tex2jax_process">$i$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$s+m+d$</span> lines
+        describing the <span class="tex2jax_process">$s$</span>
+        starter dishes, then the <span class="tex2jax_process">$m$</span> main dishes, then the
+        <span class="tex2jax_process">$d$</span> desserts. Each
+        such line starts with an integer <span class="tex2jax_process">$1 \le k \le 20$</span> denoting the
+        number of ingredients of the dish, and is followed by
+        <span class="tex2jax_process">$k$</span> distinct integers
+        <span class="tex2jax_process">$i_1, \ldots , i_ k$</span>,
+        where for each <span class="tex2jax_process">$1 \le j \le
+        k$</span>, <span class="tex2jax_process">$1 \le i_ j \le
+        r$</span> is an ingredient.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each
+        containing two incompatible dishes. Each dish is identified
+        by an integer <span class="tex2jax_process">$1 \le j \le
+        s+m+d$</span>, referring to the <span class="tex2jax_process">$j$</span>’th dish given in the input (so
+        <span class="tex2jax_process">$1 \le j \le s$</span> refers
+        to the starter dishes, <span class="tex2jax_process">$s
+        &lt; j \le s+m$</span> refers to the main dishes, and
+        <span class="tex2jax_process">$s+m &lt; j \le s+m+d$</span>
+        refers to the desserts).</p>
+</li>
+</ul>
+<p>Each pair of incompatible dishes in the input consists of
+    two dishes of different types, and any one pair of dishes is
+    listed at most once.</p>
+<h2>Output</h2>
+<p>If the number of different dinner experiences Swedish Chef
+    can make is at most <span class="tex2jax_process">$10^{18}$</span>, then output that number.
+    Otherwise, output “<tt class="ttfamily">too many</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 1 1 1 0
+2 3 1 5 3 2
+2 1 2
+3 3 4 5
+1 6
+</pre>
+</td>
+<td>
+<pre>
+180
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 2 1 1
+2 3 2
+1 1
+1 2
+1 2
+1 3
+1 1
+2 3
+</pre>
+</td>
+<td>
+<pre>
+22
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 1 1 1
+5 5 5
+3 1 2 3
+3 1 2 3
+3 1 2 3
+2 1
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 1 1 1 0
+100 100 100 100 100 100 100 100 100 100
+4 1 2 3 4
+3 5 6 7
+3 8 9 10
+</pre>
+</td>
+<td>
+<pre>
+too many
+</pre>
+</td>
+</tr>
+</table>
+</div>

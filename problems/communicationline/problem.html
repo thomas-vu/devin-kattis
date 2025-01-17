@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>This problem requires you to write a program which does
+    three tasks which might facilitate the use of a communication
+    line. The first task is that of translating from one set of
+    codes to another. The second task is to compress 80-character
+    lines to a smaller size by compressing blanks. The final task
+    is that of grouping these “compressed” lines into larger lines.
+    The three tasks are to be performed in sequence.</p>
+<p>To perform the translation, you will be first given two
+    strings <span class="tex2jax_process">$S$</span> and
+    <span class="tex2jax_process">$T$</span>. The <span class="tex2jax_process">$i$</span>’th character in <span class="tex2jax_process">$S$</span> is to be translated to the
+    <span class="tex2jax_process">$i$</span>’th character in
+    <span class="tex2jax_process">$T$</span>. Any character not
+    appearing in <span class="tex2jax_process">$S$</span> should
+    not be translated.</p>
+<p>Then you will read a sequence of lines of input. For each
+    line <span class="tex2jax_process">$L$</span>, you will do the
+    following:</p>
+<ul class="itemize">
+<li>
+<p>For each character of <span class="tex2jax_process">$L$</span> appearing in <span class="tex2jax_process">$S$</span>, replace it with its
+        corresponding character in <span class="tex2jax_process">$T$</span>.</p>
+</li>
+<li>
+<p>Then for each consecutive sequence of <span class="tex2jax_process">$4$</span> or more blanks in <span class="tex2jax_process">$L$</span>, replace the sequence with
+        <tt class="ttfamily">&amp;</tt> followed by exactly two
+        digits indicating the number of blanks that were replaced
+        (use a leading <tt class="ttfamily">0</tt> if
+        necessary).</p>
+</li>
+</ul>
+<p>Finally, after translation and compression of all lines has
+    taken place these lines should be concatenated to form fewer
+    lines in the following way.</p>
+<p>For some given value <span class="tex2jax_process">$N$</span>, concatenate as many of the first
+    few lines (retaining their order) as possible so that the
+    concatenated string (including any blanks) has length at most
+    <span class="tex2jax_process">$N$</span>. Output this new
+    concatenated line and repeat with the remaining lines until no
+    line remains.</p>
+<h2>Input</h2>
+<p>The first line of input begins with two numbers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N &lt; 1000$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \le M \le 20$</span>) followed by two strings <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$T$</span> of length <span class="tex2jax_process">$M$</span> each. <span class="tex2jax_process">$S$</span> is composed of distinct
+    characters. This means the <span class="tex2jax_process">$i$</span>th character in <span class="tex2jax_process">$S$</span> should be translated to the
+    <span class="tex2jax_process">$i$</span>th character in
+    <span class="tex2jax_process">$T$</span>. Both <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$T$</span> only contain letters, digits, and
+    the following punctuation characters:</p>
+<center>
+<tt>!"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~</tt>
+</center>
+<p>Then a number of lines follow, each containing exactly
+    <span class="tex2jax_process">$80$</span> characters. Each line
+    consists only of letters, digits, punctuation characters, and
+    spaces. A line may have leading or trailing spaces. The final
+    line begins with <tt class="ttfamily">****</tt> followed by
+    <span class="tex2jax_process">$76$</span> spaces and no other
+    line is exactly like this. There will be at most <span class="tex2jax_process">$100$</span> lines apart from the first and
+    last line.</p>
+<h2>Output</h2>
+<p>Output the final lines obtained by concatenating the results
+    of translating and compressing each of these lines according to
+    the concatenation procedure described above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>40 3 ABC $.$
+         ABC                                                                    
+  ABCD                                                                          
+ A B  D   A    BCB      CC                                                      
+A B                                                                             
+ A B  D   A    BCB      CC                                                      
+****                                                                            
+</pre>
+</td>
+<td>
+<pre>&amp;09$.$&amp;68  $.$D&amp;74
+ $ .  D   $&amp;04.$.&amp;06$$&amp;54$ .&amp;77
+ $ .  D   $&amp;04.$.&amp;06$$&amp;54
+</pre>
+</td>
+</tr>
+</table>
+</div>

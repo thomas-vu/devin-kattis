@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/paintings/file/statement/en/img-0001.png" class="illustration" src="/problems/paintings/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by William Fiset, <span class="mbox" style="width:">CC BY-SA 4.0</span>
+</div>
+</div>
+<p>Catherine recently got into painting minimalist art. For her
+    next painting she wants to create an image with <span class="tex2jax_process">$N$</span> vertical strips of distinct
+    colors. She always begins painting her vertical strips on the
+    left side of the canvas and proceeds to the right side.
+    However, there are certain pairs of colors Catherine does not
+    like seeing next to each other. If two such colors are adjacent
+    in a painting, she considers this painting to be
+    <em>hideous</em>. Furthermore, there are colors Catherine
+    prefers over other colors, so when painting she always selects
+    her most preferred unused color that does not make the painting
+    (as created so far) hideous, and that allows her to complete a
+    non-hideous painting. Can you help Catherine find her favorite
+    painting?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$T$</span> <span class="tex2jax_process">$(1
+    \leq T \leq 5)$</span> denoting the number of test cases that
+    follow.</p>
+<p>The first line of each test case contains one integer
+    <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(3 \leq N \leq 12)$</span>, where
+    <span class="tex2jax_process">$N$</span> is the number of
+    colors/vertical strips Catherine wants her painting to have. On
+    the second line are <span class="tex2jax_process">$N$</span>
+    colors ordered in (strictly) decreasing order of preference,
+    where each color is a string of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> lowercase letters (<tt class="ttfamily">a</tt>–<tt class="ttfamily">z</tt>). The third line
+    contains a positive integer <span class="tex2jax_process">$M$</span> indicating the number of pairs of
+    colors that follow. Each of the next <span class="tex2jax_process">$M$</span> lines contains two space-separated
+    colors <span class="tex2jax_process">$c_ i$</span> and
+    <span class="tex2jax_process">$c_ j$</span> <span class="tex2jax_process">$(c_ i \neq c_ j)$</span> such that Catherine
+    does not like seeing color <span class="tex2jax_process">$c_
+    i$</span> next to color <span class="tex2jax_process">$c_
+    j$</span>. No pair of colors will appear on more than one
+    line.</p>
+<h2>Output</h2>
+<p>For every test case output two lines. On the first line
+    display the total number of paintings Catherine can make that
+    are not hideous (without consideration for her color
+    preferences), and on the second line output Catherine’s
+    favorite painting as a space-separated list of colors
+    corresponding to the strips in the painting from left to
+    right.</p>
+<p><em>Note:</em> You are guaranteed that there is always at
+    least one arrangement of colors Catherine finds non-hideous,
+    and that the maximum number of paintings Catherine can make is
+    less than <span class="tex2jax_process">$100\, 000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3
+green red blue
+1
+red blue
+4
+purple pink red black
+2
+purple pink
+red black
+8
+black white red blue yellow green orange purple
+6
+black white
+blue green
+orange black
+red blue
+green yellow
+white purple
+</pre>
+</td>
+<td>
+<pre>
+2
+red green blue
+8
+purple red pink black
+7208
+black red white blue yellow orange green purple
+</pre>
+</td>
+</tr>
+</table>
+</div>

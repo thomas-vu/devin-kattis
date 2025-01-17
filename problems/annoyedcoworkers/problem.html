@@ -1,0 +1,120 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/annoyedcoworkers/file/statement/en/img-0001.png" class="illustration" src="/problems/annoyedcoworkers/file/statement/en/img-0001.png"/>
+<div class="description">
+        A picture of you, not working. Source: <a href="https://xkcd.com/303/">XKCD 303</a>
+</div>
+</div>
+<p>It’s another day in the office, and you’re a mastermind of
+    not doing any work yourself. Instead, you’ll go to your
+    coworkers for “help,” but secretly have them do all the
+    work.</p>
+<p>You’ve determined that the more one of your coworkers helps
+    you, the more annoyed they become. You’ve also been able to
+    determine how much more annoyed a coworker gets everytime you
+    ask them for help. At the beginning of the day, a coworker is
+    initially <span class="tex2jax_process">$a$</span> annoyed at
+    you. That’s their annoyance level. Everytime you ask them for
+    help though, they become <span class="tex2jax_process">$d$</span> more annoyed at you – their
+    annoyance level <span class="tex2jax_process">$a$</span>
+    increases by a constant amount <span class="tex2jax_process">$d$</span> so that <span class="tex2jax_process">$a=a+d$</span>.</p>
+<p>You want to complete a project of <span class="tex2jax_process">$h$</span> tasks solely with “help” from your
+    coworkers, but you need to be careful not to annoy any of them
+    too much.</p>
+<p>What’s the best you can do?</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$c$</span>, where <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$1
+    \le h \le 100\, 000$</span>) is the number of times you have to
+    ask for help to complete the project, and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le c \le 100\, 000$</span>) denotes the number of coworkers
+    you have.</p>
+<p>Each of the following <span class="tex2jax_process">$c$</span> lines contains two positive
+    integers <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$d$</span>, representing a
+    coworker whose initial annoyance level is <span class="tex2jax_process">$a$</span> and who is getting more annoyed at
+    you by an increase of <span class="tex2jax_process">$d$</span>
+    every time you ask them for help (<span class="tex2jax_process">$1\le a, d \le 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Output a single number, which is the maximum annoyance level
+    <i class="itshape">any</i> coworker has at you provided you use
+    an optimal strategy to minimize this level. (In other words, of
+    all possible strategies, choose one that minimizes the
+    annoyance level of the worker or workers who are most annoyed
+    at you at the end.)</p>
+<h2>Sample Input 1 Explanation</h2>
+<p>You have <span class="tex2jax_process">$4$</span> coworkers
+    and you need to ask for help <span class="tex2jax_process">$4$</span> times. Initially, their annoyance
+    levels are <span class="tex2jax_process">$a_1=1, a_2=2, a_3=3,
+    a_4=4$</span>, the increases are <span class="tex2jax_process">$d_1=2, d_2=3, d_3=4, d_4=5$</span>. One
+    optimal solution is to ask for help twice from coworker
+    <span class="tex2jax_process">$1$</span>, once from coworker
+    <span class="tex2jax_process">$2$</span>, and once from
+    coworker <span class="tex2jax_process">$3$</span>, in which
+    case the final annoyance levels are: <span class="tex2jax_process">$a_1=1 + 2 \cdot 2 = 5, a_2=2 + 3 = 5, a_3=3
+    + 4 = 7, a_4=4$</span>. The coworker that is most annoyed at
+    you is coworker <span class="tex2jax_process">$3$</span>, whose
+    annoyance level at you is <span class="tex2jax_process">$7$</span>. Or, you could ask coworker
+    <span class="tex2jax_process">$1$</span> for help <span class="tex2jax_process">$3$</span> times and coworker <span class="tex2jax_process">$2$</span> once, leaving you with
+    <span class="tex2jax_process">$a_1=1 + 3 \cdot 2 = 7, a_2=2 + 3
+    = 5, a_3=3, a_4=4$</span>. Both strategies yield the same
+    minimal maximum amount.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2
+2 3
+3 4
+4 5
+</pre>
+</td>
+<td>
+<pre>7
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 1000
+1000 1
+</pre>
+</td>
+<td>
+<pre>1002
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1 1
+2 2
+</pre>
+</td>
+<td>
+<pre>5
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

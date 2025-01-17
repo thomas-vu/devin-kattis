@@ -1,0 +1,126 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/monk/file/statement/en/img-0001.jpg" class="illustration" src="/problems/monk/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/en/buddhist-monk-buddhism-meditation-737275/">
+        pixabay</a> cc0
+      </div>
+</div>
+<p>The following puzzle was popularized by Martin Gardner’s
+    book “My Best Mathematical and Logic Puzzles,” although it
+    appears first in the monograph “On Problem-Solving” by the
+    Gestalt psychologist Karl Dunker.</p>
+<blockquote class="quote">
+<p><i class="it">One morning, exactly at sunrise, a Buddhist
+      monk began to climb a tall mountain. The narrow path, no more
+      than a foot or two wide, spiraled around the mountain to a
+      glittering temple at the summit.</i></p>
+<p><i class="it">The monk ascended the path at varying rates
+      of speed, stopping many times along the way to rest and eat
+      the dried fruit he carried with him. He reached the temple
+      shortly before sunset. After several days of fasting and
+      meditation he began his journey back along the same path,
+      starting at sunrise and again walking at variable speeds with
+      many pauses along the way. His average speed descending was,
+      of course, greater than his average climbing speed.</i></p>
+<p><i class="it">Prove that there is a spot along the path
+      that the monk will occupy on both trips at precisely the same
+      time of day!</i></p>
+</blockquote>
+<p>You can probably see why this is true - but can you write a
+    program that computes the time at which the monk will be at the
+    same spot during his ascent and descent?</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    contains two integers <span class="tex2jax_process">$a$</span>
+    (<span class="tex2jax_process">$0 &lt; a \le 5\, 000$</span>)
+    and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0 &lt; d \le 5\, 000$</span>) denoting the
+    number of segments during the ascent and descent, respectively.
+    This is followed by <span class="tex2jax_process">$a$</span>
+    lines, each containing two integers <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$0
+    \le h \le 1\, 000$</span>) and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0
+    &lt; t \le 100$</span>) denoting the positive change in
+    elevation (<span class="tex2jax_process">$h$</span>) the monk
+    gained during this segment and the time it took (<span class="tex2jax_process">$t$</span>). If the monk rests and eats
+    during a segment, <span class="tex2jax_process">$h$</span> will
+    be <span class="tex2jax_process">$0$</span>.</p>
+<p>This is followed by <span class="tex2jax_process">$d$</span>
+    lines, each containing two integers <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$0
+    \le h \le 1\, 000$</span>) and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0
+    &lt; t \le 100$</span>) denoting the change in elevation
+    (<span class="tex2jax_process">$h$</span>) the monk descended
+    during this segment and the time it took (<span class="tex2jax_process">$t$</span>). If the monk rests and eats
+    during a segment, <span class="tex2jax_process">$h$</span> will
+    be <span class="tex2jax_process">$0$</span>.</p>
+<p>The total change in elevation during the ascent and descent
+    is guaranteed to be the same, i.e., the sum of the changes in
+    elevation for the ascending segments is the same as the sum for
+    the descending segments.</p>
+<h2>Output</h2>
+<p>Output a single floating point number, the earliest point in
+    time at which the monk occupies the same spot during his climb
+    and his descent. The monk starts his ascent and his descent at
+    time <span class="tex2jax_process">$0$</span> on both days.</p>
+<p>Your answer will be considered correct if its absolute or
+    relative error does not exceed <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+10 11
+10 10
+</pre>
+</td>
+<td>
+<pre>5.238095
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+4 2
+0 3
+6 3
+10 7
+</pre>
+</td>
+<td>
+<pre>4.200000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+2 3
+0 5
+3 1
+3 4
+0 2
+2 2
+</pre>
+</td>
+<td>
+<pre>4.000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

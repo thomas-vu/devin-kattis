@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:55.00%">
+<img alt="/problems/cafeteriaeasy/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cafeteriaeasy/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="http://labyrinth.thinkport.org">Lure of
+        the Labyrinth, used with permission of Maryland Public
+        Television (MPT)</a>
+</div>
+</div>
+<p>Theta likes to play Lure of the Labyrinth, which is an
+    online game that uses a compelling graphic novel storyline to
+    engage middle grades students in mathematical thinking and
+    problem-solving. To find lost pets, students have to infiltrate
+    a world of monsters and solve puzzles! Implemented by a
+    professional game studio, these puzzles are quite engaging and
+    challenging.</p>
+<p>In the manager’s cafeteria, students are asked to practice
+    proportions by serving <span class="tex2jax_process">$5$</span>
+    monsters sitting at the table: Salamander, Yeti, Golem, Imp,
+    and Kraken. Each monster wants some amount of burger, slop,
+    sushi, and drumstick.</p>
+<p>The amount of each item each monster wants on their plate is
+    proportional to the amount of each of the other items that
+    monster wants, and the proportionality ratio is the same for
+    all monsters.</p>
+<p>For instance, as shown in sample input <span class="tex2jax_process">$1$</span> and in the accompanying figure, if
+    Golem (center) wants <span class="tex2jax_process">$6$</span>
+    units of burger on his plate and <span class="tex2jax_process">$12$</span> units of drumstick, and
+    Salamander (left) wants <span class="tex2jax_process">$40$</span> units of drumstick, then
+    Salamander will want <span class="tex2jax_process">$20$</span>
+    units of burger. Students practicing proportions will program
+    the dispenser machine to release <span class="tex2jax_process">$20$</span> units of burger. Similarly,
+    Kraken (right) wants <span class="tex2jax_process">$36$</span>
+    units of drumstick because it has <span class="tex2jax_process">$81$</span> units of slop on its plate and
+    Salamander has <span class="tex2jax_process">$40$</span> units
+    of drumstick and <span class="tex2jax_process">$90$</span>
+    units of slop. If the students compute all proportions in time,
+    the monsters eat and a pet can be saved!</p>
+<p>As students progress in the game and reach more difficult
+    levels, fewer and fewer amounts are given, requiring more
+    intuition and thinking to solve the puzzle.</p>
+<p>Give a set of partially filled plates, write a program that
+    computes the amount of food for the remaining slots!</p>
+<h2>Input</h2>
+<p>The input consists of <span class="tex2jax_process">$2$</span> lines of <span class="tex2jax_process">$10$</span> entries each describing the
+    partially filled plates. The first line describes the top row
+    (burgers and slop), the second line describes the bottom row
+    (sushi and drumstick). On each line, the first <span class="tex2jax_process">$2$</span> entries describe Salamander’s
+    plate, the next <span class="tex2jax_process">$2$</span>
+    Yeti’s, then Golem’s, Imp’s, and finally Kraken’s. Each entry
+    is either the underscore character <tt class="ttfamily">_</tt>
+    describing an empty slot or a positive integer number
+    <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$0 &lt; a \le 200$</span>) if it is already
+    known. Entries are separated by single spaces. There are at
+    least <span class="tex2jax_process">$8$</span> slots given. You
+    may assume that all plates have at least one non-empty slot,
+    and that for each kind of food there exists one plate where its
+    amount is known.</p>
+<h2>Output</h2>
+<p>Output two lines showing how many units of food should be on
+    each plate in the same format as given in the input: the top
+    line lists the amounts of burgers and slop for each plate, the
+    bottom line lists the amounts of sushi and drumstick. Separate
+    each amount with a space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>_ 90 22 _ 6 _ _ _ _ 81
+_ 40 _ _ _ 12 60 _ 90 _
+</pre>
+</td>
+<td>
+<pre>20 90 22 99 6 27 12 54 18 81 
+100 40 110 44 30 12 60 24 90 36 
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/justaminute/file/statement/en/img-0001.jpg" class="illustration" src="/problems/justaminute/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.geograph.org.uk/photo/1777128">kim traynor</a>
+</div>
+</div>The city’s local subway service S.L., Super Lag, are
+    currently being blamed that their displays, showing the
+    expected wait time until the next train arrives, are faulty.
+    Too many commuters have the experience of coming to the subway
+    station, and then having to wait many more minutes than the
+    display showed when they got there.
+
+    <p>The American Commuter Movement and the International
+    Commuting Peoples’ Community have had it with this. Especially
+    Johan, a young student, who has decided to investigate this
+    matter further. Johan went to one of the stations, and studied
+    the behaviour of the displays. Each time the display showed a
+    new number, Johan carefully measured the number of seconds that
+    passed from that moment until the train arrived. As soon as
+    that train left again, he did the same thing for the next train
+    and so on. He remembered all the displayed minutes, and the
+    wait time for each such in seconds. Although Johan has a very
+    good memory, he does not know what to do with his measurements.
+    He needs your help!</p>
+<p>Your task is to help Johan calculate the average length of
+    an S.L. minute (the length of a minute according to the
+    display). You may assume that when the display shows a new
+    number <span class="tex2jax_process">$M$</span>, the expected
+    S.L. wait time in that moment is exactly <span class="tex2jax_process">$M$</span> minutes.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$1 \le N \le 1\, 000$</span> – the number of
+    observations Johan did. The following <span class="tex2jax_process">$N$</span> lines contain two positive
+    integers <span class="tex2jax_process">$M \le 60$</span> and
+    <span class="tex2jax_process">$S \le 3\, 600$</span> – the
+    number of minutes displayed, and the number of seconds Johan
+    had to wait for his train.</p>
+<h2>Output</h2>
+<p>Output should consist of a single real number: the average
+    length of an S.L. minute, measured in real minutes. A relative
+    or absolute error of at most <span class="tex2jax_process">$10^{-7}$</span> will be considered correct.
+    If the average length of an S.L. minute is shorter than or
+    equal to a normal minute, print the message "<tt class="tt">measurement error</tt>" instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+1 61
+</pre>
+</td>
+<td>
+<pre>
+1.016666667
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+5 560
+10 600
+2 264
+</pre>
+</td>
+<td>
+<pre>
+1.396078431
+</pre>
+</td>
+</tr>
+</table>
+</div>

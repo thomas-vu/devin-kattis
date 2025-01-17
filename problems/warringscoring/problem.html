@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Notnomde and Yraglac have been stuck at home for months, and
+    have taken to playing ping pong to pass the time. Usually, the
+    player who scores the highest number of points wins, but after
+    a while Notnomde and Yraglac got tired of using the same rules
+    all of the time. Both players decided on a new scoring system,
+    but they came up with two different systems!</p>
+<p>Under Notnomde’s system, the player with the longest
+    consecutive streak of points wins, and the game is a tie if
+    both player’s longest streaks are of the same length. Under
+    Yraglac’s system, the player who held the largest lead over the
+    other player at a single point during the game wins, and the
+    game is a tie if both players’ highest leads were of the same
+    number of points.</p>
+<p>Sometimes the two systems agree on the outcome, but
+    sometimes they don’t. In the first sample case, for example,
+    Yraglac reached the largest lead of three points over Notnomde,
+    but Notnomde had the longest streak with five consecutive
+    points.</p>
+<p>Given the sequence of points, will Notnomde and Yraglac
+    agree or disagree about the outcome under their respective
+    systems?</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$1 \leq N \leq 10^5$</span>, the
+    total number of points scored in a game. <span class="tex2jax_process">$N$</span> lines then follow, each with the
+    name of the player who scored that point.</p>
+<h2>Output</h2>
+<p>If the outcome of the game (win for Notnomde, win for
+    Yraglac, or tie) is the same under both systems, output
+    <tt class="ttfamily">Agree</tt>. Otherwise, output <tt class="ttfamily">Disagree</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8
+Yraglac
+Yraglac
+Yraglac
+Notnomde
+Notnomde
+Notnomde
+Notnomde
+Notnomde
+</pre>
+</td>
+<td>
+<pre>Disagree
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+Yraglac
+Notnomde
+Notnomde
+Yraglac
+Yraglac
+</pre>
+</td>
+<td>
+<pre>Agree
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+Notnomde
+Notnomde
+Yraglac
+Yraglac
+</pre>
+</td>
+<td>
+<pre>Disagree
+</pre>
+</td>
+</tr>
+</table>
+</div>

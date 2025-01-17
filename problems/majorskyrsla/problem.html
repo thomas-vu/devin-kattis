@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>You have been assigned the task of ordering and preparing a
+    report for a British major. This major does mathematics
+    research in his spare time, so he appreciates patterns and
+    sequences in everything he sees. When he recieves a stack of
+    papers he likes to consider the index of the stack. Each page
+    has some information on it, and this info is of varying
+    importance. This index is calculated by going through the stack
+    from top to bottom and adding up all the page numbers where the
+    page is more important than the one following it. So if the
+    third page he reads is more important then the fourth he adds
+    three to the index. Can you order the <span class="tex2jax_process">$n$</span> pages of the report so its index
+    is <span class="tex2jax_process">$k$</span>, the major’s
+    favourite number?</p>
+<h2>Input</h2>
+<p>The first and only line of input contains two integers
+    <span class="tex2jax_process">$n$</span>, the number of pages,
+    where <span class="tex2jax_process">$1 \leq n \leq
+    10^5$</span>, and <span class="tex2jax_process">$k$</span>, the
+    major’s favourite number, where <span class="tex2jax_process">$0 \leq k \leq \frac{n \cdot
+    (n-1)}{2}$</span>.</p>
+<h2>Output</h2>
+<p>Print the numbers <span class="tex2jax_process">$1, 2, \dots
+    , n$</span> in some order on a single line, separated by
+    spaces. The first number denotes the page the major will read
+    first and the last number the page he will read last. The least
+    important page is denoted by <span class="tex2jax_process">$1$</span>, the second least important page
+    is denoted by <span class="tex2jax_process">$2$</span>, and so
+    on, up to <span class="tex2jax_process">$n$</span>, which
+    denotes the most important page. Your output is considered
+    correct if the stack it represents has the index <span class="tex2jax_process">$k$</span>.</p>
+<p>For example, if <span class="tex2jax_process">$n=5$</span>
+    and <span class="tex2jax_process">$k=4$</span>, then the output
+    <span class="tex2jax_process">$5 2 4 1 3$</span> is considered
+    correct, since the first and third page are more important than
+    the one that follows, so the index is <span class="tex2jax_process">$1+3=4$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+</pre>
+</td>
+<td>
+<pre>5 2 4 1 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

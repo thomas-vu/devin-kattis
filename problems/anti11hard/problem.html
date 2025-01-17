@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/anti11hard/file/statement/en/img-0001.png" class="illustration" src="/problems/anti11hard/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by Liam Keliher and <a href="http://www.keepcalmstudio.com/license/">KeepCalmStudio.com</a>
+</div>
+</div>
+<p><em>Note that this is a harder version of the problem
+    <b class="bfseries">anti11</b></em>.<br/></p>
+<p>Danny Ocean likes many things: casinos, elaborate heists,
+    and complicated romantic relationships. But it’s a little-known
+    fact that Danny loves binary strings most of all — binary
+    strings of any length and composition. One day, however, he
+    suddenly develops a mysterious allergy to all binary strings
+    containing the substring <tt class="ttfamily"><b class="bfseries">11</b></tt>. This strange illness lasts exactly one
+    week, during which time he has to work very hard to avoid any
+    such “contaminated” binary strings. At the end of the week, the
+    allergy vanishes as unexpectedly as it appeared, and for a
+    brief moment Danny is elated that all binary strings are again
+    available for him to enjoy. Alas, this hope is short lived, for
+    no sooner has the first allergy disappeared than it is replaced
+    by anther, this time to all binary strings containing the
+    substring <tt class="ttfamily"><b class="bfseries">10101</b></tt>. The second allergy also lasts
+    exactly one week, after which it is replaced by yet another,
+    and another, and so on, one per week, ad infinitum.</p>
+<p>Danny has (mostly) adjusted to his allergic affliction, and
+    is optimistic that there are still plenty of binary strings for
+    him to enjoy each week, but he’s not sure exactly how many, so
+    he has hired you to write a program to find out.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 100$</span>) representing the
+    number of test cases. This is followed by <span class="tex2jax_process">$T$</span> lines, each of which contains a
+    single integer <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \leq n \leq 10\, 000$</span>)
+    followed by a non-empty string <span class="tex2jax_process">$b$</span> consisting only of the characters
+    <tt class="ttfamily"><b class="bfseries">0</b></tt> and
+    <tt class="ttfamily"><b class="bfseries">1</b></tt>. The length
+    of <span class="tex2jax_process">$b$</span> is at most
+    <span class="tex2jax_process">$10$</span>.</p>
+<h2>Output</h2>
+<p>Output consists of <span class="tex2jax_process">$T$</span>
+    lines, one per case. The output for a given case is the number
+    of binary strings of length <span class="tex2jax_process">$n$</span> that do not
+    contain <span class="tex2jax_process">$b$</span> as a
+    substring. Since these values can be quite large, output each
+    value mod <span class="tex2jax_process">$(10^9 +
+    7)$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 0
+3 101
+5 11
+</pre>
+</td>
+<td>
+<pre>
+1
+7
+13
+</pre>
+</td>
+</tr>
+</table>
+</div>

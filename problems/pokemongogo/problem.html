@@ -1,0 +1,99 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/pokemongogo/file/statement/en/img-0001.png" class="illustration" src="/problems/pokemongogo/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://pixabay.com/en/pokemongo-pokemon-cell-phone-mobile-1517819">
+        Ana Verrusio</a>.
+      </div>
+</div>Always Catch your Mon, Inc., (also know as ACM), wants to
+    create a new product, called Pokémon Go Go. Users can purchase
+    this application to help them play Pokémon go. The software
+    accesses the poké stop locations near the current location as
+    well as a list of Pokémon that can be found at each stop. The
+    application then computes the shortest route one can follow to
+    catch all the unique Pokémon, and return to the starting point.
+    <p>The program assumes that the user is in a city where travel
+    is restricted to moving only in the north–south and east–west
+    directions. The program also assumes that all poké stops are on
+    the intersection of two roads.</p>
+<p>For example, consider a case where the application finds
+    five nearby poké stops. Each stop’s location is indicated by
+    two integers, (<span class="tex2jax_process">$r$</span>,<span class="tex2jax_process">$c$</span>), where <span class="tex2jax_process">$r$</span> is the number of blocks north of
+    your starting position and <span class="tex2jax_process">$c$</span> is the number of blocks west of
+    your starting position. Consider if the locations of the five
+    poké stops are <span class="tex2jax_process">$(5,9)$</span>,
+    <span class="tex2jax_process">$(20, 20)$</span>, <span class="tex2jax_process">$(1,1)$</span>, <span class="tex2jax_process">$(1,8)$</span> and <span class="tex2jax_process">$(2,8)$</span> while the names of the Pokémon
+    found at these stops are Evevee, Flareon, Flareon, Jolteon, and
+    Umbreon, respectively. It is clear that one does not have to
+    visit both the second and third stops, since the same Pokémon
+    can be caught at either of them. The best route is to visit the
+    first, fifth, fourth, and third stops (in that order) for a
+    total distance of <span class="tex2jax_process">$28$</span>
+    blocks, since:</p>
+<ul class="itemize">
+<li>
+<p>The distance from <span class="tex2jax_process">$(0,0)$</span> to <span class="tex2jax_process">$(5, 9)$</span> is <span class="tex2jax_process">$14$</span>.</p>
+</li>
+<li>
+<p>The distance from <span class="tex2jax_process">$(5,
+        9)$</span> to <span class="tex2jax_process">$(2,8)$</span>
+        is <span class="tex2jax_process">$4$</span>.</p>
+</li>
+<li>
+<p>The distance from <span class="tex2jax_process">$(2,8)$</span> to <span class="tex2jax_process">$(1, 8)$</span> is <span class="tex2jax_process">$1$</span>.</p>
+</li>
+<li>
+<p>The distance from <span class="tex2jax_process">$(1,8)$</span> to <span class="tex2jax_process">$(1,1)$</span> is <span class="tex2jax_process">$7$</span>.</p>
+</li>
+<li>
+<p>The distance from <span class="tex2jax_process">$(1,1)$</span> to <span class="tex2jax_process">$(0,0)$</span> is <span class="tex2jax_process">$2$</span>.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The input holds a single test case. The test case begins
+    with a single integer <span class="tex2jax_process">$n$</span>,
+    <span class="tex2jax_process">$0 &lt; n \le 20$</span>, which
+    indicates the number of poké stops to consider. Each of the
+    next <span class="tex2jax_process">$n$</span> lines specifies
+    the location of a poké stop and the name of a Pokémon that can
+    be found there. The location is specified by two integers
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> separated by a single space,
+    <span class="tex2jax_process">$-100 \le r,c \le 100$</span>.
+    The integers <span class="tex2jax_process">$r$</span> and
+    <span class="tex2jax_process">$c$</span> indicate that the stop
+    is <span class="tex2jax_process">$r$</span> blocks north and
+    <span class="tex2jax_process">$c$</span> blocks east of the
+    starting point. The location is followed by a single space and
+    followed by the string <span class="tex2jax_process">$p$</span>
+    indicating the name of the Pokémon that can be caught there.
+    Names have between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$25$</span> letters (using only
+    a–z and A–Z). The number of unique Pokémon is always less than
+    or equal to <span class="tex2jax_process">$15$</span>. Multiple
+    pokémon can reside at the same location (but are then listed as
+    separate poké stops).</p>
+<h2>Output</h2>
+<p>Give the shortest distance, in blocks, required to catch all
+    the unique Pokémon.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+5 9 Eevee
+20 20 Flareon
+1 1 Flareon
+1 8 Jolteon
+2 8 Umbreon
+</pre>
+</td>
+<td>
+<pre>28
+</pre>
+</td>
+</tr>
+</table>
+</div>

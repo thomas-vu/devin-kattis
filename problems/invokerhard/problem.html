@@ -1,0 +1,209 @@
+<div class="problembody">
+<p>You are an Arch-Magus Invoker, one of the strongest
+    sorcerers that is able to command sources of magic.</p>
+<p>The difference between an Arch-Magus Invoker and a regular
+    Invoker is that an Arch-Magus holds an advanced degree or is
+    pursuing a post-doc in mathemagical studies at the Institute of
+    Arcane Studies.</p>
+<h2>Magical Training</h2>
+<p>There are two sources of magic available to invokers to
+    control, <span class="tex2jax_process">$\mathbb
+    {R}$</span>eagus and <span class="tex2jax_process">$\mathbb
+    {I}$</span>magus. Each source has a potency coefficient in
+    front of it. This potency is a real number at most <span class="tex2jax_process">$10^6$</span> in absolute value.</p>
+<p>As an invoker you have the choice of combining two sources
+    of magic (denoted <span class="tex2jax_process">$\oplus
+    $</span>), or casting one on to another (denoted <span class="tex2jax_process">$\otimes $</span>).</p>
+<p>The rules for combining sources is as follows:</p>
+<ul class="itemize">
+<li>
+<p>Combining a source of Reagus or Imagus with another
+        source of equal type creates the same type but you add the
+        potencies.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\oplus
+            y\mathbb {R}=(x+y)\mathbb {R}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$x\mathbb {I}\oplus
+            y\mathbb {I}=(x+y)\mathbb {I}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Combining a source of Reagus and Imagus together creates
+        a new complex form of magic.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\oplus
+            y\mathbb {I} \in \mathbb {C}_{\mathbb {M}}$</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Casting sources of magic has some different laws:</p>
+<ul class="itemize">
+<li>
+<p>Casting Reagus on to Reagus creates a source of Reagus
+        whose potency is the product of the previous sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\otimes
+            y\mathbb {R} = (x\cdot y)\mathbb {R}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Casting Imagus on to another source of Imagus creates
+        anti-Reagus (negative potency) with a potency of the
+        product of the two sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {I}\otimes
+            y\mathbb {I} = -(x\cdot y)\mathbb {R}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Casting Reagus on Imagus or Imagus on Reagus creates
+        Imagus with a potency of the product of the two
+        sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\otimes
+            y\mathbb {I} = (x\cdot y)\mathbb {I}$</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Additionally, every magic source <span class="tex2jax_process">$s$</span> has a magic complement
+    <span class="tex2jax_process">$s^\dagger $</span> such
+    that:</p><span class="tex2jax_process">\[ \begin{aligned}
+    s=x\mathbb {R}&amp; \rightarrow s^\dagger =s\\ s=y\mathbb
+    {I}&amp; \rightarrow s^\dagger =-s\\ s=x\mathbb {R}\oplus
+    y\mathbb {I}&amp; \rightarrow s+s^\dagger =2x\mathbb {R}
+    \end{aligned} \]</span>
+<p>Casting a complex magic source on its complement (or visa
+    versa), generates a non-negative number known as the potency
+    norm of the source.</p><span class="tex2jax_process">\[
+    s\otimes s^\dagger = |s|^2 \]</span>
+<h4>Advanced Mathemagic!!</h4>
+<p>As an Arch-Magus you are well studied in an additional
+    source of magic: <span class="tex2jax_process">$\mathbb
+    {J}$</span>ae.</p>
+<p>Jae acts like Imagus when near the presence of Reagus.
+    However, when Jae is cast on Imagus it can form a <span class="tex2jax_process">$4$</span>th form of magic: <span class="tex2jax_process">$\mathbb {K}$</span>aos!!</p>
+<p>Casting either form of Imagus, Jae, or Kaos on itself
+    creates anti-Reagus.</p><span class="tex2jax_process">\[
+    \mathbb {I}\otimes \mathbb {I} = \mathbb {J}\otimes \mathbb {J}
+    = \mathbb {K}\otimes \mathbb {K} = -\mathbb {R} \]</span>
+<p>Casting Imagus on to Jae actually creates anti-Kaos however
+    <span class="tex2jax_process">$-\mathbb {K}$</span>.</p>
+<p>The complete casting table between the four elements is as
+    follows:</p><span class="tex2jax_process">\[
+    \begin{array}{l|rrrr} \bigotimes &amp; \mathbb {R} &amp;
+    \mathbb {I} &amp; \mathbb {J} &amp; \mathbb {K} \\ \hline
+    \mathbb {R} &amp; \mathbb {R} &amp; \mathbb {I} &amp; \mathbb
+    {J} &amp; \mathbb {K} \\ \mathbb {I} &amp; \mathbb {I} &amp;
+    -\mathbb {R} &amp; \mathbb {K} &amp; -\mathbb {J} \\ \mathbb
+    {J} &amp; \mathbb {J} &amp; -\mathbb {K} &amp; -\mathbb {R}
+    &amp; \mathbb {I} \\ \mathbb {K} &amp; \mathbb {K} &amp;
+    \mathbb {J} &amp; -\mathbb {I} &amp; -\mathbb {R} \end{array}
+    \]</span>
+<p>The same rules for combination exist for Jae and Kaos as
+    they do for Imagus.</p>
+<p>If you haven’t noticed, this means that casting is
+    non-commutative. That is:</p><span class="tex2jax_process">\[
+    a\otimes b \neq b\otimes a \]</span>
+<p>where <span class="tex2jax_process">$a\otimes b$</span> is
+    called a right cast from <span class="tex2jax_process">$b$</span> to <span class="tex2jax_process">$a$</span>, and <span class="tex2jax_process">$b\otimes a$</span> is called a left cast
+    from <span class="tex2jax_process">$b$</span> to <span class="tex2jax_process">$a$</span>.</p>
+<p>Complex combinations and castings are allowed such
+    as:</p><span class="tex2jax_process">\[ \left(a\mathbb
+    {R}\oplus b\mathbb {K}\right)\otimes \left(c\mathbb {I}\oplus
+    d\mathbb {J}\oplus e\mathbb {K}\right) \]</span>
+<p>Casting is distributive, which means <span class="tex2jax_process">$s\otimes (a\oplus b) = (s\otimes a) \oplus
+    (s\otimes b)$</span>.</p>
+<p>For every source there is also guaranteed to exist an
+    inverse source that when cast will neutralize the magical
+    energies.</p><span class="tex2jax_process">\[ \forall s\in
+    \mathbb {M}~ \exists s^{-1}\in \mathbb {M} : s\otimes s^{-1} =
+    \epsilon \]</span>
+<p>where <span class="tex2jax_process">$\mathbb {M}$</span> is
+    the set of non-zero magical sources and <span class="tex2jax_process">$\epsilon $</span> is the neutral source, or
+    <span class="tex2jax_process">$1\mathbb {R}$</span>.</p>
+<p>Complements for Jae and Kaos work the same way they do for
+    Imagus.</p>
+<h3>Problem</h3>
+<p>You are currently locked in battle against an equally
+    powerful foe. You recognize that you can defeat them by
+    neutralizing their source of magic. That is, you cast a spell
+    on them that will turn their source into the neutral source
+    <span class="tex2jax_process">$\epsilon = 1\mathbb
+    {R}$</span>.</p>
+<p>However, magic is not without its consequences. Any source
+    you cast on your opponent will also be cast on you as well,
+    changing your current magical source.</p>
+<p>When you cast a spell on your opponent (and simultaneously
+    on yourself) the magical cast is a <b class="bfseries">right
+    cast</b> (described above), that is:</p><span class="tex2jax_process">\[ x\otimes y \]</span>
+<p>where <span class="tex2jax_process">$x$</span> is the
+    initial source and <span class="tex2jax_process">$y$</span> is
+    the source you have cast.</p>
+<p>When the dust settles and you are declared victorious, what
+    is your new magical source?</p>
+<h2>Input</h2>
+<p>The inputs are two magical sources separated by new
+    lines.</p>
+<p>The first line contains your source: <span class="tex2jax_process">$a\mathbb {R}\oplus b\mathbb {I}\oplus
+    c\mathbb {J}\oplus d\mathbb {K}$</span>. The second line
+    contains your opponent’s source: <span class="tex2jax_process">$e\mathbb {R}\oplus f\mathbb {I}\oplus
+    g\mathbb {J}\oplus h\mathbb {K}$</span>.</p>
+<p>All sources are integers in the range <span class="tex2jax_process">$-10^6 \le a,b,c,d,e,f,g,h \le 10^6$</span>,
+    and neither source has all four potencies equal to zero.</p>
+<h2>Output</h2>
+<p>Output your resulting source after you have annihilated your
+    opponent. The output should be four space separated values
+    <span class="tex2jax_process">$x,y,z,w$</span>. <span class="tex2jax_process">$x$</span> is the potency of Reagus,
+    <span class="tex2jax_process">$y$</span> the potency of Imagus,
+    <span class="tex2jax_process">$z$</span> the potency of Jae,
+    and <span class="tex2jax_process">$w$</span> the potency of
+    Kaos present in your final source.</p>
+<p>Your answers will be accepted if they have an absolute or
+    relative error of at most <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 3 4
+1 2 3 4
+</pre>
+</td>
+<td>
+<pre>1.0 0.0 0.0 0.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 1 0 0
+0 0 1 0
+</pre>
+</td>
+<td>
+<pre>0.0 0.0 0.0 -1.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

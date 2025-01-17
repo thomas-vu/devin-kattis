@@ -1,0 +1,157 @@
+<div class="problembody">
+<p>The last worker in a production line at the factory of
+    Automated Composed Machinery is worried. She knows that her job
+    hangs in the balance unless her productivity increases. Her
+    work consists of assembling a set of pieces in a given
+    sequence, but the time spent on assembling pieces <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> and then <span class="tex2jax_process">$c$</span> may not the same as that on
+    assembling pieces <span class="tex2jax_process">$b$</span> and
+    <span class="tex2jax_process">$c$</span>, and then assembling a
+    with the resulting component. Only two consecutive pieces may
+    be assembled at a time, and once they are assembled they behave
+    as another piece in terms of the time needed for further
+    assembly.</p>
+<p>In order to aid her, you need to find the optimal way to
+    assemble all components. The input to your program will be a
+    set of symbols representing (types of) pieces, and a so-called
+    assembly table representing the time it takes to assemble them,
+    as well as the type of the resulting component. For instance,
+    we may have two symbols <span class="tex2jax_process">$\{ a,
+    b\} $</span>, and the following table:</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:right"> </td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$a$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$b$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$a$</span></p>
+</td>
+<td style="text-align:left">
+<p>3-<span class="tex2jax_process">$b$</span></p>
+</td>
+<td style="text-align:left">
+<p>5-<span class="tex2jax_process">$b$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$b$</span></p>
+</td>
+<td style="text-align:left">
+<p>6-<span class="tex2jax_process">$a$</span></p>
+</td>
+<td style="text-align:left">
+<p>2-<span class="tex2jax_process">$b$</span></p>
+</td>
+</tr>
+</table>
+<p>This means, for example, that two pieces of type
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$a$</span> may assembled in <span class="tex2jax_process">$3$</span> minutes, and the result is a
+    component of type <span class="tex2jax_process">$b$</span>, in
+    that the time required to assemble it again with another piece
+    of, say, type <span class="tex2jax_process">$a$</span> is
+    <span class="tex2jax_process">$6$</span> minutes, and so on.
+    Note that the table is not symmetric, i.e., assembling
+    <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$a$</span> may be more time-consuming than
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>.</p>
+<p>For a sequence of components labelled <span class="tex2jax_process">$aba$</span>, the two possible solutions
+    are:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$(ab)a = ba = a$</span>
+        with time <span class="tex2jax_process">$\mathit{time}(ab)
+        + \mathit{time}(ba) = 5 + 6 = 11$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$a(ba) = aa = b$</span>
+        with time <span class="tex2jax_process">$\mathit{time}(ba)
+        + \mathit{time}(aa) = 6 + 3 = 9$</span>.</p>
+</li>
+</ul>
+<p>So the result for this case would be a piece of type
+    <span class="tex2jax_process">$b$</span> in <span class="tex2jax_process">$9$</span> minutes (denoted 9-<span class="tex2jax_process">$b$</span>).</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. This test case
+    begins with a line containing a natural number <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k \leq 26$</span>), followed by a line with <span class="tex2jax_process">$k$</span> symbols (characters in
+    <span class="tex2jax_process">$[a-z]$</span>) separated by
+    spaces. The following <span class="tex2jax_process">$k$</span>
+    lines contain the assembly table: the <span class="tex2jax_process">$i$</span>-th line has <span class="tex2jax_process">$k$</span> pairs of the form <span class="tex2jax_process">$\mathit{time}$</span>-<span class="tex2jax_process">$\mathit{result}$</span>, where <span class="tex2jax_process">$\mathit{time}$</span> is an integer between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span> inclusive, and
+    <span class="tex2jax_process">$\mathit{result}$</span> a symbol
+    belonging to the preceding set. The <span class="tex2jax_process">$j$</span>-th pair in the <span class="tex2jax_process">$i$</span>-th line represents the time to
+    compose pieces of types represented by the <span class="tex2jax_process">$i$</span>-th and <span class="tex2jax_process">$j$</span>-th symbols, along with the type of
+    the resulting piece. After the table, a line with an integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10$</span>) indicates the
+    number of lines that follow, each line containing a non-empty
+    string over the <span class="tex2jax_process">$k$</span>
+    symbols. Each of these lines is a sequence of components that
+    need to be assembled together in the right order. The sum of
+    lengths of the <span class="tex2jax_process">$n$</span> lines
+    is at most <span class="tex2jax_process">$200$</span>.</p>
+<p>After the single test case follows a line containing
+    <tt class="ttfamily">0</tt>, which should not be processed.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$n$</span> lines, each
+    with an integer <span class="tex2jax_process">$\mathit{time}$</span> and a symbol
+    <span class="tex2jax_process">$\mathit{result}$</span> in the
+    format <span class="tex2jax_process">$\mathit{time}$</span>-<span class="tex2jax_process">$\mathit{result}$</span>. Each line
+    represents the minimum time and the type of the resulting piece
+    for the corresponding case in the input. In case of a tie among
+    several possible results with the same minimum time, choose
+    from among those the piece whose type letter appears first in
+    the line that contained the <span class="tex2jax_process">$k$</span> symbols at the beginning of the
+    test case. (For example, if that line was <span class="tex2jax_process">$a$</span> <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$b$</span> and both <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$b$</span> can be obtained with minimum cost
+    <span class="tex2jax_process">$5$</span>, print <span class="tex2jax_process">$5$</span>-<span class="tex2jax_process">$c$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+a b
+3-b 5-b
+6-a 2-b
+2
+aba
+bba
+0
+</pre>
+</td>
+<td>
+<pre>9-b
+8-a
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+m e
+5-e 4-m
+3-e 4-m
+1
+eme
+0
+</pre>
+</td>
+<td>
+<pre>7-m
+</pre>
+</td>
+</tr>
+</table>
+</div>

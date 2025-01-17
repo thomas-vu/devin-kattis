@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>You and your friends all work at different companies.
+    However, not everyone may be satisfied with their current job.
+    You therefore asked JobAgent to find out if there’s a job that
+    fits you even better. After some computation, JobAgent came
+    back with a list for which job is the best for each of you. The
+    best thing is that each of you is already working at one of
+    these jobs! As the good employees you are, you would never want
+    to leave a job without a replacement, and never be unemployed
+    at any time. The only reasonable solution is thus to repeatedly
+    switch jobs with each other. How many times do two persons have
+    to switch jobs with each other to get everyone to the job that
+    JobAgent suggested?</p>
+<h2>Input</h2>
+<p>The first line of the input consists of an integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \le N \le 3\cdot 10^5$</span>), the number
+    of friends (including yourself) to switch jobs.</p>
+<p>This is followed by a line containing <span class="tex2jax_process">$N$</span> integers. The <span class="tex2jax_process">$i$</span>’th of these contains the number of
+    the person that currently has the job that the <span class="tex2jax_process">$i$</span>’th person fits best for. Every
+    person is numbered between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span>. It is guaranteed that for each
+    job there is exactly one person that fits it best.</p>
+<h2>Output</h2>
+<p>Output a single integer, the smallest number of job switches
+    that needs to be performed.</p>
+<h2>Explanation of sample 2</h2>
+<p>Nobody has the right job from the beginning. Three switches
+    are sufficient for everyone to get the right job. Initially,
+    the two first peoples can switch jobs, so that everyone has the
+    jobs <tt class="ttfamily">3 2 4 1</tt> and person <span class="tex2jax_process">$2$</span> gets the right job. Then, person
+    <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span> can switch jobs, resulting in the
+    jobs <tt class="ttfamily">3 2 1 4</tt>. Lastly, only person
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$3$</span> has the wrong jobs, and can switch
+    with each other to finish the process.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3 2 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2 3 4 1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

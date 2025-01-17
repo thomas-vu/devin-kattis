@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:28.00%">
+<img alt="/problems/samedigitshard/file/statement/en/img-0001.jpg" class="illustration" src="/problems/samedigitshard/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-photo/educational-toy-wooden-numeral-training-account-1712109679">
+        Andrey Druc (Shutterstock)</a>; Used under license
+      </div>
+</div>
+<p>Two positive integers, <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, are called
+    <em>digit-preserving</em> if their product, <span class="tex2jax_process">$xy$</span>, contains exactly the same digits
+    as <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> contain together, including
+    repetitions. For example, if <span class="tex2jax_process">$x =
+    807$</span> and <span class="tex2jax_process">$y = 984$</span>,
+    then their product, <span class="tex2jax_process">$794088$</span>, contains <span class="tex2jax_process">$\textrm{one}~ 7$</span>, <span class="tex2jax_process">$\textrm{one}~ 9$</span>, <span class="tex2jax_process">$\textrm{one}~ 4$</span>, <span class="tex2jax_process">$\textrm{one}~ 0$</span>, and <span class="tex2jax_process">$\textrm{two}~ 8\textrm{'s}$</span>, which is
+    exactly the same set of digits and corresponding frequencies as
+    in <span class="tex2jax_process">$807$</span> and <span class="tex2jax_process">$984$</span> combined.</p>
+<p>Given an interval, <span class="tex2jax_process">$[A,B]$</span>, find all digit-preserving
+    pairs, <span class="tex2jax_process">$x, y$</span>, in the
+    interval, <b class="bf">with the additional requirement that
+    their product must also be in the same interval</b>, i.e., all
+    three of <span class="tex2jax_process">$x, y, xy$</span> are in
+    <span class="tex2jax_process">$[A,B]$</span>. To avoid
+    double-counting, you can assume <span class="tex2jax_process">$x \leq y$</span> (this avoids, for example,
+    treating <span class="tex2jax_process">$(807, 984)$</span> and
+    <span class="tex2jax_process">$(984, 807)$</span> as different
+    digit-preserving pairs).</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing two
+    space-separated integers, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, with <span class="tex2jax_process">$1 \leq A \leq B \leq 200\, 000$</span>.</p>
+<h2>Output</h2>
+<p>First output a single line containing “<span class="tex2jax_process">$n$</span> <tt class="ttfamily">digit-preserving pair(s)</tt>”, where <span class="tex2jax_process">$n$</span> is the number of digit-preserving
+    pairs in <span class="tex2jax_process">$[A,B]$</span> (as
+    described above). Then output <span class="tex2jax_process">$n$</span> lines, each of which contains one
+    of the digit-preserving pairs and the corresponding product.
+    Carefully format your output as in the sample output (note the
+    single space separating adjacent tokens). These lines should be
+    sorted by increasing value <span class="tex2jax_process">$\textrm{of}~ x$</span>, breaking ties by
+    increasing value <span class="tex2jax_process">$\textrm{of}~
+    y$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1000
+</pre>
+</td>
+<td>
+<pre>3 digit-preserving pair(s)
+x = 3, y = 51, xy = 153
+x = 6, y = 21, xy = 126
+x = 8, y = 86, xy = 688
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1000 2000
+</pre>
+</td>
+<td>
+<pre>0 digit-preserving pair(s)
+</pre>
+</td>
+</tr>
+</table>
+</div>

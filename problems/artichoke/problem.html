@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/artichoke/file/statement/en/img-0001.jpg" class="illustration" src="/problems/artichoke/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by Hans Hillewaert via Wikimedia Commons
+      </div>
+</div>Fatima Cynara is an analyst at Amalgamated Artichokes
+    (AA). As with any company, AA has had some very good times as
+    well as some bad ones. Fatima does trending analysis of the
+    stock prices for AA, and she wants to determine the largest
+    decline in stock prices over various time spans. For example,
+    if over a span of time the stock prices were <span class="tex2jax_process">$19$</span>, <span class="tex2jax_process">$12$</span>, <span class="tex2jax_process">$13$</span>, <span class="tex2jax_process">$11$</span>, <span class="tex2jax_process">$20$</span> and <span class="tex2jax_process">$14$</span>, then the largest decline would
+    be <span class="tex2jax_process">$8$</span> between the first
+    and fourth price. If the last price had been <span class="tex2jax_process">$10$</span> instead of <span class="tex2jax_process">$14$</span>, then the largest decline would
+    have been <span class="tex2jax_process">$10$</span> between the
+    last two prices.
+
+    <p>Fatima has done some previous analyses and has found that
+    the stock price over any period of time can be modelled
+    reasonably accurately with the following
+    equation:</p><span class="tex2jax_process">\[ \operatorname
+    {price}(k) = p \cdot (\sin (a \cdot k+b) + \cos (c \cdot k+d) +
+    2) \]</span>
+<p>where <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> are constants. Fatima would like
+    you to write a program to determine the largest price decline
+    over a given sequence of prices. Figure 1 illustrates the
+    price function for Sample Input 1. You have to consider
+    the prices only for integer values of <span class="tex2jax_process">$k$</span>.</p>
+<div class="figure" id="fig:art fig">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{sample1}" src="/problems/artichoke/file/statement/en/img-0002.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample Input 1. The largest decline
+          occurs from the fourth to the seventh price.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single line containing <span class="tex2jax_process">$6$</span> integers <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \le p \le 1\, 000$</span>), <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0
+    \le a, b, c, d \le 1\, 000$</span>) and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^6$</span>). The first <span class="tex2jax_process">$5$</span> integers are described above. The
+    sequence of stock prices to consider is <span class="tex2jax_process">$\operatorname {price(1)}, \operatorname
+    {price(2)}, \ldots , \operatorname {price}(n)$</span>.</p>
+<h2>Output</h2>
+<p>Display the maximum decline in the stock prices. If there is
+    no decline, display the number <span class="tex2jax_process">$0$</span>. Your output should have an
+    absolute or relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+42 1 23 4 8 10
+</pre>
+</td>
+<td>
+<pre>
+104.855110477
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+100 7 615 998 801 3
+</pre>
+</td>
+<td>
+<pre>
+0.00
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+100 432 406 867 60 1000
+</pre>
+</td>
+<td>
+<pre>
+399.303813
+</pre>
+</td>
+</tr>
+</table>
+</div>

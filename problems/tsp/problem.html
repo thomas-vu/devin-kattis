@@ -1,0 +1,96 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>Your program should take as input a single TSP instance. It
+    will be run several times, once for every test case. The time
+    limit is per test case.</p>
+<p>The first line of standard input contains an integer
+    <span class="tex2jax_process">$1 \le N \le 1000$</span>, the
+    number of points. The following <span class="tex2jax_process">$N$</span> lines each contain a pair of real
+    numbers <span class="tex2jax_process">$x, y$</span> giving the
+    coordinates of the <span class="tex2jax_process">$N$</span>
+    points. All numbers in the input have absolute value bounded by
+    <span class="tex2jax_process">$10^{6}$</span>.</p>
+<p>The distance between two points is computed as the Euclidean
+    distance between the two points, <em>rounded to the nearest
+    integer</em>.</p>
+<h2>Output</h2>
+<p>Standard output should consist of <span class="tex2jax_process">$N$</span> lines, the <span class="tex2jax_process">$i$</span>’th of which should contain the
+    (0-based) index of the <span class="tex2jax_process">$i$</span>’th point visited.</p>
+<h2>Score</h2>
+<p>Let <span class="tex2jax_process">$\text{Opt}$</span> be the
+    length of an optimal tour, <span class="tex2jax_process">$\text{Val}$</span> be the length of the tour
+    found by your solution, and <span class="tex2jax_process">$\text{Naive}$</span> be the length of the
+    tour found by the algorithm below. Define <span class="tex2jax_process">$x = (\text{Val} - \text{Opt}) /
+    (\text{Naive} - \text{Opt})$</span>. (In the special case that
+    <span class="tex2jax_process">$\text{Naive} =
+    \text{Opt}$</span>, define <span class="tex2jax_process">$x =
+    0$</span> if <span class="tex2jax_process">$\text{Val} =
+    \text{Opt}$</span>, and <span class="tex2jax_process">$x =
+    \infty $</span> if <span class="tex2jax_process">$\text{Val}
+    &gt; \text{Opt}$</span>.)</p>
+<p>The score on a test case is <span class="tex2jax_process">$0.02^{x}$</span>. Thus, if your tour is
+    optimal, you will get <span class="tex2jax_process">$1$</span>
+    point on this test case. If your score is halfway between
+    <span class="tex2jax_process">$\text{Naive}$</span> and
+    <span class="tex2jax_process">$\text{Opt}$</span>, you get
+    roughly <span class="tex2jax_process">$0.14$</span> points. The
+    total score of your submission is the sum of your score over
+    all test cases. There will be a total of <span class="tex2jax_process">$50$</span> test cases. Thus, an
+    implementation of the algorithm below should give a score of at
+    least <span class="tex2jax_process">$1$</span> (it will get
+    <span class="tex2jax_process">$0.02$</span> points on most test
+    cases, and <span class="tex2jax_process">$1.0$</span> points on
+    some easy cases where it manages to find an optimal
+    solution).</p>
+<p>The algorithm giving the value <span class="tex2jax_process">$\text{Naive}$</span> is as follows:</p>
+<pre>
+GreedyTour
+   tour[0] = 0
+   used[0] = true
+   for i = 1 to n-1
+      best = -1
+      for j = 0 to n-1
+         if not used[j] and (best = -1 or dist(tour[i-1],j) &lt; dist(tour[i-1],best))
+            best = j
+      tour[i] = best
+      used[best] = true
+   return tour
+</pre>
+<p>The sample output gives the tour found by <tt class="ttfamily">GreedyTour</tt> on the sample input. The length of
+    the tour is 323.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+95.0129 61.5432
+23.1139 79.1937
+60.6843 92.1813
+48.5982 73.8207
+89.1299 17.6266
+76.2097 40.5706
+45.6468 93.5470
+1.8504 91.6904
+82.1407 41.0270
+44.4703 89.3650
+</pre>
+</td>
+<td>
+<pre>0
+8
+5
+4
+3
+9
+6
+2
+1
+7
+</pre>
+</td>
+</tr>
+</table>
+</div>

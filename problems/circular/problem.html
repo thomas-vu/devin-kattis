@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>You have an internship with a bioinformatics research group
+    studying DNA. A single strand of DNA consists of many genes,
+    which fall into different categories called <em>gene
+    types</em>. Gene types are delimited by specific nucleotide
+    sequences known as <em>gene markers</em>. Each gene type
+    <span class="tex2jax_process">$i$</span> has a unique start
+    marker <span class="tex2jax_process">$\mathtt{s}_ i$</span> and
+    a unique end marker <span class="tex2jax_process">$\mathtt{e}_
+    i$</span>. After many dirty jobs (growing bacteria, cell
+    extraction, protein engineering, and so on), your research
+    group can convert DNA into a form consisting of only the gene
+    markers, removing all the genetic material lying between the
+    markers.</p>
+<p>Your research group came up with the interesting hypothesis
+    that gene interpretation depends on whether the markers of some
+    gene types form properly nested structures. To decide whether
+    markers of gene type <span class="tex2jax_process">$i$</span>
+    form a proper nesting in a given sequence of markers
+    <span class="tex2jax_process">$w$</span>, one needs to consider
+    the subsequence of <span class="tex2jax_process">$w$</span>
+    containing only the markers of gene type <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$\mathtt{s}_ i$</span> and <span class="tex2jax_process">$\mathtt{e}_ i$</span>), leaving none of them
+    out. The following (and only the following) are considered to
+    be properly nested structures:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$\mathtt{s}_ i \mathtt{e}_
+        i$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\mathtt{s}_ i N
+        \mathtt{e}_ i$</span>, where <span class="tex2jax_process">$N$</span> is a properly nested
+        structure</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$AB$</span>, where
+        <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are properly nested
+        structures</p>
+</li>
+</ul>
+<p>Given your computing background, you were assigned to
+    investigate this property, but there is one further
+    complication. Your group is studying a specific type of DNA
+    called <em>circular DNA</em>, which is DNA that forms a closed
+    loop. To study nesting in circular DNA, it is necessary to cut
+    the loop at some location, which results in a unique sequence
+    of markers (the direction of reading is fixed by molecular
+    properties). Whether a gene type <span class="tex2jax_process">$i$</span> forms a proper nesting now also
+    depends on where the circular DNA is cut. Your task is to find
+    the cutting location that maximizes the number of gene types
+    that form a properly nested structure. Figure 1 shows an
+    example corresponding to Sample Input 1. The indicated cut
+    results in the markers for gene type <span class="tex2jax_process">$1$</span> being properly nested.</p>
+<div class="figure" id="fig:circular">
+<center>
+<img alt="\includegraphics[width=0.25\textwidth ]{circular-fig}" src="/problems/circular/file/statement/en/img-0001.png" style="width:25.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1 with its
+          optimal cutting location.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^6$</span>), the length of the DNA. The next line
+    contains the DNA sequence, that is, <span class="tex2jax_process">$n$</span> markers. Each marker is a
+    character <span class="tex2jax_process">$c$</span> followed by
+    an integer <span class="tex2jax_process">$i$</span>, where
+    <span class="tex2jax_process">$c \in \{ \texttt{s}, \texttt{e}
+    \} $</span> specifies whether it is a start or an end marker
+    and <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$1 \leq i \leq 10^6$</span>) is the gene type
+    of the marker. The given DNA sequence has been obtained from
+    the circular DNA by cutting at an arbitrary location.</p>
+<h2>Output</h2>
+<p>Output one line with two integers <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$m$</span>, where <span class="tex2jax_process">$p$</span> is the cutting position that
+    maximizes the number of different gene types that form a proper
+    nesting, and <span class="tex2jax_process">$m$</span> is this
+    maximum number of gene types. The DNA is cut just before the
+    <span class="tex2jax_process">$p^{\text {th}}$</span> input
+    marker (for instance, the cut shown in Figure 1 has
+    <span class="tex2jax_process">$p=3$</span>). If more than one
+    cutting position yields the same maximum value of <span class="tex2jax_process">$m$</span>, output the smallest <span class="tex2jax_process">$p$</span> that does so.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9
+e1 e1 s1 e2 s1 s2 e42 e1 s1
+</pre>
+</td>
+<td>
+<pre>3 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+s1 s1 e3 e1 s3 e1 e3 s3
+</pre>
+</td>
+<td>
+<pre>8 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

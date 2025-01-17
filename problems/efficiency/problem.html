@@ -1,0 +1,189 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/efficiency/file/statement/en/img-0001.png" class="illustration" src="/problems/efficiency/file/statement/en/img-0001.png"/>
+<div class="description">
+        Enchanted Pickaxes
+      </div>
+</div>
+<div style="text-align:left">
+<p>Steve enjoys parties and word games. At one party, he
+      challenges his friends to play a new word game that he
+      invented.<br/></p>
+<p>In Steve’s game, there are four words: <b class="bfseries">“Efficiency”</b>, <b class="bfseries">“Unbreaking”</b>, <b class="bfseries">“Silk”</b>,
+      and <b class="bfseries">“Touch”</b>.<br/></p>
+<p>There are <span class="tex2jax_process">$P$</span> players
+      playing the game. At a given <span class="tex2jax_process">$N^{th}$</span> round, the players go
+      around in circles, each saying the word “Efficiency” once per
+      person, until the word has been said <span class="tex2jax_process">$N$</span> times. Then, starting with the
+      next player (right after the last player to say
+      “Efficiency”), they go around in the same fashion, each
+      saying “Unbreaking” until it has been said <span class="tex2jax_process">$N$</span> times. Lastly, continuing with
+      the next player, they go around saying “Silk” and “Touch”
+      alternately until both words have been said <span class="tex2jax_process">$N$</span> times.<br/></p>
+<p>For instance, in a game of <span class="tex2jax_process">$3$</span> people, the sequence of words is
+      as follows:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p><b class="bfseries"><span class="tex2jax_process">$1^{st}$</span> Player</b></p>
+</td>
+<td style="text-align:center">
+<p><b class="bfseries"><span class="tex2jax_process">$2^{nd}$</span> Player</b></p>
+</td>
+<td style="text-align:center">
+<p><b class="bfseries"><span class="tex2jax_process">$3^{rd}$</span> Player</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+<td style="text-align:center">
+<p>Silk (back to the <span class="tex2jax_process">$1^{st}$</span> player)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Touch</p>
+</td>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+<td style="text-align:center">
+<p>Silk</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Touch</p>
+</td>
+<td style="text-align:center">
+<p>Silk</p>
+</td>
+<td style="text-align:center">
+<p>Touch</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+<td style="text-align:center">
+<p>Efficiency</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+<td style="text-align:center">
+<p>Unbreaking</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Silk</p>
+</td>
+<td style="text-align:center">
+<p>Touch</p>
+</td>
+<td style="text-align:center">
+<p>Silk</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>Touch</p>
+</td>
+<td style="text-align:center">
+<p>Silk</p>
+</td>
+<td style="text-align:center">
+<p>Touch (end of <span class="tex2jax_process">$3^{rd}$</span> round)</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Here, one can see that it takes <span class="tex2jax_process">$24$</span> turns (number of words said) to
+      complete three rounds of the game. Moreover, Player
+      <span class="tex2jax_process">$3$</span> goes last during the
+      third round.<br/></p>
+<p>Steve checks in at the <span class="tex2jax_process">$M^{th}$</span> turn, telling his friends
+      to wrap up the game and go for a walk in the soul sand
+      valley. Which word is being said at the <span class="tex2jax_process">$M^{th}$</span> turn, and who will go last
+      in this round?</p>
+</div>
+<h2>Input</h2>
+<p>The first line contains one integer <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1
+    \leq P \leq 1\, 000$</span>), the number of players in the
+    game.<br/>
+    The second line contains one integer <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq 10^6$</span>), which refers to the <span class="tex2jax_process">$M^{th}$</span> word that is said during the
+    game.<br/></p>
+<h2>Output</h2>
+<p>The output should consist of two lines. On the first line,
+    output the <span class="tex2jax_process">$M^{th}$</span> word
+    said during the game; it should be one of “Efficiency”,
+    “Unbreaking”, “Silk”, or “Touch”. On the second line, output an
+    integer representing the player who goes last during this round
+    (players are numbered <span class="tex2jax_process">$1, 2, 3,
+    \ldots $</span>).</p>
+<div style="text-align:left"></div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+24
+</pre>
+</td>
+<td>
+<pre>Touch
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+19
+</pre>
+</td>
+<td>
+<pre>Silk
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

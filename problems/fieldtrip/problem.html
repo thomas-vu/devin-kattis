@@ -1,0 +1,114 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/fieldtrip/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fieldtrip/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://unsplash.com/photos/v1Ur7A-OkYE">Steve Harvey on
+        Unsplash</a>
+</div>
+</div>
+<p>You and your classmates are going on an exciting field trip
+    to a downtown museum. Because the museum is an hour away, three
+    buses of identical capacity and a van are dispatched as a means
+    of transportation to the museum and back. The buses will first
+    start loading only students, and once all students have been
+    loaded then teachers will begin to fill in the remaining spots
+    on the buses. Any remaining teachers will ride on the van. To
+    make the bus ride more exciting, all the students are hoping
+    for a “teacher free bus ride”! A teacher free bus ride is when
+    none of the teachers are on a bus.</p>
+<p>Students are grouped in <span class="tex2jax_process">$n$</span> class sections of different sizes.
+    Each class section is assigned a number from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. All students in one class section
+    must ride on the same bus. The buses will board class sections
+    in increasing order by number. In other words, the first bus
+    will load sections numbered <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$i$</span>, the second bus will load sections
+    numbered <span class="tex2jax_process">$i+1$</span> to
+    <span class="tex2jax_process">$j$</span>, and the third bus
+    will load the sections numbered <span class="tex2jax_process">$j+1$</span> to <span class="tex2jax_process">$n$</span>. Every bus must have at least one
+    class section assigned to it.</p>
+<p>Given the sizes of each of the class sections, determine if
+    it is possible to load students onto <span class="tex2jax_process">$3$</span> identical buses and end up with a
+    “teacher free bus ride!”</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$N$</span>, the number of class sections
+    (<span class="tex2jax_process">$3 \le N \le 1\, 000\,
+    000$</span>). The second line of input contains <span class="tex2jax_process">$N$</span> integers, the <span class="tex2jax_process">$i^{\text {th}}$</span> integer represents
+    the size of class section with number <span class="tex2jax_process">$i$</span>. Class section sizes can range
+    from <span class="tex2jax_process">$[1, 10\, 000]$</span>.</p>
+<h2>Output</h2>
+<p>If it is possible to load the students onto three identical
+    buses in the above-described fashion and have a teacher free
+    bus ride, then output two integers <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1
+    \le i &lt; j &lt; n$</span>) where <span class="tex2jax_process">$i$</span> is the number of the class section
+    which is to be loaded last into the first bus, and <span class="tex2jax_process">$j$</span> is the class section which is to
+    be loaded last into the second bus. We can assume the third bus
+    will load class sections <span class="tex2jax_process">$j+1$</span> to <span class="tex2jax_process">$n$</span>.</p>
+<p>If it is not possible, print “<tt class="ttfamily">-1</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3 3 3
+</pre>
+</td>
+<td>
+<pre>1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+9 10 11
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>9
+1 2 3 1 2 3 1 2 3
+</pre>
+</td>
+<td>
+<pre>3 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>9
+1 2 3 1 2 3 1 2 10
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

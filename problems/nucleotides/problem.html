@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>Genes ’R Us specializes in analyzing strands of DNA to look
+    for anomalies, matches, patterns, or whatever specific items
+    their customers are interested in. You may recall from high
+    school biology that the DNA molecule consists of two chains
+    wrapped around each other to form the well-known double helix.
+    The chains are made up of four different types of nucleotides,
+    each distinguished by a specific nitrogen base: adenine
+    (<tt class="tt">A</tt>), thymine (<tt class="tt">T</tt>),
+    guanine (<tt class="tt">G</tt>) and cytosine (<tt class="tt">C</tt>).</p>
+<p>A recent customer of Genes ’R Us wants to be able to quickly
+    determine which of the four types of nucleotides is most
+    prevalent in a given section of DNA, as well as which are
+    second, third and fourth most prevalent. For a given strand of
+    DNA (which may contain tens of thousands of nucleotides) there
+    may be many such sections where this information is desired.
+    You’ve been asked to write an efficient program to answer such
+    questions.</p>
+<h2>Input</h2>
+<p>Input starts with a string describing a DNA strand. This
+    string consists of the characters <tt class="tt">A</tt>,
+    <tt class="tt">T</tt>, <tt class="tt">G</tt> and <tt class="tt">C</tt> and have positive length <span class="tex2jax_process">$n \leq 50\, 000$</span>. The next line
+    contains a positive integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$m
+    \leq 25\, 000$</span>) indicating the number of sections of the
+    DNA strand to investigate. Following this are <span class="tex2jax_process">$m$</span> lines each containing a pair of
+    integers <span class="tex2jax_process">$s_ i$</span>
+<span class="tex2jax_process">$e_ i$</span>, each indicating
+    the start and ending positions of a section of the strand,
+    where <span class="tex2jax_process">$1 \leq s_ i \leq e_ i \leq
+    n$</span>. Integer pairs are separated by a single space.</p>
+<h2>Output</h2>
+<p>For each section output a line containing a permutation of
+    <tt class="tt">ATGC</tt>, where the first character indicates
+    the most prevalent nucleotide in the section, the second
+    character indicates the second most prevalent, and so on. Break
+    any ties using the ordering <tt class="tt">ATGC</tt> (i.e.,
+    print an <tt class="tt">A</tt> before an equally occurring
+    <tt class="tt">T</tt>, <tt class="tt">G</tt> or <tt class="tt">C</tt>, print a <tt class="tt">T</tt> before an equally
+    occurring <tt class="tt">G</tt> or <tt class="tt">C</tt>, and
+    so on).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>TATATGCTCT
+3
+1 10
+6 10
+6 6
+</pre>
+</td>
+<td>
+<pre>TACG
+TCGA
+GATC
+</pre>
+</td>
+</tr>
+</table>
+</div>

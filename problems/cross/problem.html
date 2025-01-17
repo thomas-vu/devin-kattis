@@ -1,0 +1,159 @@
+<div class="problembody">
+<p>In the game of Sudoku, the objective is to place integers
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$9$</span> (inclusive) into a
+    <span class="tex2jax_process">$9\times 9$</span> grid so that
+    each row, each column, and each of the nine <span class="tex2jax_process">$3\times 3$</span> boxes contains all nine
+    numbers. The starting board is partially filled in so that it
+    is possible to logically deduce the values of the other cells.
+    Sudoku puzzles range in difficulty, and complex analysis
+    methods are required to solve the hardest puzzles. In this
+    problem, however, you will implement one of the simplest
+    methods, cross-hatching.</p>
+<p>In cross-hatching, we select one of the nine numbers and,
+    for each of its occurrences in the grid, cross out the
+    corresponding row, column and <span class="tex2jax_process">$3\times 3$</span> box. Now look for any
+    <span class="tex2jax_process">$3\times 3$</span> boxes where
+    there is only one possible placement for the number and place
+    it there.</p>
+<p>The first image below shows a very sparsely filled in Sudoku
+    grid. However, even in this grid it is possible to deduce using
+    cross-hatching that the number in the top left cell is
+    <span class="tex2jax_process">$4$</span>, as illustrated in the
+    second image.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{cross.png}" src="/problems/cross/file/statement/en/img-0001.png" style="width:70.00%"/>
+</center>
+</div>
+<p>You will be given a partially filled-in grid. Your task is
+    to repeatedly apply the cross-hatching method for different
+    numbers until no more deductions can be made about any
+    number.</p>
+<p>The initial placement of the numbers in the grid may be
+    invalid. It is also possible that there will be no available
+    cell for a number in a <span class="tex2jax_process">$3\times
+    3$</span> box. In both cases, you are to report an error.</p>
+<h2>Input</h2>
+<p>Input will consist of <span class="tex2jax_process">$9$</span> lines, each containing exactly
+    <span class="tex2jax_process">$9$</span> characters. Each
+    character will either be a digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>, or a period (‘.’) denoting an
+    empty cell.</p>
+<h2>Output</h2>
+<p>If the input is valid and there is no contradiction while
+    solving, you should output the grid in the same format it was
+    given in, with cells filled in if their value can be deduced
+    using cross-hatching. Otherwise, output “<tt class="ttfamily">ERROR</tt>” (quotes for clarity).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>..9......
+.....4...
+.......4.
+.........
+.4.......
+.........
+.........
+.........
+.........
+</pre>
+</td>
+<td>
+<pre>4.9......
+.....4...
+.......4.
+.........
+.4.......
+.........
+.........
+.........
+.........
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>...1...6.
+18...9...
+..7.642..
+2.9..6.5.
+.43...72.
+.6.3..9.1
+..265.1..
+...2...97
+.5...3...
+</pre>
+</td>
+<td>
+<pre>524137869
+186529473
+397864215
+219476358
+843915726
+765382941
+972658134
+638241597
+451793682
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1........
+..1......
+.......1.
+.........
+.........
+.........
+.........
+.........
+.........
+</pre>
+</td>
+<td>
+<pre>ERROR
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>........2
+....1....
+1........
+......1..
+.........
+.........
+.........
+.......1.
+.........
+</pre>
+</td>
+<td>
+<pre>ERROR
+</pre>
+</td>
+</tr>
+</table>
+</div>

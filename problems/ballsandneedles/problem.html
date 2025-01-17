@@ -1,0 +1,227 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ballsandneedles/file/statement/en/img-0001.png" class="illustration" src="/problems/ballsandneedles/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Joana Vasconcelos is a Portuguese artist who uses everyday
+    objects in her creations, like electric irons or plastic
+    cutlery. She is an inspiration to Ana, who wants to make
+    ceiling hanging sculptures with straight knitting needles and
+    balls of wool. For safety reasons, there will be a ball at each
+    end of each needle. Knitting needles vary in colour, length and
+    thickness (to allow intersections of needles).</p>
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ballsandneedles/file/statement/en/img-0002.png" class="illustration" src="/problems/ballsandneedles/file/statement/en/img-0002.png"/>
+<div class="description"></div>
+</div>
+<p>Sculptures are to be exhibited in room corners, which
+    provide a 3D Cartesian coordinate system, with many lamps on
+    the ceiling. Sculpture designs are made with the coordinates of
+    the centres of the balls of wool in which knitting needles are
+    stuck. That is, each needle <span class="tex2jax_process">$N$</span> is represented by a set of two
+    different triples: <span class="tex2jax_process">$N=\{
+    (x,y,z),\, (x’,y’,z’)\} $</span>.</p>
+<p>Ana dislikes <i class="itshape">closed chains</i>. A
+    <i class="itshape">true closed chain</i> is a sequence of
+    <span class="tex2jax_process">$k$</span> distinct needles,
+    <span class="tex2jax_process">$N_1, N_2, \ldots , N_ k$</span>
+    (for some <span class="tex2jax_process">$k\geq 3$</span>), such
+    that:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$N_1 = \{ (x_1,y_1,z_1),
+        \, (x_2,y_2,z_2)\} , \; N_2 = \{ (x_2,y_2,z_2), \,
+        (x_3,y_3,z_3)\} , \; \ldots , \\ N_ k = \{ (x_ k,y_ k,z_
+        k), \, (x_{k+1},y_{k+1},z_{k+1})\} , \; \mbox{ and } \;
+        (x_{k+1},y_{k+1},z_{k+1})=(x_1,y_1,z_1)$</span></p>
+</li>
+</ul>
+<p>But her dislike of closed chains is so extreme that the
+    shadow of the sculpture on the floor has to be free of “floor
+    closed chains”. Given any needle <span class="tex2jax_process">$N=\{ (x,y,z),\, (x’,y’,z’)\} $</span>, let
+    <span class="tex2jax_process">$N^{\downarrow } = \{
+    (x,y),(x’,y’)\} $</span> denote the shadow of needle
+    <span class="tex2jax_process">$N$</span> on the floor. For Ana
+    (who is an artist), a <i class="itshape">floor closed chain</i>
+    is also a sequence of <span class="tex2jax_process">$k$</span>
+    distinct needles, <span class="tex2jax_process">$N_1, N_2,
+    \ldots , N_ k$</span> (for some <span class="tex2jax_process">$k\geq 3$</span>), such that:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$N^{\downarrow }_ i \neq
+        N^{\downarrow }_ j$</span>, for every <span class="tex2jax_process">$1 \leq i &lt; j \leq k \; $</span> (the
+        <span class="tex2jax_process">$k$</span> needle shadows are
+        all distinct);</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N^{\downarrow }_1 = \{
+        (x_1,y_1), \, (x_2,y_2)\} , \; N^{\downarrow }_2 = \{
+        (x_2,y_2), \, (x_3,y_3)\} , \; \ldots , \\ N^{\downarrow }_
+        k = \{ (x_ k,y_ k), \, (x_{k+1},y_{k+1})\} , \; \mbox{ and
+        } \; (x_{k+1},y_{k+1})=(x_1,y_1)$</span></p>
+</li>
+</ul>
+<p>Consider the sculpture depicted in the figure, which has the
+    following four knitting needles:</p><span class="tex2jax_process">\[ \begin{array}{ll} A = \{ (12,12,8), \,
+    (10,5,11)\} , &amp; B = \{ (12,12,8), \, (4,14,21)\} , \\ C =
+    \{ (12,12,8), \, (12,20,8)\} , &amp; D = \{ (4,14,21), \,
+    (10,5,21)\} . \end{array} \]</span>
+<p>This structure is not free of closed chains because,
+    although there is no true closed chain, the sequence of needles
+    <span class="tex2jax_process">$A, B, D$</span> is a floor
+    closed chain.</p>
+<h2>Task</h2>
+<p>Write a program that, given the knitting needles of a
+    sculpture, determines whether there is a true or a floor closed
+    chain in the sculpture.</p>
+<h2>Input</h2>
+<p>The first line of the input has one integer, <span class="tex2jax_process">$K$</span>, which is the number of knitting
+    needles in the sculpture. Each of the following <span class="tex2jax_process">$K$</span> lines contains six integers,
+    <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$z_1$</span>, <span class="tex2jax_process">$x_2$</span>, <span class="tex2jax_process">$y_2$</span>, and <span class="tex2jax_process">$z_2$</span>, which indicate that
+    <span class="tex2jax_process">$\{ (x_1,y_1,z_1), \,
+    (x_2,y_2,z_2)\} $</span> is the set of triples of a needle. Any
+    two distinct needles are represented by different sets of
+    triples.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\leq $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$K$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\leq $</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$50\, 000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of knitting needles</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\leq $</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$x_ i, y_ i, z_
+          i$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$&lt;$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1\, 000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Coordinates of each triple</p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>The output has two lines, each one with a string. The string
+    in the first line is: <tt class="ttfamily">True closed
+    chains</tt>, if there is some true closed chain in the
+    sculpture; <tt class="ttfamily">No true closed chains</tt>,
+    otherwise. The string in the second line is: <tt class="ttfamily">Floor closed chains</tt>, if there is some floor
+    closed chain in the sculpture; <tt class="ttfamily">No floor
+    closed chains</tt>, otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+12 12 8 10 5 11
+12 12 8 4 14 21
+12 12 8 12 20 8
+4 14 21 10 5 21
+</pre>
+</td>
+<td>
+<pre>
+No true closed chains
+Floor closed chains
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 1 1 2 2 2
+2 2 2 1 5 5
+9 4 4 9 4 2
+9 4 4 9 9 4
+</pre>
+</td>
+<td>
+<pre>
+No true closed chains
+No floor closed chains
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+50 50 50 100 100 100
+100 100 100 50 50 90
+50 50 90 50 50 50
+</pre>
+</td>
+<td>
+<pre>
+True closed chains
+No floor closed chains
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 1 5 1 3 7
+1 3 7 4 4 5
+4 4 5 1 1 5
+</pre>
+</td>
+<td>
+<pre>
+True closed chains
+Floor closed chains
+</pre>
+</td>
+</tr>
+</table>
+</div>

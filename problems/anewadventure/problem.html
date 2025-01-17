@@ -1,0 +1,144 @@
+<div class="problembody">
+<p>‘Hunter’: a licensed profession for those who specialize in
+    finding rare creatures or secret treasures.</p>
+<p>Gon has embarked on a new journey to become a Hunter.
+    Yesterday, Gon arrived in Hanoi to participate in the Hunter
+    Exam — an annual exam which an applicant must pass, in
+    order to become a Hunter.</p>
+<p>The Hunter Examination Hall is surrounded by a circular
+    road. We can model the road as <span class="tex2jax_process">$C$</span> concentric circles, numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$C$</span> from the outermost circle to the
+    innermost circle. The circles are each divided into
+    <span class="tex2jax_process">$A$</span> arcs, numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$A$</span> in clockwise order. The
+    <span class="tex2jax_process">$j$</span>-th arc in the
+    <span class="tex2jax_process">$i$</span>-th circle is denoted
+    by <span class="tex2jax_process">$(i, j)$</span>. Gon is
+    currently standing at arc <span class="tex2jax_process">$(1,
+    1)$</span>. The following image contains a circular road with
+    <span class="tex2jax_process">$C = 3$</span> and <span class="tex2jax_process">$A = 8$</span>.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{illustration.jpg}" src="/problems/anewadventure/file/statement/en/img-0001.jpg" style="width:50.00%"/>
+</center>
+<p>There are motorbikes on the road. There is at most one
+    motorbike in each arc, and there is no motorbike in arc
+    <span class="tex2jax_process">$(1, 1)$</span>. In the above
+    image, there are <span class="tex2jax_process">$2$</span>
+    motorbikes, one at arc <span class="tex2jax_process">$(1,
+    2)$</span> and another at arc <span class="tex2jax_process">$(2, 7)$</span>.</p>
+<p>All the motorbikes are travelling at constant speed of
+    <span class="tex2jax_process">$1$</span> arc per second, in
+    clockwise direction, without stopping. More precisely, if at
+    second <span class="tex2jax_process">$T$</span>, a motorbike is
+    at <span class="tex2jax_process">$(i, j)$</span>, then at
+    second <span class="tex2jax_process">$T+1$</span>, the
+    motorbike will be at <span class="tex2jax_process">$(i, j \bmod
+    A + 1)$</span>.</p>
+<p>Gon needs to go to the Examination Hall located inside the
+    <span class="tex2jax_process">$C$</span>-th circle. At each
+    second, Gon can either stay at his current position, or move to
+    an adjacent arc. Two arcs are adjacent if they share at least
+    two points. From any arcs in the <span class="tex2jax_process">$C$</span>-th circle, Gon can move to the
+    Examination Hall.</p>
+<p>Because Gon moves slightly faster than any motorbikes:</p>
+<ul class="itemize">
+<li>
+<p>If Gon moves from cell <span class="tex2jax_process">$(u, v)$</span> to cell <span class="tex2jax_process">$(x, y)$</span>:</p>
+<ul class="itemize">
+<li>
+<p>Gon will <b class="bfseries">not</b> be hit by
+            motorbikes coming into cell <span class="tex2jax_process">$(u, v)$</span>.</p>
+</li>
+<li>
+<p>Gon will be hit by motorbikes coming from or into
+            cell <span class="tex2jax_process">$(x, y)$</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If Gon stays at cell <span class="tex2jax_process">$(u,
+        v)$</span>, he will be hit by motorbikes coming into cell
+        <span class="tex2jax_process">$(u, v)$</span>.</p>
+</li>
+</ul>
+<p>For example, in the above illustration, Gon can move as
+    follows:</p>
+<ul class="itemize">
+<li>
+<p>At second <span class="tex2jax_process">$1$</span>: Gon
+        moves to arc <span class="tex2jax_process">$(2, 1)$</span>,
+        the <span class="tex2jax_process">$2$</span> motorbikes
+        move to arc <span class="tex2jax_process">$(1, 3)$</span>
+        and arc <span class="tex2jax_process">$(2, 8)$</span>.</p>
+</li>
+<li>
+<p>At second <span class="tex2jax_process">$2$</span>: Gon
+        moves to arc <span class="tex2jax_process">$(3, 1)$</span>,
+        the <span class="tex2jax_process">$2$</span> motorbikes
+        move to arc <span class="tex2jax_process">$(1, 4)$</span>
+        and arc <span class="tex2jax_process">$(2, 1)$</span>.</p>
+</li>
+<li>
+<p>At second <span class="tex2jax_process">$3$</span>: Gon
+        moves to Examination Hall, the <span class="tex2jax_process">$2$</span> motorbikes move to arc
+        <span class="tex2jax_process">$(1, 5)$</span> and arc
+        <span class="tex2jax_process">$(2, 2)$</span>.</p>
+</li>
+</ul>
+<p>Note that:</p>
+<ul class="itemize">
+<li>
+<p>If at second <span class="tex2jax_process">$1$</span>,
+        Gon moves to arc <span class="tex2jax_process">$(1,
+        2)$</span>, he will be hit by the motorbike moving from arc
+        <span class="tex2jax_process">$(1, 2)$</span> to arc
+        <span class="tex2jax_process">$(1, 3)$</span>.</p>
+</li>
+<li>
+<p>If at second <span class="tex2jax_process">$2$</span>,
+        Gon stays at arc <span class="tex2jax_process">$(2,
+        1)$</span>, he will also be hit by the motorbike moving
+        from arc <span class="tex2jax_process">$(2, 8)$</span> to
+        arc <span class="tex2jax_process">$(2, 1)$</span>.</p>
+</li>
+</ul>
+<p>The Hunter Exam is starting soon, and Gon has not figured
+    out how to cross the road yet. Please help him.</p>
+<h2>Input</h2>
+<p>The first line contains exactly <span class="tex2jax_process">$2$</span> positive integers <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$A$</span>. <span class="tex2jax_process">$(1
+    \le C \cdot A \le 10^5)$</span>.</p>
+<p><span class="tex2jax_process">$C$</span> lines follow, the
+    <span class="tex2jax_process">$i$</span>-th line contains
+    exactly <span class="tex2jax_process">$A$</span> characters
+    representing the <span class="tex2jax_process">$i$</span>-th
+    circle. The <span class="tex2jax_process">$j$</span>-th
+    character in the <span class="tex2jax_process">$i$</span>-th
+    line can be either ‘G’, ‘M’ or ‘.’, representing the arc where
+    Gon stands, an arc with a motorbike, or an empty arc,
+    respectively.</p>
+<p>The first character of the first line is always ‘G’, and
+    this is the only ‘G’ in the input.</p>
+<h2>Output</h2>
+<p>Print exactly one integer — the minimum time for Gon to
+    reach the Examination Hall. If it is impossible for Gon to
+    reach the Examination Hall, print <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 8
+GM......
+......M.
+........
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

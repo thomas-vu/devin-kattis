@@ -1,0 +1,59 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/countcircuits/file/statement/en/img-0001.png" class="illustration" src="/problems/countcircuits/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Suppose you are given a sequence of <span class="tex2jax_process">$N$</span> integer-valued vectors in the
+    plane <span class="tex2jax_process">$(x_ i,y_ i)$</span>,
+    <span class="tex2jax_process">$i = 1, \ldots , N$</span>.
+    Beginning at the origin, we can generate a path by regarding
+    each vector as a displacement from the previous location. For
+    instance, the vectors <span class="tex2jax_process">$(1,2)$</span>, <span class="tex2jax_process">$(2,3)$</span>, <span class="tex2jax_process">$(-3,-5)$</span> form the path <span class="tex2jax_process">$(0,0), (1,2), (3,5), (0,0)$</span>. We
+    define a path that ends at the origin as a <em>circuit</em>.
+    The example just given is a circuit. We could form a path using
+    any nonempty subset of the <span class="tex2jax_process">$N$</span> vectors, while the result (circuit
+    or not) doesn’t depend on the ordering of the subset. How many
+    nonempty subsets of the vectors form circuits?</p>
+<p>For instance, consider the vectors <span class="tex2jax_process">$\{ (1, 2), (-1, -2), (1, 1), (-2, -3), (-1,
+    -1) \} $</span> From these vectors we can construct 4 possible
+    subset circuits using</p><span class="tex2jax_process">\[
+    \begin{array}{l} \{ (1,2), \; (-1,-2) \} \\ \{ (1,1), \;
+    (-1,-1) \} \\ \{ (1,2), \; (1, 1), \; (-2, -3) \} \\ \{ (1,2),
+    \; (-1,-2), \; (1,1), \; (-1,-1) \} \end{array} \]</span>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$N \le 40$</span> on the first line. The next
+    <span class="tex2jax_process">$N$</span> lines each contain two
+    integer values <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> forming the vector
+    <span class="tex2jax_process">$(x,y)$</span>, where
+    <span class="tex2jax_process">$|x|, |y| \le 10$</span> and
+    <span class="tex2jax_process">$(x,y) \neq (0,0)$</span>. Since
+    the given vectors are a set, all vectors are unique.</p>
+<h2>Output</h2>
+<p>Output the number of nonempty subsets of the given vectors
+    that produce circuits. It’s guaranteed that the answer is less
+    than <span class="tex2jax_process">$10^{10}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+1 2
+1 1
+-1 -2
+-2 -3
+-1 -1
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

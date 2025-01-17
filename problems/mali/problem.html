@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Mirko and Slavko are playing a new game. Again. Slavko
+    starts each round by giving Mirko two numbers <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, both smaller than 100. Mirko then
+    has to slove the following task for Slavko: how to pair all
+    given <span class="tex2jax_process">$A$</span> numbers with all
+    given <span class="tex2jax_process">$B$</span> numbers so that
+    the <em>maximal sum of such pairs is as small as
+    possible</em>.</p>
+<p>In other words, if during previous rounds Slavko gave
+    numbers <span class="tex2jax_process">$a_1, a_2 ,a_3, \ldots ,
+    a_ n$</span> and <span class="tex2jax_process">$b_1, b_2, b_3,
+    \ldots , b_ n$</span> , determine <span class="tex2jax_process">$n$</span> pairings <span class="tex2jax_process">$(a_ i, b_ j)$</span> such that each number
+    in the <span class="tex2jax_process">$A$</span> sequence is
+    used in exactly one pairing, each number in the <span class="tex2jax_process">$B$</span> sequence is used in exactly one
+    pairing, and the maximum of all sums <span class="tex2jax_process">$a_ i + b_ j$</span> is minimal.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 100\, 000$</span>), the number
+    of rounds.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    contain two integers <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1 \leq A, B \leq 100$</span>), the numbers
+    given by Slavko in that round.</p>
+<h2>Output</h2>
+<p>The output consists of <span class="tex2jax_process">$N$</span> lines, one for each round. Each
+    line should contain the smallest maximal sum for that
+    round.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 8
+3 1
+1 4
+</pre>
+</td>
+<td>
+<pre>
+10
+10
+9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 1
+2 2
+3 3
+</pre>
+</td>
+<td>
+<pre>
+2
+3
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,218 @@
+<div class="problembody">
+<p>You are enrolled in the Computer Organization and
+    Architecture course at your university. You decide to write a
+    program to help check your work by computing the output value
+    of a combinational digital circuit, given its inputs.</p>
+<div class="figure" id="circuitmath:1">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{example_circuit}" src="/problems/circuitmath/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An example of a combinational digital
+          circuit. See the text for an explanation.
+        </div>
+</center>
+</div>
+<p>Consider the circuit shown in Figure 1, which we use
+    for illustration. This circuit has four inputs (letters A
+    through D on the left), each of which is either true or false.
+    There are four ‘gates’ each of which is one of three types:
+    AND, OR, or NOT. Each gate produces either a true or false
+    value, depending on its inputs. The last gate (the OR on the
+    right) produces the output of the entire circuit. We can write
+    these three types of gates in text by their equivalent
+    <em>logical operators</em>: <tt>*</tt> for AND, <tt>+</tt> for
+    OR, and <tt>-</tt> for NOT. In what follows, we’ll use the
+    operators rather than gates to describe circuits.</p>
+<p>Here is how these operators work. Given an assignment of
+    true (<tt>T</tt>) or false (<tt>F</tt>) for each input, the
+    operators produce the truth value indicated in the following
+    tables:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt>A</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>B</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>A B *</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>A B +</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt>T</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><tt>T</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; text-align:center; border-bottom-color:black">
+<p><tt>F</tt></p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+</tr>
+</table> 
+      <table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt>A</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>A -</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt>T</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt>F</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; text-align:center; border-bottom-color:black">
+<p><tt>F</tt></p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+<p><tt>T</tt></p>
+</td>
+</tr>
+</table>
+</center>
+<p>Notice that AND and OR take two inputs, whereas NOT operates
+    on only one input. Also, we use <em>postfix notation</em> to
+    write expressions involving operators (like <span class="tex2jax_process">$\verb|A B *|$</span>), where the operator
+    comes <em>after</em> its input(s) (just as how in
+    Figure 1, each gate in the circuit diagram comes after its
+    inputs).</p>
+<p>When we describe a valid circuit in postfix notation, we use
+    the following syntax.</p>
+<ul class="itemize">
+<li>
+<p>An uppercase letter (<tt>A</tt> through <tt>Z</tt>) is a
+        valid circuit. In other words, an input alone (without any
+        gates) is a valid circuit (which produces as output its own
+        input value).</p>
+</li>
+<li>
+<p>If <tt>&lt;C1&gt;</tt> and <tt>&lt;C2&gt;</tt> are valid
+        circuits, then ‘<tt>&lt;C1&gt; &lt;C2&gt; *</tt>’ is a
+        valid circuit that produces the AND of the outputs of the
+        two subcircuits.</p>
+</li>
+<li>
+<p>If <tt>&lt;C1&gt;</tt> and <tt>&lt;C2&gt;</tt> are valid
+        circuits, then ‘<tt>&lt;C1&gt; &lt;C2&gt; +</tt>’ is a
+        valid circuit that produces the OR of the outputs of the
+        two subcircuits.</p>
+</li>
+<li>
+<p>If <tt>&lt;C1&gt;</tt> is a valid circuit, then
+        ‘<tt>&lt;C1&gt; -</tt>’ is a valid circuit that produces
+        the NOT of <tt>&lt;C1&gt;</tt>’s output.</p>
+</li>
+</ul>
+<p>No other description is a valid circuit.</p>
+<p>Thus, one of the ways the circuit in Figure 1 could be
+    described using postfix notation is as the string:</p>
+<center>
+<tt>A B * C D + - +</tt>
+</center>
+<p>Given a truth value (<tt>T</tt> or <tt>F</tt>) for each of
+    the inputs (<tt>A</tt>, <tt>B</tt>, <tt>C</tt>, and <tt>D</tt>
+    in this example), their values propagate through the gates of
+    the circuit, and the truth value produced by the last gate is
+    the output of the circuit. For example, when the above circuit
+    is given inputs <tt>A=T</tt>, <tt>B=F</tt>, <tt>C=T</tt>,
+    <tt>D=F</tt>, the output of the circuit is <tt>F</tt>.</p>
+<p>Given an assignment to variables and a circuit description,
+    your software should print the output of the circuit.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of a single integer
+    <span class="tex2jax_process">$n$</span>, satisfying
+    <span class="tex2jax_process">$1 \leq n \leq 26$</span>,
+    denoting the number of input variables. Then follows a line
+    with <span class="tex2jax_process">$n$</span> space-separated
+    characters. Each character is either <span class="tex2jax_process">$\verb|T|$</span> or <span class="tex2jax_process">$\verb|F|$</span>, with the <span class="tex2jax_process">$i$</span>th such character indicating the
+    truth value of the input that is labeled with the <span class="tex2jax_process">$i$</span>th letter of the alphabet.</p>
+<p>The last line of input contains a circuit description, which
+    obeys the syntax described above. Each circuit is valid, uses
+    only the first <span class="tex2jax_process">$n$</span> letters
+    of the alphabet as input labels, and contains at least
+    <span class="tex2jax_process">$1$</span> and at most
+    <span class="tex2jax_process">$250$</span> total non-space
+    characters.</p>
+<p>Note that while each variable is provided only one truth
+    value, a variable may appear multiple times in the circuit
+    description and serve as input to more than one gate.</p>
+<h2>Output</h2>
+<p>Print a single character, the output of the circuit (either
+    <tt>T</tt> or <tt>F</tt>), when evaluated using the given input
+    values.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+T F T F
+A B * C D + - +
+</pre>
+</td>
+<td>
+<pre>F
+</pre>
+</td>
+</tr>
+</table>
+</div>

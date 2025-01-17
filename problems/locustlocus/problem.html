@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>There are two different species of <a href="https://en.wikipedia.org/wiki/Periodical_cicadas">periodical
+    cicadas</a> that only appear from hibernation every
+    <span class="tex2jax_process">$13$</span> and <span class="tex2jax_process">$17$</span> years, respectively. Your old
+    grandpa tells you that he saw them simultaneously back in ’92.
+    You start pondering how many years you have to wait until you
+    see them again. You collect information about other pairs of
+    periodical cicadas and when they were last observed to find out
+    when the next simultaneous appearance is.</p>
+<p>Given several different pairs of cicadas and their last
+    simultaneous appearance, find the next year that one of the
+    pairs reappears.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \le k \le 99$</span>), the number of pairs
+    of periodical cicadas. Then follow <span class="tex2jax_process">$k$</span> lines, each containing three
+    integers <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$c_1$</span> and <span class="tex2jax_process">$c_2$</span> (<span class="tex2jax_process">$1800 \le y \le 2021$</span>, <span class="tex2jax_process">$1 \le c_1, c_2 \le 99$</span>), the year
+    this pair was last observed and cycle lengths for the first and
+    second species, respectively. You may assume that none of the
+    <span class="tex2jax_process">$k$</span> pairs reappears
+    earlier than <span class="tex2jax_process">$2022$</span>.</p>
+<h2>Output</h2>
+<p>Output the first year a pair reappears.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1992 13 17
+1992 14 18
+2001 5 7
+</pre>
+</td>
+<td>
+<pre>2036
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2020 2 3
+2019 3 4
+</pre>
+</td>
+<td>
+<pre>2026
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,119 @@
+<div class="problembody">
+<p>Your task is to read a picture of a chessboard position and
+    print it in the chess notation.</p>
+<h2>Input</h2>
+<p>The input consists of an ASCII-art picture of a chessboard
+    with chess pieces on positions described by the input. The
+    pieces of the white player are shown in upper-case letters,
+    while the black player’s pieces are lower-case letters. The
+    letters are one of “<tt class="ttfamily">K</tt>” (King),
+    “<tt class="ttfamily">Q</tt>” (Queen), “<tt class="ttfamily">R</tt>” (Rook), “<tt class="ttfamily">B</tt>”
+    (Bishop), “<tt class="ttfamily">N</tt>” (Knight), or
+    “<tt class="ttfamily">P</tt>” (Pawn). The chessboard outline is
+    made of plus (“<tt class="ttfamily">+</tt>”), minus
+    (“<tt class="ttfamily">-</tt>”), and pipe (“<tt class="ttfamily">|</tt>”) characters. The black fields are filled
+    with colons (“<tt class="ttfamily">:</tt>”), white fields with
+    dots (“<tt class="ttfamily">.</tt>”).</p>
+<h2>Output</h2>
+<p>The output consists of two lines. The first line consists of
+    the string “<tt class="ttfamily">White:</tt> ”, followed by the
+    description of positions of the pieces of the white player. The
+    second line consists of the string “<tt class="ttfamily">Black:</tt> ”, followed by the description of
+    positions of the pieces of the black player.</p>
+<p>The description of the position of the pieces is a
+    comma-separated list of terms (without any spaces) describing
+    the pieces of the appropriate player. The description of a
+    piece consists of a single upper-case letter that denotes the
+    type of the piece (except for pawns, for that this identifier
+    is omitted). This letter is immediatelly followed by the
+    position of the piece in the standard chess notation – a
+    lower-case letter between “<tt class="ttfamily">a</tt>” and
+    “<tt class="ttfamily">h</tt>” that determines the column
+    (“<tt class="ttfamily">a</tt>” is the leftmost column in the
+    input) and a single digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$8$</span> that determines the row
+    (<span class="tex2jax_process">$8$</span> is the first row in
+    the input).</p>
+<p>The pieces in the description must appear in the following
+    order: Kings (“<tt class="ttfamily">K</tt>”), Queens
+    (“<tt class="ttfamily">Q</tt>”), Rooks (“<tt class="ttfamily">R</tt>”), Bishops (“<tt class="ttfamily">B</tt>”),
+    Knights (“<tt class="ttfamily">N</tt>”), and pawns.</p>
+<p>Note that the numbers of pieces may differ from the initial
+    position, and might not even correspond to a situation that
+    could arise in a valid chess game.</p>
+<p>In case two pieces of the same type appear in the input, the
+    piece with the smaller row number must be described before the
+    other one if the pieces are white, and the one with the larger
+    row number must be described first if the pieces are black. If
+    two pieces of the same type appear in the same row, the one
+    with the smaller column letter must appear first.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
++---+---+---+---+---+---+---+---+
+|.r.|:::|.b.|:q:|.k.|:::|.n.|:r:|
++---+---+---+---+---+---+---+---+
+|:p:|.p.|:p:|.p.|:p:|.p.|:::|.p.|
++---+---+---+---+---+---+---+---+
+|...|:::|.n.|:::|...|:::|...|:p:|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|.P.|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:P:|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|.P.|:::|.P.|:P:|...|:P:|.P.|:P:|
++---+---+---+---+---+---+---+---+
+|:R:|.N.|:B:|.Q.|:K:|.B.|:::|.R.|
++---+---+---+---+---+---+---+---+
+</pre>
+</td>
+<td>
+<pre>
+White: Ke1,Qd1,Ra1,Rh1,Bc1,Bf1,Nb1,a2,c2,d2,f2,g2,h2,a3,e4
+Black: Ke8,Qd8,Ra8,Rh8,Bc8,Ng8,Nc6,a7,b7,c7,d7,e7,f7,h7,h6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|...|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|...|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:::|...|:::|.k.|
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|...|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|...|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:k:|...|:::|...|
++---+---+---+---+---+---+---+---+
+</pre>
+</td>
+<td>
+<pre>
+White: 
+Black: Kh5,Ke1
+</pre>
+</td>
+</tr>
+</table>
+</div>

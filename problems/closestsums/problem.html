@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Given is a set of integers and then a sequence of queries. A
+    query gives you a number and asks to find a sum of two distinct
+    numbers from the set which is closest to the query number.</p>
+<h2>Input</h2>
+<p>Input contains multiple cases. Each case starts with an
+    integer <span class="tex2jax_process">$1 &lt; n \le
+    1000$</span>. The following <span class="tex2jax_process">$n$</span> lines contain distinct integer
+    numbers. The next line contains a positive integer <span class="tex2jax_process">$m$</span> giving the number of queries,
+    <span class="tex2jax_process">$0 &lt; m &lt; 25$</span>. The
+    next <span class="tex2jax_process">$m$</span> lines contain an
+    integer of the query, one per line. All the <span class="tex2jax_process">$n+m$</span> integers are between
+    <span class="tex2jax_process">$-10^7$</span> and <span class="tex2jax_process">$10^7$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Output should be organized as in the sample below. For each
+    query output one line giving the query value and the closest
+    sum in the format as in the sample.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+3
+12
+17
+33
+34
+3
+1
+51
+30
+3
+1
+2
+3
+3
+1
+2
+3
+3
+1
+2
+3
+3
+4
+5
+6
+</pre>
+</td>
+<td>
+<pre>
+Case 1:
+Closest sum to 1 is 15.
+Closest sum to 51 is 51.
+Closest sum to 30 is 29.
+Case 2:
+Closest sum to 1 is 3.
+Closest sum to 2 is 3.
+Closest sum to 3 is 3.
+Case 3:
+Closest sum to 4 is 4.
+Closest sum to 5 is 5.
+Closest sum to 6 is 5.
+</pre>
+</td>
+</tr>
+</table>
+</div>

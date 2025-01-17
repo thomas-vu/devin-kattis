@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>Lisa works as a waitress in a restaurant. Tonight is her
+    birthday so Lisa asked the chef to prepare his special meal for
+    her friends. The chef’s meal is made of <span class="tex2jax_process">$N$</span> ingredients. To prepare one
+    serving of the meal he needs a certain amount of each
+    ingredient.</p>
+<p>There are some ingredients already available in the kitchen
+    and Lisa will buy the rest at the grocery store. The store has
+    all the necessary ingredients, each coming in smaller and
+    larger packages. Lisa has <span class="tex2jax_process">$M$</span> dollars and wants to spend them so
+    that the chef can make the most servings of his meal.</p>
+<p>For example, consider the first sample data below. For
+    <span class="tex2jax_process">$99$</span> dollars Lisa will buy
+    three smaller and one larger package of the first ingredient,
+    as well as one smaller and two larger packages of the second
+    ingredient <span class="tex2jax_process">$(3\cdot 10 + 1 \cdot
+    11 + 1 \cdot 10 + 2 \cdot 24 = 99)$</span>. The chef will then
+    have <span class="tex2jax_process">$51$</span> units
+    <span class="tex2jax_process">$(8 + 3 \cdot 10 + 1 \cdot
+    13)$</span> of the first ingredient and <span class="tex2jax_process">$60$</span> units <span class="tex2jax_process">$(20 + 1 \cdot 6 + 2 \cdot 17)$</span> of the
+    second ingredient, enough for <span class="tex2jax_process">$5$</span> servings.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$1
+    \le N \le 100$</span>, <span class="tex2jax_process">$1 \le M
+    \le 100\, 000$</span>. Each of the following <span class="tex2jax_process">$N$</span> lines contains <span class="tex2jax_process">$6$</span> positive integers, information
+    about one ingredient. These specify, in order:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$10 \le X \le 100$</span>, the amount of
+        the ingredient needed in one serving;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$Y$</span>, <span class="tex2jax_process">$1 \le Y \le 100$</span>, the amount of
+        the ingredient already available in the kitchen;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S_ M$</span>,
+        <span class="tex2jax_process">$1 \le S_ M &lt; 100$</span>,
+        the size of the smaller package at the store;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_ M$</span>,
+        <span class="tex2jax_process">$10 \le PM &lt; 100$</span>,
+        the price of the smaller package;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S_ V$</span>,
+        <span class="tex2jax_process">$S_ M &lt; S_ V \le
+        100$</span>, the size of the larger package; and</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_ V$</span>,
+        <span class="tex2jax_process">$P_ M &lt; P_ V \le
+        100$</span>, the price of the larger package.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the largest number of servings the chef can make if
+    Lisa spends her money wisely.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 100
+10 8 10 10 13 11
+12 20 6 10 17 24
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 65
+10 5 7 10 13 14
+10 5 8 11 14 15
+10 5 9 12 15 16
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

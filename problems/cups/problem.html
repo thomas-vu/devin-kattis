@@ -1,0 +1,55 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/cups/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cups/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/amyselleck/">Photo</a> by
+        amy selleck cc by 2.0
+      </div>
+</div>You are programming a cup stacking module for your robot.
+    This robot is equiped with several sensors that can accurately
+    determine the radius and color of a cup. The problem is that
+    there is a glitch in the robot’s core routine that processess
+    sensor inputs so the radius is doubled, if the result of the
+    color sensor arrives to the routine after the radius.
+    <p>For instance, for a red cup with a radius of <span class="tex2jax_process">$5$</span> units, your module will receive
+    either “red 5” or “10 red” message.</p>
+<p>Given a list of messages from the core routine, each
+    describing a different cup, can you put the cups in order of
+    the smallest to the largest?</p>
+<h2>Input</h2>
+<p>The first line of the input file contains an integer
+    <span class="tex2jax_process">$N$</span>, the number of cups
+    (<span class="tex2jax_process">$1 \leq N \leq 20$</span>). Next
+    <span class="tex2jax_process">$N$</span> lines will contain two
+    tokens each, either as “color radius” or “diameter color”. The
+    radius of a cup <span class="tex2jax_process">$R$</span> will
+    be a positive integer less than <span class="tex2jax_process">$1000$</span>. The color of a cup
+    <span class="tex2jax_process">$C$</span> will be a non-empty
+    string of lower case English letters of length at most
+    <span class="tex2jax_process">$20$</span>. All cups will be
+    different in both size and color.</p>
+<h2>Output</h2>
+<p>Output colors of cups, one color per line, in order of
+    increasing radius.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+red 10
+10 blue
+green 7
+</pre>
+</td>
+<td>
+<pre>blue
+green
+red
+</pre>
+</td>
+</tr>
+</table>
+</div>

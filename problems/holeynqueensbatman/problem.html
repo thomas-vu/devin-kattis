@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>The <span class="tex2jax_process">$N$</span>-queens problem
+    is the problem of placing <span class="tex2jax_process">$N$</span> queens on a <span class="tex2jax_process">$N \times N$</span> chessboard so that no
+    queen shares a row, column or a diagonal with any other queen.
+    Essentially, we are trying to place the queens without any
+    queen threatening another. For example, the first image below
+    (without holes in the board) is a solution to the <span class="tex2jax_process">$8$</span>-queens problem.</p>
+<center>
+<span class="mbox" style="width:"><img alt="\includegraphics[width=0.25\textwidth ]{nqueens1.png}" src="/problems/holeynqueensbatman/file/statement/en/img-0001.png" style="width:25.00%"/> <img alt="\includegraphics[width=0.25\textwidth ]{nqueens2.png}" src="/problems/holeynqueensbatman/file/statement/en/img-0002.png" style="width:25.00%"/> <img alt="\includegraphics[width=0.25\textwidth ]{nqueens3.png}" src="/problems/holeynqueensbatman/file/statement/en/img-0003.png" style="width:25.00%"/></span>
+</center>
+<p>For this problem, consider the problem we’ll call the ‘holey
+    <span class="tex2jax_process">$N$</span>-queens problem’.
+    Instead of having an everyday chessboard (of arbitrary size),
+    your chessboard is like the second image above (without
+    queens): it has holes through some of the squares. You can’t
+    place a queen on a square that has a hole, but a queen can
+    threaten another even if there is a hole on the path between
+    them. Given a holey chessboard, you must find placements for
+    the <span class="tex2jax_process">$N$</span> queens so that no
+    queen threatens another. The third image above (with holes and
+    queens) shows one such solution.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$1\,
+    000$</span> board descriptions. Each description starts with a
+    line containing a pair of integers, <span class="tex2jax_process">$3 \le N \le 12$</span> and <span class="tex2jax_process">$0 \le M \le N^2$</span>, indicating
+    respectively the size of one side of the board, and the number
+    of holes. The next <span class="tex2jax_process">$M$</span>
+    lines each describe the location of a unique hole in the board.
+    A hole is described by its row and column, each in the range
+    <span class="tex2jax_process">$[0,N-1]$</span>. The end of
+    input is marked by values of zero for <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>.</p>
+<h2>Output</h2>
+<p>For each problem description, print out the number of unique
+    <span class="tex2jax_process">$N$</span>-queens solutions that
+    are possible. Two solutions are considered different if any
+    space is occupied by a queen in one solution but not in the
+    other.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 0
+8 3
+0 3
+5 4
+3 7
+0 0
+</pre>
+</td>
+<td>
+<pre>
+92
+50
+</pre>
+</td>
+</tr>
+</table>
+</div>

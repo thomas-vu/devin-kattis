@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>It’s that time of the year when students head back to
+    school, which will usually involve moving lots of stuff, and
+    packing lots of that stuff into boxes. However, before we go
+    through that effort, it would be nice to know whether the boxes
+    we have are the right size!</p>
+<p>A box has three dimensions, <span class="tex2jax_process">$l$</span>, <span class="tex2jax_process">$w$</span>, and <span class="tex2jax_process">$h$</span>, and a box’s volume <span class="tex2jax_process">$v$</span> is simply <span class="tex2jax_process">$l\cdot w \cdot h$</span>. We have many small
+    items to pack, and we don’t care about their exact geometry: we
+    know that, as long as a box has a volume of, at least,
+    <span class="tex2jax_process">$\mathbf{V}$</span>, we will be
+    able to pack all those items into that single box. So, given a
+    box <span class="tex2jax_process">$i$</span>, and its volume
+    <span class="tex2jax_process">$v_ i$</span>, then the
+    difference <span class="tex2jax_process">$d_ i=v_
+    i-\mathbf{V}$</span> can tell us whether the box is big enough
+    or not to pack all the items. If <span class="tex2jax_process">$d_ i$</span> is greater than or equal to
+    zero, the box is big enough; otherwise, the box is too
+    small.</p>
+<p>So, we want to answer a simple question: given multiple
+    boxes, is the <em>largest</em> box (by volume) large enough to
+    store all our items? For example, suppose <span class="tex2jax_process">$\mathbf{V}=10$</span> and we have three
+    boxes, <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, and <span class="tex2jax_process">$C$</span>, with dimensions <span class="tex2jax_process">$(1,1,2)$</span>, <span class="tex2jax_process">$(2,2,2)$</span>, and <span class="tex2jax_process">$(3,2,1)$</span>, respectively. Their volumes
+    will be <span class="tex2jax_process">$v_ A=2$</span>,
+    <span class="tex2jax_process">$v_ B=8$</span>, and <span class="tex2jax_process">$v_ C=6$</span>, which means the largest box
+    is <span class="tex2jax_process">$B$</span>. Unfortunately,
+    <span class="tex2jax_process">$d_ B=v_
+    B-\mathbf{V}=8-10=-2$</span>, which means our largest box is
+    not large enough.</p>
+<p>On the other hand, suppose <span class="tex2jax_process">$\mathbf{V}=980$</span>, and we had four
+    boxes, <span class="tex2jax_process">$W$</span>, <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$Z$</span> with dimensions <span class="tex2jax_process">$(10,10,10)$</span>, <span class="tex2jax_process">$(10,5,2)$</span>, <span class="tex2jax_process">$(5,3,2)$</span>, and <span class="tex2jax_process">$(90,5,2)$</span>, respectively. Their
+    volumes will be <span class="tex2jax_process">$v_ W=1\,
+    000$</span>, <span class="tex2jax_process">$v_ X=100$</span>,
+    <span class="tex2jax_process">$v_ Y=30$</span> and <span class="tex2jax_process">$v_ Z=900$</span>, making <span class="tex2jax_process">$W$</span> the largest box and, since
+    <span class="tex2jax_process">$d_ W=v_ W-\mathbf{V}=1\,
+    000-980=20$</span>, that means <span class="tex2jax_process">$W$</span> is big enough for all our
+    items.</p>
+<h2>Input</h2>
+<p>The input specifies a set of boxes. It begins with a line
+    containing two integers: <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 100$</span>), specifying the number of boxes, and
+    <span class="tex2jax_process">$\mathbf{V}$</span>, as defined
+    above. The remaining input is composed of <span class="tex2jax_process">$n$</span> lines, each specifying one box.
+    Each line contains the dimensions <span class="tex2jax_process">$l$</span>, <span class="tex2jax_process">$w$</span>, and <span class="tex2jax_process">$h$</span> for the box. You may assume that
+    <span class="tex2jax_process">$1 \leqslant l, w, h, \mathbf{V}
+    &lt; 2^{32}$</span>. You may also assume that, for any given
+    box <span class="tex2jax_process">$i$</span>, its volume
+    <span class="tex2jax_process">$v_ i$</span> will always be less
+    than <span class="tex2jax_process">$2^{32}$</span></p>
+<h2>Output</h2>
+<p>The output is a single integer: the value of <span class="tex2jax_process">$d_ i$</span> for the largest box by
+    volume.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+1 1 2
+2 2 2
+3 2 1
+</pre>
+</td>
+<td>
+<pre>-2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 30
+1 1 1
+5 2 3
+5 2 1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 980
+10 10 10
+10 5 2
+5 3 2
+90 5 2
+</pre>
+</td>
+<td>
+<pre>20
+</pre>
+</td>
+</tr>
+</table>
+</div>

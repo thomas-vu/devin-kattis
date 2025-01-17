@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>Corn farmers need to do pre-harvest yield estimates to
+    determine the approximate number of bushels of corn their farm
+    will produce. They do this to determine if they have enough
+    storage space (grain bins) to store the harvested crop or if
+    they’ll have to store the corn elsewhere, like a co-op (which
+    costs $$$). They also use these estimates when negotiating the
+    future market prices of their corn. Estimates are typically
+    done about a month or two before harvest. By this time, the
+    ears have formed and the kernels on the ears are mostly
+    developed (this makes counting the kernels easier).</p>
+<p>According to the <em>University of Nebraska-Lincoln</em>,
+    <em>Nebraska Extension for Educators</em>, the standard way to
+    estimate corn yield is to calculate the number of bushels of
+    corn per acre. To make the calculations easier, they use an
+    area of 1/1000th of an acre, which, with 30” row spacing, is a
+    section of one row about 17’5” long. Within that 17’5”, five
+    ears are chosen at random. For each ear, the number of kernels
+    are counted by multiplying the number of rows of kernels around
+    by the number of kernels over the length of the ear. The totals
+    for each of the five ears are added together and then divided
+    by five to determine the average number of kernels per ear of
+    corn. This number is then multiplied by the total number of
+    ears of corn in the 17’5” section of row. This gives you the
+    total number of kernels in 1/1000th of an acre. This number is
+    then divided by the <em>Kernel Weight Factor</em>
+    (<em>KWF</em>). The <em>KWF</em> is a function of how wet (or
+    dry) the growing season is and is typically a value between 75
+    (wet) and 95 (dry). The resulting quotient is the number of
+    bushels/acre the farmer can expect to harvest.</p>
+<p>For example, suppose that the average number of kernels per
+    ear is 512 (16 kernels around by 32 kernels lengthwise), and
+    there are 25 ears in the 17’5” of row with a <em>KWF</em> of
+    85. The farmer could then expect:</p>
+<center>
+<big class="xxlarge"><span class="tex2jax_process">$\frac{25\times 512}{85}\ = \ 150\
+      bushels$</span></big>
+</center>
+<p>Since farmers are quite conservative in their estimates, all
+    calculations are done as integers with no rounding.</p>
+<h2>Input</h2>
+<p>Input consists of two lines. The first line contains 10
+    space separated integer values representing the number of
+    kernels around (<em>A</em>) and number of kernels long
+    (<em>L</em>) for each of five ears of corn (<span class="tex2jax_process">$8 \leq A \leq 24$</span>), (<span class="tex2jax_process">$20 \leq L \leq 50$</span>).</p>
+<p>The second line contains 2 space separated integer values
+    representing the number of ears of corn, <em>N</em>, in the
+    17’5” row (<span class="tex2jax_process">$10 \leq N \leq
+    50$</span>) and the <em>KWF</em> (<span class="tex2jax_process">$75 \leq KWF \leq 95$</span>).</p>
+<h2>Output</h2>
+<p>Output a single integer equal to the estimated number of
+    bushels of corn per acre the farmer can expect given the input
+    supplied.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>16 32 16 32 16 32 16 32 16 32
+25 85
+</pre>
+</td>
+<td>
+<pre>150
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14 30 15 32 15 34 14 34 16 32
+27 75
+</pre>
+</td>
+<td>
+<pre>172
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>16 24 16 34 16 40 14 30 16 35
+28 95
+</pre>
+</td>
+<td>
+<pre>150
+</pre>
+</td>
+</tr>
+</table>
+</div>

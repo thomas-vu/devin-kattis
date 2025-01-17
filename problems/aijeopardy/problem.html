@@ -1,0 +1,85 @@
+<div class="problembody">
+<div class="illustration" style="width:31.00%">
+<img alt="/problems/aijeopardy/file/statement/en/img-0001.jpg" class="illustration" src="/problems/aijeopardy/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/File:Sanbot_King_Kong.jpg">Picture</a>
+        by QIHAN Technology
+      </div>
+</div>The robot revolution is finally here, albeit not quite in
+    the highly explosive way envisioned in various science fiction
+    books and movies. It seems that, perhaps due to a small typo in
+    the AI source code, the robots are not taking our lives but
+    instead taking our livelihoods. One early job market fatality
+    in this revolution was the (somewhat niche) occupation as
+    jeopardy player: already in 2011 the <em>Watson</em> computer
+    defeated two legendary but inferior human jeopardy champions.
+    <p>Nowadays, more and more of Jeopardy’s <em>viewers</em> are
+    AIs themselves and as such the show is considering having
+    categories on topics that are more popular with this new
+    number-crunching viewer base. Focus group testing has revealed
+    that AIs are particularly fond of the “Binomial Coefficients”
+    category. The premise of this category is that the answer that
+    contestants get is some positive integer <span class="tex2jax_process">$X$</span>, and the contestants must respond
+    with a question of the form “What is <span class="tex2jax_process">$n$</span> choose <span class="tex2jax_process">$k$</span>?” (and this is a correct response
+    if the binomial coefficient <span class="tex2jax_process">$n$</span> choose <span class="tex2jax_process">$k$</span> equals <span class="tex2jax_process">$X$</span>).</p>
+<p>Write an AI to play this new Jeopardy category. If there are
+    several different possible solutions for <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, the AI should choose the most
+    elegant solution, having the smallest value of <span class="tex2jax_process">$n$</span>, and of those with the smallest
+    <span class="tex2jax_process">$n$</span> it should choose the
+    one with the smallest value of <span class="tex2jax_process">$k$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of a single integer <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$1
+    \le X \le 10^{100}$</span>).</p>
+<h2>Output</h2>
+<p>Output two non-negative integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> such that the binomial coefficient
+    <span class="tex2jax_process">$n$</span> choose <span class="tex2jax_process">$k$</span> equals <span class="tex2jax_process">$X$</span>, with ties between multiple
+    solutions broken as explained above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+</pre>
+</td>
+<td>
+<pre>5 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2020
+</pre>
+</td>
+<td>
+<pre>2020 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

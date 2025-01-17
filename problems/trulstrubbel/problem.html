@@ -1,0 +1,170 @@
+<div class="problembody">
+<p>Truls and Henry are playing table tennis against each
+    other.</p>
+<p>Both Truls and Henry strongly dislike math. More than
+    anything, they hate calculating how many points each of them
+    has during the game. To simplify scoring, they have come up
+    with their own solution:</p>
+<p>Instead of constantly keeping track of their points, they
+    write a “<tt class="ttfamily">T</tt>” if Truls scores a point
+    and an “<tt class="ttfamily">H</tt>” if Henry scores a point,
+    immediately after each won rally.</p>
+<p>When Truls and Henry play table tennis, the scoring system
+    works according to these three rules:</p>
+<ol class="enumerate">
+<li>
+<p>One point is awarded after each rally.</p>
+</li>
+<li>
+<p>A player wins a match if both of the following
+        conditions are met:</p>
+<ul class="itemize">
+<li>
+<p>The player leads by at least 2 points over their
+            opponent.</p>
+</li>
+<li>
+<p>The player has at least 11 points.</p>
+</li>
+</ul>
+<p>For example, if Truls has 11 points and Henry has 9
+        points, Truls is declared the winner. But if Truls has 11
+        points and Henry has 10 points, there is no winner yet.</p>
+</li>
+<li>
+<p>When a player wins according to the criteria above, the
+        points for both players are reset to zero, and a new match
+        begins.</p>
+</li>
+</ol>
+<p>Now Truls and Henry have been playing for a long time, and
+    both want to know the current score. They ask you to write a
+    program that calculates the current score for them based on
+    their notes.</p>
+<h2>Input</h2>
+<p>Input consists of Truls and Henry’s notes, which consists of
+    multiple letters on a single line. The number of letters is
+    between 1 and 30. Each letter will be either “<tt class="ttfamily">T</tt>” or “<tt class="ttfamily">H</tt>”.</p>
+<h2>Output</h2>
+<p>Print the score of the ongoing match as <span class="tex2jax_process">$T$</span>-<span class="tex2jax_process">$H$</span>, where <span class="tex2jax_process">$T$</span> is the number of points Truls has,
+    and <span class="tex2jax_process">$H$</span> is the number of
+    points Henry has.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>A match always ends as soon as one player reaches 11
+          points.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$60$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p>In total, Truls has won 4 points, and Henry has won 5
+    points.</p>
+<h2>Explanation of Sample 2</h2>
+<p>Since Truls won the match when the score reached <tt class="ttfamily">11-0</tt>, the score was reset to <tt class="ttfamily">0-0</tt>.</p>
+<h2>Explanation of Sample 3</h2>
+<p>Even though both have more than 11 points, neither leads by
+    2 points. Therefore, no winner has been declared yet.</p>
+<h2>Explanation of Sample 4</h2>
+<p>This game is a continuation of sample 3, where Henry wins
+    the match after scoring two more points. The score is reset,
+    and Henry then wins another point. Therefore, the score is
+    <tt class="ttfamily">0-1</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>TTTHHHTHH
+</pre>
+</td>
+<td>
+<pre>4-5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>TTTTTTTTTTT
+</pre>
+</td>
+<td>
+<pre>0-0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>THTHTHTHTHTHTHTHTHTHTHTH
+</pre>
+</td>
+<td>
+<pre>12-12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>THTHTHTHTHTHTHTHTHTHTHTHHHH
+</pre>
+</td>
+<td>
+<pre>0-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

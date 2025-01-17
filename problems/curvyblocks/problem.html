@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>You’re doing some construction work, and, to save money,
+    you’re using some discount, “irregular” construction materials.
+    In particular, you have some blocks that are mostly
+    rectangular, but with one edge that’s curvy. As illustrated
+    below, you’re going to use these irregular blocks between
+    stacks of ordinary blocks, so they won’t shift sideways or
+    rotate. You’ll put one irregular block on the bottom, with its
+    curvy edge pointing up, and another above it, with it’s curvy
+    edge pointing down. You just need to know how well these blocks
+    fit together. You define the fit quality as the maximum
+    vertical gap between the upper edge of the bottom block and the
+    lower edge of the top block when the upper block is just
+    touching the lower one.</p>
+<div class="figure" id="blocks.lab">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{blocks}" src="/problems/curvyblocks/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Block stacking and coordinate system
+        </div>
+</center>
+</div>
+<p>All blocks are one unit wide. You’ve modeled the curvy edges
+    as cubic polynomials, with the left edge of the block at
+    <span class="tex2jax_process">$x = 0$</span> and the right edge
+    at <span class="tex2jax_process">$x = 1$</span>.</p>
+<h2>Input</h2>
+<p>Each test case is given on two lines, with each line
+    containing four real numbers. The numbers on the first line,
+    <span class="tex2jax_process">$b_0~ b_1~ b_2~ b_3$</span>,
+    describe the shape of the upper edge of the bottom block. This
+    edge is shaped just like the polynomial <span class="tex2jax_process">$b_0 + b_1 x + b_2 x^2 + b_3 x^3$</span> for
+    <span class="tex2jax_process">$0 \leq x \leq 1$</span>. The
+    numbers on the next input line, <span class="tex2jax_process">$t_0~ t_1~ t_2~ t_3$</span>, describe the
+    bottom edge of the block that’s going on top. This edge is
+    shaped just like the polynomial <span class="tex2jax_process">$t_0 + t_1 x + t_2 x^2 + t_3 x^3$</span> for
+    <span class="tex2jax_process">$0 \leq x \leq 1$</span>. No
+    input value will have magnitude greater than <span class="tex2jax_process">$50 000$</span>. There are at most 500 test
+    cases. Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each test case, print out a single line giving the fit
+    quality. An answer is considered correct if its absolute or
+    relative error is at most <span class="tex2jax_process">$10^{-7}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.000000 -12.904762 40.476190 -28.571429
+3.000000 11.607143 -34.424603 22.817460
+2.000000 -10.845238 16.964286 -10.119048
+3.000000 4.190476 -3.571429 2.380952
+</pre>
+</td>
+<td>
+<pre>
+4.396074
+6.999999
+</pre>
+</td>
+</tr>
+</table>
+</div>

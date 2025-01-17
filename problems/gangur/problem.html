@@ -1,0 +1,136 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/gangur/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gangur/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://unsplash.com/photos/RlC1eHzJOFI">Hallway</a> by
+        Chuttersnap, Unsplash
+      </div>
+</div>Several people are walking through a narrow hallway. When
+    two people meet they have to turn to the side to pass each
+    other. The hallway is split into sections. In some sections
+    there is a person and some sections are empty. Each person is
+    facing either end of the hallway and they all walk at the same
+    speed. How many people have had to pass each other when all
+    individuals have walked to their end of the hallway?
+    <h2>Input</h2>
+<p>The input consists of a single line describing the contents
+    of all the section of the hallway. The hallway is at least
+    <span class="tex2jax_process">$1$</span> section and at most
+    <span class="tex2jax_process">$10^6$</span> sections. If the
+    hallway is described by <tt class="ttfamily">&gt;</tt> then
+    there is a person there facing right. If the hallway is
+    described by <tt class="ttfamily">&lt;</tt> then there is a
+    person there facing left. If the hallway is described by
+    <tt class="ttfamily">-</tt> then there is no person there.</p>
+<h2>Output</h2>
+<p>The output should contain a single integer, the number of
+    times two people pass each other in the hallway.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The only section described by <tt class="ttfamily">&gt;</tt> is the first section</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All <tt class="ttfamily">&gt;</tt> are to the left of
+          <tt class="ttfamily">&lt;</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are at most <span class="tex2jax_process">$1\,
+          000$</span> sections</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>&gt;-&lt;-&lt;&lt;-&lt;
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>&gt;-&gt;&gt;--&gt;-&lt;&lt;-&lt;&lt;&lt;
+</pre>
+</td>
+<td>
+<pre>20
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>&lt;&gt;&lt;-&lt;-&gt;-&lt;
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

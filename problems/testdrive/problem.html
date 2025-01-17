@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Larry developed a new driverless car, and he’s about to test
+    it. He’ll be working from home and analyzing what the car does
+    in a straight, empty road from a safe distance.</p>
+<p>Due to an unprecedented issue, the only information that
+    Larry’s able to get from the car is its position in meters from
+    the start of the road. While he gets an update every minute, he
+    would like to know what the car has been doing.</p>
+<p>Given three distinct positions <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span> taken one minute from each other,
+    Larry would like to know if the car switched direction, or if
+    it braked, accelerated, or cruised at the same speed. Can you
+    help out Larry?</p>
+<h2>Input</h2>
+<p>Input consists of a single line with three distinct
+    space-separated integers <span class="tex2jax_process">$0 \leq
+    a, b, c \leq 1\, 000$</span>, the position of the car in meters
+    from the start of the road, measured every minute.</p>
+<h2>Output</h2>
+<p>If the car changed direction, output <tt class="ttfamily">turned</tt>. Otherwise, output <tt class="ttfamily">accelerated</tt> if it travelled a greater distance
+    in the second minute than the first, <tt class="ttfamily">braked</tt> if it travelled a smaller distance in
+    the second minute than the first, or <tt class="ttfamily">cruised</tt> if it travelled the same distance
+    during both minutes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 3
+</pre>
+</td>
+<td>
+<pre>cruised
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4 1
+</pre>
+</td>
+<td>
+<pre>accelerated
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 9 7
+</pre>
+</td>
+<td>
+<pre>turned
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>10 20 25
+</pre>
+</td>
+<td>
+<pre>braked
+</pre>
+</td>
+</tr>
+</table>
+</div>

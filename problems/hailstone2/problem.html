@@ -1,0 +1,46 @@
+<div class="problembody">
+<p>Given an integer <span class="tex2jax_process">$n$</span>,
+    its <em>hailstone sequence</em> is constructed in the following
+    way. First, the integer <span class="tex2jax_process">$n$</span> is itself added as the first
+    number of the sequence. The following procedure is then
+    repeated. If the last integer <span class="tex2jax_process">$a$</span> added to the sequence is even, we
+    add <span class="tex2jax_process">$\frac{a}{2}$</span> to the
+    sequence. If it is odd, we add <span class="tex2jax_process">$3a + 1$</span> to the sequence. Whenever the
+    integer <span class="tex2jax_process">$1$</span> is added to
+    the sequence, the procedure concludes and the sequence
+    generated is the hailstone sequence of <span class="tex2jax_process">$n$</span>.</p>
+<p>For example, with <span class="tex2jax_process">$n =
+    7$</span>, we get the sequence</p><span class="tex2jax_process">\[ 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10,
+    5, 16, 8, 4, 2, 1 \]</span>
+<p>This has length <span class="tex2jax_process">$17$</span>.</p>
+<p>It is unknown if the hailstone sequence is finite for every
+    positive integer <span class="tex2jax_process">$n$</span>.
+    Proving whether this is the case or not is known as the
+    <span class="tex2jax_process">$3n + 1$</span> problem, or the
+    <em>Collatz conjecture</em>. It has been proven that the
+    longest sequence among all <span class="tex2jax_process">$n \le
+    10^{12}$</span> has length 1349.</p>
+<p>Given an integer <span class="tex2jax_process">$n$</span>,
+    determine the length of its hailstone sequence.</p>
+<h2>Input</h2>
+<p>The input consists of an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^{12}$</span>).</p>
+<h2>Output</h2>
+<p>Output a single integer – the length of the sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+</pre>
+</td>
+<td>
+<pre>17
+</pre>
+</td>
+</tr>
+</table>
+</div>

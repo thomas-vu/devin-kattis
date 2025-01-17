@@ -1,0 +1,45 @@
+<div class="problembody">
+<p>Hsara and Simone like to communicate without anyone else
+    knowing what they’re saying. This time, Simone invented a very
+    sneaky cipher. When she wants to tell Hsara a non-negative
+    number <span class="tex2jax_process">$n$</span>, she performs
+    the following encryption procedure.</p>
+<p>Let <span class="tex2jax_process">$d(n)$</span> denote the
+    decimal expansion of <span class="tex2jax_process">$n$</span>.
+    Consider the string <span class="tex2jax_process">$x := d(n)^
+    n$</span>, i.e., the decimal expansion of <span class="tex2jax_process">$n$</span> concatenated with itself
+    <span class="tex2jax_process">$n$</span> times. The encryption
+    of <span class="tex2jax_process">$n$</span> is then the length
+    of <span class="tex2jax_process">$x$</span>.</p>
+<p>As an example, assume Simone wants to encrypt the number
+    <span class="tex2jax_process">$10$</span>. Then</p><span class="tex2jax_process">\[ x = 10101010101010101010. \]</span>
+<p>The length of <span class="tex2jax_process">$x$</span> is
+    then <span class="tex2jax_process">$20$</span>, which will be
+    the encrypted value of <span class="tex2jax_process">$x$</span>.</p>
+<p>Hsara had no problem writing a decryption algorithm for this
+    procedure. But can you?</p>
+<h2>Input</h2>
+<p>The first and only line contains an integer <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$0
+    \leq L \leq 10^{{10}^6}$</span>), the encrypted value of some
+    non-negative integer <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line containing the integer <span class="tex2jax_process">$n$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+20
+</pre>
+</td>
+<td>
+<pre>
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

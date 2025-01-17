@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Each resident of a particular town is a member of zero or
+    more clubs and also a member of exactly one political party.
+    Each club is to appoint one of its members to represent it on
+    the town council so that the number of council members
+    belonging to any given party does not equal or exceed half the
+    membership of the council. The same person may not represent
+    two clubs; that is there must be a 1-1 relationship between
+    clubs and council members. Your job is to select the council
+    members subject to these constraints.</p>
+<h2>Input</h2>
+<p>In the first line of input there will be an integer
+    <span class="tex2jax_process">$T \le 12$</span>, giving the
+    number of test cases.</p>
+<p>Each of the <span class="tex2jax_process">$T$</span>
+    testcases begins with a line with the number of residents
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1 \leq n \leq 1\, 000$</span>. The next
+    <span class="tex2jax_process">$n$</span> lines each contain a
+    resident, a party, the number of clubs the resident belongs to
+    (at most <span class="tex2jax_process">$110$</span>) and the
+    names of such clubs. Each resident appears in exactly one input
+    line.</p>
+<h2>Output</h2>
+<p>For each test case, follow the following format: Each line
+    should name a council member followed by the club represented
+    by the member. If several answers are possible, any will do. If
+    no council can be formed, print “Impossible.” in a line. There
+    will be a blank line in between two test cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+4
+fred dinosaur 2 jets jetsons
+john rhinocerous 2 jets rockets
+mary rhinocerous 2 jetsons rockets
+ruth platypus 1 rockets
+4
+fred dinosaur 2 jets jetsons
+john rhinocerous 2 jets rockets
+mary rhinocerous 2 jetsons rockets
+ruth platypus 1 rockets
+</pre>
+</td>
+<td>
+<pre>fred jetsons
+john jets
+ruth rockets
+
+fred jetsons
+john jets
+ruth rockets
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1
+fred dinosaur 2 jets jetsons
+</pre>
+</td>
+<td>
+<pre>Impossible.
+</pre>
+</td>
+</tr>
+</table>
+</div>

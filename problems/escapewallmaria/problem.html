@@ -1,0 +1,113 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/escapewallmaria/file/statement/en/img-0001.jpg" class="illustration" src="/problems/escapewallmaria/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://en.wikipedia.org/wiki/File:Shingeki_no_Kyojin_manga_volume_1.jpg">
+        WikiMedia (fair use)</a>
+</div>
+</div>
+<p>Wall Maria has been broken! Eren must evacuate as soon as
+    possible from his house. He must find the fastest route to
+    escape within Wall Maria before the titans rush in. Wall Maria
+    is represented as a <span class="tex2jax_process">$N \times
+    M$</span> grid in which Eren can move horizontally or
+    vertically.</p>
+<p>There are burning houses and buildings which prevent Eren
+    from passing through them. The burning houses and buildings are
+    represented as ‘<tt class="ttfamily">1</tt>’. Unburned or safe
+    areas are represented as ‘<tt class="ttfamily">0</tt>’. There
+    are some areas which can be entered but only from a specific
+    direction. These areas can be represented by either ‘<tt class="ttfamily">U</tt>’, ‘<tt class="ttfamily">D</tt>’, ‘<tt class="ttfamily">L</tt>’, or ‘<tt class="ttfamily">R</tt>’. For
+    example, if there is an ‘<tt class="ttfamily">R</tt>’ that
+    means that area can only be entered from the right neighboring
+    tile within Wall Maria’s grid. Similarly, ‘<tt class="ttfamily">U</tt>’ tiles can only be entered from above,
+    ‘<tt class="ttfamily">D</tt>’ tiles can only be entered from
+    below, and ‘<tt class="ttfamily">L</tt>’ tiles can only be
+    entered from the left.</p>
+<p>Eren knows the time <span class="tex2jax_process">$t$</span>
+    at which the titans will rush in. It takes <span class="tex2jax_process">$1$</span> unit of time to traverse
+    <span class="tex2jax_process">$1$</span> zone (which
+    corresponds to <span class="tex2jax_process">$1$</span> tile in
+    the grid). Once he reaches any border of Wall Maria he is
+    safe.</p>
+<p>Eren’s starting position is represented by the letter
+    ‘<tt class="ttfamily">S</tt>’. If Eren escapes at or before
+    time <span class="tex2jax_process">$t$</span>, he is safe.
+    Given his position within Wall Maria determine if it is
+    possible to escape. If it is possible determine the number of
+    zones that must be traversed to lead to the quickest
+    escape.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    contains three integers <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1
+    \le t \le 200$</span>) , <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \le M \le 100$</span>). The rest of N lines will be Wall
+    Maria’s grid containing characters ‘<tt class="ttfamily">1</tt>‘, ‘<tt class="ttfamily">0</tt>‘, ‘<tt class="ttfamily">S</tt>‘, ‘<tt class="ttfamily">U</tt>‘, ‘<tt class="ttfamily">D</tt>‘, ‘<tt class="ttfamily">L</tt>‘, or
+    ‘<tt class="ttfamily">R</tt>‘. There is exactly one ‘<tt class="ttfamily">S</tt>‘ in the input.</p>
+<h2>Output</h2>
+<p>If it is possible to escape Wall Maria, output the minimum
+    number of zones that must be traversed to escape. If it is not
+    possible to escape, print “<tt class="ttfamily">NOT
+    POSSIBLE</tt>”!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4 4
+1111
+1S01
+1011
+0U11
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 4 4
+1111
+1S01
+1011
+0L11
+</pre>
+</td>
+<td>
+<pre>NOT POSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 4 4
+1S01
+1001
+1011
+0U11
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

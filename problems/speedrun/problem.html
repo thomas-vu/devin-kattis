@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/speedrun/file/statement/en/img-0001.jpg" class="illustration" src="/problems/speedrun/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You aspire to become a top Minecraft survival speedrunner.
+    So, you need to come up with a strategy to do every necessary
+    task quickly and efficiently. After watching a lot of previous
+    world record speedruns, you noticed that the first day is the
+    most crucial.<br/></p>
+<p>You need to finish at least <span class="tex2jax_process">$G$</span> tasks on the first Minecraft day
+    for the speedrun to succeed. Each Minecraft day is <span class="tex2jax_process">$24\, 000$</span> ticks long, and thus to be
+    a true gamer, you decided to do your math in Minecraft lingo.
+    You can only work on one task at a time, and you cannot start
+    another task before finishing your current task. Each task can
+    only be done in a specific period of time <span class="tex2jax_process">$0 \leq t_{start} &lt; t_{end} \leq 24\,
+    000$</span>. Note: so long as the starting time of a task is
+    greater than or equal to the end time of the previous task, the
+    task can be scheduled with no conflict.<br/></p>
+<p>Given <span class="tex2jax_process">$G$</span>, the minimum
+    number of tasks you need to do on the first Minecraft day;
+    <span class="tex2jax_process">$N$</span>, the number of
+    possible tasks you can do, and their corresponding time period,
+    determine whether this run can be successful.<br/></p>
+<h2>Input</h2>
+<p>The first line consists of <span class="tex2jax_process">$2$</span> space-separated integers,
+    <span class="tex2jax_process">$0 &lt; G \leq N &lt;
+    10^5$</span>, the number of tasks you need to do on the first
+    day and the total number of tasks. The next <span class="tex2jax_process">$N$</span> lines each consist of <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$t_{start}$</span> and <span class="tex2jax_process">$t_{end}$</span>, where <span class="tex2jax_process">$0 \leq t_{start} &lt; t_{end} \leq 24\,
+    000$</span>.<br/></p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">YES</tt>” if the run can be
+    potentially successful, and “<tt class="ttfamily">NO</tt>”
+    otherwise.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+0 20
+20 24000
+19 21
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+3 5
+1 4
+4 24000
+0 17000
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+1 501
+500 1001
+1000 1501
+1500 2000
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

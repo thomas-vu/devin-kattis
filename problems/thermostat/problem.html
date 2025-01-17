@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/thermostat/file/statement/en/img-0001.png" class="illustration" src="/problems/thermostat/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by TheVovaNik (<a href="https://commons.wikimedia.org/wiki/File:Fahrenheit_Celsius_scales.svg">Wikimedia
+        Commons</a>), <span class="mbox" style="width:">CC BY-SA
+        4.0</span>
+</div>
+</div>
+<p>Earth has recently been visited by aliens, and is now a
+    member of a galactic federation consisting of many other
+    advanced lifeforms on numerous habitable planets. This
+    federation is very impressive in its scope and accomplishments,
+    but unfortunately the usual failures of bureaucracy have become
+    evident as the federation has failed to adopt a universal
+    system of units. In particular, the units used to represent
+    temperature vary drastically from world to world, which causes
+    endless headaches for the galactic tourism industry.</p>
+<p>A major problem occurs whenever an individual from one
+    planet visits another planet and needs to adjust a hotel room
+    thermostat, as most species are unable to perform the mental
+    calculations necessary to determine the appropriate thermostat
+    setting in unfamiliar units. You are an intern at Hubble
+    Optimal Temperatures (H.O.T.), an Earth-based galactic startup
+    company, and it is your job to write the backend code for an
+    app that allows individuals to convert temperatures from any
+    unit system to any other unit system. (Fortunately, other
+    employees with more extensive training in LCI
+    (Lifeform-Computer Interaction) are responsible for designing
+    the interface.)</p>
+<p>At the beginning of your project you are given a large file
+    containing temperature conversion information for every unit
+    system in the galaxy. Specifically, for each unit system
+    <span class="tex2jax_process">$U$</span> there are two
+    integers, <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> (with <span class="tex2jax_process">$a \neq b$</span>), where <span class="tex2jax_process">$a$</span> is the temperature value in
+    <span class="tex2jax_process">$U$</span> corresponding to
+    <span class="tex2jax_process">$0$</span> degrees Celsius, and
+    <span class="tex2jax_process">$b$</span> is the temperature
+    value in <span class="tex2jax_process">$U$</span> corresponding
+    to <span class="tex2jax_process">$100$</span> degrees Celsius.
+    Note that temperature values in <span class="tex2jax_process">$U$</span> are always related to Celsius in a
+    linear fashion. In other words, if <span class="tex2jax_process">$f$</span> is a function that maps Celsius
+    values to temperature values in <span class="tex2jax_process">$U$</span>, then there is a constant
+    <span class="tex2jax_process">$c$</span> such that for every
+    fixed real number <span class="tex2jax_process">$\delta
+    $</span>, <span class="tex2jax_process">$f(t + \delta ) = f(t)
+    + c \cdot \delta $</span> for any temperature <span class="tex2jax_process">$t$</span> in Celsius.</p>
+<p>The unit systems in your input file are indexed <span class="tex2jax_process">$1, 2, 3, \ldots $</span>. The module you are
+    writing for the app should handle queries consisting of three
+    integers, <span class="tex2jax_process">$x$</span>,
+    <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$v$</span>, where <span class="tex2jax_process">$x$</span> is the index of the unit system
+    you are converting <em>from</em>, <span class="tex2jax_process">$y$</span> is the index of the unit system
+    you are converting <em>to</em>, and <span class="tex2jax_process">$v$</span> is a temperature value in
+    <span class="tex2jax_process">$x$</span> that you need to
+    convert to the corresponding temperature value in <span class="tex2jax_process">$y$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers, <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1 \leq N \leq 100$</span>, <span class="tex2jax_process">$1 \leq Q \leq 10\, 000$</span>), indicating
+    the number of unit systems in the galaxy and the number of
+    queries to your backend module, respectively.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    correspond to unit systems indexed <span class="tex2jax_process">$1, 2, 3, \ldots , N$</span>, in that order.
+    Each line contains two space-separated integers, <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$-10^6 \leq a, b \leq 10^6$</span>,
+    <span class="tex2jax_process">$a \neq b$</span>), where
+    <span class="tex2jax_process">$a$</span> is the unit system’s
+    temperature value corresponding to <span class="tex2jax_process">$0$</span> degrees Celsius, and <span class="tex2jax_process">$b$</span> is the unit system’s temperature
+    value corresponding to <span class="tex2jax_process">$100$</span> degrees Celsius.</p>
+<p>Each of the next <span class="tex2jax_process">$Q$</span>
+    lines contains three space-separated integers, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1
+    \leq x,y \leq N$</span>, <span class="tex2jax_process">$-10^6
+    \leq v \leq 10^6$</span>), where <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> are indices of unit systems, and
+    <span class="tex2jax_process">$v$</span> is a temperature value
+    in system <span class="tex2jax_process">$x$</span> that you
+    need to convert to the corresponding temperature value in
+    system <span class="tex2jax_process">$y$</span>.</p>
+<h2>Output</h2>
+<p>For each query output a line containing the temperature
+    value <span class="tex2jax_process">$v$</span> converted from
+    unit system <span class="tex2jax_process">$x$</span> to unit
+    system <span class="tex2jax_process">$y$</span> as a fraction
+    <span class="tex2jax_process">$c/d$</span>, where <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> are integers, the fraction is in
+    reduced form, and only <span class="tex2jax_process">$c$</span>
+    is allowed to be negative. (Output <tt class="ttfamily">0/1</tt> when the answer is 0.)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 6
+0 100
+32 212
+88 7
+1 2 15
+1 2 -40
+1 2 21
+2 1 80
+2 1 90
+2 3 252
+</pre>
+</td>
+<td>
+<pre>
+59/1
+-40/1
+349/5
+80/3
+290/9
+-11/1
+</pre>
+</td>
+</tr>
+</table>
+</div>

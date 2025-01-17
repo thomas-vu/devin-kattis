@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/racingalphabet/file/statement/en/img-0001.png" class="illustration" src="/problems/racingalphabet/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Soccer coach Joe has invented a new fitness game that he
+    thinks will help his players’ agility and fitness. The center
+    circle of the soccer pitch has a diameter of <span class="tex2jax_process">$60$</span> feet. He marks <span class="tex2jax_process">$28$</span> evenly-spaced points on the
+    circumference of the circle. On the first point (arbitrarily
+    chosen) he places a pile of tokens all inscribed with the
+    letter ’A’. On the second point he places a pile of ’B’ tokens,
+    and so on, covering <span class="tex2jax_process">$26$</span>
+    of the <span class="tex2jax_process">$28$</span> points. He
+    places a pile of blanks (or space-characters) on the
+    <span class="tex2jax_process">$27^{\rm th}$</span> point and a
+    pile of disks imprinted with single quotation marks, on the
+    last point.</p>
+<p>He gives each player a slip of paper containing an aphorism,
+    such as “WINNING ISN’T EVERYTHING IT’S THE ONLY THING” Notice
+    that the only punctuation marks allowed are spaces and single
+    quotation marks. Each player gets a different aphorism.</p>
+<p>A player starts outside the circle next to the first letter
+    of his aphorism and, on Joe’s “GO” signal, the player picks up
+    his first disk and then takes off running around the outside of
+    the circle, picking up the remaining disks in the order that
+    the corresponding letters appear in the aphorism. A smart
+    player will take the shortest route, possibly changing
+    direction, between consecutive letters of his aphorism.</p>
+<p>One of the assistant coaches makes a note of the player’s
+    time. Although Joe initially envisioned all of his <span class="tex2jax_process">$20$</span> players running around the circle
+    simultaneously, this idea was scrapped due to contusions and
+    fractures.</p>
+<p>Joe wants you to write a program to estimate the expected
+    time for <b class="bf">one</b> smart player to complete each of
+    the aphorisms. Assume for simplicity that the player runs at
+    <span class="tex2jax_process">$15$</span> feet per second
+    between stops for pickups and that each pickup takes
+    <span class="tex2jax_process">$1$</span> second.</p>
+<h2>Input</h2>
+<p>The input begins with a number <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$(1
+    \leq N \leq 20)$</span> giving the number of aphorisms to
+    follow. <span class="tex2jax_process">$N$</span> lines follow,
+    each one containing an aphorism made up of upper-case letters,
+    single quotation marks, and spaces. Each aphorism will be
+    between <span class="tex2jax_process">$8$</span> and
+    <span class="tex2jax_process">$120$</span> characters
+    inclusive.</p>
+<h2>Output</h2>
+<p>For each aphorism give the time for a smart player to
+    complete the task. Your answer should be accurate to within
+    <span class="tex2jax_process">$10^{-6}$</span> seconds.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+WINNING ISN'T EVERYTHING IT'S THE ONLY THING
+WINNERS DON'T WAIT FOR CHANCES THEY TAKE THEM
+PAIN IS ONLY TEMPORARY BUT VICTORY IS FOREVER
+</pre>
+</td>
+<td>
+<pre>
+187.6156641641
+190.4108599662
+193.1036536692
+</pre>
+</td>
+</tr>
+</table>
+</div>

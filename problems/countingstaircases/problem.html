@@ -1,0 +1,71 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/countingstaircases/file/statement/en/img-0001.jpg" class="illustration" src="/problems/countingstaircases/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Umi’s Flags
+      </div>
+</div>
+<p>Umi Matsuzaki is raising signal flags to wish sailors good
+    luck. She has <span class="tex2jax_process">$N$</span> flags
+    with different heights. Her <span class="tex2jax_process">$N$</span> flags are represented by distinct
+    integers <span class="tex2jax_process">$a_1, a_2, a_3, \dotsc ,
+    a_N$</span>, where <span class="tex2jax_process">$a_i$</span>
+    corresponds to the height of the <span class="tex2jax_process">$i$</span>th flag.</p>
+<p>Umi realizes that her signal flags are especially easy to
+    see when they form patterns known as “staircases.” Umi knows a
+    special width <span class="tex2jax_process">$M$</span>. Then,
+    define a “staircase” as a sequence of <span class="tex2jax_process">$2M-1$</span> flags such that the first
+    <span class="tex2jax_process">$M$</span> flag heights form an
+    increasing sequence and the last <span class="tex2jax_process">$M$</span> flag heights form a decreasing
+    sequence. Formally, a staircase is a sequence of <span class="tex2jax_process">$2M - 1$</span> flags whose heights are
+    <span class="tex2jax_process">$b_1, b_2, \dotsc ,
+    b_{2m-1}$</span>, where <span class="tex2jax_process">$b_1 &lt;
+    b_2 &lt; \dotsc &lt; b_m$</span> and <span class="tex2jax_process">$b_m &gt; b_{m+1} &gt; b_{m+2} \dotsc &gt;
+    b_{2m-1}$</span>.</p>
+<p>Umi can rearrange her <span class="tex2jax_process">$N$</span> flags in any order. She notices
+    that there may be groups of consecutive <span class="tex2jax_process">$2M -1$</span> flags in her ordering that
+    form staircases. Compute the maximum number of staircases
+    possible after considering all rearrangements of her
+    <span class="tex2jax_process">$N$</span> flags. Also, give an
+    ordering of Umi’s flags that produces this maximum number of
+    staircases.</p>
+<h2>Input</h2>
+<p>The first line of input contain two space-separated integers
+    <span class="tex2jax_process">$N \: (3 \leq N \leq 200\,
+    000)$</span>, the number of flags Umi owns, and <span class="tex2jax_process">$M \: (2 \leq M \leq \lceil \frac{N}{2}
+    \rceil )$</span>, denoting that a staircase must consist of
+    <span class="tex2jax_process">$2M - 1$</span> flags. The second
+    line of input contains <span class="tex2jax_process">$N$</span>
+    space-separated integers <span class="tex2jax_process">$a_1,
+    a_2, a_3, \dotsc , a_N$</span> where <span class="tex2jax_process">$-10^5 \leq a_i \leq 10^5$</span>. Each
+    <span class="tex2jax_process">$a_i$</span> represents the
+    height of the <span class="tex2jax_process">$i$</span>-th flag,
+    and all <span class="tex2jax_process">$a_i$</span> are
+    distinct.</p>
+<h2>Output</h2>
+<p>The first line of output should contain the maximum amount
+    of staircases possible in an ordering of Umi’s <span class="tex2jax_process">$N$</span> flags. The second line of output
+    should contain <span class="tex2jax_process">$N$</span>
+    space-separated integers, where the <span class="tex2jax_process">$i$</span>-th integer corresponds to the
+    height of the <span class="tex2jax_process">$i$</span>-th flag
+    in an optimal ordering of Umi’s flags. If there are multiple
+    optimal orderings, you may output any such ordering.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 2
+-5 7 1 4 -3 6 2 11
+</pre>
+</td>
+<td>
+<pre>3
+-5 7 1 6 -3 4 2 11
+</pre>
+</td>
+</tr>
+</table>
+</div>

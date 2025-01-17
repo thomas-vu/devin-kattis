@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/tgif/file/statement/en/img-0001.jpg" class="illustration" src="/problems/tgif/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A wall calendar displaying the date 10 OCT. From the
+        remains of the newspaper we can infer that January 1 was a
+        Monday.
+      </div>
+</div>
+<p>Friday is the highlight of Børge and Åse’s life. They can
+    meet up with their buddies in the ITU Friday bar and discuss
+    anything they want: the weather, sports, favourite editors,
+    politics, religion, and gossip about celebrities. Life can be
+    good.</p>
+<p>Unfortunately, they don’t know which day of the week it is!
+    They’ve woken up in a strange apartment, phones missing, and
+    with little memory of the recent past. Which day is it? Which
+    <em>year</em> is it even?</p>
+<p>After some searching, they establish today’s date, because
+    the calendar on the wall displays it. Also, Åse has found the
+    remains of an old newspaper from 1 January in her handbag,
+    which has that weekday printed on the front page.</p>
+<p>Help Børge and Åse figure out if today is Friday.</p>
+<h2>Input</h2>
+<p>On the first line, today’s date. The date consists of two
+    parts, separated by space. The first part is in an integer (the
+    day of the month) <span class="tex2jax_process">$d$</span>,
+    with <span class="tex2jax_process">$1\leq d\leq 31$</span>. The
+    second part is the name of the month, abbreviated as <tt class="ttfamily">JAN</tt>, <tt class="ttfamily">FEB</tt>, <tt class="ttfamily">MAR</tt>, <tt class="ttfamily">APR</tt>, <tt class="ttfamily">MAY</tt>, <tt class="ttfamily">JUN</tt>, <tt class="ttfamily">JUL</tt>, <tt class="ttfamily">AUG</tt>, <tt class="ttfamily">SEP</tt>, <tt class="ttfamily">OCT</tt>, <tt class="ttfamily">NOV</tt>, or <tt class="ttfamily">DEC</tt>.</p>
+<p>On the second line, the name of the day on 1 January of the
+    current year, abbreviated as <tt class="ttfamily">MON</tt>,
+    <tt class="ttfamily">TUE</tt>, <tt class="ttfamily">WED</tt>,
+    <tt class="ttfamily">THU</tt>, <tt class="ttfamily">FRI</tt>,
+    <tt class="ttfamily">SAT</tt>, <tt class="ttfamily">SUN</tt>.</p>
+<h2>Output</h2>
+<p>Output a single line: The four letters <tt class="ttfamily">TGIF</tt>, abbreviating “Thank God it’s Friday” if
+    today is certainly Friday. The two words <tt class="ttfamily">not sure</tt> if today might be Friday, depending on
+    if this year has a 29th of February. The emoticon <tt class="ttfamily">:(</tt> if today is certainly not Friday.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 OCT
+MON
+</pre>
+</td>
+<td>
+<pre>:(
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 JAN
+THU
+</pre>
+</td>
+<td>
+<pre>TGIF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>29 NOV
+TUE
+</pre>
+</td>
+<td>
+<pre>not sure
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,45 @@
+<div class="problembody">
+<p>We have two ways of writing out numeric values; we can print
+    them in decimal form, like <b class="bfseries">45</b>, or we
+    can write them out in text, like <b class="bfseries">forty-five</b>. You are a court reporter who gets
+    paid by the character, so you would always prefer to write out
+    numbers the long way. To that end, you are going to make sure
+    all of your documents have decimal values written out in text
+    rather than numbers, even if you have to get a program to help
+    you do it.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> lines of text, ending at the end
+    of file. All input string tokens are separated by single
+    spaces. Each token is either a decimal number or a string of
+    alphabet (a–z, A–Z) or simple punctuation characters. Decimal
+    numbers in the input are integers in the range <span class="tex2jax_process">$[0,99]$</span>. There are at most
+    <span class="tex2jax_process">$100$</span> tokens per line, and
+    all tokens have a length of at most <span class="tex2jax_process">$15$</span> characters.</p>
+<h2>Output</h2>
+<p>For each line of text in the input, print out a modified
+    version of that line with all occurrences of decimal numbers
+    replaced with words. For each decimal number you find, replace
+    it with hyphen-separated English words representing the same
+    value. Numbers that occur at the start of a line should start
+    with an uppercase letter.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+The speed limit is 40 mph, but you were going over 65
+99 bottles of ...
+</pre>
+</td>
+<td>
+<pre>
+The speed limit is forty mph, but you were going over sixty-five
+Ninety-nine bottles of ...
+</pre>
+</td>
+</tr>
+</table>
+</div>

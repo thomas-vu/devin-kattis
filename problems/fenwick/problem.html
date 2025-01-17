@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>A Fenwick Tree (also known as a Binary Indexed Tree) is a
+    data structure on an array which enables fast (<span class="tex2jax_process">$O(\log n)$</span>) updates and prefix sum
+    queries on the underlying data.</p>
+<p>For this problem, implement a Fenwick Tree to support
+    operations of two types: (a) increment an element in the array
+    or (b) query the prefix sum of a portion of the array.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$Q$</span>, where <span class="tex2jax_process">$1 \le N \le 5\, 000\, 000$</span> is the
+    length of the array and <span class="tex2jax_process">$0 \le Q
+    \le 5\, 000\, 000$</span> is the number of operations. Then
+    follow <span class="tex2jax_process">$Q$</span> lines giving
+    the operations. There are two types of operations:</p>
+<ul class="itemize">
+<li>
+<p>“<tt class="ttfamily">+ <span class="tex2jax_process">$i$</span> <span class="tex2jax_process">$\delta $</span></tt>” indicates that
+        <span class="tex2jax_process">$a[i]$</span> is incremented
+        by <span class="tex2jax_process">$\delta $</span>, where
+        <span class="tex2jax_process">$0 \le i &lt; N$</span> and
+        <span class="tex2jax_process">$-10^9 \le \delta \le
+        10^9$</span> (both are integers)</p>
+</li>
+<li>
+<p>“<tt class="ttfamily">? <span class="tex2jax_process">$i$</span></tt>” is a query for the value
+        of <span class="tex2jax_process">$a[0] + a[1] + \ldots +
+        a[i-1]$</span>, where <span class="tex2jax_process">$0 \le
+        i \le N$</span> (for <span class="tex2jax_process">$i =
+        0$</span> this is interpreted as an empty sum)</p>
+</li>
+</ul>
+<p>You should assume that every array entry is initially
+    <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>For each query in the input, output one line giving the
+    answer to that query.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 4
++ 7 23
+? 8
++ 3 17
+? 8
+</pre>
+</td>
+<td>
+<pre>23
+40
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
++ 0 -43
++ 4 1
+? 0
+? 5
+</pre>
+</td>
+<td>
+<pre>0
+-42
+</pre>
+</td>
+</tr>
+</table>
+</div>

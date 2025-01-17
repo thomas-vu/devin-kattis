@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>International Cell Processing Company (ICPC) is a world
+    leader in the analysis of genetic sequences. A genetic sequence
+    is a sequence of nucleotides, which in this problem is
+    represented by a string containing only the letters <tt class="ttfamily">A</tt>, <tt class="ttfamily">C</tt>, <tt class="ttfamily">G</tt>, and <tt class="ttfamily">T</tt> in some
+    combination, each letter representing a single nucleotide
+    (<b class="bfseries">A</b>denine, <b class="bfseries">C</b>ytosine, <b class="bfseries">G</b>uanine, and
+    <b class="bfseries">T</b>hymine, respectively).</p>
+<p>One of the key discoveries made by ICPC is that through a
+    process called Genetically Optimized Organic Folding (GOOF),
+    they can take a genetic sequence and transform it into a
+    simpler one, while preserving many of the properties of the
+    sequence that ICPC wants to analyze.</p>
+<p>A single application of GOOF works as follows. Find a point
+    between two adjacent nucleotides in the nucleotide sequence,
+    such that the sequence reads the same from that point in both
+    directions, up until the nearer end of the sequence. For
+    instance, in the sequence <tt class="ttfamily">ATTACC</tt>,
+    there are two such points: <tt class="ttfamily">AT-TACC</tt>
+    and <tt class="ttfamily">ATTAC-C</tt>. Then pick one of these
+    points (say, the first one), and fold the genetic sequence at
+    that point, merging the identical nucleotides (so, in this case
+    the <tt class="ttfamily">AT</tt> and <tt class="ttfamily">TA</tt> would become merged, and the resulting
+    sequence would be <tt class="ttfamily">CCAT</tt> or <tt class="ttfamily">TACC</tt>).</p>
+<p>Through repeated application of GOOF, a nucleotide can
+    potentially be made much shorter. However, manually searching
+    for the appropriate folding points is very time-consuming. ICPC
+    reached out to you to write a program that would automate the
+    process of finding the folding points and choosing them so as
+    to obtain the shortest possible genetic sequence from a given
+    input sequence.</p>
+<h2>Input</h2>
+<p>The input contains a single string <span class="tex2jax_process">$s$</span> representing the nucleotide
+    sequence to be analyzed. The string consists of characters
+    <tt class="ttfamily">A</tt>, <tt class="ttfamily">C</tt>,
+    <tt class="ttfamily">G</tt>, and <tt class="ttfamily">T</tt>
+    only. The length of <span class="tex2jax_process">$s$</span> is
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$4 \cdot 10^6$</span>,
+    inclusive.</p>
+<h2>Output</h2>
+<p>Output the smallest possible length of a sequence obtained
+    from the input by applying GOOF zero or more times.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ATTACC
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>AAAAGAATTAA
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

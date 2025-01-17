@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Egdirbhtel is running a successful restaurant, and every day
+    has either a new recipe idea or retires an old one. The
+    restaurant menu uses a unique number to represent each menu
+    item in order to help customers order items efficiently.
+    Unfortunately, the clientele find it confusing when a given
+    number represents a menu item, Egdirbhtel retires that item,
+    and soon afterwards adds a new item represented by that same
+    number.</p>
+<p>Egdirbhtel has come up with a solution: every positive
+    integer starts out as <i class="itshape">available</i>, and
+    becomes <i class="itshape">reserved</i> when it starts
+    representing a new menu item. When retiring a menu item on day
+    <span class="tex2jax_process">$i$</span>, the number that
+    represented it stays reserved for <span class="tex2jax_process">$d$</span> days, until it becomes available
+    again on day <span class="tex2jax_process">$i+d$</span>. When
+    Egdirbhtel adds a new menu item, the smallest <i class="itshape">available</i> positive integer on that particular day
+    will represent it.</p>
+<p>Because of the daily menu changes, Egdirbhtel would like you
+    to come up with a computer program to quickly determine which
+    number will represent each new item on the menu according to
+    the above process.</p>
+<p>The restaurant starts out with an empty menu, which might
+    become empty again on some days (in which case the angry
+    customers will convince Egdirbhtel to add something new to the
+    next day’s menu).</p>
+<h2>Input</h2>
+<p>Input begins with two space-separated integers <span class="tex2jax_process">$1 \leq d \leq U \leq 2 \cdot 10^5$</span>,
+    where <span class="tex2jax_process">$d$</span> indicates the
+    minimum number of days that need to pass after retiring a menu
+    item before its number can represent a new item, and
+    <span class="tex2jax_process">$U$</span> indicates the total
+    number of menu updates to process, with exactly one menu update
+    (adding a new item to the menu or retiring an old one) per
+    day.</p>
+<p>The next <span class="tex2jax_process">$U$</span> lines each
+    consist of either the single letter <tt class="ttfamily">a</tt>, signifying that Egdirbhtel adds a new menu
+    item that day, or the letter <tt class="ttfamily">r</tt>
+    followed (space-separated) by the number representing the menu
+    item that Egdirbhtel retires that day. This number will always
+    represent a menu item that the restaurant had at that time
+    according to the process described above.</p>
+<h2>Output</h2>
+<p>For every input line consisting of an <tt class="ttfamily">a</tt>, output a line consisting of the number
+    representing the newly-added menu item. (Since the menu starts
+    out empty, the output will always begin with a <tt class="ttfamily">1</tt>.)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+a
+a
+a
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 3
+a
+r 1
+a
+</pre>
+</td>
+<td>
+<pre>1
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+a
+a
+r 2
+a
+a
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

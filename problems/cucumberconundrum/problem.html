@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/cucumberconundrum/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cucumberconundrum/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A jar of sliced pickled cucumber. Author: <a href="https://en.wikipedia.org/wiki/User:W.carter">W.carter</a>,
+        License: CC BY-SA 4.0
+      </div>
+</div>Maj loves pickled cucumber (also known as
+    <em>pickles</em>). However, her partner is not as keen on
+    filling a sandwich with pickles. Maj would like to maximize the
+    amount of pickles on a sandwich, while still avoiding being
+    judged by her partner.
+
+    <p>Both Maj’s sandwich and the pickles have a circular shape.
+    The sandwich has radius <span class="tex2jax_process">$s$</span> cm and the pickles have radius
+    <span class="tex2jax_process">$r$</span> cm.</p>
+<p>Maj has exactly <span class="tex2jax_process">$n$</span>
+    pickles. She wants to place as many of them as possible on her
+    sandwich, as long as:</p>
+<ul class="itemize">
+<li>
+<p>at most <span class="tex2jax_process">$z \% $</span> of
+        the area of the sandwich is covered by pickles.</p>
+</li>
+<li>
+<p>no two pickles overlap (but they are allowed to
+        touch).</p>
+</li>
+</ul>
+<p>How many pickles can Maj place on her sandwich?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with the decimal numbers <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$1 \le s \le 10$</span>, <span class="tex2jax_process">$0.5 \le r \le s$</span>, at most
+        <span class="tex2jax_process">$6$</span> digits after the
+        decimal point), the radius of the sandwich and the radius
+        of a pickle, in centimetres.</p>
+</li>
+<li>
+<p>one line with the integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$z$</span> (<span class="tex2jax_process">$1 \le n \le 7$</span>, <span class="tex2jax_process">$0 \le z \le 100$</span>), the number of
+        pickles Maj have, and the maximum area she may cover with
+        them, in percent.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the maximum number of pickles Maj can place on her
+    sandwich. The input will always be constructed such that this
+    number does not change if the radius of the sandwich increases
+    or decreases by <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 4 40
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 4 100
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/findpoly/file/statement/en/img-0001.png" class="illustration" src="/problems/findpoly/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Consider a set of line segments in a 2D plane.</p>
+<p>For any set of line segments <span class="tex2jax_process">$L$</span>, define <span class="tex2jax_process">$P(L)$</span> as the set of all endpoints of
+    the line segments in <span class="tex2jax_process">$L$</span>.</p>
+<p>Two line segments are said to be <i class="itshape">connected</i> if they share an endpoint.</p>
+<p>Given a set of line segments <span class="tex2jax_process">$U$</span>, we say that a <i class="itshape">geometric figure</i> (“figure” for short) is a set
+    <span class="tex2jax_process">$S$</span> of one or more line
+    segments, <span class="tex2jax_process">$S \subseteq U$</span>,
+    for which</p>
+<ol class="enumerate">
+<li>
+<p>for any two points <span class="tex2jax_process">$p_1$</span> and <span class="tex2jax_process">$p_2$</span> in <span class="tex2jax_process">$P(S)$</span>, we can reach <span class="tex2jax_process">$p_2$</span> from <span class="tex2jax_process">$p_1$</span> by tracing along one or more
+        connected line segments, and</p>
+</li>
+<li>
+<p>for every line segment <span class="tex2jax_process">$e$</span> in <span class="tex2jax_process">$S$</span>, all line segments of
+        <span class="tex2jax_process">$U$</span> that are connected
+        to <span class="tex2jax_process">$e$</span> are also in
+        <span class="tex2jax_process">$S$</span>.</p>
+</li>
+</ol>
+<p>A <i class="itshape">polygon</i> is a geometric figure
+    <span class="tex2jax_process">$S$</span> for which it is
+    possible to trace a path starting from some endpoint
+    <span class="tex2jax_process">$p$</span> and ending at
+    <span class="tex2jax_process">$p$</span> using every line
+    segment in <span class="tex2jax_process">$S$</span> exactly
+    once and visiting each point in <span class="tex2jax_process">$P(S)$</span> other than <span class="tex2jax_process">$p$</span>, exactly once, visiting
+    <span class="tex2jax_process">$p$</span> only at the beginning
+    and end of the path.</p>
+<p>See Figure 1 which has <span class="tex2jax_process">$10$</span> figures of which <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$e$</span>, and <span class="tex2jax_process">$f$</span> are polygons. The dots are the end
+    points of the line segments.</p>
+<div class="figure" id="polyAndFigs">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{findpoly/problem_statement/fig1.pdf}" src="/problems/findpoly/file/statement/en/img-0002.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: <span class="tex2jax_process">$10$</span> figures, <span class="tex2jax_process">$4$</span> polygons
+        </div>
+</center>
+</div>
+<p>Note that <span class="tex2jax_process">$b$</span> is
+    self-intersecting but that the intersection is not at the end
+    points of the intersecting line segments. Similarly
+    <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> as well as <span class="tex2jax_process">$e$</span> and <span class="tex2jax_process">$f$</span> intersect but are not
+    connected.</p>
+<p>Your task is to count the total number of figures and
+    identify how many are polygons.</p>
+<h2>Input</h2>
+<p>The input is a series of lines terminated by end-of-file.
+    Each line will have one or more line segments of the form:</p>
+<pre>
+    (x1,y1),(x2,y2);
+</pre>
+<p>where <tt class="ttfamily">(x1,y1)</tt> is one end point and
+    <tt class="ttfamily">(x2,y2)</tt> is the other end point, and
+    <span class="tex2jax_process">$0 \leq x1, y1, x2, y2 \leq
+    99$</span>. All coordinates are integers.</p>
+<p>The separator characters, “(),;”, may be preceded or
+    followed by white space. A line may be at most <span class="tex2jax_process">$100$</span> characters long.</p>
+<p>There will be at most <span class="tex2jax_process">$200$</span> line segments. A given line
+    segment will only appear once in the input and none will be of
+    length <span class="tex2jax_process">$0$</span>.</p>
+<p>Line segments are not directed so the order of the end
+    points in the line segment is not significant. The order of the
+    line segments in the input is also not significant.</p>
+<h2>Output</h2>
+<p>Print a single line containing two integers separated by a
+    single space. The first number should be the total number of
+    figures and the second should be the number of polygons
+    found.</p>
+<p>In the first example below, the points correspond to the
+    picture in Figure 1.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+          (84,84),(78,84);(68,60),(64,64);(20,85),(15,88);(0,0),(2,8);
+(30,60),(30,66);(13,40),(18,38);(15,88),(15,95);(18,38),(8,38);
+(31,7),(25,10);(30,66),(26,70);(40,14),(30,19);(5,85),(15,88);
+(48,20),(56,26);(84,84),(84,82);(66,82),(70,86);(15,95),(25,90);
+(70,86),(66,88);(59,23),(50,27);(15,88),(5,80);(78,84),(74,82);
+(60,80),(66,82);(5,85),(5,80);(25,10),(40,14);(20,85),(25,90);
+(20,60),(30,66);(13,36),(14,30);(30,60),(20,60);(64,64),(60,60);
+(31,7),(30,19);(15,88),(25,90);(68,60),(76,64);(8,38),(13,40);
+(5,85),(15,95);(0,0),(10,4);(10,30),(14,30);(74,82),(70,86);
+(10,30),(12,43);(6,10),(10,4);(5,80),(20,85);(6,10),(2,8);
+(60,80),(66,88);(84,82),(74,82);(12,43),(13,36);
+</pre>
+</td>
+<td>
+<pre>10 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+          (45,26),(88,34);(39,6),(67,8);(73,52),(92,38);(63,35),(18,61);
+(34,23),(46,10);(2,75),(86,47);(26,18),(95,36);(59,78),(49,95);
+(63,95),(67,80);(23,12),(33,46);(33,1),(46,10);(63,78),(2,75);
+(2,33),(11,31);(99,98),(18,5);(88,34),(49,95);(25,43),(46,10);
+(66,1),(2,75);(17,59),(2,33);(85,7),(85,59);(51,56),(63,95);
+(1,48),(46,7);(66,49),(57,84);(59,78),(63,35);(0,49),(69,83);
+(75,82),(51,56);(67,8),(92,38);(25,43),(86,47);(54,33),(12,42);
+(87,12),(57,84);(37,92),(84,90);(18,61),(12,42);(66,49),(95,36);
+(85,7),(73,52);(1,48),(99,98);(53,26),(11,31);(34,23),(86,47);
+(22,91),(55,59);(23,12),(75,6);(66,1),(33,1);(33,46),(97,41);
+(87,12),(66,49);(92,38),(8,19);(54,33),(97,41);(45,26),(7,53);
+(39,6),(85,59);(63,78),(34,23);(76,9),(18,5);(67,80),(17,59);
+(25,43),(66,1);(75,82),(53,26);(0,49),(18,61);(12,42),(19,3);
+(33,1),(63,78);(76,9),(46,7);(8,19),(84,90);(8,19),(37,92);
+</pre>
+</td>
+<td>
+<pre>7 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>Jimmy’s homework is to find a long increasing subsequence of
+    a given sequence <span class="tex2jax_process">$a_1, a_2,
+    \ldots , a_ n$</span>. But the sequence is really long! Jimmy
+    doesn’t know how to do this effectively.</p>
+<p>So Jimmy takes a greedy approach. He begins by picking the
+    first number in the sequence. Then he repeats the following
+    rule until it no longer applies: pick the next number in the
+    sequence that is bigger than the number he just picked.</p>
+<p>More precisely, Jimmy picks the subsequence <span class="tex2jax_process">$a_{i_1}, a_{i_2}, \ldots , a_{i_ k}$</span>
+    where:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$i_1 = 1$</span></p>
+</li>
+<li>
+<p>For each <span class="tex2jax_process">$1 \leq j &lt;
+        k$</span>, <span class="tex2jax_process">$i_{j+1}$</span>
+        is the smallest index greater than <span class="tex2jax_process">$i_ j$</span> such that <span class="tex2jax_process">$a_{i_ j} &lt; a_{i_{j+1}}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$a_{i_ k} \geq a_\ell
+        $</span> for every <span class="tex2jax_process">$\ell &gt;
+        i_ k$</span></p>
+</li>
+</ul>
+<p>Jimmy realizes that this may not produce a very long
+    subsequence. So to help him find other subsequences, he removes
+    <span class="tex2jax_process">$a_{i_1}, a_{i_2}, \ldots , a_{i_
+    k}$</span> from the given sequence and finds another increasing
+    subsequence using his greedy algorithm on the remaining
+    sequence. He repeats this until he has used up all numbers from
+    the original sequence.</p>
+<p>But even this is starting to sound exhausting for Jimmy, so
+    he asks you to help him by finding all of the sequences that
+    would be formed by repeatedly applying the above greedy
+    procedure and removing the resulting subsequence until the
+    given sequence is empty.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 2 \times 10^5$</span>)
+    indicating the length of the original sequence.</p>
+<p>The second line of input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>
+    (<span class="tex2jax_process">$0 \leq a_ i \leq
+    10^9$</span>).</p>
+<h2>Output</h2>
+<p>The first line of output contains the number <span class="tex2jax_process">$s$</span> of sequences that are produced.
+    The next <span class="tex2jax_process">$s$</span> lines contain
+    the sequences, the <span class="tex2jax_process">$i$</span>th
+    such line containing the increasing subsequence that is formed
+    in the <span class="tex2jax_process">$i$</span>th application
+    of the greedy algorithm.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+2 2 1 5 3 4 6
+</pre>
+</td>
+<td>
+<pre>3
+2 5 6
+2 3 4
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+8 6 7 5 3 0 9
+</pre>
+</td>
+<td>
+<pre>5
+8 9
+6 7
+5
+3
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>You regularly play a game with friends, and you’re tired of
+    losing. The goal of the game is to end up with the largest
+    number in your hand at the end. Initially there is a set of
+    unique numbers on the table. At each turn, a player chooses a
+    number from the table and puts it in his hand. Seems simple,
+    right? However, you may be required to discard numbers in your
+    hand.</p>
+<p>During the game, each number can either be on the table, in
+    a player’s hand, or in a discard pile. When a player chooses a
+    number <span class="tex2jax_process">$x$</span> from the table,
+    <span class="tex2jax_process">$x$</span> is compared with all
+    other numbers <span class="tex2jax_process">$y$</span> that are
+    not on the table (including other players’ hands, your own
+    hand, and those in the discard pile). If <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> have a common factor greater than
+    1, both are moved to (or remain in) the discard pile. The game
+    ends when all numbers have been chosen from the table.</p>
+<h2>Input</h2>
+<p>Each input line describes the set of numbers on the table at
+    the beginning of a game. The line begins with a number
+    <span class="tex2jax_process">$1 \leq n \leq 1000$</span>.
+    Following this are <span class="tex2jax_process">$n$</span>
+    unique positive integers, all in the range <span class="tex2jax_process">$[2,~ 2\times 10^9]$</span>. These are the
+    <span class="tex2jax_process">$n$</span> numbers that are
+    initially on the table. There are at most 1000 games in the
+    input. Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each game print the number <span class="tex2jax_process">$x$</span> from the table such that choosing
+    <span class="tex2jax_process">$x$</span> guarantees you win the
+    game. Each game has a unique winning number.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4 7
+4 4 8 15 16
+4 2 3 4 8
+</pre>
+</td>
+<td>
+<pre>
+7
+15
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,124 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/endurvinnsla/file/statement/en/img-0001.jpg" class="illustration" src="/problems/endurvinnsla/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Recycle_Plastic_Bird.jpg/1200px-Recycle_Plastic_Bird.jpg?20160522183713">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>In the country of Ekkitilistan when recycling a bag of
+    garbage, if the percentage of plastic in it is too low the
+    whole bag is incinerated to save the effort of separating the
+    plastic from the non-plastic items.</p>
+<p>Certain cities in Ekkitilistan have different percentages,
+    for example in Varaldreitilburg only <span class="tex2jax_process">$5\% $</span> may be non-plastic but in
+    Ekkitilburg it is <span class="tex2jax_process">$7\%
+    $</span>.</p>
+<p>You have decided to assist the recycling facilities in
+    Ekkitilistan by writing a program that determines whether a bag
+    of garbage satisfies the criterion.</p>
+<h2>Input</h2>
+<p>The first line of the input is the name of the city. This
+    name doesn’t contain more than <span class="tex2jax_process">$10^5$</span> characters. The second line is
+    the percentage <span class="tex2jax_process">$0 \leq p \leq
+    1$</span> of of the garbage bag that may be non-plastic. The
+    number <span class="tex2jax_process">$p$</span> is a floating
+    point number with precisely two digits after the decimal. The
+    third line contains an integer <span class="tex2jax_process">$1
+    \leq n \leq 10^5$</span>, the number of items in the garbage
+    bag. The next <span class="tex2jax_process">$n$</span> lines
+    describe the items in the bag. Each line is either the string
+    “<tt class="ttfamily">plast</tt>” indicating a plastic item or
+    “<tt class="ttfamily">ekki plast</tt>” indicating a non-plastic
+    item.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">Jebb</tt> if the garbage bag is
+    recyclable and print <tt class="ttfamily">Neibb</tt> if it is
+    not.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>Ekkitilburg
+0.07
+15
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+plast
+ekki plast
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>Varaldreitilburg
+0.15
+10
+plast
+plast
+ekki plast
+plast
+ekki plast
+ekki plast
+plast
+plast
+ekki plast
+ekki plast
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

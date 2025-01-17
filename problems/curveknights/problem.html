@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>The hit new RPG mobile game Curveknights was recently
+    released and Yraglac has been absolutely obsessed with it.
+    Yraglac has been trying to farm materials for hours on end so
+    he can promote his units but has suddenly realized that he has
+    forgotten about an integral system that might speed this up:
+    the crafting system!</p>
+<p>Some higher tier materials can be crafted by combining lower
+    tier ones. Yraglac has a list of materials that he needs, but
+    would also like to know how many lower tier materials he would
+    need if he wanted to take advantage of the crafting recipes. As
+    it turns out, some of those lower tier materials might also be
+    craftable with even lower tier materials and so on. Yraglac
+    would like to know the numbers for each of these.</p>
+<p>For example, suppose Yraglac needed <span class="tex2jax_process">$3$</span> Sugar Boxes. Crafting one of these
+    requires <span class="tex2jax_process">$2$</span> Sugar Packs,
+    <span class="tex2jax_process">$1$</span> Iron Chunk, and
+    <span class="tex2jax_process">$1$</span> Magnesium Ore. You can
+    also craft <span class="tex2jax_process">$1$</span> Iron Chunk
+    using <span class="tex2jax_process">$3$</span> Iron Ores. Then
+    Yraglac’s total list of materials would be <span class="tex2jax_process">$3$</span> Sugar Boxes, <span class="tex2jax_process">$6$</span> Sugar Packs, <span class="tex2jax_process">$3$</span> Iron Chunks, <span class="tex2jax_process">$3$</span> Magnesium Ore, and <span class="tex2jax_process">$9$</span> Iron Ores.</p>
+<p>Given how many of each material Yraglac wants, can you find
+    out how many of each Yraglac would need to craft them?</p>
+<h2>Inputs</h2>
+<p>The first line contains two space separated <span class="tex2jax_process">$2 \leq N \leq 50$</span>, the number of
+    materials and <span class="tex2jax_process">$N-1 \leq M \leq
+    \frac{N(N-1)}{2}$</span>, the number of crafting
+    dependencies.</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> space separated integers
+    describing the amount of each material Yraglac wants. The
+    <span class="tex2jax_process">$i$</span>-th integer,
+    <span class="tex2jax_process">$a_ i$</span>, specifies the
+    amount of the <span class="tex2jax_process">$i$</span>-th
+    material Yraglac wants, where <span class="tex2jax_process">$0
+    \leq a_ i \leq 3$</span>.</p>
+<p>Each of the following <span class="tex2jax_process">$M$</span> lines contains three space
+    separated integers: <span class="tex2jax_process">$0 \leq u, v
+    &lt; N$</span>, and <span class="tex2jax_process">$1 \leq w
+    \leq 3$</span> indicating there is a recipe that takes
+    <span class="tex2jax_process">$w$</span> quantities of material
+    <span class="tex2jax_process">$u$</span> to produce one
+    material <span class="tex2jax_process">$v$</span>. It is
+    guaranteed that each <span class="tex2jax_process">$u,
+    v$</span> pair will be unique, and that there will never be any
+    cycles in the crafting recipes.</p>
+<h2>Outputs</h2>
+<p>On a single line output the amount of materials Yraglac
+    needs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+0 0 0 0 3
+0 1 3
+1 4 1
+2 4 1
+3 4 2
+</pre>
+</td>
+<td>
+<pre>9 3 3 6 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+0 0 0 0 0 3
+0 3 3
+1 4 3
+2 5 1
+3 5 1
+4 5 1
+</pre>
+</td>
+<td>
+<pre>9 9 3 3 3 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+0 0 2 2 3 1
+0 3 1
+1 3 2
+2 4 1
+3 4 3
+3 5 1
+</pre>
+</td>
+<td>
+<pre>12 24 5 12 3 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

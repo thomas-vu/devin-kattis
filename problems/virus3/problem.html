@@ -1,0 +1,157 @@
+<div class="problembody">
+<p>Boschua is not very good at cybersecurity. Last month, he
+    turned off the firewall because it wouldn’t let him download
+    cat pictures. Unfortunately, this led to him getting a virus.
+    The virus did something very strange: it added a bunch of
+    letters to all the filenames.</p>
+<p>For example, it might have changed the filename <tt class="ttfamily">katt.png</tt> to <tt class="ttfamily">k<b class="bfseries">atteg</b>att<b class="bfseries">o</b>.p<b class="bfseries">i</b>ng</tt>. The virus can add letters but can
+    never remove letters.</p>
+<p>Now he is searching for a file named <span class="tex2jax_process">$F$</span>, but he has many files on his
+    computer. Can you write a program that reads the filename
+    <span class="tex2jax_process">$F$</span> and the name of a file
+    <span class="tex2jax_process">$H$</span> on his computer, and
+    determines if <span class="tex2jax_process">$F$</span> could
+    have been transformed into <span class="tex2jax_process">$H$</span> by the virus? That is, is it
+    possible that the virus took the filename <span class="tex2jax_process">$F$</span> and added letters such that the
+    file is now named <span class="tex2jax_process">$H$</span>?</p>
+<h2>Input</h2>
+<p>The first line of input contains the string <span class="tex2jax_process">$F$</span>, and the second line contains the
+    string <span class="tex2jax_process">$H$</span>.</p>
+<p>Let <span class="tex2jax_process">$|F|$</span> be the number
+    of characters in <span class="tex2jax_process">$F$</span>, and
+    similarly for <span class="tex2jax_process">$|H|$</span>. Then,
+    it holds that <span class="tex2jax_process">$1 \le |F| \le |H|
+    \le 32$</span>.</p>
+<p>Both <span class="tex2jax_process">$F$</span> and
+    <span class="tex2jax_process">$H$</span> contain only the
+    letters <tt class="ttfamily">a</tt>-<tt class="ttfamily">z</tt>
+    and the period. It is guaranteed that <span class="tex2jax_process">$F$</span> contains exactly one period. The
+    virus can add periods and letters from <tt class="ttfamily">a</tt>-<tt class="ttfamily">z</tt>.</p>
+<h2>Output</h2>
+<p>Print “Ja” if <span class="tex2jax_process">$H$</span> could
+    be the file Boschua is looking for, otherwise print “Nej”.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Each character (and period) appears at most once in
+          each string.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$|H| = |F|+1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$|H| = |F|+2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Samples</h2>
+<p>In sample 1, the virus could have made the following
+    transformation to convert <span class="tex2jax_process">$F$</span> into <span class="tex2jax_process">$H$</span>: <tt class="ttfamily">katt.png</tt> <span class="tex2jax_process">$\Rightarrow $</span> <tt class="ttfamily">ka<b class="bfseries">ttega</b>tt<b class="bfseries">o</b>.p<b class="bfseries">i</b>ng</tt>.</p>
+<p>In sample 2, the virus could have made the following
+    transformation to convert <span class="tex2jax_process">$F$</span> into <span class="tex2jax_process">$H$</span>: <tt class="ttfamily">antivirus.exe</tt> <span class="tex2jax_process">$\Rightarrow $</span> <tt class="ttfamily">a<b class="bfseries">aa</b>ntiv<b class="bfseries">is</b>i<b class="bfseries">i</b>ru<b class="bfseries">i</b>s.e<b class="bfseries">g</b>xe</tt>.</p>
+<p>In sample 3, <span class="tex2jax_process">$F$</span> and
+    <span class="tex2jax_process">$H$</span> differ at <tt class="ttfamily">png</tt> and <tt class="ttfamily">pgn</tt>. Since
+    the virus cannot change the order of letters, it could not have
+    transformed <span class="tex2jax_process">$F$</span> into
+    <span class="tex2jax_process">$H$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>katt.png
+kattegatto.ping
+</pre>
+</td>
+<td>
+<pre>Ja
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>antivirus.exe
+aaantivisiiruis.egxe
+</pre>
+</td>
+<td>
+<pre>Ja
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>kattenmilly.png
+kaaatttenmilly.pgn
+</pre>
+</td>
+<td>
+<pre>Nej
+</pre>
+</td>
+</tr>
+</table>
+</div>

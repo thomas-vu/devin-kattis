@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/fractalarea/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fractalarea/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The <em>Circle-Square Fractal</em>, or
+    <em>CS Fractal</em> (which also goes by other names), is a
+    simple two-dimensional fractal constructed in an iterative
+    fashion out of solid circles of decreasing radii. As the
+    construction proceeds, certain square regions become noticeable
+    (in particular, the entire fractal), hence the “Square” part of
+    the name.
+    <p>The <span class="tex2jax_process">$1^{\mathrm{st}}$</span>
+    iteration in the construction of the CS Fractal consists
+    of a single circle of radius <span class="tex2jax_process">$r
+    &gt; 0$</span>. In the <span class="tex2jax_process">$2^{\mathrm{nd}}$</span> iteration, this
+    “parent” circle spawns four “child” circles of radius
+    <span class="tex2jax_process">$r/2$</span> that are tangent to
+    the parent circle in each of the north, south, east, and west
+    directions. Now let <span class="mbox" style="width:"><span class="tex2jax_process">$n \geq 3$</span></span>.
+    In the <span class="tex2jax_process">$n^{\mathrm{th}}$</span>
+    iteration, each circle <span class="tex2jax_process">$C$</span> added in the <span class="tex2jax_process">$(n-1)^{\mathrm{st}}$</span> iteration spawns
+    <em>three</em> child circles whose radii are exactly half of
+    <span class="tex2jax_process">$C$</span>’s radius, and that are
+    tangent to <span class="tex2jax_process">$C$</span> in each of
+    the three compass directions <em>other than the direction in
+    which <span class="tex2jax_process">$C$</span> touches its
+    parent circle</em> (here the compass directions are relatively
+    to <span class="tex2jax_process">$C$</span>). For example,
+    in the <span class="tex2jax_process">$3^{\mathrm{rd}}$</span>
+    iteration, the circle <span class="tex2jax_process">$C$</span>
+    of radius <span class="tex2jax_process">$r/2$</span> that is
+    north of the <span class="mbox" style="width:"><span class="tex2jax_process">$1^\mathrm {st}$</span>-generation</span>
+    circle spawns three circles of radius <span class="tex2jax_process">$r/4$</span> that touch <span class="tex2jax_process">$C$</span> in its west, north, and east
+    directions. The illustration accompanying this problem depicts
+    the CS Fractal after <span class="tex2jax_process">$6$</span> iterations. (Technically, the
+    fractal is the shape generated after infinitely many
+    iterations, but we informally use “fractal” to refer to the
+    partially constructed shape after a finite number of
+    iterations.)</p>
+<p>Given the radius of the starting <span class="mbox" style="width:">(<span class="tex2jax_process">$1^{\mathrm{st}}$</span>-iteration)</span>
+    circle and the number of iterations, determine the area of the
+    partially constructed fractal.</p>
+<p><em>Note:</em> Other than the single-point intersection
+    between any child circle and its parent, no two circles in the
+    fractal intersect.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$T$</span>, the number of test cases
+    (<span class="tex2jax_process">$1 \leq T \leq 50$</span>). This
+    is followed by <span class="tex2jax_process">$T$</span> lines, one per test case,
+    each of which contains two space-separated integers,
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$n$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq r \leq
+    200$</span></span>, <span class="mbox" style="width:"><span class="tex2jax_process">$1 \leq n \leq
+    50$</span>)</span>, where <span class="tex2jax_process">$r$</span> is the radius of the starting
+    <span class="mbox" style="width:">(<span class="tex2jax_process">$1^{\mathrm{st}}$</span>-iteration)</span>
+    circle and <span class="tex2jax_process">$n$</span> is the
+    number of iterations.</p>
+<h2>Output</h2>
+<p>For each test case, output the area of the partially
+    constructed fractal with starting radius <span class="tex2jax_process">$r$</span> after <span class="tex2jax_process">$n$</span> iterations. Each computed area
+    will be considered correct if it is within <span class="tex2jax_process">$10^{-6}$</span> of the official answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1
+8 3
+</pre>
+</td>
+<td>
+<pre>3.141592653589793
+552.9203070318035
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/nestedshapes/file/statement/en/img-0001.jpg" class="illustration" src="/problems/nestedshapes/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.canstockphoto.com/sequence-with-whirling-white-and-color-41228340.html">
+        natareal (CanStockPhoto)</a>; Used under license
+      </div>
+</div>
+<p>Consider a sequence of <span class="tex2jax_process">$2$</span>-dimensional regions in the plane,
+    <span class="tex2jax_process">$R_1, R_2, \ldots , R_ n$</span>,
+    satisfying the following:</p>
+<ol class="enumerate">
+<li>
+<p>Each <span class="tex2jax_process">$R_ i$</span> has one
+        of three shapes: (i) a <em>circle</em>, (ii) a
+        <em>square</em> (with sides parallel to the <span class="tex2jax_process">$x$</span>-<span class="tex2jax_process">$y$</span> axes), or (iii) a
+        <em>diamond</em> (a square rotated <span class="tex2jax_process">$45$</span> degrees). Each <span class="tex2jax_process">$R_ i$</span> is solid, i.e., it includes
+        its interior.</p>
+</li>
+<li>
+<p>For <span class="tex2jax_process">$i \geq 2$</span>,
+        <span class="tex2jax_process">$R_ i$</span> and
+        <span class="tex2jax_process">$R_{i-1}$</span> do not have
+        the same shape.</p>
+</li>
+<li>
+<p>For <span class="tex2jax_process">$i \geq 2$</span>,
+        <span class="tex2jax_process">$R_ i$</span> is inscribed in
+        <span class="tex2jax_process">$R_{i-1}$</span>. Informally,
+        this means that <span class="tex2jax_process">$R_ i$</span>
+        fits “snugly” inside <span class="tex2jax_process">$R_{i-1}$</span>. For the shapes in this
+        problem, this is equivalent to saying that <span class="tex2jax_process">$R_ i$</span> and <span class="tex2jax_process">$R_{i-1}$</span> share the same center
+        point, and that <span class="tex2jax_process">$R_ i$</span>
+        is as large as possible without any point in <span class="tex2jax_process">$R_ i$</span> lying outside <span class="tex2jax_process">$R_{i-1}$</span>.</p>
+</li>
+</ol>
+<p>Given the shapes of <span class="tex2jax_process">$R_1, R_2,
+    \ldots , R_ n$</span>, and either the area or the perimeter (as
+    specified) of the outermost region <span class="tex2jax_process">$(R_1)$</span>, find either the area or the
+    perimeter (as required) of the innermost region <span class="tex2jax_process">$(R_ n)$</span>.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{CSD}" src="/problems/nestedshapes/file/statement/en/img-0002.jpg" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample
+          Input <span class="tex2jax_process">$1$</span>
+</div>
+</center>
+</div>
+<h2>Input</h2>
+<p>There are three lines of input. The first line contains an
+    integer, <span class="tex2jax_process">$n$</span>, the number
+    of regions <span class="tex2jax_process">$(1 \leq n \leq
+    10)$</span>, followed by a space, followed by a string of
+    length <span class="tex2jax_process">$n$</span> consisting
+    entirely of characters from <span class="tex2jax_process">$\{
+    $</span> ‘<tt class="ttfamily">C</tt>’, ‘<tt class="ttfamily">S</tt>’, ‘<tt class="ttfamily">D</tt>’ <span class="tex2jax_process">$\} $</span>, denoting <em>circle</em>,
+    <em>square</em>, and <em>diamond</em>, respectively. These
+    characters specify the shapes of <span class="tex2jax_process">$R_1, R_2, \ldots , R_ n$</span> in the same
+    order (so the first character specifies the shape of
+    <span class="tex2jax_process">$R_1$</span>, the second
+    character specifies the shape of <span class="tex2jax_process">$R_2$</span>, etc.). The second line contains
+    a single character, <span class="tex2jax_process">$t_1$</span>,
+    either ‘<tt class="ttfamily">A</tt>’ or ‘<tt class="ttfamily">P</tt>’, followed by a space, followed by an
+    integer, <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(1 \leq m \leq 200)$</span>. If <span class="tex2jax_process">$t_1 =$</span> ‘<tt class="ttfamily">A</tt>’, then <span class="tex2jax_process">$m$</span> is the area of <span class="tex2jax_process">$R_1$</span>; if <span class="tex2jax_process">$t_1 =$</span> ‘<tt class="ttfamily">P</tt>’, then <span class="tex2jax_process">$m$</span> is the perimeter of <span class="tex2jax_process">$R_1$</span>. The third line contains a
+    single character, <span class="tex2jax_process">$t_ n$</span>,
+    either ‘<tt class="ttfamily">A</tt>’ or ‘<tt class="ttfamily">P</tt>’, specifying whether you are required to
+    compute the area or the perimeter of <span class="tex2jax_process">$R_ n$</span>, respectively.</p>
+<h2>Output</h2>
+<p>Output a single real number that is either the area of
+    <span class="tex2jax_process">$R_ n$</span> (if <span class="tex2jax_process">$t_ n =$</span> ‘<tt class="ttfamily">A</tt>’) or the perimeter of <span class="tex2jax_process">$R_ n$</span> (if <span class="tex2jax_process">$t_ n =$</span> ‘<tt class="ttfamily">P</tt>’). Your answer will be considered correct if
+    it is within <span class="tex2jax_process">$10^{-6}$</span> of
+    the official answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 CSD
+A 12
+P
+</pre>
+</td>
+<td>
+<pre>7.817640190446719
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>The European Space Agency has <span class="tex2jax_process">$N$</span> telescopes observing distant
+    planets. They have classified <span class="tex2jax_process">$M$</span> different types of events. They
+    noticed that every day on each planet there is <b class="bfseries">exactly one</b> type of event. They measure events
+    in days because they discovered each event lasts at least one
+    day, and at most 365 days. Events last only complete numbers of
+    days, they never last a fractional part of a day. Each event of
+    the same type lasts exactly the same number of days every time
+    it occurs, <b class="bfseries">regardless of the planet it
+    occurs on</b>.</p>
+<p>After many years of observation they want to analyze data.
+    The telescopes logged all observations, but unfortunately they
+    forgot to write down the year the observations took place! Each
+    telescope entry consists of start date, end date and the number
+    of events observed of each type. Given all observations on all
+    the planets, calculate the duration of each type of event. Note
+    that the telescopes are super precise and start working exactly
+    when the event starts and end when an event ends, not
+    necessarily the same one.</p>
+<p><b class="bfseries">Note: for this task, each year has
+    exactly 365 days.</b></p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \le N, M \le 200$</span>) - the number of telescopes and the
+    number of event types. The next <span class="tex2jax_process">$N$</span> lines each contains <span class="tex2jax_process">$M + 4$</span> numbers each:</p>
+<p><span class="tex2jax_process">$D_1\text{ }M_1\text{
+    }D_2\text{ }M_2\text{ }F_1\text{ }F_2\text{ }...\text{
+    }F_M$</span></p>
+<p>where <span class="tex2jax_process">$D_1, M_1$</span>
+    (<span class="tex2jax_process">$01 \le D \le 31, 01 \le M \le
+    12$</span>) is the start date, <span class="tex2jax_process">$D_2, M_2$</span> is the end date and
+    <span class="tex2jax_process">$F_i$</span> (<span class="tex2jax_process">$0 \le F_i \le 200$</span>) is the number of
+    times event <span class="tex2jax_process">$I$</span> was
+    observed.</p>
+<p>Note that the days <span class="tex2jax_process">$D_i$</span> and months <span class="tex2jax_process">$M_i$</span> will always be zero-padded to
+    exactly 2 characters.</p>
+<h2>Output</h2>
+<p>One line containing <span class="tex2jax_process">$M$</span>
+    numbers, the durations of the event types. If more than one
+    solution exists, output any one. If no solution exists, output
+    <tt class="ttfamily">“-1”</tt> (without quotes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+26 02 03 03 1
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+26 02 03 03 2
+</pre>
+</td>
+<td>
+<pre>185
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+22 03 01 10 9 10 10
+05 05 16 12 1 7 10
+20 06 15 01 4 9 10
+</pre>
+</td>
+<td>
+<pre>102 204 125
+</pre>
+</td>
+</tr>
+</table>
+</div>

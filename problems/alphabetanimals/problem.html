@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/alphabetanimals/file/statement/en/img-0001.jpg" class="illustration" src="/problems/alphabetanimals/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Solution to Sample Input 1 by Kuebi via <a href="https://commons.wikimedia.org/wiki/File:Hausziege_04.jpg">Wikimedia
+        Commons</a>, cc by-s
+      </div>
+</div>You are playing a game in which a group of players take
+    turns saying animal names. The animal name you say when it is
+    your turn must start with the same letter as the previously
+    said animal ends with and it must not have been said previously
+    in this round of the game. If there is no valid name or you
+    cannot come up with one you are eliminated.
+    <p>Given the last animal name said before your turn and a list
+    of all names not yet used, can you make it through this turn?
+    If so, can you make sure to eliminate the next player?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single word, the animal
+    that the previous player just said. The next line contains a
+    single integer <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$0 \le n \leq 10^5$</span>), the
+    number of valid unused animal names. Each of the following
+    <span class="tex2jax_process">$n$</span> lines contains one
+    valid unused animal name.</p>
+<p>All animal names (including the one the previous player
+    said) are unique and consist of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$20$</span> lower case letters ‘<tt class="ttfamily">a</tt>’-‘<tt class="ttfamily">z</tt>’.</p>
+<h2>Output</h2>
+<p>If there is any animal name you can play that eliminates the
+    next player, output the first such name from the input list,
+    followed by an exclamation mark. Otherwise, if there is any
+    animal name that you can play, output the first such name.
+    Otherwise, output a question mark (in this case you will just
+    have to make up a fake name in the hope that the others will
+    trust you that this is a real animal).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>pig
+2
+goat
+toad
+</pre>
+</td>
+<td>
+<pre>goat
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>dog
+2
+snake
+emu
+</pre>
+</td>
+<td>
+<pre>?
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>hare
+3
+bee
+cat
+eagle
+</pre>
+</td>
+<td>
+<pre>eagle!
+</pre>
+</td>
+</tr>
+</table>
+</div>

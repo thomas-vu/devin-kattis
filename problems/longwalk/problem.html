@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>To ignore his impending doom, Jimmy-Jimmy likes to imagine
+    going for long walks. Today, he is imagining a walk on a graph
+    <span class="tex2jax_process">$G$</span>. <span class="tex2jax_process">$G$</span> has <span class="tex2jax_process">$2^ n$</span> nodes, labelled <span class="tex2jax_process">$0,1,2,\dots ,2^ n-1$</span>. For each
+    <span class="tex2jax_process">$i\in \{ 1,2,\dots ,2^ n-1\}
+    $</span>, <span class="tex2jax_process">$G$</span> has a
+    bidirectional edge between node <span class="tex2jax_process">$i$</span> and node <span class="tex2jax_process">$2i\pmod{2^ n}$</span>.</p>
+<p>Jimmy-Jimmy wants to visit <span class="tex2jax_process">$m$</span> nodes of <span class="tex2jax_process">$G$</span> in a specific order. He starts his
+    walk at node <span class="tex2jax_process">$a_1$</span>. From
+    there, he takes the shortest path along the edges of
+    <span class="tex2jax_process">$G$</span> to <span class="tex2jax_process">$a_2$</span>, then takes the shortest path
+    from <span class="tex2jax_process">$a_2$</span> to <span class="tex2jax_process">$a_3$</span>, and so on, until he reaches
+    node <span class="tex2jax_process">$a_ m$</span>, where his
+    walk concludes. Can you determine the total number of edges
+    that Jimmy-Jimmy will imagine walking across?</p>
+<h2>Input</h2>
+<p>Input begins with two space-separated integers <span class="tex2jax_process">$1\le n\le 62$</span> and <span class="tex2jax_process">$2\le m\le 10^6$</span>. The next line
+    contains <span class="tex2jax_process">$m$</span>
+    space-separated integers <span class="tex2jax_process">$a_1,a_2,\dots ,a_ m$</span>, where
+    <span class="tex2jax_process">$0\le a_ i\le 2^ n-1$</span> for
+    all <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>Output the total number of edges crossed in the walk.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+11 10
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+1 3 5 7
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+0 1 2 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>40 8
+1099511627775 1 1 49 97 0 33 322347
+</pre>
+</td>
+<td>
+<pre>380
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,128 @@
+<div class="problembody">
+<p>There are many types of languages, all used for different
+    purposes. People communicate using natural languages like
+    English and Spanish, program with formal languages like C++ and
+    Perl, and compose music with musical notation. Let’s consider
+    musical notation, which is typically a sequence of notes of
+    specified pitches and durations. Computers can best represent
+    these sequences using numbers and letters, such as</p>
+<pre>
+C C D E C E D2 C C D E C2 B2 C C D E F E D C B g A B C2 C2
+</pre>
+<p>which is a simple rendition of the song ‘Yankee Doodle’. The
+    notes are chosen from <tt class="tt">a</tt> through <tt class="tt">g</tt> and <tt class="tt">A</tt> through <tt class="tt">G</tt>. A note without a number indicates it is held for a
+    duration of one beat; the number <span class="tex2jax_process">$2$</span> following some of the notes
+    indicate that note has a duration that is twice as long. It
+    would be nice to take this notation and create something
+    musicians are more used to reading, with notes and bars and
+    staffs, etc. Write a program that does this.</p>
+<h2>Input</h2>
+<p>The input for your program consists of two lines. The first
+    line has an integer <span class="tex2jax_process">$1 \le n \le
+    100$</span> indicating the number of notes in the song. The
+    second line contains <span class="tex2jax_process">$n$</span>
+    notes. Each note consists of two parts: the pitch and the
+    duration. The pitch is a letter <tt class="tt">a</tt> through
+    <tt class="tt">g</tt> or <tt class="tt">A</tt> through
+    <tt class="tt">G</tt>. Lowercase letters indicate the octave
+    below uppercase letters, and we consider <tt class="tt">c</tt>
+    to represent so-called ‘middle c’. The duration, which is
+    optional, is a positive integer indicating a multiplier of the
+    length of the default note. (If you are musical you’ll notice
+    we’ve made many simplifying assumptions, such as leaving out
+    many octaves, sharps, flats, rests, time signatures, etc.)</p>
+<h2>Output</h2>
+<p>For each song, print a text-based representation on one
+    staff. Each staff should have the following format: a
+    <span class="tex2jax_process">$5$</span>-line staff (for the
+    treble clef), middle c, and one more line (for the top of the
+    bass clef):</p>
+<pre>
+G:                                                           
+F: ----------------------------------------------------------
+E:                                                           
+D: ----------------------------------------------------------
+C:                                                           
+B: ----------------------------------------------------------
+A:                                                           
+g: ----------------------------------------------------------
+f:                                                           
+e: ----------------------------------------------------------
+d:                                                           
+c:                                                           
+b:                                                           
+a: ----------------------------------------------------------
+</pre>
+<p>For each song’s note, print a single asterisk on a line (or
+    between lines) indicating its pitch. Use one asterisk for the
+    default duration, two asterisks for notes twice as long, three
+    asterisks for notes three times as long, etc. Leave a single
+    separating column between each pair of consecutive notes. The
+    staff lines should be only as long as necessary to complete the
+    song. Notes that are between lines (i.e. b-d, f, A, C, E, G)
+    should pad with spaces out to the end the staff lines.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+27
+C C D E C E D2 C C D E C2 B2 C C D E F E D C B g A B C2 C2
+</pre>
+</td>
+<td>
+<pre>
+G:                                                           
+F: -------------------------------------*--------------------
+E:       *   *          *             *   *                  
+D: ----*-------**-----*-------------*-------*----------------
+C: * *     *      * *     **    * *           *         ** **
+B: --------------------------**-----------------*-----*------
+A:                                                  *        
+g: -----------------------------------------------*----------
+f:                                                           
+e: ----------------------------------------------------------
+d:                                                           
+c:                                                           
+b:                                                           
+a: ----------------------------------------------------------
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+22
+e2 e d c2 c2 d2 d f e d c2 g2 g f e2 e2 e d c d e c3
+</pre>
+</td>
+<td>
+<pre>
+G:                                                      
+F: -----------------------------------------------------
+E:                                                      
+D: -----------------------------------------------------
+C:                                                      
+B: -----------------------------------------------------
+A:                                                      
+g: ---------------------------**-*----------------------
+f:                   *             *                    
+e: **-*----------------*-------------**-**-*-------*----
+d:      *       ** *     *                   *   *      
+c:        ** **            **                  *     ***
+b:                                                      
+a: -----------------------------------------------------
+</pre>
+</td>
+</tr>
+</table>
+</div>

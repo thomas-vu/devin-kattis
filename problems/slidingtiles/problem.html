@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>You have placed 25 lettered tiles in a nice, neat
+    <span class="tex2jax_process">$5 \times 5$</span> grid like the
+    first one below. You start to slide the tiles around one space
+    at a time, either up, down, left or right. As you move a tile,
+    it pushes along any tiles ahead of it. For example, if you push
+    the <tt class="ttfamily">M</tt> to the right, then push the
+    <tt class="ttfamily">X</tt> up, <tt class="ttfamily">V</tt> to
+    the right and <tt class="ttfamily">O</tt> to the left, your
+    nice neat grid would end up looking like the second picture.
+    Your job is to write a simulation of this process.</p>
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{tile1}" src="/problems/slidingtiles/file/statement/en/img-0001.png" style="width:40.00%"/> <img alt="\includegraphics[width=0.4\textwidth ]{tile2}" src="/problems/slidingtiles/file/statement/en/img-0002.png" style="width:40.00%"/>
+</center>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> test cases. At the start of each
+    test case, the tiles are reset to the <span class="tex2jax_process">$5 \times 5$</span> grid in the first picture
+    above. Input for each test case starts with a line containing
+    <span class="tex2jax_process">$0 \le n \le 50$</span>. This is
+    followed by <span class="tex2jax_process">$n$</span> lines,
+    each describing a move of a tile. A move is of the form
+    <span class="tex2jax_process">$x$</span> up, <span class="tex2jax_process">$x$</span> down, <span class="tex2jax_process">$x$</span> left or <span class="tex2jax_process">$x$</span> right, where <span class="tex2jax_process">$x$</span> is a capital letter from
+    <tt class="ttfamily">A</tt> to <tt class="ttfamily">Y</tt>. The
+    end of all test cases is marked with a value of <span class="tex2jax_process">$-1$</span> for <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, produce a picture of the state of the
+    board after all moves have completed. The topmost tile should
+    appear on the first row and the bottommost should appear on the
+    last. Similarly, the leftmost tile should be on the first
+    column and the rightmost on the last. Some rows may be empty,
+    but don’t use any extra spaces at the end of any row. Follow
+    each test case with one blank row.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+V up
+V up
+G right
+G down
+4
+E left
+B down
+P right
+X up
+-1
+</pre>
+</td>
+<td>
+<pre>
+ B
+
+ALGDE
+FQCIJ
+KVHNO
+P MST
+U RXY
+  W
+
+A CDEJ
+ BGHIO
+ FLMNT
+ KQRSX
+  PVW Y
+ U
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>Each Halloween, the <span class="tex2jax_process">$N$</span>
+    witches of Sweden all gather high up in the air with their
+    brooms to perform a magical dance. The dance consists of taking
+    one’s broom and rotating clockwise around one of the ends of
+    the broom. Each broom is exactly <span class="tex2jax_process">$1\text { m}$</span> long, and everyone
+    rotates at the same speed. The <span class="tex2jax_process">$i$</span>’th witch originally starts rotated
+    <span class="tex2jax_process">$r_ i\text { radians}$</span>
+    clockwise. <span class="tex2jax_process">$0$</span> radians
+    means that the broom points to the right, i.e. positive
+    <span class="tex2jax_process">$x$</span>-direction;
+    <span class="tex2jax_process">$\pi /2$</span> radians points in
+    the positive <span class="tex2jax_process">$y$</span>-direction. All the witches are
+    located at the same height in the air, at positions
+    <span class="tex2jax_process">$(x_ i, y_ i)$</span> for
+    <span class="tex2jax_process">$1 \le i \le N$</span>. Their
+    brooms are always parallel to the <span class="tex2jax_process">$x-y$</span> plane.</p>
+<p>This dance is very beautiful, but has in recent years been
+    plagued by a certain problem. It turns out that nobody had
+    choreographed the dance properly. This caused some of the
+    witches to crash into each other’s brooms. As a result, their
+    brooms would break and they would fall down helplessly, being
+    forced to use their parachutes – can you imagine a greater
+    embarrassment for a witch?</p>
+<p>This year, a coalition of witches are tired of their brooms
+    breaking. They have thus produced a choreography beforehand,
+    consisting of the original locations and rotations of the
+    witches’ brooms. Can you check if the dance will cause any
+    brooms to crash into each other?</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 200\, 000$</span>), the number
+    of witches. The next <span class="tex2jax_process">$N$</span>
+    lines contains a description of each broom. Each line consists
+    of the real numbers <span class="tex2jax_process">$x_ i, y_
+    i$</span> (<span class="tex2jax_process">$-10^{9} \le x_ i \le
+    y_ i 10^{9}$</span>), and the real number <span class="tex2jax_process">$r_ i$</span> (<span class="tex2jax_process">$0 \le r_ i &lt; 2\pi $</span>), all with at
+    most <span class="tex2jax_process">$20$</span> digits after the
+    decimal point. The coordinates are measured in meters, and give
+    you the end of the broom that the broom rotates around.</p>
+<p>The input will be such that the answer does not change even
+    if the length of the brooms were <span class="tex2jax_process">$1 + 10^{-6}\text { m}$</span> long.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">ok</tt> if no witches will crash
+    into each other, and <tt class="ttfamily">crash</tt> if at
+    least one pair of witches will crash.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 0 0
+0 1.5 0
+</pre>
+</td>
+<td>
+<pre>ok
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 0 0
+0 1.5 3.14159
+</pre>
+</td>
+<td>
+<pre>crash
+</pre>
+</td>
+</tr>
+</table>
+</div>

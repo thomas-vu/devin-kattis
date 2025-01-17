@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>There is an event involving <span class="tex2jax_process">$N$</span> banks and <span class="tex2jax_process">$M$</span> stakeholders, where Bob is
+    stakeholder 1. The banks are giving money to the stakeholders,
+    where bank <span class="tex2jax_process">$i$</span> needs to
+    give out a total of <span class="tex2jax_process">$A_ i$</span>
+    dollars, and each bank can give each person at most
+    <span class="tex2jax_process">$K$</span> dollars, to mitigate
+    blatant favouritism. The banks can only give an integer number
+    of dollars to each person, and bank <span class="tex2jax_process">$i$</span> must give out all <span class="tex2jax_process">$A_ i$</span> dollars in this event.
+    Additionally, person <span class="tex2jax_process">$i$</span>
+    starts with <span class="tex2jax_process">$B_ i$</span>
+    dollars, but can only have at most <span class="tex2jax_process">$C_ i$</span> dollars after receiving money
+    from the banks, as a measure to reduce collusion.</p>
+<p>However, Bob has blackmail material on all of the banks, and
+    thus he has the power to decide how much each bank gives each
+    person. He has a nasty and greedy personality, so he wants to
+    be as rich as possible compared to the other <span class="tex2jax_process">$M - 1$</span> people. In particular, after
+    the event, let <span class="tex2jax_process">$X$</span> be the
+    amount of money (in dollars) that Bob (stakeholder 1) has, and
+    <span class="tex2jax_process">$Y$</span> be the maximum amount
+    of money (in dollars), that any of the stakeholders
+    <span class="tex2jax_process">$2, 3, \dots , M$</span> has.
+    Then Bob wants to maximise <span class="tex2jax_process">$X -
+    Y$</span> (though it can be negative). Help Bob determine the
+    maximum possible value of <span class="tex2jax_process">$X -
+    Y$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains an two integers
+    <span class="tex2jax_process">$N, M, K$</span> <span class="tex2jax_process">$(1 \leq N\leq 10^5, 2 \leq M \leq 10^5, 1
+    \leq K \leq 10^{8})$</span>, the number of banks, number of
+    stakeholders, and the maximum amount of money (in dollars) that
+    each bank can give each stakeholder.</p>
+<p>The next line contains a <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$A_1, A_2, \dots , A_ N$</span>
+<span class="tex2jax_process">$(0 \leq A_ i \leq
+    10^{12})$</span>, the amount of money (in dollars) each bank
+    needs to give out.</p>
+<p>The next <span class="tex2jax_process">$M$</span> lines each
+    contain two space-separated integers, where the <span class="tex2jax_process">$i$</span>-th line contains <span class="tex2jax_process">$B_ i, C_ i$</span> <span class="tex2jax_process">$(0 \leq B_ i \leq C_ i \leq
+    10^{13})$</span>, the amount of money (in dollars) stakeholder
+    <span class="tex2jax_process">$i$</span> starts with and the
+    maximum amount of money (in dollars) he can have after the
+    event.</p>
+<p><b class="bfseries">Additionally, it is guaranteed that the
+    banks will be able to give out all the money for the input data
+    provided.</b></p>
+<h2>Output</h2>
+<p>Output a single integer, the maximum possible value of
+    <span class="tex2jax_process">$X - Y$</span> as described
+    above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 3
+7 5 3 2
+2 8
+1 3
+5 15
+3 12
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 5
+13 7 9 21 5
+15 32
+1 5
+10 30
+2 12
+15 29
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

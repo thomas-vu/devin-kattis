@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>Willó listens to several different music genres and usually
+    talks to both his friends about his favorite artists. One day,
+    Willó asked her parents if they were willing to pay for a
+    ticket to a music festival. The parents agreed to it at first,
+    but his mother became quite hesitant when she realized that it
+    was not just any music festival, but a mumble rap music
+    festival!</p>
+<p>Willó’s mother asked Willó how he could have an interest in
+    such an incomprehensible music genre, as she found it difficult
+    to identify numbers from words that the artist is mumbling.
+    According to Willó’s mother, mumble rap is known to be a genre
+    where the artist always raps about how much money they own in a
+    mumbling fashion. But Willó wanted to show love for mumble rap
+    and prove his mother wrong, so he came up with the following
+    plan: Willó wants to write a program that can identify the
+    largest number in a string of characters that an artist has
+    mumbled.</p>
+<h2>Input</h2>
+<p>The first line consists of an integer <span class="tex2jax_process">$1 \leqslant N \leqslant 10^6$</span>, the
+    number of characters in the string. The second line consists of
+    <span class="tex2jax_process">$N$</span> characters in a string
+    without spaces, where each character is either a letter from
+    “a”-“z”,“A”-“Z”, a symbol (“.,;:?!”), or a digit between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$9$</span>, including <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$9$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer <span class="tex2jax_process">$0 \leqslant
+    A \leqslant 10^9$</span> - The largest integer mentioned in the
+    string. It is guaranteed that there is always a number in the
+    string.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$A \leqslant
+          9$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The largest integer in the string is the last integer
+          mentioned in the string.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leqslant
+          10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>29
+ihave40dollarsinmybankaccount
+</pre>
+</td>
+<td>
+<pre>40
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>33
+yesterdayihad1001,BUTnowihave9999
+</pre>
+</td>
+<td>
+<pre>9999
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>19
+13twenty209sixty123
+</pre>
+</td>
+<td>
+<pre>209
+</pre>
+</td>
+</tr>
+</table>
+</div>

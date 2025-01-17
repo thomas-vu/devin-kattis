@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>You are a contestant on a game show where the goal is to win
+    as much money as you can. The game is played in a building with
+    many numbered rooms, and starting from room 1 with no money,
+    you take a fixed number of turns. For each turn you either stay
+    in the same room, or walk to an adjacent room. Then you do this
+    again, and again, etc. Each turn earns you some amount of money
+    (or perhaps none). All rooms are connected, but going through a
+    door in one direction may earn a different amount of money than
+    going through in the other direction.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$50$</span> games. Each game’s description
+    starts with an integer <span class="tex2jax_process">$1 \le n
+    \le 50$</span>, indicating that rooms <span class="tex2jax_process">$1, 2, \ldots , n$</span> are in use. This is
+    followed by <span class="tex2jax_process">$n$</span> lines that
+    describe an <span class="tex2jax_process">$n\times n$</span>
+    matrix of numbers in the range <span class="tex2jax_process">$[0,2\, 000]$</span>. The matrix entry for
+    row <span class="tex2jax_process">$i$</span> and column
+    <span class="tex2jax_process">$j$</span> indicates the amount
+    of money received by going directly from room <span class="tex2jax_process">$i$</span> to room <span class="tex2jax_process">$j$</span> (or for staying in the same room
+    if <span class="tex2jax_process">$i = j$</span>) on any turn.
+    Following the description of the rooms is an integer
+    <span class="tex2jax_process">$0 \le m \le 5\, 000$</span>,
+    indicating the number of turns that you take. Input ends when
+    <span class="tex2jax_process">$n$</span> is zero.</p>
+<h2>Output</h2>
+<p>For each game, print the maximum and minimum dollar amounts
+    you can win. Each amount is less than <span class="tex2jax_process">$2^{31}-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 17 11
+7 1 8
+11 18 19
+1
+4
+2 0 0 0
+0 2 0 0
+0 0 2 20
+0 0 0 2
+5
+0
+</pre>
+</td>
+<td>
+<pre>
+17 2
+42 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

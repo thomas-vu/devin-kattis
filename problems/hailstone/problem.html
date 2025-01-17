@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>An interesting theory in mathematics is that there is a
+    sequence generator that, given any positive integer as the
+    starting point, always ends with the number <span class="tex2jax_process">$1$</span>. Although this theory has never
+    been proven, the conjecture is known as the Collatz Conjecture
+    (named after Lothar Collatz, who posed the idea in 1937). Given
+    an integer, <span class="tex2jax_process">$n\geqslant
+    1$</span>, this conjecture pertains to the sequence
+    <span class="tex2jax_process">$h(n)$</span>, which we
+    recursively define as follows:</p>
+<ul class="itemize">
+<li>
+<p>If <span class="tex2jax_process">$n=1$</span>, the
+        sequence is composed of a single integer: <span class="tex2jax_process">$1$</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$n$</span> is even, the
+        sequence is composed of <span class="tex2jax_process">$n$</span> followed by sequence
+        <span class="tex2jax_process">$h(n/2)$</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$n$</span> is odd, the
+        sequence is composed of <span class="tex2jax_process">$n$</span> followed by sequence
+        <span class="tex2jax_process">$h(3\cdot n + 1)$</span></p>
+</li>
+</ul>
+<p>For example, the following are the sequences for the numbers
+    <span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$7$</span>:</p>
+<blockquote class="quote">
+<p><span class="tex2jax_process">$h(5) = (5, 16, 8, 4, 2,
+      1)$</span></p>
+<p><span class="tex2jax_process">$h(7) = (7, 22, 11, 34, 17,
+      52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1)$</span></p>
+</blockquote>
+<p>The <span class="tex2jax_process">$h(n)$</span> sequence is
+    commonly known as the <em>hailstone sequence</em>, because of
+    its nature of going up and down like a hailstone in a cloud
+    before eventually falling to Earth. In this problem, you will
+    calculate the <em>sum</em> of all the values in a hailstone
+    sequence. Using the sequences above, the sum of <span class="tex2jax_process">$h(5)$</span> is <span class="tex2jax_process">$36$</span> and the sum of <span class="tex2jax_process">$h(7)$</span> is <span class="tex2jax_process">$288$</span>.</p>
+<center>
+<p><b class="bfseries">Your solution must use a
+      <em>RECURSIVE</em> function,<br/>
+      based on the recursive definition of <span class="tex2jax_process">$h(n)$</span> presented above.</b></p>
+<p><b class="bfseries">On the exam, any other type of
+      solution will receive zero points!</b></p>
+<p><b class="bfseries">EVEN IF KATTIS JUDGES IT AS
+      CORRECT!</b></p>
+</center>
+<p>Note: You <em>are</em> allowed to add up the numbers
+    iteratively, as long as the <span class="tex2jax_process">$h(n)$</span> sequence is computed
+    recursively.</p>
+<h2>Input</h2>
+<p>The input contains a single positive integer, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0
+    &lt; n \leqslant 2^{32}-1$</span>).</p>
+<h2>Output</h2>
+<p>The output contains a single integer: the sum of all the
+    values in <span class="tex2jax_process">$h(n)$</span>. You may
+    assume that this sum will fit in an unsigned 64-bit
+    integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+</pre>
+</td>
+<td>
+<pre>36
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+</pre>
+</td>
+<td>
+<pre>288
+</pre>
+</td>
+</tr>
+</table>
+</div>

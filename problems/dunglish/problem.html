@@ -1,0 +1,108 @@
+<div class="problembody">
+<div class="illustration" style="width:31.00%">
+<img alt="/problems/dunglish/file/statement/en/img-0001.jpg" class="illustration" src="/problems/dunglish/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A group of confused Dutchmen. Public domain.
+      </div>
+</div>A confused Dutchman trying to speak English could say
+    “<em>I am in the war</em>”, even though there is no hostile
+    activity going on. The confusion<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> here is that
+    the English sentence “<em>I am confused</em>” is translated in
+    Dutch as “<em>Ik ben in de war</em>”, which is phonetically
+    (“sounding”) quite close to the first sentence. Such confusion
+    leads to much enjoyment, but can complicate matters a bit.
+
+    <p>Given a sentence in Dutch and a dictionary containing both
+    correct translations as well as phonetic (incorrect)
+    translations of individual words, find the translation of the
+    sentence and indicate whether it is correct, or in case there
+    is more than one find the total number of correct and incorrect
+    translations. A sentence is correctly translated when each word
+    of the sentence is correctly translated.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 20$</span>), the number of
+        words in the Dutch sentence.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$n$</span>
+        words, the Dutch sentence <span class="tex2jax_process">$s$</span>.</p>
+</li>
+<li>
+<p>One line with an integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq m \leq 10^5$</span>), the number
+        of words in the dictionary.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines, each
+        with three strings <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$e$</span> and <span class="tex2jax_process">$c$</span>, a Dutch word, the English
+        translation, and “<tt class="ttfamily">correct</tt>” if
+        this is the correct translation or “<tt class="ttfamily">incorrect</tt>” otherwise.</p>
+</li>
+</ul>
+<p>A word consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> lowercase letters. Each word in
+    <span class="tex2jax_process">$s$</span> appears at least once
+    as a Dutch word in the dictionary, no word appears more than
+    <span class="tex2jax_process">$8$</span> times as a Dutch word
+    in the dictionary, and each combination of a Dutch and English
+    word appears at most once.</p>
+<h2>Output</h2>
+<p>In case there is only a single translation of <span class="tex2jax_process">$s$</span>, output one line with the
+    translation followed by one line with “<tt class="ttfamily">correct</tt>” or “<tt class="ttfamily">incorrect</tt>”. In case there is more than one
+    translation, output one line with the number of possible
+    correct translations followed by “<tt class="ttfamily">correct</tt>”, and one line with the number of
+    possible incorrect translations followed by “<tt class="ttfamily">incorrect</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+als mollen mollen mollen mollen mollen mollen
+4
+als when correct
+mollen moles correct
+mollen destroy correct
+mollen mills incorrect
+</pre>
+</td>
+<td>
+<pre>
+64 correct
+665 incorrect
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+de zuigers zijn buiten werking
+6
+zijn are correct
+banaan banana correct
+de the correct
+zuigers suckers incorrect
+buiten out correct
+werking working incorrect
+</pre>
+</td>
+<td>
+<pre>
+the suckers are out working
+incorrect
+</pre>
+</td>
+</tr>
+</table>
+</div>

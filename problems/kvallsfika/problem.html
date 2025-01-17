@@ -1,0 +1,227 @@
+<div class="problembody">
+<p>Sara loves fika! She has just received <span class="tex2jax_process">$P$</span> Swedish kronor from her mom to buy
+    some evening fika. Since Sara is smart, she will try to spend
+    the money as wisely as possible. At the store Lugnbyrån, there
+    are <span class="tex2jax_process">$N$</span> pastries
+    available. Each pastry has a certain price and a specific
+    category. Because Sara likes fika so much, she <i class="itshape">almost</i> thinks all kinds of pastries are equally
+    tasty. Namely, she has no preference for which category of
+    pastry to buy, but she feels it would be a bit too monotonous
+    if she buys more than <span class="tex2jax_process">$K$</span>
+    pastries of the same category.</p>
+<p>Help Sara buy as many pastries as possible, with a total
+    cost less than or equal to <span class="tex2jax_process">$P$</span>. Also, ensure that there are no
+    more than <span class="tex2jax_process">$K$</span> pastries
+    from the same category among those she bought. You only need to
+    print out how many pastries she can buy, not which ones.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 10^5$</span>), the number of
+    pastries Sara can choose from.</p>
+<p>The next line contains the integer <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1
+    \leq P \leq 10^8$</span>), the number of kronor Sara has as a
+    budget for her evening fika.</p>
+<p>The next line contains the integer <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq N$</span>), the maximum number of pastries from
+    each category that Sara is willing to eat.</p>
+<p>The next line contains the integers <span class="tex2jax_process">$c_1, c_2, \dots , c_N$</span> (<span class="tex2jax_process">$1 \leq c_i \leq P$</span>), where
+    <span class="tex2jax_process">$c_i$</span> means that that
+    pastry <span class="tex2jax_process">$i$</span> costs
+    <span class="tex2jax_process">$c_i$</span> kronor. Note that
+    the total cost of all pastries may not necessarily fit in a
+    32-bit integer.</p>
+<p>The last line contains the integers <span class="tex2jax_process">$t_1, t_2, \dots , t_N$</span> (<span class="tex2jax_process">$1 \leq t_i \leq 10^5$</span>). There are
+    exactly <span class="tex2jax_process">$10^5$</span> categories
+    of pastries, and we refer to each with an integer. Each
+    <span class="tex2jax_process">$t_i$</span> means that that
+    pastry <span class="tex2jax_process">$i$</span> belongs to
+    category <span class="tex2jax_process">$t_i$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer: the number of pastries that Sara can buy
+    if she uses her budget optimally.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The subtask has a single testcase, the one on the
+          poster (<a href="https://www.progolymp.se/2025/affisch.pdf">https://www.progolymp.se/2025/affisch.pdf</a>).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K=N$</span> and you can
+          afford to buy every single pastry.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>You can afford to buy every single pastry.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$c_i=1$</span>, that is
+          to say every pastry costs <span class="tex2jax_process">$1$</span> krona.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$17$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K=N, N \leq
+          500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$21$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K=N$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p>In this sample, Sara can afford to buy all the pastries, but
+    they all belong to the same category (category 1). Since she
+    can buy at most 2 per category, she can purchase 2 of them.</p>
+<h2>Explanation of Sample 2</h2>
+<p>In this sample, categories are not a problem because
+    <span class="tex2jax_process">$K$</span> is large, but Sara
+    cannot afford to buy all the pastries. If she buys the pastries
+    priced at <span class="tex2jax_process">$4, 3, 2, 1$</span>,
+    she can afford exactly 4.</p>
+<h2>Explanation of Sample 3</h2>
+<p>An optimal solution is to buy pastries priced at
+    <span class="tex2jax_process">$1, 1, 4, 5$</span>. Here, Sara
+    could have bought more pastries if not limited by the
+    categories.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10
+2
+2 3 2
+1 1 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10
+5
+4 3 2 5 1
+1 1 1 1 1
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>9
+13
+2
+5 1 7 8 5 7 1 4 1
+1 2 1 1 3 3 2 1 2
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

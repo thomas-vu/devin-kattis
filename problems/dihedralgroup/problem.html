@@ -1,0 +1,176 @@
+<div class="problembody">
+<p>In mathematics, the dihedral group <span class="tex2jax_process">$D_ n$</span> is the group of symmetries of a
+    regular <span class="tex2jax_process">$n$</span>-gon. Rotations
+    and reflections are elements of <span class="tex2jax_process">$D_ n$</span>, and in fact all elements of
+    the dihedral group can be expressed as a series of rotations
+    and reflections. Elements of <span class="tex2jax_process">$D_
+    n$</span> <em>act</em> on the <span class="tex2jax_process">$n$</span>-gon by permuting its vertices. For
+    example, consider a regular pentagon with vertices initially
+    labeled <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$2$</span> (clockwise, starting from the
+    top):</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=\textwidth ]{pentagon.png}" src="/problems/dihedralgroup/file/statement/en/img-0001.png" style="width:"/>
+</center>
+</div>
+<p>Applying the above three dihedral actions to the pentagon (a
+    rotation, reflection, and then another rotation) produces the
+    following relabelings of the pentagon’s vertices:</p>
+<center>
+<span class="tex2jax_process">$1, 3, 5, 4, 2 \rightarrow 2,
+      1, 3, 5, 4 \rightarrow 2, 4, 5, 3, 1 \rightarrow 4, 5, 3, 1,
+      2.$</span>
+</center>
+<p>You are given an arbitrary clockwise labeling of the
+    vertices of a regular <span class="tex2jax_process">$n$</span>-gon using the integers
+    <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$n$</span>, and a second sequence to test.
+    Determine whether it’s possible to apply some series of
+    dihedral actions to the <span class="tex2jax_process">$n$</span>-gon so that the test sequence
+    appears as a contiguous clockwise sequence of vertex labels on
+    the transformed polygon.</p>
+<h2>Input</h2>
+<p>The first line of input has two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, (<span class="tex2jax_process">$1
+    \leq m \leq n \leq 5 \cdot 10^{4}$</span>) where <span class="tex2jax_process">$n$</span> is the number of vertices of the
+    polygon and <span class="tex2jax_process">$m$</span> is the
+    length of the sequence to be tested.</p>
+<p>The next line contains <span class="tex2jax_process">$n$</span> space-separated integers
+    <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1 \le d \le n$</span>). This is the initial
+    labeling of the polygon vertices. It is guaranteed that each
+    integer from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span> appears exactly
+    once.</p>
+<p>The next line contains <span class="tex2jax_process">$m$</span> space-separated integers
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \le t \le n$</span>). This is the sequence
+    to be tested.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is <span class="tex2jax_process">$1$</span> if the test sequence could appear
+    as a contiguous sequence of vertex labels after applying some
+    series of dihedral actions to the initial polygon, and
+    <span class="tex2jax_process">$0$</span> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 2 3
+1 3 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+1 2 3
+1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+1 2 3 4
+1 3
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2 3 4
+2 3 4 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2 3 4
+3 2 1 4
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 3 5 4 2
+2 1 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 7</th>
+<th>Sample Output 7</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+1 3 5 4 2
+2 1 5 3
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

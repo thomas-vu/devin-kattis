@@ -1,0 +1,133 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/minesweeper/file/statement/en/img-0001.jpg" class="illustration" src="/problems/minesweeper/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Minesweeper
+      </div>
+</div>
+<p>Arnar is extremely skilled at <b class="bfseries">Minesweeper</b>, he’s been playing the game since
+    1989. His friend Bjarki keeps telling him that this isn’t
+    impressive at all.</p>
+<blockquote class="quote">
+      Bjarki: “Anyone can be good at Minesweeper.”<br/>
+      Arnar: “If it’s so easy, prove it, train up and then compete
+      against me.”<br/>
+</blockquote>
+<p>Bjarki took this to heart and immediately started traning at
+    <b class="bfseries">Minesweeper</b>.</p>
+<p>After many weeks of training Bjarki hadn’t gotten any better
+    at <b class="bfseries">Minesweeper</b>. He simply doesn’t have
+    the logical thinking required for such a complex game. So he
+    instead goes on <tt class="ttfamily">hackers.com</tt> and
+    downloads a hack for <b class="bfseries">Minesweeper</b>. The
+    hack works by taking the game as an input and it prints out
+    <span class="tex2jax_process">$k$</span> pairs of numbers. Each
+    pair <span class="tex2jax_process">$y_i, x_i$</span> denotes
+    the row and column where a mine is located.</p>
+<p>Bjarki can’t be bothered to figure out where these locations
+    are in <b class="bfseries">Minesweeper</b>. This is just a
+    further headache. Can you help Bjarki and draw the <b class="bfseries">Minesweeper</b> board? Cells without a mine are
+    denoted by <tt class="ttfamily">.</tt> (a dot). Cells with a
+    mine are denoted by <tt class="ttfamily">*</tt> (an
+    asterisk).</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$1 \le n,m \le 250$</span>, <span class="tex2jax_process">$1 \le k \le n \cdot m$</span>, where
+    <span class="tex2jax_process">$n$</span> denotes the number of
+    rows and <span class="tex2jax_process">$m$</span> denotes the
+    number of colums in the <b class="bfseries">Minesweeper</b>
+    board and <span class="tex2jax_process">$k$</span> gives the
+    number of pairs the hack printed. The next <span class="tex2jax_process">$k$</span> lines contain two integers
+    <span class="tex2jax_process">$1 \le y_i \le n$</span>,
+    <span class="tex2jax_process">$1 \le x_i \le m$</span>
+    each.</p>
+<h2>Output</h2>
+<p>Print the board in its entirety. The output should contain
+    <span class="tex2jax_process">$n$</span> lines and each line
+    should contain <span class="tex2jax_process">$m$</span>
+    characters.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le n,m \le
+          15$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>60</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 3
+1 1
+1 2
+1 3
+</pre>
+</td>
+<td>
+<pre>***
+...
+...
+...
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3 8
+1 1
+1 2
+1 3
+2 1
+2 3
+3 1
+3 2
+3 3
+</pre>
+</td>
+<td>
+<pre>***
+*.*
+***
+</pre>
+</td>
+</tr>
+</table>
+</div>

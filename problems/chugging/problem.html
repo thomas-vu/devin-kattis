@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/chugging/file/statement/en/img-0001.jpg" class="illustration" src="/problems/chugging/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Woman drinking Jax Beer at Raceland Crab Boil, 1938. Photo:
+        Russell Lee.
+      </div>
+</div>
+<p>Alice and Bob have challenged each other to finish as many
+    bottles as quickly as they can, an activity known as
+    <em>chugging</em> in North American slang.</p>
+<p>It takes Alice <span class="tex2jax_process">$t_
+    A$</span> seconds to finish the first bottle. However, the
+    bottle contents (gas, complex carbohydrates, alcohol) have
+    deleterious effects on performance, so the second bottle takes
+    her <span class="tex2jax_process">$t_ A+d_ A$</span> seconds to
+    finish. This effect is cumulative: with every new bottle,
+    Alice’s chugging speed deteriorates by <span class="tex2jax_process">$d_ A$</span> additional seconds.</p>
+<p>For instance, if <span class="tex2jax_process">$t_
+    A=10$</span> and <span class="tex2jax_process">$d_ A=2$</span>
+    as in the sample inputs below, then Alice needs</p><span class="tex2jax_process">\[ 10 + (10 + 2) + (10 + 2 + 2)=36 \]</span>
+<p>seconds to finish <span class="tex2jax_process">$3$</span> bottles.</p>
+<p>The corresponding values for Bob are <span class="tex2jax_process">$t_ B$</span> and <span class="tex2jax_process">$d_ B$</span>.</p>
+<p>Who finishes first?</p>
+<h2>Input</h2>
+<p>The input consists of three lines. The first line contains
+    the number <span class="tex2jax_process">$N$</span> of bottles
+    they each have to finish, with <span class="tex2jax_process">$1\leq N \leq 10$</span>. The second line
+    contains the integers <span class="tex2jax_process">$t_
+    A$</span> and <span class="tex2jax_process">$d_ A$</span>, with
+    <span class="tex2jax_process">$1\leq t_ A\leq 120$</span> and
+    <span class="tex2jax_process">$0\leq d_ A\leq 120$</span>. The
+    third line contains the integers <span class="tex2jax_process">$t_ B$</span> and <span class="tex2jax_process">$d_ B$</span>, with <span class="tex2jax_process">$1\leq t_ B\leq 120$</span> and <span class="tex2jax_process">$0\leq d_ B\leq 120$</span>.</p>
+<h2>Output</h2>
+<p>Print “Alice” if Alice finishes first, or “Bob” if Bob
+    finishes first. If they finish at the same time, print an
+    equality symbol, “<tt class="ttfamily">=</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10 2
+8 3
+</pre>
+</td>
+<td>
+<pre>Bob
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10 2
+8 4
+</pre>
+</td>
+<td>
+<pre>=
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10 2
+8 5
+</pre>
+</td>
+<td>
+<pre>Alice
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1
+1 0
+</pre>
+</td>
+<td>
+<pre>Bob
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>Mirko’s great grandmother Katica is an avid mathematician.
+    She likes to torment Mirko with math games. This time she wrote
+    down a sequence of numbers on a piece of paper and told Mirko
+    he may do the following:</p>
+<ul class="itemize">
+<li>
+<p>Choose any two numbers in the sequence (let’s call them
+        <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>) and a prime number
+        <span class="tex2jax_process">$X$</span> such that
+        <span class="tex2jax_process">$A$</span> is divisible by
+        <span class="tex2jax_process">$X$</span>. After that, Mirko
+        erases <span class="tex2jax_process">$A$</span> and writes
+        <span class="tex2jax_process">$A/X$</span> in its place. In
+        the end he erases <span class="tex2jax_process">$B$</span>
+        and writes <span class="tex2jax_process">$B\cdot X$</span>
+        in its place.</p>
+</li>
+</ul>
+<p>Mirko may perform this operation as many times he wants. His
+    goal is to obtain the maximum possible score, because he gets
+    candy from his great grandmother if he does so. The score for
+    one sequence is the greatest common divisor of all the numbers
+    in the sequence.</p>
+<p>He is not very good at this, and he likes his candy so he
+    has asked you to help him. Write a program that will calculate
+    the maximum possible score. Since you are such a nice person,
+    you should also print the smallest number of times Mirko must
+    perform the operation to obtain the maximum possible score.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$N$</span>, (<span class="tex2jax_process">$1
+    \leq N \leq 100$</span>), the number of elements in the
+    starting sequence.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> positive integers smaller than or
+    equal to <span class="tex2jax_process">$1\, 000\, 000$</span>,
+    the sequence Katica gave to Mirko.</p>
+<h2>Output</h2>
+<p>The one and only line of output should contain two integers.
+    The first integer is the maximal possible score Mirko can
+    obtain. The second integer is the smallest number of operations
+    Mirko needs to perform to obtain it.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+4 4 1
+</pre>
+</td>
+<td>
+<pre>
+2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+8 24 9
+</pre>
+</td>
+<td>
+<pre>
+12 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+4 5 6 7 8
+</pre>
+</td>
+<td>
+<pre>
+2 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

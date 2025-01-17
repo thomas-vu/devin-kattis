@@ -1,0 +1,138 @@
+<div class="problembody">
+<p><i class="itshape">Hori-san</i> and <i class="itshape">Miyamura-kun</i> have bought a new game to play with
+    to show their precious and eternal love for one another. Being
+    competitive and loving at the same time, they both want to win
+    the game.</p>
+<p>This game can be modelled in a form of <span class="tex2jax_process">$N$</span> rectangular blocks with a heights
+    <span class="tex2jax_process">$1 \leq {h}_ i \leq
+    10^{9}$</span> for <span class="tex2jax_process">$i =
+    1,2,\ldots ,N$</span>.</p>
+<p>A jump is described as moving from the player’s current
+    block to the nearest block in <i class="itshape">either</i> the
+    left and right direction that has a height strictly higher than
+    it.</p>
+<p>The aim of the game is to reach the highest block in the
+    shortest number of jumps.</p>
+<p><i class="itshape">Miyamura</i> wants to win at least one
+    game over <i class="itshape">Hori</i>, so he needs you to help
+    him to compute the smallest number of jumps to reach the
+    highest block starting from <b class="bfseries">every</b>
+    possible starting block.</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$1 \le N \le 1\, 000\, 000$</span>, the
+    number of blocks.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    contain the height of the blocks, <span class="tex2jax_process">$1 \leq {h}_ i \leq 10^{9}$</span>, each on
+    one line.</p>
+<h2>Output</h2>
+<p>Print out on one line, for every rectangular block, the
+    minimum number of jumps to get to the highest block starting
+    from it, followed by a space.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): <span class="tex2jax_process">$N = 7$</span>, at most 2 distinct
+        heights.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): <span class="tex2jax_process">$N = 10$</span>, Moreover the height of
+        the <span class="tex2jax_process">$N$</span> blocks are
+        strictly increasing or strictly decreasing.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \le 100$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$24$</span> Points</b>): <span class="tex2jax_process">$N \le 5\, 000$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$22$</span> Points</b>): No additional
+        constraint.</p>
+</li>
+</ol>
+<h2>Warning</h2>
+<p><b class="bfseries">The input files are large. Please use
+    fast I/O methods.</b></p>
+<h2>Explanation of Sample Input 1</h2>
+<p>The following are the explanations for Sample Input 1:</p>
+<ul class="itemize">
+<li>
+<p>Since block <span class="tex2jax_process">$1$</span> is
+        the highest block, the number of jumps is <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>Since block <span class="tex2jax_process">$2$</span> has
+        only height <span class="tex2jax_process">$4$</span>,
+        <i class="itshape">Miyamura</i> can only jump to block
+        <span class="tex2jax_process">$1$</span> to the left of
+        height <span class="tex2jax_process">$10$</span>, or block
+        <span class="tex2jax_process">$4$</span> to the right of
+        height <span class="tex2jax_process">$8$</span>.</p>
+</li>
+<li>
+<p>Since block <span class="tex2jax_process">$3$</span> has
+        only height <span class="tex2jax_process">$2$</span>,
+        <i class="itshape">Miyamura</i> can only jump to block
+        <span class="tex2jax_process">$2$</span> to the left of
+        height <span class="tex2jax_process">$4$</span>, or block
+        <span class="tex2jax_process">$4$</span> to the right of
+        height <span class="tex2jax_process">$8$</span>.</p>
+</li>
+<li>
+<p>Since block <span class="tex2jax_process">$4$</span> has
+        only height <span class="tex2jax_process">$8$</span>,
+        <i class="itshape">Miyamura</i> can only jump to block
+        <span class="tex2jax_process">$1$</span> to the left of
+        height <span class="tex2jax_process">$10$</span>, or block
+        <span class="tex2jax_process">$5$</span> to the right of
+        height <span class="tex2jax_process">$10$</span>.</p>
+</li>
+<li>
+<p>Since block <span class="tex2jax_process">$5$</span> is
+        the highest block, the number of jumps is <span class="tex2jax_process">$0$</span>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10
+4
+2
+8
+10
+</pre>
+</td>
+<td>
+<pre>0 1 2 1 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1
+2
+3
+4
+5
+6
+</pre>
+</td>
+<td>
+<pre>5 4 3 2 1 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

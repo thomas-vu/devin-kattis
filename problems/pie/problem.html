@@ -1,0 +1,70 @@
+<div class="problembody">
+<div class="illustration" style="width:48.00%">
+<img alt="/problems/pie/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pie/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>My birthday is coming up and traditionally I’m serving
+    pie. Not just one pie, no, I have a number <span class="tex2jax_process">$N$</span> of them, of various tastes and of
+    various sizes. <span class="tex2jax_process">$F$</span> of my
+    friends are coming to my party and each of them gets a piece of
+    pie. This should be one piece of one pie, not several small
+    pieces since that looks messy. This piece can be one whole pie
+    though.
+    <p>My friends are very annoying and if one of them gets a
+    bigger piece than the others, they start complaining. Therefore
+    all of them should get equally sized (but not necessarily
+    equally shaped) pieces, even if this leads to some pie getting
+    spoiled (which is better than spoiling the party). Of course, I
+    want a piece of pie for myself too, and that piece should also
+    be of the same size.</p>
+<p>What is the largest possible piece size all of us can get?
+    All the pies are cylindrical in shape and they all have the
+    same height <span class="tex2jax_process">$1$</span>, but the
+    radii of the pies can be different.</p>
+<h2>Input</h2>
+<p>One line with a positive integer: the number of test cases
+    (at most <span class="tex2jax_process">$25$</span>). Then for
+    each test case:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$F$</span> with <span class="tex2jax_process">$1\le N,F\le 10\, 000$</span>: the number
+        of pies and the number of friends.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$N$</span>
+        integers <span class="tex2jax_process">$r_ i$</span> with
+        <span class="tex2jax_process">$1\le r_ i\le 10\,
+        000$</span>: the radii of the pies.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each test case, output one line with the largest
+    possible volume <span class="tex2jax_process">$V$</span> such
+    that me and my friends can all get a pie piece of size
+    <span class="tex2jax_process">$V$</span>. The answer should be
+    given as a real number with an absolute error of at most
+    <span class="tex2jax_process">$10^{-3}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3 3
+4 3 3
+1 24
+5
+10 5
+1 4 2 3 4 5 6 5 4 2
+</pre>
+</td>
+<td>
+<pre>25.132741229
+3.141592654
+50.265482457
+</pre>
+</td>
+</tr>
+</table>
+</div>

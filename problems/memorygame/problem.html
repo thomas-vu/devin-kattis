@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>You’re playing memory with David. <span class="tex2jax_process">$2N$</span> cards are placed face down in a
+    row, each number between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span> shown on two cards. The players
+    take turns choosing two cards, if a player chooses two cards
+    with the same number they earn a point, the cards are removed
+    and the player can make another move. If the player picks two
+    different cards, the cards are replaced and the opponent makes
+    a move. The player with the most points wins.</p>
+<p>Before starting, David goes to fetch his lucky necklace. You
+    decide to take a peek at <span class="tex2jax_process">$K$</span> cards while he’s away. If he lets
+    you start, how many pairs can you find with certainty?</p>
+<h2>Input</h2>
+<p>The first line of input contains <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10^5$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$0
+    \leq K \leq 2N$</span>), the highest number on any card and the
+    amount of cards you’ve looked at. We can assume you don’t look
+    at the same card more than once, and that there are always an
+    even amount of cards.</p>
+<p>The second line of input contains <span class="tex2jax_process">$K$</span> space separated integers, the
+    numbers on the cards you have seen.</p>
+<h2>Output</h2>
+<p>The number of pairs you can find with certainty.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9 5
+2 2 4 1 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+1 2 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

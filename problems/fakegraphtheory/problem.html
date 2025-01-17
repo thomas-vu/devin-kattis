@@ -1,0 +1,84 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Combinatorician is a very combinatoricky cat.
+      Currently, SoCCat is challenging you to solve a combinatorics
+      problem!
+    </blockquote>
+<p>SoCCat challenges you to solve the following combinatorics
+    problem:</p>
+<p>Given a graph <span class="tex2jax_process">$G$</span> with
+    <span class="tex2jax_process">$4n$</span> vertices, along with
+    two permutations <span class="tex2jax_process">$p$</span> and
+    <span class="tex2jax_process">$q$</span>, each with size
+    <span class="tex2jax_process">$2n$</span> on the set
+    <span class="tex2jax_process">$\{ 1, 2, \ldots , 2n\}
+    $</span>.</p>
+<p>Add the following <span class="tex2jax_process">$4n$</span>
+    edges:</p>
+<ul class="itemize">
+<li>
+<p>For each <span class="tex2jax_process">$i \in \{ 1, 2,
+        3, \ldots , 2n\} $</span>, add an edge between vertices
+        <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$i + 2n$</span>.</p>
+</li>
+<li>
+<p>For each <span class="tex2jax_process">$i \in \{ 1, 2,
+        3, \ldots , n\} $</span>, add an edge between vertices
+        <span class="tex2jax_process">$p_ i$</span> and
+        <span class="tex2jax_process">$p_{i + n}$</span>.</p>
+</li>
+<li>
+<p>For each <span class="tex2jax_process">$i \in \{ 1, 2,
+        3, \ldots , n\} $</span>, add an edge between vertices
+        <span class="tex2jax_process">$q_ i + 2n$</span> and
+        <span class="tex2jax_process">$q_{i + n} + 2n$</span>.</p>
+</li>
+</ul>
+<p>Suppose the permutations <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span> are chosen uniformly at random
+    among the <span class="tex2jax_process">$(2n)!$</span> possible
+    permutations. Note that the permutations <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span> are independent of each other.
+    What is the expected number of connected components in the
+    resulting graph?</p>
+<p>Suppose the expected number of connected components in the
+    resulting graph is <span class="tex2jax_process">$E$</span>.
+    Then, let <span class="tex2jax_process">$E’ = E \times (2n)!
+    \times (2n)!$</span>. It can be proven that <span class="tex2jax_process">$E’$</span> is always an integer. You are
+    required to output the value of <span class="tex2jax_process">$E’ \bmod 1\, 000\, 003\, 233$</span>.</p>
+<p>In other words, you should output the sum of the number of
+    connected components in the resulting graph, over all
+    <span class="tex2jax_process">$(2n)! \times (2n)!$</span>
+    possible permutations <span class="tex2jax_process">$p$</span>
+    and <span class="tex2jax_process">$q$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span>, as described in the problem
+    statement (<span class="tex2jax_process">$1 \leq n \leq
+    3233$</span>).</p>
+<h2>Output</h2>
+<p>Output a single integer, the value of <span class="tex2jax_process">$E’ \bmod 1\, 000\, 003\, 233$</span>.</p>
+<h2>Notes</h2>
+<p>In the sample test case, there’s a <span class="tex2jax_process">$\frac{1}{3}$</span> chance that there are
+    <span class="tex2jax_process">$2$</span> connected components,
+    and <span class="tex2jax_process">$\frac{2}{3}$</span> chance
+    that there is <span class="tex2jax_process">$1$</span>
+    connected component.</p>
+<p>Therefore, <span class="tex2jax_process">$E=\frac{1}{3}
+    \times 2 + \frac{2}{3} \times 1 = \frac{4}{3}$</span>, and the
+    output should be <span class="tex2jax_process">$\frac{4}{3}
+    \times (4!)^2 = 768$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>768
+</pre>
+</td>
+</tr>
+</table>
+</div>

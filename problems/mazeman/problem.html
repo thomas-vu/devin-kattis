@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>You now work for a video game company - every programmer’s
+    dream! You are working on a multiplayer game where players
+    cooperate to enter a maze and try to consume all of the “dots”
+    as quickly as possible. Each player enters the maze at a
+    different entrance. The mazes are randomly generated, so the
+    minimum number of players needed to consume all of the dots can
+    vary, and some dots may not be reachable at all.</p>
+<p>You are working in the Quality Control department, analyzing
+    the randomly generated mazes. For analysis, the mazes are
+    represented in text. An <tt class="tt">X</tt> is a wall that
+    cannot be crossed. Letters <tt class="tt">A</tt>-<tt class="tt">W</tt> are entrances. Players can only move up, down, left
+    and right. Players can move though spaces and dots; moving over
+    a dot eats it. If two doors are adjacent, players cannot move
+    from one to the other. For example:</p>
+<center>
+<tt class="ttfamily">XXXXXXXAXXXXXXXBXXXX<br/>
+      X.. ..X.X...... ...X<br/>
+      X.XXX...X.X.XXXXXX.X<br/>
+      X.X.XXXXX.X.X....X.X<br/>
+      X.X... ...X.X.XX.X.X<br/>
+      X.X.X.XXXXXXX.XX.X.X<br/>
+      X.X.X.X...X...X....X<br/>
+      X.X.X.XXXXXXX.XXXX.X<br/>
+      X...X.X X.. ..X..X.X<br/>
+      XXXXXXXDXXXXXXXXCXXX<br/></tt>
+</center>
+<p>All of the reachable dots can be reached from entrances
+    <tt class="tt">A</tt> and <tt class="tt">C</tt> (or,
+    equivalently, <tt class="tt">B</tt> and <tt class="tt">C</tt>).
+    There are three dots that cannot be reached.</p>
+<p>Calculate the minimum number of players necessary to eat all
+    the reachable dots, and how many dots are not reachable because
+    they are walled off.</p>
+<h2>Input</h2>
+<p>This first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$3
+    \le n,m \le 100$</span>), where <span class="tex2jax_process">$n$</span> is the number of rows in the maze
+    representation, and <span class="tex2jax_process">$m$</span> is
+    the number of columns.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains a string of length exactly <span class="tex2jax_process">$m$</span>, consisting only of the capital
+    letters <tt class="tt">A</tt> through <tt class="tt">X</tt>,
+    space, or period. This is the maze. The borders of the maze
+    (rows <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$n$</span>, columns <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$m$</span>) are guaranteed to consist only of
+    capital letters <tt class="tt">A</tt> through <tt class="tt">X</tt>. There are no entrances (<tt class="tt">A</tt>-<tt class="tt">W</tt>) in the middle of the
+    maze.</p>
+<h2>Output</h2>
+<p>Output a line with two space-separated integers, the first
+    of which is the minimum number of entrances necessary to enter
+    in order to eat all of the dots (which may be <span class="tex2jax_process">$0$</span> if no dots are reachable), and the
+    second of which is the number of dots which cannot be
+    reached.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 20
+XXXXXXXAXXXXXXXBXXXX
+X.. ..X.X...... ...X
+X.XXX...X.X.XXXXXX.X
+X.X.XXXXX.X.X....X.X
+X.X... ...X.X.XX.X.X
+X.X.X.XXXXXXX.XX.X.X
+X.X.X.X...X...X....X
+X.X.X.XXXXXXX.XXXX.X
+X...X.X X.. ..X..X.X
+XXXXXXXDXXXXXXXXCXXX
+</pre>
+</td>
+<td>
+<pre>2 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+XDRVX
+X.X.X
+XXXXX
+</pre>
+</td>
+<td>
+<pre>2 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+NAQXX
+X X.X
+XXXXX
+</pre>
+</td>
+<td>
+<pre>0 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

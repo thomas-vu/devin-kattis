@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/rockpaperscissors/file/statement/en/img-0001.jpg" class="illustration" src="/problems/rockpaperscissors/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Rock-Paper-Scissors is game for two players, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, who each choose, independently of
+    the other, one of rock, paper, or scissors. A player chosing
+    paper wins over a player chosing rock; a player chosing
+    scissors wins over a player chosing paper; a player chosing
+    rock wins over a player chosing scissors. A player chosing the
+    same thing as the other player neither wins nor loses.</p>
+<p>A tournament has been organized in which each of
+    <span class="tex2jax_process">$n$</span> players plays
+    <span class="tex2jax_process">$k$</span> rock-scissors-paper
+    games with each of the other players, so there are <span class="tex2jax_process">$kn(n-1)/2$</span> games in total. Your job
+    is to compute the win average for each player, defined as
+    <span class="tex2jax_process">$w / (w + l)$</span> where
+    <span class="tex2jax_process">$w$</span> is the number of games
+    won, and <span class="tex2jax_process">$l$</span> is the number
+    of games lost, by the player.</p>
+<h2>Input</h2>
+<p>Input consists of several test cases. The first line of
+    input for each case contains <span class="tex2jax_process">$1
+    \leq n \leq 100, 1 \leq k \leq 100$</span> as defined above.
+    For each game, a line follows containing <span class="tex2jax_process">$p_1, m_1, p_2, m_2$</span>. <span class="tex2jax_process">$1 \leq p_1 \leq n$</span> and <span class="tex2jax_process">$1 \leq p_2 \leq n$</span> are distinct
+    integers identifying two players; <span class="tex2jax_process">$m_1$</span> and <span class="tex2jax_process">$m_2$</span> are their respective moves
+    ("rock", "scissors", or "paper"). A line containing 0 follows
+    the last test case.</p>
+<h2>Output</h2>
+<p>Output one line each for player 1, player 2, and so on,
+    through player <span class="tex2jax_process">$n$</span>, giving
+    the player’s win average rounded to three decimal places. If
+    the win average is undefined, output "-". Output an empty line
+    between cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+1 rock 2 paper
+1 scissors 2 paper
+1 rock 2 rock
+2 rock 1 scissors
+2 1
+1 rock 2 paper
+0
+</pre>
+</td>
+<td>
+<pre>
+0.333
+0.667
+
+0.000
+1.000
+</pre>
+</td>
+</tr>
+</table>
+</div>

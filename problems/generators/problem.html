@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>The volcanic island of Fleeland has never had a proper
+    electric net, but finally the administration of the island have
+    agreed to build the island’s power plants and network.</p>
+<p>On the island’s coast are its <span class="tex2jax_process">$n$</span> cities. The administration has
+    surveyed the cities and proposed <span class="tex2jax_process">$m$</span> of them as possible locations for
+    a power plant, with the <span class="tex2jax_process">$i$</span>th proposal stating that the
+    company can build a plant in city <span class="tex2jax_process">$c_ i$</span> for cost <span class="tex2jax_process">$a_ i$</span>.</p>
+<p>These power plants are very modern and a single plant could
+    power the whole island, but the volcano makes building power
+    lines across the island a dangerous affair. For <span class="tex2jax_process">$1 \leq i &lt; n$</span>, the company can
+    build power lines between cities <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$i+1$</span> for a cost of <span class="tex2jax_process">$b_ i$</span>, and between cities
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$1$</span> for a cost of <span class="tex2jax_process">$b_ n$</span>. A city will receive power if
+    it contains a power plant or is connected to a city with a
+    power plant via power lines.</p>
+<p>What is the cheapest way to power all the cities on the
+    island?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3\leq n \leq 10^5$</span>) and
+        <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1\leq m \leq n$</span>), the number of
+        cities and the number of possible locations for a power
+        plant.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$m$</span>
+        lines, the <span class="tex2jax_process">$i$</span>th of
+        which contains <span class="tex2jax_process">$c_ i$</span>
+        (<span class="tex2jax_process">$1 \leq c_ i \leq n$</span>)
+        and <span class="tex2jax_process">$a_ i$</span>
+        (<span class="tex2jax_process">$1 \leq a_ i \leq
+        10^9$</span>), the <span class="tex2jax_process">$i$</span>th possible location for a
+        power plant, and the cost to build it.</p>
+</li>
+<li>
+<p>Then follows a line containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$b_ i$</span> (<span class="tex2jax_process">$1 \leq b_ i \leq 10^9$</span>), the
+        costs of building the power lines.</p>
+</li>
+</ul>
+<p>The values of <span class="tex2jax_process">$c_{1,\ldots
+    ,n}$</span> are unique and given in strictly increasing
+    order.</p>
+<h2>Output</h2>
+<p>Output the minimal cost of powering all cities on the
+    island.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 100
+2 200
+150 300 150
+</pre>
+</td>
+<td>
+<pre>400
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 100
+2 200
+300 300 150
+</pre>
+</td>
+<td>
+<pre>450
+</pre>
+</td>
+</tr>
+</table>
+</div>

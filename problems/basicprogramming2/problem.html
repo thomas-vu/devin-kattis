@@ -1,0 +1,212 @@
+<div class="problembody">
+<p>You think you can code?<br/>
+    This problem will test you on various basic programming
+    techniques.<br/>
+    You are given two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$t$</span>; and then an array <span class="tex2jax_process">$A$</span> of <span class="tex2jax_process">$N$</span> integers (<span class="tex2jax_process">$0$</span>-based indexing).<br/>
+    Based on the value of <span class="tex2jax_process">$t$</span>,
+    you will perform an action on <span class="tex2jax_process">$A$</span>.</p>
+<div class="table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$t$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Action Needed</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Print “<tt class="ttfamily">Yes</tt>” if there are
+              two integers <span class="tex2jax_process">$x \in
+              A$</span> and <span class="tex2jax_process">$y \in
+              A$</span> such that <span class="tex2jax_process">$x
+              \neq y$</span> and <span class="tex2jax_process">$x+y
+              = 7\, 777$</span>,</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>or “<tt class="ttfamily">No</tt>” otherwise
+              (without the quotes)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print “<tt class="ttfamily">Unique</tt>” if all
+              integers in <span class="tex2jax_process">$A$</span>
+              are different;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>or print “<tt class="ttfamily">Contains
+              duplicate</tt>” otherwise (without the quotes)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="text-align:left">
+<p>Find and print the integer that appears
+              <span class="tex2jax_process">$&gt;
+              \frac{N}{2}$</span> times in <span class="tex2jax_process">$A$</span>;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>or print <span class="tex2jax_process">$-1$</span>
+              if such integer cannot be found</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:left">
+<p>Find and print the median integer of <span class="tex2jax_process">$A$</span> if <span class="tex2jax_process">$N$</span> is odd;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>or print both median integers of <span class="tex2jax_process">$A$</span> if <span class="tex2jax_process">$N$</span> is even (separate them
+              with a single space)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print integers in <span class="tex2jax_process">$A$</span> that fall between a
+              range [<span class="tex2jax_process">$100 \ldots
+              999$</span>] in sorted order;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+             </td>
+<td style="text-align:left; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>(print a single space between two integers)</p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$3
+    \leq N \leq 200\, 000$</span>; <span class="tex2jax_process">$1
+    \leq t \leq 5$</span>).<br/>
+    The second line of the input contains <span class="tex2jax_process">$N$</span> non-negative <span class="tex2jax_process">$32$</span>-bit signed integers.</p>
+<h2>Output</h2>
+<p>For each test case, output the required answer based on the
+    value of <span class="tex2jax_process">$t$</span>.</p>
+<h2>Scoring</h2>
+<p>There are <span class="tex2jax_process">$20$</span> hidden
+    test cases that test various requirements of this problem.<br/>
+    All <span class="tex2jax_process">$20$</span> test cases will
+    be tested.<br/>
+    Each hidden test case worth <span class="tex2jax_process">$5$</span> points (the <span class="tex2jax_process">$5$</span> sample test cases below worth
+    <span class="tex2jax_process">$0$</span> point).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 1
+1 7770 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 2
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>Unique
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 3
+1 1 1 1 2 2 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>8 4
+8 1 4 3 6 7 5 2
+</pre>
+</td>
+<td>
+<pre>4 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>7 5
+210 999 1000 543 321 99 777
+</pre>
+</td>
+<td>
+<pre>210 321 543 777 999
+</pre>
+</td>
+</tr>
+</table>
+</div>

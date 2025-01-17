@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>FreeCell Solitaire is, just as computer science, mostly
+    about sorting. The goal is to sort a deck of cards using a
+    fairly convoluted algorithm.</p>
+<p>The rules are the following: A shuffled deck is laid out in
+    eight stacks. Only the topmost card of a stack may be moved. A
+    card of value <span class="tex2jax_process">$v$</span> may be
+    moved to the top of another stack only if the column is empty,
+    or if the topmost card of the destination stack is of the
+    opposite color and of value <span class="tex2jax_process">$v+1$</span>. For instance the three of
+    hearts may be moved on top of the four of clubs. At your
+    disposal you have four free cells (think of them as the
+    available memory if you like!) that are initially empty. Free
+    cells can hold at most one card each, which can be moved
+    according to the same rules as stack cards. Figure 1 below
+    illustrates a few legal moves.</p>
+<div class="figure" id="fig:freecell moves">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{freecell}" src="/problems/freecell/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Legal moves for the three of hearts and
+          six of clubs
+        </div>
+</center>
+</div>
+<p>Most FreeCell computer games allow you to move a pile of
+    cards, provided there are enough empty cells and empty stacks
+    to accomplish this by moving cards from the pile one by one. In
+    the image above for instance, the whole pile with 5, 4 and 3
+    can be moved over 6 of spades by using some of the free cells
+    and the empty stack to temporarily hold 3 and 4.</p>
+<h2>Task</h2>
+<p>You would like to move a sorted pile of <span class="tex2jax_process">$K$</span> cards from one stack to the top of
+    another stack which is non-empty, but of appropriate color and
+    value. You will ignore all other non-empty stacks, because
+    otherwise you would have to take into account the color and
+    value of the topmost card of those stacks and that would be too
+    complicated.</p>
+<p>Even though you ignore the other non-empty stacks, you can
+    still use <span class="tex2jax_process">$N$</span> free cells
+    and <span class="tex2jax_process">$M$</span> empty stacks. Is
+    it possible to perform this move?</p>
+<h2>Input</h2>
+<p>The input consists of several test cases. Each test case is
+    represented by a line with three numbers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$K$</span> respectively. <span class="tex2jax_process">$N$</span> is the number of free cells,
+    <span class="tex2jax_process">$M$</span> is the number of empty
+    stacks and <span class="tex2jax_process">$K$</span> is the size
+    of the pile you are moving. We are considering a generalized
+    form of Free Cell in which <span class="tex2jax_process">$0
+    \leq N, M \leq 5$</span> and <span class="tex2jax_process">$0
+    \leq K \leq 100$</span>.</p>
+<h2>Output</h2>
+<p>The program should print “<tt>yes</tt>” if it is possible to
+    move a pile of <span class="tex2jax_process">$K$</span> cards
+    using <span class="tex2jax_process">$N$</span> free cells and
+    <span class="tex2jax_process">$M$</span> empty stacks, and
+    “<tt>no</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 8
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 9
+</pre>
+</td>
+<td>
+<pre>
+no
+</pre>
+</td>
+</tr>
+</table>
+</div>

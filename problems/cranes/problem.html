@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>A crane is a wonderful tool for putting up a building. It
+    makes the job go very quickly. When the building must go up
+    even faster, more than one crane can be used. However, when
+    there are too many cranes working on the same building, it can
+    get dangerous. As the cranes spins around, it can bump into
+    another crane if the operator is not careful. Such an accident
+    could cause the cranes to fall over, possibly causing major
+    damage. Therefore, safety regulations require cranes to be
+    spaced far enough apart so that it is impossible for any part
+    of a crane to touch any part of any other crane. Unfortunately,
+    these regulations limit the number of cranes that can be used
+    on the construction site, slowing down the pace of
+    construction. Your task is to place the cranes on the
+    construction site while respecting the safety regulations.</p>
+<p>The construction site is laid out as a square grid. Several
+    places on the grid have been marked as possible crane
+    locations. The arm of each crane has a certain length
+    <span class="tex2jax_process">$r$</span>, and can rotate around
+    the location of the crane. The crane covers the entire area
+    that is no more than <span class="tex2jax_process">$r$</span>
+    units away from the location of the crane. You are to place the
+    cranes to maximize the total area covered by all the
+    cranes.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer specifying the
+    number of test cases and there will be at most <span class="tex2jax_process">$20$</span> test cases. Each test case begins
+    with a line containing an integer <span class="tex2jax_process">$C$</span>, the number of possible locations
+    where a crane could be placed. There will be no more than 15
+    such locations. Each of the following <span class="tex2jax_process">$C$</span> lines contains three integers
+    <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$r$</span>, all between <span class="tex2jax_process">$-10\, 000$</span> and <span class="tex2jax_process">$10\, 000$</span> inclusive and <span class="tex2jax_process">$r$</span> will be positive. The first two
+    integers are the grid coordinates of the location, and the
+    third integer is the length of the arm of the crane that can be
+    placed at that location.</p>
+<h2>Output</h2>
+<p>For each test case, find the maximum area <span class="tex2jax_process">$A$</span> that can be covered by cranes, and
+    output a line containing a single integer <span class="tex2jax_process">$B$</span> such that <span class="tex2jax_process">$A = B \times \pi $</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+3
+0 0 4
+5 0 4
+-5 0 4
+</pre>
+</td>
+<td>
+<pre>
+32
+</pre>
+</td>
+</tr>
+</table>
+</div>

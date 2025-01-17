@@ -1,0 +1,79 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/bobby/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bobby/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/meginsanity/6973434597/">StarsApart</a>
+</div>
+</div>
+<p>Bobby and Betty have a bet. Betty bets Bobby that he cannot
+    roll an <span class="tex2jax_process">$S$</span>-sided die
+    (having values <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$S$</span>) and obtain a value
+    <span class="tex2jax_process">$\ge R$</span> on at least
+    <span class="tex2jax_process">$X$</span> out of <span class="tex2jax_process">$Y$</span> rolls. Betty has a variety of dice
+    with different numbers of sides <span class="tex2jax_process">$S$</span>, and all her dice are fair (for a
+    given die, each side’s outcome is equally likely). In order to
+    observe statistically rare events while still giving Bobby a
+    reason to bet, Betty offers to pay Bobby <span class="tex2jax_process">$W$</span> times his bet on each encounter.
+    For example, suppose Betty bets Bobby <span class="tex2jax_process">$1$</span> bitcoin that he can’t roll at
+    least a <span class="tex2jax_process">$5$</span> on a
+    <span class="tex2jax_process">$6$</span>-sided die at least two
+    out of three times; if Bobby does, she would give him
+    <span class="tex2jax_process">$W=3$</span> times his initial
+    bet (i.e. she would give him <span class="tex2jax_process">$3$</span> bitcoins). Should Bobby take the
+    bet (is his expected return greater than his original bet)?</p>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$1 \le N \le 10\, 000$</span>, representing
+    the number of cases that follow. The next <span class="tex2jax_process">$N$</span> lines each contain five integers,
+    <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$W$</span>. Their limits are <span class="tex2jax_process">$1 \le R \le S \le 20$</span>, <span class="tex2jax_process">$1 \le X \le Y \le 10$</span>, and
+    <span class="tex2jax_process">$1 \le W \le 100$</span>.</p>
+<h2>Output</h2>
+<p>For each case, output “yes” if Bobby’s expected return is
+    greater than his bet, or “no” otherwise. Bobby is somewhat risk
+    averse and does not bet if his expected return is equal to his
+    bet.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+5 6 2 3 3
+5 6 2 3 4
+</pre>
+</td>
+<td>
+<pre>
+no
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 2 9 10 100
+1 2 10 10 1
+1 2 10 10 2
+</pre>
+</td>
+<td>
+<pre>
+yes
+no
+yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

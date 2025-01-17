@@ -1,0 +1,89 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/bestbefore/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bestbefore/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by Henry Mühlpfordt (Own work) via Wikimedia
+        Commons
+      </div>
+</div>Just about any product found in a grocery store has a
+    “best before” date printed on it. Unfortunately, the format for
+    these dates can vary quite a bit: what is it supposed to mean
+    that the bread you bought yesterday is “best before 12/11/10”?
+    It could mean that the bread expires on November 10, 2012 (now
+    that’s a suspiciously durable bread and probably it is not
+    healthy for you for other reasons!), or it could mean that the
+    bread expired on December 11, 2010 (d’oh!), or a variety of
+    other options. To be safe, the truly paranoid (or healthily
+    skeptic, depending on who you ask) person would assume that it
+    means “best before November 12, 2010”, since that is the
+    earliest possible date. On the other hand, seeing “31/5/2012”
+    even the truly paranoid person knows that this must mean May
+    31, 2012 since that is the only possible real date using these
+    three numbers.
+
+    <p>Given a possibly ambiguous date “<span class="tex2jax_process">$A/B/C$</span>”, where <span class="tex2jax_process">$A, B, C$</span> are integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2999$</span>, output the earliest possible
+    legal date between Jan 1, 2000 and Dec 31, 2999 (inclusive)
+    using them as day, month and year (but not necessarily in that
+    order).</p>
+<p>Recall that a year is a leap year (has 366 days) if the year
+    is divisible by 4, unless it is divisible also by 100 but not
+    by 400 (so 2000 is a leap year, 2100 is not a leap year, and
+    2012 is a leap year).</p>
+<h2>Input</h2>
+<p>The input file consists of a single line containing three
+    integers separated by “/”. There are no extra spaces around the
+    “/”. Years may be truncated to two digits and may in that case
+    also omit the leading <span class="tex2jax_process">$0$</span>
+    (if there is one), so <span class="tex2jax_process">$2000$</span> could be given as “2000”, “00”
+    or “0” (but not as an empty string). Months and days may be
+    zero-padded. You may assume that the year, when given with four
+    digits, is between <span class="tex2jax_process">$2000$</span>
+    and <span class="tex2jax_process">$2999$</span>. At most one of
+    the integers has four digits, and the others have one or two
+    digits.</p>
+<h2>Output</h2>
+<p>Output a single line giving the earliest legal date possible
+    given the above constraints. The output should be formatted as
+    year-month-day, where year has four digits, and month and day
+    have two digits each (zero padding), for example “<tt class="ttfamily">2011-07-15</tt>”.</p>
+<p>If there is no legal date (subject to the above constraints)
+    then output a single line with the original string followed by
+    the words “<tt class="ttfamily">is illegal</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+02/4/67
+</pre>
+</td>
+<td>
+<pre>
+2067-02-04
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+31/9/73
+</pre>
+</td>
+<td>
+<pre>
+31/9/73 is illegal
+</pre>
+</td>
+</tr>
+</table>
+</div>

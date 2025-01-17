@@ -1,0 +1,128 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/fairbandwidthsharing/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fairbandwidthsharing/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg">
+        Orange tabby cat</a>.
+      </div>
+</div>
+<p>Dreaming of revolutionizing the tech industry and making the
+    world a better place, Ging has recently moved to Silicon Valley
+    to found his own startup, Katbook.</p>
+<p>Katbook allows users to download cat pictures. Katbook is
+    capable of transferring <span class="tex2jax_process">$t$</span> bits per second.</p>
+<p>There are <span class="tex2jax_process">$n$</span> species
+    of cats, numbered from <span class="tex2jax_process">$1$</span>
+    to <span class="tex2jax_process">$n$</span>. There is a demand
+    ratio <span class="tex2jax_process">$d_ i$</span> for the
+    pictures of the <span class="tex2jax_process">$i$</span>-th
+    species. This means, if there is no further restrictions, the
+    <span class="tex2jax_process">$i$</span>-th cat species should
+    have a ‘fair share’ of <span class="tex2jax_process">$\frac{d_
+    i}{\sum _{j=1}^{n} d_ j}$</span> fraction of the total
+    bandwidth <span class="tex2jax_process">$t$</span>.</p>
+<p>However, because of infrastructure limitations, the
+    bandwidth for the <span class="tex2jax_process">$i$</span>-th
+    species must be between <span class="tex2jax_process">$a_
+    i$</span> and <span class="tex2jax_process">$b_ i$</span>.</p>
+<p>You are newly hired by Ging as a network engineer at
+    Katbook. Your first task is to find the most ‘fair’ bandwidth
+    allocation satisfying the above constraints. More formally, let
+    <span class="tex2jax_process">$x_ i$</span> be the bandwidth
+    allocated for downloading pictures of the <span class="tex2jax_process">$i$</span>-th species. You must find
+    <span class="tex2jax_process">$x_ i$</span> such that:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$a_ i \le x_ i \le b_
+        i$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\sum _{i=1}^{n} x_ i =
+        t$</span>,</p>
+</li>
+<li>
+<p>Let <span class="tex2jax_process">$y_ i = t \cdot
+        \frac{d_ i}{\sum _{j=1}^{n} d_ j}$</span> (<span class="tex2jax_process">$y_ i$</span> is the ‘fair share’
+        bandwidth, if there was no constraints regarding
+        <span class="tex2jax_process">$a_ i$</span> and
+        <span class="tex2jax_process">$b_ i$</span>), the value
+        <span class="tex2jax_process">$\sum _{i=1}^{n} \frac{(x_ i
+        - y_ i)^2}{y_ i}$</span> should be as small as
+        possible.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line of input contains <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$(1
+    \le n \le 10^5, 1 \le t \le 10^6)$</span>.</p>
+<p>In the next <span class="tex2jax_process">$n$</span> lines,
+    the <span class="tex2jax_process">$i$</span>-th line contains
+    <span class="tex2jax_process">$3$</span> integers <span class="tex2jax_process">$a_ i$</span>, <span class="tex2jax_process">$b_ i$</span> and <span class="tex2jax_process">$d_ i$</span> <span class="tex2jax_process">$(0 \le a_ i \le b_ i \le 10^6, 0 &lt; b_ i,
+    1 \le d_ i \le 10^6)$</span>.</p>
+<p>It is guaranteed that there exists at least one valid
+    solution.</p>
+<p>It can be shown that under these constraints, the solution
+    is unique.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines, each
+    line contains the allocation for downloading pictures of the
+    <span class="tex2jax_process">$i$</span>-th species. The answer
+    will be accepted if and only if its relative or absolute error
+    to the optimal solution is at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<p>Formally, for each line, let your answer be <span class="tex2jax_process">$a$</span>, and the jury’s answer be
+    <span class="tex2jax_process">$b$</span>. Your answer is
+    accepted if and only if <span class="tex2jax_process">$\frac{|a
+    - b|}{\max {(1, |b|)}} \le 10^{-6}$</span>.</p>
+<h2>Explanation of Sample input</h2>
+<p>In the first sample, each cat species has its ‘fair share’
+    of <span class="tex2jax_process">$\frac{1}{3}$</span> of the
+    whole bandwidth.</p>
+<p>In the second sample, note that the cat species <span class="tex2jax_process">$1$</span> has much more demand and could get
+    almost all of the available bandwidth if not for its maximum to
+    be capped at <span class="tex2jax_process">$1$</span>. The rest
+    is divided with ratio <span class="tex2jax_process">$2:1$</span>, hence the cat species
+    <span class="tex2jax_process">$2$</span> gets <span class="tex2jax_process">$6$</span> bits per second and the cat
+    species <span class="tex2jax_process">$3$</span> gets
+    <span class="tex2jax_process">$3$</span> bits per second.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+0 10 1
+0 10 1
+0 10 1
+</pre>
+</td>
+<td>
+<pre>3.33333333
+3.33333333
+3.33333333
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+0 1 1000
+2 8 2
+2 8 1
+</pre>
+</td>
+<td>
+<pre>1.00000000
+6.00000000
+3.00000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

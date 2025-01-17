@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>A town is often divided into zones, e.g, industrial zones,
+    commercial zones, and residential zones. If some residential
+    zone is very far from all commercial zones, then the people
+    living there will have a long journey whenever they want to do
+    some shopping, and this is undesirable.</p>
+<p>The input will consist of an <span class="tex2jax_process">$n\times n$</span> grid of square zones. Each
+    zone is labeled <tt class="ttfamily">1</tt> (residential),
+    <tt class="ttfamily">2</tt> (industrial), or <tt class="ttfamily">3</tt> (commercial). When travelling from one zone
+    to another you are allowed to move north, east, south or west,
+    and the distance travelled is the number of zone boundaries you
+    traverse. So the distance between two adjacent zones is
+    <span class="tex2jax_process">$1$</span>, and the distance from
+    the zone in square <span class="tex2jax_process">$(1,1)$</span>
+    (the most south-westerly zone) to the zone in square
+    <span class="tex2jax_process">$(2,3)$</span> is <span class="tex2jax_process">$3$</span> (one step east and two steps
+    north). You may never move off the grid.</p>
+<p>Your task is to find the longest distance one has to travel
+    from a residential zone to get to the commercial zone closest
+    to that residential zone.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$2\leq n\leq 1500$</span>, followed by
+    <span class="tex2jax_process">$n$</span> lines of length
+    <span class="tex2jax_process">$n$</span> giving the map of the
+    city zones as an <span class="tex2jax_process">$n\times
+    n$</span> matrix where each entry is <tt class="ttfamily">1</tt>, <tt class="ttfamily">2</tt>, or <tt class="ttfamily">3</tt> depending on zone type. You can assume that
+    the city has zones of all three types.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$d$</span>, the largest distance from a
+    residential zone to its closest commercial zone.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1223
+2123
+2213
+3212
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+12
+33
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

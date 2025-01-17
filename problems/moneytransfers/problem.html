@@ -1,0 +1,175 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/moneytransfers/file/statement/en/img-0001.jpg" class="illustration" src="/problems/moneytransfers/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Sonia is the CEO of the South Western Economic Research
+    Consortium (SWERC). The main asset of SWERC is a group of banks
+    spread out in several countries, which specialize in wire
+    transfers between these countries.</p>
+<p>Money is transferred between banks which have transfer
+    agreements. Such agreements settle a fixed fee whenever there
+    is a transfer between these banks. When a client wishes to
+    transfer money to an account in a different bank, the money
+    flows between banks with transfer agreements until it reaches
+    the destination account. For each intermediary transaction, the
+    client will have to pay the corresponding transfer fee.</p>
+<p>SWERC’s goal is to provide the cheapest fees for its
+    clients, using only its banks as intermediaries, and profit
+    from its commissions. Things were going quite well until the
+    recent economic crisis. Due to the current situation,
+    governments agreed to impose an extra tax on each wire
+    transfer. Their objective is to both increase the tax income
+    and avoid losing money to tax havens around the world. Hence,
+    the intention is make this extra tax as large as possible
+    (while avoiding too much unrest).</p>
+<p>Sonia, being a savvy executive, wants to take advantage of
+    this situation and make sure SWERC provides the cheapest way to
+    transfer money between banks <b class="bf">X</b> and <b class="bf">Y</b> (their most frequent transfer requests). She will
+    try to lobby the politicians so that the new fee makes this
+    happen. She gathered data about the transfer agreements between
+    banks (including competitors) but has no idea what should be
+    the value of the new fee.</p>
+<h3>Task</h3>
+<p>Can you help Sonia compute the largest fee so that SWERC can
+    provide cheapest way to transfer money between <b class="bf">X</b> and <b class="bf">Y</b>?</p>
+<h3>Input</h3>
+<p>The first line consists of four space-separated integers:
+    <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$P$</span> <span class="tex2jax_process">$X$</span> <span class="tex2jax_process">$Y$</span>, the number of existing banks, the
+    number of transfer partnerships, and the identifiers of banks
+    <b class="bf">X</b> and <b class="bf">Y</b>, respectively. The
+    next <span class="tex2jax_process">$P$</span> lines have three
+    space-separated integers: <span class="tex2jax_process">$a_
+    i$</span> <span class="tex2jax_process">$b_ i$</span>
+<span class="tex2jax_process">$c_ i$</span>, meaning there is a
+    partnership between banks <span class="tex2jax_process">$a_
+    i$</span> and <span class="tex2jax_process">$b_ i$</span> with
+    fee <span class="tex2jax_process">$c_ i$</span>.</p>
+<p>A line with an integer <span class="tex2jax_process">$M$</span>, the number of banks owned by
+    SWERC, follows. The next line contains <span class="tex2jax_process">$M$</span> space-separated integers, the
+    identifiers of these banks. <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> are always in this list.</p>
+<h3>Constraints</h3>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$2 \leq M \leq N \leq
+          1\, 000$</span></p>
+</td>
+<td style="text-align:center">
+<p>and</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq P \leq 10\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq X, Y, a_ i, b_ i
+          \leq N$</span></p>
+</td>
+<td style="text-align:center">
+<p>and</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$X \neq Y$</span> and
+          <span class="tex2jax_process">$a_ i \neq b_ i$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq c_ i \leq 1\,
+          000\, 000\, 000$</span></p>
+</td>
+</tr>
+</table>
+<h3>Output</h3>
+<p>The output should be a single integer greater than zero: the
+    largest fee so that SWERC can provide cheapest way to transfer
+    money between <span class="tex2jax_process">$X$</span> and
+    <span class="tex2jax_process">$Y$</span>. However, if there is
+    no value such that this happens, output <tt class="tt">Impossible</tt> instead. If the fee on each transfer can
+    be infinitely large, output <tt class="tt">Infinity</tt>.</p>
+<h3>Sample Output 1 Explanation</h3>
+<p>If the extra fee is 4 or more, then SWERC can not provide
+    the cheapest transaction fee. Example: if the fee is 4, SWERC
+    provides a cost of 20, using banks 1, 3, 4, 5 and 6, in this
+    order. However, using bank 2 as an intermediary, we can pay
+    only 19.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 8 1 6
+1 2 5
+1 3 1
+2 6 6
+2 3 6
+4 2 3
+3 4 1
+4 5 1
+5 6 1
+5
+1 3 6 5 4
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4 1 2
+1 2 6
+1 3 2
+1 2 7
+2 3 3
+2
+1 2
+</pre>
+</td>
+<td>
+<pre>
+Infinity
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4 1 4
+1 2 1
+1 3 1
+2 4 1
+3 4 1
+3
+1 2 4
+</pre>
+</td>
+<td>
+<pre>
+Impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

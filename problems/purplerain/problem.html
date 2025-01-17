@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/purplerain/file/statement/en/img-0001.png" class="illustration" src="/problems/purplerain/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Purple rain falls in the magic kingdom of Linearland
+    which is a straight, thin peninsula.
+
+    <p>On close observation however, Prof. Nelson Rogers finds that
+    actually it is a mix of Red and Blue drops.</p>
+<p>In his zeal, he records the location and color of the
+    raindrops in different locations along the peninsula. Looking
+    at the data, Professor Rogers wants to know which part of
+    Linearland had the “least” purple rain.</p>
+<p>After some thought, he decides to model this problem as
+    follows. Divide the peninsula into <span class="tex2jax_process">$n$</span> sections and number them West to
+    East from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. Then, describe the
+    raindrops as a sequence of <tt class="tt">R</tt> and <tt class="tt">B</tt>, depending on whether the rainfall in each section
+    is primarily red or blue. Finally, find a subsequence of where
+    the difference between the number of <tt class="tt">R</tt> and
+    the number of <tt class="tt">B</tt> is maximized.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing a string of
+    <span class="tex2jax_process">$n$</span> characters
+    (<span class="tex2jax_process">$1 \le n \le 10^5$</span>),
+    describing the color of the raindrops in sections <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>.</p>
+<p>It is guaranteed that the string consists of uppercase ASCII
+    letters ‘<tt class="tt">R</tt>’ and ‘<tt class="tt">B</tt>’
+    only.</p>
+<h2>Output</h2>
+<p>Print, on a single line, two space-separated integers that
+    describe the starting and ending positions of the part of
+    Linearland that had the least purple rain.</p>
+<p>If there are multiple possible answers, print the one that
+    has the Westernmost (smallest-numbered) starting section. If
+    there are multiple answers with the same Westernmost starting
+    section, print the one with the Westernmost ending section.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+BBRRBRRBRB
+</pre>
+</td>
+<td>
+<pre>
+3 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+BBRBBRRB
+</pre>
+</td>
+<td>
+<pre>
+1 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

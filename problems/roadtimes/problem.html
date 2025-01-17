@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>Ubol Narongdid is the founder of a brash new startup company
+    called Special D-Liver-E. She wants to corner the market on
+    overnight deliveries of organs between hospitals in the Phuket
+    area. For scheduling purposes it is important to have accurate
+    estimates for the times to perform such deliveries. Several
+    trips between various hospitals have already been performed, so
+    delivery times between those pairs of hospitals are known. The
+    company currently has software to estimate times for other (as
+    yet untraveled) trips, but so far all the estimates have been
+    woefully inaccurate.</p>
+<p>You have been asked to come up with a method to improve
+    these estimates. You have at your disposal the following
+    information: 1) the length (in kilometers) of the roads
+    connecting each pair of cities in the Phuket area, and 2) a set
+    of times (in minutes) for various previously executed
+    deliveries.</p>
+<p>You know that roads are one-way, and each road has a fixed
+    speed limit that lies between <span class="tex2jax_process">$30$</span> and <span class="tex2jax_process">$60$</span> kilometers per hour. Speed limits
+    are real-valued and need not be integers. You also know that
+    delivery trucks always take the route that minimizes distance
+    traveled, and on each road will always travel at a constant
+    speed equal to that road’s speed limit. Thus you know, for
+    example, that if a given trip is <span class="tex2jax_process">$50$</span> kilometers, the time it will take
+    is between <span class="tex2jax_process">$50$</span> and
+    <span class="tex2jax_process">$100$</span> minutes inclusive,
+    in the absence of any other information. Ah, but you
+    <em>do</em> have other information, namely the times of
+    previous deliveries. It is up to you to use it to produce the
+    best possible estimates.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \leq 30$</span>) indicating the
+    number of cities, numbered <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. After that are <span class="tex2jax_process">$n$</span> lines each containing <span class="tex2jax_process">$n$</span> integers specifying the distance
+    in kilometers between cities: the <span class="tex2jax_process">$j^{\text {th}}$</span> value on the
+    <span class="tex2jax_process">$i^{\text {th}}$</span> line
+    indicates the distance when traveling directly from city
+    <span class="tex2jax_process">$i$</span> to city <span class="tex2jax_process">$j$</span>. A value of <span class="tex2jax_process">$-1$</span> indicates there is no road
+    directly connecting the two cities, and the distance from any
+    city to itself is always <span class="tex2jax_process">$0$</span>; all other distances are positive
+    and at most <span class="tex2jax_process">$1\, 000$</span>.
+    There are at most <span class="tex2jax_process">$100$</span>
+    roads.</p>
+<p>Following this is a line with a single integer <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$1
+    \le r \leq 100$</span>) indicating the number of previously
+    executed routes. The next <span class="tex2jax_process">$r$</span> lines each contain three integers
+    <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$d$</span>, and <span class="tex2jax_process">$t$</span>, where <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$d$</span> are the source and destination
+    cities and <span class="tex2jax_process">$t$</span> is how long
+    the delivery from <span class="tex2jax_process">$s$</span> to
+    <span class="tex2jax_process">$d$</span> took, in minutes.</p>
+<p>Finally there is a line containing a single integer
+    <span class="tex2jax_process">$q$</span> (<span class="tex2jax_process">$1 \le q \leq 100$</span>) indicating the
+    number of future delivery queries. The next <span class="tex2jax_process">$q$</span> lines each contain two integers
+    <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$d$</span> giving the source and destination
+    cities for the query.</p>
+<p>You may assume that for each of the <span class="tex2jax_process">$r+q$</span> source/destination pairs in the
+    input there is a unique minimum-distance route.</p>
+<h2>Output</h2>
+<p>Display a single line for each query containing the source
+    and destination cities for that query, followed by the best low
+    and high bounds on the estimate for the travel time, accurate
+    to within an absolute or relative error of <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+0 50 -1
+55 0 40
+-1 40 0
+1
+0 2 120
+3
+0 1
+1 2
+1 0
+</pre>
+</td>
+<td>
+<pre>
+0 1 50.0 80.0
+1 2 40.0 70.0
+1 0 55.0 110.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/happyandunhappynumbers/file/statement/en/img-0001.jpg" class="illustration" src="/problems/happyandunhappynumbers/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Several numbers in various emotional states. Image by
+        <a href="https://www.shutterstock.com/image-vector/colorful-kids-font-numbers-1-0-1283876044">
+        Sylfida (Shutterstock)</a>, Used under license
+      </div>
+</div>
+<p>It turns out there are such things as happy numbers and
+    unhappy numbers. We’re going to assume that you have been using
+    these poor little lovable creatures your whole life with
+    absolutely no consideration for their feelings and general
+    well-being. Perhaps today we can convince you to have some
+    empathy and to stop and think about whether or not your numbers
+    are happy. Who ever said that a programming competition cannot
+    be a lesson in numerical ethics?</p>
+<p>A <em>happy number</em> is a positive integer that, when
+    repeatedly replaced with the sum of the squares of its digits,
+    eventually reaches the number <span class="tex2jax_process">$1$</span>. Alternatively, if this process
+    repeats endlessly, the number is <em>unhappy</em>.</p>
+<p>Slightly more formally (taken from Wikipedia), given a
+    positive integer <span class="tex2jax_process">$n =
+    n_{0}$</span>, define a sequence <span class="tex2jax_process">$n_{0}, n_{1}, n_{2}, \ldots $</span>, where
+    <span class="tex2jax_process">$n_{j+1}$</span> is the sum of
+    the squares of the <span class="mbox" style="width:">base-<span class="tex2jax_process">$10$</span></span>
+    digits of <span class="tex2jax_process">$n_{j}$</span>, for
+    <span class="tex2jax_process">$j \geq 0$</span>. Then
+    <span class="tex2jax_process">$n$</span> is happy if and only
+    if there exists <span class="tex2jax_process">$i \geq 0$</span>
+    such that <span class="tex2jax_process">$n_{i} = 1$</span>;
+    otherwise, <span class="tex2jax_process">$n$</span> is
+    unhappy.</p>
+<p>If you are still confused, take a look at the process for
+    the number <span class="tex2jax_process">$19$</span>,
+    which is happy:</p><span class="tex2jax_process">\[ 1^{2} +
+    9^{2} = 82 \]</span><span class="tex2jax_process">\[ 8^{2} +
+    2^{2} = 68 \]</span><span class="tex2jax_process">\[ 6^{2} +
+    8^{2} = 100 \]</span><span class="tex2jax_process">\[ 1^{2} +
+    0^{2} + 0^{2} = 1 \]</span>
+<p>Given two positive integers, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (with <span class="tex2jax_process">$A \leq B$</span>), your challenge is to
+    determine how many happy numbers there are between <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (inclusive).</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer,
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 10\, 000$</span>), the number
+    of test cases. This is followed by <span class="tex2jax_process">$T$</span> lines, one per test case. Each
+    test case is specified by two space-separated integers,
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1
+    \leq A \leq B \leq 10^{6}$</span>).</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    number of happy numbers between <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, inclusive.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 20
+14 18
+</pre>
+</td>
+<td>
+<pre>5
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

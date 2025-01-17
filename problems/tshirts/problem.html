@@ -1,0 +1,215 @@
+<div class="problembody">
+<p>During the Programming Olympiad finals, each of the
+    <span class="tex2jax_process">$N$</span> contestants is always
+    given a t-shirt as is customary. However, the judges are
+    sometimes a bit stressed out with making last minute changes to
+    the problem sets (only changes, mind you – the judges never
+    wait until the day before the contest to make a problem).</p>
+<p>This means that when the judges order the t-shirts, they may
+    not look <em>that</em> carefully on what t-shirt sizes the
+    contestants have. After all, who can distinguish a size
+    <tt class="ttfamily">XS</tt> t-shirt from an <tt class="ttfamily">XL</tt> t-shirt? The judges certainly couldn’t, but
+    it appears that the contestants can when they try putting their
+    new t-shirts on. Since the judges never learn to plan properly,
+    this will surely be a problem next year as well. But right now
+    it is <em>your</em> problem.</p>
+<p>While each contestant has a preferred size, they can wear
+    t-shirts in an interval of sizes. More specifically, the
+    <span class="tex2jax_process">$i$</span>:th contestant
+    (starting from 0) can wear a t-shirt in any size at least
+    <span class="tex2jax_process">$L[i]$</span> but at most
+    <span class="tex2jax_process">$H[i]$</span> (both limits
+    inclusive). Here, each size has been assigned an integer so
+    that a higher integer means a larger size. Your task is to
+    assign t-shirts to the contestants, so that as many contestants
+    as possible will get a t-shirt that he or she can wear. The
+    judges have ordered exactly <span class="tex2jax_process">$N$</span> t-shirts, and the size of the
+    <span class="tex2jax_process">$i$</span>:th t-shirt is
+    <span class="tex2jax_process">$T[i]$</span>.</p>
+<h2>Example</h2>
+<p>There are <span class="tex2jax_process">$N = 3$</span>
+    contestants. The first contestant can wear t-shirts between
+    sizes <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$7$</span>, the second contestant can wear
+    t-shirts in sizes <span class="tex2jax_process">$3$</span> to
+    <span class="tex2jax_process">$5$</span>, and the last
+    contestant can only wear a size <span class="tex2jax_process">$6$</span> t-shirt.</p>
+<p>The three t-shirts have sizes <span class="tex2jax_process">$4, 6, 8$</span>. Since nobody can wear the
+    last t-shirt, at most two t-shirts can be assigned to the
+    contestants. This can also be achieved, for example by giving
+    the first t-shirt (size <span class="tex2jax_process">$4$</span>) to the first contestant, and the
+    second t-shirt (size <span class="tex2jax_process">$6$</span>)
+    to the last contestant. Thus the answer is 2.</p>
+<h2>Task</h2>
+<p>Your task is to compute the maximum number of contestants
+    who can get a t-shirt that he or she can wear. You should
+    implement the function <tt class="ttfamily">tshirt(N, L, H,
+    T)</tt>.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">tshirt(N, L, H, T)</tt> - this
+        function will be called exactly once by the judge.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">N</tt>: an integer - the number
+            of contestants (as well as t-shirts).</p>
+</li>
+<li>
+<p><tt class="ttfamily">L</tt>: an array with
+            <span class="tex2jax_process">$N$</span> integers.
+            <tt class="ttfamily">L[i]</tt> (<span class="tex2jax_process">$0 \le i &lt; N$</span>) is the
+            smallest size the <span class="tex2jax_process">$i$</span>:th contestant can
+            wear.</p>
+</li>
+<li>
+<p><tt class="ttfamily">H</tt>: an array with
+            <span class="tex2jax_process">$N$</span> integers.
+            <tt class="ttfamily">H[i]</tt> (<span class="tex2jax_process">$0 \le i &lt; N$</span>) is the
+            largest size the <span class="tex2jax_process">$i$</span>:th contestant can
+            wear.</p>
+</li>
+<li>
+<p><tt class="ttfamily">T</tt>: an array with
+            <span class="tex2jax_process">$N$</span> integers.
+            <tt class="ttfamily">T[i]</tt> (<span class="tex2jax_process">$0 \le i &lt; N$</span>) is the size
+            of the <span class="tex2jax_process">$i$</span>:th
+            t-shirt.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \le L[i] \le H[i]
+            \le \max (T)$</span></p>
+</li>
+<li>
+<p>The function should return an integer, the maximum
+            number of contestants who can get a t-shirt assigned to
+            them.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>A code skeleton containing the function to be implemented,
+    together with a sample grader, can be found at <a href="http://progolymp.se/uploads/kattis-attachments/tshirts.zip">http://progolymp.se/uploads/kattis-attachments/tshirts.zip</a>.</p>
+<h2>Subtasks</h2>
+<p>The problem consists of a number of subtasks. Each subtask
+    gives some amount of points, and to pass the subtask you must
+    pass all the test cases in the subtask.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Subtask</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Limits</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 10$</span>,
+          <span class="tex2jax_process">$0 \le T[i] \le 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 1\,
+          000$</span>, <span class="tex2jax_process">$0 \le T[i]
+          \le 1\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 100\,
+          000$</span>, <span class="tex2jax_process">$0 \le T[i]
+          \le 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>37</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 100\,
+          000$</span>, <span class="tex2jax_process">$0 \le T[i]
+          \le 100,000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \le N \le 100\,
+          000$</span>, <span class="tex2jax_process">$0 \le T[i]
+          \le 10^9$</span></p>
+</td>
+</tr>
+</table>
+<h2>Input format</h2>
+<p>The sample judge reads input in the following format:</p>
+<ul class="itemize">
+<li>
+<p>line <span class="tex2jax_process">$1$</span>:
+        <tt class="ttfamily">N</tt></p>
+</li>
+<li>
+<p>line <span class="tex2jax_process">$2$</span>:
+        <tt class="ttfamily">L[0] L[1] .. L[N - 1]</tt></p>
+</li>
+<li>
+<p>line <span class="tex2jax_process">$3$</span>:
+        <tt class="ttfamily">H[0] H[1] .. H[N - 1]</tt></p>
+</li>
+<li>
+<p>line <span class="tex2jax_process">$4$</span>:
+        <tt class="ttfamily">T[0] T[1] .. T[N - 1]</tt></p>
+</li>
+</ul>
+<h2>Output format</h2>
+<p>The judge writes a single line containing the return value
+    of <tt class="ttfamily">tshirt(N, L, H, T)</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3 3 6
+7 5 6
+4 6 8
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,158 @@
+<div class="problembody">
+<blockquote class="quote">
+      I will never give up. I will never go back on my word. That
+      is my Ninja Way!!
+    </blockquote>
+<p>Your best friend, after the brutal murder of his entire clan
+    by none other than his own brother, decided to leave the
+    village to learn from the dark lord to exert his vengeance.
+    Unwilling to see him go down this dark path, you decided to
+    stop him and bring him back by force if you must.
+    Unfortunately, in your final confrontation, you were defeated
+    by his rage.</p>
+<p>“I will never give up. I will definitely bring you back!”
+    you screamed. Lord Pooty, the strongest and wisest of them all,
+    was touched by your efforts and decided to train you. Here is
+    your first lesson!</p>
+<p>The first lesson is on accuracy. You are sent to a cave with
+    many ridges and your goal is to throw your kunai such that it
+    does not hit any of the ridges. Let us elaborate.</p>
+<p>The cave is <span class="tex2jax_process">$w$</span> meters
+    long and <span class="tex2jax_process">$h$</span> meters tall,
+    and is defined by the top wall and the bottom wall. Both walls
+    have ridges sticking out, defined in the following way.</p>
+<ul class="itemize">
+<li>
+<p>On the bottom wall, there are <span class="tex2jax_process">$n_ b$</span> points <span class="tex2jax_process">$p_ i$</span>, where <span class="tex2jax_process">$p_1 = (0,0)$</span> and <span class="tex2jax_process">$p_{n_ b} = (w,0)$</span>. We connect
+        <span class="tex2jax_process">$p_ i$</span> and
+        <span class="tex2jax_process">$p_{i+1}$</span> with a
+        straight line segment for all <span class="tex2jax_process">$1 \leq i \leq n_ b-1$</span>.</p>
+</li>
+<li>
+<p>On the top wall, there are <span class="tex2jax_process">$n_ t$</span> points <span class="tex2jax_process">$q_ i$</span>, where <span class="tex2jax_process">$q_1 = (0,h)$</span> and <span class="tex2jax_process">$q_{n_ t} = (w,h)$</span>. We connect
+        <span class="tex2jax_process">$q_ i$</span> and
+        <span class="tex2jax_process">$q_{i+1}$</span> with a
+        straight line segment for all <span class="tex2jax_process">$1 \leq i \leq n_ t-1$</span>.</p>
+</li>
+</ul>
+<p>In other words, the ridges on the top and bottom wall form
+    polygons defined by the points <span class="tex2jax_process">$\{ p_ i\} $</span> and <span class="tex2jax_process">$\{ q_ i\} $</span>. Some polygons may
+    intersect with each other.</p>
+<p>You will throw the kunai straight horizontally from
+    <span class="tex2jax_process">$(0, k)$</span> with a starting
+    speed <span class="tex2jax_process">$v$</span> (meters per
+    second). For simplicity, your kunai can be represented by a
+    single point, and its trajectory will follow the law of physics
+    with <span class="tex2jax_process">$g = 10$</span> (meters per
+    second squared). In case you forget basic physics, the
+    parametric formulas for <span class="tex2jax_process">$x(t)$</span> and <span class="tex2jax_process">$y(t)$</span> — the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinate of the kunai at time
+    <span class="tex2jax_process">$t$</span> (seconds) — are as
+    follows.</p><span class="tex2jax_process">\[ x(t) = vt
+    \]</span><span class="tex2jax_process">\[ y(t) = k -
+    \frac{1}{2} gt^2 \]</span>
+<p>Unfortunately, you are not very good at controlling your
+    throwing speed. As such, <span class="tex2jax_process">$v$</span> will be a <b class="bfseries">random real number uniformly distributed</b> from
+    the range <span class="tex2jax_process">$[L,R]$</span>. You
+    want to compute the probability of your throw being successful;
+    i.e., your kunai does not hit or touch the ridges on the top
+    and bottom wall.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$C$</span>, denoting the number
+    of test cases (<span class="tex2jax_process">$1 \leq C \leq
+    10\, 000$</span>). Each test case has the following input
+    format.</p>
+<p>The first line contains four integers: <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$n_
+    b$</span>, and <span class="tex2jax_process">$n_ t$</span>,
+    denoting the width of the cave, the height of the cave, the
+    number of points defining the ridges on the bottom wall, and
+    the number of points defining the ridges on the top wall,
+    respectively (<span class="tex2jax_process">$1 \leq w, h \leq
+    10^9$</span>; <span class="tex2jax_process">$2 \leq n_ t, n_ b
+    \leq \min (w + 1, 100\, 000)$</span>).</p>
+<p>The second line describes the bottom wall and contains
+    <span class="tex2jax_process">$n_ b$</span> pairs of two
+    integers <span class="tex2jax_process">$(x_ i, y_ i)$</span>,
+    denoting the points <span class="tex2jax_process">$p_ i$</span>
+    (<span class="tex2jax_process">$0 = x_1 &lt; x_2 &lt; \cdots
+    &lt; x_{n_ b} = w$</span>; <span class="tex2jax_process">$0
+    \leq y_ i \leq h$</span>; <span class="tex2jax_process">$p_1 =
+    (0, 0)$</span>; <span class="tex2jax_process">$p_{n_ b} = (w,
+    0)$</span>). The sum of <span class="tex2jax_process">$n_
+    b$</span> across all test cases does not exceed <span class="tex2jax_process">$100\, 000$</span>.</p>
+<p>The third line describes the top wall and contains
+    <span class="tex2jax_process">$n_ t$</span> pairs of two
+    integers <span class="tex2jax_process">$(x_ i, y_ i)$</span>,
+    denoting the points <span class="tex2jax_process">$q_ i$</span>
+    (<span class="tex2jax_process">$0 = x_1 &lt; x_2 &lt; \cdots
+    &lt; x_{n_ t} = w$</span>; <span class="tex2jax_process">$0
+    \leq y_ i \leq h$</span>; <span class="tex2jax_process">$q_1 =
+    (0, h)$</span>; <span class="tex2jax_process">$q_{n_ t} = (w,
+    h)$</span>). The sum of <span class="tex2jax_process">$n_
+    t$</span> across all test cases does not exceed <span class="tex2jax_process">$100\, 000$</span>.</p>
+<p>The fourth line contains three integers <span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$L$</span>, and <span class="tex2jax_process">$R$</span>, denoting the height you made your
+    throw and the lower bound and upper bound of the speed you can
+    throw your kunai (<span class="tex2jax_process">$1 \leq k \leq
+    h-1$</span>; <span class="tex2jax_process">$1 \leq L &lt; R
+    \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing a
+    non-negative real number, denoting the probability of your
+    throw succeeding. Your answer is considered correct if the
+    absolute error of each value is at most <span class="tex2jax_process">$10^{-5}$</span>. In other words, if the
+    correct value is <span class="tex2jax_process">$x$</span> and
+    your answer is <span class="tex2jax_process">$y$</span>, then
+    <span class="tex2jax_process">$|x - y| \leq
+    10^{-5}$</span>.</p>
+<h2>Explanation of Sample Input</h2>
+<p>For the first test case, if you throw your kunai at speed
+    <span class="tex2jax_process">$v=13$</span>, the following is
+    what the trajectory looks like. The throw is successful since
+    it does not hit any ridges.<br/></p>
+<p><img alt="\includegraphics[width=0.6\textwidth ]{./sample1-1.PNG}" src="/problems/nevergiveup/file/statement/en/img-0001.PNG" style="width:60.00%"/><br/>
+<br/></p>
+<p>However, if you throw your kunai at speed <span class="tex2jax_process">$v=16$</span>, the following is what the
+    trajectory looks like. The throw is not successful since it
+    hits the ridges on the top wall.<br/></p>
+<p><img alt="\includegraphics[width=0.6\textwidth ]{./sample1-2.PNG}" src="/problems/nevergiveup/file/statement/en/img-0002.PNG" style="width:60.00%"/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10 10 3 3
+0 0 5 6 10 0
+0 10 9 5 10 10
+7 1 100
+10 10 3 3
+0 0 5 6 10 0
+0 10 9 5 10 10
+9 1 100
+10 10 3 3
+0 0 5 10 10 0
+0 10 5 0 10 10
+5 1 100
+919300 946 6 2
+0 0 752 2 24461 0 510156 0 836493 1 919300 0
+0 946 919300 946
+708 1 846
+919300 946 6 2
+0 0 752 2 24461 0 510156 0 836493 1 919300 0
+0 946 919300 946
+708 70000 80000
+</pre>
+</td>
+<td>
+<pre>0.0308071675
+0.0060230787
+0
+0
+0.2745171379
+</pre>
+</td>
+</tr>
+</table>
+</div>

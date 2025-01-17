@@ -1,0 +1,47 @@
+<div class="problembody">
+<p>Stefán and Eva live in Vestmannaeyjar. Eva wants to see the
+    entire country. They intend to visit every location in the
+    country exactly once and then end up back in Vestmannaeyjar.
+    Stefán hates traveling and thus wants to spend the least amount
+    of time traveling between locations. If Stefán travels for too
+    long he gets annoyed which in turn annoys Eva. Eva wants to
+    keep Stefán in a good mood and thus has asked for your help
+    making a travel plan. The shorter the travel plan the more
+    satisfied Stefán will be.</p>
+<p>The starting location of Stefán and Eva is location
+    <span class="tex2jax_process">$0$</span>. They always travel
+    with the same speed between locations. It’s possible to travel
+    between any two locations in both directions. To simplify
+    things the world is two dimensional, where each longitude has
+    been converted into an <span class="tex2jax_process">$x$</span>
+    value and each latitude has been converted into a <span class="tex2jax_process">$y$</span> value. Since the world is two
+    dimensional we use Euclidean distance.</p>
+<h2>Input</h2>
+<p>The input to this problem is not secret like in other
+    problems, it can be found <a href="/problems/landsreisa/file/statement/attachments/iceland.txt">here</a>.</p>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, the number of locations. Next
+    there are <span class="tex2jax_process">$n$</span> lines. Each
+    contains two real numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> where <span class="tex2jax_process">$-25 \leq x \leq -13$</span> and <span class="tex2jax_process">$63 \leq y \leq 67$</span>. The <span class="tex2jax_process">$i$</span>-th line denotes the coordinates of
+    location <span class="tex2jax_process">$i$</span>. The values
+    have at most <span class="tex2jax_process">$4$</span> digits
+    after the decimal point. Below there is an image of the given
+    input.</p>
+<h2>Output</h2>
+<p>Print the travel plan on one line with <span class="tex2jax_process">$n$</span> numbers, separated by spaces,
+    where each number is between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$n - 1$</span> with each value appearing
+    exactly once. The numbers should signify in what order the
+    locations are visited. The first value should always be
+    <span class="tex2jax_process">$0$</span>.</p>
+<h2>Scoring</h2>
+<p>The score is given as an integer <span class="tex2jax_process">$0 \leq x \leq 100$</span>. If the length of
+    your travel plan is <span class="tex2jax_process">$k$</span>
+    then <span class="tex2jax_process">$x = \left\lfloor 100 \cdot
+    \left( 1 - \frac{k - 63}{100} \right)^4 \right\rfloor
+    $</span>.</p>
+<div class="illustration" style="width:90.00%">
+<img alt="/problems/landsreisa/file/statement/en/img-0001.png" class="illustration" src="/problems/landsreisa/file/statement/en/img-0001.png"/>
+<div class="description">
+        Locations in Iceland
+      </div>
+</div>
+</div>

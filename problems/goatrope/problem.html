@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>You have a fence post located at the point <span class="tex2jax_process">$(x, y)$</span> in the plane, to which a goat
+    is tethered by a rope. You also have a house, which you model
+    as an axis-aligned rectangle with diagonally opposite corners
+    at the points <span class="tex2jax_process">$(x_1, y_1)$</span>
+    and <span class="tex2jax_process">$(x_2, y_2)$</span>. You want
+    to pick a length of rope that guarantees the goat cannot reach
+    the house.</p>
+<p>Determine the minimum distance from the fence post to the
+    house, so that you can make sure to use a shorter rope.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing six
+    space-separated integers <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span>, and <span class="tex2jax_process">$y_2$</span>, each in the range <span class="tex2jax_process">$[-999, 999]$</span>.</p>
+<p>It is guaranteed that <span class="tex2jax_process">$x_1
+    &lt; x_2$</span> and <span class="tex2jax_process">$y_1 &lt;
+    y_2$</span>, and that <span class="tex2jax_process">$(x,
+    y)$</span> is strictly outside the axis-aligned rectangle with
+    corners at <span class="tex2jax_process">$(x_1, y_1)$</span>
+    and <span class="tex2jax_process">$(x_2, y_2)$</span>.</p>
+<h2>Output</h2>
+<p>Print the minimum distance from the goat’s post to the
+    house, with a relative or absolute error no more than
+    <span class="tex2jax_process">$0.001$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 3 0 0 5 4
+</pre>
+</td>
+<td>
+<pre>2.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 0 0 2 7 6
+</pre>
+</td>
+<td>
+<pre>2.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 -4 -3 -1 -1 2
+</pre>
+</td>
+<td>
+<pre>5.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

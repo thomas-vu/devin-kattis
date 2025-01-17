@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>Kathy is in charge of statistics for the girl’s basketball
+    team at her high school. She meticulously records each basket
+    made and the time it occurred. Her record book for a game might
+    begin as follows:</p>
+<pre>
+         H  2 0:13
+         A  2 0:19
+         H  1 0:52
+         H  1 0:52
+         A  3 1:08
+         ...
+</pre>
+<p>This indicates that</p>
+<ul class="itemize">
+<li>
+<p>the home team (<tt class="tt">H</tt>) scored a
+        <span class="tex2jax_process">$2$</span>-point basket
+        <span class="tex2jax_process">$13$</span> seconds into the
+        game</p>
+</li>
+<li>
+<p>the away team (<tt class="tt">A</tt>) scored a
+        <span class="tex2jax_process">$2$</span>-point basket
+        <span class="tex2jax_process">$6$</span> seconds later</p>
+</li>
+<li>
+<p>the home team made two free throws (each worth
+        <span class="tex2jax_process">$1$</span> point)
+        <span class="tex2jax_process">$52$</span> seconds into the
+        game (recall that the clock stops when a free throw is
+        made)</p>
+</li>
+<li>
+<p>the away team made a three point basket <span class="tex2jax_process">$1$</span> minute and <span class="tex2jax_process">$8$</span> seconds into the game.</p>
+</li>
+</ul>
+<p>The coach is very impressed with all the statistics that
+    Kathy keeps. Using these statistics, he would like to know how
+    long each team was in the lead during the game. For example, if
+    both teams went into an incredible shooting slump after the
+    1:08 mark in the game and no more baskets were made until the
+    end of the game (<span class="tex2jax_process">$32$</span>
+    minutes for a high school game) then the home team would have
+    led for <span class="tex2jax_process">$22$</span> seconds (from
+    0:13 to 0:19 and from 0:52 to 1:08) and the away team would
+    have led for 30:52 (from 1:08 to 32:00).</p>
+<p>Kathy is very proud of how impressed the coach is, but she’s
+    not looking forward to going through each game record to
+    determine how long each team was in the lead. Can you help
+    her?</p>
+<h2>Input</h2>
+<p>Input starts with a positive integer <span class="tex2jax_process">$n$</span> indicating the number of scores in
+    the game. Following this are <span class="tex2jax_process">$n$</span> lines of the form <tt class="tt">T
+    p time</tt> where <tt class="tt">T</tt> is either ’<tt class="tt">H</tt>’ or ’<tt class="tt">A</tt>’, <tt class="tt">p</tt>
+    is the number of points scored (either <span class="tex2jax_process">$1, 2$</span> or <span class="tex2jax_process">$3$</span>) and <tt class="tt">time</tt> is
+    the time the points were scored in either the form <tt class="tt">m:ss</tt> (if the time is less than <span class="tex2jax_process">$10$</span> minutes) or <tt class="tt">mm:ss</tt>. All times are between 0:00 and 31:59 and given
+    in non-decreasing order.</p>
+<h2>Output</h2>
+<p>Display three things: <span class="tex2jax_process">$1$</span>) either an ’<tt class="tt">H</tt>’
+    or ’<tt class="tt">A</tt>’ indicating which team won the game,
+    <span class="tex2jax_process">$2$</span>) the length of time
+    the home team was leading, and <span class="tex2jax_process">$3$</span>) the length of time the away team
+    was leading. Use the form <tt class="tt">m:ss</tt> for any time
+    less than <span class="tex2jax_process">$10$</span> minutes and
+    <tt class="tt">mm:ss</tt> otherwise. All games will have a
+    winner.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+H 2 0:13
+A 2 0:19
+H 1 0:52
+H 1 0:52
+A 3 1:08
+</pre>
+</td>
+<td>
+<pre>A 0:22 30:52
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+H 1 16:00
+</pre>
+</td>
+<td>
+<pre>H 16:00 0:00
+</pre>
+</td>
+</tr>
+</table>
+</div>

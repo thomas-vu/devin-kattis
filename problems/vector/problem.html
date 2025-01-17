@@ -1,0 +1,125 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/vector/file/statement/en/img-0001.jpg" class="illustration" src="/problems/vector/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.pxfuel.com/en/free-photo-ekbbp">pxfuel</a>
+</div>
+</div>Vector embeddings are a common tool in machine learning
+    systems. Complex real-world concepts (for instance, words in a
+    dictionary) are mapped onto vectors of real numbers. If
+    embeddings are trained properly, related concepts remain close
+    together in the vector space, so questions like “are these two
+    words synonyms?” can be reduced to straightforward mathematical
+    tests.
+    <p>You have been hired by Ye Olde Ice Cream Shoppe to create an
+    embedding model for flavors, so that when they are out of an
+    ice cream flavor they can recommend related flavors to
+    customers. After training your embedding on six cloud
+    datacenters for four months, you finally had the perfect flavor
+    model! You were ready to revolutionize the ice cream industry
+    on your street and, dare we say it, your neighborhood! Well,
+    until you accidentally dripped some free ice cream on your
+    keyboard and deleted half the data. The Shoppe cannot afford
+    the 30 billion rubles needed to retrain the model, so you are
+    in trouble.</p>
+<p>Fortunately, you still have various training results lying
+    around. For a given deleted vector, the training data tells you
+    how close it was to some known flavor vectors. The closeness of
+    vectors <span class="tex2jax_process">$A$</span> and
+    <span class="tex2jax_process">$B$</span> is just the standard
+    Euclidean distance metric (that is, the length of the vector
+    <span class="tex2jax_process">$A - B$</span>). Write a tool
+    that reconstructs embeddings which are consistent with the
+    training results.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$d$</span> and <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \leq d \leq 500$</span>) is the number of dimensions of the
+    vectors, and <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \leq n \leq 500$</span>) is
+    the number of training results for a deleted embedding vector
+    you want to reconstruct. Each of the next <span class="tex2jax_process">$n$</span> lines describes a training result
+    using <span class="tex2jax_process">$d + 1$</span> numbers
+    <span class="tex2jax_process">$x_1, \dots , x_ d$</span> and
+    <span class="tex2jax_process">$e$</span>. In a training result,
+    <span class="tex2jax_process">$x_1, \dots , x_ d$</span>
+    (<span class="tex2jax_process">$-100 \leq x_ i \leq
+    100$</span>) are the coordinates of a known vector, and
+    <span class="tex2jax_process">$e$</span> (<span class="tex2jax_process">$0 \leq e \leq 5\, 000$</span>) is the
+    Euclidean distance from that vector to the deleted one.</p>
+<p>Your submission will be tested only with the sample inputs
+    given below and inputs generated according to the following
+    procedure. First, <span class="tex2jax_process">$d$</span> and
+    <span class="tex2jax_process">$n$</span> are chosen. Then,
+    <span class="tex2jax_process">$n$</span> input vectors and
+    <span class="tex2jax_process">$1$</span> output vector, each
+    with dimension <span class="tex2jax_process">$d$</span>, are
+    chosen at random. The <span class="tex2jax_process">$d \cdot (n
+    + 1)$</span> coordinates are independent and uniformly
+    distributed in the interval <span class="tex2jax_process">$[-100,100]$</span>. Next, the Euclidean
+    distance from each input vector to the output vector is
+    computed. Finally, the output vector is discarded. Calculations
+    use double-precision floating-point numbers. Numbers obtained
+    using this procedure appear in the input with <span class="tex2jax_process">$17$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$d$</span> values, the
+    coordinates of any vector that has the given distance to each
+    training vector with an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+0 0 2.5
+3 0 2.5
+1.5 0.5 2.5
+</pre>
+</td>
+<td>
+<pre>1.5 -2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+0 0 2
+4 -4 6
+</pre>
+</td>
+<td>
+<pre>1.414213562373 1.414213562373
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+0 1 2 3 2
+1 2 -1 7 5
+1 0.3 3.4 1.2 3.3
+</pre>
+</td>
+<td>
+<pre>1 2 3 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

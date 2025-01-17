@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/gullpeningastaflar/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gullpeningastaflar/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo from <a href="https://flickr.com/photos/filterforge/8735533688/">flickr.com</a>
+</div>
+</div>
+<p>In front of you there are <span class="tex2jax_process">$n$</span> stacks, each containing
+    <span class="tex2jax_process">$n$</span> gold coins. Only one
+    of these stacks contains real gold coins, the other stacks
+    contain counterfeit coins. The counterfeit coins are very well
+    made and are nearly indistinguishable from the real ones. The
+    only difference is in their weight and even that one is minute.
+    The counterfeit coins weigh <span class="tex2jax_process">$n$</span> units each and the real gold coins
+    weigh <span class="tex2jax_process">$n+1$</span> units
+    each.</p>
+<p>Your goal is to find the stack of real gold coins, so that
+    you may take the coins and leave the worthless counterfeit
+    coins behind. Since it is difficult to discern between the
+    coins based on their weights, you have brought a scale. You can
+    take as many coins from each stack as you wish and place them
+    on the scale. The scale will then show you the total weight of
+    the coins. The coins then go to their respective stacks after
+    each use of the scale.</p>
+<p>Can you find which stack contains real gold in as few
+    weighings as possible?</p>
+<h2>Interactivity</h2>
+<p>This is an interactive problem. Your program will be tested
+    against an interactive judge which reads the output of your
+    program and prints the input your program receives. This
+    interaction follows certain rules:</p>
+<p>Your program should first read one line with one integer
+    <span class="tex2jax_process">$n$</span>. In the secret test
+    cases the value of <span class="tex2jax_process">$n$</span>
+    will always be <span class="tex2jax_process">$1\, 024$</span>,
+    but in the samples <span class="tex2jax_process">$n$</span> is
+    smaller.</p>
+<p>Then your program can either make a final guess or ask
+    questions to obtain information.</p>
+<p>In order to ask a question, your program must write a line
+    starting with the symbol <tt class="ttfamily">?</tt> and then
+    <span class="tex2jax_process">$n$</span> space separated
+    integers, denoting how many coins from each stack you place on
+    the scale. Your program should then read one line with one
+    integer, the total weight of the coins on the scale.</p>
+<p>Once your program has determined the answer, it should write
+    out the symbol <tt class="ttfamily">!</tt> followed by a space
+    and an integer denoting the number of the stack. The stacks are
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. If the answer is
+    incorrect, the program will receive a Wrong Answer verdict.
+    Otherwise, it will be scored as described below.</p>
+<p>The task has a testing tool attached to help test your
+    solution.</p>
+<h2>Scoring</h2>
+<p>Your program will be run on many test cases and the worst
+    result over all test cases will be used as the final score.
+    Your program is scored by the number of questions it asks. If
+    your program asks fewer than <span class="tex2jax_process">$2n$</span> questions, it will receive a
+    score. Fewer questions result in a higher score and the maximum
+    score is <span class="tex2jax_process">$100$</span>. If your
+    program asks <span class="tex2jax_process">$2n$</span> or more
+    questions, it will receive a Wrong Answer verdict.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>10</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 10 10 10 10 10 10 10 10 10 10</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1010</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 0 0 0 0 5 0 0 0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>50</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 0 0 10 0 0 0 0 0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>110</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>! 4</pre>
+</div>
+</div>

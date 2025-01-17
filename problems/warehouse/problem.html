@@ -1,0 +1,69 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/warehouse/file/statement/en/img-0001.jpg" class="illustration" src="/problems/warehouse/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/walmart3/14419350244/in/photolist-nYbWsY-jLZotk-bx1AVT-MRQHWn-FYkxB9-5pTjhV-ATUsQ-7QTcPm-6zivaY-287inZo-kfGwR6-5bY7tK-5mpHbN-h9pJBA-pcjooV-kQkUTw-4FaDTh-4vVwfE-fMfotL-jXxoir-befLBT-bh2BmF-dqtxLf-4Zsth1-dAneWy-SEfU69-SEfUKf-dAgLbB-dAgLJK-9Gtonj-dAnff5-dAgL3c-dAnfr7-SQqWX5-dAnfmJ-351f1A-SEfWdq">
+        Random Retail</a>
+</div>
+</div>
+<p>Elvira is processing shipments for the Christmas season!
+    There are various shipments of toys coming into her warehouse
+    throughout the day, and her boss wants a summary report at the
+    end. Each shipment consists of some number of a single kind of
+    toy.</p>
+<p>The summary report is an aggregated list of all the toys
+    that arrived at the warehouse over the day. The boss is most
+    interested in the biggest sellers, so toys should be sorted in
+    decreasing order of count. If the warehouse received the same
+    number of two kinds of toys, sort them in alphabetical
+    order<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a>.</p>
+<h2>Input</h2>
+<p>The first line of input contains the number of test cases,
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \le T \le 100$</span>).</p>
+<p>Each test case begins with a line containing an integer,
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 100$</span>). This indicates
+    that <span class="tex2jax_process">$N$</span> shipments are
+    coming in for processing. Each of the next <span class="tex2jax_process">$N$</span> lines describes a single shipment.
+    The line contains a string and an integer, the name of the toy
+    and how many of that toy are in the given shipment. The name of
+    a toy is a string of at most <span class="tex2jax_process">$10$</span> lowercase letters (<tt class="ttfamily">a</tt>–<tt class="ttfamily">z</tt>) and between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> toys arrive in a given
+    shipment.</p>
+<h2>Output</h2>
+<p>For each test case, output <span class="tex2jax_process">$K$</span>, the number of unique toys that
+    have arrived in the warehouse.</p>
+<p>Then output <span class="tex2jax_process">$K$</span> lines,
+    each containing the name of a toy and how many of that toy that
+    have arrived, summed up over all the shipments. Output toys in
+    decreasing order of count, breaking ties alphabetically.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+4
+furby 4
+elmo 5
+furby 1
+kirby 10
+2
+funfungame 1
+funfun 1
+</pre>
+</td>
+<td>
+<pre>3
+kirby 10
+elmo 5
+furby 5
+2
+funfun 1
+funfungame 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,197 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/stack/file/statement/en/img-0001.jpg" class="illustration" src="/problems/stack/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="http://www.freestockphotos.biz/stockphoto/8215">Photo</a>
+        by petr katrochvil cc0 1.0
+      </div>
+</div>You were recently hired by Rural and Municipal Roadway
+    Communications to manage messages on a scrolling display above
+    a major highway. Much to your surprise, these are very
+    primitive displays. You have to input the message manually
+    every time it should be changed (there is no memory to preload
+    a list of messages).
+
+    <p>Strangely, the only way to post messages is using an
+    on-board stack. You can push a character onto the top of the
+    stack, you can pop the character that is on top of the stack,
+    and you can print the character that is on top of the
+    stack..</p>
+<p>Out of boredom, or perhaps the universal human desire to do
+    as little work as possible to get the job done, you wonder what
+    the minimum number of <tt class="ttfamily">push</tt>,
+    <tt class="ttfamily">pop</tt>, and <tt class="ttfamily">print</tt> are required to print a message your boss
+    has told you to display. Oh, you must also ensure the stack is
+    clear at the end so that you are ready to input a new message
+    next time your boss asks you to do this.</p>
+<p><b class="bf">Example</b> If we want to print the message
+    <tt class="ttfamily">abba</tt> and then clear the stack you
+    could do the following. Note the contents of the stack are
+    recorded below with the top of the stack on the right.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+           </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><b class="bf">operation</b></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><b class="bf">stack contents</b></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><b class="bf">displayed message</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="ttfamily">push a</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">print</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">push b</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">ab</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">print</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">ab</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">ab</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">print</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">ab</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">abb</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>6</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">pop</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">abb</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>7</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">print</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">a</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">abba</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; text-align:left; border-bottom-color:black">
+<p>8</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="ttfamily">pop</tt></p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+           </td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="ttfamily">abba</tt></p>
+</td>
+</tr>
+</table>
+</center>
+<p>In fact, this is the fewest operations that can be performed
+    to print exactly the message <tt class="ttfamily">abba</tt> and
+    leave the stack empty.</p>
+<h2>Input</h2>
+<p>The first line of input is a single integer <span class="tex2jax_process">$T \leq 30$</span> indicating the number of
+    test cases. Each of the following <span class="tex2jax_process">$T$</span> lines contains a single string
+    consisting of any printable characters. The first and last
+    character of each line will not be a space. Each line has at
+    least one and at most <span class="tex2jax_process">$200$</span> characters.</p>
+<h2>Output</h2>
+<p>For each of the <span class="tex2jax_process">$T$</span>
+    strings in the input, you should output on a single line the
+    minimum number of operations required to print the string on
+    the display.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+d
+abba
+rollover ahead
+ogopogo spotted!
+</pre>
+</td>
+<td>
+<pre>
+3
+8
+34
+38
+</pre>
+</td>
+</tr>
+</table>
+</div>

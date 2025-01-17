@@ -1,0 +1,51 @@
+<div class="problembody">
+<p>You are trying to read in a dark room. The room contains
+    many candles, but none are lit. You are considering that it
+    might be worthwhile to light one, but before you do you want to
+    be certain that it will actually light your book. You only get
+    to light one and each is bright enough to cast light in a
+    radius of <span class="tex2jax_process">$8$</span> meters. You
+    are a stubborn reader and you are not willing to move your book
+    or one of the candles.</p>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$0 \le m \le 50$</span>, giving the number of
+    test cases that follow. A test case begins with the real-valued
+    <span class="tex2jax_process">$X, Y$</span> location of your
+    book. This is followed by an integer <span class="tex2jax_process">$0 \le n \le 1\, 000$</span>, giving the
+    number of candles in the room and the real-valued <span class="tex2jax_process">$X, Y$</span> locations of each candle. All
+    locations are measured in meters. All real values in the input
+    are in the range <span class="tex2jax_process">$-1\,
+    000$</span> to <span class="tex2jax_process">$1\, 000$</span>
+    and have at most <span class="tex2jax_process">$7$</span>
+    digits past the decimal point.</p>
+<h2>Output</h2>
+<p>For each test case, output “light a candle” if there is a
+    candle close enough to cast light on the position of your book.
+    Otherwise, output “curse the darkness”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+10 10
+1
+15 15
+10 10
+2
+20.5 10
+10 20.5
+</pre>
+</td>
+<td>
+<pre>
+light a candle
+curse the darkness
+</pre>
+</td>
+</tr>
+</table>
+</div>

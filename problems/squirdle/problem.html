@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/squirdle/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/squirdle/file/statement/en/img-0001.jpeg"/>
+<div class="description"></div>
+</div>
+<p>Squirtle has come up with a word game called Squirdle. In
+    the game, Squirtle thinks of a <span class="tex2jax_process">$5-$</span>letter string (where each letter
+    is a <b class="bfseries">distinct</b> lowercase English letter
+    <tt class="ttfamily">a-z</tt>). Squirtle gives you <span class="tex2jax_process">$10$</span> guesses to figure out his word,
+    and after each guess he will tell you whether each character of
+    the guess was in the right position, wrong position, or not in
+    the string at all. Guess Squirtle’s word in at most
+    <span class="tex2jax_process">$10$</span> guesses!</p>
+<h2>Interaction</h2>
+<p>This is an interactive problem. You will interact with
+    Squirtle using standard input and output.<br/></p>
+<p>To guess a string <tt class="ttfamily">s</tt>, print a line
+    to standard output in the following format:</p>
+<ul class="itemize">
+<li>
+<p>“<tt class="ttfamily">?</tt> <tt class="ttfamily">s</tt>” (where <tt class="ttfamily">s</tt> is a
+        <span class="tex2jax_process">$5$</span>-character string
+        consisting of only lowercase English letters)</p>
+</li>
+</ul>
+<p>Squirtle will respond with a single line of input: a string
+    of length <span class="tex2jax_process">$5$</span> consisting
+    of the digits <span class="tex2jax_process">$0$</span>,
+    <span class="tex2jax_process">$1$</span>, and <span class="tex2jax_process">$2$</span>. The number at each position gives
+    you information about the character <span class="tex2jax_process">$c$</span> at the corresponding position in
+    the guess <span class="tex2jax_process">$s$</span>:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0$</span> – <span class="tex2jax_process">$c$</span> is not present in the
+        string.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1$</span> – <span class="tex2jax_process">$c$</span> is present in the string but
+        at a different position.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> – <span class="tex2jax_process">$c$</span> is the present in the string
+        at the exact same spot.</p>
+</li>
+</ul>
+<p>The interaction ends when you receive the string
+    “<span class="tex2jax_process">$22222$</span>” (which means you
+    have guessed the Squirtle’s word correctly) or when you have
+    used all <span class="tex2jax_process">$10$</span> guesses.
+    Your program should terminate after making a correct
+    guess.<br/></p>
+<p>After every guess, make sure to output a newline character
+    and flush the output stream. To do this, use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> in C;</p>
+</li>
+<li>
+<p><tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre>? frogs</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>00000</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? zebra</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>20201</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? zubat</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>22222</pre>
+</div>
+</div>

@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>If you are going to travel to the World Finals, you cannot
+    rely on Czech Crowns. You would have to exchange your money for
+    various foreign currencies. This problem deals with multiple
+    currencies and their exchange rates. Your task is to verify
+    that some set of exchange rates is safe, namely detect a
+    possibility of so-called arbitrage.</p>
+<p>An <em>arbitrage</em> is a risk-free combination of buy and
+    sell operations that gains profit from imbalance in market
+    prices. The prices may apply to various things, typically stock
+    exchange but also currencies.</p>
+<h2>Input</h2>
+<p>The input consists of several test cases. Each case begins
+    with a line containing one positive integer number <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$1
+    \leq C\leq 200$</span>, the number of currencies.</p>
+<p>The second line of each test case contains <span class="tex2jax_process">$C$</span> currency codes separated by a
+    space. Each code is composed of 3 uppercase letters and all
+    codes in one test case are different.</p>
+<p>The third line contains one integer number <span class="tex2jax_process">$R, 0\leq R \leq C\cdot (C-1)$</span>, the
+    number of exchange rates available. Each of the following
+    <span class="tex2jax_process">$R$</span> lines contains one
+    exchange rate in the following format: first currency code,
+    space, second currency code, space, integer number <span class="tex2jax_process">$A_ i$</span>, colon (’<tt class="tt">:</tt>’), and integer number <span class="tex2jax_process">$B_ i$</span>. The meaning is as follows: If
+    you pay <span class="tex2jax_process">$A_ i$</span> units of
+    the first currency, you will get <span class="tex2jax_process">$B_ i$</span> units of the second currency.
+    You may assume that <span class="tex2jax_process">$1\leq A_ i,
+    B_ i\leq 100$</span> and that the two currencies are
+    different.</p>
+<p>The last test case is followed by a line with <span class="tex2jax_process">$C=0$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print one line of output. If there
+    exists any possible sequence of currency exchange operations
+    that would result in a profit, the line should contain the word
+    "<tt class="tt">Arbitrage</tt>". Otherwise, simply print
+    "<tt class="tt">Ok</tt>".</p>
+<p>The word <em>profit</em> in this case means that you start
+    with any amount of any currency and after performing any number
+    of exchanges you will have strictly higher amount of the same
+    currency.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+CZK EUR
+2
+CZK EUR 25:1
+EUR CZK 1:25
+2
+GBP USD
+2
+USD GBP 8:5
+GBP USD 5:9
+3
+BON DEM CZK
+3
+DEM BON 1:6
+BON CZK 1:5
+DEM CZK 1:20
+3
+CZK EUR GBP
+3
+CZK EUR 24:1
+EUR GBP 5:4
+GBP CZK 1:30
+3
+CZK USD GBP
+4
+CZK USD 28:1
+CZK GBP 31:1
+GBP CZK 1:31
+USD GBP 1:1
+0
+</pre>
+</td>
+<td>
+<pre>Ok
+Arbitrage
+Ok
+Ok
+Arbitrage
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>You are incredibly close to becoming the Pokemon champion,
+    but one final obstacle stands in your way: the Elite Four.
+    Throughout your journey, you raised your starter Pokemon to a
+    high enough level, and out of a show of loyalty to your
+    favorite Pokemon, you vowed to never catch another Pokemon.
+    This would normally put you at a disadvantage against the
+    toughest trainers in the region, but you know from experience
+    that with enough healing items and preparation, it is possible
+    to power through any fight.</p>
+<p>You begin your preparations by running a few calculations.
+    Your only Pokemon has <span class="tex2jax_process">$N$</span>
+    health initially and will faint if its health ever drops to
+    zero or below. You know that throughout the Elite 4 battles,
+    your Pokemon will be attacked <span class="tex2jax_process">$M$</span> times by opposing trainers, each
+    attack potentially dealing a different amount of damage. With
+    this in mind, you head straight to the Pokemart and stock up on
+    <span class="tex2jax_process">$P$</span> potions that heal
+    <span class="tex2jax_process">$20$</span> health each.</p>
+<p>After each time your Pokemon is attacked, you are allowed to
+    use as many potions as you want (until you run out of potions)
+    to heal your Pokemon, although your Pokemon’s health can never
+    increase above <span class="tex2jax_process">$N$</span>. If
+    your Pokemon’s health ever drops to zero or below, it faints
+    and you lose the battle. Given the amount of damage each attack
+    from the opposing Pokemon does, determine if you can make it
+    through the Elite Four without your Pokemon fainting.</p>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$P$</span>. These represent your Pokemon’s
+    health (<span class="tex2jax_process">$1 \leq N \leq 100\,
+    000$</span>), the number of attacks by opposing Pokemon
+    (<span class="tex2jax_process">$1 \leq M \leq 1\, 000$</span>),
+    and the number of potions you have (<span class="tex2jax_process">$1 \leq P \leq 100\, 000$</span>).</p>
+<p>The second line contains <span class="tex2jax_process">$M$</span> space-separated integers
+    <span class="tex2jax_process">$d_1, \ldots , d_ M$</span>
+    (<span class="tex2jax_process">$1 \leq d_ i \leq 100\,
+    000$</span>) representing the amount of damage dealt by each
+    attack, in order.</p>
+<h2>Output</h2>
+<p>Output one line containing <tt>champion</tt> if your Pokemon
+    can survive every attack or <tt>next time</tt> if not.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>100 3 1
+25 35 45
+</pre>
+</td>
+<td>
+<pre>champion
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 3 1
+8 9 10
+</pre>
+</td>
+<td>
+<pre>next time
+</pre>
+</td>
+</tr>
+</table>
+</div>

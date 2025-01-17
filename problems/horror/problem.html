@@ -1,0 +1,101 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/horror/file/statement/en/img-0001.jpg" class="illustration" src="/problems/horror/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/veganfeast/4057737488/">Janet
+        Hudson</a>
+</div>
+</div>It was time for the 7th <em>Nordic Cinema Popcorn
+    Convention</em>, and this year the manager Ian had a brilliant
+    idea. In addition to the traditional film program, there would
+    be a surprise room where a small group of people could stream a
+    random movie from a large collection, while enjoying popcorn
+    and martinis.
+
+    <p>However, it turned out that some people were extremely
+    disappointed, because they got to see movies like <em>Ghosts of
+    Mars</em>, which instead caused them to tear out their hair in
+    despair and horror.</p>
+<p>To avoid this problem for the next convention, Ian has come
+    up with a solution, but he needs your help to implement it.
+    When the group enters the surprise room, they will type in a
+    list of movies in a computer. This is the so-called <em>horror
+    list</em>, which consists of bad movies that no one in the
+    group would ever like to see. Of course, this list varies from
+    group to group.</p>
+<p>You also have access to the database <em>Awesome Comparison
+    of Movies</em> which tells you which movies are directly
+    similar to which. You can assume that movies that are similar
+    to bad movies will be almost as bad. More specificly, we define
+    the <em>Horror index</em> as follows:</p><span class="tex2jax_process">\[ HI = \left\{ \begin{array}{ll} 0 &amp;
+    \textrm{if movie is on horror list. This overrides the other
+    definitions.} \\ Q+1 &amp; \textrm{if the worst directly
+    similar movie has $HI = Q$} \\ +\infty &amp; \textrm{if not
+    similar at all to a horrible movie} \end{array} \right.
+    \]</span>
+<h2>Input</h2>
+<p>The first line of input contains three positive integers
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$H$</span>, <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1
+    \leq H &lt; N \leq 1\, 000,0 \leq L \leq 10\, 000$</span>),
+    where <span class="tex2jax_process">$N$</span> is the number of
+    movies (represented by IDs, ranging from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$N-1$</span>), <span class="tex2jax_process">$H$</span> is the number of movies on the
+    horror list and <span class="tex2jax_process">$L$</span> is the
+    number of similarities in the database.</p>
+<p>The second line contains <span class="tex2jax_process">$H$</span> unique space-separated integers
+    <span class="tex2jax_process">$x_ i$</span> (<span class="tex2jax_process">$0 \leq x_ i &lt;N$</span>) denoting the ID
+    of the movies on the horror list.</p>
+<p>The following <span class="tex2jax_process">$L$</span> lines
+    contains two space-separated integers <span class="tex2jax_process">$a_ i,b_ i$</span> (<span class="tex2jax_process">$0 \leq a_ i &lt; b_ i &lt; N$</span>),
+    denoting that movie with ID <span class="tex2jax_process">$a_
+    i$</span> is similar to movie with ID <span class="tex2jax_process">$b_ i$</span> (and vice versa).</p>
+<h2>Output</h2>
+<p>Output the ID of the movie in the collection with the
+    highest Horror Index. In case of a tie, output the movie with
+    the lowest ID.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 3 5
+0 5 2
+0 1
+1 2
+4 5
+3 5
+0 2
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 2 3
+5 2
+0 5
+0 1
+3 4
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

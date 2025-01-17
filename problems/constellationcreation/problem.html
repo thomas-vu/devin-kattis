@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/constellationcreation/file/statement/en/img-0001.png" class="illustration" src="/problems/constellationcreation/file/statement/en/img-0001.png"/>
+<div class="description">
+        Illustration of Sample 2
+      </div>
+</div>
+<p>As you journey further into space, the relative positions of
+    the stars have shifted so much that you can no longer recognize
+    the constellations that you’ve learned about growing up. This
+    makes for a great opportunity – now you can come up with your
+    own constellations!</p>
+<p>You’ve taken a snapshot of the night sky and aligned it into
+    a rectangular grid, and want to get to work creating some
+    constellations. Since you’re working on such a nice grid,
+    you’ll just use vertical and horizontal lines to connect stars
+    together. Sometimes one constellation’s vertical line might
+    cross another constellation’s horizontal line, but this doesn’t
+    by itself make them the same constellation. Also, none of the
+    stars are immediately adjacent horizontally or vertically on
+    the grid.</p>
+<p>After playing around like this for a while with different
+    segments of the night sky, you start to get bored but your
+    crew-mates want to see more constellations! Can you write a
+    program to automate this task?</p>
+<h2>Input</h2>
+<p>The first line of input consists of three space-separated
+    integers, <span class="tex2jax_process">$1 \leq r \leq
+    500$</span>, <span class="tex2jax_process">$1 \leq c \leq
+    500$</span>, and <span class="tex2jax_process">$1 \leq n \leq
+    20\, 000$</span>, where <span class="tex2jax_process">$r$</span> is the number of rows,
+    <span class="tex2jax_process">$c$</span> is the number of
+    columns, and <span class="tex2jax_process">$n$</span> is the
+    desired number of constellations. The next <span class="tex2jax_process">$r$</span> lines consist of <span class="tex2jax_process">$c$</span> characters each, where every
+    character is either a “<tt class="ttfamily">.</tt>”,
+    representing empty space, or a “<tt class="ttfamily">*</tt>”,
+    representing a star.</p>
+<h2>Output</h2>
+<p>The output should consist of an <span class="tex2jax_process">$r \times c$</span> grid, with stars
+    (“<tt class="ttfamily">*</tt>”) placed in the same locations as
+    the input, and with each “<tt class="ttfamily">.</tt>” replaced
+    with either a “<tt class="ttfamily">|</tt>”, “<tt class="ttfamily">-</tt>”, or “<tt class="ttfamily">+</tt>” character,
+    which connect stars by straight horizontal and/or vertical
+    lines, or a space character “ ” for empty space. The output
+    should form exactly <span class="tex2jax_process">$n$</span>
+    constellations (groupings of one or more stars connected by
+    straight lines). At least one valid solution will always
+    exist.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3 2
+*.*
+.*.
+*.*
+</pre>
+</td>
+<td>
+<pre>*-*
+|*|
+*-*
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 6 3
+...*..
+..*...
+.*..*.
+*....*
+..*.*.
+...*..
+</pre>
+</td>
+<td>
+<pre>   *  
+  *|  
+ *++* 
+*-+++*
+  *+* 
+   *  
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>11 15 8
+*.*.*.*.*.*.*.*
+...............
+........*.*....
+...............
+*.*.*.*.*...*.*
+...............
+*.*.*.*.*.*.*.*
+...............
+*.*.....*.*.*.*
+...............
+*.*.*.*.*.*.*.*
+</pre>
+</td>
+<td>
+<pre>*-* *-* *-* *-*
+|   |   | | |  
+|   |   *-* |  
+|   |   |   |  
+*-* *-* *   *-*
+               
+*-* *-* *-* *-*
+  | | |   |   |
+*-* | | *-* *-*
+|   | | |     |
+*-* *-* *-* *-*
+</pre>
+</td>
+</tr>
+</table>
+</div>

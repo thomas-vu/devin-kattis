@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Little Timmy got caught by his teacher using some mean
+    words. After getting sent to the principal, little Timmy
+    learned his lesson - he should do his best to not get caught
+    next time!</p>
+<p>What Timmy decided to do is to take all the mean words that
+    he wants to say, and combine them all together into a single
+    "mean" word by getting the average of all the characters in the
+    same position across all the words that have a character in
+    that position, and then rounding this average down to get the
+    character in that position.</p>
+<p>Note: The value of a character is its ASCII value, so the
+    value of <tt class="ttfamily">a</tt> is <span class="tex2jax_process">$97$</span>, the value of <tt class="ttfamily">b</tt> is <span class="tex2jax_process">$98$</span>
+    and so on up to <tt class="ttfamily">z</tt>, which has value
+    <span class="tex2jax_process">$122$</span>. So when we average
+    characters, we are averaging their ASCII values, rounding this
+    down to the nearest integer, and then using the corresponding
+    character as the result of this averaging.</p>
+<p>Help Timmy create his mean mean words!</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 1\, 000$</span>), which represents the number of
+    words that follow. The next <span class="tex2jax_process">$N$</span> lines contain a single word
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$45$</span> lowercase English
+    characters each.</p>
+<h2>Output</h2>
+<p>Output the mean word obtained by following Timmy’s
+    procedure.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+mean
+word
+</pre>
+</td>
+<td>
+<pre>rjii
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+words
+of
+various
+length
+</pre>
+</td>
+<td>
+<pre>rfpfrns
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+a
+b
+b
+</pre>
+</td>
+<td>
+<pre>a
+</pre>
+</td>
+</tr>
+</table>
+</div>

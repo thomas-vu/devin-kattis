@@ -1,0 +1,117 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/einvigi/file/statement/en/img-0001.jpg" class="illustration" src="/problems/einvigi/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A duel between two soldiers
+      </div>
+</div>
+<p>Tómas is a great fan of war games. His favorite game these
+    days is <b class="bfseries">Einvígi margra</b>. In the game two
+    players battle one another. Each battle consists of a series of
+    duels.</p>
+<p>Tómas has <span class="tex2jax_process">$n$</span> soldiers,
+    each denoted by a strength <span class="tex2jax_process">$a_i$</span>. Tómas’ opponent also has
+    <span class="tex2jax_process">$n$</span> soldiers, each denoted
+    by a strength <span class="tex2jax_process">$b_i$</span>.</p>
+<p>The duels proceed with Tómas’ <span class="tex2jax_process">$i$</span>-th soldier fighting the
+    <span class="tex2jax_process">$i$</span>-th soldier of his
+    opponent. Tómas wins the duel if <span class="tex2jax_process">$a_i &gt; b_i$</span>, it’s a tie of
+    <span class="tex2jax_process">$a_i = b_i$</span> and his
+    opponent wins if <span class="tex2jax_process">$a_i &lt;
+    b_i$</span>. The duels proceed in ascending order; first
+    <span class="tex2jax_process">$a_1$</span> and <span class="tex2jax_process">$b_1$</span> duel, then <span class="tex2jax_process">$a_2$</span> and <span class="tex2jax_process">$b_2$</span> and so on until <span class="tex2jax_process">$a_n$</span> and <span class="tex2jax_process">$b_n$</span> have fought.</p>
+<p>Tómas wins the battle if he wins more duels than his
+    opponent.</p>
+<p>Tómas has just bought an expansion pack for the game and
+    thus has one <b class="bfseries">Mega serum</b>. The <b class="bfseries">Mega serum</b> has the effect that if Tómas uses it
+    the strength of his soldiers will increase by <span class="tex2jax_process">$k$</span> in the next <span class="tex2jax_process">$m$</span> duels.</p>
+<p>Tómas isn’t sure when he should use the <b class="bfseries">Mega serum</b>. If he chooses the best possible
+    moment, can Tómas win the battle?</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers
+    <span class="tex2jax_process">$n, m, k$</span> where
+    <span class="tex2jax_process">$1 \le m \le n \le 10^5$</span>,
+    <span class="tex2jax_process">$1 \le k \le 10^7$</span>. The
+    second line of the input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \dotsc , a_n$</span>, where
+    <span class="tex2jax_process">$1 \le a_i \le 10^7$</span>. The
+    third line of the input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$b_1, b_2, \dotsc , b_n$</span>, where
+    <span class="tex2jax_process">$1 \le b_i \le 10^7$</span>.</p>
+<h2>Output</h2>
+<p>If Tómas can win the battle, print the earliest time he
+    could use the <b class="bfseries">Mega serum</b> and win the
+    battle. If he can’t win, instead print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le m \le n \le 1\,
+          000$</span>, <span class="tex2jax_process">$1 \le k, a_i
+          \le 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 1
+3 2 1
+2 2 1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 100
+1 1 1 1 1
+101 101 101 1 1
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

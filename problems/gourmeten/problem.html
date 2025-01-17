@@ -1,0 +1,135 @@
+<div class="problembody">
+<p>The French gourmet Frank is a very well-respected gourmet;
+    his job involves going around to various restaurants, eating
+    their food and then writing a review about the restaurant. But
+    he carries a dark secret: he is actually only interested in
+    eating as much as possible and in any order!</p>
+<p>However, Frank understands that a true gourmet can’t eat in
+    just any manner, like starting with his dessert and finishing
+    with a salad. Therefore, he asks for your help in constructing
+    a list with all the different ways he could arrange his courses
+    during a meal, so that he can pick the best order.</p>
+<p>During the serving, Frank has <span class="tex2jax_process">$M$</span> minutes to eat. The restaurant
+    offers <span class="tex2jax_process">$N$</span> different
+    courses, and he can eat any number of servings of each course.
+    For course <span class="tex2jax_process">$i$</span>, it takes
+    <span class="tex2jax_process">$T_ i$</span> minutes to eat a
+    serving of it. Frank wants to eat something during each of the
+    <span class="tex2jax_process">$M$</span> minutes he has, and he
+    wants to finish every course that he is served. He never wants
+    to start eating a new course until he finished the last
+    one.</p>
+<p>Your task is to write a program to compute the number of
+    ways he could arrange his meal, given these restrictions.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \le M \le 1\, 000$</span>), the number of minutes.</p>
+<p>The second line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 30$</span>), the number of courses.</p>
+<p>Afterwards, <span class="tex2jax_process">$N$</span> lines
+    follow with an integer <span class="tex2jax_process">$T_
+    i$</span> (<span class="tex2jax_process">$1 \le T_ i \le
+    200$</span>) on each line, the time it takes to eat every
+    dish.</p>
+<h2>Output</h2>
+<p>The program should output the number of ways in which Frank
+    can eat during exactly <span class="tex2jax_process">$M$</span>
+    minutes.</p>
+<p>The answer will always be at most 2 billion (<span class="tex2jax_process">$2\, 000\, 000\, 000$</span>).</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test case groups.
+    To get the points for a group, you need to pass all the test
+    cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$60$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The answer will be less than <span class="tex2jax_process">$2$</span> million (<span class="tex2jax_process">$2\, 000\, 000$</span>).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<h2>Scoring</h2>
+<p>Your program will be tested on <span class="tex2jax_process">$5$</span> test cases. For each test cases
+    you pass, you will get <span class="tex2jax_process">$20$</span> points.</p>
+<p>For test cases worth <span class="tex2jax_process">$60$</span> points, the answer will be less
+    than <span class="tex2jax_process">$2$</span> million
+    (<span class="tex2jax_process">$2\, 000\, 000$</span>).</p>
+<h2>Explanation of Sample <span class="tex2jax_process">$1$</span></h2>
+<p>Frank is going to eat during <span class="tex2jax_process">$10$</span> minutes and have two courses to
+    choose from, for example a salad (takes <span class="tex2jax_process">$3$</span> minutes to eat) and pie
+    (<span class="tex2jax_process">$7$</span> minutes). There are
+    only two ways he can eat them: first pie and then salad or vice
+    versa. If he only eats salad he will either finish too quickly
+    (<span class="tex2jax_process">$3 \text { servings} = 9 \text {
+    minutes}$</span>) or too late (<span class="tex2jax_process">$4
+    \text { servings} = 12 \text { minutes}$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+2
+7
+3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12
+6
+1
+3
+3
+5
+6
+12
+</pre>
+</td>
+<td>
+<pre>498
+</pre>
+</td>
+</tr>
+</table>
+</div>

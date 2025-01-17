@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>You are a respected dwarven archaeologist. Your job consists
+    of scouring ruins and reading ancient texts.</p>
+<p>Recently while under an expedition your team had uncovered
+    sacred texts you believe belong to the Great Circles.</p>
+<p>Each dwarven rune consists of one or more characters. These
+    characters are in the ASCII decimal range of <span class="tex2jax_process">$33$</span>–<span class="tex2jax_process">$47$</span>: <tt>!"#$%&amp;'()*+,-./</tt>
+    with values in increasing order. So <tt>!</tt> has a value of
+    <span class="tex2jax_process">$1$</span> as it’s the first,
+    <tt>"</tt> has a value of <span class="tex2jax_process">$2$</span> because it’s the second, etc.
+    According to your studies, adjacent characters in the same rune
+    add their values together.</p>
+<p>Runes are separated by spaces. In the dwarven language a
+    <tt>0</tt> indicates a space, while a <tt>&lt;</tt> and
+    <tt>&gt;</tt> represent commas and periods respectively; these
+    special runes will always consist of a single character. All
+    other runes correspond to lowercase English letters. The
+    ancient dwarves used the same ordering of letters as the modern
+    alphabet, but as a Great Circle with no beginning nor
+    ending.</p>
+<p>Be warned however, that the year that a text is written
+    impacts its translation. The rune <tt>!*&amp;()</tt> in 1389
+    would not translate to the same letter as it would in 1689 due
+    to unpredictable rotations in the Great Circle. You need to
+    correct for this somehow.</p>
+<p>Luckily your team has plenty of samples in the library that
+    they can use as a reference to decode the text.</p>
+<h3>Input</h3>
+<p>Input starts with a line consisting of a single rune,
+    followed (space-separated) by its translated lowercase English
+    letter.</p>
+<p>Then up to <span class="tex2jax_process">$8$</span> lines of
+    dwarven text follow, each consisting of at most <span class="tex2jax_process">$100$</span> characters.</p>
+<h3>Output</h3>
+<p>Output the translated texts.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>* h
+* ' . . .# 0 '%- #. /% . &amp; &gt;
+</pre>
+</td>
+<td>
+<pre>hello world.
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>/! n
+." ' !.) ' .&amp; 0 ) "/ +% /! # 0 ) + +- ' 0 ! ,% "'. 0 #.&amp; *( &gt;
+$, ' -+ ' &amp;. 0 ) &amp;+ &amp;* !/ # 0 . ' $+' 0 ! !)' +, 0 &amp; "/ '#/ !/ &gt;
+/! ' .* ' .&amp; 0 ) +&amp; %+ &amp;* # 0 $." .) (( 0 # ,( %, #"'+ *&amp; &amp; &lt;
+# /! &amp; 0 &amp; ' #+' ' %/ *, 0 ! .# ',$ &gt;
+,$ ' %/$ ' !.% 0 ) +&amp; )' *&amp; # 0 / # - ' 0 ! ,% -* 0 % '- ! &lt;
+". ' ($, ' .&amp; 0 ) %, *&amp; %+ # 0 %." # ! 0 ) *' () &amp; $ ! ' &gt;
+&amp;* ' /) ' &amp;. 0 ) "/ /! $, # 0 $!,% ' . . 0 # 0 . + ' &lt;
+# *&amp; &amp; 0 * &amp;!+% )+ ++ 0 ! .# '$, &gt;
+</pre>
+</td>
+<td>
+<pre>never gonna give you up.
+never gonna let you down.
+never gonna run around,
+and desert you.
+never gonna make you cry,
+never gonna say goodbye.
+never gonna tell a lie,
+and hurt you.
+</pre>
+</td>
+</tr>
+</table>
+</div>

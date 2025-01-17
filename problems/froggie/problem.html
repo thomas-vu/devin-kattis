@@ -1,0 +1,606 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/froggie/file/statement/en/img-0001.png" class="illustration" src="/problems/froggie/file/statement/en/img-0001.png"/>
+<div class="description">
+        Photo from <a href="https://en.wikipedia.org/wiki/File:Frogger_game_arcade.png">
+        Wikipedia</a>
+</div>
+</div>
+<p>You are recreating the classic ‘Frogger’ video game. You do
+    not need to worry about sprites, music, or animation (that is
+    left to the game’s art team).</p>
+<p>Each level consists of a road with multiple lanes, with cars
+    traveling in both directions. Cars within each lane are
+    evenly-spaced and move at the same speed and in the same
+    direction. Lane directions alternate, with the top lane moving
+    left to right.</p>
+<p>‘Froggie’ starts below the bottom lane and she travels
+    across the road from the <em>bottom</em> to the <em>top</em>.
+    At each time step, Froggie hops one space in one of four
+    directions: up, down, left, or right. The goal of the game is
+    to get Froggie across the road and above the top lane without
+    her getting hit by a car.</p>
+<h2>Example</h2>
+<p>Consider the first sample input, where Froggie hops upward
+    four times. The road has three lanes and a width of
+    <span class="tex2jax_process">$7$</span>. Froggie starts below
+    the road in the third cell. Cars in the top and bottom lanes
+    are spaced at an interval of <span class="tex2jax_process">$3$</span>, and the middle lane has an
+    interval of <span class="tex2jax_process">$2$</span>. The cars
+    in the top two lanes move at a speed of <span class="tex2jax_process">$1$</span>, while those in the bottom lane
+    move at a speed of <span class="tex2jax_process">$2$</span>.
+    See Figure 1.</p>
+<p>At time <span class="tex2jax_process">$1$</span> Froggie
+    hops upward and the cars move. The cars in the top and middle
+    lanes each move one space, and the cars in the bottom lane each
+    move two spaces. See Figure 2. After this first hop, Froggie is
+    still safe. She now sits where a car <em>was</em>, and has
+    avoided the path of the car as it travels. Notice that cars
+    exit the simulated area as they travel off the grid, and also
+    new cars also enter (at times that preserve each lane’s
+    interval).</p>
+<p>At time <span class="tex2jax_process">$2$</span>, Froggie
+    hops upward again as the cars continue to move. After hopping
+    into the middle lane, Froggie <em>could</em> move left with
+    this lane’s traffic (traffic in this lane moves left at a speed
+    of <span class="tex2jax_process">$1$</span>). See Figure 3.</p>
+<p>At time <span class="tex2jax_process">$3$</span>, Froggie
+    hops upward a third time, reaching the top lane. See Figure 4.
+    Finally, at time <span class="tex2jax_process">$4$</span>, with
+    a final upward hop, Froggie exits the road to safety. See
+    Figure 5.</p>
+<div class="figure" id="froggiestart">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td colspan="2" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center"> </td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[height=1.2em]{frog-line-art}" src="/problems/froggie/file/statement/en/img-0005.png" style="height:1.2em"/></p>
+</td>
+<td colspan="4" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center"> </td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Time <span class="tex2jax_process">$0$</span>. Cars and Froggie in their
+        initial positions.
+      </div>
+</div>
+<div class="figure" id="froggiefirst">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[height=1.2em]{frog-line-art}" src="/problems/froggie/file/statement/en/img-0005.png" style="height:1.2em"/></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 2</b>: Time <span class="tex2jax_process">$1$</span>. Froggie hopped up, the cars
+        all moved. Some cars left, and some new cars appeared.
+      </div>
+</div>
+<div class="figure" id="froggiesecond">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[height=1.2em]{frog-line-art}" src="/problems/froggie/file/statement/en/img-0005.png" style="height:1.2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 3</b>: Time <span class="tex2jax_process">$2$</span>. Froggie hopped up to the
+        middle lane.
+      </div>
+</div>
+<div class="figure" id="froggiethird">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[height=1.2em]{frog-line-art}" src="/problems/froggie/file/statement/en/img-0005.png" style="height:1.2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 4</b>: Time <span class="tex2jax_process">$3$</span>. Froggie hopped up to the top
+        lane.
+      </div>
+</div>
+<div class="figure" id="froggiefinal">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td colspan="2" style="text-align:center"> </td>
+<td colspan="1" style="text-align:center">
+<p><img alt="\includegraphics[height=1.2em]{frog-line-art}" src="/problems/froggie/file/statement/en/img-0005.png" style="height:1.2em"/></p>
+</td>
+<td colspan="4" style="text-align:center"> </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\leftarrow $</span>
+<img alt="\includegraphics[width=2em]{car_r}" src="/problems/froggie/file/statement/en/img-0004.png" style="width:2em"/></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+             </td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 5</b>: Time <span class="tex2jax_process">$4$</span>. Froggie hops to safety!
+      </div>
+</div>
+<h2>Avoiding Cars</h2>
+<p>If Froggie enters the path of a moving car, or jumps into a
+    stationary car, she is squished. Consider Figure 6, which is a
+    bit different than earlier figures in that it shows
+    <em>one</em> car over <em>two</em> successive times. Let’s say
+    that at time <span class="tex2jax_process">$t$</span> the car
+    is in the leftmost cell and Froggie is not in this lane. At
+    time <span class="tex2jax_process">$t+1$</span>, the car moves
+    with a speed of <span class="tex2jax_process">$3$</span> to the
+    rightmost cell, and Froggie attempts to hop into the lane
+    shown. Since the width of the lane is four, the only safe place
+    to hop is the leftmost cell (where the car had just been). The
+    other three cells would cause her to be squished by the car
+    shown, ending the simulation.</p>
+<div class="figure" id="froggierunover">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:2em"/> <span class="tex2jax_process">$\rightarrow $</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><img alt="\includegraphics[width=2em]{car}" src="/problems/froggie/file/statement/en/img-0002.png" style="width:2em"/> <img alt="\includegraphics[width=1em]{empty}" src="/problems/froggie/file/statement/en/img-0003.png" style="width:1em"/></p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 6</b>: A <em>single</em> car across two
+          consecutive time steps, starting at the left and moving
+          right.
+        </div>
+</center>
+</div>
+<h2>Goal</h2>
+<p>Given a description of the road, car positions and speeds,
+    and Froggie’s starting positions and moves, determine her
+    outcome after the simulation. There are two possible outcomes:
+    safely exiting the top lane or getting squished.</p>
+<p>In order to better plan her travel, Froggie may move left or
+    right before entering the road. Once Froggie has entered the
+    road she may only exit through the top of the road. That is,
+    Froggie’s path never exits the left, right, or bottom lane
+    boundaries.</p>
+<h2>Input</h2>
+<p>Each input describes one simulation. The first line of input
+    contains two integers separated by a space: <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$W$</span>. The number of lanes is given by
+    <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1 \leq L \leq 10$</span>), while
+    <span class="tex2jax_process">$W$</span> (<span class="tex2jax_process">$3 \leq W \leq 20$</span>) defines the width
+    (in number of cells) of the grid.</p>
+<p>This is followed by <span class="tex2jax_process">$L$</span>
+    lines each describing the car configuration for a lane (from
+    top to bottom). Each line contains three integers: <span class="tex2jax_process">$O$</span>, the starting offset of the first
+    car; <span class="tex2jax_process">$I$</span>, the interval
+    between cars; and <span class="tex2jax_process">$S$</span>, the
+    speed of the cars. The bounds are <span class="tex2jax_process">$0 \leq O &lt; I \leq W$</span> and
+    <span class="tex2jax_process">$0 \leq S \leq W$</span>. All
+    offsets should be computed based on the direction of lane
+    movement. That is, in lanes that move right, offset
+    <span class="tex2jax_process">$0$</span> is the leftmost cell
+    and offset <span class="tex2jax_process">$W-1$</span> is the
+    rightmost cell in that lane, while in lanes that move left,
+    offset <span class="tex2jax_process">$0$</span> is the
+    rightmost cell and offset <span class="tex2jax_process">$W-1$</span> is the leftmost cell in that
+    lane.</p>
+<p>The final line of input starts with a single integer,
+    <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$0 \leq P \leq W - 1$</span>) followed by a
+    space and then a string of <span class="tex2jax_process">$M$</span> characters (<span class="tex2jax_process">$1 \leq M \leq L \cdot W$</span>) from the
+    set <span class="tex2jax_process">$\{ \textrm{U}, \textrm{D},
+    \textrm{L}, \textrm{R} \} $</span>. <span class="tex2jax_process">$P$</span> defines the starting position of
+    Froggie, starting from the left. The string of characters
+    defines the sequence of moves (up, down, left, right) that
+    Froggie makes during the simulation.</p>
+<h2>Output</h2>
+<p>If Froggie successfully crosses the road (exiting the road
+    from the top lane), output “<tt class="ttfamily">safe</tt>”. If
+    Froggie is hit by a car, or does not end above the road, output
+    “<tt class="ttfamily">squish</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+0 3 1
+1 2 1
+2 3 2
+2 UUUU
+</pre>
+</td>
+<td>
+<pre>safe
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+0 3 1
+1 2 1
+2 3 2
+2 U
+</pre>
+</td>
+<td>
+<pre>squish
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+0 3 1
+1 2 1
+2 3 2
+2 UR
+</pre>
+</td>
+<td>
+<pre>squish
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+0 3 0
+1 2 0
+2 3 0
+1 UUUU
+</pre>
+</td>
+<td>
+<pre>safe
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+0 3 0
+1 2 0
+2 3 0
+1 LRRLUUUU
+</pre>
+</td>
+<td>
+<pre>safe
+</pre>
+</td>
+</tr>
+</table>
+</div>

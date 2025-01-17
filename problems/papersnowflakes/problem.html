@@ -1,0 +1,120 @@
+<div class="problembody">
+<p>To make a paper snowflake, you fold a sheet of paper in
+    various places and then cut some parts out of the folded sheet.
+    When you unfold the sheet, it can make a very nice pattern.
+    That is, if the folds and cuts are chosen well.</p>
+<p>Samantha has recently taken up this hobby but with a “modern
+    art” twist. To get started, she explores folding a strip of
+    paper that is <span class="tex2jax_process">$L$</span>
+    picometres long (Samantha likes to measure her folds and cuts
+    very precisely). She places it on the real line with one end at
+    <span class="tex2jax_process">$0$</span> and the other at
+    <span class="tex2jax_process">$L$</span>. The left end at point
+    <span class="tex2jax_process">$0$</span> is affixed to this
+    point, the other endpoint at position <span class="tex2jax_process">$L$</span> is the <em>loose</em>
+    endpoint.</p>
+<p>She then performs a series of folds. For the first fold,
+    Samantha creases the paper <span class="tex2jax_process">$f_1$</span> picometres from the loose end
+    and folds the loose end over this fold. The loose end is now
+    pointing towards the left. For the second fold, she then
+    creases the top portion of the paper <span class="tex2jax_process">$f_2$</span> picometres from the loose end
+    (<span class="tex2jax_process">$f_2 &lt; f_1$</span>) and folds
+    the top portion of the paper over this point back to the right
+    over this crease point. The loose end is now pointing towards
+    the right.</p>
+<p>She alternates folding back-and-forth this way. At each
+    step, she creases the top portion of the paper <span class="tex2jax_process">$f_ i$</span> picometres from the loose end
+    (<span class="tex2jax_process">$f_ i &lt; f_{i-1}$</span>) and
+    folds the loose end over the crease.</p>
+<p>She will now cut the paper at <span class="tex2jax_process">$M$</span> distinct locations, which will
+    split the paper into <span class="tex2jax_process">$M+1$</span>
+    piles. Each of the piles will have zero or more layers of paper
+    in it. The figure below depicts the folded paper from the first
+    sample input, the cuts (solid lines), and the <span class="tex2jax_process">$x$</span>-locations of where the paper was
+    folded (dashed lines).</p>
+<p>What is the total length of paper in each of the
+    <span class="tex2jax_process">$M+1$</span> piles?</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{cut.pdf}" src="/problems/papersnowflakes/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input consists of three integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 10^5$</span>), which is the
+    number of folds, <span class="tex2jax_process">$M$</span>
+    (<span class="tex2jax_process">$1 \leq M \leq 10^5$</span>),
+    which is the number of cuts, and <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$2
+    \leq L \leq 10^{18}$</span>), which is the length of the paper
+    in picometres.</p>
+<p>The second line describes the folds. This line contains
+    <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$f_1, f_2, \ldots , f_ N$</span>, indicating
+    that the <span class="tex2jax_process">$i^\textrm {th}$</span>
+    fold occurred <span class="tex2jax_process">$f_ i$</span>
+    picometres from the loose end. These values satisfy
+    <span class="tex2jax_process">$1 \leq f_ N &lt; f_{N-1} &lt;
+    \cdots &lt; f_1 &lt; L$</span>.</p>
+<p>The third line describes the cuts. This line contains
+    <span class="tex2jax_process">$M$</span> integers <span class="tex2jax_process">$c_1, c_2, \ldots , c_ M$</span>, indicating
+    that the <span class="tex2jax_process">$i^\textrm {th}$</span>
+    cut is <span class="tex2jax_process">$c_ i$</span> picometres
+    from the affixed point. These values satisfy <span class="tex2jax_process">$-10^{18} \leq c_1 &lt; c_2 &lt; \cdots &lt;
+    c_ M \leq 10^{18}$</span>.</p>
+<h2>Output</h2>
+<p>Output the total length of paper in each of the <span class="tex2jax_process">$M+1$</span> piles, in order from left to
+    right.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2 20
+19 17 11 7
+1 6
+</pre>
+</td>
+<td>
+<pre>5 13 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 10
+9
+0
+</pre>
+</td>
+<td>
+<pre>8 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 1000000000000000000
+500000000000000000
+0 500000000000000000
+</pre>
+</td>
+<td>
+<pre>0 1000000000000000000 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

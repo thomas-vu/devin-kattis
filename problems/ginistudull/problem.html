@@ -1,0 +1,144 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/ginistudull/file/statement/en/img-0001.png" class="illustration" src="/problems/ginistudull/file/statement/en/img-0001.png"/>
+<div class="description">
+        The Gini coefficient in different countries
+      </div>
+</div>In the year 1912 the sociologist and statistician Corrado
+    Gini published a paper titled “Variability and Mutability”. In
+    it he introduces the Gini coefficient. The purpose of the
+    coefficient is to measure inequality in distributions and is
+    often used to measure income inequality. The coefficient takes
+    a value between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span>, where <span class="tex2jax_process">$0$</span> denotes perfect equality and
+    <span class="tex2jax_process">$1$</span> complete inequality.
+    As an example the Gini coefficient of Iceland is <span class="tex2jax_process">$0.256$</span> and the Gini coefficient of
+    the US is <span class="tex2jax_process">$0.415$</span>.<br/>
+    To calculate the coefficient for a group of people, the income
+    of everyone in that group has to be known. If <span class="tex2jax_process">$y_1, y_2, \ldots , y_ n$</span>
+    (<span class="tex2jax_process">$y_ i &gt; 0$</span> for all
+    <span class="tex2jax_process">$i$</span>) denote the incomes of
+    <span class="tex2jax_process">$n$</span> individuals the Gini
+    coefficient of the group can be calculated using the formula:
+    <span class="tex2jax_process">\[ G = \dfrac { \sum \limits
+    _{i=1}^ n \sum \limits _{j=1}^ n \lvert y_ i - y_ j \rvert }{ 2
+    \sum \limits _{i=1}^ n \sum \limits _{j=1}^ n y_ i } \]</span>
+<p>Here <span class="tex2jax_process">$\lvert x\rvert $</span>
+    denotes the absolute value of <span class="tex2jax_process">$x$</span>: <span class="tex2jax_process">$\lvert x\rvert = x$</span> if <span class="tex2jax_process">$x \geq 0$</span>, but <span class="tex2jax_process">$\lvert x\rvert = -x$</span> if <span class="tex2jax_process">$x &lt; 0$</span>.</p>
+<h2>Input</h2>
+<p>The first line of the input contains one integer
+    <span class="tex2jax_process">$n$</span>, the number of
+    individuals in the group. Then there will be <span class="tex2jax_process">$n$</span> lines, one for each individual in
+    the group, each containing an integer <span class="tex2jax_process">$0 &lt; y_ i \leq 10^5$</span>, the income of
+    the <span class="tex2jax_process">$i$</span>-th individual.</p>
+<h2>Output</h2>
+<p>Output the Gini coefficient for the group. The output is
+    considered correct if the relative or absolute error from the
+    correct answer does not exceed <span class="tex2jax_process">$10^{-6}$</span>. This means it does not
+    matter how many significant digits the answer has as long as
+    it’s accurate enough.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$n \leq 10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+100
+100
+100
+100
+100
+</pre>
+</td>
+<td>
+<pre>0.00000000000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+400
+100
+300
+200
+500
+</pre>
+</td>
+<td>
+<pre>0.26666666666666666
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10
+1
+1
+1
+1
+10000
+1
+1
+1
+1
+1
+</pre>
+</td>
+<td>
+<pre>0.89910080927165548
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,52 @@
+<div class="problembody">
+<p>You have invented a new form of the game of darts, and it is
+    based on the idea that the tightest cluster of darts wins — but
+    they don’t necessarily have to be close to a target. In fact,
+    the game is easy to play because it doesn’t require a target;
+    players can just throw darts against a wall (preferably one
+    that you don’t care about). When a player is done throwing
+    their <span class="tex2jax_process">$n$</span> darts, they wrap
+    a string tightly around the outside of all the outermost darts,
+    so that the string encompasses all of the thrown darts. If
+    <span class="tex2jax_process">$s$</span> is the length of the
+    string needed to enclose the darts, then the score for that
+    player’s darts is <span class="tex2jax_process">$100 \cdot n /
+    (1 + s)$</span>.</p>
+<p>Now you need a program to determine the score of different
+    dart configurations.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$200$</span> player turns, one turn per line.
+    Each player’s turn has a list of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span> pairs of real numbers with at
+    most <span class="tex2jax_process">$3$</span> digits past the
+    decimal, which are the <span class="tex2jax_process">$(x,
+    y)$</span> locations where the dart has landed. The bounds are
+    <span class="tex2jax_process">$-30 \le x, y \le 30$</span>.
+    Input ends at the end of file.</p>
+<h2>Output</h2>
+<p>For each turn, print the score obtained, with at most
+    <span class="tex2jax_process">$0.0001$</span> error.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10.8 -13.7
+0.278 2.555 2.815 3.800 3.920 1.510
+2.358 1.731 0.663 3.485 4.276 6.242 3.858 0.089 0.409 1.460 2.578 4.539
+0.117 5.881 4.655 2.766 0.941 0.213 6.180 6.550 4.215 6.723 5.822 4.367 5.464 1.001
+</pre>
+</td>
+<td>
+<pre>
+100.0000000000
+29.5344250128
+34.3557840779
+30.3425374145
+</pre>
+</td>
+</tr>
+</table>
+</div>

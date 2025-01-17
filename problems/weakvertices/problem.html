@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>Engineers like to use triangles. It probably has something
+    to do with how a triangle can provide a lot of structural
+    strength. We can describe the physical structure of some
+    designs using an undirected graph. We’ll say vertex
+    <span class="tex2jax_process">$i$</span> is part of a triangle
+    if <span class="tex2jax_process">$i$</span> has two different
+    neighbors <span class="tex2jax_process">$j$</span> and
+    <span class="tex2jax_process">$k$</span> such that <span class="tex2jax_process">$j$</span> and <span class="tex2jax_process">$k$</span> are neighbors of each other. For
+    this problem, find <em>weak vertices</em> in graphs – those
+    vertices that is not part of any triangle.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{sample}" src="/problems/weakvertices/file/statement/en/img-0001.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An illustration of the weak vertices
+          (which are shaded) from the sample input graph.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> graphs. Each starts with an
+    integer, <span class="tex2jax_process">$1 \le n \le 20$</span>,
+    giving the number of vertices in the graph. Next come
+    <span class="tex2jax_process">$n$</span> lines with
+    <span class="tex2jax_process">$n$</span> integers on each line,
+    which describe an <span class="tex2jax_process">$n \times
+    n$</span> adjacency matrix for the graph. Vertices are numbered
+    from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n - 1$</span>. If the adjacency matrix
+    contains a one at row <span class="tex2jax_process">$r$</span>,
+    column <span class="tex2jax_process">$c$</span> (where
+    <span class="tex2jax_process">$0 \le r, c \le n-1$</span>), it
+    means that there is an edge from vertex <span class="tex2jax_process">$r$</span> to vertex <span class="tex2jax_process">$c$</span>. Since the graph is undirected,
+    the adjacency matrix is symmetric. The end of input is marked
+    by a value of <span class="tex2jax_process">$-1$</span> for
+    <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each graph, produce a line listing the weak vertices
+    ordered from least to greatest.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+9
+0 1 1 1 0 0 0 0 0
+1 0 0 0 0 0 1 0 0
+1 0 0 1 0 1 0 0 0
+1 0 1 0 0 1 1 0 0
+0 0 0 0 0 0 1 1 0
+0 0 1 1 0 0 0 0 0
+0 1 0 1 1 0 0 1 0
+0 0 0 0 1 0 1 0 1
+0 0 0 0 0 0 0 1 0
+1
+0
+-1
+</pre>
+</td>
+<td>
+<pre>
+1 8
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

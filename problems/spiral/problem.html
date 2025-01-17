@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Boredom can be good for creativity. Polish mathematician
+    Stanislaw Ulam (1909-1984) discovered the eponymous Ulam spiral
+    while listening to a “long and very boring paper”. He started
+    by writing down the positive integers in a spiral on a grid,
+    one number per grid cell. Then he eliminated the composite
+    numbers (i.e. non-primes). An interesting property he
+    discovered was that the remaining prime numbers seem to form
+    along many diagonals of the grid:</p>
+<div class="figure" id="a0000000004">
+<center>
+<span class="mbox" style="width:"><img alt="\includegraphics[width=0.45\textwidth ]{spiral_all_numbers}" src="/problems/spiral/file/statement/en/img-0001.png" style="width:45.00%"/>     <img alt="\includegraphics[width=0.45\textwidth ]{spiral_primes}" src="/problems/spiral/file/statement/en/img-0002.png" style="width:45.00%"/></span>
+<div class="caption">
+<b>Figure 1</b>: Two spirals: one with all positive
+          integers given, one with only primes.
+        </div>
+</center>
+</div>
+<p>Note that both of these are infinitely large grids, but due
+    to physical constraints only a finite subset of the grid will
+    fit in this space.</p>
+<p>Let’s consider traveling around the second grid above (the
+    Ulam spiral), where you are free to travel to any cell
+    containing a composite number, but traveling to any cell
+    containing a prime number is disallowed. You can travel up,
+    down, left, or right, but not diagonally. Write a program to
+    find the length of the shortest path between pairs composite
+    numbers, if it is possible. Note, for example, that it is
+    impossible to travel from the cells numbered <span class="tex2jax_process">$12$</span> and <span class="tex2jax_process">$72$</span> to any other composite cell. The
+    length of a path is the number of steps on the path.</p>
+<h2>Input</h2>
+<p>Each test case is described by a line of input containing
+    two integers <span class="tex2jax_process">$1 \leq x, y \leq
+    10\, 000$</span> which indicate two cells in the grid. Note
+    that while there are limits on the input values, the
+    intervening path between <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> is not limited in any way.</p>
+<h2>Output</h2>
+<p>For each case, display the case number followed by the
+    length of the shortest path between the cells <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, or “impossible” if no such path
+    is possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 4
+9 32
+10 12
+</pre>
+</td>
+<td>
+<pre>Case 1: 1
+Case 2: 7
+Case 3: impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

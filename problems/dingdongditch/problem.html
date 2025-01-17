@@ -1,0 +1,156 @@
+<div class="problembody">
+<p>Raunak and his friends want to play a prank on their
+    neighbors by performing the classic "Ding Dong Ditch". They
+    want to individually ring the doorbell of a number of their
+    neighbors and then run away from there. But some neighbors are
+    very dangerous, since they could get very angry and even
+    potentially bite you!</p>
+<p>There are <span class="tex2jax_process">$N$</span> neighbors
+    that live on their street. For each neighbor <span class="tex2jax_process">$i$</span>, the neighbor has a value
+    <span class="tex2jax_process">$A_ i$</span> that represents how
+    angry they become when their doorbell is rung. Raunak has
+    <span class="tex2jax_process">$Q$</span> friends, including
+    himself. For each friend <span class="tex2jax_process">$j$</span> they have a specific level of
+    ambition <span class="tex2jax_process">$B_ j$</span>, which
+    represents the number of houses they can ring the doorbell on
+    before chickening out.</p>
+<p>For each friend who rings the doorbell, they want to choose
+    <span class="tex2jax_process">$B_ j$</span> different houses
+    that minimizes the sum of the anger values <span class="tex2jax_process">$A_ i$</span> of all of those houses. Help
+    Raunak figure out the smallest possible sum of anger values
+    that each friend can achieve!</p>
+<p>Note that multiple friends may ring the doorbell of the same
+    house.</p>
+<h2>Input</h2>
+<p>The first line consists of two positive integers
+    <span class="tex2jax_process">$N, Q$</span> (<span class="tex2jax_process">$1 \leqslant N \leqslant 2 \cdot
+    10^5$</span>, <span class="tex2jax_process">$1 \leqslant Q
+    \leqslant 10^5$</span>), the number of houses in the
+    neighborhood and the number of friends that Raunak has,
+    respectively. The next line consists of <span class="tex2jax_process">$N$</span> distinct positive integers
+    separated by spaces, where each integer <span class="tex2jax_process">$1 \leqslant A_ i \leqslant 10^9$</span>
+    represents the anger value of each neighbor. The last line
+    consists of <span class="tex2jax_process">$Q$</span> positive
+    integers separated by spaces, where each integer <span class="tex2jax_process">$1 \leqslant B_ j \leqslant N$</span>
+    represents how many houses that friend <span class="tex2jax_process">$j$</span> can ring the doorbell of.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$Q$</span> lines, where
+    each line consists of an integer - The smallest sum of anger
+    value that friend <span class="tex2jax_process">$j$</span> can
+    achieve by ringing <span class="tex2jax_process">$B_ j$</span>
+    doorbells.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$Q=1, N \leqslant
+          10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$Q\leqslant 10^3, N
+          \leqslant 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All <span class="tex2jax_process">$B_ j$</span> are
+          either <span class="tex2jax_process">$1$</span> or
+          <span class="tex2jax_process">$N$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$Q\leqslant 10^3, N
+          \leqslant 10^4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+3 2 1 4
+3 1
+</pre>
+</td>
+<td>
+<pre>6
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+12 2 14 6 9
+3
+</pre>
+</td>
+<td>
+<pre>17
+</pre>
+</td>
+</tr>
+</table>
+</div>

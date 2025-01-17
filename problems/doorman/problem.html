@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/doorman/file/statement/en/img-0001.jpg" class="illustration" src="/problems/doorman/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Clip art from Microsoft.
+      </div>
+</div>
+<p>The doorman Bruno at the popular night club Heaven is having
+    a hard time fulfilling his duties. He was told by the owner
+    that when the club is full, the number of women and men let
+    into the club should be roughly the same. When the night club
+    opens, people wanting to enter the club are already lined up in
+    a queue, and Bruno can only let them in one-by-one. He lets
+    them in more-or-less in the order they are lined up. He can
+    however decide to let the second person in the queue cut the
+    line and slip into the club before the person in front. This
+    will no doubt upset the person first in line, especially when
+    this happens multiple times, but Bruno is quite a big guy and
+    is capable of handling troublemakers.</p>
+<p>Unfortunately though, he is not that strong on mental
+    calculations under these circumstances. He finds keeping track
+    of the difference of the number of women and number of men let
+    into the club a challenging task. As soon as the absolute
+    difference gets too big, he loses track of his counting and
+    must declare to the party people remaining in the queue that
+    the club is full.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$X&lt;100$</span> describing the
+    largest absolute difference between the number of women and
+    number of men let into the club that Bruno can handle.</p>
+<p>The second line contains a string consisting solely of the
+    characters ’W’ and ’M’ of length at most <span class="tex2jax_process">$100$</span>, describing the genders of the
+    people in the queue, in order of their arrrival. The leftmost
+    character of the string is the gender of the person first in
+    line.</p>
+<p>You may assume that the club is large enough to hold all the
+    people in the queue.</p>
+<h2>Output</h2>
+<p>The maximum number of people Bruno can let into the club
+    without losing track of his counting.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+MWWMWMMWM
+</pre>
+</td>
+<td>
+<pre>
+9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+WMMMMWWMMMWWMW
+</pre>
+</td>
+<td>
+<pre>
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

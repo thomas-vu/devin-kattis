@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>Given the dimensions of three rectangles, determine if all
+    three can be glued together, touching just on the edges, to
+    form a square. You may rotate the rectangles. For example,
+    Figure 1 shows successful constructions for the first two
+    sample inputs.</p>
+<div class="figure" id="samples">
+<center>
+<table class="subfigure" id="a0000000005" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.6]{sample1.png}" src="/problems/squaredeal/file/statement/en/img-0001.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(1.a)</td>
+</tr>
+</table>  
+
+        <table class="subfigure" id="a0000000006" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.6]{sample2.png}" src="/problems/squaredeal/file/statement/en/img-0002.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(1.b)</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Constructions for the first two examples
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of three lines, with line <span class="tex2jax_process">$j$</span> containing integers <span class="tex2jax_process">$H_ j$</span> and <span class="tex2jax_process">$W_ j$</span>, designating the height and
+    width of a rectangle, such that <span class="tex2jax_process">$100 \geq H_ j \geq W_ j \geq 1$</span>, and
+    such that <span class="tex2jax_process">$H_1 \geq H_2 \geq
+    H_3$</span>.</p>
+<h2>Output</h2>
+<p>Output a line saying <tt class="tt">YES</tt> if they can be
+    glued together to form a square. Output <tt class="tt">NO</tt>
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 3
+7 1
+7 3
+</pre>
+</td>
+<td>
+<pre>
+YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 2
+7 4
+7 5
+</pre>
+</td>
+<td>
+<pre>
+YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1
+3 2
+3 3
+</pre>
+</td>
+<td>
+<pre>
+NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

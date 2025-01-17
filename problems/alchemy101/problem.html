@@ -1,0 +1,183 @@
+<div class="problembody">
+<p>As a student at Hogwarts School of Witchcraft and Wizardry,
+    Harry must learn Alchemy  — the study of magical
+    properties of elements and transmutation of substances. In
+    today’s Alchemy lab session, Harry is experimenting with
+    transmuting substances. In the magical world, there are
+    infinite number of substances, numbered by positive integers.
+    When combining two substances <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span>, one will obtain the substance
+    <span class="tex2jax_process">$i \oplus j$</span>, where
+    <span class="tex2jax_process">$\oplus $</span> denote the
+    bitwise xor operator.</p>
+<p>Let’s take a recap of how the bitwise xor operator works.
+    The bitwise xor is a binary operation that takes two bit
+    sequences of equal length and performs the logical exclusive or
+    operation on each pair of corresponding bits. The result in
+    each position is <span class="tex2jax_process">$1$</span> if
+    only one of the bits is <span class="tex2jax_process">$1$</span>, but will be <span class="tex2jax_process">$0$</span> if both are <span class="tex2jax_process">$0$</span>s or both are <span class="tex2jax_process">$1$</span>s. For example:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left"> </td>
+<td style="text-align:left"> </td>
+<td style="text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:left">
+<p>(decimal <span class="tex2jax_process">$5$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><tt class="ttfamily">XOR</tt></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:left">
+<p>(decimal <span class="tex2jax_process">$3$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left"> </td>
+<td style="text-align:left"> </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="ttfamily">1</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="ttfamily">0</tt></p>
+</td>
+<td style="text-align:left"> </td>
+<td style="text-align:left">
+<p>(decimal <span class="tex2jax_process">$6$</span>)</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Thus, we can write <span class="tex2jax_process">$5 \oplus 3
+    = 6$</span>. For this problem, we can say by combining
+    substances <span class="tex2jax_process">$5$</span> and
+    <span class="tex2jax_process">$3$</span>, one will get
+    substance <span class="tex2jax_process">$5 \oplus 3 =
+    6$</span>. Note that, the order of combining substances does
+    not matter, because of the commutativity and associativity
+    properties of the bitwise xor operator:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$a \oplus b = b \oplus
+        a$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$a \oplus (b \oplus c) =
+        (a \oplus b) \oplus c$</span>.</p>
+</li>
+</ul>
+<p>Harry wants to create the substance <span class="tex2jax_process">$m$</span>, using the <b class="bfseries">largest</b> number of substances. However, Hogwarts’
+    lab only has <span class="tex2jax_process">$m$</span>
+    substances from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$m$</span>, so Harry can only use
+    these substances and he can not use any substances twice.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$(1 \le t \le 10^{3})$</span> — the
+    number of test cases.</p>
+<p><span class="tex2jax_process">$t$</span> test cases follow,
+    each test case contains a single integer <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(1
+    \le m \le 10^{3})$</span>. It is guaranteed that one can create
+    the substance <span class="tex2jax_process">$m$</span>, using
+    only substances numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span> without using any substances more
+    than once.</p>
+<h2>Output</h2>
+<p>For each test case, print two lines:</p>
+<ul class="itemize">
+<li>
+<p>The first line contains <span class="tex2jax_process">$n$</span> — the largest number of
+        substances Harry can use.</p>
+</li>
+<li>
+<p>The second line contains <span class="tex2jax_process">$n$</span> integers, separated by
+        spaces — the substances that Harry uses.</p>
+</li>
+</ul>
+<p>If there are more than one optimal answers, you must print
+    the one with <b class="bfseries">smallest lexicographical
+    order</b>. A list of substances <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span> has smaller
+    lexicographical order than a list of substances <span class="tex2jax_process">$b_1, b_2, \ldots , b_ n$</span>, iff there
+    exists a valid index <span class="tex2jax_process">$i$</span>
+    such that both the following conditions are true:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$a_1 = b_1, a_2 = b_2,
+        \ldots , a_{i-1} = b_{i-1}$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$a_ i &lt; b_
+        i$</span>.</p>
+</li>
+</ul>
+<h2>Explanation of the sample input</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 = 1$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \oplus 2 \oplus 3
+        \oplus 4 = 4$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \oplus 2 \oplus 3
+        \oplus 5 = 5$</span>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1
+4
+5
+</pre>
+</td>
+<td>
+<pre>1
+1
+4
+1 2 3 4
+4
+1 2 3 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>Tic Tac Toe is a simple children’s game. It is played on a
+    <span class="tex2jax_process">$3 \times 3$</span> grid. The
+    first player places an <tt class="ttfamily">X</tt> in any of
+    the <span class="tex2jax_process">$9$</span> cells. The next
+    player places an <tt class="ttfamily">O</tt> in any of the
+    remaining 8 cells. The players continue to alternate placing
+    <tt class="ttfamily">X</tt>s and <tt class="ttfamily">O</tt>s
+    in unoccupied cells until either a player gets three of their
+    symbols in a row, or the grid is full. If either player gets
+    three in a row, in any of the three rows, three columns or two
+    diagonals, that player wins and the game ends.</p>
+<p>Fred and Sam are playing a game of Tic Tac Toe. In the
+    middle of the game, Fred wonders: “How many games from this
+    point in the game onward are winners for <tt class="ttfamily">X</tt>? How many for <tt class="ttfamily">O</tt>?”
+    Two games are different if they have different sequences of
+    moves, even if they result in the grid looking the same at any
+    point.</p>
+<p>Given a list of grids, determine first if they can be
+    reached in a game of Tic Tac Toe, and if they can, how many
+    games from that point on result in wins for <tt class="ttfamily">X</tt>, and how many for <tt class="ttfamily">O</tt>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \le t \le 10^5$</span>), which is the
+    number of test case grids.</p>
+<p>Each of the next <span class="tex2jax_process">$t$</span>
+    lines contains a single string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$|s|=9$</span>) which consists of only the
+    characters <tt class="ttfamily">‘.’</tt>, <tt class="ttfamily">‘X’</tt> and/or <tt class="ttfamily">‘O’</tt>. These
+    are the test case grids. The first three characters represent
+    the first row, the second three are the second row, and the
+    last three are the last row, with <tt class="ttfamily">‘.’</tt>
+    representing an empty cell. For example, the string <tt class="ttfamily">XX..O....</tt> represents this grid:</p>
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{ttt.png}" src="/problems/tictactoecounting/file/statement/en/img-0001.png" style="width:20.00%"/>
+</center>
+<h2>Output</h2>
+<p>For each test case, output two space-separated integers. If
+    the grid is not reachable in a game of Tic Tac Toe, output
+    <tt class="ttfamily">-1 -1</tt>. If the grid is reachable,
+    output the number of games from that point on (including that
+    grid) that are wins for <tt class="ttfamily">X</tt>, followed
+    by wins for <tt class="ttfamily">O</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+XX..O....
+X...OX...
+OOOX.X.X.
+OOOXXX...
+</pre>
+</td>
+<td>
+<pre>191 194
+232 200
+0 1
+-1 -1
+</pre>
+</td>
+</tr>
+</table>
+</div>

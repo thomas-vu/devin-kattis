@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Biologists have discovered a strange DNA molecule, best
+    described as a sequence of <span class="tex2jax_process">$N$</span> characters from the set
+    <span class="tex2jax_process">$\{ A, B\} $</span>. An unlikely
+    sequence of mutations has resulted in a DNA strand consisting
+    only of <span class="tex2jax_process">$A$</span>’s. Biologists
+    found that very odd, so they began studying the mutations in
+    greater detail.</p>
+<p>They discovered two types of mutations. One type results in
+    changing any single character of the sequence (<span class="tex2jax_process">$A \rightarrow B$</span> or <span class="tex2jax_process">$B \rightarrow A$</span>). The second type
+    changes a whole <em>prefix</em> of the sequence, specifically
+    replacing all characters in positions from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$K$</span> (for some <span class="tex2jax_process">$K$</span> between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span>, inclusive) with the other
+    character (<span class="tex2jax_process">$A$</span> with
+    <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$B$</span> with <span class="tex2jax_process">$A$</span>).</p>
+<p>Compute the least possible number of mutations that could
+    convert the starting molecule to its end state (containing only
+    <span class="tex2jax_process">$A$</span> characters). Mutations
+    can occur in any order.</p>
+<h2>Input</h2>
+<p>The first line of input contains the positive integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 1\, 000\, 000$</span>), the
+    length of the molecule. The second line of input contains a
+    string with <span class="tex2jax_process">$N$</span>
+    characters, with each character being either <span class="tex2jax_process">$A$</span> or <span class="tex2jax_process">$B$</span>. This string represents the
+    starting state of the molecule.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    minimum number of mutations.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+ABBA
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+BBABB
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>12
+AAABBBAAABBB
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

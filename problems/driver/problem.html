@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>In the Linear City, there are <span class="tex2jax_process">$N$</span> gates arranged in a straight line.
+    The gates are labelled from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>. Between adjacent gates, there is
+    a bidirectional road. Each road takes one hour to travel and
+    has a toll fee. Since the roads are narrow, you can only travel
+    from gates to gates but cannot U-turn between gates.</p>
+<p>Crazy driver Gary starts at Gate <span class="tex2jax_process">$1$</span> at time <span class="tex2jax_process">$0$</span> and he wants to drive through Gate
+    <span class="tex2jax_process">$N$</span> while minimizing the
+    cost of travelling. However, Gate <span class="tex2jax_process">$i$</span> only allows a car to pass through
+    after a certain time <span class="tex2jax_process">$T_
+    i$</span>. As Gary is crazy, his car will always be traveling
+    on any one of the roads, i.e., it will not stop at a gate. What
+    is the minimum cost for him to drive through Gate <span class="tex2jax_process">$N$</span>?</p>
+<p>As an example, consider the sample input below. An optimal
+    solution is the following:</p>
+<ol class="enumerate">
+<li>
+<p>Gate <span class="tex2jax_process">$1$</span> to Gate
+        <span class="tex2jax_process">$2$</span> (cost <span class="tex2jax_process">$5$</span>)</p>
+</li>
+<li>
+<p>Gate <span class="tex2jax_process">$2$</span> to Gate
+        <span class="tex2jax_process">$1$</span> (cost <span class="tex2jax_process">$5$</span>)</p>
+</li>
+<li>
+<p>Gate <span class="tex2jax_process">$1$</span> to Gate
+        <span class="tex2jax_process">$2$</span> to Gate
+        <span class="tex2jax_process">$3$</span> (cost <span class="tex2jax_process">$9$</span>)</p>
+</li>
+<li>
+<p>Go between Gate <span class="tex2jax_process">$3$</span>
+        and Gate <span class="tex2jax_process">$4$</span> until
+        <span class="tex2jax_process">$7$</span>-th hour (cost
+        <span class="tex2jax_process">$6$</span>)</p>
+</li>
+<li>
+<p>Go to and pass through Gate <span class="tex2jax_process">$5$</span> (cost <span class="tex2jax_process">$8$</span>)</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 10^5$</span>), the number of gates. The second line
+    has <span class="tex2jax_process">$N-1$</span> integers,
+    <span class="tex2jax_process">$C_1, \dots , C_{N-1}$</span>.
+    <span class="tex2jax_process">$C_ i$</span> (<span class="tex2jax_process">$1 \leq C_ i \leq 10^6$</span>) represents
+    the toll fee of the road between Gate <span class="tex2jax_process">$i$</span> and Gate <span class="tex2jax_process">$i+1$</span>. The third line has <span class="tex2jax_process">$N$</span> integers, <span class="tex2jax_process">$T_1, \dots , T_ N$</span>. <span class="tex2jax_process">$T_ i$</span> (<span class="tex2jax_process">$0 \leq T_ i \leq 10^6$</span>) represents
+    the opening time (in hour) for each gate. <span class="tex2jax_process">$T_1$</span> will always be 0.</p>
+<h2>Output</h2>
+<p>Output an integer representing the minimum cost of
+    traveling.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+5 4 2 8
+0 2 4 4 8
+</pre>
+</td>
+<td>
+<pre>
+33
+</pre>
+</td>
+</tr>
+</table>
+</div>

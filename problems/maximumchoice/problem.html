@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>Bryan is a passenger on a voyage to a distant planet. Like
+    the other passengers he awaits in cryosleep. However, due to a
+    malfunction he awoke early and finds himself awake and alone.
+    The ship’s sophisticated navigation AI, ChatHAL, is responsible
+    for waking passengers.</p>
+<p>It appears that ChatHAL wants to play a game with Bryan. The
+    game is simple: ChatHAL has hidden the key to his cryopod
+    beneath one of the other pods. It is Bryan’s job to guess and
+    find that pod and retrieve the key to go back to cryosleep.</p>
+<p>There are <span class="tex2jax_process">$n$</span> cryopods
+    on the ship, all lined up in a single file. ChatHAL tells Bryan
+    he is able to make up to <span class="tex2jax_process">$b$</span> guesses per turn. He can guess the
+    same pod multiple times if he wants to. Bryan plays his first
+    turn of the game, and guesses up to <span class="tex2jax_process">$b$</span> pods. If the key is underneath one
+    of the pods Bryan guessed, then he wins. Otherwise, ChatHAL
+    will tell Bryan which two pods enclose the smallest region
+    containing the key. The endpoints of this region must each be
+    either a pod that Bryan guessed, or the first or last pod in
+    the line. Bryan then proceeds on to his second turn, where he
+    makes up to another <span class="tex2jax_process">$b$</span>
+    guesses once again. This process repeats until Bryan finds the
+    key.</p>
+<p>There is a slight problem however: <span class="tex2jax_process">$n$</span> can be as large as <span class="tex2jax_process">$2^{63}-1$</span>, so Bryan is looking to be
+    efficient to avoid searching the entire ship. What is the most
+    amount of turns, in the worst case, that Bryan would have to
+    play if he played optimally?</p>
+<h2>Input</h2>
+<p>Input consists of the space-separated integers <span class="tex2jax_process">$1 \leq n &lt; 2^{63}$</span> and
+    <span class="tex2jax_process">$1 \leq b \leq 15$</span>.</p>
+<h2>Output</h2>
+<p>Return the maximum amount of attempts Bryan would need if he
+    guessed optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 1
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1000 2
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

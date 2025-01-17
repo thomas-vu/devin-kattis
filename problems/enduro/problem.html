@@ -1,0 +1,194 @@
+<div class="problembody">
+<p>There is an epic enduro race taking place around the lake
+    Sjön sjön at LTH. The race lasts for 3 hours, and the goal is
+    to complete as many laps as possible within this time. Whenever
+    a participant passes the lap line before the end of the race,
+    they need to start another lap. The participants finish their
+    race when they pass the lap line at or after the time limit (3
+    hours from the starting time). Some participants might do one
+    or several extra laps after finishing the race but these laps
+    do not count towards the race result.</p>
+<p>During the race, the times at which participants pass the
+    lap line are recorded (this does not include the time when they
+    start), and after the race this information will be used to
+    construct a rank list of all participants.</p>
+<p>The participants are first ranked by the number of laps they
+    completed, with participants having completed more laps being
+    ranked higher. If multiple participants have completed the same
+    number of laps, they are then ranked by the time that they
+    finished their final lap, with earlier times being ranked
+    higher. The race organizers have not considered how
+    participants should be ranked if they finish the same number of
+    laps in exactly the same amount of time, but that will probably
+    not happen.</p>
+<p>If a participant starts a lap but doesn’t finish it they get
+    a DNF (did not finish) and are not included in the rank
+    list.</p>
+<p>A program for generating the rank list has been in
+    development for the past couple of months by a team of second
+    year computer science students. Unfortunately, the program
+    appears to be highly unstable, and after inputting more than 20
+    entries consumes more memory than available on any of the
+    computers owned by the race organizers.</p>
+<p>The race is starting soon and the race organizers need your
+    help with writing a replacement program.</p>
+<h2>Input</h2>
+<p>The first line of input contains the starting time of the
+    race, formatted as “<tt class="ttfamily">HH:MM:SS AM/PM</tt>”
+    where “<tt class="ttfamily">HH</tt>” is an integer between
+    <span class="tex2jax_process">$1 — 12$</span>, “<tt class="ttfamily">MM</tt>” and “<tt class="ttfamily">SS</tt>” are
+    integers between <span class="tex2jax_process">$0 — 59$</span>,
+    and “<tt class="ttfamily">AM/PM</tt>” is either the string AM
+    or PM depending on whether the time is before or after noon.
+    Midnight would be written “<tt class="ttfamily">12:00:00
+    AM</tt>”, and noon would be written “<tt class="ttfamily">12:00:00 PM</tt>”.</p>
+<p>The first line contains one integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10,000$</span>), the number of timestamps
+    recorded.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    contain a timestamp in the same format as the start time,
+    followed by a space, followed by the name of the contestant
+    passing the lap line at that time. Contestant names consist of
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span> characters, which can be
+    uppercase and lowercase letters “<tt class="ttfamily">A</tt>”
+    to “<tt class="ttfamily">Z</tt>” and space. Names will not
+    contain more than one space, and they will not begin or end
+    with a space.</p>
+<p>The timestamps are sorted in ascending order, and it is
+    guaranteed that no two timestamps are at exactly the same time.
+    All timestamps are also guaranteed to be within <span class="tex2jax_process">$6$</span> hours of the starting time (but
+    not necessarily on the same day as the starting time).</p>
+<h2>Output</h2>
+<p>Output one line per participant that did not get a DNF,
+    ordered according to the ranking rules described above, with
+    the highest ranked participant listed first. Each line should
+    contain the number of laps completed by that participant,
+    followed by a space, followed by the participant’s name.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+<td style="text-align:left">
+<p>Satisfied by Sample(s)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>No two participants complete the same number of laps,
+          and each participant passes the lap line exactly once on
+          or after the time limit</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>14</p>
+</td>
+<td style="text-align:left">
+<p>No two participants complete the same number of
+          laps</p>
+</td>
+<td style="text-align:left">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>35</p>
+</td>
+<td style="text-align:left">
+<p>The start time is “<tt class="ttfamily">01:00:00
+          PM</tt>”</p>
+</td>
+<td style="text-align:left">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>4</p>
+</td>
+<td style="text-align:left">
+<p>32</p>
+</td>
+<td style="text-align:left">
+<p>No additional constraints</p>
+</td>
+<td style="text-align:left">
+<p>1 and 2</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>01:00:00 PM
+6
+01:14:10 PM Bjorn Magnusson
+03:59:59 PM Pusheen
+04:00:00 PM Bjorn Magnusson
+04:58:50 PM Erik
+05:23:09 PM Thore
+05:44:38 PM Erik
+</pre>
+</td>
+<td>
+<pre>2 Bjorn Magnusson
+1 Erik
+1 Thore
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10:36:19 PM
+6
+10:52:10 PM Thore
+11:02:56 PM Thore Husfeldter
+12:18:01 AM Thore Husfeldter
+01:36:19 AM Pusheen
+01:55:23 AM Thore
+04:05:53 AM Thore Husfeldter
+</pre>
+</td>
+<td>
+<pre>3 Thore Husfeldter
+2 Thore
+1 Pusheen
+</pre>
+</td>
+</tr>
+</table>
+</div>

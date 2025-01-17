@@ -1,0 +1,138 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/ironcoal/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ironcoal/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Coal. Photo by <a href="https://commons.wikimedia.org/wiki/File:Coal_anthracite.jpg">
+        US Federal Government</a>
+</div>
+</div>There are many excellent strategy board games, and your
+    favourite among them is called “Steel Age”. It offers many
+    different paths to victory but you prefer the
+    blood-and-fire-strategy: build as many soldiers as possible and
+    club your opposition into submission. To be able to build
+    soldiers you need two resources: iron ore and coal.
+
+    <p>The board consists of different cells numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span> which can contain resources. The
+    rules for moving from one cell to another are rather
+    complicated: if you can move from cell A to cell B, it does not
+    always mean that you can also move from B to A. For example, if
+    two cells are connected by a river, then you may be able to
+    move downstream, but not upstream, so long as you didn’t invent
+    a steam engine; however, it still could be possible to reach
+    the upstream cell by using roads and taking a detour over other
+    cells.</p>
+<p>At the beginning of the game you own only one such cell,
+    where all your settlers are located. At every move you are
+    allowed to move an arbitrary number of settlers from a cell to
+    one of its accessible neighbours. By moving your settlers into
+    a cell for the first time, you “claim” it. Every claimed cell
+    will bind one settler, which has to stay in this cell until the
+    end of the game. However, there is no need to leave a settler
+    in your initial cell because it is where your palace is located
+    and thus the cell stays claimed for all time.</p>
+<p>Your goal is to claim at least one cell containing the
+    resource “iron ore” and at least one cell with resource “coal”
+    in order to be able to build soldiers. What is the minimal
+    number of settlers you need to reach this goal?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le n \le 10^5$</span>), the number of
+        cells on the playing field, <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le m &lt; n$</span>), the number of
+        cells containing iron ore, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \le k &lt; n$</span>), the number of
+        cells containing coal.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$m$</span>
+        distinct integers <span class="tex2jax_process">$o_1,
+        \ldots , o_ m$</span> (<span class="tex2jax_process">$1 \le
+        o_ i \le n$</span> for all <span class="tex2jax_process">$1\le i\le m$</span>), where <span class="tex2jax_process">$o_1, \ldots , o_ m$</span> are the IDs
+        of cells with iron ore.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$k$</span>
+        distinct integers <span class="tex2jax_process">$c_1,
+        \ldots , c_ k$</span> (<span class="tex2jax_process">$1 \le
+        c_ i \le n$</span> for all <span class="tex2jax_process">$1\le i\le k$</span>), where <span class="tex2jax_process">$c_1, \ldots , c_ k$</span> are the IDs
+        of cells with coal.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines
+        describing the topology of the board. The <span class="tex2jax_process">$j$</span>-th line of this block
+        specifies the accessible neighbours of the <span class="tex2jax_process">$j$</span>-th cell and consists of the
+        following integers:</p>
+<ul class="itemize">
+<li>
+<p>One integer <span class="tex2jax_process">$0\le a
+            \le 10$</span>, the number of cells accessible from
+            cell <span class="tex2jax_process">$j$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$a$</span> distinct
+            integers <span class="tex2jax_process">$b_1,\dots , b_
+            a$</span> (<span class="tex2jax_process">$1 \le b_ i
+            \le n$</span>, <span class="tex2jax_process">$b_ i \ne
+            j$</span> for all <span class="tex2jax_process">$1\le
+            i\le a$</span>), the IDs of the cells accessible from
+            cell <span class="tex2jax_process">$j$</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>It is guaranteed, that no cell contains both resources, iron
+    ore and coal. At the beginning of the game you own only the
+    cell with ID <span class="tex2jax_process">$1$</span>.</p>
+<h2>Output</h2>
+<p>Output the minimum number of settlers needed to claim at
+    least one cell with coal and at least one cell with iron ore.
+    Output “<tt class="ttfamily">impossible</tt>” if it is
+    impossible to own both, coal and iron ore.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 1
+2
+3
+1 2
+2 3 1
+1 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 1
+2
+3
+1 2
+1 1
+2 1 2
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,66 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/bigtotoro/file/statement/en/img-0001.png" class="illustration" src="/problems/bigtotoro/file/statement/en/img-0001.png"/>
+<div class="description">
+        Totoro sitting on a branch
+      </div>
+</div>
+<p>Big Totoro is currently eating big acorns. There are
+    <span class="tex2jax_process">$N$</span> big acorns, each with
+    some size <span class="tex2jax_process">$s_i$</span>.</p>
+<p>Big Totoro starts off at size <span class="tex2jax_process">$K$</span>. After eating a big acorn, Big
+    Totoro adds the size of that big acorn onto his current size.
+    However, Big Totoro can only eat a big acorn if the big acorn
+    and Big Totoro are the same size modulo 4. In other words, when
+    Big Totoro’s size and the size of the big acorn are divided by
+    4, they have the same remainder.</p>
+<p>After eating a big acorn, it disappears and can no longer be
+    eaten. Calculate the maximum size Big Totoro can achieve.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers <span class="tex2jax_process">$N \: (1 \leq N \leq
+    10^5)$</span> and <span class="tex2jax_process">$K \: (0 \leq K
+    \leq 10^4)$</span>, denoting the number of acorns and the
+    initial size of Big Totoro, respectively. The second line of
+    input contains <span class="tex2jax_process">$N$</span>
+    space-separated integers <span class="tex2jax_process">$s_1,
+    s_2, \dotsc , s_N$</span>, where each <span class="tex2jax_process">$s_i \: (0 \leq s_i \leq 10^4)$</span>
+    represents the sizes of the big acorns.</p>
+<h2>Output</h2>
+<p>The first line of output should contain a single integer,
+    representing the maximum size Big Totoro can achieve.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+7 4 6 8 
+</pre>
+</td>
+<td>
+<pre>28
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+0 8 1 
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

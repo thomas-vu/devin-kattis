@@ -1,0 +1,108 @@
+<div class="problembody">
+<p>Mirko has an array of <span class="tex2jax_process">$N$</span> <em>different</em> words that he
+    wants to encrypt using a substitution cypher.</p>
+<p>We encrypt the text using a substitution cypher by first
+    choosing a key – a permutation of the English alphabet. Then we
+    replace all occurrences of letter ‘<tt class="ttfamily">a</tt>’
+    with the first letter of the key, all occurrences of letter
+    ‘<tt class="ttfamily">b</tt>’ with the second letter of the
+    key, and so on until letter ‘<tt class="ttfamily">z</tt>’.</p>
+<p>Besides the words, Mirko has an array <span class="tex2jax_process">$A$</span> consisting of numbers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> given in a certain order (in other
+    words, array <span class="tex2jax_process">$A$</span> is a
+    permutation of numbers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>). Mirko wants to pick a key such
+    that the array of words after encrypting and lexicographic
+    sorting corresponds to array <span class="tex2jax_process">$A$</span>. More precisely, he wants the word
+    initially located at <span class="tex2jax_process">$A_
+    i$</span> to be at location <span class="tex2jax_process">$i$</span> after encryption and sorting.</p>
+<p>Let’s recall that the lexicographic word order is the order
+    in which the words appear in the dictionary. If we are
+    comparing two words, going from left to right, we search for
+    the first position in both words where the letters differ and,
+    based on that, we determine which word is lexicographically
+    smaller. If word <span class="tex2jax_process">$X$</span> is
+    the beginning of the word <span class="tex2jax_process">$Y$</span>, then word <span class="tex2jax_process">$X$</span> is lexicographically smaller than
+    word <span class="tex2jax_process">$Y$</span>.</p>
+<p>Mirko is currently not in the mood for encrypting, so he
+    kindly asks you to do it for him.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 100$</span>). Each of the following <span class="tex2jax_process">$N$</span> lines contains a single word that
+    consists of at most <span class="tex2jax_process">$100$</span>
+    lowercase letters of the English alphabet. The words will be
+    mutually distinct. The last line contains <span class="tex2jax_process">$N$</span> integers – the elements of array
+    <span class="tex2jax_process">$A$</span>.</p>
+<h2>Output</h2>
+<p>In the case when a solution doesn’t exist, output
+    “<tt class="ttfamily">NE</tt>”. Otherwise, output “<tt class="ttfamily">DA</tt>” in the first line, and in the second line
+    output a word consisting of <span class="tex2jax_process">$26$</span> different letters of the English
+    alphabet – the key for the substitution cipher. If multiple
+    solutions exist, output any.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+ab
+bc
+2 1
+</pre>
+</td>
+<td>
+<pre>
+DA
+bacdefghijklmnopqrstuvwxyz
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+abc
+bcd
+add
+1 2 3
+</pre>
+</td>
+<td>
+<pre>
+NE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+bbb
+ccc
+ddd
+2 3 1
+</pre>
+</td>
+<td>
+<pre>
+DA
+adbcefghijklmnopqrstuvwxyz
+</pre>
+</td>
+</tr>
+</table>
+</div>

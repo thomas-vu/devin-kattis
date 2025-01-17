@@ -1,0 +1,156 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/interviewquestion/file/statement/en/img-0001.png" class="illustration" src="/problems/interviewquestion/file/statement/en/img-0001.png"/>
+<div class="description">
+<em>Fizz Buzz</em> implemented in Hexagony.<br/>
+        CC BY-SA 3.0 by M L on <a href="https://codegolf.stackexchange.com/a/74906">codegolf.stackexchange.com</a>
+</div>
+</div><em>Fizz Buzz</em> is a party game that is often used as
+    a programming exercise in job interviews. In the game, there
+    are two positive integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, and the game consists of counting
+    up through the positive integers, replacing any number by
+    <tt class="ttfamily">Fizz</tt> if it is a multiple of
+    <span class="tex2jax_process">$a$</span>, by <tt class="ttfamily">Buzz</tt> if it is a multiple of <span class="tex2jax_process">$b$</span>, and by <tt class="ttfamily">FizzBuzz</tt> if it is a multiple of both
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>. The most common form of the game
+    has <span class="tex2jax_process">$a=3$</span> and <span class="tex2jax_process">$b=5$</span>, but other parameters are
+    allowed.
+    <p>Your task here is to solve the reverse problem: given a
+    transcript of part of the game (not necessarily starting at 1),
+    find possible values of <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> that could have been used to
+    generate it.</p>
+<p>Figure 1 shows some sample sequences for various values of
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>.</p>
+<div class="figure" id="fig:i">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$a=3,
+              b=5:$</span></p>
+</td>
+<td style="text-align:left">
+<p><small class="small"><tt class="ttfamily">1 2 Fizz
+              4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14
+              FizzBuzz</tt></small></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$a=6,
+              b=2:$</span></p>
+</td>
+<td style="text-align:left">
+<p><small class="small"><tt class="ttfamily">1 Buzz 3
+              Buzz 5 FizzBuzz 7 Buzz 9 Buzz 11 FizzBuzz
+              13</tt></small></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$a=4,
+              b=4:$</span></p>
+</td>
+<td style="text-align:left">
+<p><small class="small"><tt class="ttfamily">1 2 3
+              FizzBuzz 5 6 7 FizzBuzz 9 10 11 FizzBuzz 13
+              14</tt></small></p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Example sequences for <em>Fizz
+          Buzz</em>.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1 \le c \le d \le 10^5$</span>),
+        indicating that your transcript starts at <span class="tex2jax_process">$c$</span> and ends at <span class="tex2jax_process">$d$</span>.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$d-c+1$</span> integers and strings, the
+        contents of the transcript.</p>
+</li>
+</ul>
+<p>It is guaranteed that the transcript is valid for some
+    integers <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> with <span class="tex2jax_process">$1 \le a,b \le 10^6$</span>, according to the
+    rules laid out above.</p>
+<h2>Output</h2>
+<p>Output two positive integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \le a,b \le 10^6$</span>) that are consistent with the given
+    transcript.</p>
+<p>If there are multiple valid solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 11
+7 8 Fizz Buzz 11
+</pre>
+</td>
+<td>
+<pre>3 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>49999 50002
+49999 FizzBuzz 50001 Fizz
+</pre>
+</td>
+<td>
+<pre>2 125
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 11
+Buzz Buzz FizzBuzz Buzz
+</pre>
+</td>
+<td>
+<pre>10 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>10 15
+10 11 12 13 14 15
+</pre>
+</td>
+<td>
+<pre>8 23
+</pre>
+</td>
+</tr>
+</table>
+</div>

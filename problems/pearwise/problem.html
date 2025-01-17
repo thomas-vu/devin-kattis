@@ -1,0 +1,224 @@
+<div class="problembody">
+<p>Bob Roberts is ending his term as president of a local group
+    of fruit aficionados call the Pear-wise Club. Being president
+    is a plum position so many people are running, some of whom Bob
+    thinks are just peachy, while others are just the pits. After
+    some thought, Bob has amended the by-laws of the Pear-wise Club
+    to use sequential pairwise voting to determine his
+    successor.</p>
+<p>Sequential pairwise voting works as follows: every voter
+    presents a ballot which ranks the candidates from most to least
+    favorable. Then two of the candidates are selected to hold a
+    one-on-one contest with these ballots, using the relative
+    positions of the candidates on each ballot to determine how
+    each voter would vote in this contest. The winner of this
+    contest then takes part in a second one-on-one contest with a
+    third candidate; the winner of that takes part in a third
+    contest with a fourth candidate, and so on. The winner of the
+    election is the winner of the last one-on-one contest.</p>
+<p>The order in which the candidates take part in the
+    one-on-one contests is specified by the <em>agenda</em>, which
+    is a pre-selected ordering of the candidates. The first two
+    candidates on the agenda take part in the first contest; the
+    winner of that contest then faces the third candidate on the
+    agenda, an so on. For example, assume we had the following set
+    of <span class="tex2jax_process">$13$</span> ballots, each
+    ranking five candidates A, B, C, D and E:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(4)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(3)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(3)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(2)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(1)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>A</p>
+</td>
+<td style="text-align:center">
+<p>D</p>
+</td>
+<td style="text-align:center">
+<p>C</p>
+</td>
+<td style="text-align:center">
+<p>B</p>
+</td>
+<td style="text-align:center">
+<p>E</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>D</p>
+</td>
+<td style="text-align:center">
+<p>C</p>
+</td>
+<td style="text-align:center">
+<p>A</p>
+</td>
+<td style="text-align:center">
+<p>D</p>
+</td>
+<td style="text-align:center">
+<p>B</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>C</p>
+</td>
+<td style="text-align:center">
+<p>A</p>
+</td>
+<td style="text-align:center">
+<p>D</p>
+</td>
+<td style="text-align:center">
+<p>C</p>
+</td>
+<td style="text-align:center">
+<p>C</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>B</p>
+</td>
+<td style="text-align:center">
+<p>B</p>
+</td>
+<td style="text-align:center">
+<p>B</p>
+</td>
+<td style="text-align:center">
+<p>A</p>
+</td>
+<td style="text-align:center">
+<p>D</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>E</p>
+</td>
+<td style="text-align:center">
+<p>E</p>
+</td>
+<td style="text-align:center">
+<p>E</p>
+</td>
+<td style="text-align:center">
+<p>E</p>
+</td>
+<td style="text-align:center">
+<p>A</p>
+</td>
+</tr>
+</table>
+</center>
+<p>The number above each ballot indicates the number of voters
+    who submitted that ballot. If the agenda is ABCDE, then
+    sequential pairwise voting would proceed as follows: in the
+    first contest between A and B, A wins <span class="tex2jax_process">$10$</span>–<span class="tex2jax_process">$3$</span>; A would then face C (the third
+    candidate on the agenda) and here C wins <span class="tex2jax_process">$9$</span>–<span class="tex2jax_process">$4$</span>; C would then face D and D wins
+    <span class="tex2jax_process">$9$</span>–<span class="tex2jax_process">$4$</span>; and finally D would face E and D
+    would win <span class="tex2jax_process">$12$</span>–<span class="tex2jax_process">$1$</span>,
+    so D would be the overall winner using this agenda. Using the
+    reverse agenda – EDCBA – would result in A winning the election
+    (we’ll let you figure out the details of that one).</p>
+<p>Now it wasn’t out of any political science reasons that Bob
+    picked sequential pairwise voting, or the coincidence of its
+    name. He knows that the results are highly dependent on the
+    agenda that’s used and as current president, Bob gets to set
+    the agenda! Since he’s also aware of everyone’s voting
+    preferences, he’s pretty sure that he can find an agenda so
+    that his preference for who succeeds him will be elected. Just
+    to be sure, he would like you to write a program which, when
+    given a set of ballots as input, determines, for each
+    candidate, whether there is an agenda which will result in
+    his/her winning the election.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing two positive integers
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$n
+    \leq 26, m \leq 2\, 000$</span>) indicating the number of
+    candidates and the number of unique ballots, respectively.
+    Candidates are labeled with the first <span class="tex2jax_process">$n$</span> letters of the alphabet,
+    uppercase. Each of the next <span class="tex2jax_process">$m$</span> lines displays one of the
+    <span class="tex2jax_process">$m$</span> ballots. Each line
+    starts with a positive integer <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$p
+    \leq 100$</span>) indicating the number of voters who submitted
+    the ballot, following by a string of <span class="tex2jax_process">$n$</span> characters specifying the ballot.
+    This upper-case string is a permutation of the first
+    <span class="tex2jax_process">$n$</span> characters of the
+    English alphabet, with the first character in the string
+    indicating the most favored candidate in the ballot, the second
+    character the second-most favored, and so on. The total number
+    of votes over all ballots will be odd, so there can’t be a tie
+    in any pairwise vote.</p>
+<h2>Output</h2>
+<p>For each candidate display the candidate’s letter followed
+    by a colon, followed by either the phrase <tt class="tt">can
+    win</tt> if an agenda exists where the candidate can win, or
+    the phrase <tt class="tt">can’t win</tt> if no such agenda
+    exists.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+4 ADCBE
+3 DCABE
+3 CADBE
+2 BDCAE
+1 EBCDA
+</pre>
+</td>
+<td>
+<pre>A: can win
+B: can't win
+C: can win
+D: can win
+E: can't win
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 ABC
+1 BCA
+1 CAB
+</pre>
+</td>
+<td>
+<pre>A: can win
+B: can win
+C: can win
+</pre>
+</td>
+</tr>
+</table>
+</div>

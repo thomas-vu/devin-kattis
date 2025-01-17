@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>After coming to college from high school, you discovered
+    something absolutely tragic. The way that GPA is calculated is
+    completely different than what you are used to. Apparently,
+    pluses and minuses are treated very differently than they were
+    before, according to the following table.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{grade_table.jpg}" src="/problems/reportcard/file/statement/en/img-0001.jpg" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Grade Point Table Comparing High School
+          Against UCLA
+        </div>
+</center>
+</div>
+<p>GPA is calculated by taking the sum of the individual grade
+    points (seen in the table above) and dividing it by the number
+    of courses. You have received your report card for the current
+    quarter, but you’ve blocked out the pluses and minuses instead
+    because you’re too scared to look, so your report card can be
+    one of many different variations. For example, a report card of
+    ABB could be A+ B B+, A- B- B+, or even A B B. In how many
+    possible report card variations will the college grading system
+    actually be better for your GPA compared to your old high
+    school system? Since this number might be quite large, print
+    out your answer modulo <span class="tex2jax_process">$10^9+7$</span>. Note that order matters, so
+    A B B+ and A B+ B are considered two different variations of
+    ABB.</p>
+<h2>Input</h2>
+<p>The input starts with one line containing an integer
+    <span class="tex2jax_process">$N$</span>, denoting the length
+    of the report card (<span class="tex2jax_process">$1 \leq N
+    \leq 3\, 000$</span>).</p>
+<p>The second line is a string of <span class="tex2jax_process">$N$</span> characters (A,B,C,D,F)
+    representing the obscured report card.</p>
+<h2>Output</h2>
+<p>The number of report cards modulo <span class="tex2jax_process">$10^9+7$</span> that would give you a
+    strictly better GPA than in high school.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+AB
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+CCF
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

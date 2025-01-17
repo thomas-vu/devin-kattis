@@ -1,0 +1,125 @@
+<div class="problembody">
+<p>Given an image of a set of Swedish coins valued 1, 5 and 10
+    SEK, what is their sum?</p>
+<p>The coins look like this:</p>
+<div class="figure" id="a0000000006">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{1.png}" src="/problems/coincounter/file/statement/en/img-0001.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 1</b>: 1 SEK coin
+        </div>
+</center>
+</div>
+<div class="figure" id="a0000000007">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{5.png}" src="/problems/coincounter/file/statement/en/img-0002.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 2</b>: 5 SEK coin
+        </div>
+</center>
+</div>
+<div class="figure" id="a0000000008">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{10.png}" src="/problems/coincounter/file/statement/en/img-0003.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 3</b>: 10 SEK coin
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input is a JPEG-formatted image with dimensions
+    <span class="tex2jax_process">$1000 \times 1000$</span>.</p>
+<p>No coin will be covered by other coins such that the visible
+    parts of it is divided into two.</p>
+<p>See the downloadable file <tt class="ttfamily">sampleimages.zip</tt> in the menu to the right to
+    download some example inputs and outputs.</p>
+<h2>Output</h2>
+<p>Output a single number; the sum of all the coins in the
+    input image.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group. Your final
+    score will be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are only 1 SEK coins. None of the coins are
+          rotated or cover each other.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are only 1 SEK coins. None of the coins cover
+          each other.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>75</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are only 1 SEK coins.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>60</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>None of the coins are rotated or cover each other.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>90</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>None of the coins cover each other.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>225</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions.</p>
+</td>
+</tr>
+</table>
+</div>

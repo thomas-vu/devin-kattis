@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/luckynumber/file/statement/en/img-0001.jpg" class="illustration" src="/problems/luckynumber/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/cjsmithphotography/7607717802">
+        Chris Smith</a>.
+      </div>
+</div>
+<p>Mr. Lucky has a store that sells numbers. These numbers have
+    an interesting property: each number formed by its first
+    <span class="tex2jax_process">$k$</span> digits is evenly
+    divisible by <span class="tex2jax_process">$k$</span>, for
+    <span class="tex2jax_process">$k$</span> from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$n$</span> is the number of digits in the
+    number. The numbers do not have leading zeroes.</p>
+<p>Mr. Unlucky wants to open a competing store. Price for lucky
+    numbers is driven by demand and supply, and given by the
+    formula</p><span class="tex2jax_process">\[ \mbox{price} =
+    \frac{\mbox{demand}}{\mbox{supply}} \]</span>
+<p>while demand for numbers with <span class="tex2jax_process">$n$</span> digits is given by the
+    formula</p><span class="tex2jax_process">\[ \mbox{demand} =
+    \mbox{citySize} \cdot \mbox{dayOfMonth} - n^ e \]</span>
+<p>where <span class="tex2jax_process">$e$</span> is the base
+    of the natural logarithm. Supply for lucky numbers with
+    <span class="tex2jax_process">$n$</span> digits is simply the
+    number of lucky numbers with <span class="tex2jax_process">$n$</span> digits. Help Mr. Unlucky calculate
+    the supply for <span class="tex2jax_process">$n$</span> digit
+    lucky numbers.</p>
+<h2>Input</h2>
+<p>The input is a single integer <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>Output the supply for <span class="tex2jax_process">$n$</span> digit lucky numbers.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$2 \leq n \leq 1\,
+        000$</span></p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+</pre>
+</td>
+<td>
+<pre>
+45
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+</pre>
+</td>
+<td>
+<pre>
+150
+</pre>
+</td>
+</tr>
+</table>
+</div>

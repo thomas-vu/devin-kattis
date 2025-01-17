@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>The Latin alphabet contains 26 characters and telephones
+    only have ten digits on the keypad. We would like to make it
+    easier to write a message to your friend using a sequence of
+    keypresses to indicate the desired characters. The letters are
+    mapped onto the digits as shown below. To insert the character
+    ‘B’ for instance, the program would press “22”. In order to
+    insert two characters in sequence from the same key, the user
+    must pause before pressing the key a second time. The space
+    character ‘ ’ should be printed to indicate a pause. For
+    example, “2 2” indicates “AA” whereas “22” indicates “B”.</p>
+<div class="figure" id="fig:keypad">
+<center>
+<img alt="\includegraphics[width=0.28\textwidth ]{keypad.png}" src="/problems/t9spelling/file/statement/en/img-0001.png" style="width:28.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Phone keypad
+      </div>
+</div>
+<h3>Input</h3>
+<p>The first line of input gives the number of cases,
+    <span class="tex2jax_process">$N, 1 \leq N \leq 100$</span>.
+    <span class="tex2jax_process">$N$</span> test cases follow.
+    Each case is a line of text containing the desired message,
+    which will be at most <span class="tex2jax_process">$1000$</span> characters long. Each message
+    will consist of only lowercase characters ‘a’–‘z’ and space
+    characters ‘ ’. Pressing zero emits a space.</p>
+<h3>Output</h3>
+<p>For each test case, output one line containing “Case
+    #<span class="tex2jax_process">$x$</span>: ” followed by the
+    message translated into the sequence of key presses.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+hi
+yes
+foo  bar
+hello world
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 44 444
+Case #2: 999337777
+Case #3: 333666 6660 022 2777
+Case #4: 4433555 555666096667775553
+</pre>
+</td>
+</tr>
+</table>
+</div>

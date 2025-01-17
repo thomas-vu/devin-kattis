@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/catering/file/statement/en/img-0001.jpg" class="illustration" src="/problems/catering/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture from Wikimedia Commons
+      </div>
+</div>Paul owns a catering company and business is booming. The
+    company has <span class="tex2jax_process">$k$</span> catering
+    teams, each in charge of one set of catering equipment. Every
+    week, the company accepts <span class="tex2jax_process">$n$</span> catering requests for various
+    events. For every request, they send a catering team with their
+    equipment to the event location. The team delivers the food,
+    sets up the equipment, and instructs the host on how to use the
+    equipment and serve the food. After the event, the host is
+    responsible for returning the equipment back to Paul’s company.
+
+    <p>Unfortunately, in some weeks the number of catering teams is
+    less than the number of requests, so some teams may have to be
+    used for more than one event. In these cases, the company
+    cannot wait for the host to return the equipment and must keep
+    the team on-site to move the equipment to another location. The
+    company has an accurate estimate of the cost to move a set of
+    equipment from any location to any other location. Given these
+    costs, Paul wants to prepare an Advance Catering Map to service
+    the requests while minimizing the total moving cost of
+    equipment (including the cost of the first move), even if that
+    means not using all the available teams. Paul needs your help
+    to write a program to accomplish this task. The requests are
+    sorted in ascending order of their event times and they are
+    chosen in such a way that for any <span class="tex2jax_process">$i &lt; j$</span>, there is enough time to
+    transport the equipment used in the <span class="tex2jax_process">$i^{th}$</span> request to the location of
+    the <span class="tex2jax_process">$j^{th}$</span> request.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 100$</span>) and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le k \le 100$</span>) which are the number of requests and the
+    number of catering teams, respectively. Following that are
+    <span class="tex2jax_process">$n$</span> lines, where the
+    <span class="tex2jax_process">$i^{th}$</span> line contains
+    <span class="tex2jax_process">$n-i+1$</span> integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span> inclusive. The
+    <span class="tex2jax_process">$j^{th}$</span> number in the
+    <span class="tex2jax_process">$i^{th}$</span> line is the cost
+    of moving a set of equipment from location <span class="tex2jax_process">$i$</span> to location <span class="tex2jax_process">$i+j$</span>. The company is at location
+    <span class="tex2jax_process">$1$</span> and the <span class="tex2jax_process">$n$</span> requests are at locations
+    <span class="tex2jax_process">$2$</span> to <span class="tex2jax_process">$n+1$</span>.</p>
+<h2>Output</h2>
+<p>Display the minimum moving cost to service all requests.
+    (This amount does not include the cost of moving the equipment
+    back to the catering company.)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+40 30 40
+50 10
+50
+</pre>
+</td>
+<td>
+<pre>
+80
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+10 10 10
+20 21
+21
+</pre>
+</td>
+<td>
+<pre>
+40
+</pre>
+</td>
+</tr>
+</table>
+</div>

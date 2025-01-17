@@ -1,0 +1,46 @@
+<div class="problembody">
+<p>When doing competitive programming, one can sometimes fall
+    into an almost trance-like state. Minutes becomes hours, hours
+    becomes days, and suddenly you don’t even know for how many
+    days you have been programming! Of course, this just became
+    another problem for you to solve by writing programs. By
+    looking at the current time with intervals of less than an
+    entire day, you can always compute the current date, relative
+    to some starting date.</p>
+<h2>Task</h2>
+<p>Your task is to write a program in C++ that supports two
+    operations:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">void lookAtClock(int hours, int
+        minutes)</tt> – take a report on the current time in
+        24-hour format (i.e. <span class="tex2jax_process">$0 \le
+        hours &lt; 24$</span> and <span class="tex2jax_process">$0
+        \le minutes &lt; 60$</span>).</p>
+</li>
+<li>
+<p><tt class="ttfamily">int getDay()</tt> – return the
+        number of days that you have been programming.</p>
+</li>
+</ul>
+<p>Before the first call to any function, it is 00:00 on day
+    <span class="tex2jax_process">$1$</span>. When <tt class="ttfamily">getDay</tt> is called, assume that it is called
+    immediately after the last invocation to <tt class="ttfamily">lookAtClock</tt>, so that the number of days is the
+    same on the two calls.</p>
+<p>It is guaranteed that the function <tt class="ttfamily">lookAtClock</tt> is called at least once every
+    <span class="tex2jax_process">$23$</span> hours and
+    <span class="tex2jax_process">$59$</span> minutes. Thus, the
+    first call will always be a time on day <span class="tex2jax_process">$1$</span>. At least 1 minute will have
+    elapsed between calls too. The two functions will together be
+    called at most <span class="tex2jax_process">$1\, 000$</span>
+    times.</p>
+<h2>Template</h2>
+<p>You can use the template in <tt class="ttfamily">countingdays.cpp</tt> from the Attachments menu when
+    implementing your program. When submitting your code, send in
+    <em>only this file</em>.</p>
+<h2>Testing</h2>
+<p>First, download the file <tt class="ttfamily">countingdays.h</tt> from the Attachments menu and
+    save it in the same place as your solution. That file calls
+    your program with a fixed test case and reports whether it was
+    correct.</p>
+</div>

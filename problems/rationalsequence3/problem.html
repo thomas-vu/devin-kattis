@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>A sequence of positive rational numbers is defined as
+    follows:</p>
+<p>An infinite full binary tree labeled by positive rational
+    numbers is defined by:</p>
+<ul class="itemize">
+<li>
+<p>The label of the root is <span class="tex2jax_process">$1/1$</span>.</p>
+</li>
+<li>
+<p>The left child of label <span class="tex2jax_process">$p/q$</span> is <span class="tex2jax_process">$p/(p+q)$</span>.</p>
+</li>
+<li>
+<p>The right child of label <span class="tex2jax_process">$p/q$</span> is <span class="tex2jax_process">$(p+q)/q$</span>.</p>
+</li>
+</ul>
+<p>The top of the tree is shown in the following figure:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{f1.png}" src="/problems/rationalsequence3/file/statement/en/img-0001.png" style="width:; height:"/><br/>
+</center>
+</div>
+<p>The sequence is defined by doing a level order (breadth
+    first) traversal of the tree (indicated by the light dashed
+    line). So that:</p><span class="tex2jax_process">\[ F(1) = 1/1,
+    F(2) = 1/2, F(3) = 2/1, F(4) = 1/3, F(5) = 3/2, F(6) = 2/3,
+    \ldots \]</span>
+<p>Write a program to compute the <span class="tex2jax_process">$n^{\text {th}}$</span> element of the
+    sequence, <span class="tex2jax_process">$F(n)$</span>. Does
+    this problem sound familiar? Well it should! We had variations
+    of this problem at the <span class="tex2jax_process">$2014$</span> and <span class="tex2jax_process">$2015$</span> Greater NY ACM ICPC
+    Regionals.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 1\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently. Each data set consists
+    of a single line of input. It contains the data set number,
+    <span class="tex2jax_process">$K$</span>, and the index,
+    <span class="tex2jax_process">$N$</span>, of the sequence
+    element to compute (<span class="tex2jax_process">$1 \le N \le
+    2\, 147\, 483\, 647$</span>).</p>
+<h2>Output</h2>
+<p>For each data set there is a single line of output. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space which
+    is then followed by the numerator of the fraction, followed
+    immediately by a forward slash (‘<tt class="ttfamily">/</tt>’)
+    followed immediately by the denominator of the fraction. Inputs
+    will be chosen so neither the numerator nor the denominator
+    will overflow an <span class="tex2jax_process">$32$</span>-bit
+    <b class="bfseries">unsigned</b> integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 1
+2 4
+3 11
+4 1431655765
+</pre>
+</td>
+<td>
+<pre>
+1 1/1
+2 1/3
+3 5/2
+4 2178309/1346269
+</pre>
+</td>
+</tr>
+</table>
+</div>

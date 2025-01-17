@@ -1,0 +1,151 @@
+<div class="problembody">
+<p>Rhyming slang involves replacing a common word with a phrase
+    of two or three words, the last of which rhymes with the
+    original word. For example,</p>
+<ul class="itemize">
+<li>
+<p>replacing the word “stairs” with the rhyming phrase
+        “apples and pears”,</p>
+</li>
+<li>
+<p>or replacing “rotten” with the phrase “bales of
+        cotton”.</p>
+</li>
+</ul>
+<p>English has such a wide variety of spellings and
+    pronunciations that for any non-native speaker telling what
+    rhymes isn’t always easy. Perhaps you can help?</p>
+<p>Typically, two words rhyme (or can be forced to rhyme) if
+    both of their endings can be found on the same list of word
+    endings that sound the same.</p>
+<p>Given a common word, a number of lists, each containing word
+    endings that sound the same, and a number of phrases, determine
+    if those phrases could be rhyming slang.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing the single common word <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$1 \le |S| \le 20$</span>).</p>
+</li>
+<li>
+<p>One line containing an integer <span class="tex2jax_process">$E$</span> (<span class="tex2jax_process">$1 \le E \le 10$</span>), the number of
+        lists of word endings that sound the same.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$E$</span> lines, each no
+        more than <span class="tex2jax_process">$100$</span>
+        characters long. Each a list of space-separated word
+        endings.</p>
+</li>
+<li>
+<p>One line containing an integer <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1 \le P \le 10$</span>), the number of
+        phrases to test.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P$</span> lines, each no
+        more than <span class="tex2jax_process">$100$</span>
+        characters long, containing a phrase <span class="tex2jax_process">$p_ i$</span> of two or three words that
+        might rhyme with the common word.</p>
+</li>
+</ul>
+<p>All words and letters will be in lower case. The common
+    word’s ending will appear in at least one ending list.</p>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$P$</span> lines, each
+        consisting of either:</p>
+<ul class="itemize">
+<li>
+<p>’<tt class="ttfamily">YES</tt>’: The phrase
+            <span class="tex2jax_process">$p_ i$</span> rhymes with
+            the common word.</p>
+</li>
+<li>
+<p>’<tt class="ttfamily">NO</tt>’: The phrase
+            <span class="tex2jax_process">$p_ i$</span> does not
+            rhyme with the common word.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+stairs
+2
+erres airs ears ares aires
+eet eat
+2
+apples and pears
+plates of meat
+</pre>
+</td>
+<td>
+<pre>
+YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+drought
+2
+aught ought aut acht
+ought oubt outte out oute
+5
+tasty sprout
+difficult route
+worried and fraught
+forever in doubt
+apples and pears
+</pre>
+</td>
+<td>
+<pre>
+YES
+YES
+YES
+YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+listen
+1
+issen isten ison
+2
+glisten
+listen
+</pre>
+</td>
+<td>
+<pre>
+YES
+YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

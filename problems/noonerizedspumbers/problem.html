@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>Everyone has heard of spoonerisms, named after William
+    Archibald Spooner, an Oxford professor who had a habit of
+    swapping prefixes of words, often with comical results. “May I
+    show you to your seat?” became “May I sew you to your sheet?”
+    and “a crushing blow” became “a blushing crow.”</p>
+<p>Just imagine him as a student of arithmetic, occasionally
+    swapping the prefixes of the numbers he was calculating with
+    and then wondering why his equations never made any sense. For
+    instance, when he writes:</p>
+<center>
+<img alt="\includegraphics[width=.3\textwidth ]{add1.png}" src="/problems/noonerizedspumbers/file/statement/en/img-0001.png" style="width:30.00%"/>
+</center>
+<p>what he really intended to write was:</p>
+<center>
+<img alt="\includegraphics[width=.3\textwidth ]{add2.png}" src="/problems/noonerizedspumbers/file/statement/en/img-0002.png" style="width:30.00%"/>
+</center>
+<p>(He swapped prefixes “<span class="tex2jax_process">$9$</span>” and “<span class="tex2jax_process">$669$</span>” in the first and third
+    numbers.) And when he writes:</p>
+<center>
+<img alt="\includegraphics[width=.35\textwidth ]{multiply1.png}" src="/problems/noonerizedspumbers/file/statement/en/img-0003.png" style="width:35.00%"/>
+</center>
+<p>what he really intended to write was:</p>
+<center>
+<img alt="\includegraphics[width=.35\textwidth ]{multiply2.png}" src="/problems/noonerizedspumbers/file/statement/en/img-0004.png" style="width:35.00%"/>
+</center>
+<p>(He swapped the prefix “<span class="tex2jax_process">$72$</span>” with the prefix “<span class="tex2jax_process">$68$</span>” in the first and second
+    numbers.)</p>
+<p>Grading homework from young Mr. Spooner is quite a
+    challenge. Fleas pined a way to help!</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing an expression
+    of the form “<span class="tex2jax_process">$x + y = z$</span>”
+    or “<span class="tex2jax_process">$x * y = z$</span>”, where
+    <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$z$</span> are positive integers less than
+    <span class="tex2jax_process">$2^{31}$</span>. There will be
+    single spaces surrounding the “<span class="tex2jax_process">$+$</span>” and “<span class="tex2jax_process">$*$</span>” operators and the “<span class="tex2jax_process">$=$</span>” sign. The expression will not be
+    a mathematically correct equation.</p>
+<h2>Output</h2>
+<p>Output a mathematically correct equation consisting of the
+    input line modified by swapping proper prefixes of two of the
+    three numbers <span class="tex2jax_process">$x$</span>,
+    <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$z$</span>. (A proper prefix of a string
+    <span class="tex2jax_process">$s$</span> is a prefix that is
+    neither empty nor equal to <span class="tex2jax_process">$s$</span>.) Separate the numbers, operators,
+    and the “<span class="tex2jax_process">$=$</span>” sign with
+    single spaces. All integers in the correct equation will be
+    non-negative and less than <span class="tex2jax_process">$2^{31}$</span>. There is guaranteed to be
+    only one possible correct equation that can be formed by
+    swapping proper prefixes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>92 + 2803 = 669495
+</pre>
+</td>
+<td>
+<pre>6692 + 2803 = 9495
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6891 * 723 = 4979753
+</pre>
+</td>
+<td>
+<pre>7291 * 683 = 4979753
+</pre>
+</td>
+</tr>
+</table>
+</div>

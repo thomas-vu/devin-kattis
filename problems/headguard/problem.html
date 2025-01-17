@@ -1,0 +1,45 @@
+<div class="problembody">
+<p>You are the Head guard at the Royal Blue Mountain
+    Castle.</p>
+<p>Your job is simple: take a tally of how many types of
+    critters came through which doors, and in what order.</p>
+<p>The castle is renowned for its numerous doors, however
+    sometimes they may or may not be open.</p>
+<h3>Input</h3>
+<p>The input consists of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$15$</span> lines. Each line contains a
+    string of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$500$</span> lowercase English
+    letters.</p>
+<h3>Output</h3>
+<p>On each line output the number of characters that went
+    through in a row, formatted as a number immediately followed by
+    the character. For example, if we have the string “<tt class="ttfamily">aaaabb</tt>” this becomes “<tt class="ttfamily">4a2b</tt>”. If the same character appears twice such
+    as in “<tt class="ttfamily">aaabbaaa</tt>” then you do not
+    combine this to become “<tt class="ttfamily">6a2b</tt>”: since
+    the order is important to the guards, we must keep it as
+    “<tt class="ttfamily">3a2b3a</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>aaaaabbbccddeee
+kklllmmnnnnn
+aaaabb
+aaabbaaa
+aaabbzzzzzzoiousssslllwwwkppdddmnnnnnnnnnnnnnnnppppqq
+</pre>
+</td>
+<td>
+<pre>5a3b2c2d3e
+2k3l2m5n
+4a2b
+3a2b3a
+3a2b6z1o1i1o1u4s3l3w1k2p3d1m15n4p2q
+</pre>
+</td>
+</tr>
+</table>
+</div>

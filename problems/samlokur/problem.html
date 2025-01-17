@@ -1,0 +1,135 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/samlokur/file/statement/en/img-0001.png" class="illustration" src="/problems/samlokur/file/statement/en/img-0001.png"/>
+<div class="description">
+        Sandvich, intellectual property of Valve Inc.
+      </div>
+</div>
+<p>Atli is a big fan of sandwiches. The last few years he has
+    developed a very specific taste in sandwiches. The store Atli
+    usually goes to to buy sandwiches has closed down for the next
+    <span class="tex2jax_process">$k$</span> days due to COVID.
+    This worries Atli since he has to get his daily sandwiches. He
+    has <span class="tex2jax_process">$n$</span> sandwiches in his
+    fridge currently. Each sandwich can be described by two numbers
+    <span class="tex2jax_process">$a_ i, b_ i$</span> where
+    <span class="tex2jax_process">$a_ i$</span> is the quality of
+    the <span class="tex2jax_process">$i$</span>-th sandwich and
+    <span class="tex2jax_process">$b_ i$</span> is the number of
+    days until it goes bad. Atli’s specific tastes mean that he
+    will eat exactly one sandwich for lunch and another one for
+    dinner. The total quality of these sandwiches must be at least
+    <span class="tex2jax_process">$9$</span>. He will neither eat
+    sandwiches of quality less than <span class="tex2jax_process">$4$</span> nor sandwiches that have gone bad.
+    If a sandwich goes bad in <span class="tex2jax_process">$x$</span> days it can be eaten on day number
+    <span class="tex2jax_process">$x$</span> or earlier. For
+    example a sandwich with <span class="tex2jax_process">$b_ i =
+    1$</span> must be eaten on the first day or be discarded. Now
+    Atli is wondering if these sandwiches will last him these
+    <span class="tex2jax_process">$k$</span> days.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \leq n \leq 10^5$</span> and
+    <span class="tex2jax_process">$1 \leq k \leq 10^5$</span>, the
+    number of sandwiches and the number of days the store is
+    closed. The next line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$0 \leq a_ i \leq 10$</span>, the quality of
+    the sandwiches. Finally the last line of the input contains
+    <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$0 \leq b_ i \leq 10^9$</span>, how many days
+    until each of the sandwiches goes bad.</p>
+<h2>Output</h2>
+<p>If the sandwiches will last Atli these <span class="tex2jax_process">$k$</span> days print <tt class="ttfamily">Jebb</tt>. Otherwise print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 8$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 3
+4 4 8 7 2 9 1 6
+1 2 3 4 5 6 7 8
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+5 6 7 8
+1 1 1 2
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

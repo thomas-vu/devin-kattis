@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>Every day, your job requires you to add up long lists of
+    integers, like the following:</p><span class="tex2jax_process">\begin{eqnarray*} 3 + 2 + -4 + 8 + 3 + -6 + 1
+    + 4 + 6 + -1 + -6 = 10 \end{eqnarray*}</span>
+<p>That is, a sum of positive and negative integers, followed
+    by an equals sign, followed by a single integer. To save
+    yourself some time, you normally leave out the <span class="tex2jax_process">$+$</span> and <span class="tex2jax_process">$=$</span> signs as you write down your work,
+    so the previous example would be:</p><span class="tex2jax_process">\begin{eqnarray*} 3 \; \; 2 \; \; {-4} \; \;
+    8 \; \; 3 \; \; {-6} \; \; 1 \; \; 4 \; \; 6 \; \; {-1} \; \;
+    {-6} \; \; 10 \end{eqnarray*}</span>
+<p>After you work out these sums, your coworker Bob types them
+    into the office computer system. Unfortunately, Bob has been
+    sloppy and has rearranged many of the numbers in your work. He
+    has not changed any of the values in your list, he’s just
+    rearranged their order. Thus, your careful work might have been
+    entered like:</p><span class="tex2jax_process">\begin{eqnarray*} 6 \; \; {-4} \; \; 3 \; \;
+    10 \; \; 1 \; \; 4 \; \; {-1} \; \; {-6} \; \; 8 \; \; 3 \; \;
+    2 \; \; {-6} \end{eqnarray*}</span>
+<p>After sharing your unhappiness with Bob, you realize that
+    this is not that great a problem. You can write a program to
+    determine which of the values is the sum (the integer on the
+    right of the equals sign).</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$200$</span> test cases, one per line. Each
+    line contains <span class="tex2jax_process">$2$</span> to
+    <span class="tex2jax_process">$30$</span> integers in the range
+    <span class="tex2jax_process">$[-500,500]$</span>. Input ends
+    at end of file.</p>
+<h2>Output</h2>
+<p>For each test case, print the member of the list that is the
+    sum of all the other integers in the list. Every test case will
+    contain such a value.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 2 3
+2 1 -1 1 -1 2
+</pre>
+</td>
+<td>
+<pre>
+3
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

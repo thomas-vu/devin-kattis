@@ -1,0 +1,108 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/chatter/file/statement/en/img-0001.png" class="illustration" src="/problems/chatter/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:WeeChat_0.3.5_-_es.wikipedia_at_irc.wikimedia.org.png">
+        Allan Aguilar</a>
+</div>
+</div>
+<p>Joseph and his friends just love to chat online. Sometimes
+    they just chat with random people they don’t even know, because
+    it’s interesting to meet new people. When Joseph has dozens or
+    hundreds of chat windows open, he sometimes wonders about who
+    the people he’s chatting with are chatting with, and so on. He
+    may be directly chatting with <span class="tex2jax_process">$10$</span> people, who are themselves
+    chatting with <span class="tex2jax_process">$10$</span> other
+    people each (that he’s not chatting with), giving Joseph over
+    <span class="tex2jax_process">$100$</span> people who are
+    <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> chats away. That is, he is either
+    directly chatting to them, or he could send them a message
+    through one of the people he’s chatting with. He wonders how
+    many people are connected via chat in the group he’s in,
+    especially if he considers people three chats away, four,
+    etc.</p>
+<p>He has asked you to write a program to determine how large
+    are the groups of chatters being used on a server he runs. The
+    chat server keeps track of all the people who are currently
+    chatting with other people. Each day a bunch of people log in
+    to the server, and then start randomly chatting with other
+    people also logged in. Joseph wants your program to tell him
+    the number of unique chat groups there are (people connected by
+    chats), and how large each group is. We’ll also assume that
+    once two people start chatting, they don’t stop until the
+    server kicks everyone off at the end of the day.</p>
+<p>Let the people logged on to the server be numbered
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. Each day, initially no one is
+    chatting with anyone else. Then people make connections to chat
+    with others, which we will simulate as follows.</p>
+<ul class="itemize">
+<li>
+<p>Repeat <span class="tex2jax_process">$n$</span>
+        times:</p>
+<ol class="enumerate">
+<li>
+<p>Choose <span class="tex2jax_process">$x$</span> as a
+            random integer modulus <span class="tex2jax_process">$n$</span>.</p>
+</li>
+<li>
+<p>Choose <span class="tex2jax_process">$y$</span> as a
+            random integer modulus <span class="tex2jax_process">$n$</span>.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$x = y$</span>,
+            choose <span class="tex2jax_process">$x$</span> and
+            <span class="tex2jax_process">$y$</span> again
+            randomly.</p>
+</li>
+<li>
+<p>Start a chat between person <span class="tex2jax_process">$x$</span> and person <span class="tex2jax_process">$y$</span>, if they are not already
+            chatting.</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>Each time a random value <span class="tex2jax_process">$r$</span> is needed (including the first
+    time), it is calculated as</p><span class="tex2jax_process">\[
+    r \leftarrow (r \times a + b) \% c \]</span>
+<p>for given parameters <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span>, and beginning with a seed value
+    for <span class="tex2jax_process">$r$</span>.</p>
+<h2>Input</h2>
+<p>Input has descriptions of up to <span class="tex2jax_process">$1\, 000$</span> days on the chat server, one
+    day per line. Each line contains five integers <span class="tex2jax_process">$n~ r~ a~ b~ c$</span>. The value
+    <span class="tex2jax_process">$2 \le n \le 10\, 000$</span>
+    represents both the number of people logged into the chat
+    server and the number of chat connections to make in the
+    simulation, <span class="tex2jax_process">$0 \le r \le 10\,
+    000$</span> is the random number seed used to connect users,
+    and <span class="tex2jax_process">$1 \le a, b \le 10\,
+    000$</span> and <span class="tex2jax_process">$2 \le c \le 50\,
+    000$</span> are parameters for the random number generator.
+    Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each day, output a line with the number of groups that
+    are connected at the end of the day. Then list the size of each
+    group, sorted from largest to smallest. If multiple groups have
+    the same size, list the group size only once, followed by an
+    ‘<tt class="ttfamily">x</tt>’ and then the number of times that
+    group occurs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 5 1 2 200
+100 311 523 39 101
+</pre>
+</td>
+<td>
+<pre>
+6 5 1x5
+50 3 2x48 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

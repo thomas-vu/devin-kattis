@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/bookclub/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bookclub/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<em>The famous staircase in Lello bookstore, downtown
+        Porto.</em>
+</div>
+</div>
+<p>Porto’s book club is buzzing with excitement for the annual
+    book exchange event! Every year, members bring their favorite
+    book and try to find another book they like that is owned by
+    someone willing to trade with them.</p>
+<p>I have been to this book exchange before, and I definitely
+    do not want to miss it this year, but I feel that the trading
+    should be improved. In the past, pairs of members interested in
+    each other’s books would simply trade: imagine that person A
+    brought a book that person B liked and vice-versa, then A and B
+    would exchange their books.</p>
+<p>I then realized that many members were left with the same
+    book they walked-in with... If instead of looking for pairs I
+    looked for triplets, I could find more valid exchanges! Imagine
+    that member A only likes member B’s book, while B only likes
+    C’s book and C likes A’s book. These 3 people could trade their
+    books in a cycle and everyone would be happy!</p>
+<p>But why stop at triplets? Cycles could be bigger and bigger!
+    Could you help me find if it is possible for everyone to go out
+    with a new book? Be careful, because members will not give
+    their book without receiving one they like in return.</p>
+<h3>Task</h3>
+<p>Given the members of the book club and the books they like,
+    can we find cycles so that everyone receives a new book?</p>
+<h3>Input</h3>
+<p>The first line has two integers: <span class="tex2jax_process">$N$</span>, the number of people, and
+    <span class="tex2jax_process">$M$</span>, the total number of
+    “declarations of interest”. Each of the following <span class="tex2jax_process">$M$</span> lines has two integers,
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, indicating that member
+    <span class="tex2jax_process">$A$</span> likes the book that
+    member <span class="tex2jax_process">$B$</span> brought
+    (<span class="mbox" style="width:"><span class="tex2jax_process">$0 \leq A,B &lt; N$</span></span>). Numbers
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> will never be the same (a member
+    never likes the book he brought).</p>
+<h3>Output</h3>
+<p>You should output <tt class="tt">YES</tt> if we can find a
+    new book for every club member and <tt class="tt">NO</tt> if
+    that is not possible.</p>
+<h3>Constraints</h3>
+<p><span class="tex2jax_process">$2 \leq N \leq 10\,
+    000$</span><br/>
+<span class="tex2jax_process">$1 \leq M \leq 20\, 000$</span>
+    and <span class="tex2jax_process">$M \leq N^2-N$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 9
+0 1
+1 2
+2 0
+3 4
+4 3
+5 6
+6 7
+7 8
+8 5
+</pre>
+</td>
+<td>
+<pre>
+YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

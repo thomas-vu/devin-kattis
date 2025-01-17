@@ -1,0 +1,89 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/skyline/file/statement/en/img-0001.png" class="illustration" src="/problems/skyline/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Last time I visited Shanghai I admired its beautiful
+    skyline. It also got me thinking, "Hmm, how much of the
+    buildings do I actually see?" since the buildings wholly or
+    partially cover each other when viewed from a distance.
+
+    <p>In this problem, we assume that all buildings have a
+    trapezoid shape when viewed from a distance. That is, vertical
+    walls but a roof that may slope. Given the coordinates of the
+    buildings, calculate how large part of each building that is
+    visible to you (i.e. not covered by other buildings).</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 100$</span>), the number of buildings in the city.
+    Then follow <span class="tex2jax_process">$N$</span> lines each
+    describing a building. Each such line contains <span class="tex2jax_process">$4$</span> integers, <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span>, and <span class="tex2jax_process">$y_2$</span> (<span class="tex2jax_process">$0 \le x_1 &lt; x_2 \le 10 000, 0 \le y_1,
+    y_2 \le 10 000$</span>). The buildings are given in distance
+    order, the first building being the one closest to you, and so
+    on.</p>
+<h2>Output</h2>
+<p>For each building, output a line containing a floating point
+    number between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span>, the relative visible
+    part of the building. The absolute error for each building must
+    be within <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=\linewidth ,height=150pt,keepaspectratio=true]{skyline1}" src="/problems/skyline/file/statement/en/img-0002.png" style="width:; height:150pt"/>
+<div class="caption">
+<b>Figure 1</b>: Figure of the first sample case
+        </div>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 3 7 5
+4 6 9 2
+11 4 15 4
+13 2 20 2
+</pre>
+</td>
+<td>
+<pre>
+1.00000000
+0.38083333
+1.00000000
+0.71428571
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+200 1200 400 700
+1200 1400 1700 900
+5000 300 7000 900
+8200 400 8900 1300
+0 1000 10000 800
+</pre>
+</td>
+<td>
+<pre>
+1.00000000
+1.00000000
+1.00000000
+1.00000000
+0.73667852
+</pre>
+</td>
+</tr>
+</table>
+</div>

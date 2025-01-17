@@ -1,0 +1,128 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/cuboidslicinggame/file/statement/en/img-0001.png" class="illustration" src="/problems/cuboidslicinggame/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Ruben and Albert are what you can call abnormally smart.
+    They are also both very fond of mathematically inspired games.
+    Their only problem is that most games are too easy for them,
+    and they end up beating everyone who dares challenge them.
+    Because of that, they’re now mostly playing against each other.
+    To make things interesting, they had a professor design a new
+    game for them.</p>
+<p>This new game was interesting at first. Nowadays, however,
+    Albert often complains that it is impossible for him to win a
+    particular round. After long discussions, they’ve now decided
+    to take this a step further, and actually figure out who’d win
+    if they both played optimally. They need you to write a
+    computer program that does this for them.</p>
+<p>A state in the game consists of one or more <span class="tex2jax_process">$x\times y\times z$</span> cuboids. A (legal)
+    move is choosing a cuboid, then a value for each of the three
+    axes (basically choosing three planes), and then cutting the
+    cuboid along these (thus removing a <span class="tex2jax_process">$1\times y\times z$</span>, <span class="tex2jax_process">$x\times 1\times z$</span> and a <span class="tex2jax_process">$x\times y\times 1$</span>, all overlapping,
+    cuboid). In effect you’ve created between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$8$</span> (inclusive) smaller cuboids. All
+    three planes cut from the cuboid need to be on the cuboid (you
+    can’t cut away a hypothetical cuboid on the outside of the real
+    one).</p>
+<p>An example might be in order. You’ve chosen a <span class="tex2jax_process">$3\times 5\times 4$</span> cuboid, and are
+    about to cut it. You now need to choose the three planes. This
+    means you need an <span class="tex2jax_process">$x$</span>
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$3$</span>, a <span class="tex2jax_process">$y$</span> between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$5$</span> and a <span class="tex2jax_process">$z$</span> between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$4$</span>. Say you choose <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$3$</span>, respectively. The first cut would
+    alone cut the cuboid into two <span class="tex2jax_process">$1\times 5\times 4$</span> cuboids, the
+    second into a single <span class="tex2jax_process">$3\times
+    4\times 4$</span> cuboid, while the third would alone cut the
+    cuboid into a <span class="tex2jax_process">$3\times 5\times
+    1$</span> and a <span class="tex2jax_process">$3\times 5\times
+    2$</span> cuboid. Put together these cuts produces <span class="tex2jax_process">$4$</span> new smaller cuboids, of sizes
+    <span class="tex2jax_process">$1\times 4\times
+    1$</span>,<span class="tex2jax_process">$1\times 4\times
+    1$</span>,<span class="tex2jax_process">$1\times 4\times
+    2$</span> and <span class="tex2jax_process">$1\times 4\times
+    2$</span>. Note that cutting a cuboid with an axis of size
+    <span class="tex2jax_process">$1$</span> would remove it
+    altogether.</p>
+<p>The players take turns making a move. The winner is the
+    player that removes the last cuboid.</p>
+<h2>Input</h2>
+<p>The first line of input is a line containing either
+    <tt class="ttfamily">RUBEN</tt> or <tt class="ttfamily">ALBERT</tt>, the name of the player who starts that
+    particular round.<br/>
+    Then follows a line containing <span class="tex2jax_process">$N$</span>, the number of cuboids that
+    particular game starts with.<br/>
+<span class="tex2jax_process">$N$</span> lines follow, each
+    describing a cuboid. A cuboid description consists of three
+    numbers, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> and <span class="tex2jax_process">$z$</span>, the size of that particular
+    cuboid.</p>
+<h2>Output</h2>
+<p>Output the name of the player that wins the game (either
+    <tt class="ttfamily">RUBEN</tt> or <tt class="ttfamily">ALBERT</tt>).</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \le N \le
+        100$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le x,y,z \le
+        30$</span></p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>RUBEN
+1
+4 1 7
+</pre>
+</td>
+<td>
+<pre>RUBEN
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>ALBERT
+2
+4 4 4
+2 2 2
+</pre>
+</td>
+<td>
+<pre>RUBEN
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>ALBERT
+3
+6 3 7
+18 1 9
+7 5 8
+</pre>
+</td>
+<td>
+<pre>ALBERT
+</pre>
+</td>
+</tr>
+</table>
+</div>

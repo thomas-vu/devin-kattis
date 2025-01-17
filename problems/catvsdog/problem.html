@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>The latest reality show has hit the TV: “Cat vs. Dog”.
+    In this show, a bunch of cats and dogs compete for the very
+    prestigious <span class="scshape">Best Pet Ever</span> title.
+    In each episode, the cats and dogs get to show themselves off,
+    after which the viewers vote on which pets should stay and
+    which should be forced to leave the show.</p>
+<p>Each viewer gets to cast a vote on two things: one pet which
+    should be kept on the show, and one pet which should be thrown
+    out. Also, based on the universal fact that everyone is either
+    a cat lover (i.e. a dog hater) or a dog lover (i.e. a
+    cat hater), it has been decided that each vote must name
+    exactly one cat and exactly one dog.</p>
+<p>Ingenious as they are, the producers have decided to use an
+    advancement procedure which guarantees that as many viewers as
+    possible will continue watching the show: the pets that get to
+    stay will be chosen so as to maximize the number of viewers who
+    get both their opinions satisfied. Write a program to calculate
+    this maximum number of viewers.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of
+    testcases, at most 100. After that per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line with three integers <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1\le c,d\le 100$</span> and <span class="tex2jax_process">$0\le v\le 500$</span>): the number of
+        cats, dogs, and voters.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$v$</span> lines with two
+        pet identifiers each. The first is the pet that this voter
+        wants to keep, the second is the pet that this voter wants
+        to throw out. A pet identifier starts with one of the
+        characters ‘<tt class="ttfamily">C</tt>’ or ‘<tt class="ttfamily">D</tt>’, indicating whether the pet is a cat or
+        dog, respectively. The remaining part of the identifier is
+        an integer giving the number of the pet (between
+        <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$c$</span> for cats, and between
+        <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$d$</span> for dogs). So for instance,
+        “<tt class="ttfamily">D42</tt>” indicates dog number
+        <span class="tex2jax_process">$42$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line with the maximum possible number of satisfied
+        voters for the show.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 1 2
+C1 D1
+D1 C1
+1 2 4
+C1 D1
+C1 D1
+C1 D2
+D2 C1
+</pre>
+</td>
+<td>
+<pre>
+1
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

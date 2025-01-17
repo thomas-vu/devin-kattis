@@ -1,0 +1,222 @@
+<div class="problembody">
+<p>Doris’s younger brother Boris has recently started working
+    as a programmer at <a href="https://www.gnu.org/software/emacs/">E-Max</a> (an online
+    <a href="https://www.max.se/">hamburger chain</a>). Like all
+    major companies, E-Max uses the version control system <a href="https://git-scm.com/">git</a> to save changes to the codebase.
+    Unfortunately, Boris hasn’t learned git yet and needs help!</p>
+<p>When saving a change with git, three things need to be
+    done:</p>
+<ul class="itemize">
+<li>
+<p>Add all changes to a file using the command <tt>git add
+        &lt;file&gt;</tt>, where <tt>&lt;file&gt;</tt> corresponds
+        to the file to be added.</p>
+</li>
+<li>
+<p>Save the changes by creating a “commit” with the command
+        <tt>git commit</tt>, which opens a window where you
+        describe the changes.</p>
+</li>
+<li>
+<p>Push all changes to the server with the command <tt>git
+        push</tt>.</p>
+</li>
+</ul>
+<p>Boris always works in the terminal and also has his
+    development environment, <a href="https://www.nano-editor.org/">nano</a>, there. In a terminal,
+    there is a current “working directory”, the current folder, and
+    all files and folders in it can be easily referred to using
+    their names.</p>
+<p>The commands Boris uses are:</p>
+<ul class="itemize">
+<li>
+<p><tt>cd &lt;directory&gt;</tt> - Changes the working
+        directory to <tt>&lt;directory&gt;</tt> (which is in the
+        working directory).</p>
+</li>
+<li>
+<p><tt>cd ..</tt> - Changes the working directory to the
+        one above the current working directory (goes back one
+        directory).</p>
+</li>
+<li>
+<p><tt>nano &lt;file&gt;</tt> - Opens the file
+        <tt>&lt;file&gt;</tt> (which is in the working
+        directory).</p>
+</li>
+</ul>
+<p>Boris will start and end in the same directory, and he will
+    never go up to a directory above it. You are given a list of
+    all commands Boris has written since starting his new change,
+    consisting of commands of the type <tt>cd
+    &lt;directory&gt;</tt>, <tt>cd ..</tt>, and <tt>nano
+    &lt;file&gt;</tt>. He wants you to output a list of commands he
+    should use to save this change in git. It will be by first
+    adding all the files he opened in nano using <tt>git add
+    &lt;file&gt;</tt>, and then saving the change with <tt>git
+    commit</tt> and pushing his change online with <tt>git
+    push</tt>.</p>
+<p>Note that to refer to a file inside other directories, you
+    must write
+    <tt>&lt;dir1&gt;/&lt;dir2&gt;/&lt;dir3&gt;/.../&lt;file&gt;</tt>,
+    where <tt>&lt;dir1&gt;</tt> is in your working directory,
+    <tt>&lt;dir2&gt;</tt> is in <tt>&lt;dir1&gt;</tt>, and so on.
+    Hint! All of this corresponds to an actual terminal, and if you
+    are unsure about what is meant, you can experiment in a
+    terminal yourself (in Windows, use <tt>\</tt> instead of
+    <tt>/</tt>).</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10^4$</span>).</p>
+<p>Then follow <span class="tex2jax_process">$N$</span> lines,
+    each containing a command (<tt>cd &lt;directory&gt;</tt>,
+    <tt>cd ..</tt>, or <tt>nano &lt;file&gt;</tt>). Each file and
+    directory consists of uppercase and lowercase letters from
+    <tt class="ttfamily">A</tt>-<tt class="ttfamily">Z</tt> and is
+    at most 31 letters long. Additionally, no file paths will be
+    longer than 256 characters. Names are unique within a directory
+    but <b class="bfseries">not</b> between directories. File names
+    also contain exactly one period (but never as the first or last
+    character).</p>
+<h2>Output</h2>
+<p>For each modified file, those Boris opened with Nano, print
+    <tt>git add &lt;file&gt;</tt> where <tt>&lt;file&gt;</tt> is
+    the shortest path to the file. The lines of <tt>git add
+    &lt;file&gt;</tt> commands should be printed in alphabetical
+    order of the path <tt>&lt;file&gt;</tt>.</p>
+<p>After all <tt>git add &lt;file&gt;</tt> commands, print the
+    commands <tt>git commit</tt> and <tt>git push</tt> on separate
+    lines.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All files are in the same directory.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All files and directories are visited only once
+          (except through <tt>cd ..</tt>).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Names are unique even between directories.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional restrictions.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+nano supersecret.secret
+nano programmering.olympiad
+nano supersecret.secret
+nano temp.t
+nano temp.t
+</pre>
+</td>
+<td>
+<pre>git add programmering.olympiad
+git add supersecret.secret
+git add temp.t
+git commit
+git push
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+cd folders
+nano temp.t
+cd downloads
+cd ..
+cd ..
+</pre>
+</td>
+<td>
+<pre>git add folders/temp.t
+git commit
+git push
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+cd folders
+nano familyphoto.jpeg
+nano crazy.no
+cd ..
+cd problemlists
+cd ..
+</pre>
+</td>
+<td>
+<pre>git add folders/crazy.no
+git add folders/familyphoto.jpeg
+git commit
+git push
+</pre>
+</td>
+</tr>
+</table>
+</div>

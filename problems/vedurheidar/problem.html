@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/vedurheidar/file/statement/en/img-0001.jpg" class="illustration" src="/problems/vedurheidar/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.visir.is/g/20222229194d/buid-ad-opna-vegina-um-hellisheidi-og-threngsli">
+        visir.is</a>. Photographer: Vilhelm Gunnarsson
+      </div>
+</div>
+<p>Once more a low pressure system is over Iceland. Vegagerðin
+    contacts you to ask for help in determining which roads should
+    be closed.</p>
+<p>To simplify things we will assume the wind speed is the same
+    over the entire country. You are given the current wind speed,
+    a list of roads and and the maximum safe wind speed for each
+    road.</p>
+<h2>Input</h2>
+<p>The first line of the input contains one integer
+    <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0 \leq v \leq 200$</span>), the current wind
+    speed over Iceland. The second line of the input contains one
+    integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 100$</span>), the number of
+    roads.</p>
+<p>The net <span class="tex2jax_process">$n$</span> lines will
+    each consist of a string <span class="tex2jax_process">$s_
+    i$</span>, the name of the road, and an integer <span class="tex2jax_process">$k_ i$</span> (<span class="tex2jax_process">$0 \leq k_ i \leq 200$</span>), which gives
+    the maxiumum safe wind speed for that road, separated by a
+    space.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$n$</span> lines, one
+    for each road, which says whether it is safe to travel that
+    road given the wind speed <span class="tex2jax_process">$v$</span>. Each line should either be
+    “<span class="tex2jax_process">$s_ i$</span> opin” if it is
+    safe to travel or “<span class="tex2jax_process">$s_ i$</span>
+    lokud” if it is not to safe to travel along the road
+    <span class="tex2jax_process">$s_ i$</span>.</p>
+<p>Note that the order of the roads should be the same in the
+    input and output.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>25
+2
+Oxnadalsheidi 23
+Hellisheidi 34
+</pre>
+</td>
+<td>
+<pre>Oxnadalsheidi lokud
+Hellisheidi opin
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+3
+Gunnarsdalsheidi 7
+Arnarstapaheidi 150
+Ulfarsgrjotsheidi 0
+</pre>
+</td>
+<td>
+<pre>Gunnarsdalsheidi lokud
+Arnarstapaheidi opin
+Ulfarsgrjotsheidi lokud
+</pre>
+</td>
+</tr>
+</table>
+</div>

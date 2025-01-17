@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>You are a coach for a competitive learning program. It’s
+    time for the regional competition and you have to group your
+    students into teams. Every team needs exactly three members and
+    every student needs to be on a team.</p>
+<p>While choosing your teams, you must keep in mind whether
+    particular students work well together. During the weeks and
+    weeks of practice leading up to the competition, you have
+    carefully observed your students working in pairs. You have
+    made notes of which pairs work well together and which ones
+    don’t. You are only willing to make a team of students
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$c$</span> if <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are known to work well together,
+    <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$c$</span> are known to work well together,
+    and <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$c$</span> are known to work well
+    together.</p>
+<h2>Input</h2>
+<p>Input contains up to <span class="tex2jax_process">$10$</span> test cases. Each test case starts
+    with an integer <span class="tex2jax_process">$1 \le m \le
+    105$</span>, the number of pairs that work well together. This
+    is followed by <span class="tex2jax_process">$m$</span> lines,
+    each containing space-separated names of two different students
+    that work well together. A student name is a sequence of up to
+    <span class="tex2jax_process">$20$</span> upper- and lower-case
+    letters (a–z). Each student has a unique name and every student
+    name occurs in at least one pair. There are at most
+    <span class="tex2jax_process">$15$</span> students in a test
+    case, and the sequence of test cases ends with value of zero
+    for <span class="tex2jax_process">$m$</span>.</p>
+<h2>Output</h2>
+<p>For every test case, output “possible” if it’s possible to
+    group the students into teams the way you want to. If not,
+    output “impossible”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8
+Greg Doug
+Greg Chiam
+Chiam Doug
+Doug Danny
+Jonathan Chiam
+David Danny
+Danny Jonathan
+Jonathan David
+8
+David Doug
+Doug Greg
+Chiam Doug
+David Greg
+Jonathan David
+Chiam David
+Danny Jonathan
+David Danny
+0
+</pre>
+</td>
+<td>
+<pre>possible
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

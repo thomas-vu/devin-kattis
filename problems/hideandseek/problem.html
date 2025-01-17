@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/hideandseek/file/statement/en/img-0001.png" class="illustration" src="/problems/hideandseek/file/statement/en/img-0001.png"/>
+<div class="description">
+        Playing hide and seek in minecraft. Author: <a href="https://icebingo.deviantart.com/">icebingo</a>
+</div>
+</div>Sven the Polar Bear (the mascot of the various Swedish
+    national teams in science sports) plays hide and seek with
+    Gloria the Hippo (the mascot from Madagascar). The game is
+    played in a network of <span class="tex2jax_process">$m$</span>
+    caves, numbered between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$m - 1$</span>. The caves are connected by
+    <span class="tex2jax_process">$m - 1$</span> tunnels (each
+    between two distinct caves), such that there is a path between
+    any pair of caves.
+
+    <p>Each round starts with Gloria hiding in one of the caves
+    (except cave <span class="tex2jax_process">$0$</span>) with
+    uniform probability. Sven, starting in cave <span class="tex2jax_process">$0$</span>, then has <span class="tex2jax_process">$n$</span> seconds to find Gloria. Each
+    tunnel takes some number of seconds for Sven to traverse
+    depending on the length of the tunnel, and can be traversed in
+    both directions.</p>
+<p>Sven likes to win, so he wants to choose his movements in
+    such a way that he maximizes the probability of finding Gloria
+    before the <span class="tex2jax_process">$n$</span> seconds are
+    up. How many caves does Sven have time to visit?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with the integers <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le m \le 100$</span>, <span class="tex2jax_process">$1 \le n \le 300$</span>), the number of
+        caves in the network and the number of seconds Sven has to
+        find Gloria.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m - 1$</span> lines with
+        three integers <span class="tex2jax_process">$u$</span>,
+        <span class="tex2jax_process">$v$</span> and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0 \le u \not= v &lt; m$</span>,
+        <span class="tex2jax_process">$1 \le t \le 300$</span>),
+        the two endpoints of a tunnel and the time it takes to
+        traverse the tunnel, in seconds.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the maximum number of caves Sven can visit, excluding
+    the cave he starts in.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+11 50
+0 1 5
+1 2 4
+1 3 9
+0 4 6
+4 5 6
+5 6 3
+0 7 8
+7 8 10
+7 9 5
+9 10 2
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

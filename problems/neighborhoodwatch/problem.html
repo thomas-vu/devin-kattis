@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Jennifer was nominated to be neighborhood watch captain and
+    is now in charge of managing the watch for her street.</p>
+<p>Jennifer’s street consists of houses on only one side of the
+    road. She has a plan of which houses will be a <i class="itshape">neighborhood watch house</i> and wants to know how
+    safe the plan is. A <i class="itshape">walk</i> from one house
+    to another house (not necessarily distinct) is considered
+    <i class="itshape">safe</i> if there is at least one house
+    along the walk that is a neighborhood watch house. The
+    <i class="itshape">safety rating</i> of a plan is the number of
+    walks that are safe on the street. Since a walk is either safe
+    or not safe, when traveling in either direction, it is not
+    counted twice in the safety rating.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{houses}" src="/problems/neighborhoodwatch/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample input. One example of a safe walk
+          is traveling from house <span class="tex2jax_process">$1$</span> to house <span class="tex2jax_process">$5$</span>.
+        </div>
+</center>
+</div>
+<p>Tell Jennifer the safety rating of her plan.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 200\, 000$</span>), which is
+    the number of houses on the street, and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$0 \leq K \leq N$</span>), which is the
+    number of neighborhood watch houses in Jennifer’s plan. The
+    houses are numbered <span class="tex2jax_process">$1, \dots ,
+    N$</span>.</p>
+<p>The next <span class="tex2jax_process">$K$</span> lines
+    describe the neighborhood watch houses. Each of these lines
+    contains a single integer <span class="tex2jax_process">$H$</span> (<span class="tex2jax_process">$1 \leq H \leq N$</span>), which is the house
+    number of a neighborhood watch house. The house numbers are
+    given in strictly increasing order.</p>
+<h2>Output</h2>
+<p>Display the safety rating of Jennifer’s plan.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1
+4
+</pre>
+</td>
+<td>
+<pre>11
+</pre>
+</td>
+</tr>
+</table>
+</div>

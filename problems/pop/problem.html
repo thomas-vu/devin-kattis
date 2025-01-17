@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>A large number of helium balloons have been set up as part
+    of a carnival game. Players shoot a pellet gun into the
+    balloons and earn a point for every balloon they pop. Each
+    balloon is spherical and is tied to a string at the bottom.
+    Each string is taped to a table top at a particular location.
+    Gunshots are described by giving a three-dimensional location,
+    <span class="tex2jax_process">$p$</span>, for the end of the
+    barrel and a vector, <span class="tex2jax_process">$v$</span>,
+    describing the direction the barrel is pointing.</p>
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{balloons.png}" src="/problems/pop/file/statement/en/img-0001.png" style="width:30.00%"/>
+</center>
+<p>We assume that the pellet is very small and travels in a
+    perfectly straight line when fired. It pops any balloon it
+    passes through. The strings tied to the balloons are so thin
+    that they are never hit by the pellet.</p>
+<h2>Input</h2>
+<p>Input contains up to <span class="tex2jax_process">$100$</span> test cases. Each test case
+    begins with an integer, <span class="tex2jax_process">$1 \le n
+    \le 50$</span>, giving the number of balloons. This is followed
+    by <span class="tex2jax_process">$n$</span> lines, each
+    containing four space-separated real numbers: the radius of the
+    balloon (<span class="tex2jax_process">$0 \le r \le
+    10$</span>), the length of string it’s tied to (<span class="tex2jax_process">$0 \le s \le 10$</span>), and the
+    <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> location on the table top where
+    the string is taped down (<span class="tex2jax_process">$-10
+    \le x, y \le 10$</span>).</p>
+<p>The balloon descriptions are followed by a line containing
+    an integer <span class="tex2jax_process">$1 \le m \le
+    10$</span>. The next <span class="tex2jax_process">$m$</span>
+    lines each contain a gunshot description, which has six
+    space-separated real numbers, the <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$z$</span> location for <span class="tex2jax_process">$p$</span> (where <span class="tex2jax_process">$z$</span> is the height above the table) and
+    the <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> and <span class="tex2jax_process">$z$</span> coordinates for <span class="tex2jax_process">$v$</span>. All shot coordinates are in the
+    range <span class="tex2jax_process">$[-10, 10]$</span>.</p>
+<p>You can be assured that the tip of the barrel is not inside
+    any balloon and that no balloons intersect. Also, no string
+    from one balloon touches any other balloon and the direction
+    vector for the gun always has positive length. All real numbers
+    have at most <span class="tex2jax_process">$10$</span> digits
+    after the decimal point. The end of all test cases is marked by
+    a value of zero for <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each shot in a test case, output the number of points
+    earned by that shot.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+1.0 4.0 0.0 0.0
+1.5 3.5 0.0 8.0
+1.5 3.5 0.0 -8.0
+1.5 3.5 8.0 0.0
+1.5 3.5 -8.0 0.0
+3
+1.0 -10.0 4.5 0 1 0
+0.8 -10.0 5.0 0 1 0
+-10.0 0.0 5.0 1 0 0
+2
+1.0 5.0 0.0 10.0
+1.0 3.0 0.0 -10.0
+1
+0.0 0.0 5.0 0.0 1.0 0.1
+0
+</pre>
+</td>
+<td>
+<pre>2
+1
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

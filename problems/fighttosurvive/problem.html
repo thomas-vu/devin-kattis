@@ -1,0 +1,247 @@
+<div class="problembody">
+<p>You are the head of a group of survivors in the zombie
+    apocalypse.</p>
+<p>Just recently you’ve heard word of an incoming zombie horde
+    heading to your facility. As commander in chief the
+    responsibility falls on to you to prepare for the incoming
+    invasion.</p>
+<p>Luckily these zombies are very slow, allowing you and your
+    team to easily pick them off one by one. Every zombie has a
+    finite amount of health, <span class="tex2jax_process">$z$</span>, and every survivor has their own
+    health, <span class="tex2jax_process">$h$</span>, as well.</p>
+<p>You and your team have devised the following strategy for
+    dealing with the horde. The healthiest survivor will attack the
+    closest zombie. In order to reduce the angle of attack, you and
+    your team have created a funnel that allows the zombies to
+    approach in single file.</p>
+<p>There may be better strategies, but this was the one you and
+    your team have chosen and failure to comply will result in a
+    mutiny.</p>
+<h2>Strategy</h2>
+<p>Over the course of the stand-off two possible events can
+    happen:</p>
+<ol class="enumerate">
+<li>
+<p>A zombie approaches the shelter, and stands in line
+        outside of the funnel.</p>
+</li>
+<li>
+<p>The next zombie is attacked by the healthiest
+        survivor.</p>
+</li>
+</ol>
+<p>During the battle between a zombie and a survivor, the
+    survivor’s health is reduced by the health of the attacking
+    zombie and vice versa. If the zombie is too strong then the
+    survivor’s health is completely reduced and the zombie’s health
+    is reduced by the survivor’s lost health. An additional
+    survivor will be required to save them, in which case the same
+    process will repeat until either no survivors remain or the
+    zombie is eliminated (it is possible for a single sufficiently
+    powerful zombie to destroy your whole team). If the survivor
+    and zombie have the same amount of health then the zombie will
+    be killed and the survivor’s health will be reduced to
+    <span class="tex2jax_process">$0$</span>, sending them to the
+    medical ward.</p>
+<p>Once a survivor has had their health completely reduced they
+    are put into the medical ward where they await treatment.
+    Otherwise if they survive a zombie attack event they’ll take a
+    break to recuperate, making them unavailable for the next event
+    afterwards.</p>
+<p>If a survivor returns to base and they have the same health
+    as another survivor, then the survivor with the highest
+    maximum, or original health, goes first.</p>
+<p>As the team’s only doctor, you do not participate in the
+    battle. Instead, starting at the beginning of the battle, at
+    the beginning of every <span class="tex2jax_process">$m$</span>th event, a new batch of medicine
+    is prepared. This medicine can be used to heal one person in
+    the medical ward, and as the doctor you choose to always heal
+    the person with the most starting health. This medicine however
+    expires quickly and must be used as soon as it is prepared. The
+    healed person returns to the pool of available fighters and is
+    available for whatever event occurs next, but their health is
+    reduced to half the amount it was at the beginning of the
+    invasion rounded down (if they started with <span class="tex2jax_process">$1$</span> health, the medicine is
+    ineffective and they stay in the medical ward).</p>
+<p>Using the strategy outlined above, can your team survive the
+    zombie onslaught or do you eventually get overrun?</p>
+<h2>Input</h2>
+<p>Input begins with two space-separated integers indicating
+    the number of survivors <span class="tex2jax_process">$1\le
+    S\le 25$</span>, and the rate at which you can produce medicine
+    <span class="tex2jax_process">$1 \le m \le 50$</span>.</p>
+<p>The next line contains <span class="tex2jax_process">$S$</span> space-separated integers
+    indicating the health <span class="tex2jax_process">$1 \le h_ i
+    \le 255$</span> for the <span class="tex2jax_process">$i$</span>th survivor. The third line
+    contains a single integer <span class="tex2jax_process">$1 \le
+    e \le 50$</span> indicating the number of events. Now the
+    battle begins and <span class="tex2jax_process">$e$</span>
+    lines follow. Each of the subsequent lines indicate an event.
+    They are either of the form <tt>APPROACH</tt> <span class="tex2jax_process">$z$</span>, indicating a new zombie with
+    health <span class="tex2jax_process">$1 \le z \le 255$</span>
+    approaches battle, or just the string <tt>ATTACK</tt>,
+    indicating that it’s time to attack the next zombie.</p>
+<p>It is guaranteed that there will be an <tt>ATTACK</tt>
+    command only if there are zombies to attack, and that the
+    number of <tt>ATTACK</tt> commands equals the number of
+    <tt>APPROACH</tt> commands.</p>
+<h2>Output</h2>
+<p>Output is a single line containing either the string
+    <tt>success</tt>, if your team is able to withstand the
+    zombies, or <tt>overrun</tt> if there are no survivors
+    available to attack the next zombie. Note that even if all
+    survivors are in the medical ward at the end, you have still
+    withstood the zombies because the doctor is still alive.</p>
+<h2>Explanation of Sample 1</h2>
+<p>A single survivor is waiting with <span class="tex2jax_process">$100$</span> health, not counting the doctor
+    (you). Suddenly zombies are seen approaching the battlefield,
+    the first with <span class="tex2jax_process">$12$</span> health
+    and the second with <span class="tex2jax_process">$13$</span>.
+    The first zombie gets too close and is attacked by the
+    survivor, killing the zombie. While the survivor is
+    recuperating, the second zombie enters the base. With no one
+    available to fight it, the zombie gets past the defenses and
+    eats your brain.</p>
+<p>You are <tt>overrun</tt>.</p>
+<h2>Explanation of Sample 4</h2>
+<p>You have three survivors with healths <span class="tex2jax_process">$100$</span>, <span class="tex2jax_process">$27$</span>, and <span class="tex2jax_process">$23$</span>. Eight events occur, with
+    medicine available on every eighth event (and therefore on the
+    last event).</p>
+<p>In the first event, a supercharged zombie with <span class="tex2jax_process">$100$</span> health approaches the funnel,
+    and comes too close to the base in the second event, requiring
+    an attack. You send out the strongest survivor who also has
+    <span class="tex2jax_process">$100$</span> health against the
+    zombie. The evenly-matched foes fight until they both have no
+    health left, killing the zombie and sending the survivor
+    crawling back to the medical ward.</p>
+<p>In the third event, a second zombie with <span class="tex2jax_process">$12$</span> health approaches, requiring a
+    second attack in the fourth event. The current healthiest
+    survivor has <span class="tex2jax_process">$27$</span> health,
+    and they manage to defeat the zombie, taking <span class="tex2jax_process">$12$</span> points of damage resulting in
+    <span class="tex2jax_process">$15$</span> health left.</p>
+<p>A third zombie with <span class="tex2jax_process">$13$</span> health approaches in the fifth
+    event, and in the sixth event the third survivor, with
+    <span class="tex2jax_process">$23$</span> health, begins their
+    first fight, killing the zombie and emerging with <span class="tex2jax_process">$10$</span> health remaining.</p>
+<p>In the seventh event, the final menacing zombie with
+    <span class="tex2jax_process">$75$</span> health approaches,
+    and attacks in the eighth and final event. Fortunately, you’ve
+    managed to prepare a batch of medicine in the nick of time, and
+    give it to the first survivor who recovers to <span class="tex2jax_process">$50$</span> health. The first survivor, once
+    again the healthiest, gives their all in the fight, doing
+    <span class="tex2jax_process">$50$</span> damage to the zombie.
+    This doesn’t settle things yet, so they have to return right
+    back to the medical ward, leaving the zombie with <span class="tex2jax_process">$25$</span> health.</p>
+<p>The second survivor, now with <span class="tex2jax_process">$15$</span> health, does their part in the
+    battle, reducing the zombie to <span class="tex2jax_process">$10$</span> health, but ultimately has to
+    join the first survivor in the ward. The third survivor (also
+    with <span class="tex2jax_process">$10$</span> health), who
+    spent the seventh event recuperating from battle, takes up the
+    mantle of the first two and engages in one last desperate stand
+    against the final zombie. When the dust clears, the zombie is
+    defeated and all the survivors rest in the medicine ward.</p>
+<p>With no more zombies in sight, you tend to the exhausted
+    survivors and write down a single word summing up the
+    terrifying day as you stare into the
+    sunset—<tt>success</tt>!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+100
+4
+APPROACH 12
+APPROACH 13
+ATTACK
+ATTACK
+</pre>
+</td>
+<td>
+<pre>overrun
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+100 100
+4
+APPROACH 12
+APPROACH 13
+ATTACK
+ATTACK
+</pre>
+</td>
+<td>
+<pre>success
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+20 30 12 15 9
+12
+APPROACH 20
+APPROACH 25
+ATTACK
+APPROACH 15
+APPROACH 26
+ATTACK
+APPROACH 38
+APPROACH 14
+ATTACK
+ATTACK
+ATTACK
+ATTACK
+</pre>
+</td>
+<td>
+<pre>overrun
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 8
+100 27 23
+8
+APPROACH 100
+ATTACK
+APPROACH 12
+ATTACK
+APPROACH 13
+ATTACK
+APPROACH 75
+ATTACK
+</pre>
+</td>
+<td>
+<pre>success
+</pre>
+</td>
+</tr>
+</table>
+</div>

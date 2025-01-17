@@ -1,0 +1,145 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/programmingtutors/file/statement/en/img-0001.jpg" class="illustration" src="/problems/programmingtutors/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/damienpollet/5048830734/"><small class="tiny">
+        Picture by Damien Pollet via Flickr</small></a>
+</div>
+</div>
+<p>You are the founder of the Bruce Arden Programming
+    Collective, which is a tutoring programme that matches
+    experienced programmers with newbies to teach them. You have
+    <span class="tex2jax_process">$N$</span> students and
+    <span class="tex2jax_process">$N$</span> tutors, but now you
+    have to match them up. Since the students will have to travel
+    to their tutors’ houses from their own (or vice versa) you
+    decide to do your matching based on travel distance.</p>
+<p>Minimising overall distance doesn’t seem fair; it might
+    happen that one student has to travel a huge distance while all
+    the other students get a tutor very close by, even though the
+    tutors could have been split up so that each gets a tutor that
+    is at least somewhat close.</p>
+<p>Thus, you opt to minimise the distance travelled by the
+    student who is worst off; one pairing of students to tutors is
+    better than another if the student who has to travel farthest
+    in the first pairing has to travel less far than the student
+    who has to travel farthest in the second pairing.</p>
+<p>Because the students live in a city, the distance that a
+    student needs to travel is not the literal distance between
+    them and their tutor. Instead, the distance between points
+    <span class="tex2jax_process">$(X,Y)$</span> and <span class="tex2jax_process">$(X’,Y’)$</span> in the city
+    is</p><span class="tex2jax_process">\[ |X - X’| + |Y - Y’|.
+    \]</span>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span>, with <span class="tex2jax_process">$1 \leq N \leq 100$</span>, the number of
+    students and the number of tutors to pair up.</p>
+<p>Then, there are <span class="tex2jax_process">$N$</span>
+    lines, each with two integers with absolute value at most
+    <span class="tex2jax_process">$10^8$</span>, which give the
+    locations of the <span class="tex2jax_process">$N$</span>
+    students.</p>
+<p>These are followed by <span class="tex2jax_process">$N$</span> lines, each with two integers with
+    absolute value at most <span class="tex2jax_process">$10^8$</span>, which give the locations of
+    the <span class="tex2jax_process">$N$</span> tutors.</p>
+<p>Note that it is possible for students and/or tutors to have
+    identical locations (they may share a house).</p>
+<h2>Output</h2>
+<p>Output a single line containing a single integer
+    <span class="tex2jax_process">$K$</span>, where <span class="tex2jax_process">$K$</span> is the least integer such that
+    there exists a pairing of students to tutors so that no pair
+    has distance greater than <span class="tex2jax_process">$K$</span> between them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 0
+0 3
+0 2
+0 5
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+0 1
+0 2
+0 3
+0 4
+1 0
+1 1
+1 2
+1 3
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+0 5
+5 2
+4 5
+3 3
+5 2
+5 2
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 0
+0 5
+-1 4
+8 3
+</pre>
+</td>
+<td>
+<pre>
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

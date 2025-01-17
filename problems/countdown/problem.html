@@ -1,0 +1,138 @@
+<div class="problembody">
+<p>The “Countdown” TV show has a part that consists of
+    obtaining a number by combining six different numbers using the
+    basic mathematical operations: addition, subtraction, product
+    and division. The basic rules for the game are:</p>
+<ul class="itemize">
+<li>
+<p>The contestant selects six of twenty-four shuffled
+        tiles. The tiles are arranged into two groups: four “large
+        numbers” (<span class="tex2jax_process">$25$</span>,
+        <span class="tex2jax_process">$50$</span>, <span class="tex2jax_process">$75$</span> and <span class="tex2jax_process">$100$</span>) and the remainder “small
+        numbers”, which comprise two each of the numbers
+        <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$10$</span>. Hence the tiles have the
+        values <span class="tex2jax_process">$\{ 1, 2, 3, 4, 5, 6,
+        7, 8, 9, 10, 25, 50, 75, 100\} $</span>.</p>
+</li>
+<li>
+<p>The contestants then have thirty seconds to get a number
+        as close to the target as possible by combining the six
+        selected numbers using addition, subtraction,
+        multiplication and division.</p>
+</li>
+<li>
+<p>Not all numbers need to be used.</p>
+</li>
+<li>
+<p>A number can be used only as many times as it
+        appears.</p>
+</li>
+<li>
+<p>Fractions are not allowed, only positive integers may be
+        used at any stage of the calculation.</p>
+</li>
+</ul>
+<p>Example:</p>
+<ul class="itemize">
+<li>
+<p>Contestant requests two large numbers and four small
+        numbers.</p>
+</li>
+<li>
+<p>Selection is: <span class="tex2jax_process">$\{ 75, 50,
+        2, 3, 8, 7\} $</span></p>
+</li>
+<li>
+<p>Randomly generated target is: <span class="tex2jax_process">$812$</span></p>
+</li>
+<li>
+<p>Contestant declares result: <span class="tex2jax_process">$813$</span></p>
+</li>
+<li>
+<p>Contestant gives details: <span class="tex2jax_process">$75 + 50 = 125$</span>; <span class="tex2jax_process">$125 - 8 = 117$</span>; <span class="tex2jax_process">$117 \cdot 7 = 819$</span>; <span class="tex2jax_process">$3 \cdot 2 = 6$</span>; <span class="tex2jax_process">$819 - 6 = 813$</span></p>
+</li>
+<li>
+<p>Expert notes: <span class="tex2jax_process">$50 + 8 =
+        58$</span>; <span class="tex2jax_process">$7 \cdot 2 =
+        14$</span>; <span class="tex2jax_process">$14 \cdot 58 =
+        812$</span></p>
+</li>
+</ul>
+<p>Your task is to write a program that calculates the best
+    sequence of operations that lead to the target number
+    <span class="tex2jax_process">$T$</span>. If there is no way to
+    get <span class="tex2jax_process">$T$</span>, give the closest
+    solution.</p>
+<h2>Input</h2>
+<p>The input consists of several cases, one per line. The first
+    line indicates the number of cases to process (<span class="tex2jax_process">$1 \leq C \leq 5$</span>). Each of the
+    following <span class="tex2jax_process">$C$</span> lines
+    contains six natural numbers from the set <span class="tex2jax_process">$\{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 50,
+    75, 100\} $</span> and another natural number <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$ 1
+    \leq T \leq 999 $</span>) that indicates the target.</p>
+<h2>Output</h2>
+<p>The output for each case will be a set of lines with the
+    following format:</p>
+<ul class="itemize">
+<li>
+<p>First line: <tt class="ttfamily">Target:</tt> number
+        <span class="tex2jax_process">$T$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines: sequence
+        of operations, the format is <span class="tex2jax_process">$\mathtt{operand_1\; operator\; operand_2
+        = result}$</span></p>
+</li>
+<li>
+<p>Last line: <tt class="ttfamily">Best approx:</tt> number
+        obtained</p>
+</li>
+<li>
+<p>Blank line</p>
+</li>
+</ul>
+<p>See example for a better understanding. If there is more
+    than one best approximation, all of them will be considered
+    valid. The sequence of operations should be valid, you should
+    never use a value before you obtain it. It is OK to print more
+    operations than needed as long as they are valid. Note that all
+    the numbers and operators must be separated by at least one
+    space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 75 100 5 3 25 25
+100 100 100 100 100 75 345
+1 3 1 10 100 75 345
+</pre>
+</td>
+<td>
+<pre>
+Target: 25
+Best approx: 25
+
+Target: 345
+100 + 100 = 200
+75 + 100 = 175
+200 * 175 = 35000
+35000 - 100 = 34900
+34900 / 100 = 349
+Best approx: 349
+
+Target: 345
+100 - 10 = 90
+3 * 90 = 270
+270 + 75 = 345
+Best approx: 345
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

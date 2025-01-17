@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>While in Binaria, you find a store where you want to buy
+    some presents for your friends. In Binaria, the currency is
+    bits, and the coin denominations are the set of all integer
+    powers of <span class="tex2jax_process">$2$</span>. You know
+    that you want to spend at least <span class="tex2jax_process">$a$</span> bits here, but no more than
+    <span class="tex2jax_process">$b$</span> bits.</p>
+<p>When you make a purchase, you must pay with exact change.
+    You have an unlimited number of bits that you can access from
+    your bank account, but you can choose to withdraw them in
+    whatever denominations you find most convenient. Carrying many
+    coins is inconvenient though, so you wish to minimize the
+    number of coins you carry with you.</p>
+<p>Compute the minimum number of coins you need to bring with
+    you such that you can pay any integer amount of bits between
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, inclusive.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$1 \le a &lt; 2^{1000000}$</span>.
+    <span class="tex2jax_process">$a$</span> will be written in
+    base 2 with no leading zeros.</p>
+<p>The second line of input contains a single integer
+    <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$a \le b &lt; 2^{1000000}$</span>.
+    <span class="tex2jax_process">$b$</span> will be written in
+    base 2 with no leading zeros.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$k$</span>, the minimum number of coins you
+    need to bring.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10101
+101010
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>100
+101
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Gunnar is not satisfied with the graphic tools currently
+    available for L<sup style="font-variant:small-caps; margin-left:-0.3em">a</sup>T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X,
+    so he’s working on his own graphics editor. For every editor
+    function he has also created an icon which is a square image.
+    These icons will be placed in a toolbar with two rows and
+    <span class="tex2jax_process">$N$</span> columns. The height of
+    a toolbar row is the same as the size of the biggest icon in
+    the row. Similarly, the width of a column is the same as the
+    size of the biggest icon in the column. The height of the
+    toolbar is the sum of heights of all rows and the width of the
+    toolbar is the sum of widths of all columns. Gunnar now wonders
+    how he should order the icons so that the area of the toolbar
+    is as small as possible.</p>
+<div class="figure" id="a0000000910">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>99</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>98</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>2</p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: The height of this toolbar is
+          <span class="tex2jax_process">$100+3$</span> and the
+          width <span class="tex2jax_process">$100+99+98$</span>.
+          The total area is <span class="tex2jax_process">$(100+3)\cdot (100+99+98)=30\,
+          591$</span>. This example corresponds to Sample Input 1.
+        </div>
+</center>
+</div>
+<h2>Task</h2>
+<p>You will be given a sorted integer sequence <span class="tex2jax_process">$s_1, \ldots , s_{2N}$</span> denoting that
+    the <span class="tex2jax_process">$i$</span>-th icon has
+    dimensions <span class="tex2jax_process">$s_ i\times s_
+    i$</span>. Your task is to calculate the smallest possible area
+    of a toolbar with 2 rows and <span class="tex2jax_process">$N$</span> columns.</p>
+<h2>Input</h2>
+<p>The first line of the input contains one integer
+    <span class="tex2jax_process">$N, 1\leq N\leq 1\; 000\;
+    000$</span>. Each of the next <span class="tex2jax_process">$2N$</span> lines contains one integer
+    <span class="tex2jax_process">$s_ i$</span> denoting the size
+    of an icon. You can assume that <span class="tex2jax_process">$1\; 000\; 000\geq s_{1}\geq s_2\geq \ldots
+    \geq s_{2N}\geq 1$</span>.</p>
+<h2>Output</h2>
+<p>The output consist of a single line with one integer – the
+    smallest possible area of the toolbar.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+100
+99
+98
+3
+2
+1
+</pre>
+</td>
+<td>
+<pre>
+30591
+</pre>
+</td>
+</tr>
+</table>
+</div>

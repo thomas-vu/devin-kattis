@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Mapping applications often represent the boundaries of
+    countries, cities, etc. as polylines, which are connected
+    sequences of line segments. Since fine details have to be shown
+    when the user zooms into the map, these polylines often contain
+    a very large number of segments. When the user zooms out,
+    however, these fine details are not important and it is
+    wasteful to process and draw the polylines with so many
+    segments. In this problem, we consider a particular polyline
+    simplification algorithm designed to approximate the original
+    polyline with a polyline with fewer segments.</p>
+<p>A polyline with <span class="tex2jax_process">$n$</span>
+    segments is described by <span class="tex2jax_process">$n+1$</span> points <span class="tex2jax_process">$p_0 = (x_0, y_0), \ldots , p_ n = (x_ n, y_
+    n)$</span>, with the <span class="tex2jax_process">$i$</span>th
+    line segment being <span class="tex2jax_process">$\overline{p_{i-1}p_ i}$</span> . The
+    polyline can be simplified by removing an interior point
+    <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$1 \leq i \leq n-1$</span>), so that the line
+    segments <span class="tex2jax_process">$\overline{p_{i-1}p_
+    i}$</span> and <span class="tex2jax_process">$\overline{p_
+    ip_{i+1}}$</span> are replaced by the line segment <span class="tex2jax_process">$\overline{p_{i-1}p_{i+1}}$</span>. To select
+    the point to be removed, we examine the area of the triangle
+    formed by <span class="tex2jax_process">$p_{i-1}$</span>,
+    <span class="tex2jax_process">$p_ i$</span>, and <span class="tex2jax_process">$p_{i+1}$</span> (the area is <span class="tex2jax_process">$0$</span> if the three points are colinear),
+    and choose the point <span class="tex2jax_process">$p_
+    i$</span> such that the area of the triangle is smallest. Ties
+    are broken by choosing the point with the lowest index. This
+    can be applied again to the resulting polyline, until the
+    desired number <span class="tex2jax_process">$m$</span> of line
+    segments is reached.</p>
+<p>Consider the example below.</p>
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{diagram.pdf}" src="/problems/simplification/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+<p>The original polyline is shown at the top. The area of the
+    triangle formed by <span class="tex2jax_process">$p_2$</span>,
+    <span class="tex2jax_process">$p_3$</span>, and <span class="tex2jax_process">$p_4$</span> is considered (middle), and
+    <span class="tex2jax_process">$p_3$</span> is removed if the
+    area is the smallest among all such triangles. The resulting
+    polyline after <span class="tex2jax_process">$p_3$</span> is
+    removed is shown at the bottom.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 200\, 000$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq m &lt; n$</span>). The next <span class="tex2jax_process">$n+1$</span> lines specify <span class="tex2jax_process">$p_0, \ldots , p_ n$</span>. Each point is
+    given by its <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> coordinates which are
+    integers between <span class="tex2jax_process">$-5000$</span>
+    and <span class="tex2jax_process">$5000$</span> inclusive. You
+    may assume that the given points are strictly increasing in
+    lexicographical order. That is, <span class="tex2jax_process">$x_ i &lt; x_{i+1}$</span>, or <span class="tex2jax_process">$x_ i = x_{i+1}$</span> and <span class="tex2jax_process">$y_ i &lt; y_{i+1}$</span> for all
+    <span class="tex2jax_process">$0 \leq i &lt; n$</span>.</p>
+<h2>Output</h2>
+<p>Print on the <span class="tex2jax_process">$k$</span>th line
+    the index of the point removed in the <span class="tex2jax_process">$k$</span>th step of the algorithm described
+    above (use the index in the original polyline).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 7
+0 0
+1 10
+2 20
+25 17
+32 19
+33 5
+40 10
+50 13
+65 27
+75 22
+85 17
+</pre>
+</td>
+<td>
+<pre>
+1
+9
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

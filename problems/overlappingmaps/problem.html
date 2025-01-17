@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Fred and Sam are traveling together. Both have maps of the
+    area. The maps cover exactly the same territory, and have
+    exactly the same ratio of width to height, but Sam’s is at a
+    smaller scale than Fred’s, so it’s a bit smaller. Fred puts his
+    map on a table. Sam throws his map on top of it. The smaller
+    map is offset and rotated, but it still fits entirely on top of
+    the bigger map. Fred sticks a pin in the smaller map. The pin
+    goes all the way through to the bigger map. Sam is amazed! He
+    says “Wow! Do you realize that the position of that pin
+    represents the same place on BOTH maps?” Fred says “it’s really
+    not so amazing. There has to be one such point!”</p>
+<p>Given the dimensions of a large map, and the offset, scale
+    and rotation of a smaller map that is entirely on top of the
+    larger map, find the single point that represents the same
+    place on both maps.</p>
+<h2>Input</h2>
+<p>There will be up to <span class="tex2jax_process">$500$</span> test cases in the input. Each
+    test case will consist of a single line with six integers:</p>
+<p><tt class="ttfamily">      w h x y
+    s r</tt></p>
+<p>The first two integers <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$0
+    &lt; w, h \le 1\, 000$</span>) are the width and height of the
+    larger map. The larger map will be on a plane, with the
+    southwest corner at the origin, the northwest corner at
+    <span class="tex2jax_process">$(0,h)$</span>, the southeast
+    corner at <span class="tex2jax_process">$(w,0)$</span>, and the
+    northeast corner at <span class="tex2jax_process">$(w,h)$</span>.</p>
+<p>The next two integers, <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0
+    \le x \le w$</span>, <span class="tex2jax_process">$0 \le y \le
+    h$</span>), represent the <span class="tex2jax_process">$(x,y)$</span> coordinate on the plane of the
+    southwest corner of the smaller map.</p>
+<p>The integer <span class="tex2jax_process">$s$</span>
+    (<span class="tex2jax_process">$0 &lt; s &lt; 100$</span>)
+    represents the scale of smaller map as a percentage of the
+    larger map (<span class="tex2jax_process">$s=50$</span> means
+    that the smaller map has half the width and half the height of
+    the larger map).</p>
+<p>The integer <span class="tex2jax_process">$r$</span>
+    (<span class="tex2jax_process">$0 \le r &lt; 360$</span>) is
+    the angle, in degrees, of counter-clockwise rotation of the
+    smaller map around its southwest corner (<span class="tex2jax_process">$r=90$</span> means that the southeast corner
+    is rotated to be due north of the southwest corner).</p>
+<p>The smaller map is guaranteed to lie completely within the
+    borders of the larger map. The input will end with a line with
+    six <tt class="ttfamily">0</tt>s.</p>
+<h2>Output</h2>
+<p>For each test case, output two real numbers, <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, representing the <span class="tex2jax_process">$(x,y)$</span> coordinate of the point where
+    both maps represent the same place. Output the numbers with
+    exactly two decimal places of accuracy, with a single space
+    between them. The fractional part of <span class="tex2jax_process">$100x$</span> and <span class="tex2jax_process">$100y$</span> will be bounded away from
+    <span class="tex2jax_process">$0.5$</span> by at least
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>100 100 50 50 25 0
+100 100 50 50 25 45
+0 0 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>66.67 66.67
+45.59 70.53
+</pre>
+</td>
+</tr>
+</table>
+</div>

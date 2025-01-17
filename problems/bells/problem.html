@@ -1,0 +1,63 @@
+<div class="problembody">
+<p><em>Method ringing</em> is used to ring bells in churches,
+    particularly in England. Suppose there are <span class="tex2jax_process">$6$</span> bells that have <span class="tex2jax_process">$6$</span> different pitches. We assign the
+    number <span class="tex2jax_process">$1$</span> to the bell
+    highest in pitch, <span class="tex2jax_process">$2$</span> to
+    the second highest, and so on. When the <span class="tex2jax_process">$6$</span> bells are rung in some order—each
+    of them exactly once—it is called a <em>row</em>. For example,
+    <span class="tex2jax_process">$1, 2, 3, 4, 5, 6$</span> and
+    <span class="tex2jax_process">$6, 3, 2, 4, 1, 5$</span> are two
+    different rows.</p>
+<p>An <em>ideal</em> performance contains all possible rows,
+    each played exactly once. Unfortunately, the laws of physics
+    place a limitation on any two consecutive rows; when a bell is
+    rung, it has considerable inertia and the ringer has only a
+    limited ability to accelerate or retard its cycle. Therefore,
+    the position of each bell can change by at most one between two
+    consecutive rows.</p>
+<p>In Figure 1, you can see the pattern of a non-ideal
+    performance, where bells only change position by at most
+    one.</p>
+<div class="figure" id="fig:bob">
+<center>
+<img alt="\includegraphics[height=0.65\textwidth ]{Plain-bob-minor}" src="/problems/bells/file/statement/en/img-0001.png" style="height:0.65"/>
+<div class="caption">
+<b>Figure 1</b>: A non-ideal performance respecting the
+          inertia of bells. The trajectory of bell number
+          <span class="tex2jax_process">$1$</span> is marked with a
+          blue line and trajectory of bell number <span class="tex2jax_process">$2$</span> marked with a brown line.
+        </div>
+</center>
+</div>
+<p>Given <span class="tex2jax_process">$n$</span>, the number
+    of bells, output an ideal performance. All possible rows must
+    be present exactly once, and the first row should be
+    <span class="tex2jax_process">$1, 2, \dots , n$</span>.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains an integer
+    <span class="tex2jax_process">$n$</span> such that <span class="tex2jax_process">$1 \leq n \leq 8$</span>.</p>
+<h2>Output</h2>
+<p>Output an ideal sequence of rows, each on a separate line.
+    The first line should contain the row <span class="tex2jax_process">$1, 2, \dots , n$</span> and each two
+    consecutive lines should be at most <span class="tex2jax_process">$1$</span> step away from each other. Each
+    row should occur exactly once in the output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+</pre>
+</td>
+<td>
+<pre>
+1 2
+2 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

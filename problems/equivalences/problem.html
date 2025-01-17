@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Consider the following exercise, found in a generic linear
+    algebra textbook.</p>
+<blockquote class="quote">
+      Let <span class="tex2jax_process">$A$</span> be an
+      <span class="tex2jax_process">$n \times n$</span> matrix.
+      Prove that the following statements are equivalent:
+
+      <ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$A$</span> is
+          invertible.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$Ax = b$</span> has
+          exactly one solution for every <span class="tex2jax_process">$n \times 1$</span> matrix <span class="tex2jax_process">$b$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$Ax = b$</span> is
+          consistent for every <span class="tex2jax_process">$n
+          \times 1$</span> matrix <span class="tex2jax_process">$b$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$Ax = 0$</span> has only
+          the trivial solution <span class="tex2jax_process">$x =
+          0$</span>.</p>
+</li>
+</ol>
+</blockquote>
+<p>The typical way to solve such an exercise is to show a
+    series of implications. For instance, one can proceed by
+    showing that (a) implies (b), that (b) implies (c), that (c)
+    implies (d), and finally that (d) implies (a). These four
+    implications show that the four statements are equivalent.</p>
+<p>Another way would be to show that (a) is equivalent to (b)
+    (by proving that (a) implies (b) and that (b) implies (a)),
+    that (b) is equivalent to (c), and that (c) is equivalent to
+    (d). However, this way requires proving six implications, which
+    is clearly a lot more work than just proving four
+    implications!</p>
+<p>I have been given some similar tasks, and have already
+    started proving some implications. Now I wonder, how many more
+    implications do I have to prove? Can you help me determine
+    this?</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of
+    testcases, at most 100. After that per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line containing two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 20\, 000$</span>) and
+        <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(0 \le m \le 50\, 000)$</span>: the
+        number of statements and the number of implications that
+        have already been proved.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines with two
+        integers <span class="tex2jax_process">$s_1$</span> and
+        <span class="tex2jax_process">$s_2$</span> (<span class="tex2jax_process">$1\le s_1,s_2\le n$</span> and
+        <span class="tex2jax_process">$s_1 \ne s_2$</span>) each,
+        indicating that it has been proved that statement
+        <span class="tex2jax_process">$s_1$</span> implies
+        statement <span class="tex2jax_process">$s_2$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line with the minimum number of additional
+        implications that need to be proved in order to prove that
+        all statements are equivalent.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 0
+3 2
+1 2
+1 3
+</pre>
+</td>
+<td>
+<pre>
+4
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

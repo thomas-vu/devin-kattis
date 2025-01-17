@@ -1,0 +1,112 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/eastereggs/file/statement/en/img-0001.jpg" class="illustration" src="/problems/eastereggs/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by wackystuff via Flickr.
+      </div>
+</div>
+<p>Easter is coming and the Easter Bunny decided to organise a
+    chocolate egg hunt for the children. He will hide two types of
+    eggs: blue milk chocolate and red dark chocolate. In the field
+    there are some redberry and some blueberry plants where the
+    Easter Bunny could hide the eggs. Red eggs should be hidden in
+    a redberry plant and blue eggs in a blueberry plant.</p>
+<p>The local government has issued a permit for the event,
+    under the condition that exactly <span class="tex2jax_process">$N$</span> eggs are hidden. As they do not
+    pay for the dental care plans of the local children, the Easter
+    Bunny gets to decide himself how many eggs to hide of each
+    colour.</p>
+<p>According to the yearly tradition, there is a big reward for
+    the first child to find both a red and a blue egg. In order to
+    make the hunt as challenging as possible, the Easter Bunny
+    wants to maximise the minimum distance between a red and a blue
+    egg. To keep things fair, he will hide at most one egg in each
+    plant. Your task is to write a program to help him accomplish
+    his goal.</p>
+<h2>Input</h2>
+<p>The input consists of the following:</p>
+<ul class="itemize">
+<li>
+<p>one line containing three integers <span class="tex2jax_process">$N, B, R$</span>, the number of eggs to
+        hide <span class="tex2jax_process">$N \leq 250$</span>, the
+        number of blueberry plants <span class="tex2jax_process">$B
+        &lt; N$</span> and the number of redberry plants
+        <span class="tex2jax_process">$R &lt; N$</span>;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$B$</span> lines, each
+        containing two integers <span class="tex2jax_process">$-10^4 \leq x,y \leq 10^4$</span>,
+        indicating the coordinates <span class="tex2jax_process">$(x,y)$</span> of a blueberry plant;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$R$</span> lines, each
+        containing two integers <span class="tex2jax_process">$-10^4 \leq x,y \leq 10^4$</span>,
+        indicating the coordinates <span class="tex2jax_process">$(x,y)$</span> of a redberry plant.</p>
+</li>
+</ul>
+<p>The <span class="tex2jax_process">$B+R$</span> plants are
+    guaranteed to have distinct coordinates. Moreover, <span class="tex2jax_process">$N$</span> is guaranteed to satisfy
+    <span class="tex2jax_process">$N \leq B+R$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line containing a floating point number,
+    <span class="tex2jax_process">$D$</span>, the largest minimum
+    distance between a red and a blue egg that can be achieved. You
+    are required to output <span class="tex2jax_process">$D$</span>
+    with absolute precision <span class="tex2jax_process">$10^{-6}$</span>, i.e. with at least
+    <span class="tex2jax_process">$6$</span> decimal places.</p>
+<div class="figure" id="a0000000006">
+<center>
+<img alt="\includegraphics[width=.3\textwidth ]{./sample-testcase2.pdf}" src="/problems/eastereggs/file/statement/en/img-0002.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the second example
+          input. The eggs are hidden in the four filled bushes.
+        </div>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 2
+0 0
+1 0
+2 0
+3 0
+</pre>
+</td>
+<td>
+<pre>
+2.000000000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3 3
+0 0
+1 2
+-1 2
+0 1
+-1 -1
+1 -1
+</pre>
+</td>
+<td>
+<pre>
+3.000000000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,64 @@
+<div class="problembody">
+<p>The goal of this program is to find all unique ways to
+    represent a given even number as the sum of two prime numbers.
+    A prime number is an integer greater than <span class="tex2jax_process">$1$</span> that is evenly divisible by only
+    itself and <span class="tex2jax_process">$1$</span>. The first
+    few prime numbers are <span class="tex2jax_process">$2$</span>,
+    <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$11$</span>, …. The German mathematician
+    Christian Goldbach (1690-1764) conjectured that every even
+    number greater than <span class="tex2jax_process">$2$</span>
+    can be represented by the sum of two prime numbers. (This
+    conjecture has never been proved nor has a counterexample ever
+    been found. As such, you may assume it is true for the cases
+    considered in this problem.) There may be several ways to
+    represent a given even number by the sum of primes. For
+    example, the even number <span class="tex2jax_process">$26$</span> may be represented as
+    <span class="tex2jax_process">$3 + 23$</span>, <span class="tex2jax_process">$7 + 19$</span>, or <span class="tex2jax_process">$13 + 13$</span>.</p>
+<h2>Input</h2>
+<p>Input starts with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 100$</span>) indicating the number of cases. The
+    following <span class="tex2jax_process">$n$</span> lines each
+    contain a test case of a single even number <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$4
+    \leq x \leq 32\, 000$</span>).</p>
+<h2>Output</h2>
+<p>For each test case <span class="tex2jax_process">$x$</span>,
+    give the number of unique ways that <span class="tex2jax_process">$x$</span> can be represented as a sum of two
+    primes. Then list the sums (one sum per line) in increasing
+    order of the first addend. The first addend must always be less
+    than or equal to the second to avoid duplicates. Print a blank
+    line after each test case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4
+26
+100
+</pre>
+</td>
+<td>
+<pre>4 has 1 representation(s)
+2+2
+
+26 has 3 representation(s)
+3+23
+7+19
+13+13
+
+100 has 6 representation(s)
+3+97
+11+89
+17+83
+29+71
+41+59
+47+53
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

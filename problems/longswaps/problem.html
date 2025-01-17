@@ -1,0 +1,57 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/longswaps/file/statement/en/img-0001.jpg" class="illustration" src="/problems/longswaps/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="http://www.thebluediamondgallery.com/handwriting/s/swap.html">
+        Nick Youngson</a>
+</div>
+</div>
+<p>You have a string <span class="tex2jax_process">$s$</span>
+    and you may modify it by making <i class="it">long swaps</i> of
+    its letters. Two letters can be swapped if their positions
+    differ by at least <span class="tex2jax_process">$k$</span>.
+    That is, you may swap the <span class="tex2jax_process">$i$</span>-th letter with the <span class="tex2jax_process">$j$</span>-th letter in <span class="tex2jax_process">$s$</span> if <span class="tex2jax_process">$|i - j| \geq k$</span>. Is it possible to
+    sort all the letters in <span class="tex2jax_process">$s$</span> increasingly, if you are allowed
+    to swap any number of times (possibly zero)?</p>
+<h2>Input</h2>
+<p>The first line has a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$2
+    \leq |s| \leq 100$</span>) and an integer <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k \leq |s| - 1$</span>), separated by a single space. The
+    string <span class="tex2jax_process">$s$</span> consists of
+    only lowercase letters.</p>
+<h2>Output</h2>
+<p>If it is possible to sort the letters increasingly, output
+    “<tt class="tt">Yes</tt>”. Otherwise output “<tt class="tt">No</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>prognova 4
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>helloworld 6
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

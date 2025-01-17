@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/taisformula/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/taisformula/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        The plot of Sample Input 1. They gray area is the area
+        under the curve formed by the three input points.
+      </div>
+</div>Have you heard about the mastermind Tai? He found a way
+    to calculate the area under a glucose curve, given discrete
+    measurement points. He even validated his formula against the
+    approximate technique of counting the number of squares below
+    the graph, when printed on graph paper.
+    <p>Can you, just like Tai, reinvent the wheel and calculate the
+    area under a glucose curve? Instead of publishing a paper, you
+    need to implement the algorithm. You need this algorithm in
+    your new app, that logs your glucose values that comes from a
+    continuous glucose monitor. You have also figured out the trick
+    of the device. It’s not actually continuous, it just samples
+    the glucose value frequently, automatically.</p>
+<h2>Input</h2>
+<p>Input contains several lines of numbers separated by spaces.
+    The first line contains the integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$2
+    \leq N \leq 10^4$</span>, the number of glucose samples.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    describe each glucose sample.</p>
+<p>Each line contains two numbers <span class="tex2jax_process">$t_ i$</span>, <span class="tex2jax_process">$v_ i$</span>, where <span class="tex2jax_process">$t_ i$</span> is the time of the sample, and
+    <span class="tex2jax_process">$v_ i$</span> is the glucose
+    value at time <span class="tex2jax_process">$t_ i$</span>.</p>
+<p>The glucose values <span class="tex2jax_process">$v_
+    i$</span> are inside the measurement domain: <span class="tex2jax_process">$2.0 \leq v_ i \leq 23.0$</span> mmol/L.</p>
+<p>Each glucose value is given with exactly one decimal
+    digit.</p>
+<p>Since you are working with a computer program, the time of
+    each sample is given as an integer, the number of milliseconds
+    since the first of January <span class="tex2jax_process">$1970$</span>.</p>
+<p>The samples are always given in increasing order by time,
+    meaning <span class="tex2jax_process">$0 &lt; t_1 &lt; t_2 &lt;
+    \dots &lt; t_ N &lt; 10^{14}$</span> ms.</p>
+<p>Note that a second is a thousand milliseconds.</p>
+<h2>Output</h2>
+<p>The area under the glucose curve in the unit <span class="tex2jax_process">$\text {mmol/L} \cdot \text {s}$</span></p>
+<p>Answers within a relative or absolute error of <span class="tex2jax_process">$10^{-6}$</span> will be accepted.</p>
+<h2>Sample Explanation</h2>
+<p>In Sample Input <span class="tex2jax_process">$1$</span>
+    there are three data points, where the area between the t-axis
+    and the curve is formed by two <a href="https://en.wikipedia.org/wiki/Trapezoid">Trapezoids</a>. The
+    first trapezoid have the area of <span class="tex2jax_process">$\frac{2+12}{2}\cdot (2\, 000-1\, 000) = 7\,
+    000\, \text {mmol/L} \cdot \text {ms}$</span>, making
+    <span class="tex2jax_process">$7\, \text {mmol/L} \cdot \text
+    {s}$</span>. The second has an area of <span class="tex2jax_process">$17\, \text {mmol/L} \cdot \text {s}$</span>,
+    making the total area <span class="tex2jax_process">$24\, \text
+    {mmol/L} \cdot \text {s}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1000 2.0
+2000 12.0
+3000 22.0
+</pre>
+</td>
+<td>
+<pre>24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1000 4.0
+2000 8.0
+3001 7.3
+</pre>
+</td>
+<td>
+<pre>13.65765
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,139 @@
+<div class="problembody">
+<p>Oh no! There are a bunch of bad guys creeping around on
+    Mikael’s lawn, and they all want to attack Mikael! Luckily,
+    Mikael has planted several peashooters on his lawn that can
+    protect him from the bad guys.</p>
+<p>Mikael’s lawn consists of <span class="tex2jax_process">$N$</span> rows, where Mikael has planted
+    <span class="tex2jax_process">$R_ i$</span> peashooters on row
+    <span class="tex2jax_process">$i$</span>. The peashooters only
+    protect the row of the lawn where the peashooter is located,
+    and each peashooter can protect the row from <span class="tex2jax_process">$1$</span> bad guy every wave. The bad guys
+    come in waves. During the first wave, there will be
+    <span class="tex2jax_process">$1$</span> bad guy on each row,
+    during the second wave there will be <span class="tex2jax_process">$2$</span> bad guys on each row, and at wave
+    number <span class="tex2jax_process">$t$</span>, there will be
+    <span class="tex2jax_process">$t$</span> bad guys on each row.
+    Mikael will be attacked during a wave if the peashooters fail
+    to protect any row from the naughty boys! In other words, if
+    there is any row where there are more bad guys than there are
+    peashooters, the bad guys will successfully reach Mikael (and
+    maybe even eat him!!!).</p>
+<p>How many waves of bad guys can Mikael’s peashooters protect
+    him, before the bad guys manage to reach Mikael?</p>
+<h2>Input</h2>
+<p>The first line consists of an integer <span class="tex2jax_process">$(1 \leqslant N \leqslant 10^6)$</span>, the
+    number of rows on Mikael’s lawn. The second line consists of
+    <span class="tex2jax_process">$N$</span> integers, where each
+    integer <span class="tex2jax_process">$(1 \leqslant R_ i
+    \leqslant 10^9)$</span> represents the number of peashooters
+    located at row <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer <span class="tex2jax_process">$t$</span> -
+    the first wave that will successfully breach the peashooters’
+    defense and harm Mikael. In other words, the minimum value of
+    <span class="tex2jax_process">$t$</span> for which the bad guys
+    can pass through the lawn.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R_ i \leqslant 9, N =
+          5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R_ i \leqslant 10^3, N
+          \leqslant 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+3 5 7 9 11
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+7 7 7 7 7
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

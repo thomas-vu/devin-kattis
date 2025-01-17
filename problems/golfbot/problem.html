@@ -1,0 +1,91 @@
+<div class="problembody">
+<center>
+<span style="float:right"><img alt="\includegraphics[width=0.45\textwidth ]{golf.jpg}" src="/problems/golfbot/file/statement/en/img-0001.jpg" style="width:45.00%"/> <img alt="\includegraphics[width=0.3\textwidth ]{knob.png}" src="/problems/golfbot/file/statement/en/img-0002.png" style="width:30.00%"/></span>
+</center>
+<p>Do you like golf? I hate it. I hate golf so much that I
+    decided to build the ultimate golf robot, a robot that will
+    never miss a shot. I simply place it over the ball, choose the
+    right direction and distance and, flawlessly, it will strike
+    the ball across the air and into the hole. Golf will never be
+    played again.</p>
+<p>Unfortunately, it doesn’t work as planned. So, here I am,
+    standing in the green and preparing my first strike when I
+    realize that the distance-selector knob built-in doesn’t have
+    all the distance options! Not everything is lost, as I have 2
+    shots.</p>
+<h3>Task</h3>
+<p>Given my current robot, how many holes will I be able to
+    complete in 2 strokes or less?</p>
+<h3>Input</h3>
+<p>The first line has one integer: <span class="tex2jax_process">$N$</span>, the number of different distances
+    the Golf Bot can shoot. Each of the following <span class="tex2jax_process">$N$</span> lines has one integer,
+    <span class="tex2jax_process">$k_ i$</span>, the distance
+    marked in position <span class="tex2jax_process">$i$</span> of
+    the knob.</p>
+<p>Next line has one integer: <span class="tex2jax_process">$M$</span>, the number of holes in this
+    course. Each of the following <span class="tex2jax_process">$M$</span> lines has one integer,
+    <span class="tex2jax_process">$d_ j$</span>, the distance from
+    Golf Bot to hole <span class="tex2jax_process">$j$</span>.</p>
+<h3>Constraints</h3>
+<p><span class="tex2jax_process">$1 \leq N, M \leq 200\,
+    000$</span><br/>
+<span class="tex2jax_process">$1 \leq k_ i, d_ j \leq 200\,
+    000$</span></p>
+<h3>Output</h3>
+<p>You should output a single integer, the number of holes Golf
+    Bot will be able to complete. Golf Bot cannot shoot over a hole
+    on purpose and then shoot backwards.</p>
+<h3>Sample Output Explanation</h3>
+<p>Golf Bot can shoot 3 different distances (1, 3 and 5) and
+    there are 6 holes in this course at distances 2, 4, 5, 7, 8 and
+    9. Golf Bot will be able to put the ball in 4 of these:</p>
+<ul class="itemize">
+<li>
+<p>The 1<span class="tex2jax_process">$^{st}$</span> hole,
+        at distance 2, can be reached by striking two times a
+        distance of 1.</p>
+</li>
+<li>
+<p>The 2<span class="tex2jax_process">$^{nd}$</span> hole,
+        at distance 4, can be reached by striking with strength 3
+        and then strength 1 (or vice-versa).</p>
+</li>
+<li>
+<p>The 3<span class="tex2jax_process">$^{rd}$</span> hole
+        can be reached with just one stroke of strength 5.</p>
+</li>
+<li>
+<p>The 5<span class="tex2jax_process">$^{th}$</span> hole
+        can be reached with two strikes of strengths 3 and 5.</p>
+</li>
+</ul>
+<p>Holes 4 and 6 can never be reached.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1
+3
+5
+6
+2
+4
+5
+7
+8
+9
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

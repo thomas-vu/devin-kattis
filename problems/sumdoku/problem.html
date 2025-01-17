@@ -1,0 +1,81 @@
+<div class="problembody">
+<p><em>Sumdoku</em> is a variant of the game <em>Sudoku</em>.
+    As in <em>Sudoku</em>, the aim is to fill in a <span class="tex2jax_process">$9$</span>-by-<span class="tex2jax_process">$9$</span> grid with the digits <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$9$</span> so that each digit <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$9$</span> occurs exactly once in each row,
+    exactly once in each column and exactly once in each of the
+    <span class="tex2jax_process">$9$</span> <span class="tex2jax_process">$3$</span>-by-<span class="tex2jax_process">$3$</span> sub-squares subject to constraints
+    on the choices. In Sudoku, the constraints are that certain
+    squares must contain fixed values. In <em>Sumdoku</em>, the
+    constraints are on the sum of adjacent squares within each
+    <span class="tex2jax_process">$3$</span>-by-<span class="tex2jax_process">$3$</span> sub-square. In the illustration
+    below, the symbols <span class="tex2jax_process">$&lt;$</span>,
+    <span class="tex2jax_process">$=$</span> and <span class="tex2jax_process">$&gt;$</span> indicate that the sum of the
+    values on either side (or above and below) the symbol must have
+    sum less than <span class="tex2jax_process">$10$</span>, equal
+    to <span class="tex2jax_process">$10$</span> or greater than
+    <span class="tex2jax_process">$10$</span>, respectively.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{sumdoku.png}" src="/problems/sumdoku/file/statement/en/img-0001.png" style="width:40.00%"/>
+</center>
+</div>
+<p>Write a program to solve Sumdoku problems.</p>
+<h2>Input</h2>
+<p>The input consists of a single data set containing
+    <span class="tex2jax_process">$15$</span> lines of input, each
+    line consisting of the characters <tt class="ttfamily">&lt;</tt>, <tt class="ttfamily">=</tt> or <tt class="ttfamily">&gt;</tt>. Rows <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$8$</span>, <span class="tex2jax_process">$10$</span>, <span class="tex2jax_process">$11$</span>, <span class="tex2jax_process">$13$</span> and <span class="tex2jax_process">$15$</span> contain <span class="tex2jax_process">$6$</span> characters corresponding to
+    constraints on the sum of values to the left and right of the
+    symbol. Rows <span class="tex2jax_process">$2$</span>,
+    <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$9$</span>, <span class="tex2jax_process">$12$</span> and <span class="tex2jax_process">$14$</span> contain <span class="tex2jax_process">$9$</span> characters corresponding to
+    constraints on the sum of values above and below the symbol.
+    <b class="bfseries">Note:</b> Solutions of some problems may
+    not be unique. The judging program will just check whether your
+    solution satisfies the constraints of the problem (row, column,
+    <span class="tex2jax_process">$3$</span>-by-<span class="tex2jax_process">$3$</span> box and inequality
+    constraints).</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$9$</span> lines
+    consisting of <span class="tex2jax_process">$9$</span> decimal
+    digits each, separated by a single space. The value in the
+    <span class="tex2jax_process">$j^\text {th}$</span> position in
+    the <span class="tex2jax_process">$i^{\text{th}}$</span> line
+    of the <span class="tex2jax_process">$9$</span> output lines is
+    the solution value in column <span class="tex2jax_process">$j$</span> of row <span class="tex2jax_process">$i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>&lt;==&lt;=&gt;
+&gt;&lt;&gt;&gt;&lt;&lt;&gt;&lt;=
+&gt;=&lt;==&lt;
+&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;
+&lt;&lt;&gt;==&lt;
+=&lt;=&gt;=&gt;
+&gt;&gt;&lt;&lt;&gt;=&lt;&gt;&lt;
+&gt;&lt;&gt;&gt;&gt;&lt;
+=====&lt;&lt;&gt;&gt;
+&lt;&gt;&lt;&lt;&gt;&gt;
+&lt;&gt;&lt;&gt;&lt;&lt;
+&lt;&gt;&gt;&lt;&gt;&gt;&lt;&gt;=
+=&gt;&gt;&lt;=&gt;
+&lt;&gt;&lt;&lt;&gt;&lt;&gt;&lt;&gt;
+&lt;&gt;=&gt;=&lt;
+</pre>
+</td>
+<td>
+<pre>5 3 7 8 2 1 6 4 9
+9 6 4 5 3 7 8 2 1
+8 1 2 9 4 6 7 3 5
+6 4 5 3 7 8 1 9 2
+7 8 1 4 9 2 5 6 3
+3 2 9 6 1 5 4 7 8
+2 7 8 1 6 9 3 5 4
+1 9 3 7 5 4 2 8 6
+4 5 6 2 8 3 9 1 7
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>One useful tool in image processing is applying filters to
+    images. They can be used to remove noise, sharpen images, and
+    many other things.</p>
+<p>In this problem, let’s experiment with a new custom filter
+    called the erosion filter. It takes in an image, then, for each
+    pixel, the new value is the weighted average of the values of
+    all the pixels in the image based on their distance.</p>
+<p>To simplify this further, let’s just work with a
+    one-dimensional array of integers instead of an image. Suppose
+    we have an array <span class="tex2jax_process">$A$</span> with
+    <span class="tex2jax_process">$n$</span> elements, and we want
+    to apply the erosion filter to it. The new array <span class="tex2jax_process">$B$</span> is computed as
+    follows:</p><span class="tex2jax_process">\[ B[i] = \sum
+    _{j=1}^{n} \frac{A[j]}{2^{|i - j|}} \]</span>
+<p>Informally, the value of <span class="tex2jax_process">$B[i]$</span> is the weighted average of the
+    values of all the elements in <span class="tex2jax_process">$A$</span>, with the elements closer to
+    <span class="tex2jax_process">$i$</span> having a much greater
+    effect.</p>
+<p>Right now, we have this array <span class="tex2jax_process">$A$</span> with <span class="tex2jax_process">$n$</span> elements and you want to apply the
+    erosion filter to it. The next step is to implement an
+    algorithm to compute <span class="tex2jax_process">$B$</span>!</p>
+<p>Your answer will be considered correct if each value
+    <span class="tex2jax_process">$B[i]$</span> that you computed
+    is within <span class="tex2jax_process">$10^{-5}$</span> of the
+    correct value.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$n$</span>, the number of elements in the
+    array <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$1 \leq n \leq 100\, 000$</span>).</p>
+<p>The next line of input contains <span class="tex2jax_process">$n$</span> integers, the values of the pixels
+    in the image <span class="tex2jax_process">$A$</span>
+    (<span class="tex2jax_process">$1 \leq A[i] \leq
+    10^{9}$</span>).</p>
+<h2>Output</h2>
+<p>You should output a line containing <span class="tex2jax_process">$n$</span> <em>floating-point</em> numbers,
+    the values of the pixels in the image <span class="tex2jax_process">$B$</span>. Your answer is considered correct
+    if the absolute error of each value is at most <span class="tex2jax_process">$10^{-5}$</span>. In other words, if the
+    correct value is <span class="tex2jax_process">$x$</span> and
+    your answer is <span class="tex2jax_process">$y$</span>, then
+    <span class="tex2jax_process">$|x - y| \leq
+    10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+5 7 9
+</pre>
+</td>
+<td>
+<pre>10.75 14 13.75
+</pre>
+</td>
+</tr>
+</table>
+</div>

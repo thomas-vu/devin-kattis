@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>One year ago astronauts Alice and Bob set off to explore the
+    galaxy each going their own way. The time has finally come for
+    them to reunite and share their findings. Luckily they have set
+    up a series of “hyper tunnels” between the planets they’ve
+    visited. Each hyper tunnel consists of two “gates” (one on each
+    planet). Entering a gate will transport them to the
+    corresponding gate instantly! However, using a hyper tunnel
+    costs a fixed amount of energy from their space suit. As such
+    they agree to meet halfway to keep the energy drain as even as
+    possible. Given Alice and Bob’s starting planets and the hyper
+    tunnel system they’ve set up, determine the minimum number of
+    hyper tunnels Alice and Bob will have to take.</p>
+<h2>Input</h2>
+<p>The first line will contain 2 space-separated integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(2
+    \leq n, m \leq 10\, 000)$</span> where <span class="tex2jax_process">$n$</span> is the number of planets connected
+    to the hyper tunnel system and <span class="tex2jax_process">$m$</span> is the number of hyper tunnels.
+    The second line will contain 2 space-separated integers
+    <span class="tex2jax_process">$p_ A$</span> and <span class="tex2jax_process">$p_ B$</span> (<span class="tex2jax_process">$0 \leq p_ A, p_ B &lt; n$</span>,
+    <span class="tex2jax_process">$p_ A \neq p_ B$</span>) which
+    are the planets Alice and Bob start at respectively. The next
+    <span class="tex2jax_process">$m$</span> lines will contain 2
+    space-separated integers <span class="tex2jax_process">$p_1$</span> and <span class="tex2jax_process">$p_2$</span> (<span class="tex2jax_process">$0 \leq p_1, p_2 &lt; n$</span>, <span class="tex2jax_process">$p_1 \neq p_2$</span>) denoting that there is
+    a hyper tunnel connecting planets <span class="tex2jax_process">$p_1$</span> and <span class="tex2jax_process">$p_2$</span>. No two hyper tunnels will
+    connect the same pair of planets.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$t$</span> where <span class="tex2jax_process">$t$</span> is the larger of the number of
+    hyper tunnels Alice or Bob will take (i.e. if one took 3
+    tunnels and the other took 4, then <span class="tex2jax_process">$t=4$</span>). It is always possible for them
+    to meet by using the hyper tunnels.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+0 3
+0 1
+1 2
+2 3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+0 3
+0 1
+0 2
+1 3
+2 4
+3 4
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 9
+0 6
+0 1
+0 2
+0 3
+1 2
+1 4
+2 4
+3 5
+4 6
+5 6
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

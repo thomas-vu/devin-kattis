@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/grid/file/statement/en/img-0001.png" class="illustration" src="/problems/grid/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>You are on an <span class="tex2jax_process">$n \times
+    m$</span> grid where each square on the grid has a digit on it.
+    From a given square that has digit <span class="tex2jax_process">$k$</span> on it, a Move consists of jumping
+    exactly <span class="tex2jax_process">$k$</span> squares in one
+    of the four cardinal directions. A move cannot go beyond the
+    edges of the grid; it does not wrap. What is the minimum number
+    of moves required to get from the top-left corner to the
+    bottom-right corner?</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains two space-separated integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le n, m \le 500$</span>), indicating the size of the grid. It
+    is guaranteed that at least one of <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> is greater than <span class="tex2jax_process">$1$</span>.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines will
+    each consist of <span class="tex2jax_process">$m$</span>
+    digits, with no spaces, indicating the <span class="tex2jax_process">$n \times m$</span> grid. Each digit is
+    between <tt class="ttfamily">0</tt> and <tt class="ttfamily">9</tt>, inclusive.</p>
+<p>The top-left corner of the grid will be the square
+    corresponding to the first character in the first line of the
+    test case. The bottom-right corner of the grid will be the
+    square corresponding to the last character in the last line of
+    the test case.</p>
+<h2>Output</h2>
+<p>Output a single integer on a line by itself representing the
+    minimum number of moves required to get from the top-left
+    corner of the grid to the bottom-right. If it isn’t possible,
+    output <tt class="ttfamily">-1</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+11
+11
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+22
+22
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4
+2120
+1203
+3113
+1120
+1110
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

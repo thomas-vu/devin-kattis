@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>The <b class="bfseries">RATS</b> (Reverse Add Then Sort)
+    function takes as input a decimal integer (usually with digits
+    in increasing order) and returns a decimal integer with digits
+    in increasing order</p>
+<p>To compute the value:</p>
+<ol class="enumerate">
+<li>
+<p>Reverse the digits of the input value.</p>
+</li>
+<li>
+<p>Add the reversed value to the input value.</p>
+</li>
+<li>
+<p>Sort the digits of the sum into increasing order
+        (dropping any leading zeroes).</p>
+</li>
+</ol>
+<pre>
+    RATS(12334444): 12334444 + 44443321 = 56777765 -&gt; 55667777
+    RATS(44556): 44556 + 65544 = 110100 -&gt; 111
+</pre>
+<p>This problem deals with sequences where the first value is
+    arbitrary and each succeeding value is the RATS of the previous
+    value. For example:</p>
+<pre>
+    12334444, 55667777, 123334444, 556667777, 1233334444, 5566667777, ...
+    123, 444, 888, 1677, 3489, 12333, 44556, 111, 222, 444, 888, ...
+</pre>
+<p>The first sequence is the <b class="bfseries">creeper</b>.
+    It provably goes to infinity in this regular pattern. The
+    second sequence enters a cycle which first repeats a value at
+    the tenth term of the sequence. It is conjectured that every
+    RATS sequence either eventually enters the creeper and goes to
+    infinity or cycles as in the second sequence.</p>
+<p>Write a program which computes the first <span class="tex2jax_process">$M$</span> terms of a RATS sequence given the
+    starting value. Your program should also detect if the sequence
+    repeats a value in the first <span class="tex2jax_process">$M$</span> terms or enters the creeper in the
+    first <span class="tex2jax_process">$M$</span> terms.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single decimal integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 70$</span>), which is the number
+    of data sets that follow. Each data set should be processed
+    identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space,
+    followed by the number of terms to compute (including the
+    initial value), <span class="tex2jax_process">$M$</span>,
+    (<span class="tex2jax_process">$1 \le M \le 60$</span>), a
+    single space, followed by the initial value for the RATS
+    sequence, a decimal integer with digits in increasing order.
+    The decimal integer will have at most <span class="tex2jax_process">$40$</span> digits although intermediate
+    terms may have more.</p>
+<h2>Output</h2>
+<p>For each data set there is one line of output.</p>
+<p>If the sequence enters the <i class="itshape">creeper</i>
+    (has a term of the form <tt class="ttfamily">1233+4444</tt> or
+    <tt class="ttfamily">5566+7777</tt>) in the first <span class="tex2jax_process">$M$</span> terms, the output is the data set
+    number, a space, the upper case letter <tt class="ttfamily">C</tt>, a space and the index of the first term to
+    enter the creeper.</p>
+<p>If the sequence repeats a value in the first <span class="tex2jax_process">$M$</span> terms, the output is the data set
+    number, a space, the upper case letter <tt class="ttfamily">R</tt>, a space and the index of the first repeated
+    term.</p>
+<p>Otherwise, the output is the data set number, a space, and
+    the <span class="tex2jax_process">$M^{\text {th}}$</span> term
+    of the sequence.</p>
+<p>In the first two cases the index of the initial term is
+    <span class="tex2jax_process">$1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 30 123
+2 30 1
+3 30 11233455677899
+</pre>
+</td>
+<td>
+<pre>
+1 R 10
+2 C 20
+3 666677888
+</pre>
+</td>
+</tr>
+</table>
+</div>

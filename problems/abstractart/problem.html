@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>Arty has been an abstract artist since childhood, and his
+    works have taken on many forms. His latest (and most pricey)
+    creations are lovingly referred to as Abstract Art within the
+    abstract art community (they’re not the most original bunch
+    when it comes to loving nicknames). Here’s an example of one of
+    Arty’s recent works:</p>
+<div class="figure" id="abstract_arc_1">
+<center>
+<img alt="\includegraphics{abstractart2}" src="/problems/abstractart/file/statement/en/img-0001.png" style="width:; height:"/>
+<div class="caption">
+<b>Figure 1</b>: An example of Arty’s art.
+        </div>
+</center>
+</div>
+<p>As you can see, Abstract Art is created by painting
+    (possibly overlapping) polygons. When Arty paints one of his
+    designs he always paints each polygon completely before moving
+    on to the next one.</p>
+<p>The price of individual pieces of Arty’s Abstract Art varies
+    greatly based on their aesthetic appeal, but collectors demand
+    two pieces of information about each painting:</p>
+<ol class="enumerate">
+<li>
+<p>the total amount of paint used, and</p>
+</li>
+<li>
+<p>the total amount of canvas covered.</p>
+</li>
+</ol>
+<p>Note that the first value will be larger than the second
+    whenever there is overlap between two or more polygons. Both of
+    these values can be calculated from a list containing the
+    vertices of all the polygons used in the painting, but Arty
+    can’t waste his time on such plebeian pursuits — he has great
+    art to produce! I guess it’s left up to you.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 100$</span>) representing the
+    number of polygons to be painted. Following this are
+    <span class="tex2jax_process">$n$</span> lines each describing
+    a painted polygon. Each polygon description starts with an
+    integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$3 \leq m \leq 20$</span>) indicating the
+    number of sides in the polygon, followed by <span class="tex2jax_process">$m$</span> pairs of integers <span class="tex2jax_process">$x$</span> <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0
+    \leq x, y \leq 1\, 000)$</span> specifying the coordinates of
+    the vertices of the polygon in consecutive order. Polygons may
+    be concave but no polygon will cross itself. No point on the
+    canvas will be touched by more than two polygon border
+    segments.</p>
+<h2>Output</h2>
+<p>Display both the total amount of paint used and the amount
+    of canvas covered. Your answers must have a relative or
+    absolute error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+8 7 10 7 17 10 20 17 20 20 17 20 10 17 7 10 7
+4 0 0 0 8 8 8 8 0
+4 3 3 3 13 13 13 13 3
+</pre>
+</td>
+<td>
+<pre>
+315.00000000 258.50000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

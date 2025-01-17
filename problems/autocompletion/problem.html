@@ -1,0 +1,114 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/autocompletion/file/statement/en/img-0001.png" class="illustration" src="/problems/autocompletion/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>You are creating an awesome web application for this
+    year’s hackNY hackathon. Everything goes well except that the
+    search box in your application (which is a native HTML input
+    tag) appears a little clumsy given that the user always has to
+    type everything from scratch. To improve the user experience,
+    your team has decided to add an auto completion feature to the
+    search box. However all other team members are busy. So you are
+    asked to program the auto completion algorithm.
+    <p>The auto completion algorithm works based on a pre-defined
+    dictionary of <span class="tex2jax_process">$n$</span> words.
+    Suppose the search box contains the text <span class="tex2jax_process">$w$</span>. When the user presses the tab key
+    <span class="tex2jax_process">$i$</span> times in a row, the
+    algorithm finds the <span class="tex2jax_process">$i$</span>-th
+    lexicographically smallest word from the dictionary that has
+    <span class="tex2jax_process">$w$</span> as its <i class="it">non-trivial</i> prefix. If there are fewer than
+    <span class="tex2jax_process">$i$</span> words that have
+    <span class="tex2jax_process">$w$</span> as prefix, the
+    algorithm circulates through these words. That is, if there are
+    <span class="tex2jax_process">$j &lt; i$</span> words that have
+    <span class="tex2jax_process">$w$</span> as prefix, the
+    <span class="tex2jax_process">$(j+1)$</span>-th tab press goes
+    back to the lexicographically smallest word, and the
+    <span class="tex2jax_process">$(j+2)$</span>-th tab press gives
+    the second lexicographically smallest word, and so on. The
+    chosen word then replaces the text in the search box. If there
+    are no words that have <span class="tex2jax_process">$w$</span>
+    as prefix, pressing the tab has no effect. When the user types
+    a letter, the letter is directly appended to the text.</p>
+<p>For example, suppose the dictionary has four words:
+    “albert”, “app”, “apple”, and “appletree”. If the user types
+    “app” and then presses the tab key twice, she will get
+    “appletree”, which is the second lexicographically smallest
+    word that has “app” as non-trivial prefix. If she presses the
+    tab key three times instead after typing “app”, she will get
+    “apple” by the word circulation design. The user may also
+    obtain “appletree” by first typing “a”, pressing the tab key
+    three times (getting “apple”), typing two letters “tr”, and
+    finally pressing the tab key once.</p>
+<p>You team has prepared some simulated user keystroke
+    sequences for you to test the auto completion.</p>
+<h2>Input</h2>
+<p>The first line has a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^5$</span>), the number of words in the
+    dictionary. Each of the next <span class="tex2jax_process">$n$</span> lines gives a dictionary word. All
+    dictionary words are unique and contain only lowercase English
+    letters. No dictionary word has a length larger than
+    <span class="tex2jax_process">$10^5$</span>. The total length
+    of all dictionary words does not exceed <span class="tex2jax_process">$5 \cdot 10^5$</span>.</p>
+<p>The next line has a single integer <span class="tex2jax_process">$q$</span> (<span class="tex2jax_process">$1
+    \leq q \leq 10^5$</span>), the number of keystroke sequences.
+    Each of the next <span class="tex2jax_process">$q$</span> lines
+    has a string that represents a user’s keystroke sequence. A
+    keystroke sequence consists of lowercase English letters and
+    hash signs. Each hash sign denotes one press on the tab key.
+    The total length of all keystroke sequences does not exceed
+    <span class="tex2jax_process">$5 \times 10^5$</span>. No
+    keystroke sequence starts with a hash sign. It is assumed that
+    the user does not pause between two consecutive tab presses, so
+    that a sequence of consecutive tab presses triggers the auto
+    completion only once.</p>
+<p>It is guaranteed that the total length of the text produced
+    by all keystroke sequences does not exceed <span class="tex2jax_process">$10^6$</span>.</p>
+<h2>Output</h2>
+<p>For each keystroke sequence, output the text it produces on
+    a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+app
+apple
+appletree
+albert
+avoid
+banana
+11
+a#
+a##
+a####
+a#######
+app#
+applet#
+a#####tle#
+ab#andon
+app#t#
+b##s#
+cat
+</pre>
+</td>
+<td>
+<pre>albert
+app
+appletree
+app
+apple
+appletree
+avoidtle
+abandon
+appletree
+bananas
+cat
+</pre>
+</td>
+</tr>
+</table>
+</div>

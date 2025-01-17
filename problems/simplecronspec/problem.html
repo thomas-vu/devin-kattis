@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>A <em>Cron Spec</em> is used by Linux to specify when to
+    repeatedly execute a certain job. For this problem, consider a
+    <em>Simple Cron Spec</em> that defines when a job needs to be
+    run within a single day. A <em>Simple Cron Spec</em> has three
+    space separated tokens:</p>
+<center>
+<span class="tex2jax_process">$hours$</span> <span class="tex2jax_process">$minutes$</span> <span class="tex2jax_process">$seconds$</span>
+</center>
+<p>that specify at which hours/minutes/seconds a job will be
+    run. Hour values are <span class="tex2jax_process">$0$</span>-<span class="tex2jax_process">$23$</span>, minute and second values are
+    <span class="tex2jax_process">$0$</span>-<span class="tex2jax_process">$59$</span>.</p>
+<p>Each token consists of a single integer value, a value range
+    (two values separated by a dash ‘<tt class="tt">-</tt>’), a
+    comma-separated list of multiple values and/or value ranges, or
+    an asterisk (‘<tt class="tt">*</tt>’). A value range represents
+    all integer values between the low and high value, inclusive.
+    An asterisk is a special token that represents all possible
+    values. The specified values in any comma separated list must
+    be non-overlapping.</p>
+<p>For example, the specification:</p>
+<center>
+<tt class="tt">* 30 20,25,30-33</tt>
+</center>
+<p>says the job will be run every hour, at minute <span class="tex2jax_process">$30$</span>, and second <span class="tex2jax_process">$20$</span>, <span class="tex2jax_process">$25$</span>, <span class="tex2jax_process">$30$</span>, <span class="tex2jax_process">$31$</span>, <span class="tex2jax_process">$32$</span>, and <span class="tex2jax_process">$33$</span>, for a total of <span class="tex2jax_process">$24 \times 1 \times 6 = 144$</span> times
+    each day.</p>
+<p>Given a list of <em>Simple Cron Specs</em>, determine two
+    things: First, the number of seconds in the day that at least
+    one job will start, and second, the total number of job starts
+    during the day. Note that if a single job starts 24 times in a
+    day, that counts as 24 job starts.</p>
+<p><br/></p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 100$</span>), which is the
+    number of <em>Simple Cron Specs</em> that follow.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains three strings <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$s$</span>. These are the hours, minutes, and
+    seconds specifications of the <em>Simple Cron Specs</em>. Each
+    <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$s$</span> consists of either a single star
+    (‘<tt class="tt">*</tt>’), or a comma-separated list of one or
+    more values or value ranges (two values separated by
+    ‘<tt class="tt">-</tt>’). The values/ranges are guaranteed to
+    be within the appropriate limits (<span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$23$</span> for hours, <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$59$</span> for minutes and seconds), and are
+    guaranteed to not overlap. All range specifications are
+    guaranteed to consist of two distinct values, smallest first.
+    All values specified in a comma-separated list are guaranteed
+    to be in strictly increasing order. The whole is guaranteed to
+    be a legitimate <em>Simple Cron Spec</em>. The only spaces in
+    the line will be a single space between <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$m$</span>, and a single space between
+    <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$s$</span>.</p>
+<h2>Output</h2>
+<p>Output two space separated integers. The first is the number
+    of seconds in the <span class="tex2jax_process">$24$</span>
+    hour day with at least one job start, and the second is the
+    total number of job starts.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+* 30 20,25,30-33
+9,15 30 *
+</pre>
+</td>
+<td>
+<pre>252 264
+</pre>
+</td>
+</tr>
+</table>
+</div>

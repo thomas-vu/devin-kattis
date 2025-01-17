@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>Billy likes to wander around. Each day he follows a sequence
+    of up, down, left and right moves. At the end of the day, he
+    would like to know where he’s been. You are going to help by
+    providing Billy with a program that draws a map for him. The
+    program should read a sequence of moves he makes on a given day
+    and produce a map showing where he’s been.</p>
+<h2>Input</h2>
+<p>Input is a sequence of up to <span class="tex2jax_process">$500$</span> moves, one move per line, until
+    end of file. Each move is one of <tt class="ttfamily">left</tt>, <tt class="ttfamily">right</tt>,
+    <tt class="ttfamily">up</tt> or <tt class="ttfamily">down</tt>.</p>
+<h2>Output</h2>
+<p>Print a map of the path described by the sequence of moves.
+    Mark the start and end locations with <tt class="ttfamily">S</tt> and <tt class="ttfamily">E</tt>,
+    respectively. Mark other locations with <tt>*</tt>. Outline the
+    whole map with a rectangle made of the # character. The whole
+    map is the smallest rectangle containing the path. The path
+    never starts and ends at the same location. Use spaces to
+    indicate parts of the map which are not visited by the path,
+    but do not use any extra spaces (e.g. outside the map
+    outline).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+down
+down
+left
+left
+up
+up
+up
+left
+left
+</pre>
+</td>
+<td>
+<pre>
+#######
+#E**  #
+#  * S#
+#  * *#
+#  ***#
+#######
+</pre>
+</td>
+</tr>
+</table>
+</div>

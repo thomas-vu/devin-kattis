@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>There are black and white knights on a 5 by 5 chessboard.
+    There are twelve of each color, and there is one square that is
+    empty. At any time, a knight can move into an empty square as
+    long as it moves like a knight in normal chess (what else did
+    you expect?).</p>
+<p>Given an initial position of the board, the question is:
+    “what is the minimum number of moves in which we can reach the
+    final position”, which is:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{knightsfen-1}" src="/problems/knightsfen/file/statement/en/img-0001.jpg" style="width:20.00%"/>
+</center>
+</div>
+<h2>Input</h2>
+<p>First line of the input file contains an integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$N&lt;14$</span>) that indicates how many
+    sets of inputs are there. The description of each set is given
+    below:</p>
+<p>Each set consists of five lines; each line represents one
+    row of a chessboard. The positions occupied by white knights
+    are marked by <span class="tex2jax_process">$0$</span> and the
+    positions occupied by black knights are marked by <span class="tex2jax_process">$1$</span>. The space corresponds to the
+    empty square on board.</p>
+<p>There is no blank line between the two sets of input.</p>
+<p>The first set of the sample input below corresponds to this
+    configuration:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{knightsfen-2}" src="/problems/knightsfen/file/statement/en/img-0002.jpg" style="width:20.00%"/>
+</center>
+</div>
+<h2>Output</h2>
+<p>For each set your task is to find the minimum number of
+    moves leading from the starting input configuration to the
+    final one. If that number is bigger than <span class="tex2jax_process">$10$</span>, then output one line stating</p>
+<p><tt class="ttfamily">Unsolvable in less than 11
+    move(s).</tt></p>
+<p>otherwise output one line stating</p>
+<p><tt class="ttfamily">Solvable in <span class="tex2jax_process">$n$</span> move(s).</tt></p>
+<p>where <span class="tex2jax_process">$n \leq 10$</span>.</p>
+<p>The output for each set is produced in a single line as
+    shown in the sample output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+01011
+110 1
+01110
+01010
+00100
+10110
+01 11
+10111
+01001
+00000
+</pre>
+</td>
+<td>
+<pre>
+Unsolvable in less than 11 move(s).
+Solvable in 7 move(s).
+</pre>
+</td>
+</tr>
+</table>
+</div>

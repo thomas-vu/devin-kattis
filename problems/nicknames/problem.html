@@ -1,0 +1,160 @@
+<div class="problembody">
+<p>You and your group of friends often use nicknames to refer
+    to each other. One day, you noticed that some of the nicknames
+    could refer to more than one person, which causes confusion.
+    For example, <i class="itshape">jo</i> could refer to either
+    <i class="itshape">john</i> or <i class="itshape">joseph</i>.
+    Your task is to determine how many names can be matched with a
+    given nickname.</p>
+<p>A name and a nickname are said to <i class="itshape">match</i> if and only if the nickname is a prefix of
+    the name. In other words, given a name <span class="tex2jax_process">$N$</span> of length <span class="tex2jax_process">$l_ N$</span> and a nickname <span class="tex2jax_process">$K$</span> of length <span class="tex2jax_process">$l_ K$</span>, <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> match iff:</p>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$l_ N \geq l_
+        K$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N[0] = K[0]$</span> ,
+        <span class="tex2jax_process">$N[1] = K[1],\; \ldots \;
+        ,N[l_ K-1] = K[l_ K-1]$</span>.</p>
+</li>
+</ol>
+<p>You will be given a list of <span class="tex2jax_process">$A$</span> names and <span class="tex2jax_process">$B$</span> nicknames. For each nickname,
+    print the number of names that match with it.</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$1 \le A \le 100\, 000$</span>, the number of
+    names.</p>
+<p>The next <span class="tex2jax_process">$A$</span> lines
+    contain the names, each name on one line. Each name is between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> characters long and consists of
+    lowercase letters only. All names are unique.</p>
+<p>The next line contains an integer, <span class="tex2jax_process">$1 \le B \le 100\, 000$</span>, the number of
+    nicknames.</p>
+<p>The next <span class="tex2jax_process">$B$</span> lines
+    contain the nicknames, each nickname on one line. Each nickname
+    is between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$10$</span> characters long and
+    consists of lowercase letters only.</p>
+<h2>Output</h2>
+<p>For each nickname, print the number of names that it matches
+    with. Output each integer on a separate line, in the same order
+    as the input.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$40$</span> Points</b>): <span class="tex2jax_process">$A,B \le 1\, 000$</span>. All nicknames
+        are <b class="bfseries">exactly</b> <span class="tex2jax_process">$1$</span> character long.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$A,B \le 100\, 000$</span>. All nicknames
+        are <b class="bfseries">exactly</b> <span class="tex2jax_process">$1$</span> character long.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): No additional
+        constraint.</p>
+</li>
+</ol>
+<p><b class="bfseries">Note:</b> Sample Input <span class="tex2jax_process">$3$</span> corresponds to Subtask
+    <span class="tex2jax_process">$3$</span>. You can ignore it if
+    you are only attempting Subtask <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span>.</p>
+<h2>Warning</h2>
+<p><b class="bfseries">The input files are large. Please use
+    fast I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+j
+jason
+susan
+3
+j
+s
+x
+</pre>
+</td>
+<td>
+<pre>2
+1
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+a
+ba
+cba
+dcba
+edcba
+fedcba
+gfedcba
+hgfedcba
+ihgfedcba
+jihgfedcba
+9
+a
+b
+c
+d
+e
+f
+g
+h
+i
+</pre>
+</td>
+<td>
+<pre>1
+1
+1
+1
+1
+1
+1
+1
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+string
+substring
+substrate
+submarine
+4
+string
+substr
+sub
+ring
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

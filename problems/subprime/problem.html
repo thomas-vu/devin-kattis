@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/subprime/file/statement/en/img-0001.jpg" class="illustration" src="/problems/subprime/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.publicdomainpictures.net/en/view-image.php?image=339159picture=prime-szamok-hatter">
+        Marina Shemesh</a>
+</div>
+</div>
+<p>There is an open math problem: Is every non-negative integer
+    a substring of at least one prime number when expressed in base
+    ten?</p>
+<p>A positive integer is a prime number if it is greater than
+    one and not a product of two smaller positive integers. Integer
+    <span class="tex2jax_process">$a$</span> is a substring of
+    integer <span class="tex2jax_process">$b$</span> if it is equal
+    to an integer derived from <span class="tex2jax_process">$b$</span> by deleting zero or more
+    consecutive digits of the most and least significant digits of
+    <span class="tex2jax_process">$b$</span>. For example,
+    <span class="tex2jax_process">$123$</span> is a substring of:
+    <span class="tex2jax_process">$\underline{123},
+    56\underline{123}, \underline{123}789, 501823\underline{123}65,
+    4\underline{123}7912\underline{123}$</span>.</p>
+<p>Given two integers <span class="tex2jax_process">$l$</span>
+    and <span class="tex2jax_process">$h$</span> along with an
+    integer <span class="tex2jax_process">$p$</span>, you are to
+    check how many primes between the <span class="tex2jax_process">$l$</span>th smallest prime and the
+    <span class="tex2jax_process">$h$</span>th smallest prime (both
+    ends are inclusive) contain a substring that equals
+    <span class="tex2jax_process">$p$</span>. We are interested in
+    substrings that may include significant leading zeroes, and
+    thus <span class="tex2jax_process">$p$</span> may have leading
+    zeroes. A prime shall be counted only once even if the integer
+    <span class="tex2jax_process">$p$</span> occurs more than once
+    as its substring.</p>
+<p>For example, consider <span class="tex2jax_process">$l = 1,
+    h = 10$</span> and <span class="tex2jax_process">$p =
+    9$</span>. This is a search from the <span class="tex2jax_process">$1$</span>st smallest prime (<span class="tex2jax_process">$2$</span>) to the <span class="tex2jax_process">$10$</span>th smallest prime (<span class="tex2jax_process">$29$</span>) for any prime containing the
+    substring “<span class="tex2jax_process">$9$</span>”. There are
+    <span class="tex2jax_process">$2$</span> such primes:
+    <span class="tex2jax_process">$1\underline{9}$</span> and
+    <span class="tex2jax_process">$2\underline{9}$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input has two integers <span class="tex2jax_process">$l$</span> and <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$1
+    \leq l \leq h \leq 10^5$</span>). The second line has a
+    sequence of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$6$</span> digits giving the
+    integer <span class="tex2jax_process">$p$</span>, which may be
+    zero or have significant leading zeroes.</p>
+<h2>Output</h2>
+<p>Output the count of prime numbers in the given range that
+    contain <span class="tex2jax_process">$p$</span> as a
+    substring.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 10
+9
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>500 1000
+43
+</pre>
+</td>
+<td>
+<pre>26
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 1000
+00
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

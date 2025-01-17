@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>Captain O’Capten has hidden some treasure and created a map
+    to mark where it is buried. Rather than using ‘X’ to mark the
+    spot, he has decided to obfuscate the location by using a grid
+    of uppercase <tt class="ttfamily">O</tt> (the letter <tt class="ttfamily">O</tt>) characters and <tt class="ttfamily">0</tt>
+    (the number <tt class="ttfamily">0</tt>) characters. The
+    treasure’s position is given by the location of a <tt class="ttfamily">0</tt> character surrounded on all sides by
+    <span class="tex2jax_process">$8$</span> <tt class="ttfamily">O</tt> characters. That is, a <tt class="ttfamily">0</tt> character with an <tt class="ttfamily">O</tt>
+    immediately above, below, to the left, to the right, diagonally
+    above to the left, diagonally above to the right, diagonally
+    below to the left, and diagonally below to the right.</p>
+<p>Captain O’Capten wants to recover the location of his
+    treasure but he is finding his map hard to read (huh, go
+    figure). Help Captain O’Capten find the location of his
+    treasure, or exclaim <tt class="ttfamily">Oh no!</tt> if such a
+    location is not marked on the map or there is more than one
+    such location.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1\leq r,c \leq 50$</span>), where
+    <span class="tex2jax_process">$r$</span> indicates the number
+    of rows and <span class="tex2jax_process">$c$</span> indicates
+    the number of columns of characters in the map. Rows are
+    numbered <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$r$</span>, top to bottom, and
+    columns are numbered <span class="tex2jax_process">$1$</span>
+    to <span class="tex2jax_process">$c$</span>, left to right.
+    This is followed by <span class="tex2jax_process">$r$</span>
+    lines, each with <span class="tex2jax_process">$c$</span>
+    characters, where each character is either <tt class="ttfamily">O</tt> or <tt class="ttfamily">0</tt>.</p>
+<h2>Output</h2>
+<p>If there is no <tt class="ttfamily">0</tt> character
+    surrounded on all sides by <span class="tex2jax_process">$8$</span> <tt class="ttfamily">O</tt>
+    characters, then output one line consisting of the exclamation,
+    <tt class="ttfamily">Oh no!</tt>. If there is more than one
+    <tt class="ttfamily">0</tt> character surrounded on all sides
+    by <span class="tex2jax_process">$8$</span> <tt class="ttfamily">O</tt> characters, then output one line consisting
+    of the exclamation, <tt class="ttfamily">Oh no! N
+    locations</tt>, with the number of locations instead of
+    <tt class="ttfamily">N</tt>. If there is exactly one <tt class="ttfamily">0</tt> character surrounded on all sides by
+    <span class="tex2jax_process">$8$</span> <tt class="ttfamily">O</tt> characters, then output one line containing
+    two integers. The first integer is the index of the row of the
+    <tt class="ttfamily">0</tt> character and the second integer is
+    the index of the column of the <tt class="ttfamily">0</tt>
+    character.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+OO0OOO
+00OO0O
+0O0OOO
+</pre>
+</td>
+<td>
+<pre>2 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+OOO
+O0O
+OOO
+O0O
+OOO
+</pre>
+</td>
+<td>
+<pre>Oh no! 2 locations
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+OOO0
+0O0O
+OOO0
+0O0O
+</pre>
+</td>
+<td>
+<pre>Oh no!
+</pre>
+</td>
+</tr>
+</table>
+</div>

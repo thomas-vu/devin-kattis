@@ -1,0 +1,157 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/robotturtles/file/statement/en/img-0001.jpg" class="illustration" src="/problems/robotturtles/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Robot Turtles is one of Theta’s favorite games. In this
+    game, kindergarteners learn how to “code” by creating programs
+    that move a turtle from a starting field to a diamond. Robot
+    Turtles is reportedly the most successful game funded by the
+    Kickstarter incubator.</p>
+<p>Players must develop a program consisting of “instructions”
+    that brings a turtle from a starting location to a goal (a
+    diamond). An adult will then “execute” this program by moving
+    the turtle based on the given instructions.</p>
+<p>Robot Turtles is played on an <span class="tex2jax_process">$8 \times 8$</span> board. There is one
+    turtle (marked with the letter <tt class="ttfamily">T</tt>),
+    which always starts out at the bottom-left field, facing right.
+    The board contains empty squares (marked as <tt class="ttfamily">.</tt>), castles made out of rock (<tt class="ttfamily">C</tt>), and castles made out of ice (<tt class="ttfamily">I</tt>). The diamond is marked with a <tt class="ttfamily">D</tt>. The turtle may move only onto empty squares
+    and the square on which the diamond is located.</p>
+<p>A turtle program contains <span class="tex2jax_process">$4$</span> kinds of instructions, marked by a
+    single letter.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">F</tt> The turtle moves one field
+        forward in the direction it is facing. If the turtle faces
+        a castle or the border of the board, a program error
+        occurs.</p>
+</li>
+<li>
+<p><tt class="ttfamily">R</tt> The turtle turns
+        <span class="tex2jax_process">$90$</span> degrees to the
+        right (the turtle will just turn and stay on the same
+        field).</p>
+</li>
+<li>
+<p><tt class="ttfamily">L</tt> The turtle turns
+        <span class="tex2jax_process">$90$</span> degrees to the
+        left (the turtle will just turn and stay on the same
+        field).</p>
+</li>
+<li>
+<p><tt class="ttfamily">X</tt> The turtle fires a laser in
+        the direction it is facing. If the square it is facing
+        contains an ice castle, the ice castle will melt and the
+        square will turn into an empty square. Otherwise, a program
+        error occurs. The turtle will not move or change direction.
+        It is a program error to fire the laser at empty squares,
+        rock castles or outside the board.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The input consists of <span class="tex2jax_process">$8$</span> lines, which represents the board,
+    with each line representing one row. The turtle will always
+    start out at the bottom-left. There will be exactly
+    <span class="tex2jax_process">$1$</span> diamond. There will be
+    no more than <span class="tex2jax_process">$10$</span> ice
+    castles.</p>
+<h2>Output</h2>
+<p>Output the shortest valid turtle program whose execution
+    (without program error) brings the turtle from the starting
+    location to the diamond! If there are multiple such programs of
+    equal length, you may output any of them!</p>
+<p>Output <tt class="ttfamily">no solution</tt> if it is not
+    possible for the turtle to reach the diamond!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>........
+........
+........
+...CC...
+..C.DC..
+.C..C...
+C.IC....
+T.C.....
+</pre>
+</td>
+<td>
+<pre>FLFRXFLFRFLFRF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>........
+........
+........
+...CC...
+..CIDC..
+.CI.C...
+C.IC....
+T.C.....
+</pre>
+</td>
+<td>
+<pre>FLFRXFLXFRFLXFRF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>........
+........
+........
+...CCD..
+..C..C..
+.C..I...
+C.IC....
+T.C.....
+</pre>
+</td>
+<td>
+<pre>FLFRXFLFRFXFFFLFFLF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>........
+........
+........
+CCCCC...
+..C.DC..
+..C.C...
+C.IC....
+T.C.....
+</pre>
+</td>
+<td>
+<pre>no solution
+</pre>
+</td>
+</tr>
+</table>
+</div>

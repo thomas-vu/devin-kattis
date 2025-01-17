@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Andrew the Ant is fascinated by the behavior of his friends.
+    Thousands of them are marching their paths on and on. They can
+    build highly organized ant-hills. Sometimes, however, they act
+    a little bit stupidly.</p>
+<p>Recently, Andrew watched his fellow ants marching on top of
+    a long piece of wood. He noticed their behavioral pattern is
+    very simple: Each ant walks slowly forward with a constant
+    speed of <span class="tex2jax_process">$1\, \mathrm{cm}$</span>
+    per second. Whenever it meets another ant, both of them only
+    touch with their antennae and immediately turn around and walk
+    the opposite direction. If an ant comes to the end of the wood,
+    it falls down and does not affect other ants anymore.</p>
+<div class="figure" id="fig:sample3">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{sample3.pdf}" src="/problems/andrewant/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Picture of the third sample input at
+          time <span class="tex2jax_process">$0\,
+          \mathrm{s}$</span>. In one second, the ants <span class="tex2jax_process">$E$</span> and <span class="tex2jax_process">$A$</span> meet at position
+          <span class="tex2jax_process">$2$</span> and change their
+          directions. The ant <span class="tex2jax_process">$A$</span> then meets <span class="tex2jax_process">$B$</span> in the next <span class="tex2jax_process">$1.5$</span> seconds. At the same time
+          (<span class="tex2jax_process">$2.5$</span> seconds after
+          the start), the ants <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$D$</span> will meet too. All four of
+          them change their directions. In the next <span class="tex2jax_process">$0.5$</span> seconds (time <span class="tex2jax_process">$3\, \mathrm{s}$</span>), the first ant
+          (<span class="tex2jax_process">$E$</span>) falls down off
+          the left end, etc.
+        </div>
+</center>
+</div>
+<p>Your task is to simulate the movement of ants. For
+    simplicity, suppose that the ants have zero size (although the
+    picture could suggest something else).</p>
+<h2>Input</h2>
+<p>The input consists of several scenarios, at most
+    <span class="tex2jax_process">$5$</span>. Each scenario starts
+    with a line containing two integer numbers <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$A$</span>, separated by a space.
+    <span class="tex2jax_process">$L$</span> is the length of the
+    wood in centimetres (<span class="tex2jax_process">$1 \leq L
+    \leq 99\, 999$</span>), and <span class="tex2jax_process">$A$</span> is the number of ants at the
+    beginning of the simulation (<span class="tex2jax_process">$1
+    \leq A \leq L + 1$</span>). Then there are <span class="tex2jax_process">$A$</span> lines, each containing a
+    non-negative integer <span class="tex2jax_process">$X_
+    i$</span>, one space, and an uppercase letter. The number
+    (<span class="tex2jax_process">$0 \leq X_ i \leq L$</span>)
+    specifies the position of the <span class="tex2jax_process">$i$</span>-th ant and the letter its initial
+    direction: either “<tt class="ttfamily">L</tt>” for left
+    (towards zero) or “<tt class="ttfamily">R</tt>” for right. No
+    two ants will start at the same position.</p>
+<h2>Output</h2>
+<p>For each scenario, you should print a single line containing
+    the text “<tt class="ttfamily">The last ant will fall down in
+    <span class="tex2jax_process">$T$</span> seconds - started at
+    <span class="tex2jax_process">$P$</span>.</tt>”, where
+    <span class="tex2jax_process">$T$</span> is the exact time when
+    the last ant (or two) reaches the end of the wood, and
+    <span class="tex2jax_process">$P$</span> is the position where
+    that particular ant has originally started in time <span class="tex2jax_process">$0$</span>. If two last ants fall down at the
+    same time, print “<tt class="ttfamily">started at <span class="tex2jax_process">$P$</span> and <span class="tex2jax_process">$Q$</span></tt>”, indicating both of their
+    positions, <span class="tex2jax_process">$P &lt; Q$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+90000 1
+0 R
+10 1
+0 L
+14 5
+3 L
+6 L
+13 L
+8 R
+1 R
+</pre>
+</td>
+<td>
+<pre>
+The last ant will fall down in 90000 seconds - started at 0.
+The last ant will fall down in 0 seconds - started at 0.
+The last ant will fall down in 13 seconds - started at 6 and 8.
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>Over the years, Grandpa Bernie has traveled all over the
+    world. He doesn’t travel that much anymore, but he loves to
+    tell his grandchildren stories from all these trips. He’ll tell
+    them the story from when he went to Israel for the first time,
+    or when he went to Greece for the third time.</p>
+<p>His memory works in a funny way. He can easily remember his
+    <span class="tex2jax_process">$k$</span>:th trip to a
+    particular country, but he’ll have a hard time remembering in
+    which year he went on that trip. Given a list of all the trips
+    Grandpa Bernie went on, can you answer a number of queries
+    asking in which year he went on his <span class="tex2jax_process">$k$</span>:th trip to a particular
+    country?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ol class="enumerate">
+<li>
+<p>one line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^5$</span>), the number
+        of trips Grandpa Bernie went on;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each
+        containing the name <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1 \leq |s| \leq 20$</span>) of a country
+        and an integer <span class="tex2jax_process">$y$</span>
+        (<span class="tex2jax_process">$1 \leq y \leq 10^6$</span>)
+        representing a trip to country <span class="tex2jax_process">$s$</span> that Grandpa Bernie went on in
+        year <span class="tex2jax_process">$y$</span>;</p>
+</li>
+<li>
+<p>one line with one integer <span class="tex2jax_process">$q$</span> (<span class="tex2jax_process">$1 \leq q \leq 10^5$</span>), the number
+        of queries;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$q$</span> lines each
+        containing the name <span class="tex2jax_process">$s$</span> of a country and an integer
+        <span class="tex2jax_process">$k$</span> representing a
+        query for the <span class="tex2jax_process">$k$</span>:th
+        time Grandpa Bernie went to country <span class="tex2jax_process">$s$</span>.</p>
+</li>
+</ol>
+<p>Each country name only consists of letters from the English
+    alphabet. It is also guaranteed that, for each query asking for
+    the <span class="tex2jax_process">$k$</span>:th trip to country
+    <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$k$</span> is at least <span class="tex2jax_process">$1$</span> and no greater than the number of
+    times Grandpa Bernie went to country <span class="tex2jax_process">$s$</span>. In particular, it is guaranteed
+    that Grandpa Bernie has visited country <span class="tex2jax_process">$s$</span> at least once.</p>
+<h2>Output</h2>
+<p>For each query for the <span class="tex2jax_process">$k$</span>:th trip Grandpa Bernie went to a
+    country <span class="tex2jax_process">$s$</span>, output a
+    single line containing the year in which Grandpa Bernie went on
+    that trip.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+Iceland 2016
+Sweden 2015
+Iceland 1982
+Norway 1999
+3
+Sweden 1
+Iceland 1
+Iceland 2
+</pre>
+</td>
+<td>
+<pre>
+2015
+1982
+2016
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+Iceland 2014
+Iceland 2015
+Iceland 2015
+Iceland 2016
+4
+Iceland 4
+Iceland 3
+Iceland 2
+Iceland 1
+</pre>
+</td>
+<td>
+<pre>
+2016
+2015
+2015
+2014
+</pre>
+</td>
+</tr>
+</table>
+</div>

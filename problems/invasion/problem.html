@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Alien invasion began, and scary man-eating aliens are
+    establishing their bases all over the country. You are only
+    safe on the places that are sufficiently far away from all
+    current alien bases. You need to quickly write a program to
+    help you determine where to move.</p>
+<h2>Input</h2>
+<p>The input contains at most <span class="tex2jax_process">$25$</span> instances, each of them
+    consisting of several lines. The first line of each instance
+    contains integers <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$1 \leq N \leq 10\ 000$</span>),
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0 \leq M \leq 100\ 000$</span>),
+    <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$0 \leq A \leq N$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq 100$</span>) separated by spaces, giving the number
+    of towns in the country, the number of roads between them, the
+    number of bases that the aliens are going to build, and the
+    minimum safe distance from alien bases, respectively. The towns
+    are assigned numbers <span class="tex2jax_process">$1, \ldots ,
+    N$</span>.</p>
+<p>The following <span class="tex2jax_process">$M$</span> lines
+    describe the roads; each of them contains integers <span class="tex2jax_process">$T_1$</span>, <span class="tex2jax_process">$T_2$</span> (<span class="tex2jax_process">$1 \leq T_1 &lt; T_2 \leq N$</span>) and
+    <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$1 \leq D \leq 100$</span>) separated by
+    spaces, where <span class="tex2jax_process">$D$</span> is the
+    length of the road between towns <span class="tex2jax_process">$T_1$</span> and <span class="tex2jax_process">$T_2$</span>. There is at most one direct
+    road between any two towns. All roads can be used in both
+    directions.</p>
+<p>The following <span class="tex2jax_process">$A$</span> lines
+    describe the positions of alien bases; the <span class="tex2jax_process">$i$</span>-th of them contains the number
+    <span class="tex2jax_process">$B_ i$</span> (<span class="tex2jax_process">$1 \leq B_ i \leq N$</span>) of the town
+    where the aliens build their <span class="tex2jax_process">$i$</span>-th base.</p>
+<p>The last instance is followed by a line containing four
+    zeros.</p>
+<h2>Output</h2>
+<p>The output for each input instance consists of <span class="tex2jax_process">$A$</span> lines. On <span class="tex2jax_process">$i$</span>-th line, write the number of towns
+    that are safe after the aliens build their <span class="tex2jax_process">$i$</span>-th base. The town is safe if its
+    distance from any of the towns <span class="tex2jax_process">$B_1, B_2, \ldots , B_ i$</span> is at least
+    <span class="tex2jax_process">$K$</span>.</p>
+<p>Print one empty line after each instance.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 6 3 3
+1 2 1
+1 3 1
+2 5 1
+3 6 1
+1 4 1
+4 7 2
+2
+1
+4
+1 0 1 1
+1
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+2
+1
+0
+
+0
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

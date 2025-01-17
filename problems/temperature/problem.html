@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/temperature/file/statement/en/img-0001.jpg" class="illustration" src="/problems/temperature/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://commons.wikimedia.org/wiki/File:Amsterdam_-_Thermometers_-_0321.jpg">
+        Jorge Royan</a>.
+      </div>
+</div>
+<p>Hello from the future. I am a time traveller. You would
+    think that in the future we have agreed to use a single scale
+    for measuring temperature. This is not so. In fact, we have all
+    sorts of scales now. All the big brands have made their own.
+    This is a bit confusing. Please help me figure it out. In my
+    day to day work I have to relate to two different scales
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. Help me find a temperature where
+    the two scales are the same, so I don’t have to worry about
+    it.</p>
+<h2>Input</h2>
+<p>Input consists of two space-separated integers, <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span>. <span class="tex2jax_process">$X$</span> is the point on <span class="tex2jax_process">$B$</span> where <span class="tex2jax_process">$A$</span> is zero. <span class="tex2jax_process">$Y$</span> is the number of degrees in
+    <span class="tex2jax_process">$B$</span> that equal a change of
+    a single degree in <span class="tex2jax_process">$A$</span>.</p>
+<h2>Output</h2>
+<p>Output the temperature where both scales are the same. This
+    number must have an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>. If no such
+    temperature exists, output “IMPOSSIBLE” (without the quotes)
+    instead. If more than one such point exists, output “ALL GOOD”
+    (without the quotes) instead.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$-100 \leq X \leq
+        100$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq Y \leq
+        100$</span></p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+32 2
+</pre>
+</td>
+<td>
+<pre>
+-32
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 3
+</pre>
+</td>
+<td>
+<pre>
+-0.500000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

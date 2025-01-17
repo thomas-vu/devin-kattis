@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>Given a triangle <span class="tex2jax_process">$ABC$</span>
+    with <em>incenter</em> (center of its inscribed circle)
+    <span class="tex2jax_process">$I$</span>, and circumscribed
+    circle <span class="tex2jax_process">$O$</span>, let
+    <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$P$</span> be the second points of
+    intersection of the lines through <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$I$</span>, <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$I$</span> resp. <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$I$</span> with the circle <span class="tex2jax_process">$O$</span>.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=.35\textwidth ]{h-hextri.png}" src="/problems/triangle2hexagon/file/statement/en/img-0001.png" style="width:35.00%"/>
+</center>
+</div>
+<p>Let <span class="tex2jax_process">$E$</span> and
+    <span class="tex2jax_process">$F$</span> be the intersections
+    of the line <span class="tex2jax_process">$NP$</span> with
+    <span class="tex2jax_process">$AB$</span> and <span class="tex2jax_process">$AC$</span> respectively. Similarly, let
+    <span class="tex2jax_process">$G$</span> and <span class="tex2jax_process">$H$</span> be the intersections of the line
+    <span class="tex2jax_process">$MN$</span> with <span class="tex2jax_process">$AC$</span> and <span class="tex2jax_process">$BC$</span> respectively and let <span class="tex2jax_process">$J$</span> and <span class="tex2jax_process">$K$</span> be the intersections of the line
+    <span class="tex2jax_process">$MP$</span> with <span class="tex2jax_process">$BC$</span> and <span class="tex2jax_process">$AB$</span> respectively.</p>
+<p>Write a program which takes as input the coordinates of the
+    vertices <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$C$</span> of the triangle and outputs the
+    lengths of the segments <span class="tex2jax_process">$EF$</span>, <span class="tex2jax_process">$FG$</span>, <span class="tex2jax_process">$GH$</span>, <span class="tex2jax_process">$HJ$</span>, <span class="tex2jax_process">$JK$</span> and <span class="tex2jax_process">$KE$</span>. Supposedly,</p><span class="tex2jax_process">\[ |EF| + |GH| + |JK| \le |KE| + |FG| + |HJ|
+    \]</span>
+<h2>Input</h2>
+<p>Input consists of a single line containing three real
+    values: the <span class="tex2jax_process">$x$</span> coordinate
+    of <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$B_ x$</span> (<span class="tex2jax_process">$-20 \le B_ x \le 20$</span>), the
+    <span class="tex2jax_process">$x$</span> coordinate of
+    <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$C_ x$</span> (<span class="tex2jax_process">$-20 \le C_ x \le 20$</span>) and the
+    <span class="tex2jax_process">$y$</span> coordinate of
+    <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$C_ y$</span> (<span class="tex2jax_process">$-20 \le C_ y \le 20$</span>). The floating
+    point values are given with up to <span class="tex2jax_process">$4$</span> digits after the decimal point.
+    <span class="tex2jax_process">$A$</span> will always be the
+    origin <span class="tex2jax_process">$(0,0)$</span> and
+    <span class="tex2jax_process">$B$</span> will always be on the
+    <span class="tex2jax_process">$x$</span>-axis so <span class="tex2jax_process">$B_ y = 0$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$6$</span> decimal
+    values separated by spaces, which are the lengths of
+    <span class="tex2jax_process">$EF$</span>, <span class="tex2jax_process">$FG$</span>, <span class="tex2jax_process">$GH$</span>, <span class="tex2jax_process">$HJ$</span>, <span class="tex2jax_process">$JK$</span> and <span class="tex2jax_process">$KE$</span> in that order.</p>
+<p>Your answers will be considered correct if their absolute or
+    relative error does not exceed <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2.5 3
+</pre>
+</td>
+<td>
+<pre>
+          0.999173 1.533202 0.995436 0.929975 1.185867 0.904840
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 3
+</pre>
+</td>
+<td>
+<pre>
+          1.045048 1.330900 1.025689 1.023769 1.135779 0.921392
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 3
+</pre>
+</td>
+<td>
+<pre>
+          0.849901 2.239686 0.844710 0.895875 1.378951 0.806287
+</pre>
+</td>
+</tr>
+</table>
+</div>

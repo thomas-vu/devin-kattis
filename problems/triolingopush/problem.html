@@ -1,0 +1,148 @@
+<div class="problembody">
+<p>Trio from Triolingo wants to remind you to take your daily
+    programming lessons!</p>
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/triolingopush/file/statement/en/img-0001.JPG" class="illustration" src="/problems/triolingopush/file/statement/en/img-0001.JPG"/>
+<div class="description">
+        cc by-s
+      </div>
+</div>
+<p>To make sure you actually will complete your lesson every
+    day, Trio sends you several notifications according to the
+    following increasing pattern:</p>
+<p>On the first day, Trio sends <span class="tex2jax_process">$1$</span> notification. On the second day,
+    Trio sends <span class="tex2jax_process">$2$</span>
+    notifications. For each day after the second, the number of
+    notifications is the number of notifications the day before,
+    added with the number of notifications <span class="tex2jax_process">$2$</span> days ago, added with <span class="tex2jax_process">$1$</span> extra notification. The number of
+    notifications could also be described with the following
+    recursive function:</p><span class="tex2jax_process">\[
+    f(1)=1,f(2)=2,f(N)=f(N-1)+f(N-2)+1 \]</span>
+<p>. On day <span class="tex2jax_process">$N$</span>, Trio will
+    send out <span class="tex2jax_process">$f(N)$</span>
+    notifications.</p>
+<p>How many notifications will Trio send out on the
+    <span class="tex2jax_process">$N$</span>:th day? To make sure
+    the number of notifications fits on the screen, output the
+    integer modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<h2>Input</h2>
+<p>The only and first line consists of one integer number,
+    <span class="tex2jax_process">$N$</span>, the day Trio is
+    sending notifications.</p>
+<h2>Output</h2>
+<p>Write an integer - The total number of notifications that
+    Trio will send that day modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Restrictions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N \leq
+          3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N \leq
+          25$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$60$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N \leq
+          10^6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq N \leq
+          10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+</div>

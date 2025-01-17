@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>Simon is a contestant on the new exciting game show, Add ’Em
+    Up! In this show, contestants are given a set of cards with
+    multi-digit numbers on them, and need to select two cards that
+    add up to a given sum. However, to make things more
+    interesting, the font that the cards are printed in (see below)
+    means that certain cards will display different numbers if
+    turned upside-down, and it is legal to turn either or both of
+    the cards if necessary to generate the sum. Please help Simon
+    win the game!</p>
+<center>
+<img alt="\includegraphics[width=0.6\columnwidth ]{cards.png}" src="/problems/addemup/file/statement/en/img-0001.png" style="width:0.6"/>
+</center>
+<h2>Input</h2>
+<p>The first line contains two integers, <span class="tex2jax_process">$n$</span>, the number of cards, and
+    <span class="tex2jax_process">$s$</span>, the desired sum. The
+    second line will contain <span class="tex2jax_process">$n$</span> integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$100\, 000\, 000$</span> inclusive. You may
+    assume that <span class="tex2jax_process">$1\leq n\leq 100\,
+    000$</span> and <span class="tex2jax_process">$2\leq s\leq
+    200\, 000\, 000$</span>.</p>
+<h2>Output</h2>
+<p>The output should be a single line consisting of the string
+    <tt class="tt">YES</tt> if two cards can be chosen such that
+    (in some orientation) they add up to <span class="tex2jax_process">$s$</span>, and the string <tt class="tt">NO</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 66
+15 21 22
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 63
+15 21 22
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

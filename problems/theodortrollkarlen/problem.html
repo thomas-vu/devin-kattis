@@ -1,0 +1,192 @@
+<div class="problembody">
+<p>This problem is based on the problem <i class="itshape">The
+    Wizard Theodor</i>.</p>
+<p>Evil Olle, who is ultimately responsible for all evil, is
+    tired of Theodor always ruining everything. Now, Olle has
+    devised a new malicious plan, and to put it into action, he
+    needs to keep Theodor occupied. At his disposal, he has
+    <span class="tex2jax_process">$N$</span> monsters, and since he
+    is immensely powerful, he can assign these monsters different
+    amounts of life points. Olle now wants to calculate the number
+    of ways he can assign various amounts of life points to his
+    monsters such that Theodor needs to fire exactly <span class="tex2jax_process">$K$</span> magical explosions to defeat all
+    the monsters. The only requirement for the number of life
+    points a monster has is that it must be greater than
+    <span class="tex2jax_process">$0$</span>.</p>
+<p>Just like in the problem <i class="itshape">The Wizard
+    Theodor</i>, Theodor damages monsters by targeting a specific
+    monster and firing an explosion. The targeted monster loses
+    <span class="tex2jax_process">$S$</span> life points, and then
+    all monsters (including the one he targeted) lose <span class="tex2jax_process">$A$</span> life points each. A monster is
+    defeated if it has <span class="tex2jax_process">$0$</span> or
+    fewer life points. Theodor chooses how to target monsters to
+    minimize the number of explosions he needs to fire.</p>
+<h2>Input</h2>
+<p>Input consists of a single line with four integers,
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$K$</span>, <span class="tex2jax_process">$S$</span>, and <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$1
+    \leq N, K, S \leq 2 \cdot 10^5$</span>, <span class="tex2jax_process">$0 \leq A \leq 2 \cdot 10^5$</span>), which
+    are the four values described above.</p>
+<h2>Output</h2>
+<p>Print the number of ways Olle can assign life points to his
+    monsters such that Theodor needs to fire exactly <span class="tex2jax_process">$K$</span> explosions to defeat all of them.
+    Since this number can become very large, output the result
+    <a href="https://en.wikipedia.org/wiki/Modulo">modulo</a>
+<span class="tex2jax_process">$(10^9+7)$</span>.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$A = 0$</span>,
+          <span class="tex2jax_process">$N, K, S \leq 5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$A = 0$</span>,
+          <span class="tex2jax_process">$N, K, S \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, K, S, A \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, K, S, A \leq
+          300$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, K, S, A \leq
+          2000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Samples</h2>
+<p>In sample 1, there is one monster, and the possible life
+    point values it can have such that Theodor defeats it with
+    exactly one explosion are <tt>1, 2, 3, 4, 5</tt>.</p>
+<p>In sample 2, there are 10 distributions of life point values
+    such that Theodor defeats both monsters with exactly two
+    explosions. These are:</p>
+<pre>
+  1 3
+  1 4
+  2 2
+  2 3
+  2 4
+  3 1
+  3 2
+  3 3
+  4 1
+  4 2
+</pre>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 5 0
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 1 1
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 20 30 40
+</pre>
+</td>
+<td>
+<pre>435462573
+</pre>
+</td>
+</tr>
+</table>
+</div>

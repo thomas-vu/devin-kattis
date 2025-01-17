@@ -1,0 +1,113 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ordla/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ordla/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from<a href="https://unsplash.com/photos/gL7oJLJOb_I">Unsplash</a>
+</div>
+</div>The word game Orðla has been spreading like wildfire
+    through the internet as of late. The game involves having a
+    list of <span class="tex2jax_process">$n$</span> five letter
+    English words and the computer secretly picking one of these
+    words. The player then guesses words from the list as often as
+    they wish, but the fewer guesses the better.
+    <p>After each guess the computer gives some hints by colouring
+    the letters of the guess word, the colours signifying how close
+    the word is to the secret word. The computer colours the
+    letters in the following way:</p>
+<ol class="enumerate">
+<li>
+<p>Letters that match the corresponding letters in the
+        secret word are coloured green, denoted by <tt class="ttfamily">O</tt>.</p>
+</li>
+<li>
+<p>Letters that are in the secret word but are not in the
+        correct location are coloured yellow, denoted by <tt class="ttfamily">/</tt>. If a letter appears more often in the
+        guess than in the secret word the computer only colours the
+        left-most letters, colouring as many letters as there are
+        occurrences in the secret word.</p>
+</li>
+<li>
+<p>The rest of the letters are coloured gray, denoted by
+        <tt class="ttfamily">X</tt>.</p>
+</li>
+</ol>
+<p>As an example, if a player guesses the word <tt class="ttfamily">error</tt> but the secret word is <tt class="ttfamily">racer</tt>, the computer will colour it as
+    <tt class="ttfamily">//XXO</tt>.</p>
+<h2>Interactivity</h2>
+<p>This is an interactive problem. Your solution will be tested
+    against an interactive judge which reads the output of your
+    solution and prints the input your solution recieves. This
+    interaction follows certain rules:</p>
+<p>The judge starts by printing one line containing the integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 500$</span>), the number of
+    words in the list. Next the judge prints <span class="tex2jax_process">$n$</span> lines containing the words from
+    the list, each consisting of five English lower case letters.
+    The words are all unique. The judge then chooses one of these
+    words at random.</p>
+<p>Next your solution guesses a word from the list by printing
+    it on a single line. The judge replies by printing a single
+    line describing the colouring as described above. If the
+    colouring is <tt class="ttfamily">OOOOO</tt> then your solution
+    has guessed correctly and should exit. Otherwise your solution
+    should guess again as described above.</p>
+<p>Make sure to <tt class="ttfamily">flush</tt> after each
+    guess, for example using</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">print(..., flush=True)</tt> in
+        Python,</p>
+</li>
+<li>
+<p><tt class="ttfamily">cout &lt;&lt; ... &lt;&lt;
+        endl;</tt> in C++,</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush();</tt> in
+        Java.</p>
+</li>
+</ul>
+<p>The problem comes with a testing tool to help test your
+    solution.</p>
+<h2>Scoring</h2>
+<p>Your solution will be run on <span class="tex2jax_process">$100$</span> test cases. If your solution
+    needs <span class="tex2jax_process">$g$</span> guesses to solve
+    a test case containing <span class="tex2jax_process">$n$</span>
+    words, your solution gets <span class="tex2jax_process">$\mathrm{max}(0, 1 - (g-1)^2/n)$</span>
+    points for that test case. The final number of points is the
+    sum of points received in all test cases.</p>
+<p>It is guaranteed that <span class="tex2jax_process">$30$</span> test cases have <span class="tex2jax_process">$n \leq 10$</span>, <span class="tex2jax_process">$50$</span> test cases have <span class="tex2jax_process">$10 &lt; n \leq 100$</span> and <span class="tex2jax_process">$20$</span> test cases have <span class="tex2jax_process">$n = 500$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>5
+tolva
+ordla
+stoll
+skjar
+skoli</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>tolva</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>X//XX</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>stoll</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>OXOOX</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>skoli</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>OOOOO</pre>
+</div>
+</div>

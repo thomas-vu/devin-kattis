@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Just like every fall, the organizers of the Southwestern
+    Europe Dice Simulation Contest are busy again this year. In
+    this edition you have to simulate a <span class="tex2jax_process">$3$</span>-sided die that outputs each of
+    three possible outcomes (which will be denoted by <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span>) with a given probability, using
+    three dice in a given set. The simulation is performed this
+    way: you choose one of the given dice at random, roll it, and
+    report its outcome. You are free to choose the probabilities of
+    rolling each of the given dice, <em>as long as each probability
+    is strictly greater than zero</em>. Before distributing the
+    materials to the contestants, the organizers have to verify
+    that it is actually possible to solve this task.</p>
+<p>For example, in the first test case of the sample input you
+    have to simulate a die that yields outcome <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> with probabilities <span class="tex2jax_process">$3/10$</span>, <span class="tex2jax_process">$4/10$</span> and <span class="tex2jax_process">$3/10$</span>. We give you three dice, and in
+    this case the <span class="tex2jax_process">$i$</span>-th of
+    them always yields outcome <span class="tex2jax_process">$i$</span>, for each <span class="tex2jax_process">$i = 1, 2, 3$</span>. Then it is possible to
+    simulate the given die in the following fashion: roll the first
+    die with probability <span class="tex2jax_process">$3/10$</span> , the second one with
+    probability <span class="tex2jax_process">$4/10$</span> and the
+    last one with probability <span class="tex2jax_process">$3/10$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of at most <span class="tex2jax_process">$50$</span> test cases, separated by single
+    blank lines. Each test case consists of four lines: the first
+    three of them describe the three dice you are given and the
+    last one describes the die you have to simulate. Each of the
+    four lines contains 3 space-separated integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10\, 000$</span> inclusive. These numbers
+    will add up to <span class="tex2jax_process">$10\, 000$</span>,
+    and represent <span class="tex2jax_process">$10\, 000$</span>
+    times the probability that rolling the die described in that
+    line yields outcome <span class="tex2jax_process">$1$</span>,
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span>, respectively.</p>
+<p>The test cases will finish with a line containing only the
+    number zero repeated three times (also preceded with a blank
+    line).</p>
+<h2>Output</h2>
+<p>For each case, your program should output a line with the
+    word <tt class="ttfamily">YES</tt> if it is feasible to produce
+    the desired die from the given ones, and <tt class="ttfamily">NO</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 0 10000
+0 10000 0
+10000 0 0
+3000 4000 3000
+
+0 0 10000
+0 10000 0
+3000 4000 3000
+10000 0 0
+
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

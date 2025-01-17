@@ -1,0 +1,309 @@
+<div class="problembody">
+<p>You think you can code?<br/>
+    This problem will test you on various basic programming
+    techniques.<br/>
+    You are given two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$t$</span>; and then an array <span class="tex2jax_process">$A$</span> of <span class="tex2jax_process">$N$</span> integers (<span class="tex2jax_process">$0$</span>-based indexing).<br/>
+    Based on the value of <span class="tex2jax_process">$t$</span>,
+    you will perform an action on <span class="tex2jax_process">$A$</span>.</p>
+<div class="table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$t$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Action Needed</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Print <span class="tex2jax_process">$7$</span>,
+              regardless of the content of <span class="tex2jax_process">$A$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print “<tt class="ttfamily">Bigger</tt>” if
+              <span class="tex2jax_process">$A[0] &gt;
+              A[1]$</span>, or</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Print “<tt class="ttfamily">Equal</tt>” if
+              <span class="tex2jax_process">$A[0] == A[1]$</span>,
+              or</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Print “<tt class="ttfamily">Smaller</tt>”
+              otherwise (without the quotes);</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Ignore other indices of <span class="tex2jax_process">$A$</span>, if any</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print the median of three integers {<span class="tex2jax_process">$A[0]$</span>, <span class="tex2jax_process">$A[1]$</span>, and <span class="tex2jax_process">$A[2]$</span>};</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Ignore other indices of <span class="tex2jax_process">$A$</span>, if any</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print the sum of all integers in <span class="tex2jax_process">$A$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="text-align:left">
+<p>Print the sum of all even integers in <span class="tex2jax_process">$A$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="text-align:left">
+<p>Apply modulo (%) <span class="tex2jax_process">$26$</span> to each integer in
+              <span class="tex2jax_process">$A$</span>,</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Map integer <span class="tex2jax_process">$0$</span>/<span class="tex2jax_process">$1$</span>/<span class="tex2jax_process">$\ldots $</span>/<span class="tex2jax_process">$25$</span> to character
+              ‘a’/‘b’/<span class="tex2jax_process">$\ldots
+              $</span>/‘z’,</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>Finally, print the sequence of characters as a
+              string (without the spaces)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="text-align:left">
+<p>a. Start from index <span class="tex2jax_process">$i = 0$</span>;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>b. Jump to index <span class="tex2jax_process">$i
+              = A[i]$</span>;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>c. If the current index <span class="tex2jax_process">$i$</span> is outside the valid
+              bound of [0..<span class="tex2jax_process">$N$</span>-1], print “<tt class="ttfamily">Out</tt>” and stop;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>d. Else if the current index <span class="tex2jax_process">$i$</span> is index <span class="tex2jax_process">$N$</span>-<span class="tex2jax_process">$1$</span>, print “<tt class="ttfamily">Done</tt>” and stop;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>e1. Otherwise, go back to step b;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:left">
+<p>e2. If doing this leads to an infinite loop, print
+              “<tt class="ttfamily">Cyclic</tt>” and stop;</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+             </td>
+<td style="text-align:left; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>(all output are without the quotes)</p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$3
+    \leq N \leq 200\, 000$</span>; <span class="tex2jax_process">$1
+    \leq t \leq 7$</span>).<br/>
+    The second line of the input contains <span class="tex2jax_process">$N$</span> non-negative <span class="tex2jax_process">$32$</span>-bit signed integers.</p>
+<h2>Output</h2>
+<p>For each test case, output the required answer based on the
+    value of <span class="tex2jax_process">$t$</span>.</p>
+<h2>Scoring</h2>
+<p>There are <span class="tex2jax_process">$20$</span> hidden
+    test cases that test various requirements of this problem.<br/>
+    All <span class="tex2jax_process">$20$</span> test cases will
+    be tested.<br/>
+    Each hidden test case worth <span class="tex2jax_process">$5$</span> points (the <span class="tex2jax_process">$7$</span> sample test cases below worth
+    <span class="tex2jax_process">$0$</span> point).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 1
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 2
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>Smaller
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 3
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>7 4
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>28
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>7 5
+1 2 3 4 5 6 7
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>10 6
+7 4 11 37 14 22 40 17 11 3
+</pre>
+</td>
+<td>
+<pre>helloworld
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 7</th>
+<th>Sample Output 7</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+1 0 2
+</pre>
+</td>
+<td>
+<pre>Cyclic
+</pre>
+</td>
+</tr>
+</table>
+</div>

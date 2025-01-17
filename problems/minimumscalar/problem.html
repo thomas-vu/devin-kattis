@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>You are given two vectors <span class="tex2jax_process">$v_1=(x_1,x_2,\ldots ,x_ n)$</span> and
+    <span class="tex2jax_process">$v_2=(y_1,y_2,\ldots ,y_
+    n)$</span>. The scalar product of these vectors is a single
+    number, calculated as <span class="tex2jax_process">$x_1y_1+x_2y_2+\ldots +x_ ny_ n$</span>.</p>
+<p>Suppose you are allowed to permute the coordinates of each
+    vector as you wish. Choose two permutations such that the
+    scalar product of your two new vectors is the smallest
+    possible, and output that minimum scalar product.</p>
+<h2>Input</h2>
+<p>The first line of the input file contains the number of
+    testcases, <span class="tex2jax_process">$T\leq 10$</span>. For
+    each test case, the first line contains integer number
+    <span class="tex2jax_process">$n$</span>. The next two lines
+    contain <span class="tex2jax_process">$n$</span> integers each,
+    giving the coordinates of <span class="tex2jax_process">$v_1$</span> and <span class="tex2jax_process">$v_2$</span> respectively.</p>
+<p>You may assume that <span class="tex2jax_process">$1\leq
+    n\leq 800$</span> and <span class="tex2jax_process">$-100\, 000
+    \leq x_ i, y_ i\leq 100\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a line</p>
+<pre>
+Case #X: Y
+</pre>
+<p>where <span class="tex2jax_process">$X$</span> is the test
+    case number, starting from 1, and <span class="tex2jax_process">$Y$</span> is the minimum scalar product of
+    all permutations of the two given vectors.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3
+1 3 -5
+-2 4 1
+5
+1 2 3 4 5
+1 0 1 0 1
+</pre>
+</td>
+<td>
+<pre>
+Case #1: -25
+Case #2: 6
+</pre>
+</td>
+</tr>
+</table>
+</div>

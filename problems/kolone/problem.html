@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>When moving, ants form rows so that each ant except the
+    first is behind another ant. It is not widely known what
+    happens when two rows of ants moving in opposite directions run
+    into each other in a passage too narrow for both rows to pass
+    through. One theory says that, in that situation, ants will
+    jump over each other.</p>
+<p>From the moment the rows meet, each second every ant jumps
+    over (or gets jumped over, as they agree upon) the ant in front
+    of himself so that the two ants swap places, but only if the
+    other ant is moving in the opposite direction. Find the order
+    of the ants after <span class="tex2jax_process">$T$</span>
+    seconds.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N_1$</span> and <span class="tex2jax_process">$N_2$</span>, the numbers of ants in the
+    first and second rows, respectively.</p>
+<p>The next two rows contain the orders of ants in the first
+    and second row (first to last). Each ant is uniquely determined
+    by an uppercase letter of the English alphabet (this letter is
+    unique between both rows).</p>
+<p>The last line of input contains the integer <span class="tex2jax_process">$T$</span> <span class="tex2jax_process">$(0
+    \leq T \leq 50)$</span>.</p>
+<h2>Output</h2>
+<p>Output the order of the ants after <span class="tex2jax_process">$T$</span> seconds on a single line. Our
+    viewpoint is such that the first row of ants comes from our
+    left side and the other one from our right side.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+ABC
+DEF
+0
+</pre>
+</td>
+<td>
+<pre>
+CBADEF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+ABC
+DEF
+2
+</pre>
+</td>
+<td>
+<pre>
+CDBEAF
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4
+JLA
+CRUO
+3
+</pre>
+</td>
+<td>
+<pre>
+CARLUJO
+</pre>
+</td>
+</tr>
+</table>
+</div>

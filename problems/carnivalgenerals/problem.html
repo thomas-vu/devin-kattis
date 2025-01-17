@@ -1,0 +1,229 @@
+<div class="problembody">
+<p>Every four years, the students of Lund come together to
+    organize the Lund Carnival. For a few days, a park fills with
+    tents where all kinds of festive activities take place. The
+    person in charge of making this happen is the carnival
+    general.</p>
+<p>In total, there have been <span class="tex2jax_process">$N$</span> carnivals, each with a different
+    general. The generals are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$N-1$</span> in chronological order. Every
+    general <span class="tex2jax_process">$i$</span> has given
+    their opinion on how good their predecessors were, by
+    publishing a ranking of the generals <span class="tex2jax_process">$0, 1, \ldots , i-1$</span> in order from
+    best to worst.</p>
+<p>The next Lund Carnival will be in 2026. In the meantime, all
+    past carnival generals have gathered to take a group photo.
+    However, it would be awkward if generals <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> (where <span class="tex2jax_process">$i &lt; j)$</span> end up next to each other
+    if <span class="tex2jax_process">$i$</span> is <b class="bfseries">strictly</b> in the second half of <span class="tex2jax_process">$j$</span>’s ranking.</p>
+<p>For example:</p>
+<ul class="itemize">
+<li>
+<p>If general <span class="tex2jax_process">$4$</span> has
+        given the ranking <tt>3 2 1 0</tt>, then <span class="tex2jax_process">$4$</span> can stand next to <span class="tex2jax_process">$3$</span>, or <span class="tex2jax_process">$2$</span>, but not <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>If general <span class="tex2jax_process">$5$</span> has
+        given the ranking <tt>4 3 2 1 0</tt>, then <span class="tex2jax_process">$5$</span> can stand next to <span class="tex2jax_process">$4, 3$</span> or <span class="tex2jax_process">$2$</span>, but not <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$0$</span>.</p>
+</li>
+</ul>
+<p>Note that it is fine if one general is exactly in the middle
+    of another’s ranking.</p>
+<p>The following figure illustrates sample 1. Here, general
+    <span class="tex2jax_process">$5$</span> stands next to
+    generals <span class="tex2jax_process">$2$</span> and
+    <span class="tex2jax_process">$3$</span>, and general
+    <span class="tex2jax_process">$4$</span> stands next to general
+    <span class="tex2jax_process">$2$</span> only.</p>
+<center>
+<img alt="\includegraphics[width=.8\textwidth ]{sample}" src="/problems/carnivalgenerals/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+<p>You are given the rankings that the generals published. Your
+    task is to arrange the generals <span class="tex2jax_process">$0,1,\ldots , N-1$</span> in a row, so that
+    if <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> are adjacent (where <span class="tex2jax_process">$i &lt; j$</span>) then <span class="tex2jax_process">$i$</span> is <b class="bfseries">not</b>
+    strictly in the second half of <span class="tex2jax_process">$j$</span>’s ranking.</p>
+<h2>Input</h2>
+<p>The first line contains the positive integer <span class="tex2jax_process">$N$</span>, the number of generals.</p>
+<p>The following <span class="tex2jax_process">$N-1$</span>
+    lines contain the rankings. The first of these lines contains
+    general <span class="tex2jax_process">$1$</span>’s ranking, the
+    second line contains general <span class="tex2jax_process">$2$</span>’s ranking, and so on until general
+    <span class="tex2jax_process">$N-1$</span>. General
+    <span class="tex2jax_process">$0$</span> is absent since
+    general <span class="tex2jax_process">$0$</span> didn’t have
+    any predecessors to rank.</p>
+<p>The ranking of general <span class="tex2jax_process">$i$</span> is a list with <span class="tex2jax_process">$i$</span> integers <span class="tex2jax_process">$p_{i,0}, p_{i,1}, \ldots , p_{i,i-1}$</span>
+    in which every integer from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$i-1$</span> occurs exactly once.
+    Specifically, <span class="tex2jax_process">$p_{i,0}$</span> is
+    the best and <span class="tex2jax_process">$p_{i,i-1}$</span>
+    is the worst general according to general <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>Print a list of integers, an ordering of the numbers
+    <span class="tex2jax_process">$0, 1, \ldots , N-1$</span>, such
+    that for each pair of adjacent numbers, neither is strictly in
+    the second half of the other’s ranking.</p>
+<p>It can be proven that a solution always exists. If there are
+    multiple solutions, you may print any of them.</p>
+<h2>Constraints and Scoring</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$2 \leq N \leq
+        1000$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq p_{i,0}, p_{i,1},
+        \ldots , p_{i,i-1} \leq i-1$</span> for <span class="tex2jax_process">$i = 0, 1, \ldots , N-1$</span>.</p>
+</li>
+</ul>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The ranking of general <span class="tex2jax_process">$i$</span> will be <span class="tex2jax_process">$i-1, i-2, \ldots , 0$</span> for all
+          <span class="tex2jax_process">$i$</span> such that
+          <span class="tex2jax_process">$1 \leq i \leq
+          N-1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The ranking of general <span class="tex2jax_process">$i$</span> will be <span class="tex2jax_process">$0, 1, \ldots , i-1$</span> for all
+          <span class="tex2jax_process">$i$</span> such that
+          <span class="tex2jax_process">$1 \leq i \leq
+          N-1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>29</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 8$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>37</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<h2>Example</h2>
+<p>The first sample matches the condition of test group
+    <span class="tex2jax_process">$1$</span>. In this sample,
+    neither general <span class="tex2jax_process">$2$</span> nor
+    <span class="tex2jax_process">$3$</span> can stand next to
+    general <span class="tex2jax_process">$0$</span>, and neither
+    general <span class="tex2jax_process">$4$</span> nor
+    <span class="tex2jax_process">$5$</span> can stand next to
+    generals <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span>. The sample output was
+    illustrated in the figure above.</p>
+<p>The second sample matches the condition of test group
+    <span class="tex2jax_process">$2$</span>. In this sample,
+    general <span class="tex2jax_process">$2$</span> can’t stand
+    next to general <span class="tex2jax_process">$1$</span>,
+    general <span class="tex2jax_process">$3$</span> can’t stand
+    next to general <span class="tex2jax_process">$2$</span>, and
+    general <span class="tex2jax_process">$4$</span> can’t stand
+    next to generals <span class="tex2jax_process">$3$</span> and
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>The third sample matches the condition of test group
+    <span class="tex2jax_process">$3$</span>. In this sample, the
+    only pairs of generals that can’t stand next to each other are
+    <span class="tex2jax_process">$(1, 3)$</span> and <span class="tex2jax_process">$(0, 2)$</span>. Hence, there are no
+    conflicts if they are arranged <tt>3 0 1 2</tt>. Another
+    possible answer is <tt>0 1 2 3</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+0
+1 0
+2 1 0
+3 2 1 0
+4 3 2 1 0
+</pre>
+</td>
+<td>
+<pre>4 2 5 3 1 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0
+0 1
+0 1 2
+0 1 2 3
+</pre>
+</td>
+<td>
+<pre>2 0 4 1 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0
+1 0
+0 2 1
+</pre>
+</td>
+<td>
+<pre>3 0 1 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

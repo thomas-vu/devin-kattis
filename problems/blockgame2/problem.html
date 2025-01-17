@@ -1,0 +1,122 @@
+<div class="problembody">
+<p>You are attending the International Construction by
+    Preschoolers Contest. Unfortunately, you are too old to
+    participate, but you still enjoy watching the competition.</p>
+<p>In between rounds, you are walking around the contest area
+    when you see a toddler, one of the contestants, playing with
+    her blocks. Annoyed that she is having all the fun, you decide
+    to challenge her to a game.</p>
+<p>You set up two stacks of blocks of a certain height. Then,
+    you and the toddler take turns removing some number of blocks
+    from the stack which contains the largest number of blocks (if
+    both stacks have the same number of blocks, the current player
+    can choose either stack to remove blocks from). The number of
+    blocks removed must be a <em>positive multiple</em> of the
+    number of blocks in the smaller stack. For instance, if there
+    is a stack with <span class="tex2jax_process">$5$</span>
+    blocks, and one with <span class="tex2jax_process">$23$</span>
+    blocks, then the current player can remove <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$10$</span>, <span class="tex2jax_process">$15$</span> or <span class="tex2jax_process">$20$</span> blocks from the stack of
+    <span class="tex2jax_process">$23$</span> blocks. The player
+    who empties one of the stacks wins the game.</p>
+<p>You have graciously decided to take the first move, but then
+    a worry strikes you – might this devious preschooler still be
+    able to beat you?</p>
+<h2>Input</h2>
+<p>One line with two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, satisfying <span class="tex2jax_process">$1 \leq N, M\leq 10^{18}$</span>, the initial
+    sizes of the two stacks of blocks.</p>
+<h2>Output</h2>
+<p>Output a single line containing a single word: the word
+    “<tt class="ttfamily">win</tt>” if you are guaranteed to win if
+    you play correctly, and the word “<tt class="ttfamily">lose</tt>” if your opponent can force you to
+    lose.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+</pre>
+</td>
+<td>
+<pre>
+lose
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+</pre>
+</td>
+<td>
+<pre>
+win
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 2
+</pre>
+</td>
+<td>
+<pre>
+win
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+</pre>
+</td>
+<td>
+<pre>
+win
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+13 10
+</pre>
+</td>
+<td>
+<pre>
+lose
+</pre>
+</td>
+</tr>
+</table>
+</div>

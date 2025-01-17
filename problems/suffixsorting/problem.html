@@ -1,0 +1,40 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The input consists of less than <span class="tex2jax_process">$10$</span> test cases. Each test case begins
+    with a line containing a non-empty string <tt class="ttfamily">s</tt>, of length at most <span class="tex2jax_process">$100\, 000$</span>. Then follows a line
+    containing an integer <span class="tex2jax_process">$n$</span>
+    followed by <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$q_1, \ldots , q_ n$</span>,
+    where <span class="tex2jax_process">$0 \le q_{i} &lt;
+    \operatorname {length}(s)$</span>, each indicating a query.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$p_{1}, \ldots , p_{n}$</span>, where
+    <span class="tex2jax_process">$p_{i}$</span> is the starting
+    position of the <span class="tex2jax_process">$q_{i}$</span>’th
+    smallest suffix of <tt class="ttfamily">s</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+popup
+5 0 1 2 3 4
+Popup
+5 0 1 2 3 4
+Suffixes are jolly fun, eh old chap?
+7 35 3 18 33 26 6 2
+</pre>
+</td>
+<td>
+<pre>
+1 4 0 2 3
+0 1 4 2 3
+17 18 19 20 21 22 23
+</pre>
+</td>
+</tr>
+</table>
+</div>

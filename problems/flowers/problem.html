@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Tom and Sarah soon have their second anniversary and he
+    wants to buy her something special. Even though she’s very keen
+    on any kind of tree, he thinks that this probably is too big of
+    a gift. So, he decides to buy her flowers. But not the lame cut
+    off ones that will die after two weeks tops. No, he wants to
+    buy her flowers that may last forever. Flowers in a flower pot.
+    Now, he has a problem. Finding the right flowers for his
+    girlfriend isn’t that difficult. However, finding the right
+    flower pot turns out to be much more complicated. Since he
+    wants the flowers to live as long as possible, he needs to find
+    the best-fitting flower pot he can find. When he comes to the
+    Arboreal and Crops Market, he notices that for each bouquet of
+    flowers there is an optimal size written for the flower pot.
+    However, the offered flower pots do not state their volume. The
+    only information the shop assistant can provide is the outline
+    of each flower pot given as a function. Since Tom was never
+    very good in math and his date is in less than an hour, he asks
+    a nearby customer for help: You. Fortunately, you brought your
+    laptop on your shopping tour. Can you help Tom?</p>
+<p>The outline of a flower pot is described by a function
+    <span class="tex2jax_process">$f(x) = a \cdot e^{-x^2} + b
+    \cdot \sqrt {x}$</span>, where <span class="tex2jax_process">$x$</span> is the vertical distance from the
+    bottom of the flower pot. The body of the flower pot thus is
+    defined by the rotational body created when rotating the graph
+    of <span class="tex2jax_process">$f$</span> around the
+    <span class="tex2jax_process">$x$</span>-axis. The height of a
+    flower pot is denoted by <span class="tex2jax_process">$h$</span>.</p>
+<p>The volumes of two flower pots differ at least by
+    <span class="tex2jax_process">$10^{-4}$</span>. Also there is
+    only one flower pot closer to the optimal than any other one,
+    with an accuracy to <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<h2>Input</h2>
+<p>The input always contains one test case which consists of
+    several lines.</p>
+<p>The first line contains a decimal number <span class="tex2jax_process">$0 &lt; V \le 10^5$</span>, the optimal size
+    for Tom’s favorite flower, and an integer <span class="tex2jax_process">$0 &lt; N \le 5$</span>, the number of flower
+    pots available.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    contain three decimal numbers describing the corresponding
+    <span class="tex2jax_process">$k$</span>th flower pot:
+    <span class="tex2jax_process">$0 \le a_ k \le 10$</span>,
+    <span class="tex2jax_process">$0 \le b_ k \le 10$</span>, and
+    <span class="tex2jax_process">$1 \le h_ k \le 10$</span>.</p>
+<p>For the sample input the volumes are approximately
+    <span class="tex2jax_process">$34.72348$</span> and
+    <span class="tex2jax_process">$21.77966$</span>.</p>
+<h2>Output</h2>
+<p>Print one line containing a single integer that describes
+    the index of the best fitting flower pot. The index of the
+    first flower pot is <span class="tex2jax_process">$0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+25.0 2
+1.0 2.0 2.0
+2.0 1.0 2.0
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

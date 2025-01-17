@@ -1,0 +1,206 @@
+<div class="problembody">
+<p>In every computer a logical network can be found. These
+    networks are used to evaluate boolean expressions and thus
+    create the basis for more complex calculations that the
+    computer performs. Logical networks consist of different
+    objects that can up to two inputs and up to one output. An
+    object takes boolean values as inputs and outputs a boolean
+    value. These objects can then be connected together such that
+    the output of one object is piped into the input of another.
+    The objects thus create a network that boolean expressions
+    travel through.</p>
+<p>In this problem we intend to consider five kinds of
+    objects:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">OG</tt> has two inputs, if both are
+        true then the output is true, but is false otherwise.</p>
+</li>
+<li>
+<p><tt class="ttfamily">EDA</tt> has two inputs, if both
+        are false then the output is false, but is otherwise
+        true.</p>
+</li>
+<li>
+<p><tt class="ttfamily">EKKI</tt> has one input, if the
+        input is true it outputs false and outputs false
+        otherwise.</p>
+</li>
+<li>
+<p><tt class="ttfamily">INNTAK</tt> has no input and one
+        output. <tt class="ttfamily">INNTAK</tt> is a special
+        object that is used to always send the same value to the
+        output.</p>
+</li>
+<li>
+<p><tt class="ttfamily">UTTAK</tt> has one input and no
+        output. <tt class="ttfamily">UTTAK</tt> is a special object
+        that is sued to check what value is sent to its input.</p>
+</li>
+</ul>
+<p>In the following image we see an example of a logical
+    network:</p>
+<div class="figure" id="a0000000010">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{network.png}" src="/problems/roknet/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Image of sample one
+        </div>
+</center>
+</div>
+<p>Given a description of such a logical network, can you
+    calculate what values will be input to the <tt class="ttfamily">UTTAK</tt> objects?</p>
+<h2>Input</h2>
+<p>The first line of the input contains the positive integer
+    <span class="tex2jax_process">$N$</span>, denoting the number
+    of objects in the logical network. Then there are <span class="tex2jax_process">$N$</span> lines, one for each object. There
+    are five kinds of lines depending on the object in
+    question:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">INNTAK <i class="itshape">name</i>
+<i class="itshape">value</i></tt> denotes an object of the
+        type <tt class="ttfamily">INNTAK</tt> with the name
+        <i class="itshape">name</i> which outputs the value
+        <i class="itshape">value</i>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">UTTAK <i class="itshape">input</i></tt> denotes an unnamed object of the
+        type <tt class="ttfamily">UTTAK</tt>. The input of the
+        object is connected to the object with the name <i class="itshape">input</i>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">OG <i class="itshape">input1</i>
+<i class="itshape">input2</i> <i class="itshape">name</i></tt> denotes an <tt class="ttfamily">OG</tt> object with the name <tt class="ttfamily">name</tt>. Its inputs are connected to the
+        outputs of the objects with the names <i class="itshape">input1</i> and <i class="itshape">input2</i>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">EDA <i class="itshape">input1</i>
+<i class="itshape">input2</i> <i class="itshape">name</i></tt> denotes an <tt class="ttfamily">EDA</tt> object with the name <tt class="ttfamily">nafn</tt>. Its inputs are connected to the
+        outputs of the objects with the names <i class="itshape">input1</i> and <i class="itshape">input2</i>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">EKKI <i class="itshape">input</i>
+<i class="itshape">name</i></tt> denotes an <tt class="ttfamily">EKKI</tt> object with the name <tt class="ttfamily">name</tt>. The input is connected to the object
+        with the name <i class="itshape">input</i>.</p>
+</li>
+</ul>
+<p>The names of the objects are unique and consist of upper and
+    lower case letters. If the output of object <span class="tex2jax_process">$A$</span> is connected to the input of
+    object <span class="tex2jax_process">$B$</span>, then
+    <span class="tex2jax_process">$A$</span> will appear before
+    object <span class="tex2jax_process">$B$</span> in the
+    input.</p>
+<h2>Output</h2>
+<p>For each object of type <tt class="ttfamily">UTTAK</tt> one
+    line should be printed with the name of the object and the
+    value it receives as input; <tt class="ttfamily">SATT</tt> if
+    it is true and <tt class="ttfamily">OSATT</tt> if it is false.
+    These lines should be in the same order as the objects are
+    given in the input.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 100$</span>, All
+          objects are of the type <tt class="ttfamily">INNTAK</tt>
+          or <tt class="ttfamily">UTTAK</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq 10^4$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>11
+INNTAK 1 SATT
+INNTAK 2 SATT
+EKKI 2 3
+OG 1 3 4
+INNTAK 8 SATT
+EDA 8 4 9
+UTTAK 9
+INNTAK 5 OSATT
+EDA 4 5 6
+EKKI 6 7
+UTTAK 7
+</pre>
+</td>
+<td>
+<pre>9 SATT
+7 SATT
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+INNTAK banani SATT
+UTTAK banani
+INNTAK epli OSATT
+UTTAK epli
+UTTAK banani
+INNTAK gurka SATT
+</pre>
+</td>
+<td>
+<pre>banani SATT
+epli OSATT
+banani SATT
+</pre>
+</td>
+</tr>
+</table>
+</div>

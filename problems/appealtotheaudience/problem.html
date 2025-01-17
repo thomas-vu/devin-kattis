@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/appealtotheaudience/file/statement/en/img-0001.png" class="illustration" src="/problems/appealtotheaudience/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>You are the director of the upcoming Bordfite Arena
+    Progaming Competition. You have invited a bunch of players and
+    are now setting up the matches for the knockout tournament that
+    will determine the winner. As you may know, Bordfite Arena is a
+    game that heavily rewards skill and very little luck is
+    involved. This implies that whenever any number of players play
+    a game of Bordfite Arena, the most skilled player will always
+    win! Hence the winner of the tournament is already known, and
+    you are a bit worried about this. How will you appease the
+    audience?</p>
+<p>You embark on a short quest to find out what the audience
+    finds interesting. No surprises there: people find it most
+    interesting when they see skillful players compete. Whenever a
+    match is played, the happiness the audience gets from a match
+    is the sum of the skill levels of the players. The total
+    happiness the audience gets from the tournament is the sum of
+    the happiness obtained during all matches. This is very useful
+    information, because of course you want the audience to be as
+    happy as possible at the end of the tournament.</p>
+<p>Moreover, you invested some time to ask people what kind of
+    knockout format they like. It turns out that instead of the
+    plain old binary tree for the knockout schedule, they prefer a
+    specific weird-looking rooted tree, and so you decide to use
+    that. This means the final step for you to complete is to
+    divide the players over the leaves of the given tree so that
+    over the entire tournament, the happiness of the audience is
+    maximized.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains integers <span class="tex2jax_process">$3\leq n\leq 10^5$</span> and
+        <span class="tex2jax_process">$1 \leq k \leq n-1$</span>,
+        the number of nodes of the tree and the number of players.
+        The nodes are labelled <span class="tex2jax_process">$0$</span> through <span class="tex2jax_process">$n-1$</span>, and <span class="tex2jax_process">$0$</span> is the root of the tree.</p>
+</li>
+<li>
+<p>The second line contains <span class="tex2jax_process">$k$</span> integers <span class="tex2jax_process">$0\leq a_1, \dots , a_ k\leq
+        10^9$</span>, denoting the skill values of the players.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$n-1$</span>
+        lines, the <span class="tex2jax_process">$i$</span>th of
+        which (<span class="tex2jax_process">$1\leq i \leq
+        n-1$</span>) contains the parent <span class="tex2jax_process">$0 \leq p_ i &lt; i$</span> of node
+        <span class="tex2jax_process">$i$</span>.</p>
+</li>
+</ul>
+<p>It is guaranteed that the tree has exactly <span class="tex2jax_process">$k$</span> leaves and that there are no nodes
+    with exactly one child.</p>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Output the maximal possible happiness the audience can
+        obtain from this tournament.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+5 4 3
+0
+0
+1
+1
+</pre>
+</td>
+<td>
+<pre>17
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>11 7
+30 5 15 1 3 100 50
+0
+0
+1
+0
+2
+5
+2
+5
+5
+1
+</pre>
+</td>
+<td>
+<pre>454
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Lea runs into a lot of words in her life. A lot of them she
+    finds unpleasant. To compensate for that she started making up
+    pleasant words. Lea makes up new words by writing a nice
+    looking string of characters on a piece of paper. She than
+    erases a few of the most nasty looking characters and replaces
+    them with underscores ‘<tt class="ttfamily">_</tt>’. After that
+    she tries to replace the underscores with more acceptable
+    characters trying to form a pleasant word.</p>
+<p>Lea considers words pleasant if they do not contain
+    <span class="tex2jax_process">$3$</span> sequential vowels,
+    <span class="tex2jax_process">$3$</span> sequential consonants
+    and contain at least one letter ‘<tt class="ttfamily">L</tt>’.</p>
+<p>In Croatian, the vowels are the letters <tt class="ttfamily">A</tt>, <tt class="ttfamily">E</tt>, <tt class="ttfamily">I</tt>, <tt class="ttfamily">O</tt>, and <tt class="ttfamily">U</tt> only. All other letters are consonants.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains a string of
+    characters, at most <span class="tex2jax_process">$100$</span>.
+    The string contains only of uppercase English letters and
+    ‘<tt class="ttfamily">_</tt>’ characters. There will be at most
+    <span class="tex2jax_process">$10$</span> ‘<tt class="ttfamily">_</tt>’ characters.</p>
+<h2>Output</h2>
+<p>The first and only line of output should contain a single
+    integer – the total number of pleasant words that can be formed
+    by substituting underscores with uppercase letters of the
+    English alphabet.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>L_V
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>V__K
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>JA_BU_K_A
+</pre>
+</td>
+<td>
+<pre>485
+</pre>
+</td>
+</tr>
+</table>
+</div>

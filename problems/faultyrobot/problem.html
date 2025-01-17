@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>As part of a CS course, Alice just finished programming her
+    robot to explore a graph having <span class="tex2jax_process">$n$</span> nodes, labeled <span class="tex2jax_process">$1, 2, \ldots , n$</span>, and <span class="tex2jax_process">$m$</span> directed edges. Initially the
+    robot starts at node <span class="tex2jax_process">$1$</span>.</p>
+<p>While nodes may have several outgoing edges, Alice
+    programmed the robot so that any node may have a <em>forced
+    move</em> to a specific one of its neighbors. For example, it
+    may be that node <span class="tex2jax_process">$5$</span>
+    has outgoing edges to neighbors <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$4$</span>, and <span class="tex2jax_process">$6$</span> but that Alice programs the robot
+    so that if it leaves <span class="tex2jax_process">$5$</span> it must go to
+    neighbor <span class="tex2jax_process">$4$</span>.</p>
+<p>If operating correctly, the robot will always follow forced
+    moves away from a node, and if reaching a node that does not
+    have a forced move, the robot stops. Unfortunately, the robot
+    is a bit buggy, and it might violate those rules and move to a
+    randomly chosen neighbor of a node (whether or not there had
+    been a designated forced move from that node). However, such a
+    bug will occur <em>at most once</em> (and might never
+    happen).</p>
+<p>Alice is having trouble debugging the robot, and would like
+    your help to determine what are the possible nodes where the
+    robot could stop and not move again.</p>
+<p>We consider two sample graphs, as given in Figures 1
+    and 2. In these figures, a red arrow indicate an edge
+    corresponding to a forced move, while black arrows indicate
+    edges to other neighbors. The circle around a node is red if it
+    is a possible stopping node.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{faulty}" src="/problems/faultyrobot/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: First sample graph.
+        </div><img alt="\includegraphics[width=0.3\textwidth ]{faulty2}" src="/problems/faultyrobot/file/statement/en/img-0002.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Second sample graph.
+        </div>
+</center>
+</div>
+<p>In the first example, the robot will cycle forever through
+    nodes <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$5$</span>, and <span class="tex2jax_process">$4$</span> if it does not make a buggy move.
+    A bug could cause it to jump from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$2$</span>, but that would be the only buggy
+    move, and so it would never move on from there. It might also
+    jump from <span class="tex2jax_process">$5$</span> to
+    <span class="tex2jax_process">$6$</span> and then have a forced
+    move to end at <span class="tex2jax_process">$7$</span>.</p>
+<p>In the second example, there are no forced moves, so the
+    robot would stay at <span class="tex2jax_process">$1$</span>
+    without any buggy moves. It might also make a buggy move from
+    <span class="tex2jax_process">$1$</span> to either <span class="tex2jax_process">$2$</span> or <span class="tex2jax_process">$3$</span>, after which it would stop.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, designating the number of nodes
+    and number of edges such that <span class="tex2jax_process">$1
+    \le n \le 10^3$</span>, <span class="tex2jax_process">$0 \le m
+    \le 10^4$</span>. The next <span class="tex2jax_process">$m$</span> lines will each have two integers
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$1
+    \le |a|, b \le n$</span> and <span class="tex2jax_process">$|a|
+    \neq b$</span>. If <span class="tex2jax_process">$a &gt;
+    0$</span>, there is a directed edge between nodes <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> that is not forced. If
+    <span class="tex2jax_process">$a$</span> &lt; 0, then there is
+    a forced directed edge from <span class="tex2jax_process">$-a$</span> to <span class="tex2jax_process">$b$</span>. There will be at most
+    <span class="tex2jax_process">$900$</span> such forced moves.
+    No two directed edges will be the same. No two starting nodes
+    for forced moves will be the same.</p>
+<h2>Output</h2>
+<p>Display the <em>number</em> of nodes at which the robot
+    might come to a rest.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 9
+1 2
+2 3
+-1 5
+2 6
+5 1
+-4 1
+5 6
+-6 7
+-5 4
+</pre>
+</td>
+<td>
+<pre>
+2 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+1 2
+1 3
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

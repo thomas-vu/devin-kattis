@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>The Collatz Conjecture is an interesting phenomenon. Though
+    its principle is very simple, it still remains among unresolved
+    problems in mathematics, even after many years of study.
+    However, the years of intensive research brought at least some
+    results, which is a huge advantage of the human race against
+    the aliens, because they did not study the conjecture for so
+    many years. We want to keep this advantage.</p>
+<p>Imagine a sequence defined recursively as follows: Start
+    with any positive integer <span class="tex2jax_process">$x_0$</span> (so-called “starting value”).
+    Then repeat the following:</p>
+<ul class="itemize">
+<li>
+<p>if <span class="tex2jax_process">$x_ i$</span> is even,
+        then <span class="tex2jax_process">$x_{i+1} = x_ i
+        /2$</span> (“half …”)</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$x_ i$</span> is odd,
+        then <span class="tex2jax_process">$x_{i+1} = 3x_ i +
+        1$</span> (“…or triple plus one”)</p>
+</li>
+</ul>
+<p>The Collatz Conjecture says that every such sequence will
+    eventually reach <span class="tex2jax_process">$1$</span>. It
+    has still not been proven until today but we already know for
+    sure that this is true for every <span class="tex2jax_process">$x_0 &lt; 2^{58}$</span>. (Never tell this to
+    aliens!)</p>
+<p>In this problem, you are given two starting values and your
+    task is to say after how many steps their sequences “meet” for
+    the first time (which means the <em>first</em> number that
+    occurs in both sequences) and at which number is it going to
+    happen. For simplicity, we will assume that the sequence does
+    not continue once it has reached the number one. In reality, it
+    would then turn into <span class="tex2jax_process">$1, 4, 2, 1,
+    4, 2, 1, \ldots $</span>, which quickly becomes boring.</p>
+<h2>Input</h2>
+<p>The input contains at most <span class="tex2jax_process">$1\
+    500$</span> test cases. Each test case is described by a single
+    line containing two integer numbers <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$1
+    \leq A, B \leq 1\ 000\ 000$</span>.</p>
+<p>The last test case is followed by a line containing two
+    zeros.</p>
+<h2>Output</h2>
+<p>For each test case, output the sentence “<tt class="ttfamily"><span class="tex2jax_process">$A$</span> needs
+    <span class="tex2jax_process">$S_ A$</span> steps, <span class="tex2jax_process">$B$</span> needs <span class="tex2jax_process">$S_ B$</span> steps, they meet at
+    <span class="tex2jax_process">$C$</span></tt>”, where
+    <span class="tex2jax_process">$S_ A$</span> and <span class="tex2jax_process">$S_ B$</span> are the number of steps needed
+    in both sequences to reach the same number <span class="tex2jax_process">$C$</span>. Follow the output format
+    precisely.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 8
+27 30
+0 0
+</pre>
+</td>
+<td>
+<pre>
+7 needs 13 steps, 8 needs 0 steps, they meet at 8
+27 needs 95 steps, 30 needs 2 steps, they meet at 46
+</pre>
+</td>
+</tr>
+</table>
+</div>

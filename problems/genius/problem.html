@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/genius/file/statement/en/img-0001.jpg" class="illustration" src="/problems/genius/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by Elisa Riva (<a href="https://pixabay.com/en/brain-mind-psychology-idea-hearts-2062048/">Pixabay</a>),
+        Public Domain
+      </div>
+</div>
+<p>If someone were to make a prediction that everyone thought
+    was doomed to failure, and it turned out to be correct,
+    wouldn’t it be shortsighted simply to dismiss this as a stroke
+    of luck? What if the person could do so over and over again?
+    Instead of explaining away those capable of such
+    prognostications, society has labelled them ‘geniuses’, and has
+    accepted that mere mortals are simply unable to comprehend
+    their godlike level of reasoning, reasoning that transcends
+    common sense.</p>
+<p>Jimmy is not a genius, but he would like to fool people into
+    thinking he is one so that he can use this rarefied title on
+    his resume and land his dream job. He has come up with a
+    strategy that he claims will correctly predict at least
+    <span class="tex2jax_process">$K$</span> winners out of the
+    next <span class="tex2jax_process">$T$</span> tournaments of a
+    certain game, but nobody seems to believe in his
+    arbitrary-sounding strategy. However, if Jimmy’s claim turns
+    out to be correct, the doubters will quickly change their
+    minds, and he will earn the genius label that he so deeply
+    desires.</p>
+<p>A tournament involves <span class="tex2jax_process">$4$</span> players, and is based on a
+    two-round, single-elimination system. In the first round,
+    players <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span> play each other, and
+    players <span class="tex2jax_process">$2$</span> and
+    <span class="tex2jax_process">$3$</span> play each other. In
+    the second round, the two first-round winners play each other,
+    and the resulting winner is crowned the champion of the entire
+    tournament. Each player has a strategy with positive weight
+    <span class="tex2jax_process">$W$</span>. If a player with a
+    strategy of weight <span class="tex2jax_process">$A$</span>
+    competes against a player with a strategy of weight
+    <span class="tex2jax_process">$B$</span>, then the first player
+    wins with probability <span class="tex2jax_process">$\frac{A}{A+B}$</span> (and therefore the
+    second player wins with probability <span class="tex2jax_process">$\frac{B}{A+B}$</span>). The outcome of each
+    game is independent of all other games.</p>
+<p>Jimmy’s strategy for determining tournament winners is taken
+    from an exercise in a number theory book he idly flipped
+    through in the library one day. First he chooses distinct prime
+    numbers <span class="tex2jax_process">$P$</span> and
+    <span class="tex2jax_process">$Q$</span>, and then he uses them
+    to generate a sequence of nonnegative integers <span class="tex2jax_process">$X_1, X_2, X_3, \ldots , X_ T$</span> as
+    follows: (a) He randomly picks <span class="tex2jax_process">$X_1$</span> satisfying <span class="tex2jax_process">$1 \leq X_1 &lt; Q$</span>. (b) He
+    applies the formula <span class="tex2jax_process">$X_ t =
+    (X_{t-1} \cdot P)$</span> mod <span class="tex2jax_process">$Q$</span> for <span class="tex2jax_process">$2 \leq t \leq T$</span> to compute the
+    remaining terms in the sequence. (c) He performs a
+    mod 4 operation on every term so that his sequence now
+    consists only of the integers <span class="tex2jax_process">$0,
+    1, 2, 3$</span>. Finally, when the tournaments begin, Jimmy
+    predicts that the winner of tournament <span class="tex2jax_process">$1$</span> is player <span class="tex2jax_process">$X_1$</span>, the winner of tournament
+    <span class="tex2jax_process">$2$</span> is player <span class="tex2jax_process">$X_2$</span>, and so on.</p>
+<h2>Input</h2>
+<p>The first line of input contains five space-separated
+    integers, <span class="tex2jax_process">$K$</span>,
+    <span class="tex2jax_process">$T$</span>, <span class="tex2jax_process">$P$</span>, <span class="tex2jax_process">$Q$</span>, and <span class="tex2jax_process">$X_1$</span>, as described above, where
+    <span class="tex2jax_process">$1 \leq K \leq T \leq
+    100$</span>, <span class="tex2jax_process">$1 &lt; P &lt; Q
+    &lt; 1\, 000$</span>, and <span class="tex2jax_process">$1 \leq
+    X_1 &lt; Q$</span>. Each of the next <span class="tex2jax_process">$T$</span> lines contains four
+    space-separated integers <span class="tex2jax_process">$W_0$</span>, <span class="tex2jax_process">$W_1$</span>, <span class="tex2jax_process">$W_2$</span> and <span class="tex2jax_process">$W_3$</span>, the weights of the strategies
+    of players <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$3$</span>, respectively, where
+    the <span class="tex2jax_process">$t^{\mathrm{th}}$</span> line
+    contains this weight information for the <span class="tex2jax_process">$t^{\mathrm{th}}$</span> tournament
+    (<span class="tex2jax_process">$1 \leq t \leq T$</span>). Each
+    weight is between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$100$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Output a single floating-point number: the probability that
+    Jimmy is perceived as a genius by the general public and
+    therefore be able to get his dream job — in other words,
+    the probability that Jimmy’s strategy correctly predicts the
+    winner of at least <span class="tex2jax_process">$K$</span> out
+    of the <span class="tex2jax_process">$T$</span> tournaments.
+    Your answer must have an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4 7 13 5
+1 2 3 4
+4 3 2 1
+2 2 2 2
+4 6 3 5
+</pre>
+</td>
+<td>
+<pre>
+0.2473950797
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Everybody loves easy problems. And no problem is easier than
+    the Fizz Buzz problem. Indeed, F in Finals stands for Fizz
+    Buzz!</p>
+<p>Let <span class="tex2jax_process">$F_0$</span> denote the
+    following string:</p>
+<pre>
+F_in_Finals_stands_for_Fizz_Buzz!
+</pre>
+<p>We can recursively generate <span class="tex2jax_process">$F_ i$</span> (for <span class="tex2jax_process">$i \geq 1$</span>) with the following
+    rule:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$F_ i$</span> is the
+        string obtained by replacing all characters <tt class="ttfamily">F</tt> in <span class="tex2jax_process">$F_{i-1}$</span> by <span class="tex2jax_process">$F_0$</span> <b class="bfseries">simultaneously</b>.</p>
+</li>
+</ul>
+<p>For example, <span class="tex2jax_process">$F_1$</span> is
+    the following string (without the line breaks):</p>
+<pre>
+F_in_Finals_stands_for_Fizz_Buzz!_in_
+F_in_Finals_stands_for_Fizz_Buzz!inals_stands_for_
+F_in_Finals_stands_for_Fizz_Buzz!izz_Buzz!  
+</pre>
+<p>And <span class="tex2jax_process">$F_2$</span> is the
+    following string (without the line breaks):</p>
+<pre>
+F_in_Finals_stands_for_Fizz_Buzz!_in_
+F_in_Finals_stands_for_Fizz_Buzz!inals_stands_for_
+F_in_Finals_stands_for_Fizz_Buzz!izz_Buzz!_in_
+F_in_Finals_stands_for_Fizz_Buzz!_in_
+F_in_Finals_stands_for_Fizz_Buzz!inals_stands_for_
+F_in_Finals_stands_for_Fizz_Buzz!izz_Buzz!inals_stands_for_
+F_in_Finals_stands_for_Fizz_Buzz!_in_
+F_in_Finals_stands_for_Fizz_Buzz!inals_stands_for_
+F_in_Finals_stands_for_Fizz_Buzz!izz_Buzz!izz_Buzz!
+</pre>
+<p>You can keep generating <span class="tex2jax_process">$F_
+    i$</span> for all non-negative integers <span class="tex2jax_process">$i$</span>. To test whether you understand
+    this operation, you should answer <span class="tex2jax_process">$Q$</span> questions <span class="tex2jax_process">$(X_ j, Y_ j)$</span>: what is the
+    <span class="tex2jax_process">$X_ j$</span>-th character of
+    <span class="tex2jax_process">$F_{Y_ j}$</span>?</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$Q$</span>, the number of questions you need
+    to answer (<span class="tex2jax_process">$1 \leq Q \leq 300\,
+    000$</span>).</p>
+<p>The next <span class="tex2jax_process">$Q$</span> lines of
+    input each contain two integers <span class="tex2jax_process">$X_ j$</span> and <span class="tex2jax_process">$Y_ j$</span> (<span class="tex2jax_process">$1 \leq X_ j \leq 10^{18}$</span>;
+    <span class="tex2jax_process">$0 \leq Y_ j \leq
+    10^{18}$</span>).</p>
+<h2>Output</h2>
+<p>Output a string of length <span class="tex2jax_process">$Q$</span>. The <span class="tex2jax_process">$j$</span>-th character of the string should
+    be the <span class="tex2jax_process">$X_ j$</span>-th character
+    of <span class="tex2jax_process">$F_{Y_ j}$</span>. If there
+    are less than <span class="tex2jax_process">$X_ j$</span>
+    characters in <span class="tex2jax_process">$F_{Y_ j}$</span>,
+    output the character <tt class="ttfamily">?</tt> instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+157 2
+71 1
+26 2
+128 1
+417 2
+29 0
+250 2
+63 1
+32 0
+34 0
+</pre>
+</td>
+<td>
+<pre>Fizz!Buzz?
+</pre>
+</td>
+</tr>
+</table>
+</div>

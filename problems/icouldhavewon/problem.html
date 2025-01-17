@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>“We will be closing in about 5 minutes. Thank you for
+    visiting the ICPC gym today.”</p>
+<p>With this announcement, Alice and Bob stopped playing their
+    rock-paper-scissors marathon in the middle of the <span class="tex2jax_process">$10$</span>th game. Each player scores a
+    point if their throw beats the other player’s throw. Each game
+    was played by the <em>first-to-11</em> rule, meaning that
+    whoever scores <span class="tex2jax_process">$11$</span> points
+    first wins the game. Today, Bob narrowly defeated Alice by a
+    single game; he scored 11 points first in five games, while
+    Alice only scored 11 points first in four games.</p>
+<p>After carefully inspecting how each game was played,
+    however, Alice realized that she could have won more games than
+    Bob if they played under slightly different rules, such as
+    <em>first-to-5</em> or <em>first-to-8</em>, instead of the
+    regular <em>first-to-11</em>.</p>
+<p>Given the sequence of points scored by Alice and Bob,
+    determine all values of <span class="tex2jax_process">$k$</span> such that Alice would have won
+    more games than Bob under the <em>first-to-</em><span class="tex2jax_process">$k$</span> rule.</p>
+<p>Both Alice and Bob start with zero points at the beginning
+    of a game. As soon as one player reaches <span class="tex2jax_process">$k$</span> points, that player wins the game,
+    and a new game starts. Alice wins a game if she scores
+    <span class="tex2jax_process">$k$</span> points before Bob
+    does. Neither player wins the game if it’s interrupted by the
+    gym closing before either player reaches <span class="tex2jax_process">$k$</span> points.</p>
+<h2>Input</h2>
+<p>The single line of input consists of a string of uppercase
+    letters “<tt class="ttfamily">A</tt>” or “<tt class="ttfamily">B</tt>”, denoting who scored each point from the
+    beginning of the rock-paper-scissors marathon. The length of
+    the string is between <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$2\, 000$</span> letters,
+    inclusive. “<tt class="ttfamily">A</tt>” means Alice scored the
+    point, “<tt class="ttfamily">B</tt>” means Bob scored the
+    point.</p>
+<h2>Output</h2>
+<p>On the first line, output the number of positive integers
+    <span class="tex2jax_process">$k$</span> for which a
+    <em>first-to-</em><span class="tex2jax_process">$k$</span> rule
+    would have made Alice win more games than Bob. If this number
+    isn’t zero, on the next line output all such values of
+    <span class="tex2jax_process">$k$</span> in increasing order,
+    separated by spaces.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>BBAAABABBAAABB
+</pre>
+</td>
+<td>
+<pre>3
+3 6 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>AABBBAAB
+</pre>
+</td>
+<td>
+<pre>2
+2 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,77 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/graduationguarantee/file/statement/en/img-0001.jpg" class="illustration" src="/problems/graduationguarantee/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Ready_for_final_exam_at_Norwegian_University_of_Science_and_Technology.jpg">
+        Picture</a> by Milford, public domain
+      </div>
+</div>
+<p>Gustav is studying to become an interpreter. In this line of
+    work, knowing several languages is a must, and Gustav is
+    already fluent in French, Mandarin, Nahuatl and even Finnish.
+    But there is one language that Gustav struggles with:
+    Norwegian. Before Gustav can graduate, he must complete the
+    infamous Norwegian Conclusive Proficiency Check.</p>
+<p>This exam consists of <span class="tex2jax_process">$n$</span> yes/no questions. Answering
+    correctly gives <span class="tex2jax_process">$+1$</span>
+    point, answering incorrectly gives <span class="tex2jax_process">$-1$</span> point, and not answering gives
+    <span class="tex2jax_process">$0$</span> points. To pass the
+    exam, at least <span class="tex2jax_process">$k$</span> points
+    are needed. For each question, Gustav has a guess that he knows
+    is correct with probability <span class="tex2jax_process">$p_
+    i$</span> (<span class="tex2jax_process">$0.5 \leq p_ i \leq
+    1$</span>). Note that <span class="tex2jax_process">$p_ i \geq
+    0.5$</span>, because otherwise guessing the opposite would be
+    better.</p>
+<p>What is the maximum possible probability of passing the
+    exam, assuming we carefully choose which questions to answer
+    and which ones to leave unanswered? Note that unlike a
+    programming contest, the exam does not have instant feedback.
+    So Gustav will answer the questions, hand in his answers, and
+    only later be told the results.</p>
+<h2>Input</h2>
+<p>The first line contains the two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k \leq n \leq 5000$</span>). The second line contains
+    <span class="tex2jax_process">$n$</span> real numbers
+    <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$0.5 \leq p_ i \leq 1.0$</span>). These
+    numbers will have at most <span class="tex2jax_process">$6$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>Output the probability that we pass the exam. Your answer
+    will be considered correct if it has an absolute or relative
+    error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+0.5 0.5 0.5
+</pre>
+</td>
+<td>
+<pre>0.125
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 1
+0.9 0.5 0.9 0.9
+</pre>
+</td>
+<td>
+<pre>0.972
+</pre>
+</td>
+</tr>
+</table>
+</div>

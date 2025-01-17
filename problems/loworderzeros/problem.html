@@ -1,0 +1,39 @@
+<div class="problembody">
+<p>When you compute a large, factorial number, it has a long
+    string of low-order zeros at the end. This makes sense; every
+    time you multiply in something like a <span class="tex2jax_process">$10$</span> or a <span class="tex2jax_process">$20$</span>, you are sure to pick up another
+    low-order zero. Thus, it’s easy to guess the low-order digit of
+    something like <span class="tex2jax_process">$3\, 249!$</span>.
+    It’s a little harder to guess what the lowest-order
+    <em>non-zero digit</em> will be. Write a program to do
+    that.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$1\,
+    000$</span> test cases, one per line. Each test case is a
+    single positive integer <span class="tex2jax_process">$i \le
+    10^6$</span>. Input ends with a value of zero.</p>
+<h2>Output</h2>
+<p>For each test case, print out the value of the rightmost
+    (lowest-order) non-zero digit of <span class="tex2jax_process">$i!$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+25
+492
+0
+</pre>
+</td>
+<td>
+<pre>6
+4
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,103 @@
+<div class="problembody">
+<p>You and your friend are playing a game which you call
+    <em>Ninety-nine</em>. You start, by saying either the number
+    <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span>. You then take turns, starting
+    with your friend, increasing this number by either <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> in each step. The first player who
+    gets to say the number <span class="tex2jax_process">$99$</span> wins!</p>
+<p>Write a program which plays this game for you and wins.</p>
+<h2>Interactivity</h2>
+<p>This problem is interactive.</p>
+<p>Your program should start by printing either the number
+    <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> on a single line. The grader will
+    then read this number (call it <span class="tex2jax_process">$x$</span>), and in return print a line with
+    either <span class="tex2jax_process">$x+1$</span> or
+    <span class="tex2jax_process">$x+2$</span>, which can be read
+    by your program. Your program should then print a number which
+    is <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> higher, and so on.</p>
+<p>If you manage to win the game and print <span class="tex2jax_process">$99$</span>, your program should then exit
+    normally (with status code 0). On the other hand, if your
+    program reads <span class="tex2jax_process">$99$</span>, it
+    should also exit normally; the test group will then get the
+    verdict Wrong Answer. Printing an invalid value (including
+    numbers larger than <span class="tex2jax_process">$99$</span>)
+    will also result in Wrong Answer, assuming your program exits
+    afterwards. If your program does not exit as it should, its
+    verdict may be either Wrong Answer, Runtime Error or Time Limit
+    Exceeded, depending on exact circumstances.</p>
+<p>You <em>must</em> make sure to flush standard output before
+    reading the grader’s response, or else your program will get
+    judged as Time Limit Exceeded. This works as follows in the
+    supported languages:</p>
+<ul class="itemize">
+<li>
+<p>Java: <tt class="ttfamily">System.out.println()</tt>
+        flushes automatically.</p>
+</li>
+<li>
+<p>Python: <tt class="ttfamily">print()</tt> flushes
+        automatically.</p>
+</li>
+<li>
+<p>C++: <tt class="ttfamily">cout &lt;&lt; endl;</tt>
+        flushes, in addition to writing a newline. If using printf,
+        <tt class="ttfamily">fflush(stdout)</tt>.</p>
+</li>
+<li>
+<p>Pascal: <tt class="ttfamily">Flush(Output)</tt>.</p>
+</li>
+</ul>
+<h2>Constraints</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group. Your final score will
+    be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Your friend always increases the number by 1.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Your friend always increases the number by 2 (unless
+          at 98).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Your friend plays randomly, with each option having
+          50% probability (unless at 98).</p>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>You have just completed a brave journey to see <em>The
+    Wizard of Odds</em>, who agrees to grant you any wish, so long
+    as you can complete the following puzzle:</p>
+<p>The Wizard starts by telling you two integers: <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span>. He then secretly selects a number
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> (inclusive), and does not tell you
+    this number.</p>
+<p>Your goal is to correctly guess the secret number. Before
+    guessing, you are allowed to ask <span class="tex2jax_process">$K$</span> “true/false” questions about the
+    number, for example, <em>“Is the number even?”</em> or <em>“Is
+    the number between <span class="tex2jax_process">$7$</span> and
+    <span class="tex2jax_process">$10$</span>?”</em>, or <em>“Is
+    the number <span class="tex2jax_process">$17$</span> or
+    <span class="tex2jax_process">$22$</span>?”</em>, or <em>“Is
+    the number prime?”</em>. And the Wizard will answer with “true”
+    or “false” to each question. The Wizard will always answer
+    honestly. After answering the <span class="tex2jax_process">$K$</span> questions, you must guess the
+    number. If you win (guess the number correctly), you will be
+    granted your wish; but if the Wizard wins (you guess
+    incorrectly), you will be turned into a flying monkey.</p>
+<p>(Formally, you can think of a “question” as a function from
+    <span class="tex2jax_process">$1, 2, \ldots , N$</span> to
+    <em>true, false</em>, and the Wizard will answer by telling you
+    whether the value of the function is <em>true</em> or
+    <em>false</em> for his secret number.)</p>
+<p>Assuming that you have been told <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span>, can you always exactly determine
+    the Wizard’s secret number (and guarantee that you win) using
+    only <span class="tex2jax_process">$K$</span> questions?</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing two integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 10^{101}$</span>, <span class="tex2jax_process">$0
+    \leq K \leq N$</span>), separated by a single space.</p>
+<p><em>Note: These inputs might NOT fit into a <span class="tex2jax_process">$64$</span>-bit integer.</em></p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">Your wish is granted!</tt>”
+    (without the quotes) if it is possible for you to guarantee
+    that you win the game (regardless of the number the Wizard
+    picks). Otherwise, print “<tt class="ttfamily">You will become
+    a flying monkey!</tt>” (without the quotes) if it is not
+    possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 3
+</pre>
+</td>
+<td>
+<pre>
+Your wish is granted!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1234567890987654321 2
+</pre>
+</td>
+<td>
+<pre>
+You will become a flying monkey!
+</pre>
+</td>
+</tr>
+</table>
+</div>

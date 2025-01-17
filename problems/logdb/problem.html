@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>A LogDB database is filled with facts. A fact is a name with
+    a body consisting of a parenthesized list of names. This is
+    similar to a function call:</p>
+<pre>
+fact1(arg1,arg2,arg_3,4,4) thing(p1,arg2,p3)
+</pre>
+<p>where <tt>fact1</tt> is the name of the fact and the list of
+    names in the body are the arguments of the fact. <tt>thing</tt>
+    is another fact.</p>
+<p>The names in the list are separated by commas and optional
+    whitespace. There will be at least one name in the list.</p>
+<p>Names consist of alphanumeric characters (a–z, A–Z, 0–9)
+    plus ‘<tt>_</tt>’. However, the name of a fact and the names in
+    the body cannot start with an ‘<tt>_</tt>’. When comparing
+    names, case is considered important.</p>
+<p>Names, parentheses, and commas may be preceded and followed
+    by whitespace. However a fact or query cannot be split across
+    lines.</p>
+<p>Facts with different numbers of arguments are different
+    facts.</p>
+<p>A fact may appear multiple times in the database.</p>
+<p>Queries are like facts except the argument list can contain
+    variables. Variables are names that start with
+    ‘<tt>_</tt>’.</p>
+<p>A query searches the database for facts with the same name
+    as the query that have the same number of arguments as the
+    query and where the names in the fact body match the names in
+    the query body in their respective positions.</p>
+<p>A variable consisting of only ‘<tt>_</tt>’ is special and
+    will match any name.</p>
+<p>A variable other than ‘<tt>_</tt>’ will also match any name
+    but if that variable appears more than once in a query, the
+    names in the fact must be the same.</p>
+<p>A query:</p>
+<pre>
+fact1(arg1,_,_,_check,_check)
+</pre>
+<p>will match <tt>fact1(arg1,arg2,arg_3,4,4)</tt>.</p>
+<p>Variables are only defined in the query they appear in. They
+    are not necessarily related if they are in different
+    queries.</p>
+<h2>Input</h2>
+<p>The input consists of two sections: facts and queries.
+    Judged data has no syntax errors.</p>
+<p>The fact section consists of a series of lines of at most
+    <span class="tex2jax_process">$200$</span> characters. That
+    section is terminated by a blank line. Each line consists of
+    facts which may (or may not) be separated by whitespace. The
+    fact section will consist of no more than <span class="tex2jax_process">$200$</span> lines.</p>
+<p>The query section consists of a series of lines of at most
+    <span class="tex2jax_process">$200$</span> characters. That
+    section is terminated by end-of-file. Each line is a query. The
+    query section will consist of no more than <span class="tex2jax_process">$200$</span> lines.</p>
+<h2>Output</h2>
+<p>For each query print the number of facts returned by the
+    query as an integer with no leading or trailing whitespace and
+    no unnecessary leading zeros. If a matching fact appears
+    multiple times in the database, count each occurrence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>test(arg1, arg2,arg3) test(1,2,3,not4)5(five) five_seven(john_smith,10_17_57)
+foo(1,2,3,4) foo(5,6,7,8) foo(1,2,7,8)arc(80) foo(abc,xyz)
+bar(1,2) bar (7,8) zoom(8,7)
+arc(80) nofoo(alpha,d1,d2,d1,d4,d1)
+foo(bar,spam) foo(more,less)
+
+test(_,_,_,_)
+arc(80)
+  foo(bar,_)
+  foo(_,spam)
+  foo(_,less)
+  nofoo(_,_p1,_,_p1,_,_p1)
+  foo(bar,less)
+foo(_,_,_,_)
+foo(_,_,_30,_40) 
+foo(_,_,_30,_40)
+foo(_,_,_30,_40)
+foo(_x,_,_30,_40)
+foo(_,_,_30,_40)
+</pre>
+</td>
+<td>
+<pre>1
+2
+1
+1
+1
+1
+0
+3
+3
+3
+3
+3
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,73 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/treequivalence/file/statement/en/img-0001.png" class="illustration" src="/problems/treequivalence/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The following grammar describes a textual notation for a
+    tree with (not necessarily unique) vertex labels:</p>
+<pre>
+   tree ::= label
+   tree ::= label ( subtrees )
+   subtrees ::= tree
+   subtrees ::= subtrees , tree
+   label ::= A | B | C | ... | Z
+</pre>
+<p>That is, the representation of a tree consists of a label
+    (which is an uppercase letter) or a label followed by a
+    bracketed ordered list of trees separated by commas.</p>
+<p>In order to draw such a tree on paper, we must write each
+    label on the page, such that the labels for the subtrees of a
+    vertex are positioned counter-clockwise about the vertex. The
+    labels must be positioned such that non-intersecting line
+    segments connect each vertex to each of its subtrees. That is
+    to say, we draw the normal planar representation of the tree,
+    preserving the order of subtrees. Beyond these constraints, the
+    position, shape, and size of the representation is
+    arbitrary.</p>
+<p>For example, a possible graphical representation for
+    <tt class="ttfamily">A(B(C,D),E)</tt> is shown in
+    Figure 1.</p>
+<div class="figure" id="fig:treequiv">
+<center>
+<img alt="\includegraphics[width=0.15\textwidth ]{fig}" src="/problems/treequivalence/file/statement/en/img-0002.png" style="width:15.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Graphical representation of <tt class="ttfamily">A(B(C,D),E)</tt>
+</div>
+</center>
+</div>
+<p>Given the textual representation for two trees, you are to
+    determine whether or not they are equivalent. That is, do they
+    share a common paper representation?</p>
+<h2>Input</h2>
+<p>The first line of input contains <span class="tex2jax_process">$t \le 400$</span>, the number of test cases.
+    Each test case consists of two lines, each specifying a tree in
+    the notation described above. Each line will contain at most
+    <span class="tex2jax_process">$200$</span> characters, and no
+    white space.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing “same” or
+    “different” as appropriate.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+A(B(C,D),E)
+E(A,B(C,D))
+A(B(C,D),E)
+E(A(B(C,D)))
+</pre>
+</td>
+<td>
+<pre>
+different
+same
+</pre>
+</td>
+</tr>
+</table>
+</div>

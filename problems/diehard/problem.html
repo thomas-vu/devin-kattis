@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/diehard/file/statement/en/img-0001.png" class="illustration" src="/problems/diehard/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Miwin_Wuerfel_Titan.gif">
+        Miwin’s dice</a> by Dr.M.Winkelmann, public domain
+      </div>
+</div>
+<p>John and Hans are playing a game involving 3 dice. Even
+    though they are all 6-sided, they are not guaranteed to be
+    identical.</p>
+<p>First John picks one of the dice and then Hans picks one of
+    the remaining two. Then they both roll their chosen die. If
+    they roll the same number, they both re-roll their die.
+    Otherwise the winner is the one who rolled the highest
+    number.</p>
+<p>In case neither John or Hans can win with their chosen dice,
+    they do not bother to re-roll the dice indefinitely and no
+    winner is declared.</p>
+<p>Can you help John pick a die that guarantees that he wins
+    with a probability of at least <span class="tex2jax_process">$\frac{1}{2}$</span>?</p>
+<h2>Input</h2>
+<p>The input consists of three lines. Line <span class="tex2jax_process">$i$</span> contains <span class="tex2jax_process">$6$</span> positive integers <span class="tex2jax_process">$x_ j$</span> (<span class="tex2jax_process">$1 \leq x_ j \leq 1000$</span>), describing
+    the sides of the <span class="tex2jax_process">$i$</span>’th
+    die.</p>
+<h2>Output</h2>
+<p>Output the smallest <span class="tex2jax_process">$i \in \{
+    1, 2, 3\} $</span>, such that John can pick die <span class="tex2jax_process">$i$</span> and be guaranteed to win with
+    probability at least <span class="tex2jax_process">$\frac{1}{2}$</span>. If no such die exists,
+    output “No dice”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 3 4 5 6
+1 2 3 4 5 6
+1 2 3 4 5 6
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 1 1 1 1
+2 2 2 2 2 2
+3 3 3 3 3 3
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 4 4 9 9
+1 1 6 6 8 8
+7 7 5 5 3 3
+</pre>
+</td>
+<td>
+<pre>No dice
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 1 1 1 1
+2 2 2 2 2 2
+2 2 2 2 2 2
+</pre>
+</td>
+<td>
+<pre>No dice
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,182 @@
+<div class="problembody">
+<p>An infinite number of people are standing in a line, which
+    extends infinitely to both left and right. <span class="tex2jax_process">$P$</span> different people are selected to
+    get one French fry each. Since this is somewhat unfair,
+    everybody simultaneously takes all their French fries and split
+    them in two, giving half to the person on the left and half to
+    the person on the right. Then they repeat this, for
+    <span class="tex2jax_process">$T-1$</span> more time steps. If
+    a person after these <span class="tex2jax_process">$T$</span>
+    time steps has at least <span class="tex2jax_process">$L$</span> French fries (where <span class="tex2jax_process">$L$</span> is not necessarily an integer),
+    they will be full. How many people will become full?</p>
+<h2>Input</h2>
+<p>The first line of input contains the two integers
+    <span class="tex2jax_process">$P$</span> and <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1
+    \le P \le 3\cdot 10^5$</span>, <span class="tex2jax_process">$1
+    \le T \le 5\cdot 10^7$</span>), and the floating point number
+    <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$10^{-4} \le L \le 10$</span>). The second
+    line of input contains <span class="tex2jax_process">$P$</span>
+    distinct integers: the indices of the people who initially get
+    French fries. All indices of people will be between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10^7$</span>.</p>
+<h2>Output</h2>
+<p>Print one integer: the number of people who will end up with
+    at least <span class="tex2jax_process">$L$</span> fries.</p>
+<p>An answer <span class="tex2jax_process">$X$</span> will be
+    treated as correct if it is between the number of people who
+    get at least <span class="tex2jax_process">$0.8L$</span> fries,
+    and the number who get at least <span class="tex2jax_process">$1.2L$</span> fries.</p>
+<h2>Grading</h2>
+<p>Your solution will be graded on a set of subtasks. A subtask
+    will consist of multiple test cases. To get the points for a
+    subtask, your solution must pass all test cases that are part
+    of the subtask.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Subtask</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td colspan="2" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$P \le 100$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 100$</span>, all
+          initial indices are between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$P \le 500$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>17</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$P \le 3\cdot
+          10^5$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$P \le 100$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$P \le 500$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 5\cdot
+          10^7$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>26</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$P \le 3\cdot
+          10^5$</span>,</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$T \leq 5\cdot
+          10^7$</span></p>
+</td>
+</tr>
+</table>
+<h2>Explanation of examples</h2>
+<p>In the first example, the people at indices <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2$</span> initially have one French fry
+    each. After they split these into two and give half to their
+    neighbors, the people at indices <span class="tex2jax_process">$-1$</span> and <span class="tex2jax_process">$3$</span> will have <span class="tex2jax_process">$0.5$</span> fries, while the person at index
+    <span class="tex2jax_process">$1$</span> will have <span class="tex2jax_process">$1$</span>. The limit for becoming full is
+    <span class="tex2jax_process">$0.74$</span> French fries; thus,
+    person <span class="tex2jax_process">$1$</span> is the only one
+    who gets full.</p>
+<p>In the second example, the answer <span class="tex2jax_process">$13$</span> is accurate, but any output
+    between <span class="tex2jax_process">$12$</span> and
+    <span class="tex2jax_process">$15$</span> would be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1 0.74
+0 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 100 0.1
+1 2 3 11
+</pre>
+</td>
+<td>
+<pre>13
+</pre>
+</td>
+</tr>
+</table>
+</div>

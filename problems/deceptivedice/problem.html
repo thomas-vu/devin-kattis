@@ -1,0 +1,111 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/deceptivedice/file/statement/en/img-0001.png" class="illustration" src="/problems/deceptivedice/file/statement/en/img-0001.png"/>
+<div class="description">
+        https://pngimg.com/download/54807
+      </div>
+</div>
+<p>Recently your town has been infested by swindlers who
+    convince unknowing tourists to play a simple dice game with
+    them for money. The game works as follows: given is an
+    <span class="tex2jax_process">$n$</span>-sided die, whose sides
+    have <span class="tex2jax_process">$1, 2, \ldots , n$</span>
+    pips, and a positive integer <span class="tex2jax_process">$k$</span>. You then roll the die, and then
+    have to make a choice. Option <span class="tex2jax_process">$1$</span> is to stop rolling. Option
+    <span class="tex2jax_process">$2$</span> is to reroll the die,
+    with the limitation that the die can only be rolled
+    <span class="tex2jax_process">$k$</span> times in total. Your
+    score is the number of pips showing on your final roll.</p>
+<p>Obviously the swindlers are better at this game than the
+    tourists are. You, proud supporter of the Battle Against
+    Probabilistic Catastrophes, decide to fight this problem not by
+    banning the swindlers but by arming the tourists with
+    information.</p>
+<p>You create pamphlets on which tourists can find the maximum
+    expected score for many values of <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>. You are sure that the swindlers
+    will soon stop their swindling if the tourists are better
+    prepared than they are!</p>
+<p>The layout of the flyers is done, and you have distribution
+    channels set up. All that is left to do is to calculate the
+    numbers to put on the pamphlet.</p>
+<p>Given the number of sides of the die and the number of times
+    you are allowed to roll, calculate the expected (that is,
+    average) score when the game is played optimally.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>A single line with two integers <span class="tex2jax_process">$1\leq n\leq 100$</span>, the number of
+        sides of the die, and <span class="tex2jax_process">$1\leq
+        k\leq 100$</span>, the number of times the die may be
+        rolled.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the expected score when playing optimally. Your
+    answer should have an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-7}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+</pre>
+</td>
+<td>
+<pre>1.875
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 2
+</pre>
+</td>
+<td>
+<pre>4.25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>8 9
+</pre>
+</td>
+<td>
+<pre>7.268955230712891
+</pre>
+</td>
+</tr>
+</table>
+</div>

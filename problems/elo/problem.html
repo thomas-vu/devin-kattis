@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/elo/file/statement/en/img-0001.jpg" class="illustration" src="/problems/elo/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>Arnar is an impressive League of Legends player and
+    strives to be even better. Every player in League of Legends
+    has an Elo score that signifies how good they are at the game,
+    the higher the better. Arnar has Elo score <span class="tex2jax_process">$x$</span> but wants to maximize it.
+    <p>Players in League of Legends play against just anyone, they
+    can only play against others with a similar Elo score. Arnar
+    has made a list of <span class="tex2jax_process">$n$</span>
+    players, where Arnar can play against the <span class="tex2jax_process">$i$</span>-th player only if Arnar’s Elo is
+    in the interval <span class="tex2jax_process">$[L_i,
+    R_i]$</span>. Every time Arnar plays against the <span class="tex2jax_process">$i$</span>-th player his Elo increases by
+    <span class="tex2jax_process">$a_i$</span>, because he knows he
+    can beat all of these players.</p>
+<p>Arnar can play against the same player as often as he likes
+    as long as his Elo stays in the corresponding interval.</p>
+<p>Given the information on these <span class="tex2jax_process">$n$</span> players, what’s the highest Elo
+    Arnar can achieve?</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$1 \le n \le 1\, 000$</span>, the number of
+    players and <span class="tex2jax_process">$1 \le x \le 5\,
+    000$</span>, Arnar’s initial Elo score. The next <span class="tex2jax_process">$n$</span> lines contain three
+    integers<span class="tex2jax_process">$1 \le L_i \le R_i \le
+    5\, 000$</span>, <span class="tex2jax_process">$1 \le a_i \le
+    500$</span>.</p>
+<h2>Output</h2>
+<p>Print a single integer, the highest Elo Arnar can
+    achieve.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_i$</span> is the same
+          for all <span class="tex2jax_process">$i$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+10 15 3
+10 13 2
+10 11 1
+</pre>
+</td>
+<td>
+<pre>18
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 10
+10 11 5
+15 16 5
+20 21 30
+49 49 100
+</pre>
+</td>
+<td>
+<pre>50
+</pre>
+</td>
+</tr>
+</table>
+</div>

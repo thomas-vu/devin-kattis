@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/babylonian/file/statement/en/img-0001.jpg" class="illustration" src="/problems/babylonian/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by Sugarfish (<a href="https://commons.wikimedia.org/wiki/File:Babylonian_numerals.jpg">Wikimedia
+        Commons</a>), Public Domain
+      </div>
+</div>
+<p>More than <span class="tex2jax_process">$4\, 000$</span>
+    years ago, the ancient Babylonians used a numerical system that
+    is well known for being the first positional numerical system.
+    In such a system, a non-negative integer is represented by a
+    sequence of digits such that the value of a digit depends both
+    on itself and on its position within the sequence. The
+    Babylonians used a base-<span class="tex2jax_process">$60$</span> system known as sexagesimal (not
+    unlike our own base-<span class="tex2jax_process">$10$</span>
+    decimal system) where each ‘digit’ can take values between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$59$</span>, inclusive. (The Babylonians
+    didn’t have a digit to represent <span class="tex2jax_process">$0$</span>; instead they would just leave the
+    digit position empty.) Akin to the Egyptians at the time, the
+    Babylonians carved their equations in solid clay, which allows
+    us to read them thousands of years later.</p>
+<p>Your history professor, Dr. X, has asked you to decipher the
+    Babylonian numbers he has found during a recent excavation and
+    to convert them into our own decimal numerical system. As you
+    are a competent translator, you have no problem deciphering the
+    Babylonian writing, but you now need to write a program that
+    takes the sexagesimal notation and converts it to decimal.</p>
+<p>Fortunately, each clay tablet discovered by Dr. X contains
+    numbers in a clean format where digits corresponding to
+    consecutive powers of <span class="tex2jax_process">$60$</span>
+    are separated by commas, with the most significant digit on the
+    left. For instance, one tablet contains the Babylonian number
+    <span class="tex2jax_process">$1{,}24{,}9$</span> in
+    sexagesimal, which converts to <span class="tex2jax_process">$5\, 049$</span> in decimal, since
+    <span class="tex2jax_process">$1 \cdot 60^2 + 24 \cdot 60^1 + 9
+    \cdot 60^0 = 5\, 049$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 20$</span>), the number of test cases to
+    follow.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines represents a single tablet
+    containing a number in sexagesimal format. This number is a
+    non-empty sequence of digits separated by commas. Nonzero
+    digits can be any integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$59$</span> (inclusive), and <span class="tex2jax_process">$0$</span> is represented by an empty string.
+    The sexagesimal number does not begin with a comma, contains at
+    least one nonzero digit, and consists of <span class="tex2jax_process">$D$</span> digits in total, where
+    <span class="tex2jax_process">$1 \leq D \leq 8$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing the decimal
+    representation of the sexagesimal number.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+40
+1,24,9
+1,,,
+</pre>
+</td>
+<td>
+<pre>
+40
+5049
+216000
+</pre>
+</td>
+</tr>
+</table>
+</div>

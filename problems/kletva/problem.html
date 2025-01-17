@@ -1,0 +1,119 @@
+<div class="problembody">
+<p>As punishment for destroying half of his city with his
+    monster truck, Mirko now has to pay off his dept to society. He
+    works as an assistant for a famous archaeologist. One of his
+    duties include crafting keys for ancient document boxes.</p>
+<p>In ancient times document boxes were locked using elaborate
+    mechanisms with interesting locks. Each lock is <span class="tex2jax_process">$L$</span> centimeters long and <span class="tex2jax_process">$W$</span> centimeters wide and consists of
+    three parts, the upper edge, the lower edge and the empty area
+    between them. Both edges can be represented as a sequence of
+    <span class="tex2jax_process">$L$</span> nonnegative integers:
+    <span class="tex2jax_process">$r_1,r_2,r_3,\ldots , r_
+    L$</span>. Each number in sequence represents the width of edge
+    at that point.</p>
+<p>The key for each lock is a small clay tab, fitting perfectly
+    in the area between edges. The picture in Figure 1 shows a
+    <span class="tex2jax_process">$7$</span> cm long, <span class="tex2jax_process">$8$</span> cm wide lock along with the
+    corresponding key.</p>
+<div class="figure" id="fig:sample">
+<center>
+<img alt="\includegraphics[width=.5\textwidth ]{sample.png}" src="/problems/kletva/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample 1
+        </div>
+</center>
+</div>
+<p>The sequence representing the upper edge is <span class="tex2jax_process">$[2, 1, 3, 2, 3, 2, 3]$</span>, and the
+    sequence representing the lower edge is <span class="tex2jax_process">$[3, 4, 2, 3, 2, 3, 4]$</span>. Mirko noticed
+    that some keys open more than one lock. Making keys is tedious
+    work so Mirko asked you to find out what is the minimal number
+    of different keys he needs to make and still be able to open
+    all of the locks.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers,
+    <span class="tex2jax_process">$W$</span> (<span class="tex2jax_process">$1 \leq W \leq 10^8$</span>), the width of
+    all locks, <span class="tex2jax_process">$L$</span>
+    (<span class="tex2jax_process">$1 \leq L \leq 1\, 000$</span>)
+    the length of all locks, and <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 100$</span>), the number of different locks.</p>
+<p>The next <span class="tex2jax_process">$2N$</span> lines
+    describe all locks. Each line contains exactly <span class="tex2jax_process">$L$</span> numbers smaller than <span class="tex2jax_process">$W$</span>. Each pair of lines describes one
+    lock. The first line in one pair describes the upper edge, and
+    the second line the lower edge. There shall always be at least
+    <span class="tex2jax_process">$1$</span> cm of empty space
+    between both edges on all locks.</p>
+<h2>Output</h2>
+<p>The first and only line of input should contain a single
+    integer, the minimal number of different keys Mirko needs to
+    craft.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 7 2
+2 1 3 2 3 2 3
+3 4 2 3 2 3 4
+3 2 4 3 4 3 4
+2 3 1 2 1 2 3
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 4 4
+3 3 3 3
+3 3 3 3
+2 2 2 2
+4 4 4 4
+1 2 3 4
+4 3 2 1
+1 1 1 1
+5 5 5 5
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000000 2 2
+88888888 88888888
+4 4
+4 4
+88888888 88888888
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

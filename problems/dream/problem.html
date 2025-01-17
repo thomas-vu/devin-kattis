@@ -1,0 +1,159 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/dream/file/statement/en/img-0001.png" class="illustration" src="/problems/dream/file/statement/en/img-0001.png"/>
+<div class="description">
+        Picture in Public Domain via Wikimedia Commons
+      </div>
+</div>A common plot device in story-telling is the “All Just A
+    Dream” trope. Typical symptoms of this trope being used are
+    talking lions, main characters dying, yodeling aliens on
+    monocycles, and a general plethora of weird events. Then, of
+    course, someone wakes up and it is revealed that everything
+    that happened during the entire season did in fact not happen
+    at all. It was All Just A Dream (or some kind of
+    hallucination), and the days of our lives spent watching all
+    those episodes are lost forever. In order to cause further
+    confusion and uncertainty, this can also be done in layers,
+    with characters having dreams within dreams within dreams, and
+    so on.
+
+    <p>When the All Just A Dream trick is taken too far and gets
+    used too often, it can get difficult to keep track of what has
+    actually happened. This is where you enter the picture. You
+    will be given a list of events, dreams, and scenarios. Each
+    scenario specifies some events that have happened and some
+    others that have not happened. Your job is to determine for
+    each scenario whether that scenario is possible (possibly using
+    the All Just A Dream trick).</p>
+<h2>Input</h2>
+<p>The first line of input consists of an integer <span class="tex2jax_process">$0 \le n \le 50\, 000$</span>, the number of
+    events, dreams and scenarios. Then follow <span class="tex2jax_process">$n$</span> lines, giving the events, dreams,
+    and scenarios in chronological order. Each line is in one of
+    the following forms:</p>
+<ul class="itemize">
+<li>
+<p>An event line is of the form “<tt class="ttfamily">E
+        <span class="tex2jax_process">$e$</span></tt>”, indicating
+        that event <span class="tex2jax_process">$e$</span> happens
+        (see below for format of <span class="tex2jax_process">$e$</span>).</p>
+</li>
+<li>
+<p>A dream line is of the form “<tt class="ttfamily">D
+        <span class="tex2jax_process">$r$</span></tt>”, indicating
+        that the last <span class="tex2jax_process">$r$</span>
+        events that happened were All Just A Dream. Note that these
+        events are now considered to not have happened, so they
+        should not be counted when processing subsequent <tt class="ttfamily">D</tt> lines.</p>
+</li>
+<li>
+<p>A scenario line is of the form “<tt class="ttfamily">S
+        <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$e_1$</span> <span class="tex2jax_process">$\ldots $</span> <span class="tex2jax_process">$e_ k$</span></tt>”, where <span class="tex2jax_process">$1 \le k \le 30$</span> is an integer
+        giving the number of events and <span class="tex2jax_process">$e_1, \ldots , e_ k$</span> is the list
+        of events of the scenario. In a scenario, each event may be
+        prefixed with a ‘<tt class="ttfamily">!</tt>’, indicating
+        that the event did <em>not</em> happen in this
+        scenario.</p>
+</li>
+</ul>
+<p>Events are strings containing at most <span class="tex2jax_process">$20$</span> characters and using only the
+    characters ‘<tt class="ttfamily">a</tt>’-‘<tt class="ttfamily">z</tt>’ and underscores (‘<tt class="ttfamily">_</tt>’). For ‘<tt class="ttfamily">D</tt>’ lines,
+    you can assume that <span class="tex2jax_process">$r$</span> is
+    an integer between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$R$</span>, where <span class="tex2jax_process">$R$</span> is the total number of events that
+    have happened so far (and that have not turned out to be a
+    dream). For ‘<tt class="ttfamily">E</tt>’ lines, you can assume
+    that <span class="tex2jax_process">$e$</span> is not an event
+    that has already happened, except if the previous occurence of
+    the event turned out to be a dream, in which case it can happen
+    again.</p>
+<h3>Warning</h3>
+<p>This problem has somewhat large amounts of input and output.
+    We recommend you to make sure that your input and output are
+    properly buffered in order to make the most of the few seconds
+    of execution time that we give you.</p>
+<h2>Output</h2>
+<p>For each scenario in the input, output a line as
+    follows:</p>
+<ul class="itemize">
+<li>
+<p>“<tt class="ttfamily">Yes</tt>” if the given scenario is
+        consistent with what has happened so far.</p>
+</li>
+<li>
+<p>“<tt class="ttfamily"><span class="tex2jax_process">$r$</span> Just A Dream</tt>” if the
+        given scenario would be consistent with what has happened
+        so far, provided a “<tt class="ttfamily">D <span class="tex2jax_process">$r$</span></tt>” line had occurred just
+        before the scenario. If there are many possible values of
+        <span class="tex2jax_process">$r$</span>, choose the
+        smallest value. Note that you should not consider this
+        hypothetical “<tt class="ttfamily">D <span class="tex2jax_process">$r$</span></tt>” line to have occurred
+        (as illustrated by sample input 2 below).</p>
+</li>
+<li>
+<p>“<tt class="ttfamily">Plot Error</tt>” otherwise.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+E business_as_usual
+E bobby_dies
+S 1 bobby_died
+E stuff_happens
+E jr_does_bad_things
+S 2 !bobby_dies business_as_usual
+E it_goes_on_and_on
+D 4
+S 1 !bobby_dies
+S 2 !bobby_dies it_goes_on_and_on
+</pre>
+</td>
+<td>
+<pre>
+Plot Error
+3 Just A Dream
+Yes
+Plot Error
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+S 1 !something
+E one
+E two
+E three
+E four
+E five
+S 3 three !four one
+D 1
+S 3 three !four one
+D 1
+S 3 three !four one
+</pre>
+</td>
+<td>
+<pre>
+Yes
+2 Just A Dream
+1 Just A Dream
+Yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

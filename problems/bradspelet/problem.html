@@ -1,0 +1,137 @@
+<div class="problembody">
+<p>Ann-Charlotte and Berit have invented their own board game.
+    The game is played with a board of size <span class="tex2jax_process">$N \times M$</span> and a chainsaw, and is
+    intended for two players. The players take turns making a move
+    until one of them cannot make a move, that player loses. A move
+    works the following way:</p>
+<p>The player who’s turn it is chooses a horizontal or vertical
+    line, and splits the board along it into two non-empty parts.
+    This can only be done at integer coordinates (so that the two
+    resulting board pieces have integer dimensions). The other
+    player then chooses which of the pieces the game should
+    continue on, while the other board piece is thrown away. Since
+    the dimensions always have to be integers, the loser will
+    always be the one who’s turn it is to use the chainsaw when the
+    board has size <span class="tex2jax_process">$1 \times
+    1$</span>.</p>
+<p>Given the size of the original board, and the fact that
+    Ann-Charlotte always starts, can you determine who wins if both
+    players play optimally?</p>
+<div class="figure" id="overflow">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{bradspelet.png}" src="/problems/bradspelet/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An illustration of the first example
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input consists of one line containing the two numbers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \le N,M \le 100$</span>).</p>
+<h2>Output</h2>
+<p>Output the letter “<tt class="ttfamily">A</tt>” if
+    Ann-Charlotte wins and “<tt class="ttfamily">B</tt>” if Berit
+    wins, given that they both play optimally. More precisely, if
+    Ann-Charlotte can win no matter how Berit plays you should
+    write “<tt class="ttfamily">A</tt>”, otherwise you should write
+    “<tt class="ttfamily">B</tt>”.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on several groups of test
+    cases. To get points for a group you need to pass all the tests
+    of that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, M \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$80$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1</h2>
+<p>In the first example <span class="tex2jax_process">$A$</span> wins by splitting the board into
+    two pieces of size <span class="tex2jax_process">$1 \times
+    3$</span>. No matter what <span class="tex2jax_process">$B$</span> does afterwards, <span class="tex2jax_process">$A$</span> will get to choose between pieces
+    of size <span class="tex2jax_process">$1 \times 2$</span> and
+    <span class="tex2jax_process">$1 \times 1$</span>. The correct
+    strategy is to pick <span class="tex2jax_process">$1 \times
+    2$</span> (the other option immediately leads to defeat).
+    <span class="tex2jax_process">$B$</span> will then be forced to
+    choose between two pieces of size <span class="tex2jax_process">$1 \times 1$</span>, which both will result
+    in defeat for <span class="tex2jax_process">$B$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+</pre>
+</td>
+<td>
+<pre>A
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 6
+</pre>
+</td>
+<td>
+<pre>B
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 8
+</pre>
+</td>
+<td>
+<pre>A
+</pre>
+</td>
+</tr>
+</table>
+</div>

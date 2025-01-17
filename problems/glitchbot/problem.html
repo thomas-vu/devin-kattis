@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/glitchbot/file/statement/en/img-0001.jpg" class="illustration" src="/problems/glitchbot/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.flickr.com/photos/shazbot/2312055256/">Shawn
+        Allen</a>
+</div>
+</div>
+<p>One of our delivery robots is malfunctioning! The job of the
+    robot is simple; it should follow a list of instructions in
+    order to reach a target destination. The list of instructions
+    is originally correct to get the robot to the target. However,
+    something is going wrong as we upload the instructions into the
+    robot’s memory. During the upload, one random instruction from
+    the list takes on a different value than intended. Yes, there
+    is <em>always</em> a single bad instruction in the robot’s
+    memory and it <em>always</em> results in the robot arriving at
+    an incorrect destination as it finishes executing the list of
+    instructions.</p>
+<p>The robot can execute the instructions “<tt class="ttfamily">Left</tt>”, “<tt class="ttfamily">Right</tt>”, and
+    “<tt class="ttfamily">Forward</tt>”. The “<tt class="ttfamily">Left</tt>” and “<tt class="ttfamily">Right</tt>”
+    instructions do not result in spatial movement but result in a
+    <span class="tex2jax_process">$90$</span>-degree turn in the
+    corresponding direction. “<tt class="ttfamily">Forward</tt>” is
+    the only instruction that results in spatial movement, causing
+    the robot to move one unit in the direction it is facing. The
+    robot always starts at the origin <span class="tex2jax_process">$(0,0)$</span> of a grid and faces north
+    along the positive y-axis.</p>
+<p>Given the coordinates of the target destination and the list
+    of instructions that the robot has in its memory, you are to
+    identify a correction to the instructions to help the robot
+    reach the proper destination.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> integer coordinates of the target
+    destination, where <span class="tex2jax_process">$-50 \leq x
+    \leq 50$</span> and <span class="tex2jax_process">$-50 \leq y
+    \leq 50$</span>. The following line contains an integer
+    <span class="tex2jax_process">$n$</span> representing the
+    number of instructions in the list, where <span class="tex2jax_process">$1 \leq n \leq 50$</span>. The remaining
+    <span class="tex2jax_process">$n$</span> lines each contain a
+    single instruction. These instructions may be: “<tt class="ttfamily">Left</tt>”, “<tt class="ttfamily">Forward</tt>”, or
+    “<tt class="ttfamily">Right</tt>”.</p>
+<h2>Output</h2>
+<p>Identify how to correct the robot’s instructions by printing
+    the line number (starting at <span class="tex2jax_process">$1$</span>) of an incorrect input
+    instruction, followed by an instruction substitution that would
+    make the robot reach the target destination. If there are
+    multiple ways to fix the instructions, report the fix that
+    occurs for the earliest line number in the sequence of
+    instructions. There is always exactly one unique earliest
+    fix.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+11
+Forward
+Right
+Forward
+Forward
+Left
+Forward
+Forward
+Left
+Forward
+Right
+Forward
+</pre>
+</td>
+<td>
+<pre>
+8 Right
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+-1 1
+3
+Right
+Left
+Forward
+</pre>
+</td>
+<td>
+<pre>
+1 Forward
+</pre>
+</td>
+</tr>
+</table>
+</div>

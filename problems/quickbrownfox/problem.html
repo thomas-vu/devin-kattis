@@ -1,0 +1,55 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/quickbrownfox/file/statement/en/img-0001.jpg" class="illustration" src="/problems/quickbrownfox/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/27887748@N00/2741835743/">Neil
+        McIntosh</a>
+</div>
+</div>
+<p>A <i class="itshape">pangram</i> is a phrase that includes
+    at least one occurrence of each of the <span class="tex2jax_process">$26$</span> letters, ‘a’<span class="tex2jax_process">$\ldots $</span>‘z’. You’re probably familiar
+    with this one: “The quick brown fox jumps over the lazy
+    dog.”</p>
+<p>Your job is to recognize pangrams. For phrases that don’t
+    contain every letter, report what letters are missing. We’ll
+    say that a particular letter occurs in the phrase if it occurs
+    as either upper case or lower case.</p>
+<h2>Input</h2>
+<p>Input starts with a line containing an integer <span class="tex2jax_process">$1 \le N \le 50$</span>. The next
+    <span class="tex2jax_process">$N$</span> lines are each a
+    single phrase, possibly containing upper and lower case
+    letters, spaces, decimal digits and punctuation characters
+    ‘<tt class="ttfamily">.</tt>’, ‘<tt class="ttfamily">,</tt>’,
+    ‘<tt class="ttfamily">?</tt>’, ‘<tt class="ttfamily">!</tt>’,
+    ‘<tt class="ttfamily">’</tt>’ and ‘<tt class="ttfamily">"</tt>’. Each phrase contains at least one and no
+    more than 100 characters.</p>
+<h2>Output</h2>
+<p>For each input phrase, output “pangram” if it qualifies as a
+    pangram. Otherwise, output the word “missing” followed by a
+    space and then the list of letters that didn’t occur in the
+    phrase. The list of missing letters should be reported in lower
+    case and should be sorted alphabetically.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+The quick brown fox jumps over the lazy dog.
+ZYXW, vu TSR Ponm lkj ihgfd CBA.
+.,?!'" 92384 abcde FGHIJ
+</pre>
+</td>
+<td>
+<pre>
+pangram
+missing eq
+missing klmnopqrstuvwxyz
+</pre>
+</td>
+</tr>
+</table>
+</div>

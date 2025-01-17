@@ -1,0 +1,170 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/heimilisverk/file/statement/en/img-0001.jpg" class="illustration" src="/problems/heimilisverk/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/otacke/12221292503/">Oliver
+        Tacke</a>
+</div>
+</div>
+<p>Ómar is a very responsible boy and has a list of chores he
+    needs to do. The problem is that Ómar is very lazy, so the list
+    of unfinished chores has become quite long. So long, in fact,
+    that he does not remember what chores he has already put on the
+    list and has thus put duplicates into the list every now and
+    then.</p>
+<p>Now he finally intends to do some chores from the list, but
+    he doesn’t want to repeat himself. Can you help him remove
+    duplicate chores from his list? That is to say, if it appears
+    more than once, he only wants the first instance of it to
+    remain on the list.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the positive integer
+    <span class="tex2jax_process">$N$</span>, denoting the number
+    of chores on the list. Then there are <span class="tex2jax_process">$N$</span> lines, each with one chore.</p>
+<h2>Output</h2>
+<p>The output should contain the filtered list, with one chore
+    from the list on each line. The order matters and should be
+    like in the input.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10$</span>, Each
+          line is at most <span class="tex2jax_process">$10$</span>
+          characters</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10^5$</span>,
+          Each line is at most <span class="tex2jax_process">$2$</span> characters</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10^5$</span>,
+          Each line is at most <span class="tex2jax_process">$10$</span> characters</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10^3$</span>,
+          Each line is at most <span class="tex2jax_process">$1000$</span> characters</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq 10^6$</span>,
+          The total number of characters in the input is at most
+          <span class="tex2jax_process">$10^6$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+Skuragolfid
+Takatil
+Skuragolfid
+Thrifabilinn
+</pre>
+</td>
+<td>
+<pre>Skuragolfid
+Takatil
+Thrifabilinn
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+Takaurvelinni
+Ryksuga
+</pre>
+</td>
+<td>
+<pre>Takaurvelinni
+Ryksuga
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+Takatil
+Takatil
+Takatil
+Takatil
+Takatil
+</pre>
+</td>
+<td>
+<pre>Takatil
+</pre>
+</td>
+</tr>
+</table>
+</div>

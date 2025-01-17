@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/inverteddeck/file/statement/en/img-0001.jpg" class="illustration" src="/problems/inverteddeck/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:DnD_Elven.png">Elf</a>
+        by LadyofHats via Wikimedia Commons, public domain
+      </div>
+</div>As a huge fan of the popular collectible card game
+    Numinous Wilds: the Elven Reign Chronicles (NWERC), you have a
+    large collection of cards which you carefully organise by their
+    rarity. One day you notice that someone has touched your
+    collection, and that some of the cards are now out of order.
+    The most natural suspect, of course, is your little brother
+    Billy, who was absolutely <span class="tex2jax_process">$100\%
+    $</span> forbidden from playing with your cards. After a few
+    minutes of interrogation Billy confesses that he indeed took a
+    few consecutive cards from the middle of the stack, but he
+    swears that he put them back in exactly the same order as they
+    were. You suspect that Billy, being so young, may have simply
+    mistakenly reversed the order of the cards that he took. Now
+    you want to check your theory and decide if you can find the
+    batch of cards that Billy took to play with.
+    <p>Is it possible to restore the order of the cards into
+    non-decreasing order of their rarity by reversing just one
+    contiguous batch of cards?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line containing an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 10^6$</span>), the number of
+        cards in your collection.</p>
+</li>
+<li>
+<p>One line containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$v_1, \ldots , v_ n$</span> (<span class="tex2jax_process">$1 \le v_{i} \le 10^9$</span> for all
+        <span class="tex2jax_process">$i$</span>), the current
+        order of the cards’ rarity values.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If the cards can be sorted by reversing exactly one
+    contiguous subsequence of the list, then output the
+    <span class="tex2jax_process">$1$</span>-based start and end
+    indices of such a subsequence. Otherwise, output “<tt class="ttfamily">impossible</tt>”. If there are multiple valid
+    solutions you may output any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+10 13 19 19 15 14 20
+</pre>
+</td>
+<td>
+<pre>3 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+9 1 8 2 7 3
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 3
+</pre>
+</td>
+<td>
+<pre>2 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

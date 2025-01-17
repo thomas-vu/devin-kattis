@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Anthony recently started watching YouTube videos with the
+    title “<span class="tex2jax_process">$X$</span> but every time
+    <span class="tex2jax_process">$Y$</span> happens it speeds up
+    by <span class="tex2jax_process">$Z$</span>”. He likes watching
+    these videos because it saves time, but he wonders how much
+    time he actually saves by watching these videos (instead of the
+    originals).</p>
+<p>You may assume that the new video <span class="tex2jax_process">$X’$</span> is exactly the same as the
+    original video <span class="tex2jax_process">$X$</span>, except
+    certain segments of the new video play faster. Each time event
+    <span class="tex2jax_process">$Y$</span> happens, <span class="tex2jax_process">$X’$</span> speeds up by <span class="tex2jax_process">$p$</span>%. Suppose event <span class="tex2jax_process">$Y$</span> happens <span class="tex2jax_process">$n$</span> times in <span class="tex2jax_process">$X’$</span>, and it happens at timestamps
+    <span class="tex2jax_process">$t_1, t_2, \ldots , t_ n$</span>
+    (in seconds). That means the segment <span class="tex2jax_process">$[0, t_1)$</span> is playing at original
+    speed, the segment <span class="tex2jax_process">$[t_1,
+    t_2)$</span> is playing at <span class="tex2jax_process">$(100+p)$</span>% speed, the segment
+    <span class="tex2jax_process">$[t_2, t_3)$</span> is playing at
+    <span class="tex2jax_process">$(100+2p)$</span>% speed, and so
+    on. Also, <span class="tex2jax_process">$X’$</span> is
+    <span class="tex2jax_process">$k$</span> seconds long.</p>
+<p>Can you help Anthony compute the original length of the
+    video?</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers
+    <span class="tex2jax_process">$n, p, k$</span>. It is
+    guaranteed that <span class="tex2jax_process">$1\leq n\leq 5\,
+    000$</span>, <span class="tex2jax_process">$0\leq p\leq
+    100$</span>, and <span class="tex2jax_process">$n\leq k\leq
+    20\, 000$</span>.</p>
+<p>The next line of the input contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$t_ i$</span>, denoting the timestamp of the
+    event <span class="tex2jax_process">$Y$</span>. It is
+    guaranteed that the timestamps are given in chronological
+    order, and that <span class="tex2jax_process">$1\leq t_ i\leq
+    k$</span>.</p>
+<h2>Output</h2>
+<p>A single number <span class="tex2jax_process">$T$</span>
+    denoting the length of the original video in seconds. Your
+    answer is considered correct if its absolute or relative error
+    is at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 20 15
+3 10
+</pre>
+</td>
+<td>
+<pre>18.400
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 100 5
+5
+</pre>
+</td>
+<td>
+<pre>5.00
+</pre>
+</td>
+</tr>
+</table>
+</div>

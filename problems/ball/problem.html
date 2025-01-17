@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ball/file/statement/en/img-0001.png" class="illustration" src="/problems/ball/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://upload.wikimedia.org/wikipedia/commons/2/25/1975_Holton-Armes_Senior_Prom.png?20181220115425">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>There is a school dance scheduled tomorrow and <span class="tex2jax_process">$n$</span> students will attend. The students
+    are numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. The students are
+    registered in pairs and the list of attendees is <span class="tex2jax_process">$\frac{n}{2} + 1$</span> lines long. Each
+    number also appears once in the list. But that doesn’t add up!
+    Some devious prankster must have added a pair to the list
+    somewhere. Given the list determine which pair should be
+    removed.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single even integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 2 \cdot 10^5$</span>), the
+    number of students. Then follow <span class="tex2jax_process">$\frac{n}{2} + 1$</span> lines. Each line
+    contains two integers <span class="tex2jax_process">$a_ i, b_
+    i$</span> (<span class="tex2jax_process">$1 \leq a_ i, b_ i
+    \leq n$</span>), indicating the <span class="tex2jax_process">$i$</span>-th pair on the list.</p>
+<h2>Output</h2>
+<p>Print the pair that the prankster added, on a single line.
+    The numbers, <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span>, should be separated
+    by a single space and ordered such that <span class="tex2jax_process">$a &lt; b$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2 \leq n \leq
+          200$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2 \leq n \leq
+          5000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+1 2
+3 5
+4 8
+6 7
+4 7
+9 10
+</pre>
+</td>
+<td>
+<pre>4 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 1
+1 2
+</pre>
+</td>
+<td>
+<pre>1 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

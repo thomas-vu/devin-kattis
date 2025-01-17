@@ -1,0 +1,69 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/scrollingsign/file/statement/en/img-0001.jpg" class="illustration" src="/problems/scrollingsign/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/kokle/6447297767/">Janis
+        Stoneberg</a>
+</div>
+</div>
+<p>Electric scrolling signs are often used for advertising. A
+    given sign displays exactly <span class="tex2jax_process">$k$</span> characters. When the sign is
+    switched on, all of the character positions are initially empty
+    (showing spaces). In each time interval, all of the characters
+    on the sign are shifted to the left by one position, and a new
+    character is added at the right-most position. The character
+    that was in the left-most position moves off the sign.</p>
+<p>For certain sequences of words, it is possible to reuse
+    characters from one word to form a subsequent word. For
+    example, on a sign with three character positions, the sign can
+    display the message <tt class="tt">CAT ATE TED</tt> by
+    scrolling in the five characters <tt class="tt">CATED</tt>.</p>
+<p>The advertiser has a specific message to show using the
+    sign. The faster the message is displayed, the more people will
+    be able to see the whole message. Therefore, your job is to
+    find a way to display all the words of the message by scrolling
+    in the smallest number of letters. In between showing the words
+    of the message, the sign may display other words that are not
+    considered part of the message. However, the words of the
+    message must be shown in the order in which they are given.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n, 1\le n\le 5$</span>, the
+    number of test cases to follow. Each test case starts with a
+    line containing a two integers, <span class="tex2jax_process">$k$</span>, the number of character positions
+    on the sign, and <span class="tex2jax_process">$w$</span>, the
+    number of words in the message. Each of the two integers is
+    between 1 and 100, inclusive. The following <span class="tex2jax_process">$w$</span> lines each contain a word of the
+    message comprising exactly <span class="tex2jax_process">$k$</span> uppercase letters.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing a single
+    integer, the minimum number of letters that must be scrolled
+    into the sign so that it displays all the words of the
+    message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3 2
+CAT
+TED
+3 3
+CAT
+ATE
+TEA
+</pre>
+</td>
+<td>
+<pre>
+5
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

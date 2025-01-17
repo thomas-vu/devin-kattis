@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>You have a list of <span class="tex2jax_process">$N$</span>
+    numbers, each of the form <span class="tex2jax_process">$2^ a3^
+    b$</span> for some non-negative integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>. You want to perform <span class="tex2jax_process">$N-1$</span> operations on these numbers.
+    Each operation acts on two numbers <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> of your choice from the list,
+    replacing them with a new number <span class="tex2jax_process">$\mathrm{op}(X, Y)$</span>. After each
+    operation, your list has one fewer number.</p>
+<p>In this task, an operation <span class="tex2jax_process">$\mathrm{op}$</span> can be <span class="tex2jax_process">$\gcd $</span> or <span class="tex2jax_process">$\mathrm{lcm}$</span> (they stand for
+    greatest common divisor and least common multiple,
+    respectively). There are a total of <span class="tex2jax_process">$N$</span> scenarios: You may apply
+    “<span class="tex2jax_process">$\gcd $</span>” operations
+    <span class="tex2jax_process">$k$</span> times and
+    “<span class="tex2jax_process">$\mathrm{lcm}$</span>”
+    operations <span class="tex2jax_process">$N - 1 - k$</span>
+    times. For each of the <span class="tex2jax_process">$N$</span>
+    scenarios, what is the largest possible outcome after these
+    <span class="tex2jax_process">$N-1$</span> operations? What
+    about the smallest possible outcome?</p>
+<h2>Input</h2>
+<p>The first line consists of a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 50\, 000$</span>). The following <span class="tex2jax_process">$N$</span> lines each contains a pair of
+    integers <span class="tex2jax_process">$a_ i$</span> and
+    <span class="tex2jax_process">$b_ i$</span> (<span class="tex2jax_process">$0 \leq a_ i, b_ i \leq 1\, 000$</span>),
+    indicating that the <span class="tex2jax_process">$i$</span>th
+    number in your initial list is <span class="tex2jax_process">$2^{a_ i}3^{b_ i}$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span> lines in
+    total. On line <span class="tex2jax_process">$i$</span>
+    (<span class="tex2jax_process">$i = 1, \dots , N$</span>),
+    output four space-separated integers <span class="tex2jax_process">$a, b, a’$</span> and <span class="tex2jax_process">$b’$</span>. The first pair of integers
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> indicate that the largest possible
+    outcome is <span class="tex2jax_process">$2^ a3^ b$</span> with
+    <span class="tex2jax_process">$i-1$</span> “<span class="tex2jax_process">$\gcd $</span>” operations (and therefore
+    <span class="tex2jax_process">$N-i$</span> “<span class="tex2jax_process">$\mathrm{lcm}$</span>” operations). The
+    second pair of integers <span class="tex2jax_process">$a’$</span> and <span class="tex2jax_process">$b’$</span> indicate that the smallest
+    possible outcome is <span class="tex2jax_process">$2^{a'}3^{b'}$</span>, again with
+    <span class="tex2jax_process">$i-1$</span> “<span class="tex2jax_process">$\gcd $</span>” operations.</p>
+<h2>Explanation for sample data</h2>
+<p>The three numbers are <span class="tex2jax_process">$2^03^0
+    = 1$</span>, <span class="tex2jax_process">$2^13^2 =
+    18$</span>, and <span class="tex2jax_process">$2^23^0 =
+    4$</span>.</p>
+<ol class="enumerate">
+<li>
+<p>When <span class="tex2jax_process">$i = 0$</span>, we
+        can only take <span class="tex2jax_process">$\mathrm{lcm}$</span>. <span class="tex2jax_process">$\mathrm{lcm}(1, 18, 4) = 36 =
+        2^23^2$</span>.</p>
+</li>
+<li>
+<p>When <span class="tex2jax_process">$i = 1$</span>, the
+        largest outcome is <span class="tex2jax_process">$\mathrm{lcm}(18, \gcd (1, 4)) = 18 =
+        2^13^2$</span>, and the smallest outcome is <span class="tex2jax_process">$\gcd (1, \mathrm{lcm}(18, 4)) = 1 =
+        2^03^0$</span>.</p>
+</li>
+<li>
+<p>When <span class="tex2jax_process">$i = 2$</span>, we
+        can only take <span class="tex2jax_process">$\gcd $</span>.
+        <span class="tex2jax_process">$\gcd (1, 18, 4) = 1 =
+        2^03^0$</span>.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+0 0
+1 2
+2 0
+</pre>
+</td>
+<td>
+<pre>
+2 2 2 2
+1 2 0 0
+0 0 0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

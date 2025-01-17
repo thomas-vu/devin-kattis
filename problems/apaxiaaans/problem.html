@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>The ancient and mysterious Apaxian civilization, which we
+    most certainly did not make up, continues to confound the
+    researchers at the Oriental Institute. It turns out that the
+    Apaxians had a peculiar naming system: the more letters in your
+    name, the higher your status in society. So, in Apaxian
+    society, <tt class="ttfamily">robert</tt> was probably a lowly
+    servant, and <tt class="ttfamily">robertapalaxiamethostenes</tt> was likely a High
+    Priest or Minister. Even more than that, Apaxians valued the
+    number of adjacent letters that were the same in a name. So,
+    while <tt class="ttfamily">robert</tt> continues to be an
+    unimpressive name, <tt class="ttfamily">roooooooooobert</tt>
+    probably elicited cheers and applause wherever he went.</p>
+<p>Unfortunately, this makes the task of reading Apaxian
+    scrolls very cumbersome, especially when you consider that a
+    particularly famous Apaxian queen had ten thousand consecutive
+    <tt class="ttfamily">a</tt>’s in her name. Legend has it that
+    she was already two years old by the time the Royal Herald
+    finished announcing her birth.</p>
+<p>To make the Oriental Institute’s life easier, the Department
+    of Computer Science has offered to convert the Apaxian scrolls
+    into a more readable format. Specifically, we will be taking
+    Apaxian names and replacing all consecutive runs of the same
+    letter by a single instance of such letter.</p>
+<p>So, for example, the compact version of <tt class="ttfamily">roooobert</tt> would be <tt class="ttfamily">robert</tt>, where the four consecutive <tt class="ttfamily">o</tt>’s have been replaced with a single <tt class="ttfamily">o</tt>. Similarly, the compact version of <tt class="ttfamily">rrrooobbbert</tt> would also be <tt class="ttfamily">robert</tt>. On the other hand, the compact version
+    of <tt class="ttfamily">robert</tt> is still <tt class="ttfamily">robert</tt>.</p>
+<h2>Input</h2>
+<p>The input contains a single name. Each name contains only
+    lowercase letters (<tt class="ttfamily">a</tt>–<tt class="ttfamily">z</tt>), no whitespace, a minimum length of 1
+    character, and a maximum length of 250 characters.</p>
+<h2>Output</h2>
+<p>The output contains the compact version of the name: any
+    time the same letter appears two or more times in sequence, it
+    must be replaced by a single instance of that letter.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>robert
+</pre>
+</td>
+<td>
+<pre>robert
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>rooobert
+</pre>
+</td>
+<td>
+<pre>robert
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>roooooobertapalaxxxxios
+</pre>
+</td>
+<td>
+<pre>robertapalaxios
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,228 @@
+<div class="problembody">
+<p><i class="itshape">“I’m never satisfied unless I get the
+    last word.” ­–Alan Dershowitz.</i></p>
+<p>When representing their clients in front of a clueless jury,
+    seasoned lawyers know that rhetoric can be just as, if not
+    more, important than actual substance. It is imperative to make
+    the other side look like a fool; sometimes, the actual content
+    of the argument is immaterial, and the winner of the argument
+    is simply the one who has the last word.</p>
+<p>As is the case now.</p>
+<p>You are a lawyer representing your client in a high-profile
+    case, and the time has come to demonstrate your sharp wit and
+    destroy the opposing side’s lawyer in the courtroom.</p>
+<p>There are <span class="tex2jax_process">$N$</span>
+    arguments, labelled <span class="tex2jax_process">$1, 2, \dots
+    , N$</span> respectively. There are <span class="tex2jax_process">$M$</span> relations between these arguments;
+    the <span class="tex2jax_process">$i^\text {th}$</span>
+    relation means that arguments <span class="tex2jax_process">$A_
+    i$</span> and <span class="tex2jax_process">$B_ i$</span> are
+    related, which means one can be used as a rebuttal for the
+    other, and vice-versa. Both of you know all these arguments and
+    relations.</p>
+<p>Of course, it is important to remember that:</p>
+<ul class="itemize">
+<li>
+<p>When arguing, you and your opponent will be taking
+        turns.</p>
+</li>
+<li>
+<p>It is important to ensure that arguments are related to
+        the previous one. If you make an argument that is not
+        related, your opponent will call <i class="itshape">non
+        sequitur</i> and you will immediately lose the argument.
+        (The same holds for your opponent.)</p>
+</li>
+<li>
+<p>No arguments can be repeated. If you make an argument
+        that has already been made, the audience will realize that
+        you are wasting their time, and you will immediately lose
+        the argument. (The same holds for your opponent.)</p>
+</li>
+</ul>
+<p>An argument is called <i class="itshape">valid</i> if it
+    satisfies the conditions above.</p>
+<p>Now, your goal is obviously to strategically argue in such a
+    way to trap your opponent into a corner and make him look like
+    a fool.</p>
+<p>Your opponent is so convinced he will win that he even gave
+    you the choice of who you want to go first. Let hubris be his
+    downfall, and annihilate your opponent completely in this
+    battle of wits!</p>
+<h2>Interaction</h2>
+<p>First, your program should read two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 70$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq \frac{N(N-1)}{2}$</span>), the number of arguments
+    and the number of relations, respectively, on a single line
+    from standard input.</p>
+<p>Then, your program should read <span class="tex2jax_process">$M$</span> lines from standard input. The
+    <span class="tex2jax_process">$i^\text {th}$</span> of these
+    lines contains <span class="tex2jax_process">$A_ i$</span> and
+    <span class="tex2jax_process">$B_ i$</span> (<span class="tex2jax_process">$1 \leq A_ i, B_ i \leq N$</span>;
+    <span class="tex2jax_process">$A_ i \neq B_ i)$</span>, the two
+    arguments related by the <span class="tex2jax_process">$i^\text
+    {th}$</span> relation.</p>
+<p>Then, your program writes a single line containing a single
+    integer <span class="tex2jax_process">$1$</span> or
+    <span class="tex2jax_process">$2$</span> to the standard
+    output, denoting whether you want yourself or your opponent to
+    go first, respectively.</p>
+<p>Then, we repeat the following process:</p>
+<ul class="itemize">
+<li>
+<p>If it is <b class="bfseries">your turn</b>:</p>
+<ul class="itemize">
+<li>
+<p>Your program writes a single line containing a
+            single integer <span class="tex2jax_process">$a$</span>
+            (<span class="tex2jax_process">$0 \leq a \leq
+            N)$</span> to standard output, the label of the
+            argument you wish to make. An output of <span class="tex2jax_process">$0$</span> denotes that you wish to
+            concede the argument; in this case, <b class="bfseries">your program should terminate immediately
+            after this.</b></p>
+</li>
+</ul>
+</li>
+<li>
+<p>If it is <b class="bfseries">your opponent’s
+        turn</b>:</p>
+<ul class="itemize">
+<li>
+<p>Your program should read a single integer
+            <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$0 \leq a \leq N)$</span> from
+            standard input, the label of the argument your opponent
+            made. An input of <span class="tex2jax_process">$0$</span> denotes that your opponent
+            has conceded the argument; in this case, <b class="bfseries">your program should terminate immediately
+            after this.</b></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>After making an argument, do not forget to output end of
+    line and <b class="bfseries">flush</b> the output. To do this,
+    use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> or <tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python;</p>
+</li>
+<li>
+<p>see documentation for other languages.</p>
+</li>
+</ul>
+<p>You can assume that any relation between two arguments will
+    be described at most once.</p>
+<p>You can assume that the arguments your opponent makes are
+    always valid, and your opponent will concede if and only if he
+    has no valid argument. Likewise, all your arguments must be
+    valid, and you must <b class="bfseries">win</b> the
+    argument­–that is, have the last word­–for your solution to be
+    correct.</p>
+<h2>Sample interaction</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p>Your output (standard output)</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Kattis’ answer (standard input)</p>
+</td>
+<td style="text-align:left">
+<p>Interpretation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3\: 2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are <span class="tex2jax_process">$N=3$</span>
+          arguments and <span class="tex2jax_process">$M=2$</span>
+          relations between them.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1\: 2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The <span class="tex2jax_process">$1^\text
+          {st}$</span> relation describes that arguments
+          <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span> are related.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2\: 3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The <span class="tex2jax_process">$2^\text
+          {nd}$</span> relation describes that arguments
+          <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> are related.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>You decide that you want to go first.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>You make argument <span class="tex2jax_process">$3$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Your opponent rebuts with argument <span class="tex2jax_process">$2$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>You make argument <span class="tex2jax_process">$1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are no more valid arguments for your opponent to
+          make, and he concedes the argument.</p>
+</td>
+</tr>
+</table>
+</div>

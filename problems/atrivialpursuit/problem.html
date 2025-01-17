@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>It’s time for the Trivia Trot, a competition where
+    anything—and everything—can be asked! Twilight is absolutely
+    ready to wreck the competition and win it for the three-peat;
+    she’s studied <i class="itshape">Ancient Legends</i>, <i class="itshape">Wonderbolt History</i>, and <i class="itshape">Spells
+    So Old, Not Even Star Swirl the Bearded Remembers
+    Them</i>...</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.38\textwidth ]{TBOTwibell.png}" src="/problems/atrivialpursuit/file/statement/en/img-0001.png" style="width:38.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1272604793115041792/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>Here’s the first question:</p>
+<blockquote class="quote">
+      How many sequences <span class="tex2jax_process">$x_1, x_2,
+      \dots , x_ P$</span> of <span class="tex2jax_process">$P$</span> positive integers are there
+      satisfying <span class="tex2jax_process">$\gcd (x_1, x_2,
+      \dots , x_ P) = G_1 \times G_2 \times \dots \times G_
+      N$</span> and <span class="tex2jax_process">$\mathrm{lcm}(x_1, x_2, \dots , x_ P) = L_1
+      \times L_2 \times \dots \times L_ M$</span>?
+    </blockquote>
+<p>Crap.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers,
+    <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1 \leq P \leq 10^{18}$</span>), <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq N, M \leq 400$</span>), as described in the question.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$G_1, G_2, \dots , G_ N$</span> (<span class="tex2jax_process">$1 \leq G_ i \leq 10^{18}$</span>), as
+    described in the question.</p>
+<p>The third line of input contains <span class="tex2jax_process">$M$</span> integers <span class="tex2jax_process">$L_1, L_2, \dots , L_ M$</span> (<span class="tex2jax_process">$1 \leq L_ i \leq 10^{18}$</span>), as
+    described in the question.</p>
+<h2>Output</h2>
+<p>Output the a single integer on a line by itself, the answer
+    to the question.</p>
+<p>Since this number can be quite large, you should output only
+    the remainder after dividing this number by <span class="tex2jax_process">$10^9+7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1 2
+3
+17 18
+</pre>
+</td>
+<td>
+<pre>216
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>77 10 5
+1 2 3 4 5 6 7 8 9 10
+11 12 13 14 15
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/crackerbarrel/file/statement/en/img-0001.jpg" class="illustration" src="/problems/crackerbarrel/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The North American Cracker Barrel country store chain
+    offers its clientele a peg game to pass the time until their
+    food arrives. The game is played on a <span class="tex2jax_process">$15$</span>-peg board. The rules are simple:
+    each move jumps one peg over another peg into a free hole. The
+    peg that’s jumped over is removed. If only one peg remains, the
+    player wins. Usually, the game is started with <span class="tex2jax_process">$14$</span> pegs (and one hole). Pegs may
+    have different colors: blue, red, yellow, white, though the
+    color of a peg usually does not matter.
+
+    <p>In this problem, you are giving a start position of between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$14$</span> pegs of different colors, as well
+    as a target color. You should output whether it is possible to
+    remove all but one peg from the board using the usual rules and
+    end up with a peg that is of the target color.</p>
+<h2>Input</h2>
+<p>The input will contain up to <span class="tex2jax_process">$20$</span> test cases. Each test contains a
+    target peg on a single line, followed by the initial position
+    of the board. A peg is represented as a pair of two uppercase
+    letters, e.g. <tt class="ttfamily">BB</tt> represents a peg of
+    a certain color (say blue). The board is given using
+    appropriate indentation of <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$1$</span> spaces for the <span class="tex2jax_process">$1^\text {st}$</span>, <span class="tex2jax_process">$2^\text {nd}$</span>, <span class="tex2jax_process">$3^\text {rd}$</span>, and <span class="tex2jax_process">$4^\text {th}$</span> row.</p>
+<p>The input will be terminated by a line containing the
+    characters <tt class="ttfamily">**</tt>.</p>
+<h2>Output</h2>
+<p>For each test case print <tt class="ttfamily">Possible</tt>
+    if there exists a sequence of valid moves such that all but one
+    peg can be removed and you end up with a peg of the given
+    target color. Otherwise, print <tt class="ttfamily">Impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+BB
+    __
+   RR__
+  __YY__
+ ____GG__
+______WWBB
+WW
+    __
+   RR__
+  __YY__
+ ____GG__
+______WWBB
+BB
+    __
+   BBBB
+  BBRRRR
+ RRRRWWYY
+WWWWYYBBRR
+YY
+    __
+   BBBB
+  BBYYRR
+ RRRRWWBB
+WWWWRRBBRR
+BB
+    __
+   BBBB
+  YYYYYY
+ RRRR__BB
+WW__RRBBRR
+YY
+    __
+   BBBB
+  YYYYYY
+ RRRR__BB
+WW__RRBBRR
+**
+</pre>
+</td>
+<td>
+<pre>
+Possible
+Impossible
+Possible
+Impossible
+Possible
+Impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

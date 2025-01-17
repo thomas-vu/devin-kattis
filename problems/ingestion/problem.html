@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>Stan Ford is a typical college graduate student, meaning
+    that one of the most important things on his mind is where his
+    next meal will be. Fortune has smiled on him as he’s been
+    invited to a multi-course barbecue put on by some of the
+    corporate sponsors of his research team, where each course
+    lasts exactly one hour. Stan is a bit of an analytical type and
+    has determined that his eating pattern over a set of
+    consecutive hours is always very consistent. In the first hour,
+    he can eat up to <span class="tex2jax_process">$m$</span>
+    calories (where <span class="tex2jax_process">$m$</span>
+    depends on factors such as stress, bio-rhythms, position of the
+    planets, etc.), but that amount goes down by a factor of
+    two-thirds each consecutive hour afterwards (always truncating
+    in cases of fractions of a calorie). However, if he stops
+    eating for one hour, the next hour he can eat at the same rate
+    as he did before he stopped. So, for example, if <span class="tex2jax_process">$m=900$</span> and he ate for five
+    consecutive hours, the most he could eat each of those hours
+    would be <span class="tex2jax_process">$900$</span>,
+    <span class="tex2jax_process">$600$</span>, <span class="tex2jax_process">$400$</span>, <span class="tex2jax_process">$266$</span> and <span class="tex2jax_process">$177$</span> calories, respectively. If,
+    however, he didn’t eat in the third hour, he could then eat
+    <span class="tex2jax_process">$900$</span>, <span class="tex2jax_process">$600$</span>, <span class="tex2jax_process">$0$</span>, <span class="tex2jax_process">$600$</span> and <span class="tex2jax_process">$400$</span> calories in each of those hours.
+    Furthermore, if Stan can refrain from eating for two hours,
+    then the hour after that he’s capable of eating <span class="tex2jax_process">$m$</span> calories again. In the example
+    above, if Stan didn’t eat during the third and fourth hours,
+    then he could consume <span class="tex2jax_process">$900$</span>, <span class="tex2jax_process">$600$</span>, <span class="tex2jax_process">$0$</span>, <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$900$</span> calories.</p>
+<p>Stan is waiting to hear what will be served each hour of the
+    barbecue as he realizes that the menu will determine when and
+    how often he should refrain from eating. For example, if the
+    barbecue lasts <span class="tex2jax_process">$5$</span> hours
+    and the courses served each hour have calories <span class="tex2jax_process">$800$</span>, <span class="tex2jax_process">$700$</span>, <span class="tex2jax_process">$400$</span>, <span class="tex2jax_process">$300$</span>, <span class="tex2jax_process">$200$</span> then the best strategy when
+    <span class="tex2jax_process">$m=900$</span> is to eat every
+    hour for a total consumption of <span class="tex2jax_process">$800+600+400+266+177 = 2\, 243$</span>
+    calories. If however, the third course is reduced from
+    <span class="tex2jax_process">$400$</span> calories to
+    <span class="tex2jax_process">$40$</span> calories (some
+    low-calorie celery dish), then the best strategy is to not eat
+    during the third hour — this results in a total consumption of
+    <span class="tex2jax_process">$1\, 900$</span> calories.</p>
+<p>The prospect of all this upcoming food has got Stan so
+    frazzled he can’t think straight. Given the number of courses
+    and the number of calories for each course, can you determine
+    the maximum amount of calories Stan can eat?</p>
+<h2>Input</h2>
+<p>Input starts with a line containing two positive integers
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$n
+    \leq 100, m \leq 20\, 000$</span>) indicating the number of
+    courses and the number of calories Stan can eat in the first
+    hour, respectively. The next line contains <span class="tex2jax_process">$n$</span> positive integers indicating the
+    number of calories for each course.</p>
+<h2>Output</h2>
+<p>Display the maximum number of calories Stan can consume.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 900
+800 700 400 300 200
+</pre>
+</td>
+<td>
+<pre>
+2243
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 900
+800 700 40 300 200
+</pre>
+</td>
+<td>
+<pre>
+1900
+</pre>
+</td>
+</tr>
+</table>
+</div>

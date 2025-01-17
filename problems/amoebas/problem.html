@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>After a successful Kickstarter campaign, Sheba Arriba has
+    raised enough money for her mail-order biology supply company.
+    “Sheba’s Amoebas” can ship Petri dishes already populated with
+    a colony of those tiny one-celled organisms. However, Sheba
+    needs to be able to verify the number of amoebas her company
+    sends out. For each dish she has a black-and-white image that
+    has been pre-processed to show each amoeba as a simple closed
+    loop of black pixels. (A loop is a minimal set of black pixels
+    in which each pixel is adjacent to exactly two other pixels in
+    the set; adjacent means sharing an edge or corner of a pixel.)
+    All black pixels in the image belong to some loop.</p>
+<p>Sheba would like you to write a program that counts the
+    closed loops in a rectangular array of black and white pixels.
+    No two closed loops in the image touch or overlap. One
+    particularly nasty species of cannibalistic amoeba is known to
+    surround and engulf its neighbors; consequently there may be
+    amoebas within amoebas. For instance, each of the images in
+    Figure 1 contains four amoebas.</p>
+<div class="figure" id="amoeba fig 1">
+<center>
+<img alt="\includegraphics[height=1.5in]{12by12sample}" src="/problems/amoebas/file/statement/en/img-0001.png" style="height:1.5in"/>       
+        <img alt="\includegraphics[height=1.5in]{12by10sample}" src="/problems/amoebas/file/statement/en/img-0002.png" style="height:1.5in"/>
+<div class="caption">
+<b>Figure 1</b>: Two Petri dishes, each with four
+          amoebas.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$n$</span>, (<span class="tex2jax_process">$1
+    \leq m,n \leq 100$</span>). This is followed by <span class="tex2jax_process">$m$</span> lines, each containing
+    <span class="tex2jax_process">$n$</span> characters. A
+    ‘<tt class="ttfamily">#</tt>’ denotes a black pixel, a
+    ‘<tt class="ttfamily">.</tt>’ denotes a white pixel. For every
+    black pixel, exactly two of its eight neighbors are also
+    black.</p>
+<h2>Output</h2>
+<p>Display a single integer representing the number of loops in
+    the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+12 12
+.##########.
+#..........#
+#..#...##..#
+#.##..#..#.#
+#......#.#.#
+#....#..#..#
+#...#.#....#
+#..#...#...#
+.#..#.#....#
+#....#.....#
+#.........#.
+.#########..
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+12 10
+.#####....
+#.....#...
+#..#..#...
+#.#.#.#...
+#..#..#...
+.#...#....
+..###.....
+......#...
+.##..#.#..
+#..#..#...
+.##.......
+..........
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

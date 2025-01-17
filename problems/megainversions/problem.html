@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>The <span class="tex2jax_process">$n^2$</span> upper bound
+    for any sorting algorithm is easy to obtain: just take two
+    elements that are misplaced with respect to each other and swap
+    them. Conrad conceived an algorithm that proceeds by taking not
+    two, but <i class="it">three</i> misplaced elements. That is,
+    take three elements <span class="tex2jax_process">$a_{i} &gt;
+    a_{j} &gt; a_{k}$</span> with <span class="tex2jax_process">$i
+    &lt; j &lt; k$</span> and place them in order <span class="tex2jax_process">$a_{k},a_{j},a_{i}$</span>. Now if for the
+    original algorithm the steps are bounded by the maximum number
+    of inversions <span class="tex2jax_process">$\frac{n(n-1)}{2}$</span>, Conrad is at his
+    wits’ end as to the upper bound for such triples in a given
+    sequence. He asks you to write a program that counts the number
+    of such triples.</p>
+<h2>Input</h2>
+<p>The first line of the input is the length of the sequence,
+    <span class="tex2jax_process">$1 \leq n \leq 10^5$</span>. The
+    next line contains the integer sequence <span class="tex2jax_process">$a_{1},a_{2},\ldots ,a_{n}$</span>. You can
+    assume that all <span class="tex2jax_process">$a_{i} \in [1,
+    n]$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of inverted triples.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 2 3
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+3 3 2 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>If you walk through a big city and try to find your way
+    around, you might try asking people for directions. However,
+    asking <span class="tex2jax_process">$n$</span> people for
+    directions might result in <span class="tex2jax_process">$n$</span> different sets of directions. But
+    you believe in the law of averages: if you consider everyone’s
+    advice, then you will have a good idea of where to go by
+    computing the average destination that they all lead to. You
+    would also like to know how far off were the worst directions.
+    You compute this as the maximum straight-line distance between
+    each direction’s destination and the averaged destination.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> test cases. Each test case
+    starts with an integer <span class="tex2jax_process">$1 \leq n
+    \leq 20$</span>, which is the number of people you ask for
+    directions. The following <span class="tex2jax_process">$n$</span> lines each has two things: your
+    <span class="tex2jax_process">$(x, y)$</span> location when you
+    meet the person (since you are walking around meeting people)
+    and that person’s directions from where you are standing. Each
+    person’s directions are built from instructions of the
+    following form:</p>
+<ul class="itemize">
+<li>
+<p>‘start <span class="tex2jax_process">$\alpha $</span>’,
+        where <span class="tex2jax_process">$\alpha $</span> is the
+        initial direction you are facing in degrees (east is 0
+        degrees, north is 90 degrees).</p>
+</li>
+<li>
+<p>‘turn <span class="tex2jax_process">$\alpha $</span>’,
+        where <span class="tex2jax_process">$\alpha $</span> is an
+        angle in degrees you should turn. A positive <span class="tex2jax_process">$\alpha $</span> indicates to turn to the
+        left.</p>
+</li>
+<li>
+<p>‘walk <span class="tex2jax_process">$x$</span>’, where
+        <span class="tex2jax_process">$x$</span> is a number of
+        units to walk.</p>
+</li>
+</ul>
+<p>The ‘start’ instruction is always the first instruction, and
+    only occurs at the beginning. Each person’s directions contain
+    at most <span class="tex2jax_process">$25$</span> instructions.
+    All numeric inputs are real numbers in the range <span class="tex2jax_process">$[-1\, 000,1\, 000]$</span> with at most four
+    digits past the decimal. Input ends when <span class="tex2jax_process">$n$</span> is zero.</p>
+<h2>Output</h2>
+<p>For each test case, print a line with the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates of the average
+    destination, followed by the distance between the worst
+    directions and the averaged destination. Answers should be
+    accurate within <span class="tex2jax_process">$0.01$</span>
+    units.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+87.342 34.30 start 0 walk 10.0
+2.6762 75.2811 start -45.0 walk 40 turn 40.0 walk 60
+58.518 93.508 start 270 walk 50 turn 90 walk 40 turn 13 walk 5
+2
+30 40 start 90 walk 5
+40 50 start 180 walk 10 turn 90 walk 5
+0
+</pre>
+</td>
+<td>
+<pre>
+97.1547 40.2334 7.63097
+30 45 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,106 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Game Theorist is a very tricky cat. Currently,
+      SoCCat is challenging you to beat them in a game!
+    </blockquote>
+<p>SoCCat challenges you to the following game:</p>
+<p>There are <span class="tex2jax_process">$n$</span> cells
+    arranged in a row, with numbers <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span> written on them. The <span class="tex2jax_process">$i$</span>-th cell from the left has the
+    number <span class="tex2jax_process">$p_ i$</span> written on
+    it. SoCCat also has another array <span class="tex2jax_process">$a$</span> of size <span class="tex2jax_process">$n$</span>.</p>
+<p>Before the game begins, SoCCat will place a token on the
+    <span class="tex2jax_process">$s$</span>-th cell. Additionally,
+    both of you will keep track of the score of the game, which is
+    initially <span class="tex2jax_process">$0$</span>. SoCCat aims
+    to <em>minimize</em> the score of the game, while you aim to
+    <em>maximize</em> the score of the game. Note that the score of
+    the game is shared between both of you.</p>
+<p>You will then take turns moving the token. You will move the
+    token first, and then SoCCat will move the token, and so on
+    until the game ends. If the token is currently on the
+    <span class="tex2jax_process">$x$</span>-th cell, the current
+    player performs the following action in order:</p>
+<ul class="itemize">
+<li>
+<p>First, increase the score of the game by <span class="tex2jax_process">$a_ x$</span>.</p>
+</li>
+<li>
+<p>Next, choose a positive integer <span class="tex2jax_process">$k$</span> which is a multiple of
+        <span class="tex2jax_process">$p_ x$</span>.</p>
+</li>
+<li>
+<p>Then, if <span class="tex2jax_process">$x + k \leq
+        n$</span>, move the token from the <span class="tex2jax_process">$x$</span>-th cell to the <span class="tex2jax_process">$(x + k)$</span>-th cell. Otherwise, if
+        <span class="tex2jax_process">$x + k &gt; n$</span>, end
+        the game.</p>
+</li>
+</ul>
+<p>For example, suppose <span class="tex2jax_process">$n =
+    5$</span> and <span class="tex2jax_process">$p = [2, 1, 5, 3,
+    4]$</span>. Before the game begins, SoCCat places the token on
+    the <span class="tex2jax_process">$1$</span>-st cell. In the
+    first turn, you can pick <span class="tex2jax_process">$k \in
+    \{ 2, 4, 6, \ldots \} $</span>. If you pick <span class="tex2jax_process">$k = 2$</span>, then the token will move from
+    the <span class="tex2jax_process">$1$</span>-st cell to the
+    <span class="tex2jax_process">$3$</span>-rd cell, and the score
+    of the game will increase by <span class="tex2jax_process">$a_1$</span>. In the second turn, SoCCat can
+    pick <span class="tex2jax_process">$k \in \{ 5, 10, 15, \ldots
+    \} $</span>. If SoCCat picks <span class="tex2jax_process">$k =
+    10$</span>, then the score of the game will increase by
+    <span class="tex2jax_process">$a_3$</span>, and the game ends
+    since <span class="tex2jax_process">$3 + 10 &gt; 5$</span>. The
+    final score of this particular game is <span class="tex2jax_process">$a_1 + a_3$</span>.</p>
+<p>For each <span class="tex2jax_process">$s$</span> from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, assuming both of you play
+    optimally, what is the final score of the game if SoCCat
+    initially places the token on the <span class="tex2jax_process">$s$</span>-th cell?</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$C$</span>, denoting the number
+    of test cases (<span class="tex2jax_process">$1 \leq C \leq
+    300\, 000$</span>). Each test case has the following
+    format.</p>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, the number of cells in the row
+    (<span class="tex2jax_process">$1 \leq n \leq 300\,
+    000$</span>). The sum of <span class="tex2jax_process">$n$</span> over all test cases does not
+    exceed <span class="tex2jax_process">$300\, 000$</span>.</p>
+<p>The second line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$p_1, p_2, \ldots , p_ n$</span>, the
+    integers written on the cells (<span class="tex2jax_process">$1
+    \leq p_ i \leq n$</span>; <span class="tex2jax_process">$p_ i
+    \neq p_ j$</span> if <span class="tex2jax_process">$i \neq
+    j$</span>).</p>
+<p>The third line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>, the
+    integers in the array <span class="tex2jax_process">$a$</span>
+    (<span class="tex2jax_process">$-10^9 \leq a_ i \leq
+    10^9$</span>).</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing
+    <span class="tex2jax_process">$n$</span> space-separated
+    integers. The <span class="tex2jax_process">$s$</span>-th
+    integer denotes the final score of the game if SoCCat initially
+    places the token on the <span class="tex2jax_process">$s$</span>-th cell from the left, assuming
+    both of you play optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+10
+3 1 5 2 4 9 6 10 8 7
+1 -2 3 -4 5 -6 7 -8 9 -10
+4
+4 3 2 1
+3 2 3 3
+</pre>
+</td>
+<td>
+<pre>8 7 3 -4 14 -6 7 -8 9 -10
+3 2 3 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,155 @@
+<div class="problembody">
+<p>Klara has <span class="tex2jax_process">$N$</span> dices
+    with letters written on them. Each die has a letter on each of
+    its <span class="tex2jax_process">$K$</span> sides. By throwing
+    the dice and rearranging them in some arbitrary order, you can
+    make construct a word with <span class="tex2jax_process">$N$</span> letters.</p>
+<p>Write a program to count the number of valid words that can
+    be constructed using Klara’s dice. You will get a wordlist,
+    that contains all the <span class="tex2jax_process">$M$</span>
+    valid <span class="tex2jax_process">$N$</span>-letter
+    words.</p>
+<div class="figure" id="overflow">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{tarningar.png}" src="/problems/bokstavstarningar/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An illustration of the first example.
+          Since <span class="tex2jax_process">$K = 3$</span>, each
+          die has three sides. You can also write <tt class="ttfamily">STOL</tt> and <tt class="ttfamily">MASK</tt>,
+          but not <tt class="ttfamily">NATT</tt> or <tt class="ttfamily">KOST</tt>.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$K$</span> and <span class="tex2jax_process">$M$</span>.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    describe a die. Line <span class="tex2jax_process">$i$</span>
+    will contain <span class="tex2jax_process">$K$</span> letters,
+    the letters on the sides of the <span class="tex2jax_process">$i$</span>:th die.</p>
+<p>Finally, there will be <span class="tex2jax_process">$M$</span> lines, the valid words. Each line
+    will contain an <span class="tex2jax_process">$N$</span>-letter
+    word.</p>
+<p>All words will only capital letters <tt class="ttfamily">A-Z</tt>.</p>
+<p>No letter will appear on more than one side of a die.</p>
+<h2>Output</h2>
+<p>Your program should print a single integer: the number of
+    valid words that can be written.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a number of test case
+    groups. To get points for a group you have to solve all the
+    test cases in that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Other</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>9</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K = 2, N \le 4, M \le
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>9</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \le 6, N \le 5, M \le
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>12</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \le 20, N \le 6, M
+          \le 1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \le 15, N \le 6, M
+          \le 10\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>21</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \le 20, N \le 6, M
+          \le 100\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$K \le 10, N \le 13, M
+          \le 500$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 5
+TSU
+NKT
+KMO
+LJA
+KATT
+NATT
+STOL
+MASK
+KOST
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,56 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/namegeneration/file/statement/en/img-0001.png" class="illustration" src="/problems/namegeneration/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Ingrid is the founder and CEO of bicycle retailer BIKEA. The
+    company sells bicycles for customers to assemble
+    themselves.</p>
+<p>BIKEA has <span class="tex2jax_process">$N$</span> different
+    bicycles to offer. Ingrid wants to give each of them a
+    human-readable name, to make it easy to remember. But doing
+    this by hand is a very time consuming task.</p>
+<p>You are given the number <span class="tex2jax_process">$N$</span>, and your task is to generate
+    <span class="tex2jax_process">$N$</span> different names. To
+    make the names readable, they must satisfy the following:</p>
+<ol class="enumerate">
+<li>
+<p>Each name has length between <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$20$</span>, and only consists of
+        lowercase English letters.</p>
+</li>
+<li>
+<p>Three consecutive letters of a name cannot all be vowels
+        or consonants. Here we consider <tt class="ttfamily">a</tt>, <tt class="ttfamily">e</tt>, <tt class="ttfamily">i</tt>, <tt class="ttfamily">o</tt>, <tt class="ttfamily">u</tt> vowels, while the remaining <span class="tex2jax_process">$21$</span> letters are consonants.</p>
+</li>
+</ol>
+<p>For example, <tt class="ttfamily">hello</tt>, <tt class="ttfamily">bar</tt>, and <tt class="ttfamily">lkab</tt> are all
+    valid names, whereas <tt class="ttfamily">ingrid</tt>,
+    <tt class="ttfamily">bo</tt> and <tt class="ttfamily">louise</tt> are invalid.</p>
+<h2>Input</h2>
+<p>The input consists of one integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 30\, 000$</span>), the number of names to
+    generate.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$N$</span> lines, each
+    of them containing a name. It can be proven that it is possible
+    to generate <span class="tex2jax_process">$N$</span> different
+    names.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+</pre>
+</td>
+<td>
+<pre>abdullah
+bjorn
+nils
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>A <em>smallest different sequence</em> (SDS) is a sequence
+    of positive integers created as follows: <span class="tex2jax_process">$A_1=r \geq 1$</span>. For <span class="tex2jax_process">$n&gt;1$</span>, <span class="tex2jax_process">$A_ n=A_{n-1}+d$</span>, where <span class="tex2jax_process">$d$</span> is the smallest positive integer
+    not yet appearing as a value in the sequence or as a difference
+    between two values already in the sequence. For example, if
+    <span class="tex2jax_process">$A_1 =1$</span>, then since
+    <span class="tex2jax_process">$2$</span> is the smallest number
+    not in our sequence so far, <span class="tex2jax_process">$A_2=A_1+2=3$</span>. Likewise <span class="tex2jax_process">$A_3=7$</span>, since <span class="tex2jax_process">$1, 2$</span> and <span class="tex2jax_process">$3$</span> are already accounted for, either
+    as values in the sequence, or as a difference between two
+    values. Continuing, we have <span class="tex2jax_process">$1,
+    2, 3, 4, 6$</span>, and <span class="tex2jax_process">$7$</span> accounted for, leaving
+    <span class="tex2jax_process">$5$</span> as our next smallest
+    difference; thus <span class="tex2jax_process">$A_4=12$</span>.
+    The next few values in this SDS are <span class="tex2jax_process">$20, 30, 44, 59, 75, 96, \ldots $</span> For
+    a positive integer <span class="tex2jax_process">$m$</span>,
+    you are to determine where in the SDS <span class="tex2jax_process">$m$</span> first appears, either as a value
+    in the SDS or as a difference between two values in the SDS. In
+    the above SDS, <span class="tex2jax_process">$12, 5, 9$</span>
+    and <span class="tex2jax_process">$11$</span> first appear in
+    step <span class="tex2jax_process">$4$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing two positive
+    integers <span class="tex2jax_process">$A_1$</span>
+<span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq r \leq 100, 1 \leq m \leq 200\, 000\,
+    000$</span>).</p>
+<h2>Output</h2>
+<p>Display the smallest value <span class="tex2jax_process">$n$</span> such that the sequence
+    <span class="tex2jax_process">$A_1, \ldots , A_ n$</span>
+    either contains <span class="tex2jax_process">$m$</span> as a
+    value in the sequence or as a difference between two values in
+    the sequence. All answers will be <span class="tex2jax_process">$\leq 10\, 000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 5
+</pre>
+</td>
+<td>
+<pre>4
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 12
+</pre>
+</td>
+<td>
+<pre>4
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+</pre>
+</td>
+<td>
+<pre>2
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

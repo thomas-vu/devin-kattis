@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Make a program that you can use for state transfer matrix
+    problems in the rest of this module/problem set.</p>
+<p>A state transfer matrix <span class="tex2jax_process">$A$</span> gives the number of ways to move
+    from one state to another. For example if we have <span class="tex2jax_process">$5$</span> states then there are <span class="tex2jax_process">$a_{3,2}$</span> number of ways to move from
+    state <span class="tex2jax_process">$3$</span> to state
+    <span class="tex2jax_process">$2$</span>. If this value is
+    <span class="tex2jax_process">$0$</span> there is no way to
+    move directly from state <span class="tex2jax_process">$3$</span> to state <span class="tex2jax_process">$2$</span>.</p>
+<p>Such a transfer matrix can be viewed as the adjacency matrix
+    of a (not necessarily simple) directed graph. Then this is
+    equivalent to asking for the number of directed paths from a
+    legal starting state to a legal ending state which contains
+    exactly <span class="tex2jax_process">$k$</span> edges.</p>
+<h2>Input</h2>
+<p>The first line of input contains three positive integers
+    <span class="tex2jax_process">$n, m, k$</span>. <span class="tex2jax_process">$n$</span> is the number of states and
+    satisfies <span class="tex2jax_process">$n \leq 20$</span>.
+    <span class="tex2jax_process">$m$</span> is the modulus the
+    output should be output with respect to and satisfies
+    <span class="tex2jax_process">$2 \leq m \leq 10^9 + 7$</span>.
+    <span class="tex2jax_process">$k$</span> is the number of
+    transfers that should be made and satisfies <span class="tex2jax_process">$k \leq 10^{18}$</span>. Next there are
+    <span class="tex2jax_process">$n$</span> lines, each containing
+    <span class="tex2jax_process">$n$</span> integers separated by
+    spaces. These lines give the state transfer matrix, each value
+    in the matrix is a non-negative single digit number. The next
+    line gives the number <span class="tex2jax_process">$s$</span>
+    og legal starting states, satisfying <span class="tex2jax_process">$1 \leq s \leq n$</span>. The line after
+    gives <span class="tex2jax_process">$s$</span> different legal
+    starting states. The next <span class="tex2jax_process">$2$</span> lines give the legal ending states
+    in the same format. The states are represented with integers
+    from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n - 1$</span>.</p>
+<h2>Output</h2>
+<p>Print the number of ways to start in a legal state, make
+    <span class="tex2jax_process">$k$</span> transitions according
+    to the state transfer matrix and then end in a legal ending
+    state. Print this value modulo <span class="tex2jax_process">$m$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1000 10
+1 1
+1 0
+1
+1
+2
+0 1
+</pre>
+</td>
+<td>
+<pre>89
+</pre>
+</td>
+</tr>
+</table>
+</div>

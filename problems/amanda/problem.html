@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/amanda/file/statement/en/img-0001.jpg" class="illustration" src="/problems/amanda/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        H. A. Hansen, cc-by-sa
+      </div>
+</div>
+<p><span class="scshape">Amanda Air</span> has routes between
+    many different airports, and has asked their most important
+    frequent flyers, members of the AA Frequent Flyer
+    program, which routes they most often fly. Based on this
+    survey, Amanda, the CEO and owner, has concluded that
+    <span class="scshape">Amanda Air</span> will place lounges at
+    some of the airports at which they operate.</p>
+<p>However, since there are so many routes going between a wide
+    variety of airports, she has hired you to determine how many
+    lounges she needs to build, if at all possible, given the
+    constraints set by her. This calculation is to be provided by
+    you, before any lounges are built. Her requirements specifies
+    that for some routes, there must be lounges at both airports,
+    for other routes, there must be lounges at exactly one of the
+    airports, and for some routes, there will be no lounges at the
+    airports.</p>
+<p>She is very economically minded and is demanding the
+    absolute minimum number of lounges to be built.</p>
+<h2>Input</h2>
+<p>The first line contains two non-negative integers
+    <span class="tex2jax_process">$1 \leq n,m \leq 200\;
+    000$</span>, giving the number of airports and routes in the
+    Amanda Catalog respectively. Thereafter
+    follow <span class="tex2jax_process">$m$</span> lines,
+    each describing a route by three non-negative integers
+    <span class="tex2jax_process">$1 \leq a, b \leq n$</span> and
+    <span class="tex2jax_process">$c \in \{ 0,1,2\} $</span>,
+    where <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$b$</span> are the
+    airports the route connects and <span class="tex2jax_process">$c$</span> is the number of lounges.</p>
+<p>No route connects any airport with itself, and for any two
+    airports at most one requirement for that route is given. As
+    one would expect, <span class="tex2jax_process">$0$</span>
+    is a request for no lounge, <span class="tex2jax_process">$1$</span> for a lounge at exactly one of the
+    two airports and <span class="tex2jax_process">$2$</span>
+    for lounges at both airports.</p>
+<h2>Output</h2>
+<p>If it is possible to satisfy the requirements, give the
+    minimum number of lounges necessary to do so. If it is not
+    possible, output <tt class="ttfamily">impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4
+1 2 2
+2 3 1
+3 4 1
+4 1 2
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+1 2 1
+2 3 1
+2 4 1
+2 5 1
+4 5 1
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5
+1 2 1
+2 3 0
+2 4 1
+3 1 1
+3 4 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

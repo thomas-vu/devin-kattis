@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/trickytriangulation/file/statement/en/img-0001.png" class="illustration" src="/problems/trickytriangulation/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Amy is trying to find a stronghold by using Eyes of Ender.
+    When thrown, Eyes of Ender fly in the direction of the closest
+    stronghold. However, since Eyes of Ender have a chance of
+    breaking when thrown, Amy wants to limit the number of throws
+    she makes. So, she attempts to locate the stronghold by only
+    using 2 throws.</p>
+<p>In Minecraft, locations are represented by block
+    coordinates, <span class="tex2jax_process">$(x, y)$</span>,
+    where both <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> are integer values.
+    Amy is able to record the block coordinates at which she makes
+    her throws, <span class="tex2jax_process">$(x_1, y_1)$</span>
+    and <span class="tex2jax_process">$(x_2, y_2)$</span>, where
+    <span class="tex2jax_process">$- 10^{9} \leq x_1,y_1,x_2,y_2
+    \leq 10^{9}$</span>. However, she is unable to accurately
+    locate where the Eyes of Ender land after thrown. Instead, she
+    walks in the direction of the thrown Eyes of Ender for some
+    distance, and records the block coordinates at which she stops,
+    <span class="tex2jax_process">$(x_1^\prime , y_1^\prime
+    )$</span> and <span class="tex2jax_process">$(x_2^\prime ,
+    y_2^\prime )$</span>, where <span class="tex2jax_process">$-
+    10^{9} \leq x_1^\prime , y_1^\prime , x_2^\prime , y_2^\prime
+    \leq 10^{9}$</span>. It is possible that Amy overshot the
+    location of the stronghold as she walks in the direction of the
+    thrown Eyes of Ender, but she may still be able to find the
+    stronghold in this case.</p>
+<p>Given these coordinates, write a program to determine if
+    there is a unique stronghold location determined by the two
+    throws, and if so, what the coordinates of the stronghold
+    are.</p>
+<h2>Input</h2>
+<p>The only line of input contains the integers <span class="tex2jax_process">$x_1, y_1, x_1^\prime , y_1^\prime , x_2,
+    y_2, x_2^\prime , y_2^\prime $</span>, each separated by a
+    space (<span class="tex2jax_process">$- 10^{9} \leq x_1, y_1,
+    x_1^\prime , y_1^\prime , x_2, y_2, x_2^\prime , y_2^\prime
+    \leq 10^{9}$</span>). It is guaranteed that the start and end
+    locations for each throw are distinct, and she never starts a
+    throw at the same coordinates as the stronghold.</p>
+<h2>Output</h2>
+<p>If there is exactly one possible location for a stronghold
+    based on the two throws, print the block coordinates
+    <span class="tex2jax_process">$(x_ a, y_ a)$</span> for this
+    location, rounded down to the nearest integer (<span class="tex2jax_process">$- 10^{9} \leq x_ a, y_ a \leq
+    10^{9}$</span>). Otherwise, print <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>395 -188 420 -150 395 921 400 850
+</pre>
+</td>
+<td>
+<pre>465 -81
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>395 -188 420 -150 400 850 395 921
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>395 -188 420 -150 395 -188 420 -150
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

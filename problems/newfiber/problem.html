@@ -1,0 +1,137 @@
+<div class="problembody">
+<p>A new type of unbounded-bandwidth wireless communication has
+    just been tested and proved to be a suitable replacement for
+    the existing, fiber-based communications network, which is
+    struggling to keep up with traffic growth. You have been
+    charged with deciding the layout of the new communications
+    network. The current communications network consists of a set
+    of nodes (which route messages), and links of fiber, each of
+    which connects two different nodes. For each pair of nodes,
+    there exists at least one way (but possibly more, for bandwidth
+    purposes) to travel along the fiber between the two.</p>
+<p>The new communications network will not have any fiber.
+    Instead, it will have wireless links, each connecting two
+    nodes. These links have unbounded bandwidth but are expensive,
+    so it has been decided that as few of these links will be built
+    as possible to provide connectivity; for each pair of nodes
+    there should be exactly one way to travel between them along
+    the wireless links. Moreover, you discovered that the nodes
+    have each been built with a particular number of connections in
+    mind. For each node, if it will be connected to a different
+    number of links than it is today, it will have to be
+    reorganized, and that is costly.</p>
+<p>Your task is to design the new network so that it has
+    precisely one path between each pair of nodes while minimizing
+    the number of nodes that do not have the same number of
+    connections as in the original network. Figure 1 shows the
+    original network and a solution for Sample Input 1.</p>
+<div class="figure" id="fiber:sample1">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><img alt="\includegraphics[width=8cm]{fiber1}" src="/problems/newfiber/file/statement/en/img-0001.png" style="width:8cm"/></p>
+</td>
+<td style="text-align:left">
+<p><img alt="\includegraphics[width=8cm]{fiber2}" src="/problems/newfiber/file/statement/en/img-0002.png" style="width:8cm"/></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>(a) The original fiber network.</p>
+</td>
+<td style="text-align:left">
+<p>(b) One possible solution. The number of links has
+              changed for three nodes: <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$5$</span>.</p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input begins with a line containing two integers
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 10^4$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq m \leq 10^5$</span>), denoting the number of nodes and the
+    number of fiber links in the existing network. The nodes are
+    numbered from <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$n-1$</span>. Each of the next
+    <span class="tex2jax_process">$m$</span> lines contains two
+    distinct integers <span class="tex2jax_process">$a_ i$</span>
+    and <span class="tex2jax_process">$b_ i$</span>, denoting the
+    fact that the <span class="tex2jax_process">$i^{\text
+    {th}}$</span> fiber link connects nodes numbered <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$b_ i$</span>. It is guaranteed that for each
+    pair of nodes there exists at least one path connecting the two
+    nodes. Any pair of nodes may have more than one fiber link
+    connecting them.</p>
+<h2>Output</h2>
+<p>Display the smallest number of nodes for which the number of
+    connected links needs to change. Starting on the next line,
+    display a system of connections in the same format as the
+    input. That is, display a line containing the number of nodes
+    (this will be the same as in the input) and the number of
+    wireless links, and then on subsequent lines descriptions of
+    the links. If more than one layout is possible, any valid
+    layout will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 11
+0 1
+0 2
+0 5
+0 6
+1 3
+2 4
+1 2
+1 2
+1 5
+2 6
+5 6
+</pre>
+</td>
+<td>
+<pre>3
+7 6
+0 1
+0 2
+0 5
+0 6
+3 6
+4 6
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+0 1
+2 1
+2 3
+</pre>
+</td>
+<td>
+<pre>0
+4 3
+2 1
+1 3
+0 2
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,52 @@
+<div class="problembody">
+<p>Modan is playing a new action strategy game, where his goal
+    is to destroy a city.</p>
+<p>A city is made up of <span class="tex2jax_process">$N$</span> buildings, where the <span class="tex2jax_process">$i$</span>-th building initially has health
+    <span class="tex2jax_process">$H_ i$</span>. At every move,
+    Modan can choose a building to attack, dealing <span class="tex2jax_process">$D$</span> damage to it. When a building’s
+    health falls below or equal to <span class="tex2jax_process">$0$</span>, it is destroyed. When the
+    <span class="tex2jax_process">$i$</span>-th building gets
+    destroyed, it explodes and deals <span class="tex2jax_process">$E_ i$</span> damage to the adjacent
+    buildings, i.e. the <span class="tex2jax_process">$i-1$</span>-th and <span class="tex2jax_process">$i+1$</span>-th buildings, if they exist.</p>
+<p>Modan is really addicted to the game and wants to know the
+    minimum number of moves he needs to destroy a city.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$T \leq 100$</span> giving the number of test
+    cases. Each test case has three lines. On the first line, there
+    are two integers <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$1 \leq N \leq 10\,
+    000$</span>), the number of buildings, and <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$1
+    \leq D \leq 10^9$</span>), the amount of damage Modan can do.
+    On the second line, there are <span class="tex2jax_process">$N$</span> integers, with the <span class="tex2jax_process">$i$</span>-th integer being <span class="tex2jax_process">$H_ i$</span> (<span class="tex2jax_process">$1 \leq H_ i \leq 10^9$</span>), the initial
+    health of the <span class="tex2jax_process">$i$</span>-th
+    building. On the third line, there are <span class="tex2jax_process">$N$</span> integers, with the <span class="tex2jax_process">$i$</span>-th integer being <span class="tex2jax_process">$E_ i$</span> (<span class="tex2jax_process">$0 \leq E_ i \leq 10^9$</span>), the amount
+    of explosion damage the <span class="tex2jax_process">$i$</span>-th building does.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    minimum number of moves needed to destroy the city.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 10
+33
+54
+3 10
+43 10 59
+69 69 69
+</pre>
+</td>
+<td>
+<pre>
+4
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

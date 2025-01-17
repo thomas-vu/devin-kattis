@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/hoskuldarhaska/file/statement/en/img-0001.png" class="illustration" src="/problems/hoskuldarhaska/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by Randall Munroe, <a href="https://xkcd.com/2243/">xkcd.com</a>
+</div>
+</div>
+<p>FKHÍ’s continuous integration system performs many tasks.
+    Ensures input data is formatted correctly, looks for typos in
+    problem statements and more. After having made a reference to a
+    popular movie in the last contest and spoiled an important plot
+    point for those who had not seen it yet, the organisers have
+    decided to add a spoiler filtering program into the integration
+    system. The spoiler filtering program should analyse all text
+    in the contest data files and make sure there is no text
+    spoiling important plot points that people would rather not
+    have spoiled. But to create such a system one needs to
+    determine what text is a spoiler, so the program knows what it
+    is looking for. Thus your task is to create a text file
+    containing all possible spoilers.</p>
+<p>All possible first words of a spoiler have been determined,
+    same for all possible second words and so on. Thus the only
+    task left is to generate all possible combinations of these
+    words to prepare the text file.</p>
+<h2>Input</h2>
+<p>The input begins with a single integer <span class="tex2jax_process">$1 \leq n \leq 100$</span>, the number of
+    words in each spoiler. <span class="tex2jax_process">$n$</span>
+    lines follow, one for each word. The <span class="tex2jax_process">$i$</span>-th line begins with an integer
+    <span class="tex2jax_process">$1 \leq k \leq 100$</span>, the
+    number of options for the <span class="tex2jax_process">$i$</span>-th word. Next these <span class="tex2jax_process">$k$</span> words follow on the same line,
+    separated by spaces. These <span class="tex2jax_process">$k$</span> words are distinct from each
+    other. All words in the input only contain English lower and
+    upper case characters. Each word is at least <span class="tex2jax_process">$1$</span> letter and at most <span class="tex2jax_process">$20$</span> letters in length.</p>
+<h2>Output</h2>
+<p>Print all possible ways to combine the words into a spoiler.
+    Each spoiler should be on its own line. The spoilers are to be
+    printed in ASCII-order (note that this is the default order in
+    most programming languages). It is guaranteed that the output
+    will contain at most <span class="tex2jax_process">$10^6$</span> letters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+3 kyle malloc sebelius
+1 gets
+1 a
+3 beige ochre aquamarine
+2 lightsaber moonsquisher
+</pre>
+</td>
+<td>
+<pre>kyle gets a aquamarine lightsaber 
+kyle gets a aquamarine moonsquisher 
+kyle gets a beige lightsaber 
+kyle gets a beige moonsquisher 
+kyle gets a ochre lightsaber 
+kyle gets a ochre moonsquisher 
+malloc gets a aquamarine lightsaber 
+malloc gets a aquamarine moonsquisher 
+malloc gets a beige lightsaber 
+malloc gets a beige moonsquisher 
+malloc gets a ochre lightsaber 
+malloc gets a ochre moonsquisher 
+sebelius gets a aquamarine lightsaber 
+sebelius gets a aquamarine moonsquisher 
+sebelius gets a beige lightsaber 
+sebelius gets a beige moonsquisher 
+sebelius gets a ochre lightsaber 
+sebelius gets a ochre moonsquisher 
+</pre>
+</td>
+</tr>
+</table>
+</div>

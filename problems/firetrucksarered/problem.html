@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/firetrucksarered/file/statement/en/img-0001.jpg" class="illustration" src="/problems/firetrucksarered/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://flic.kr/p/9iKGTP">Numbers</a> by Ksayer1
+        on Flickr, cc by-sa
+      </div>
+</div>Lily is fascinated by numbers. She believes the whole
+    world revolves around them, and that everything is connected by
+    numbers. Her friends, Alice, Bob, Charlie and Diane, are not
+    convinced. But she gives them an example:
+    <blockquote class="quote">
+      Alice lives in house number 25 on her street, but that is
+      exactly Bob’s age. Bob is born on June 4th, and Charlie was
+      his parents’ fourth child. Finally, Diane has five fingers on
+      her left hand, which happens to be the same as the number of
+      toes that Bob has on his right foot!
+    </blockquote>
+<p>This shows that her friends are all connected—either
+    directly or indirectly—by numbers. But she still has to
+    convince her family as well as her coworkers.</p>
+<p>Given a group of <span class="tex2jax_process">$n$</span>
+    individuals, and a set of numbers that describe each
+    individual, help Lily come up with a proof that shows that
+    everyone in this group is either directly or indirectly
+    connected by numbers, or determine that this is not
+    possible.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 2\cdot 10^5$</span>), the
+        number of individuals in the group. The individuals are
+        numbered from <span class="tex2jax_process">$1$</span> to
+        <span class="tex2jax_process">$n$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines,
+        describing the individuals in the group.</p>
+<p>The <span class="tex2jax_process">$i$</span>th such line
+        starts with an integer <span class="tex2jax_process">$m_
+        i$</span> (<span class="tex2jax_process">$1 \leq m_ i \leq
+        2\cdot 10^5$</span>), the number of numbers that describe
+        individual <span class="tex2jax_process">$i$</span>.</p>
+<p>The remainder of the line has <span class="tex2jax_process">$m_ i$</span> distinct integers
+        <span class="tex2jax_process">$d_{i,1},\ldots ,d_{i,m_
+        i}$</span> (<span class="tex2jax_process">$1 \leq d_{i,j}
+        \leq 10^9$</span> for each <span class="tex2jax_process">$j$</span>), the set of numbers that
+        describe individual <span class="tex2jax_process">$i$</span>.</p>
+</li>
+</ul>
+<p>It is guaranteed that the sum over all <span class="tex2jax_process">$m_ i$</span> is at most <span class="tex2jax_process">$2\cdot 10^5$</span>.</p>
+<h2>Output</h2>
+<p>Output a proof in the form of <span class="tex2jax_process">$n-1$</span> lines, each of which contains
+    three integers <span class="tex2jax_process">$p$</span>,
+    <span class="tex2jax_process">$q$</span> and <span class="tex2jax_process">$r$</span>, where <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span> are distinct individuals that are
+    both described by the number <span class="tex2jax_process">$r$</span>. Using only these relations, it
+    must be possible to show that any pair of individuals in the
+    group are connected either directly or indirectly.</p>
+<p>If no such proof exists, output “<tt class="ttfamily">impossible</tt>”. If there are multiple proofs, you
+    may output any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+2 17 10
+1 5
+2 10 22
+3 17 22 9
+2 17 8
+3 9 22 16
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+2 17 10
+2 5 10
+2 10 22
+3 17 22 9
+2 17 8
+3 9 22 16
+</pre>
+</td>
+<td>
+<pre>1 3 10
+2 3 10
+3 4 22
+4 5 17
+4 6 9
+</pre>
+</td>
+</tr>
+</table>
+</div>

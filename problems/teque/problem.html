@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>You have probably heard about the <i class="itshape">deque</i> (double-ended queue) data structure, which
+    allows for efficient pushing and popping of elements from both
+    the front and back of the queue. Depending on the
+    implementation, it also allows for efficient random access to
+    any index element of the queue as well. Now, we want you to
+    bring this data structure up to the next level, the <i class="itshape">teque</i> (triple-ended queue)!</p>
+<p>The <i class="itshape">teque</i> supports the following four
+    operations:</p>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">push_back x</b>: insert the element
+        <span class="tex2jax_process">$x$</span> into the back of
+        the <i class="itshape">teque</i>.</p>
+</li>
+<li>
+<p><b class="bfseries">push_front x</b>: insert the element
+        <span class="tex2jax_process">$x$</span> into the front of
+        the <i class="itshape">teque</i>.</p>
+</li>
+<li>
+<p><b class="bfseries">push_middle x</b>: insert the
+        element <span class="tex2jax_process">$x$</span> into the
+        middle of the <i class="itshape">teque</i>. The inserted
+        element <span class="tex2jax_process">$x$</span> now
+        becomes the new middle element of the <i class="itshape">teque</i>. If <span class="tex2jax_process">$k$</span> is the size of the teque
+        before the insertion, the insertion index for <span class="tex2jax_process">$x$</span> is <span class="tex2jax_process">$(k+1) / 2$</span> (using <span class="tex2jax_process">$0$</span>-based indexing).</p>
+</li>
+<li>
+<p><b class="bfseries">get i</b>: prints out the
+        <span class="tex2jax_process">$i^\textrm {th}$</span> index
+        element (<span class="tex2jax_process">$0$</span>-based) of
+        the <i class="itshape">teque</i>.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 10^6$</span>) denoting the number of operations for
+    the <i class="itshape">teque</i>. Each of the next <span class="tex2jax_process">$N$</span> lines contains a string
+    <span class="tex2jax_process">$S$</span>, denoting one of the
+    above commands, followed by one integer <span class="tex2jax_process">$x$</span>. If <span class="tex2jax_process">$S$</span> is a <b class="bfseries">push_back</b>, <b class="bfseries">push_front</b>,
+    or <b class="bfseries">push_middle</b> command, <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$1
+    \leq x \leq 10^9$</span>), else for a <b class="bfseries">get</b> command, <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$0
+    \leq i \leq (\textrm{size of teque})-1$</span>). We guarantee
+    that the <i class="itshape">teque</i> is not empty when any
+    <b class="bfseries">get</b> command is given.</p>
+<h2>Output</h2>
+<p>For each <b class="bfseries">get i</b> command, print the
+    value inside the <span class="tex2jax_process">$i^\textrm
+    {th}$</span> index element of the <i class="itshape">teque</i>
+    in a new line.</p>
+<h2>Warning</h2>
+<p><b class="bfseries">The I/O files are large. Please use fast
+    I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9
+push_back 9
+push_front 3
+push_middle 5
+get 0
+get 1
+get 2
+push_middle 1
+get 1
+get 2
+</pre>
+</td>
+<td>
+<pre>3
+5
+9
+5
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

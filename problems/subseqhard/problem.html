@@ -1,0 +1,64 @@
+<div class="problembody">
+<p>“<span class="tex2jax_process">$47$</span> is the
+    quintessential random number," states the <span class="tex2jax_process">$47$</span> society. And there might be a
+    grain of truth in that.</p>
+<p>For example, the first ten digits of the Euler’s constant
+    are:</p>
+<pre>
+2 7 1 8 2 8 1 8 2 8
+</pre>
+<p>And what’s their sum? Of course, it is <span class="tex2jax_process">$47$</span>.</p>
+<p>Try walking around with your eyes open. You may be sure that
+    soon you will start discovering occurrences of the number
+    <span class="tex2jax_process">$47$</span> everywhere.</p>
+<p>You are given a sequence <span class="tex2jax_process">$S$</span> of integers we saw somewhere in
+    the nature. Your task will be to compute how strongly does this
+    sequence support the above claims. We will call a continuous
+    subsequence of <span class="tex2jax_process">$S$</span>
+<em>interesting</em> if the sum of its terms is equal to
+    <span class="tex2jax_process">$47$</span>.</p>
+<p>E.g., consider the sequence <span class="tex2jax_process">$S
+    = (24, 17, 23, 24, 5, 47)$</span>. Here we have two interesting
+    continuous subsequences: the sequence <span class="tex2jax_process">$(23, 24)$</span> and the sequence
+    <span class="tex2jax_process">$(47)$</span>.</p>
+<p>Given a sequence <span class="tex2jax_process">$S$</span>,
+    find the count of its interesting subsequences.</p>
+<h2>Input</h2>
+<p>The first line of the input file contains an integer
+    <span class="tex2jax_process">$T$</span> specifying the number
+    of test cases. There are at most <span class="tex2jax_process">$10$</span> test cases and each test case is
+    preceded by a blank line.</p>
+<p>The first line of each test case contains the length of a
+    sequence <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$N \leq 1\, 000\, 000$</span>. The second
+    line contains <span class="tex2jax_process">$N$</span>
+    space-separated integers – the elements of the sequence. All
+    numbers don’t exceed <span class="tex2jax_process">$20\,
+    000$</span> in absolute value.</p>
+<h2>Output</h2>
+<p>For each test case output a single line containing a single
+    integer – the count of interesting subsequences of the given
+    sentence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+
+13
+-2 7 1 8 2 8 -1 8 2 8 4 -5 -9
+
+7
+2 47 10047 47 1047 47 47
+</pre>
+</td>
+<td>
+<pre>1
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

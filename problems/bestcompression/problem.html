@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Being educated in Computer Science and Mathematics is not
+    always easy. Especially not if you have “friends” who
+    repeatedly insist on showing you their new “proofs” that P
+    equals NP, that the Riemann Hypothesis is true, and so on.</p>
+<p>One of your friends recently claims to have found a
+    fantastic new compression algorithm. As an example of its
+    amazing performance, your friend has told you that every file
+    in your precious collection of random bit strings after
+    compression would be at most <span class="tex2jax_process">$b$</span> bits long! Naturally, you find
+    this a bit hard to believe, so you want to determine whether it
+    is even theoretically possible for this to be true.</p>
+<p>Your collection of random bit strings consists of
+    <span class="tex2jax_process">$N$</span> files, no two of which
+    are identical, and each of which is exactly <span class="tex2jax_process">$1000$</span> bits long.</p>
+<h2>Input</h2>
+<p>The input consists of two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 10^{15}$</span>) and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$0
+    \le b \le 50$</span>), giving the number of files in your
+    collection and the maximum number of bits a compressed file is
+    allowed to have.</p>
+<h2>Output</h2>
+<p>Output a line containing either “<tt class="ttfamily">yes</tt>” if it is possible to compress all the
+    <span class="tex2jax_process">$N$</span> files in your
+    collection into files of size at most <span class="tex2jax_process">$b$</span> bits, or “<tt class="ttfamily">no</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+13 3
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 0
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+31415926535897 40
+</pre>
+</td>
+<td>
+<pre>
+no
+</pre>
+</td>
+</tr>
+</table>
+</div>

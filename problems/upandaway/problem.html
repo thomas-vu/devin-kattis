@@ -1,0 +1,67 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/upandaway/file/statement/en/img-0001.jpg" class="illustration" src="/problems/upandaway/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Steve’s Retreat
+      </div>
+</div>
+<p>Steve has set up <span class="tex2jax_process">$n$</span>
+    bases on multiple mountains around his house, located at
+    mountain <span class="tex2jax_process">$1$</span>. He wants to
+    fly from one base to another using his elytra and get to his
+    vacation house at mountain <span class="tex2jax_process">$x$</span>. Unfortunately, flying from one
+    base to another takes time, and he can only do this from a
+    taller mountain to a shorter mountain! If mountains are equal
+    height, he can fly between them as well.</p>
+<p>Fortunately, he has <span class="tex2jax_process">$k$</span>
+    uses of fireworks, meaning he can also travel from a shorter
+    mountain to a taller mountain! However, he doesn’t have much
+    fireworks, so the total amount of elevation travelled upwards
+    using fireworks throughout the whole trip must not exceed
+    <span class="tex2jax_process">$k$</span>. Please help Steve
+    calculate the fastest time he can reach his vacation house, or
+    determine that he can’t!</p>
+<h2>Input</h2>
+<p>The first line contains three space-separated integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$x$</span>, and <span class="tex2jax_process">$k$</span>, where <span class="tex2jax_process">$1 \leq n, k \leq 100$</span> and
+    <span class="tex2jax_process">$1 \leq x \leq n$</span>, the
+    number of bases, the location of the vacation house and the
+    amount of fireworks, respectively.</p>
+<p>The second line contains <span class="tex2jax_process">$n$</span> space-separated integers
+    <span class="tex2jax_process">$h_1, h_2, \ldots , h_ n$</span>,
+    where <span class="tex2jax_process">$h_ i$</span> (<span class="tex2jax_process">$1 \leq h_ i \leq 100$</span>) is the height
+    of the <span class="tex2jax_process">$i^{th}$</span> base’s
+    mountain.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines each
+    contain <span class="tex2jax_process">$n$</span> integers each,
+    where the <span class="tex2jax_process">$j^{th}$</span> integer
+    on the <span class="tex2jax_process">$i^{th}$</span> of these
+    <span class="tex2jax_process">$n$</span> lines is the time it
+    takes to travel from the <span class="tex2jax_process">$i^{th}$</span> base to the <span class="tex2jax_process">$j^{th}$</span> base. The <span class="tex2jax_process">$i^{th}$</span> number on the <span class="tex2jax_process">$i^{th}$</span> of these <span class="tex2jax_process">$n$</span> lines will always be <span class="tex2jax_process">$0$</span>. The time between mountains will
+    not exceed <span class="tex2jax_process">$1\, 000$</span>.</p>
+<h2>Output</h2>
+<p>If Steve can reach his vacation house, output a single
+    integer, the minimum time Steve needs to reach his vacation
+    house at base <span class="tex2jax_process">$x$</span>. If he
+    cannot reach his vacation house, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3 3
+3 6 2
+0 1 10
+10 0 1
+10 10 0
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>Through quantum superposition, you are in two universes at
+    the same time. Each universe can be represented as a directed
+    acyclic graph. You begin at the start vertices in each universe
+    and your goal is to reach the end vertices. Now, you are
+    wondering, can you reach the end vertices in both universes
+    where the sum of steps made in each universe is exactly equal
+    to a given number?</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$1
+    \leq N_1, N_2 \leq 1\, 000$</span>, the number of vertices in
+    each universe, and <span class="tex2jax_process">$0 \leq M_1,
+    M_2 \leq 2\, 000$</span>, the number of edges in each universe.
+    In both universes, vertex <span class="tex2jax_process">$1$</span> is the start vertex. Vertices
+    <span class="tex2jax_process">$N_1$</span> and <span class="tex2jax_process">$N_2$</span> are the end vertices in each
+    respective universe.</p>
+<p>Each of the next <span class="tex2jax_process">$M_1$</span>
+    lines contains two numbers <span class="tex2jax_process">$1
+    \leq u, v \leq N_1$</span>, indicating a directed edge from
+    vertex <span class="tex2jax_process">$u$</span> to vertex
+    <span class="tex2jax_process">$v$</span> in universe 1.</p>
+<p>Each of the next <span class="tex2jax_process">$M_2$</span>
+    lines contains two numbers <span class="tex2jax_process">$1
+    \leq u, v \leq N_2$</span>, indicating a directed edge from
+    vertex <span class="tex2jax_process">$u$</span> to vertex
+    <span class="tex2jax_process">$v$</span> in universe 2.</p>
+<p>There will not be duplicate edges. It is guaranteed that the
+    universes are acyclic, and there exists a path from start to
+    end vertex in each universe.</p>
+<p>The next line contains <span class="tex2jax_process">$1 \leq
+    Q \leq 2\, 000$</span>, the number of queries. Each query
+    consists of a line with a single integer <span class="tex2jax_process">$0 \leq q \leq 2\, 000$</span> that is the
+    sum of steps made in each universe.</p>
+<h2>Output</h2>
+<p>For each query, output “Yes” if it is possible to reach the
+    end vertices in both universes where the sum of steps made in
+    each universe is exactly equal to the given query, or “No”
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 3 1
+1 2
+1 3
+2 3
+1 2
+5
+0
+1
+2
+3
+4
+</pre>
+</td>
+<td>
+<pre>
+No
+No
+Yes
+Yes
+No
+</pre>
+</td>
+</tr>
+</table>
+</div>

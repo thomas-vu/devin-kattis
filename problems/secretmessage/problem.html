@@ -1,0 +1,171 @@
+<div class="problembody">
+<p>Jack and Jill developed a special encryption method, so they
+    can enjoy conversations without worrrying about eavesdroppers.
+    Here is how: let <span class="tex2jax_process">$L$</span> be
+    the length of the original message, and <span class="tex2jax_process">$M$</span> be the smallest square number
+    greater than or equal to <span class="tex2jax_process">$L$</span>. Add <span class="tex2jax_process">$(M - L)$</span> asterisks to the message,
+    giving a padded message with length <span class="tex2jax_process">$M$</span>. Use the padded message to fill a
+    table of size <span class="tex2jax_process">$K \times
+    K$</span>, where <span class="tex2jax_process">$K^2 =
+    M$</span>. Fill the table in row-major order (top to bottom
+    row, left to right column in each row). Rotate the table
+    <span class="tex2jax_process">$90$</span> degrees clockwise.
+    The encrypted message comes from reading the message in
+    row-major order from the rotated table, omitting any
+    asterisks.</p>
+<p>For example, given the original message ‘iloveyouJack’, the
+    message length is <span class="tex2jax_process">$L=12$</span>.
+    Thus the padded message is ‘iloveyouJack****’, with length
+    <span class="tex2jax_process">$M=16$</span>. Below are the two
+    tables before and after rotation.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>i</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>l</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>o</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>v</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>e</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>y</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>o</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>u</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>J</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>a</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>c</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>k</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+</tr>
+</table>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>J</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>e</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>i</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>a</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>y</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>l</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>c</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>o</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>o</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:left">
+<p>*</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>k</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>u</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>v</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Then we read the secret message as ‘Jeiaylcookuv’.</p>
+<h2>Input</h2>
+<p>The first line of input is the number of original messages,
+    <span class="tex2jax_process">$1 \le N \le 100$</span>. The
+    following <span class="tex2jax_process">$N$</span> lines each
+    have a message to encrypt. Each message contains only
+    characters a–z (lower and upper case), and has length
+    <span class="tex2jax_process">$1 \le L \le 10\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>For each original message, output the secret message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+iloveyoutooJill
+TheContestisOver
+</pre>
+</td>
+<td>
+<pre>
+iteiloylloooJuv
+OsoTvtnheiterseC
+</pre>
+</td>
+</tr>
+</table>
+</div>

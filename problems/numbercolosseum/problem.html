@@ -1,0 +1,147 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/numbercolosseum/file/statement/en/img-0001.jpg" class="illustration" src="/problems/numbercolosseum/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Roman_Colosseum_With_Moon.jpg">
+        Picture</a> by Jimmy Walker via Wikimedia Commons, cc by-sa
+      </div>
+</div>
+<p>Welcome to the Number Colosseum, where two teams of integers
+    are preparing to battle! On the left side of the number line we
+    have team <i class="itshape">Negatives</i> while on the right
+    side we have team <i class="itshape">Positives</i>. Every
+    integer fighting in the colosseum is on one of these two
+    teams.</p>
+<p>At the start of the battle, the contestants line up outside
+    the colosseum. One by one, the contestants enter the colosseum
+    and follow these rules:</p>
+<ul class="itemize">
+<li>
+<p>If there are no contestants from the other team, this
+        contestant will wait and become the most recent contestant
+        to have entered the colosseum.</p>
+</li>
+<li>
+<p>If at least one contestant of the opposing team is in
+        the colosseum, this contestant will fight the contestant on
+        the opposing team who has most recently entered the
+        colosseum. The winner of a fight between a negative integer
+        and positive integer is the one with the highest absolute
+        value. After a fight occurs, the value of the winner
+        becomes the sum of two fighting integers while the loser
+        leaves. Note that if the two integers have the same
+        absolute value, they both lose and both leave. If there is
+        a winner, they will continue fighting as long as there are
+        more opposing contestants. Otherwise, they will wait.</p>
+</li>
+</ul>
+<p>After all of the integers have entered the colosseum, only
+    one team may be declared the winners of the Number Colosseum!
+    Given the lineup of contestants for the upcoming battle, write
+    a program to determine which team will triumph as well as the
+    state of the colosseum after all fights have occurred.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 5 \cdot 10^5$</span>), which is the number of
+    contestants who will enter the colosseum. The second line
+    contains the lineup of contestants. This will contain
+    <span class="tex2jax_process">$N$</span> space-separated
+    integers <span class="tex2jax_process">$x_1, x_2, \ldots , x_
+    N$</span> (<span class="tex2jax_process">$1 \leq |x_ i| \leq
+    10^6$</span> for each <span class="tex2jax_process">$1 \leq i
+    \leq N$</span>), the value of the <span class="tex2jax_process">$i$</span>th contestant entering the
+    colosseum.</p>
+<h2>Output</h2>
+<p>Display the winning team with either <tt class="ttfamily">Positives win!</tt> or <tt class="ttfamily">Negatives win!</tt>. On the following line display
+    the list of integers remaining in the colosseum after all
+    fighting has finished. Display these integers in the order of
+    arrival into the colosseum.</p>
+<p>If neither team wins, display <tt class="ttfamily">Tie!</tt>
+    instead.</p>
+<h2>Explanation</h2>
+<p>In Sample Input <span class="tex2jax_process">$1$</span>,
+    <span class="tex2jax_process">$N = 4$</span> and the
+    contestants have lined up in this order <span class="tex2jax_process">$[-3, -4, 9, 1]$</span>.</p>
+<ul class="itemize">
+<li>
+<p>First, contestant <span class="tex2jax_process">$-3$</span> enters the colosseum which
+        now contains <span class="tex2jax_process">$(-3)$</span>.</p>
+</li>
+<li>
+<p>Next, contestant <span class="tex2jax_process">$-4$</span> enters the colosseum which
+        now contains <span class="tex2jax_process">$(-3,
+        -4)$</span>.</p>
+</li>
+<li>
+<p>Then, <span class="tex2jax_process">$9$</span> enters
+        and fights <span class="tex2jax_process">$-4$</span>.
+        Contestant <span class="tex2jax_process">$9$</span> wins
+        and becomes <span class="tex2jax_process">$5$</span> while
+        contestant <span class="tex2jax_process">$-4$</span> loses
+        and leaves. Then <span class="tex2jax_process">$5$</span>
+        fights <span class="tex2jax_process">$-3$</span>, wins, and
+        becomes <span class="tex2jax_process">$2$</span> while
+        <span class="tex2jax_process">$-3$</span> loses and leaves.
+        The colosseum now contains <span class="tex2jax_process">$(2)$</span>.</p>
+</li>
+<li>
+<p>Finally, <span class="tex2jax_process">$1$</span> enters
+        the colosseum. The final state of the Colosseum is
+        <span class="tex2jax_process">$(2, 1)$</span> and Positives
+        win!</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+-3 -4 9 1
+</pre>
+</td>
+<td>
+<pre>Positives win!
+2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+4 -2 -2 2 -1 -1 -1
+</pre>
+</td>
+<td>
+<pre>Negatives win!
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+10 -2 -2 -2 -2 -2
+</pre>
+</td>
+<td>
+<pre>Tie!
+</pre>
+</td>
+</tr>
+</table>
+</div>

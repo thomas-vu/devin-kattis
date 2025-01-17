@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>You are in a chemistry class, and you are working with some
+    compounds, exactly one of which you are allergic to. You have a
+    fixed number of days to figure out which compound it is. You
+    set up a number of sites on your arm for testing. On each day,
+    you do the following exactly once:</p>
+<ol class="enumerate">
+<li>
+<p>Apply each compound to some (possibly empty) subset of
+        sites on your arm. You can apply more than one compound to
+        the same site.</p>
+</li>
+<li>
+<p>Wait and see which sites demonstrate an allergic
+        reaction.</p>
+</li>
+</ol>
+<p>A site demonstrates an allergic reaction if and only if the
+    compound you are allergic to is applied to that site. If a site
+    demonstrates an allergic reaction, it cannot be used on future
+    days.</p>
+<p>Compute the minimum number of sites you’ll need on your arm
+    to guarantee that you can determine exactly which compound you
+    are allergic to within the given number of days.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \le t \le 10^4$</span>), which is the
+    number of test cases that follow.</p>
+<p>Each of the next <span class="tex2jax_process">$t$</span>
+    lines contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \le n,d \le 10^{18}$</span>) describing a test case, where
+    <span class="tex2jax_process">$n$</span> is the number of
+    compounds and <span class="tex2jax_process">$d$</span> is the
+    number of days.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$t$</span> lines. On
+    each line output a single integer, which is the minimum number
+    of sites on your arm necessary to discover which of the
+    <span class="tex2jax_process">$n$</span> compounds is the
+    allergen within <span class="tex2jax_process">$d$</span> days
+    for that test case. Output the answers to the test cases in the
+    order they appear in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+4 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

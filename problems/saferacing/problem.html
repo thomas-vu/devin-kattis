@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/saferacing/file/statement/en/img-0001.jpg" class="illustration" src="/problems/saferacing/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/mdpettitt/2659854694/"><small class="tiny">
+        Picture by Martin Pettitt via Flickr</small></a>
+</div>
+</div>
+<p>Tomorrow is racing day. There will be yet another grand prix
+    in yet another country. Beside the safety car, there are
+    various other security measures in order to make sure that
+    everybody is as safe as possible. Among these safety measures
+    are the track marshals: special race officials standing along
+    the track with an assortment of flags that they can use to
+    signal various messages to the drivers. For instance, the
+    yellow flag warns the drivers of a dangerous situation, and the
+    blue flag is used to order a lapped car to make way for one of
+    the faster cars.</p>
+<p>Every marshal should be stationed in a so-called <em>marshal
+    booth</em>, a kind of protected cage that is clearly visible
+    from the race track. These booths are located at regular
+    intervals of ten metres (one decametre) along the track. The
+    track is circular and <span class="tex2jax_process">$L$</span>
+    decametres long and therefore contains exactly <span class="tex2jax_process">$L$</span> booths.</p>
+<p>Not every booth needs to be used. International racing
+    regulations require that the distance between two consecutive
+    marshals should be at most <span class="tex2jax_process">$S$</span> decametres, meaning that every
+    <span class="tex2jax_process">$S$</span> consecutive booths
+    should contain at least one marshal. The marshals are not
+    responsible for waving the finish flag, so it is not required
+    (but also not forbidden) to have a marshal at the
+    start/finish.</p>
+<p>This leaves you with many ways of assigning marshals to the
+    various booths along the track. Out of sheer curiosity you
+    decide to calculate the total number of valid marshal
+    assignments. Reduce your answer modulo <span class="tex2jax_process">$123\, 456\, 789$</span> in case it gets too
+    large.</p>
+<h2>Input</h2>
+<p>The input consists of two integers <span class="tex2jax_process">$L$</span>, the length of the track, and
+    <span class="tex2jax_process">$S$</span>, the maximal distance
+    between consecutive marshals along the track, satisfying
+    <span class="tex2jax_process">$1 \leq S \leq L \leq
+    10^6$</span>.</p>
+<h2>Output</h2>
+<p>Output the integer <span class="tex2jax_process">$W$</span>,
+    the number of ways to put marshals modulo <span class="tex2jax_process">$123\, 456\, 789$</span>. (Your answer must
+    satisfy <span class="tex2jax_process">$0 \leq W &lt; 123\,
+    456\, 789$</span>.)</p>
+<h2>Explanation of sample input 1</h2>
+<p>In the first sample test case, the four solutions are to put
+    marshals at distances <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$1$</span>, at distances
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2$</span>, at distances <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span>, or, at distances <span class="tex2jax_process">$0$</span>, <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span> (in decametres) from the
+    start.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2500 2000
+</pre>
+</td>
+<td>
+<pre>
+27511813
+</pre>
+</td>
+</tr>
+</table>
+</div>

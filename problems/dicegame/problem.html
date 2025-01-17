@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/dicegame/file/statement/en/img-0001.jpg" class="illustration" src="/problems/dicegame/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/jdhancock/3582171012">JD
+        Hancock</a>
+</div>
+</div>
+<p>Gunnar and Emma play a lot of board games at home, so they
+    own many dice that are not normal <span class="tex2jax_process">$6$</span>-sided dice. For example they own a
+    die that has <span class="tex2jax_process">$10$</span> sides
+    with numbers <span class="tex2jax_process">$47, 48, \ldots ,
+    56$</span> on it.</p>
+<p>There has been a big storm in Stockholm, so Gunnar and Emma
+    have been stuck at home without electricity for a couple of
+    hours. They have finished playing all the games they have, so
+    they came up with a new one. Each player has 2 dice which he or
+    she rolls. The player with a bigger sum wins. If both sums are
+    the same, the game ends in a tie.</p>
+<h2>Task</h2>
+<p>Given the description of Gunnar’s and Emma’s dice, which
+    player has higher chances of winning?</p>
+<p>All of their dice have the following property: each die
+    contains numbers <span class="tex2jax_process">$a, a+1, \dots ,
+    b$</span>, where <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> are the lowest and
+    highest numbers respectively on the die. Each number appears
+    exactly on one side, so the die has <span class="tex2jax_process">$b-a+1$</span> sides.</p>
+<h2>Input</h2>
+<p>The first line contains four integers <span class="tex2jax_process">$a_1, b_1, a_2, b_2$</span> that describe
+    Gunnar’s dice. Die number <span class="tex2jax_process">$i$</span> contains numbers <span class="tex2jax_process">$a_ i, a_ i + 1, \dots , b_ i$</span> on its
+    sides. You may assume that <span class="tex2jax_process">$1\le
+    a_ i \le b_ i \le 100$</span>. You can further assume that each
+    die has at least four sides, so <span class="tex2jax_process">$a_ i + 3\le b_ i$</span>.</p>
+<p>The second line contains the description of Emma’s dice in
+    the same format.</p>
+<h2>Output</h2>
+<p>Output the name of the player that has higher probability of
+    winning. Output “<tt class="tt">Tie</tt>” if both players have
+    same probability of winning.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 4 1 4
+1 6 1 6
+</pre>
+</td>
+<td>
+<pre>
+Emma
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 8 1 8
+1 10 2 5
+</pre>
+</td>
+<td>
+<pre>
+Tie
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5 2 7
+1 5 2 5
+</pre>
+</td>
+<td>
+<pre>
+Gunnar
+</pre>
+</td>
+</tr>
+</table>
+</div>

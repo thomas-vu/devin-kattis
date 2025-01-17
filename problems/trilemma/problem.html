@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>You’re interested in writing a program to classify
+    triangles. Triangles can be classified according to their
+    internal angles. If one of the internal angles is exactly 90
+    degrees, then that triangle is known as a "right" triangle. If
+    one of the internal angles is greater than 90 degrees, that
+    triangle is known as an "obtuse" triangle. Otherwise, all the
+    internal angles are less than 90 degrees and the triangle is
+    known as an "acute" triangle.</p>
+<p>Triangles can also be classified according to the relative
+    lengths of their sides. In a "scalene" triangle, all three
+    sides have different lengths. In an "isosceles" triangle, two
+    of the sides are of equal length. (If all three sides have the
+    same length, the triangle is known as an "equilateral"
+    triangle, but you can ignore this case since there will be no
+    equilateral triangles in the input data.)</p>
+<p>Your program must determine, for each set of three points,
+    whether or not those points form a triangle. If the three
+    points are not distinct, or the three points are collinear,
+    then those points do not form a valid triangle. (Another way is
+    to calculate the area of the triangle; valid triangles must
+    have non-zero area.) Otherwise, your program will classify the
+    triangle as one of "acute", "obtuse", or "right", and one of
+    "isosceles" or "scalene".</p>
+<h2>Input</h2>
+<p>The first line of input gives the number of cases,
+    <span class="tex2jax_process">$N$</span>. <span class="tex2jax_process">$N$</span> lines follow, each containing
+    integers <span class="tex2jax_process">$x_1,y_1,x_2,y_2,x_3,y_3$</span>.</p>
+<p>You may assume that <span class="tex2jax_process">$1 \leq N
+    \leq 100$</span> and <span class="tex2jax_process">$-1000 \leq
+    x_1, y_1, x_2, y_2, x_3, y_3 \leq 1000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing “<tt class="ttfamily">Case #<span class="tex2jax_process">$x$</span>:</tt>” followed by one of these
+    strings:</p>
+<ul class="itemize">
+<li>
+<p>“<tt>isosceles acute triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>isosceles obtuse triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>isosceles right triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>scalene acute triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>scalene obtuse triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>scalene right triangle</tt>”</p>
+</li>
+<li>
+<p>“<tt>not a triangle</tt>”</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+0 0 0 4 1 2
+1 1 1 4 3 2
+2 2 2 4 4 3
+3 3 3 4 5 3
+4 4 4 5 5 6
+5 5 5 6 6 5
+6 6 6 7 6 8
+7 7 7 7 7 7
+</pre>
+</td>
+<td>
+<pre>
+Case #1: isosceles obtuse triangle
+Case #2: scalene acute triangle
+Case #3: isosceles acute triangle
+Case #4: scalene right triangle
+Case #5: scalene obtuse triangle
+Case #6: isosceles right triangle
+Case #7: not a triangle
+Case #8: not a triangle
+</pre>
+</td>
+</tr>
+</table>
+</div>

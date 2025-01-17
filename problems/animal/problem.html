@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>Alice and Bob are biologists. They like to group animals
+    using classification trees. A classification tree is a binary
+    tree where the leaves are labeled by the animals.</p>
+<p>For example, Figure 1 below shows the classification of
+    <span class="tex2jax_process">$5$</span> animals (labeled as
+    <span class="tex2jax_process">$1, 2, 3, 4, 5$</span>) by Alice
+    and Bob. Alice’s classification has nine groups: <span class="tex2jax_process">$\{ 1\} $</span>, <span class="tex2jax_process">$\{ 2\} $</span>, <span class="tex2jax_process">$\{ 3\} $</span>, <span class="tex2jax_process">$\{ 4\} $</span>, <span class="tex2jax_process">$\{ 5\} $</span>, <span class="tex2jax_process">$\{ 2, 5\} $</span>, <span class="tex2jax_process">$\{ 1, 2, 5\} $</span>, <span class="tex2jax_process">$\{ 1, 2, 3, 5\} $</span> and <span class="tex2jax_process">$\{ 1, 2, 3, 4, 5\} $</span>. Bob’s
+    classification also has nine groups: <span class="tex2jax_process">$\{ 1\} $</span>, <span class="tex2jax_process">$\{ 2\} $</span>, <span class="tex2jax_process">$\{ 3\} $</span>, <span class="tex2jax_process">$\{ 4\} $</span>, <span class="tex2jax_process">$\{ 5\} $</span>, <span class="tex2jax_process">$\{ 1, 5\} $</span>, <span class="tex2jax_process">$\{ 2, 3\} $</span>, <span class="tex2jax_process">$\{ 1, 2, 3, 5\} $</span> and <span class="tex2jax_process">$\{ 1, 2, 3, 4, 5\} $</span>.</p>
+<div class="figure" id="fig:animal1">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{example.png}" src="/problems/animal/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1
+        </div>
+</center>
+</div>
+<p>As you can observe, Alice and Bob classify the animals
+    differently. Carol is interested to know the number of common
+    groups between the classifications of Alice and Bob. For the
+    above example, there are <span class="tex2jax_process">$7$</span> common groups. They are:
+    <span class="tex2jax_process">$\{ 1\} $</span>, <span class="tex2jax_process">$\{ 2\} $</span>, <span class="tex2jax_process">$\{ 3\} $</span>, <span class="tex2jax_process">$\{ 4\} $</span>, <span class="tex2jax_process">$\{ 5\} $</span>, <span class="tex2jax_process">$\{ 1, 2, 3, 5\} $</span> and <span class="tex2jax_process">$\{ 1, 2, 3, 4, 5\} $</span>.</p>
+<p>Carol usually counts the number of common goups by hand. On
+    one day, an outer space alien came to our earth. He asked Alice
+    and Bob to classify aliens in outer space. The number
+    <span class="tex2jax_process">$N$</span> of aliens can be as
+    big as <span class="tex2jax_process">$100\, 000$</span>. It is
+    impossible to count the number of common goups by hand now. Can
+    you make a program to help Carol?</p>
+<h2>Input</h2>
+<p>The input consists of three lines:</p>
+<ul class="itemize">
+<li>
+<p>one line with one integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 100\, 000$</span>)</p>
+</li>
+<li>
+<p>the classification tree of Alice</p>
+</li>
+<li>
+<p>the classification tree of Bob</p>
+</li>
+</ul>
+<p>Note that both classification trees are leaf-labeled by
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>. The tree is represented by the
+    parathesis encoding. (Note that the encoding only have numbers
+    and <span class="tex2jax_process">$3$</span> symbols, that is,
+    ‘(’, ‘)’, ‘,’.) For the example in Figure 1, see Sample
+    Input 1.</p>
+<h2>Output</h2>
+<p>Output one line with a single integer that represents the
+    number of common groups between Alice and Bob’s classification
+    trees.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+((3,(1,(5,2))),4)
+(((5,1),(2,3)),4)
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+(1,(2,(3,(4,(5,(6,(7,(8,(9,10)))))))))
+(((((((((1,2),3),4),5),6),7),8),9),10)
+</pre>
+</td>
+<td>
+<pre>
+11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+(10,(9,(8,(7,(6,(5,(4,(3,(2,1)))))))))
+(((((((((1,2),3),4),5),6),7),8),9),10)
+</pre>
+</td>
+<td>
+<pre>
+19
+</pre>
+</td>
+</tr>
+</table>
+</div>

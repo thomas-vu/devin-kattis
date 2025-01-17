@@ -1,0 +1,153 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/hahysi/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hahysi/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        The site (image from <a href="https://www.flickr.com/photos/alexprevot/6102245535">flickr.com</a>)
+      </div>
+</div>Siggi cement was recently hired to build skyscrapers in
+    downtown Reykjavík. He recently received the info that he has
+    been assigned a site of size <span class="tex2jax_process">$n
+    \cdot m$</span>. Siggi is very precise when it comes to his job
+    and wants to estimate the cost and feasibility of all possible
+    locations for the corners of the building. Siggi’s customer put
+    no constraints on how wide the building has to be in either
+    direction, as long as it’s at least one square meter and fits
+    the site. The site is divided into squares, each being
+    <span class="tex2jax_process">$1$</span> square meter
+    (<span class="tex2jax_process">$1m \cdot 1m$</span>). The
+    skyscraper has to be a rectangle when viewed from above. Each
+    corner has to be in the center of some square and no two
+    corners may be in the same square. Siggi has assigned you the
+    task of finding how many possible locations he has to look
+    into.
+    <h2>Input</h2>
+<p>The first and only line of the input is the length and width
+    of the site, <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$m$</span>, separated by a space.
+    It is guaranteed that <span class="tex2jax_process">$1 \leq n,
+    m \leq 10^{18}$</span>.</p>
+<h2>Output</h2>
+<p>Print the number of possible locations for the skyscraper.
+    Since the answer could be very large you should print the
+    remainder of the answer when it is divided by <span class="tex2jax_process">$10^9 + 7$</span>. For example if there are
+    <span class="tex2jax_process">$1\, 000\, 203\, 876$</span>
+    possible locations, you should print <span class="tex2jax_process">$203\, 869$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Scoring</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          7$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          200$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq 2\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          10^6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+</pre>
+</td>
+<td>
+<pre>18
+</pre>
+</td>
+</tr>
+</table>
+</div>

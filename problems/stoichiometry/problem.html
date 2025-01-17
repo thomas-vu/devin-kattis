@@ -1,0 +1,122 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/stoichiometry/file/statement/en/img-0001.png" class="illustration" src="/problems/stoichiometry/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://pixabay.com/en/periodic-system-chemistry-science-1059755">
+        Gerd Altmann</a>.
+      </div>
+</div>
+<p>You have landed a lucrative contract with Amalgamated
+    Chemical Manufacturing (ACM), to help their chemists with
+    stoichiometry. Stoichiometry is the calculation of reactants
+    and products in chemical reactions, based on the law of
+    conservation of mass, which states that the total mass of the
+    reactants equals the total mass of the products. The relations
+    among quantities of reactants and products typically form a
+    ratio of positive integers. If the amounts of the separate
+    reactants are known, then the amount of the product can be
+    calculated, and vice-versa. The relationship of reactants to
+    products can be described using a soichiometric equation such
+    as:</p><span class="tex2jax_process">\begin{equation} \rm {C
+    H_4 + 2 O_2 \rightarrow C O_2 + 2 H_2 O}, \end{equation}</span>
+<p>which can be read as: “One molecule of <span class="tex2jax_process">$\rm C H_4$</span> and two molecules of
+    <span class="tex2jax_process">$\rm O_2$</span> yield one
+    molecule of <span class="tex2jax_process">$\rm C O_2$</span>
+    and two molecules of <span class="tex2jax_process">$\rm H_2
+    O$</span>.” The total number of atoms of each element on the
+    left hand side of the stoichiometric equation must match the
+    number of atoms of that element on right hand side. Your task
+    is to write a program that, given an equation of the
+    form:</p><span class="tex2jax_process">\begin{equation} \rm {\_
+    H_2 O + \_ C O_2 \rightarrow \_ O_2 + \_ C_6 H_{12} O_6},
+    \label{exampleeq} \end{equation}</span>
+<p>will fill in the blanks to produce a balanced equation. For
+    example, the above equation could be balanced as
+    follows:</p><span class="tex2jax_process">\begin{equation} \rm
+    {6H_2O + 6CO_2 \rightarrow 6O_2 + 1C_6H_{12}O_6}.
+    \end{equation}</span>
+<h2>Input</h2>
+<p>An equation is input in the form of a sequence of
+    <span class="tex2jax_process">$M$</span> <span class="tex2jax_process">$(1 &lt; M \le 20)$</span> lines, one for
+    each molecule in the formula (e.g., <span class="tex2jax_process">$\rm {H_2 O}$</span> or <span class="tex2jax_process">$\rm {CO_2}$</span>). Each line <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1\le m \le M$</span>) has the following
+    fields:</p><span class="tex2jax_process">\begin{equation*}
+    sign_ m\; \; N_ m\; \; element_{m,1}\; \; count_{m,1}\; \;
+    \ldots \; \; element_{m,{N_ m}}\; \; count_{m,{N_ m}}
+    \end{equation*}</span>
+<p>where <span class="tex2jax_process">$sign_ m$</span> is
+    either <tt>+1</tt> or <tt>-1</tt>, with a sign of <tt>+1</tt>
+    indicating that this molecule appears on the left of the
+    equation, and <tt>-1</tt> indicating that it appears on the
+    right. <span class="tex2jax_process">$N_ m$</span>, where
+    <span class="tex2jax_process">$0 &lt; N_ m &lt; 20$</span>, is
+    the number of <span class="tex2jax_process">$element$</span>/<span class="tex2jax_process">$count$</span> pairs following on the line.
+    Each <span class="tex2jax_process">$element_{m,n}$</span>,
+    where <span class="tex2jax_process">$1 \le n \le N_ m$</span>,
+    is an element name consisting of one or two upper or lowercase
+    letters, and each <span class="tex2jax_process">$count_{m,n}$</span> is a positive integer,
+    <span class="tex2jax_process">$1 \leq count_{m,n} \leq
+    12$</span>. For example, the element/count pair “<tt>Fe 2</tt>”
+    indicates that the molecule contains two atoms of the element
+    Fe (iron). There will be no more than 10 unique elements in a
+    single equation.</p>
+<p>Note that an element may be repeated in a given line of
+    input, as in<br/>
+<tt>+1 6 C 1 H 5 C 1 O 1 O 1 H 1</tt><br/>
+    which specifies that at least one molecule of <span class="tex2jax_process">$\rm CH_5COOH$</span> appears on the left
+    side of the equation. Note that <span class="tex2jax_process">$\rm CH_5COOH$</span> can be written as
+    <span class="tex2jax_process">$\rm C_2H_6O_2$</span>.</p>
+<p>Input ends with a line of the form<br/>
+<tt>0 0</tt></p>
+<h2>Output</h2>
+<p>The program must output the numbers <span class="tex2jax_process">$C_1,\ldots ,C_ M$</span> <span class="tex2jax_process">$(0&lt;C_ i\le 1\, 000)$</span>, in order, to
+    fill in the blanks in the equation. Each number, <span class="tex2jax_process">$C_ m\mid 1\le m \le M$</span>, must be the
+    minimum number for which the equation is balanced (i.e. there
+    is no common factor that could reduce all of the <span class="tex2jax_process">$C_ m$</span> coefficients). You may assume
+    that every input test case has exactly one valid solution
+    meeting these criteria.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
++1 2 H 2 O 1
++1 2 C 1 O 2
+-1 1 O 2
+-1 3 C 6 H 12 O 6
+0 0
+</pre>
+</td>
+<td>
+<pre>
+6 6 6 1 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
++1 5 Be 2 C 1 O 3 O 2 H 2
++1 3 Ac 1 O 1 H 1
+-1 4 Be 4 O 1 Ac 6 O 6
+-1 2 H 2 O 1
+-1 2 C 1 O 2
+0 0
+</pre>
+</td>
+<td>
+<pre>
+2 6 1 5 2 
+</pre>
+</td>
+</tr>
+</table>
+</div>

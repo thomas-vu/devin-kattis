@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>A mobile is a type of kinetic sculpture constructed to take
+    advantage of the principle of equilibrium. It consists of a
+    number of rods, from which weighted objects or further rods
+    hang. The objects hanging from the rods balance each other, so
+    that the rods remain more or less horizontal. Each rod hangs
+    from only one string, which gives it freedom to rotate about
+    the string.</p>
+<p>We consider mobiles where each rod is attached to its string
+    exactly in the middle, as in the figure underneath. You are
+    given such a configuration, but the weights on the ends are
+    chosen incorrectly, so that the mobile is not in equilibrium.
+    Since that’s not aesthetically pleasing, you decide to change
+    some of the weights.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{equilibrium}" src="/problems/equilibrium/file/statement/en/img-0001.png" style="width:30.00%"/>
+</center>
+</div>
+<p>What is the minimum number of weights that you must change
+    in order to bring the mobile to equilibrium? You may substitute
+    any weight by any (possibly non-integer) weight. For the mobile
+    shown in the figure, equilibrium can be reached by changing the
+    middle weight from 7 to 3, so only 1 weight needs to
+    changed.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of
+    testcases, at most 100. After that per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line with the structure of the mobile, which is a
+        recursively defined expression of the form:</p>
+<center>
+<span class="tex2jax_process">\[ \langle
+          \texttt{expr}\rangle \; \; ::= \; \; \langle
+          \texttt{weight}\rangle \; \; \mid \; \; \mbox{``[''} \;
+          \langle \texttt{expr}\rangle \; \mbox{``,''} \; \langle
+          \texttt{expr}\rangle \; \mbox{``]''} \]</span>
+</center>
+<p>with <span class="tex2jax_process">$\langle
+        \texttt{weight}\rangle $</span> a positive integer smaller
+        than <span class="tex2jax_process">$10^9$</span> indicating
+        a weight and <span class="tex2jax_process">$[\langle
+        \texttt{expr}\rangle ,\langle \texttt{expr}\rangle
+        ]$</span> indicating a rod with the two expressions at the
+        ends of the rod. The total number of rods in the chain from
+        a weight to the top of the mobile will be at most 16.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per testcase:</p>
+<ul class="itemize">
+<li>
+<p>One line with the minimum number of weights that have to
+        be changed.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+[[3,7],6]
+40
+[[2,3],[4,5]]
+</pre>
+</td>
+<td>
+<pre>
+1
+0
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

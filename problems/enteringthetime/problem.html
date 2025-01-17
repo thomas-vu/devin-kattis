@@ -1,0 +1,131 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/enteringthetime/file/statement/en/img-0001.jpg" class="illustration" src="/problems/enteringthetime/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A digital clock changing numbers. License: CC BY-SA 3.0.
+        Author: <a href="https://commons.wikimedia.org/wiki/User:Beyond_silence">Beyond
+        silence</a>.
+      </div>
+</div>Arghs! Yet again, all the clocks in Petra’s home show the
+    wrong time due to a power outage that occurred while she was
+    sleeping. This means she has to spend her day resetting all the
+    clocks to the correct time. Now, you might not consider this a
+    big deal. After all, how many clocks does any single household
+    really have? Well, Petra just so happens to be a collector of
+    clocks. She literally has hundreds of clocks – and that is just
+    in her bedroom! Thus, it is understandable that she does not
+    look forward to all this resetting.
+
+    <p>You, as her friend, would prefer if she did not need to
+    spend her entire day resetting all her clocks. Especially since
+    this means she would not have any time to play with you! If
+    only you could construct some automated way of entering the
+    correct time into all the clocks, perhaps through some kind of
+    computer code...</p>
+<p>A-ha, of course! You can write a program to determine how to
+    set the correct time as quickly as possible!</p>
+<p>Each clock has a display of <span class="tex2jax_process">$4$</span> digits: two are used to display
+    the hour (between <tt class="ttfamily">00</tt> and <tt class="ttfamily">23</tt>), and two are used to display the minute
+    (between <tt class="ttfamily">00</tt> and <tt class="ttfamily">59</tt>). The time can be changed by selecting a
+    digit and either decreasing or increasing by <span class="tex2jax_process">$1$</span>. Decreasing a digit that is
+    <span class="tex2jax_process">$0$</span>, it is turned into
+    <span class="tex2jax_process">$9$</span>, and increasing a
+    digit <span class="tex2jax_process">$9$</span> turns it into
+    <span class="tex2jax_process">$0$</span>. However, the clock
+    can not display invalid times. This means that at any given
+    time, the hour must be between <tt class="ttfamily">00</tt> and
+    <tt class="ttfamily">23</tt> and the minute between <tt class="ttfamily">00</tt> and <tt class="ttfamily">59</tt>.</p>
+<p>Write a program that, given the original time of a clock and
+    the current time, determines how to set the clock
+    correctly.</p>
+<h2>Input</h2>
+<p>The input consists:</p>
+<ul class="itemize">
+<li>
+<p>one line with the time that the clock is currently set
+        to.</p>
+</li>
+<li>
+<p>one line with the current time.</p>
+</li>
+</ul>
+<p>Each time has the format <tt class="ttfamily">hh:mm</tt>,
+    where <tt class="ttfamily">hh</tt> is a two-digit number
+    between <tt class="ttfamily">00</tt> and <tt class="ttfamily">23</tt>, and <tt class="ttfamily">mm</tt> is a
+    two-digit number between <tt class="ttfamily">00</tt> and
+    <tt class="ttfamily">59</tt>.</p>
+<h2>Output</h2>
+<p>The first line contains the number of different times seen
+    on the clock when setting it correctly. Then for each time
+    output it on the same format as above <tt class="ttfamily">hh:mm</tt> on a separate line. Include both the
+    original time and the final time.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+00:00
+01:01
+</pre>
+</td>
+<td>
+<pre>
+3
+00:00
+01:00
+01:01
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+00:08
+00:00
+</pre>
+</td>
+<td>
+<pre>
+3
+00:08
+00:09
+00:00
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+09:09
+20:10
+</pre>
+</td>
+<td>
+<pre>
+6
+09:09
+09:00
+09:10
+00:10
+10:10
+20:10
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,115 @@
+<div class="problembody">
+<p>Now that zombies have learned to use SMS messaging, it is
+    imperative to develop software for detecting zombies over text.
+    After many long months of study, the top scientists have
+    figured out how to do it. The key observation is that humans
+    only use smiley faces, represented by the exact substring
+    <tt>:)</tt>, and zombies only use frowny faces, represented by
+    the exact substring <tt>:(</tt>. However, upon realizing this,
+    double agents were trained to use both kinds of emoticons at
+    once! Your job is to write a program to determine who a given
+    message is from.</p>
+<h2>Input</h2>
+<p>The input will consist of a single line of text, no longer
+    than <span class="tex2jax_process">$160$</span> characters,
+    containing letters, numbers, spaces, and any of the following
+    symbols: <tt>.,'!?:)(</tt>.</p>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>If the line contains only smiley faces and no frowny
+        faces, then output <tt>alive</tt>.</p>
+</li>
+<li>
+<p>If the line contains only frowny faces and no smiley
+        faces, then output <tt>undead</tt>.</p>
+</li>
+<li>
+<p>If the line contains both smiley faces and frowny faces,
+        then output <tt>double agent</tt>.</p>
+</li>
+<li>
+<p>Otherwise, output <tt>machine</tt>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>Hello, how are you? :)
+</pre>
+</td>
+<td>
+<pre>alive
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>Hey there! :( What's up? :(
+</pre>
+</td>
+<td>
+<pre>undead
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>::(Braaaains... are very useful for programming contests:))
+</pre>
+</td>
+<td>
+<pre>double agent
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>Sandy, when will my order be delivered?
+</pre>
+</td>
+<td>
+<pre>machine
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>Firing up EmoticonBot... (:  : (  ):  :D  c:
+</pre>
+</td>
+<td>
+<pre>machine
+</pre>
+</td>
+</tr>
+</table>
+</div>

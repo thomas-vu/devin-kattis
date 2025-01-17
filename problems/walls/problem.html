@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/walls/file/statement/en/img-0001.jpg" class="illustration" src="/problems/walls/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/risko/2892418847/">Richard
+        Štefanec</a>, used with permission.
+      </div>
+</div>
+<p>The local building firm needs your help. They are building
+    an apartment building where the walls are prefabricated and
+    lifted in place using cranes. The building firm has located
+    <span class="tex2jax_process">$n$</span> possible locations for
+    cranes, and needs to choose some of these so that the center of
+    each wall can be reached by at least one crane. The cranes are
+    quite expensive, so they want to use as few of them as
+    possible. A crane can reach a wall if the wall’s center is at
+    most a distance <span class="tex2jax_process">$r$</span>
+    away.</p>
+<p>The house that is to be built is rectangular with a length
+    <span class="tex2jax_process">$\ell $</span> and width
+    <span class="tex2jax_process">$w$</span>.</p>
+<h2>Task</h2>
+<p>Find the minimum number of cranes required to reach the
+    center of all four walls.</p>
+<div class="figure" id="a0000002206">
+<center>
+<img alt="\includegraphics{walls-sample-1}" src="/problems/walls/file/statement/en/img-0002.png" style="width:; height:"/>
+<div class="caption">
+<b>Figure 1</b>: This example corresponds to sample input
+          1.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains four space-separated
+    positive integers <span class="tex2jax_process">$\ell $</span>,
+    <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$r$</span>, all at most 30. <span class="tex2jax_process">$\ell $</span> and <span class="tex2jax_process">$w$</span> denote the length and width of the
+    house, <span class="tex2jax_process">$n$</span> denotes the
+    number of possible crane locations, and <span class="tex2jax_process">$r$</span> denotes the reaching distance of
+    each crane.</p>
+<p>This is followed by <span class="tex2jax_process">$n$</span>
+    lines, each containing two integers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$-100\leq x,y\leq 100$</span>), denoting a
+    possible location for a crane. The coordinate system has its
+    origin in the center of the building and the <span class="tex2jax_process">$x$</span>-coordinate along the length of the
+    house. The walls thus have their centers at <span class="tex2jax_process">$(x,y)=(-\ell /2,0),(\ell
+    /2,0),(0,-w/2),(0,w/2)$</span>.</p>
+<h2>Output</h2>
+<p>Output one integer, the minimum number of cranes required to
+    reach all wall segments, or <tt>Impossible</tt> if not all wall
+    segments can be reached.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 2 3 3
+1 -2
+4 0
+-1 2
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 1 1 1
+1 0
+</pre>
+</td>
+<td>
+<pre>
+Impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

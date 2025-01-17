@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>John likes simple ciphers. He had been using the “Caesar”
+    cipher to encrypt his diary until recently, when he learned a
+    hard lesson about its strength by catching his sister Mary
+    browsing through the diary without any problems.</p>
+<p>Rapidly searching for an alternative, John found a solution:
+    the famous “Autokey” cipher. He uses a version that takes the
+    <span class="tex2jax_process">$26$</span> lower-case letters
+    ‘<tt class="ttfamily">a</tt>’–‘<tt class="ttfamily">z</tt>’ and
+    internally translates them in alphabetical order to the numbers
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$25$</span>.</p>
+<p>The encryption key <span class="tex2jax_process">$k$</span>
+    begins with a secret prefix of <span class="tex2jax_process">$n$</span> letters. Each of the remaining
+    letters of the key is copied from the letters of the plaintext
+    <span class="tex2jax_process">$a$</span>, so that <span class="tex2jax_process">$k_{n+i} = a_{i}$</span> for <span class="tex2jax_process">$i \geq 1$</span>. Encryption of the
+    plaintext <span class="tex2jax_process">$a$</span> to the
+    ciphertext <span class="tex2jax_process">$b$</span> follows the
+    formula <span class="tex2jax_process">$b_ i = a_ i + k_ i \bmod
+    26$</span>.</p>
+<p>Mary is not easily discouraged. She was able to get a peek
+    at the last <span class="tex2jax_process">$n$</span> letters
+    John typed into his diary on the family computer before he
+    noticed her, quickly encrypted the text document with a click,
+    and left. This could be her chance.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le n \le 30$</span>, <span class="tex2jax_process">$n + 1 \le m \le 100$</span>), where
+        <span class="tex2jax_process">$n$</span> is the length of
+        the keyword as well as the number of letters Mary saw, and
+        <span class="tex2jax_process">$m$</span> is the length of
+        the text.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$n$</span>
+        lower-case letters, the last <span class="tex2jax_process">$n$</span> letters of the plaintext.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$m$</span>
+        lower-case letters, the whole ciphertext.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the plaintext of John’s diary.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 16
+again
+pirpumsemoystoal
+</pre>
+</td>
+<td>
+<pre>marywasnosyagain
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 12
+d
+fzvfkdocukfu
+</pre>
+</td>
+<td>
+<pre>shortkeyword
+</pre>
+</td>
+</tr>
+</table>
+</div>

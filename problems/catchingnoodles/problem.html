@@ -1,0 +1,155 @@
+<div class="problembody">
+<p>Historians record an age where humans were once able to
+    cough in public and eat out with friends. Of interest today is
+    the tradition of <i class="itshape">Nagashi Sōmen</i>, where
+    noodles are “place(d) in a long flume of bamboo… As (they) pass
+    by, diners pluck them out with their chopsticks”. For research
+    purposes, you would like to reenact this tradition of catching
+    noodles.</p>
+<p>To catch a noodle, you have to think like a noodle! Noodles
+    start their journey from junction <span class="tex2jax_process">$0$</span> and escape at junction
+    <span class="tex2jax_process">$j-1$</span>. Junctions are
+    connected by bamboos of varying lengths. To avoid being
+    captured, each noodle takes the route of minimal length. You
+    would like to figure out the best junction to catch the most
+    noodles by determining the number of unique routes noodles may
+    take through each junction.</p>
+<p>Refer to the diagram below for clarification on how the
+    routes are counted for the Sample Input 4.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{diagram.png}" src="/problems/catchingnoodles/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$1 \le j \le 10^5$</span> junctions and
+    <span class="tex2jax_process">$1 \le b \le 10^6$</span>
+    bamboos. The next <span class="tex2jax_process">$b$</span>
+    lines describe bamboos connecting two different junctions. Each
+    line contains <span class="tex2jax_process">$3$</span> integers
+    <span class="tex2jax_process">$u\; v\; l$</span> denoting
+    junctions <span class="tex2jax_process">$0 \le u, v &lt;
+    j$</span> and length <span class="tex2jax_process">$1 \le l \le
+    10^5$</span>.</p>
+<h2>Output</h2>
+<p>On one line, output the number of unique routes through each
+    junction. If no routes pass through a junction, print
+    <span class="tex2jax_process">$-1$</span>. Because the number
+    of routes can be large, print the answer for each junction
+    <span class="tex2jax_process">$\bmod (10^9 + 7)$</span>.</p>
+<p>Note that</p><span class="tex2jax_process">\[ (a + b) \times
+    c \bmod (10^9+7) = ((a \bmod (10^9+7)) + (b \bmod (10^9+7)))
+    \times (c \bmod (10^9+7)) \bmod (10^9+7). \]</span>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$4$</span> Points</b>): Sample Input
+        1/2/3/4 (with different <span class="tex2jax_process">$b$</span>) corresponds to Subtask
+        2/3/4/6. Each worth 1 point.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$24$</span> Points</b>): There is at most
+        <span class="tex2jax_process">$1$</span> route between any
+        <span class="tex2jax_process">$2$</span> junctions.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$24$</span> Points</b>): All bamboos have
+        the same length, and there is at most <span class="tex2jax_process">$1$</span> shortest route from junction
+        <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$j-1$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$24$</span> Points</b>): There is at most
+        <span class="tex2jax_process">$1$</span> shortest route
+        from junction <span class="tex2jax_process">$0$</span> to
+        <span class="tex2jax_process">$j-1$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): All bamboos have
+        the same length.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): No additional
+        constraints.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+0 2 2
+1 2 1
+2 4 1
+</pre>
+</td>
+<td>
+<pre>1 -1 1 -1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+0 1 1
+0 2 1
+1 2 1
+2 4 1
+</pre>
+</td>
+<td>
+<pre>1 -1 1 -1 1 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+0 1 1
+0 2 3
+1 2 1
+1 4 3
+2 4 1
+</pre>
+</td>
+<td>
+<pre>1 1 1 -1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5 6
+0 1 1
+0 2 2
+0 3 1
+1 2 1
+1 4 2
+2 4 1
+</pre>
+</td>
+<td>
+<pre>3 2 2 -1 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

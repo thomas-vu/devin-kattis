@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>You are given two polynomials. You should simply print their
+    product. This time you have to do it fast though and modulo
+    <span class="tex2jax_process">$998\, 244\, 353$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains two positive integers
+    <span class="tex2jax_process">$n, m$</span>, the number of
+    coefficients in each polynomial. The next two lines contain one
+    polynomial each. Each polynomial is given as its coefficients
+    in ascending order, that is to say if the input is <tt class="ttfamily">a0 a1 a2 a3</tt> then that represents the polynomial
+    <span class="tex2jax_process">$a_0 + a_1 x + a_2 x^2 + a_3
+    x^3$</span>. You may assume that <span class="tex2jax_process">$n, m \leq 10^5$</span> and that all
+    coefficients <span class="tex2jax_process">$a_i$</span> satisfy
+    <span class="tex2jax_process">$0 \leq a_i &lt; 998\, 244\,
+    353$</span>.</p>
+<h2>Output</h2>
+<p>Print the product of the two polynomials in the input in the
+    same format as the polynomials in the input. Print exactly
+    <span class="tex2jax_process">$n + m - 1$</span> coefficients
+    of the output polynomial. Print the coefficients modulo
+    <span class="tex2jax_process">$998\, 244\, 353$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+1 2 3
+4 5 6 7
+</pre>
+</td>
+<td>
+<pre>4 13 28 34 32 21 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+10000000 10000000 10000000
+10000000 10000000 10000000
+</pre>
+</td>
+<td>
+<pre>871938225 745632097 619325969 745632097 871938225 
+</pre>
+</td>
+</tr>
+</table>
+</div>

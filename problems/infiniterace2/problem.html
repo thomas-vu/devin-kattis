@@ -1,0 +1,260 @@
+<div class="problembody">
+<p>Every year, there is a marathon in Eindhoven. This year, the
+    organizers have come up with something special, and instead of
+    being over after 42 kilometres, the race goes on forever! To
+    keep the organization simple, the race takes place on a running
+    track at Eindhoven university, and the participants run an
+    infinite number of laps on the track.</p>
+<p>Anika is excited to be one of the <span class="tex2jax_process">$N$</span> participants, numbered from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$N-1$</span>. She was quick to sign up which
+    means she is participant <span class="tex2jax_process">$0$</span>. She starts right after the finish
+    line with all other participants positioned ahead of her on the
+    track. Anika cannot keep track of how many laps she has run,
+    but she remembers when she overtakes someone or when someone
+    overtakes her. <span class="tex2jax_process">$A$</span>
+    overtaking <span class="tex2jax_process">$B$</span> means that
+    <span class="tex2jax_process">$A$</span> passes <span class="tex2jax_process">$B$</span> which can happen in the same lap,
+    or <span class="tex2jax_process">$A$</span> can even be some
+    laps ahead or behind <span class="tex2jax_process">$B$</span>.</p>
+<p>What is the minimum number of times she must have crossed
+    the finish line? Nobody moves backwards, and no overtaking
+    happens exactly at the finish line. Furthermore, note that the
+    participants do not necessarily run at a constant speed.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{track}" src="/problems/infiniterace2/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The starting position of the race with
+          <span class="tex2jax_process">$N = 4$</span>
+          participants.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span>, the number of participants.</p>
+<p>The second line contains an integer <span class="tex2jax_process">$Q$</span>, the number of events.</p>
+<p>The following <span class="tex2jax_process">$Q$</span> lines
+    describe the events in the order they occurred during the race.
+    The <span class="tex2jax_process">$i$</span>th line contains an
+    integer <span class="tex2jax_process">$x_ i$</span>.</p>
+<ul class="itemize">
+<li>
+<p>If <span class="tex2jax_process">$x_ i &gt; 0$</span>,
+        it means that Anika overtook participant <span class="tex2jax_process">$x_ i$</span>.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$x_ i &lt; 0$</span>,
+        it means that participant <span class="tex2jax_process">$-x_ i$</span> overtook Anika.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output a single integer, the minimum number of times Anika
+    must have crossed the finish line.</p>
+<h2>Constraints and Scoring</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$2 \le N \le 200\,
+        000$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le Q \le 200\,
+        000$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le x_ i \le
+        N-1$</span> or <span class="tex2jax_process">$-(N-1) \le x_
+        i \le -1$</span>.</p>
+</li>
+</ul>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group, you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>29</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>34</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$x_{i} &gt; 0$</span>
+          for all <span class="tex2jax_process">$i$</span> (that
+          is, Anika only overtakes)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>22</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N,Q\leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<h2>Examples</h2>
+<p>Note that some of the samples are not valid input for all
+    test groups.</p>
+<p>In the first sample, there are <span class="tex2jax_process">$N = 4$</span> participants and <span class="tex2jax_process">$Q = 5$</span> events. Anika first gets
+    overtaken by <span class="tex2jax_process">$2$</span>, who is
+    now a full lap ahead of her. Then she overtakes <span class="tex2jax_process">$2$</span> back, followed by overtaking
+    <span class="tex2jax_process">$1$</span> and then being
+    overtaken by <span class="tex2jax_process">$3$</span>. At this
+    point, Anika can still be on her first lap. Finally, she
+    overtakes <span class="tex2jax_process">$2$</span> again, and
+    to do so means that she must have crossed the finish line at
+    least once.</p>
+<p>In the second sample, there is just one participant other
+    than Anika. Anika overtakes the other participant four times,
+    meaning that Anika must have crossed the finish line at least
+    three times.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+5
+-2
+2
+1
+-3
+2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+4
+1
+1
+1
+1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+5
+1
+-1
+1
+-1
+-1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>200000
+7
+199999
+199999
+1
+199999
+55
+199999
+55
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>3
+6
+1
+2
+2
+2
+1
+1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

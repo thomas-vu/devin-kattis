@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>A string <span class="tex2jax_process">$t$</span> is a
+    <i class="itshape">Cyclic Substring</i> of a string
+    <span class="tex2jax_process">$s$</span> if there is some
+    rotation of <span class="tex2jax_process">$s$</span> such that
+    <span class="tex2jax_process">$t$</span> is a substring of that
+    rotation of <span class="tex2jax_process">$s$</span>.</p>
+<p>For example, if <span class="tex2jax_process">$s$</span> is
+    <tt class="ttfamily">fatcat</tt>, then <tt class="ttfamily">atc</tt> and <tt class="ttfamily">atf</tt> are both
+    <i class="itshape">Cyclic Substrings</i> of <span class="tex2jax_process">$s$</span>. However, <tt class="ttfamily">act</tt> is not a <i class="itshape">Cyclic
+    Substring</i> of <span class="tex2jax_process">$s$</span>.</p>
+<p>A string <span class="tex2jax_process">$s$</span> is
+    <i class="itshape">Internally Reversibly Cyclic</i> if, for
+    every proper substring <span class="tex2jax_process">$t$</span>
+    of <span class="tex2jax_process">$s$</span>, the reverse of
+    <span class="tex2jax_process">$t$</span> is a <i class="itshape">Cyclic Substring</i> of <span class="tex2jax_process">$s$</span>.</p>
+<p>Given a string, determine if it is <i class="itshape">Internally Reversibly Cyclic</i>.</p>
+<h2>Input</h2>
+<p>The single line of input contains a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \le |s| \le 1{,}000$</span>, <span class="tex2jax_process">$s
+    \in \{ \texttt{a}-\texttt{z}\} ^*$</span>)</p>
+<h2>Output</h2>
+<p>Output a single integer, which is <span class="tex2jax_process">$1$</span> if <span class="tex2jax_process">$s$</span> is <i class="itshape">Internally
+    Reversibly Cyclic</i>, <span class="tex2jax_process">$0$</span>
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ccca
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>eeaafbddfaa
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/thebackslashproblem/file/statement/en/img-0001.png" class="illustration" src="/problems/thebackslashproblem/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://xkcd.com/1638/">xkcd.com/1638</a>
+</div>
+</div>
+<p>When you are writing programs for a scripting language, you
+    often have to worry about how special characters are handled.
+    If you want to suppress special interpretation and have a
+    special character handled literally, you can escape it by
+    putting a backslash in front of it. In fact, since backslash
+    is, itself, a special character, you also have to escape
+    backslashes if you want them interpreted literally. For
+    example, to get a shell program to print out <tt>*\</tt>, you
+    might have to type something like: <tt>echo \*\\</tt></p>
+<p>Of course, script programmers can’t stop at just one level
+    of interpretation. We can write Perl code that outputs shell
+    script, which, itself, might output instructions for something
+    like sed. Each level of interpretation will think that
+    backslashes escape only the character immediately after them.
+    If we want a special character to make it through several
+    levels of interpretation, we may have to place more backslashes
+    in front of it. For example, we could get the shell to print
+    out a single backslash with: <tt>echo `echo \\\\`</tt></p>
+<p>Write a program to determine how backslashes should be
+    inserted in order to produce some desired literal string after
+    multiple levels of interpretation. We’ll assume that all ASCII
+    characters from <tt>!</tt> up to and including <tt>*</tt> are
+    special. Also, characters from <tt>[</tt> up to and including
+    <tt>]</tt> are considered special. If string <span class="tex2jax_process">$s$</span> needs to be output after one level
+    of interpretation, we have to start with a string <span class="tex2jax_process">$s’$</span> where <span class="tex2jax_process">$s’$</span> is just like <span class="tex2jax_process">$s$</span>, but with every special character
+    in <span class="tex2jax_process">$s$</span> escaped. If we want
+    to produce <span class="tex2jax_process">$s$</span> after two
+    levels of interpretation, we have to start with a string
+    <span class="tex2jax_process">$s’{}’$</span> that is just like
+    <span class="tex2jax_process">$s’$</span>, but with every
+    special character in <span class="tex2jax_process">$s’$</span>
+    escaped.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> test cases. Each test case has
+    two lines. The first line contains an integer <span class="tex2jax_process">$0 \le n \le 8$</span>, the number of levels
+    of interpretation that should be applied. The second line
+    contains a string <span class="tex2jax_process">$s$</span>
+    using only printable ASCII characters, of length <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span>. Test cases will end with the
+    end of file.</p>
+<h2>Output</h2>
+<p>For each test case, output a string <span class="tex2jax_process">$s’$</span> containing appropriate
+    backslashes to produce the given string <span class="tex2jax_process">$s$</span> after <span class="tex2jax_process">$n$</span> levels of interpretation.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+this is a 'test'
+2
+/:-)
+</pre>
+</td>
+<td>
+<pre>
+this is a \'test\'
+/:-\\\)
+</pre>
+</td>
+</tr>
+</table>
+</div>

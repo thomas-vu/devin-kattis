@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/builddeps/file/statement/en/img-0001.png" class="illustration" src="/problems/builddeps/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://xkcd.com/149/">xkcd comic</a> by Randall
+        Munroe
+      </div>
+</div>A Makefile is a file that specifies dependencies between
+    different source code files. When one source code file changes,
+    this file needs to be recompiled, and when one or more
+    dependencies of another file are recompiled, that file needs to
+    be recompiled as well. Given the Makefile and a changed file,
+    output the set of files that need to be recompiled, in an order
+    that satisfies the dependencies (i.e., when a file <span class="tex2jax_process">$X$</span> and its dependency <span class="tex2jax_process">$Y$</span> both need to be recompiled,
+    <span class="tex2jax_process">$Y$</span> should come before
+    <span class="tex2jax_process">$X$</span> in the list).
+
+    <h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n \leq 100\, 000$</span>), the
+        number of Makefile rules;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with a Makefile rule. Such a rule starts with “<span class="tex2jax_process">$f$</span><tt class="ttfamily">:</tt>”
+        where <span class="tex2jax_process">$f$</span> is a
+        filename, and is then followed by a list of the filenames
+        of the dependencies of <span class="tex2jax_process">$f$</span>. Each file has at most
+        <span class="tex2jax_process">$5$</span> dependencies.</p>
+</li>
+<li>
+<p>one line with one string <span class="tex2jax_process">$c$</span>, the filename of the changed
+        file.</p>
+</li>
+</ul>
+<p>Filenames are strings consisting of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> lowercase letters. Exactly
+    <span class="tex2jax_process">$n$</span> different filenames
+    appear in the input file, each appearing exactly once as
+    <span class="tex2jax_process">$f$</span> in a Makefile rule.
+    The rules are such that no two files depend (directly or
+    indirectly) on each other.</p>
+<h2>Output</h2>
+<p>Output the set of files that need to be recompiled, in an
+    order such that all dependencies are satisfied. If there are
+    multiple valid answers you may output any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+gmp:
+solution: set map queue
+base:
+set: base gmp
+map: base gmp
+queue: base
+gmp
+</pre>
+</td>
+<td>
+<pre>
+gmp
+map
+set
+solution
+</pre>
+</td>
+</tr>
+</table>
+</div>

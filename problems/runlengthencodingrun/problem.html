@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/runlengthencodingrun/file/statement/en/img-0001.jpg" class="illustration" src="/problems/runlengthencodingrun/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/secretlondon/2592690167/in/photostream/">
+        secretlondon123</a>
+</div>
+</div>
+<p>Forrest lives in a prehistoric era of “dial-up Internet.”
+    Unlike the fast streaming of today’s broadband era, dial-up
+    connections are only capable of transmitting small amounts of
+    text data at reasonable speeds. Forrest has noticed that his
+    communications typically include repeated characters, and has
+    designed a simple compression scheme based on repeated
+    information. Text data is encoded for transmission, possibly
+    resulting in a much shorter data string, and decoded after
+    transmission to reveal the original data.</p>
+<p>The compression scheme is rather simple. When encoding a
+    text string, repeated consecutive characters are replaced by a
+    single instance of that character and the number of occurrences
+    of that character (the character’s <em>run length</em>).
+    Decoding the encoded string results in the original string by
+    repeating each character the number of times encoded by the run
+    length. Forrest calls this encoding scheme <em>run-length
+    encoding</em>. (We don’t think he was actually the first person
+    to invent it, but we haven’t mentioned that to him.)</p>
+<p>For example, the string <tt class="ttfamily">HHHeelllo</tt>
+    is encoded as <tt class="ttfamily">H3e2l3o1</tt>. Decoding
+    <tt class="ttfamily">H3e2l3o1</tt> results in the original
+    string. Forrest has hired you to write an implementation for
+    his run-length encoding algorithm.</p>
+<h2>Input</h2>
+<p>Input consists of a single line of text. The line starts
+    with a single letter: <tt class="ttfamily">E</tt> for encode or
+    <tt class="ttfamily">D</tt> for decode. This letter is followed
+    by a single space and then a message. The message consists of
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span> characters.</p>
+<p>Each string to <em>encode</em> contains only upper- and
+    lowercase English letters, underscores, periods, and
+    exclamation points. No consecutive sequence of characters
+    exceeds <span class="tex2jax_process">$9$</span>
+    repetitions.</p>
+<p>Each string to <em>decode</em> has even length. Its
+    characters alternate between the same characters as strings to
+    encode and a single digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>, indicating the run length for the
+    preceding character.</p>
+<h2>Output</h2>
+<p>On an input of <tt class="ttfamily">E</tt> output the
+    run-length encoding of the provided message. On an input of
+    <tt class="ttfamily">D</tt> output the original string
+    corresponding to the given run-length encoding.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>E HHHeellloWooorrrrlld!!
+</pre>
+</td>
+<td>
+<pre>H3e2l3o1W1o3r4l2d1!2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>D H3e2l3o1W1o3r4l2d1!2
+</pre>
+</td>
+<td>
+<pre>HHHeellloWooorrrrlld!!
+</pre>
+</td>
+</tr>
+</table>
+</div>

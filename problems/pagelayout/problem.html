@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/pagelayout/file/statement/en/img-0001.png" class="illustration" src="/problems/pagelayout/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Comics_page_layout_example.png">
+        Curly Turkey</a>
+</div>
+</div>
+<p>When you are designing a complicated document, page layout
+    is important. Newspapers and magazines don’t just put a whole
+    bunch of text that covers the page left-to-right, listing one
+    article after another. They put multiple articles on a page, at
+    different positions designed to maximize visual impact. The
+    problem is that each story has a certain size and preferred
+    (fixed) location, and you can’t fit all the stories on a single
+    page (and stories can’t overlap). What you would like to do is
+    maximize the amount of space you can fill with the stories you
+    have on a single page. Then later, you’ll fill in the remaining
+    space with pictures or advertising.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$500$</span> test cases. Each test case
+    begins with an integer <span class="tex2jax_process">$1 \leq n
+    \leq 20$</span>, followed by <span class="tex2jax_process">$n$</span> story descriptions. Each story
+    description consists of four integers: <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>. These represent the width,
+    height, x-position, and y-position of the story. Each story has
+    the shape of a rectangle, and <span class="tex2jax_process">$(x,y)$</span> is the location of the
+    top-left corner. Every story will fit within the bounds of the
+    rectangle defined by the corners <span class="tex2jax_process">$[0,0]$</span> and <span class="tex2jax_process">$[1000,1000]$</span>. The last test case is
+    followed by a single zero.</p>
+<h2>Output</h2>
+<p>For each test case, output the maximum area of the page that
+    can be covered by the given stories. Two stories are considered
+    overlapping if the area of their intersection is non-zero. In
+    other words, stories may <em>just</em> touch each other by
+    sharing an edge or a corner.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+10 10 0 0
+10 10 10 10
+10 10 0 10
+3
+10 10 1 0
+10 10 10 10
+10 10 0 10
+3
+10 10 0 1
+10 10 10 10
+10 10 0 10
+4
+100 100 100 100
+100 100 150 100
+100 100 100 150
+100 100 150 150
+0
+</pre>
+</td>
+<td>
+<pre>
+300
+300
+200
+10000
+</pre>
+</td>
+</tr>
+</table>
+</div>

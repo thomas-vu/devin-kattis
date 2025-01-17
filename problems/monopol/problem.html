@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>Doris is playing monopoly with her friends, and it is now
+    her turn to roll the dice. In standard monopoly you roll two
+    <span class="tex2jax_process">$6$</span>-sided dice, and then
+    walk the same number of steps as the sum of the two dice. From
+    her current position, she will end up on her opponents’ hotels
+    if the sum is equal to one of the integers <span class="tex2jax_process">$A_1, \dots , A_ N$</span>. What is the
+    probability that she will end up on one of her opponents’
+    hotels during her current turn? You do not have to consider the
+    rule about rerolling if both dice show the same number or any
+    other rule from monopoly.</p>
+<h2>Input</h2>
+<p>The first line consists of an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 11$</span>), the number of hotels the opponents
+    own. The second line consists of <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$A_1, \dots , A_ N$</span> (<span class="tex2jax_process">$2 \leq A_1 &lt; \dots &lt; A_ N \leq
+    12$</span>), the distances to each of the opponents’
+    <span class="tex2jax_process">$N$</span> hotels.</p>
+<h2>Output</h2>
+<p>Output a decimal, the probability that the sum of the two
+    dice is one of the numbers <span class="tex2jax_process">$A_1,
+    \dots , A_ N$</span>. Your answer will be considered correct if
+    its absolute error does not exceed <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on two test-case groups. To
+    receive points for a group, your solution must correctly solve
+    every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$70$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+7
+</pre>
+</td>
+<td>
+<pre>0.16666666666666666
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 12
+</pre>
+</td>
+<td>
+<pre>0.05555555555555555
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>11
+2 3 4 5 6 7 8 9 10 11 12
+</pre>
+</td>
+<td>
+<pre>1.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

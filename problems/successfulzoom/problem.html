@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Your boss likes to see numbers going up as proof that your
+    company is successful. To help with this, you came up with the
+    idea to summarize a list of numbers by “zooming out,” that is,
+    to discard everything except every <span class="tex2jax_process">$k^{th}$</span> number in the list, for some
+    <span class="tex2jax_process">$k\ge 1$</span>.</p>
+<p>Business has been tough lately, with lots of ups and downs.
+    However, if you pick the right value of <span class="tex2jax_process">$k$</span>, maybe you can prove to your boss
+    that things aren’t so bad after all! If possible, you should
+    find the smallest value of <span class="tex2jax_process">$k$</span> such that <span class="tex2jax_process">$x_ k&lt;x_{2k}&lt;\dots &lt;x_{qk}$</span>,
+    where <span class="tex2jax_process">$q=\lfloor \frac nk\rfloor
+    $</span>, and the list <span class="tex2jax_process">$x_
+    k,x_{2k},\dots ,x_{qk}$</span> contains at least two
+    elements.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, with <span class="tex2jax_process">$2\le n\le 10^5$</span>. The second line
+    contains <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$x_1,x_2,\dots ,x_ n$</span>
+    describing the list of numbers. It is guaranteed that
+    <span class="tex2jax_process">$0\le x_ i\le 2^{30}$</span> for
+    <span class="tex2jax_process">$i=1,\dots ,n$</span>.</p>
+<h2>Output</h2>
+<p>If possible, display the smallest value <span class="tex2jax_process">$k\ge 1$</span> for which <span class="tex2jax_process">$x_ k,x_{2k},\dots ,x_{qk}$</span> (where
+    <span class="tex2jax_process">$q=\lfloor \frac nk\rfloor
+    $</span>) is strictly increasing and has at least two elements.
+    If no such value of <span class="tex2jax_process">$k$</span>
+    exists, display the word “<tt class="ttfamily">ABORT!</tt>”</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+1 2 3 4 5 6 7 8 9 10
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+1 8 2 7 3 6 4 5
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10
+9 8 8 4 4 3 10 1 1 0
+</pre>
+</td>
+<td>
+<pre>ABORT!
+</pre>
+</td>
+</tr>
+</table>
+</div>

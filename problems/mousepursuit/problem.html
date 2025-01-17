@@ -1,0 +1,64 @@
+<div class="problembody">
+<p>Brandon is playing the newest idle game, Mouse Pursuit! The
+    goal of this game is to pursue mice for cheese and glory.</p>
+<p>In Mouse Pursuit, an <em>event</em> consists of pursuing a
+    mouse. If the mouse is caught, the player might earn cheese and
+    glory. However, if the mouse is not caught, the player might
+    lose cheese and glory.</p>
+<p>Given Brandon’s recent events, Brandon wants to know how
+    much cheese and glory he earned in the last <span class="tex2jax_process">$k$</span> seconds.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer,
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \le n \le 10^5)$</span>.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines take
+    one of two forms:</p>
+<ul class="itemize">
+<li>
+<p>CAUGHT <span class="tex2jax_process">$s$</span>
+<span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$g$</span>: A mouse was caught exactly
+        <span class="tex2jax_process">$s$</span> seconds ago. The
+        player gained <span class="tex2jax_process">$c$</span>
+        pieces of cheese and <span class="tex2jax_process">$g$</span> units of glory.</p>
+</li>
+<li>
+<p>MISS <span class="tex2jax_process">$s$</span>
+<span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$g$</span>: A mouse was missed exactly
+        <span class="tex2jax_process">$s$</span> seconds ago. The
+        player lost <span class="tex2jax_process">$c$</span> pieces
+        of cheese and <span class="tex2jax_process">$g$</span>
+        units of glory.</p>
+</li>
+</ul>
+<p>For all events, <span class="tex2jax_process">$0 \le c, g
+    \le 10^6$</span> and <span class="tex2jax_process">$1 \le s \le
+    10^9$</span>. It is guaranteed that no two events happened at
+    exactly the same time.</p>
+<p>The last line contains a single integer <span class="tex2jax_process">$k$</span>. It is guaranteed that no event
+    happened exactly <span class="tex2jax_process">$k$</span>
+    seconds ago.</p>
+<h2>Output</h2>
+<p>Output two integers - the number of pieces of cheese Brandon
+    gained in the last <span class="tex2jax_process">$k$</span>
+    seconds, and the number of units of glory Brandon gained in the
+    last <span class="tex2jax_process">$k$</span> seconds.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+CAUGHT 1 6 5
+MISS 4 1 2
+CAUGHT 8 0 3
+5
+</pre>
+</td>
+<td>
+<pre>5 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

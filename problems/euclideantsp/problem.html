@@ -1,0 +1,124 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/euclideantsp/file/statement/en/img-0001.jpg" class="illustration" src="/problems/euclideantsp/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/pmiaki/4435889383">psiaki</a>
+</div>
+</div>The famous Arora-Mitchell approximation algorithm for the
+    Euclidean Travelling Salesman Problem (Euclidean TSP) was
+    discovered independently by Sanjeev Arora and Joseph
+    S. B. Mitchell in 1998. It can approximate the value
+    of an optimal TSP tour in <span class="tex2jax_process">$d$</span> dimensions within a factor of
+    <span class="tex2jax_process">$1+1/c$</span> in running time
+    <span class="tex2jax_process">\[ n (\log n)^{O((c\sqrt
+    {d})^{d-1})}, \]</span>
+<p>where <span class="tex2jax_process">$n$</span> is the number
+    of nodes in the tour.</p>
+<p>Miroslava works for a computer security company and it is
+    time to renew a shared cryptographic key in many data centres
+    across Europe. To do this, Miroslava is going to rent a private
+    jet and deliver the key to employees waiting at all major
+    European airports. She wants to be back as soon as
+    possible.</p>
+<p>Miroslava’s company has a computer that is able to execute
+    <span class="tex2jax_process">$p$</span> billions of operations
+    per second. Since we can approximate Europe by a
+    two-dimensional plane, we assume that the Arora-Mitchell
+    algorithm runs for exactly</p><span class="tex2jax_process">\[
+    \frac{n (\log _2 n)^{c\sqrt {2}}}{p \cdot 10^9} \]</span>
+<p>seconds on this computer to produce the exact <span class="tex2jax_process">$(1+1/c)$</span>-approximation of the optimal
+    tour.</p>
+<p>Miroslava noticed that <span class="tex2jax_process">$c$</span> is a parameter of the algorithm
+    that can be used to her advantage, but one also needs to be
+    very careful when choosing the right value. If she sets
+    <span class="tex2jax_process">$c$</span> too low, the algorithm
+    will finish very fast but the time she spends flying around
+    Europe will be too long. On the other hand, setting it too high
+    will force her to wait for an answer from the computer, while
+    she could be flying instead.</p>
+<p>Miroslava used to work in a different company and from there
+    she knows that the optimal tour of all major European airports
+    is <span class="tex2jax_process">$s$</span> meters long, but
+    she wasn’t ranked high enough in the company to know the actual
+    tour. Given the speed <span class="tex2jax_process">$v$</span>
+    of the private jet in meters per second, Miroslava needs
+    <span class="tex2jax_process">$s(1 + 1 / c) / v$</span> seconds
+    to complete the tour produced by the algorithm run with
+    parameter <span class="tex2jax_process">$c$</span>. For the
+    sake of simplicity, we assume that Miroslava can land, leave a
+    copy of the private key and take off from each airport in an
+    instant.</p>
+<p>How long does it take Miroslava to first run the algorithm
+    and then distribute all the keys, assuming that she chooses the
+    optimal parameter <span class="tex2jax_process">$c$</span>?</p>
+<h2>Input</h2>
+<p>The input consists of one line with four numbers:</p>
+<ul class="itemize">
+<li>
+<p>an integer <span class="tex2jax_process">$n$</span>
+        (<span class="tex2jax_process">$4 \le n \le 1\, 000\,
+        000$</span>), the number of airports;</p>
+</li>
+<li>
+<p>a real number <span class="tex2jax_process">$p$</span>
+        (<span class="tex2jax_process">$0.001 \le p \le 5\,
+        000$</span>), the number of billions of operations the
+        computer can execute per second;</p>
+</li>
+<li>
+<p>a real number <span class="tex2jax_process">$s$</span>
+        (<span class="tex2jax_process">$10^6 \le s \le
+        10^9$</span>), the length of the optimal tour of all
+        European airports in meters;</p>
+</li>
+<li>
+<p>a real number <span class="tex2jax_process">$v$</span>
+        (<span class="tex2jax_process">$50 \le v \le 900$</span>),
+        the speed of the private jet in meters per second.</p>
+</li>
+</ul>
+<p>All real numbers will have at most 10 digits after the
+    decimal point.</p>
+<h2>Output</h2>
+<p>Output one line with the shortest possible time <span class="tex2jax_process">$t$</span> in seconds to distribute the keys
+    and the value of the parameter <span class="tex2jax_process">$c$</span> Miroslava should use to achieve
+    time <span class="tex2jax_process">$t$</span>. Your answer
+    should have an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 8.9 40075000 272.1
+</pre>
+</td>
+<td>
+<pre>
+157079.04857106 15.598261092309
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+47 4.2 1337102.4 256
+</pre>
+</td>
+<td>
+<pre>
+5836.2936298227 8.9113418228146
+</pre>
+</td>
+</tr>
+</table>
+</div>

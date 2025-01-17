@@ -1,0 +1,136 @@
+<div class="problembody">
+<p>Kattis needs to get somewhere as soon as possible. However,
+    she also wants that the path that she takes to be safe too. She
+    deems that paths that use not more than <span class="tex2jax_process">$\textbf{k}$</span> junctions to be safe
+    paths. Given a map containing <span class="tex2jax_process">$\textbf{V}$</span> junctions with weighted
+    edges denoting the time (in minutes) needed to traverse between
+    junctions, a start junction <span class="tex2jax_process">$\textbf{s}$</span>, a destination junction
+    <span class="tex2jax_process">$\textbf{t}$</span>, and a limit
+    of number of junctions <span class="tex2jax_process">$\textbf{k}$</span>, return the minimum
+    amount of time that Kattis needs to go from <span class="tex2jax_process">$\textbf{s}$</span> to <span class="tex2jax_process">$\textbf{t}$</span>, using at most
+    <span class="tex2jax_process">$\textbf{k}$</span> junctions
+    (inclusive of <span class="tex2jax_process">$\textbf{s}$</span>
+    and <span class="tex2jax_process">$\textbf{t}$</span>).</p>
+<h2>Input</h2>
+<p>Input starts with an integer <span class="tex2jax_process">$TC\: (1 \le TC \le 10)$</span>, denoting
+    number of test cases.</p>
+<p>Each test case starts with a newline. The second line
+    contains an integer denoting the number of junctions
+    <span class="tex2jax_process">$V\: (2 \le V \le 1\,
+    000)$</span>. Then followed by <span class="tex2jax_process">$V$</span> lines. Each of these lines starts
+    with an integer <span class="tex2jax_process">$X$</span>
+    denoting the number of edges from that junction, followed by
+    <span class="tex2jax_process">$X$</span> pairs of integers
+    “<i class="itshape">vertex</i> <i class="itshape">weight</i>”
+    (<span class="tex2jax_process">$0 \le $</span> <i class="itshape">vertex</i> <span class="tex2jax_process">$ &lt;
+    V$</span> and <span class="tex2jax_process">$0 \le $</span>
+<i class="itshape">weight</i> <span class="tex2jax_process">$
+    \le 10^{5}$</span>). The total number of edges will not exceed
+    <span class="tex2jax_process">$400\, 000$</span>. Afterwards,
+    an integer denoting the number of queries <span class="tex2jax_process">$Q\: (1 \le Q \le 20)$</span> will be given.
+    Each query is of the format “<span class="tex2jax_process">$s$</span> <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$k$</span>”, <span class="tex2jax_process">$(0 \le s,\: t &lt; V)$</span>, <span class="tex2jax_process">$(1 \le k \le \min (V,\: 30))$</span>, where
+    all of <span class="tex2jax_process">$s, t, k$</span> are
+    integers.<br/></p>
+<h2>Output</h2>
+<p>For each query, print the required answer in one line. If
+    the is no answer, print “<span class="tex2jax_process">$-1$</span>”.</p>
+<p>Please separate the output of two test cases with a single
+    line.</p>
+<h2>Explanation</h2>
+<p>The sample test case <span class="tex2jax_process">$1$</span> can be visualized as follows:</p>
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{four.png}" src="/problems/shortestpath4/file/statement/en/img-0001.png" style="width:40.00%"/>
+</center>
+<p><i class="itshape">Query</i><span class="tex2jax_process">$(0, 3, 4)$</span>: If Kattis’s current
+    position is at vertex <span class="tex2jax_process">$\textbf{s}$</span> = <span class="tex2jax_process">$0$</span>, and the destination is at vertex
+    <span class="tex2jax_process">$\textbf{t}$</span> =
+    <span class="tex2jax_process">$3$</span>, and Kattis can use up
+    to <span class="tex2jax_process">$\textbf{k}$</span> =
+    <span class="tex2jax_process">$4$</span> junctions, then the
+    quickest way is this path: <span class="tex2jax_process">$0
+    \rightarrow 1 \rightarrow 2 \rightarrow 3$</span> with total
+    estimated traveling time of: <span class="tex2jax_process">$2+3+7 = 12$</span> minutes.<br/></p>
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{three.png}" src="/problems/shortestpath4/file/statement/en/img-0002.png" style="width:40.00%"/>
+</center>
+<p>However if we have <i class="itshape">Query</i><span class="tex2jax_process">$(0, 3, 3)$</span>, then path: <span class="tex2jax_process">$0 \rightarrow 1 \rightarrow 2 \rightarrow
+    3$</span> shown earlier is invalid as it uses <span class="tex2jax_process">$4$</span> junctions as this time Kattis can
+    only use up to <span class="tex2jax_process">$\textbf{k}$</span> = <span class="tex2jax_process">$3$</span> junctions. The valid shortest path
+    from <span class="tex2jax_process">$\textbf{s}$</span> =
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$\textbf{t}$</span> = <span class="tex2jax_process">$3$</span> that uses no more than
+    <span class="tex2jax_process">$\textbf{k}$</span> =
+    <span class="tex2jax_process">$3$</span> junctions is path:
+    <span class="tex2jax_process">$0 \rightarrow 3$</span> with
+    total estimated traveling time of: <span class="tex2jax_process">$15$</span> minutes. This path is
+    <span class="tex2jax_process">$3$</span> minutes longer than
+    the true shortest path without Kattis’s restriction of not
+    crossing more than <span class="tex2jax_process">$\textbf{k}$</span> junctions but it is now
+    the correct solution.</p>
+<p>The answer for <i class="itshape">Query</i><span class="tex2jax_process">$(0, 3, 2)$</span> is also <span class="tex2jax_process">$15$</span> minutes.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: The maps will be undirected weighted
+        trees, <span class="tex2jax_process">$1 \le TC \le
+        10$</span>, <span class="tex2jax_process">$1 \le V \le
+        30$</span>, <span class="tex2jax_process">$1 \le Q \le
+        10$</span>, <span class="tex2jax_process">$K\: =\:
+        V$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: The maps will be directed graphs,
+        <span class="tex2jax_process">$1 \le TC \le 10$</span>,
+        <span class="tex2jax_process">$1 \le V \le 30$</span>,
+        <span class="tex2jax_process">$1 \le E \le 1\, 500$</span>,
+        <span class="tex2jax_process">$1 \le Q \le 10$</span>,
+        <span class="tex2jax_process">$K\: =\: V$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(40
+        points)}$</span>: <span class="tex2jax_process">$1 \le TC
+        \le 10$</span>, <span class="tex2jax_process">$1 \le V \le
+        1\, 000$</span>, <span class="tex2jax_process">$1 \le E \le
+        200\, 000$</span>, <span class="tex2jax_process">$1 \le Q
+        \le 20$</span>, <span class="tex2jax_process">$K\: =\: \min
+        (V,\: 30)$</span></p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+
+4
+3 1 2 2 9 3 15
+1 2 3
+2 0 1 3 7
+0
+2
+0 3 4
+0 3 3
+
+4
+3 1 2 2 9 3 15
+1 2 3
+2 0 1 3 7
+0
+1
+0 3 2
+</pre>
+</td>
+<td>
+<pre>12
+15
+
+15
+</pre>
+</td>
+</tr>
+</table>
+</div>

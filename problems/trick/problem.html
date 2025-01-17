@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/trick/file/statement/en/img-0001.jpg" class="illustration" src="/problems/trick/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>Lukas is to hold a presentation on useful mathematical
+    tricks. E.g., to take the square root of a number you just need
+    to remove the first half of the number. To convince his
+    audience he uses the well tested method of proof by example:
+    <span class="tex2jax_process">$\sqrt {25} = 5$</span> and
+    <span class="tex2jax_process">$\sqrt {5776} = 76$</span> so the
+    method obviously works. To multiply a number by <span class="tex2jax_process">$X = 2.6$</span> all you have to do is move
+    the first digit to the end of the number, <span class="tex2jax_process">$135\times 2.6 = 351$</span> and <span class="tex2jax_process">$270270\times 2.6 = 702702$</span>.
+
+    <p>Lukas wants to demonstrate that this last method works for
+    any <span class="tex2jax_process">$X$</span>. To do this he
+    will ask his audience for values of <span class="tex2jax_process">$X$</span> and then show them example
+    multiplications for which the method works. Lukas has noticed
+    that he can not just pick arbitrary numbers for his examples,
+    so now he wants your help. Can you write a program that given
+    <span class="tex2jax_process">$X$</span> gives a list of
+    integers for which multiplying by <span class="tex2jax_process">$X$</span> is equivalent to moving the first
+    digit to the end of the number? Lukas does not like very large
+    numbers so do not list any numbers with more than 8 digits.</p>
+<h2>Input</h2>
+<p>The input is a single decimal number <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$1\leq X &lt; 1000$</span>) with at most 4
+    digits after the decimal point.</p>
+<h2>Output</h2>
+<p>Output a list of all positive integers less than
+    <span class="tex2jax_process">$10^8$</span> for which Lukas’
+    second trick works. Write the numbers in ascending order, one
+    number per line. If the list is empty, output instead
+    “<tt class="ttfamily">No solution</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2.6
+</pre>
+</td>
+<td>
+<pre>
+135
+270
+135135
+270270
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3.1416
+</pre>
+</td>
+<td>
+<pre>
+No solution
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,102 @@
+<div class="problembody">
+<p>The other day Unnar was playing the video game <em>Geezer
+    Scripts</em>, <em>Geezer Scripts V</em> to be precise. He
+    opened a door (in the game) and before he knew he was in a
+    large and complicated cave-system, full of enemies who will
+    attack as soon as Unnar gets to close to them. What’s worse is
+    that the game doesn’t remember which enemies the player has
+    already defeated so if the player leaves and comes back again
+    the enemy will have respawned. Since Unnar is quite prone to
+    getting lost he needs your help to find a way through the cave
+    which incurs minimal damage to him.</p>
+<p>Unnar’s character has some <span class="tex2jax_process">$A$</span> attack points and <span class="tex2jax_process">$H$</span> health points. The same is true
+    for his enemies. When Unnar fights an enemy Unnar goes first.
+    He subtracts his attack points from the enemies health points
+    and the enemy then does the same. This process is repeated
+    until either Unnar or the enemy has fewer than <span class="tex2jax_process">$1$</span> health points. The loser is the
+    one who ran out of health points. If Unnar loses it’s <em>Game
+    Over</em>, but if Unnar wins he can continue traversing the
+    cave-system but his lost health points do not regenerate.</p>
+<p>The cave-system is not evenly elevated so its passages are
+    one-way. The cave-system can be modelled using <span class="tex2jax_process">$n$</span> areas connected with <span class="tex2jax_process">$m$</span> one-way passages. Unnar starts in
+    area <span class="tex2jax_process">$1$</span> and wants to get
+    to area <span class="tex2jax_process">$n$</span>. Every passage
+    contains an enemy but the areas are safe.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \leq A, H \leq 10^9$</span>
+    where <span class="tex2jax_process">$A$</span> denotes Unnar’s
+    attack points and <span class="tex2jax_process">$H$</span> his
+    health points. The second line contains <span class="tex2jax_process">$1 \leq n, m \leq 10^5$</span> where
+    <span class="tex2jax_process">$n$</span> is the number of ares
+    in the cave and <span class="tex2jax_process">$m$</span> the
+    number of passages. The next <span class="tex2jax_process">$m$</span> lines contain four integers
+    <span class="tex2jax_process">$1 \leq e_ i, b_ i \leq n$</span>
+    and <span class="tex2jax_process">$1 \leq a_ i, h_ i \leq
+    10^9$</span>, indicating a passage from area <span class="tex2jax_process">$e_ i$</span> to <span class="tex2jax_process">$b_ i$</span> whose enemy has <span class="tex2jax_process">$a_ i$</span> attack points and <span class="tex2jax_process">$h_ i$</span> health points.</p>
+<h2>Output</h2>
+<p>If Unnar can’t get through the cave-system output ‘Oh no’,
+    without the quotes. Otherwise output the maximum health Unnar
+    can have after getting through the cave-system.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+3 2
+1 2 1 2
+2 3 1 2
+</pre>
+</td>
+<td>
+<pre>Oh no
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 3
+3 2
+1 2 1 2
+2 3 1 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 20
+5 6
+1 2 10 6
+1 3 2 15
+1 4 1 33
+2 5 1 7
+3 4 1000 5
+4 2 5 9
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

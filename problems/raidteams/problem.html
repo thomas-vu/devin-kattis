@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>There is an upcoming raid event in an online game. You are
+    the leader of a guild with <span class="tex2jax_process">$N$</span> adventurers. In this game, every
+    adventurer has a rating <span class="tex2jax_process">$S$</span> for each of the <span class="tex2jax_process">$3$</span> skills that every adventurer must
+    learn. A high <span class="tex2jax_process">$S$</span> value
+    indicates mastery at that skill. You wish to group the
+    adventurers into raid teams using the following steps:</p>
+<ul class="itemize">
+<li>
+<p>Amongst all currently available adventurers, the
+        adventurer with the highest <span class="tex2jax_process">$S$</span> value for the first skill is
+        selected. In cases of ties, the adventurer with the
+        lexicographically smallest name is selected. That
+        adventurer is no longer available from now on.</p>
+</li>
+<li>
+<p>The same selection criteria is applied for the second
+        and third skill in order.</p>
+</li>
+<li>
+<p>These three adventurers will form a raid team.</p>
+</li>
+<li>
+<p>The process repeats starting from the first skill until
+        no more teams of three can be formed. There could be
+        situations where some players are not part of any raid
+        teams. They will stay behind and guard the guild hall
+        during the event.</p>
+</li>
+</ul>
+<p>Report the members of every newly-created raid team, in the
+    order which the teams were formed. All <span class="tex2jax_process">$N$</span> adventurers are available
+    initially.</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$3
+    \leq N \leq 100\, 000$</span>). <span class="tex2jax_process">$N$</span> lines follow, each line beginning
+    with the name of the adventurer followed by three integers
+    <span class="tex2jax_process">$S_1\: S_2\: S_3$</span>
+    (<span class="tex2jax_process">$0 \leq S_1, S_2, S_3 \leq 2\,
+    000\, 000\, 000$</span>) describing the level of proficiency of
+    the adventurer in the three skills in order. All names are
+    non-empty alphanumeric string of at most <span class="tex2jax_process">$10$</span> characters, and all names are
+    unique.</p>
+<h2>Output</h2>
+<p>Whenever a raid team is formed, on a new line, output the
+    three names of the adventurers of the new team from the
+    lexicographically smallest name to the lexicographically
+    largest name, with a single space between consecutive
+    names.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$40$</span> Points)</b>: <span class="tex2jax_process">$1 \leq N \leq 10\, 000$</span>, all
+        adventurers have the same skill values for all three
+        skills.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$30$</span> Points)</b>: <span class="tex2jax_process">$1 \leq N \leq 10\, 000$</span></p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$30$</span> Points)</b>: No additional
+        constraint.</p>
+</li>
+</ol>
+<h2>Warning</h2>
+<p><b class="bfseries">The I/O files are large. Please use fast
+    I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+player1 3 3 3
+player2 6 6 6
+player3 5 5 5
+player4 2 2 2
+player5 1 1 1
+player6 4 4 4
+</pre>
+</td>
+<td>
+<pre>player2 player3 player6
+player1 player4 player5
+</pre>
+</td>
+</tr>
+</table>
+</div>

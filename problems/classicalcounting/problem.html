@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>You have <span class="tex2jax_process">$N$</span> objects,
+    each with <span class="tex2jax_process">$M$</span> copies. How
+    many ways are there to take exactly <span class="tex2jax_process">$K$</span> of them?</p>
+<p>Two selections of size <span class="tex2jax_process">$K$</span> are considered different if the
+    <span class="tex2jax_process">$K$</span>-tuples for those
+    selections are different. So, for example if <span class="tex2jax_process">$N=M=K=3$</span> (as in the second sample
+    input), and the <span class="tex2jax_process">$N=3$</span>
+    types of objects are labeled <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, and <span class="tex2jax_process">$C$</span>, then the tuple <span class="tex2jax_process">$(A,B,B)$</span> is different than
+    <span class="tex2jax_process">$(B,A,B)$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers,
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$K$</span> respectively, subjected to
+    <span class="tex2jax_process">$1 \leq N, M, K \leq
+    10^5$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of ways. As the number of ways could be
+    large, <b class="bfseries">output them modulo</b> <span class="tex2jax_process">$10^6 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 1 2
+</pre>
+</td>
+<td>
+<pre>45
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3 3
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 7
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/greetingcard/file/statement/en/img-0001.jpg" class="illustration" src="/problems/greetingcard/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.flickr.com/photos/varou/6475921749/">Varou.d</a>
+</div>
+</div>
+<p>Quido plans to send a New Year greeting to his friend Hugo.
+    He has recently acquired access to an advanced high-precision
+    plotter and he is planning to print the greeting card on the
+    plotter.</p>
+<p>Here’s how the plotter operates. In step one, the plotter
+    plots an intricate pattern of <span class="tex2jax_process">$n$</span> dots on the paper. In step two,
+    the picture in the greeting emerges when the plotter connects
+    by a straight segment each pair of dots that are exactly
+    <span class="tex2jax_process">$2\, 018$</span> length units
+    apart.</p>
+<p>The plotter uses a special holographic ink, which has a
+    limited supply. Quido wants to know the number of all plotted
+    segments in the picture to be sure that there is enough ink to
+    complete the job.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$n$</span> specifying the number
+    of plotted points. The following <span class="tex2jax_process">$n$</span> lines each contain a pair of
+    space-separated integer coordinates indicating one plotted
+    point. Each coordinate is non-negative and less than
+    <span class="tex2jax_process">$2^{31}$</span>. There are at
+    most <span class="tex2jax_process">$10^{5}$</span> points, all
+    of them are distinct.</p>
+<p>In this problem, all coordinates and distances are expressed
+    in plotter length units, the length of the unit in the
+    x-direction and in the y-direction is the same.</p>
+<h2>Output</h2>
+<p>The output contains a single integer equal to the number of
+    pairs of points which are exactly <span class="tex2jax_process">$2\, 018$</span> length units apart.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+20180000 20180000
+20180000 20182018
+20182018 20180000
+20182018 20182018
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+0 0
+1680 1118
+3360 0
+5040 1118
+6720 0
+8400 1118
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

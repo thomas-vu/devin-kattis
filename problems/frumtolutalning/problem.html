@@ -1,0 +1,164 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/frumtolutalning/file/statement/en/img-0001.jpg" class="illustration" src="/problems/frumtolutalning/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/images/id-5319713/">Prime
+        Numbers</a> by geralt, Pixabay
+      </div>
+</div>An integer <span class="tex2jax_process">$p$</span> is a
+    <em>prime number</em> if it is larger than <span class="tex2jax_process">$1$</span> and its only positive divisors are
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$p$</span>. For example, <span class="tex2jax_process">$10$</span> is not a prime because its
+    positive divisors are <span class="tex2jax_process">$1$</span>,
+    <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$5$</span>, and <span class="tex2jax_process">$10$</span>. However, <span class="tex2jax_process">$11$</span> is a prime because its only
+    positive divisors are <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$11$</span>. In the same vein
+    you can see that <span class="tex2jax_process">$2$</span>,
+    <span class="tex2jax_process">$3$</span>, and <span class="tex2jax_process">$17$</span> are primes, but <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$9$</span>, and <span class="tex2jax_process">$15$</span> are not prime.
+    <p>Counting all the primes between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$100$</span> shows that there are
+    <span class="tex2jax_process">$25$</span> prime numbers smaller
+    than <span class="tex2jax_process">$100$</span>. With a little
+    more work one can show that there are <span class="tex2jax_process">$168$</span> prime numbers smaller than
+    <span class="tex2jax_process">$1\, 000$</span>.</p>
+<p>Given two integers, <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$b$</span>, count the number
+    of primes smaller than or equal to <span class="tex2jax_process">$b$</span> and larger than or equal to
+    <span class="tex2jax_process">$a$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of two integers, <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \leq a \leq b$</span>).</p>
+<h2>Output</h2>
+<p>The output should contain the number of primes in the range
+    <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$b$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b \leq 10^9$</span>,
+          <span class="tex2jax_process">$b-a \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b \leq 10^{18}$</span>,
+          <span class="tex2jax_process">$b-a \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b \leq 10^7$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>16</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$b \leq 10^{15}$</span>,
+          <span class="tex2jax_process">$b-a \leq 10^7$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$b \leq
+          10^{11}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 100
+</pre>
+</td>
+<td>
+<pre>25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>42 1337
+</pre>
+</td>
+<td>
+<pre>204
+</pre>
+</td>
+</tr>
+</table>
+</div>

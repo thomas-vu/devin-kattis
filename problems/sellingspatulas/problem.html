@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/sellingspatulas/file/statement/en/img-0001.jpg" class="illustration" src="/problems/sellingspatulas/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://commons.wikimedia.org/wiki/File:Kitchen-spatula.jpg">
+        Evan-Amos</a>
+</div>
+</div>
+<p>You have finally realized your life-long dream: you opened
+    your own chain of retail stores specializing in hard-to-find
+    spatulas. Being your own boss is great – but you have to make
+    all the decisions, like when your stores should be open. Being
+    somewhat methodical, you decided to spend the first several
+    days with the stores open all day and all night to see when the
+    most profitable times are at each store. As a result, you have
+    a lot of data on when people like to buy spatulas. In fact, you
+    have recorded each sale and its timestamp. Now you have to
+    analyze the data.</p>
+<p>A store should be open when it is most profitable, so you
+    want to write a program that determines the single period that
+    is most profitable for each store individually. There is a
+    constant cost of $0.08 per minute to keep each store running
+    while it is open, and you assume there are no costs associated
+    with keeping a store closed.</p>
+<h2>Input</h2>
+<p>Input consists of several (up to <span class="tex2jax_process">$150$</span>) stores’ sales records. Each
+    record starts with a line containing an integer <span class="tex2jax_process">$1 \le n \le 1\, 000$</span>. The next
+    <span class="tex2jax_process">$n$</span> lines each contain a
+    sale from that store. Each sale has the number of minutes after
+    opening (in the range <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$1\, 439$</span>) and the
+    profit (a real number in the range <span class="tex2jax_process">$[-100,100]$</span> with two digits after the
+    decimal). The profit can be negative because sometimes you have
+    loss-leader sales where your store actually loses money.
+    Transactions are ordered by time, and there are never two sales
+    in the same minute. Input ends when <span class="tex2jax_process">$n=0$</span>.</p>
+<h2>Output</h2>
+<p>For each store, print the maximum profit (as a real number
+    with two digits past the decimal point), followed by the
+    beginning and ending minutes when the profit is realized. If
+    two different periods both have the maximum profit, then choose
+    the shortest one, and if there are still ties, choose the
+    period that starts earliest. If the store never can turn a
+    profit, print <tt class="tt">no profit</tt>. Stores must open
+    and close on minute boundaries.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+15 0.37
+36 3.51
+65 3.72
+72 1.89
+120 0.20
+6
+28 0.38
+140 4.90
+313 2.77
+400 4.32
+446 2.54
+485 1.97
+2
+1 0.08
+2 0.03
+0
+</pre>
+</td>
+<td>
+<pre>
+6.16 36 72
+4.82 140 140
+no profit
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,120 @@
+<div class="problembody">
+<p>Doris will be the toastmaster at a dinner with her
+    university chapter. During the evening, they will of course be
+    singing songs! As Doris is quite uninformed of the songs in
+    their songbook, she has choosen to instead pick as many songs
+    as possible during the <span class="tex2jax_process">$t$</span>
+    minutes allocated for singing. As she is otherwise busy with
+    picking who will speak and what they should say, she has asked
+    for your help in this endeavor.</p>
+<h2>Input</h2>
+<p>Begins with a row containing two integers, the number of
+    minutes allocated for singing, <span class="tex2jax_process">$t
+    &lt; 10^5$</span>, and the number of songs in their songbook.
+    Then follows one row with <span class="tex2jax_process">$n$</span> integers, the expected seconds to
+    sing each song, <span class="tex2jax_process">$s_ i &lt; t
+    \cdot 60$</span>.</p>
+<h2>Output</h2>
+<p>One row with a single integer, the minimal number of seconds
+    it takes to sing the most amount of songs possible.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on a number of testgroups. To
+    earn points in a testgroup all tests in it must succeed.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All songs take the same time to sing.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 16$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+110 110 110 110
+</pre>
+</td>
+<td>
+<pre>220
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+30 20
+</pre>
+</td>
+<td>
+<pre>50
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+60 120 250 299 1
+</pre>
+</td>
+<td>
+<pre>61
+</pre>
+</td>
+</tr>
+</table>
+</div>

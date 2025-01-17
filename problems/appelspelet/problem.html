@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>Alf and Beata have a very long garden in which <span class="tex2jax_process">$N$</span> apple trees grow in a long line.
+    Each summer, the trees become filled with apples. They then
+    play a game with the trees. In the game, Alf and Beata take
+    turns picking all the apples from three trees which are
+    separated by exactly one tree, i.e. from the trees <span class="tex2jax_process">$i$</span>, <span class="tex2jax_process">$i
+    + 2$</span> and <span class="tex2jax_process">$i + 4$</span>
+    spots from the leftmost tree for some <span class="tex2jax_process">$i$</span>. Such a move is only valid if none
+    of the three trees had their apples picked from them in a
+    previous move. A player without a valid move on their turn
+    loses. Given <span class="tex2jax_process">$N$</span>, can you
+    determine if Alf or Beata wins the game if Alf moves first?</p>
+<h2>Input</h2>
+<p>The input consists of a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$5
+    \le N \le 1\, 000\, 000$</span>), the number of apple
+    trees.</p>
+<h2>Output</h2>
+<p>If Alf (the first player) wins, output <tt class="ttfamily">alf</tt>. Otherwise, output <tt class="ttfamily">beata</tt>.</p>
+<h2>Scoring</h2>
+<p>If you solve the problem fully, you get <span class="tex2jax_process">$2$</span> points.</p>
+<p>To get <span class="tex2jax_process">$1$</span> point, you
+    only need to solve the problem for cases where <span class="tex2jax_process">$N \le 1\, 000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+</pre>
+</td>
+<td>
+<pre>alf
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+</pre>
+</td>
+<td>
+<pre>beata
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+</pre>
+</td>
+<td>
+<pre>beata
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,61 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/embarrassedcryptographer/file/statement/en/img-0001.png" class="illustration" src="/problems/embarrassedcryptographer/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>The young and very promising cryptographer Odd Even has
+    implemented the security module of a large system with
+    thousands of users, which is now in use in his company. The
+    cryptographic keys are created from the product of two primes,
+    and are believed to be secure because there is no known method
+    for factoring such a product effectively.
+    <p>What Odd Even did not think of, was that <em>both</em>
+    factors in a key should be large, not just their product. It is
+    now possible that some of the users of the system have weak
+    keys. In a desperate attempt not to be fired, Odd Even secretly
+    goes through all the users keys, to check if they are strong
+    enough. He uses his very poweful Atari, and is especially
+    careful when checking his boss’ key.</p>
+<h2>Input</h2>
+<p>The input consists of no more than <span class="tex2jax_process">$50$</span> test cases. Each test case is a
+    line with the integers <span class="tex2jax_process">$4 \leq K
+    \leq 10^{100}$</span> and <span class="tex2jax_process">$2 \leq
+    L \leq 10^6$</span>. <span class="tex2jax_process">$K$</span>
+    is the key itself, a product of two primes. <span class="tex2jax_process">$L$</span> is the wanted minimum size of the
+    factors in the key. The input set is terminated by a case where
+    <span class="tex2jax_process">$K = 0$</span> and <span class="tex2jax_process">$L = 0$</span>.</p>
+<h2>Output</h2>
+<p>For each number <span class="tex2jax_process">$K$</span>, if
+    one of its factors are strictly less than the required
+    <span class="tex2jax_process">$L$</span>, your program should
+    output “<tt class="ttfamily">BAD <span class="tex2jax_process">$p$</span></tt>”, where <span class="tex2jax_process">$p$</span> is the smallest factor in
+    <span class="tex2jax_process">$K$</span>. Otherwise, it should
+    output “<tt class="ttfamily">GOOD</tt>”. Cases should be
+    separated by a line-break.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>143 10
+143 20
+667 20
+667 30
+2573 30
+2573 40
+0 0
+</pre>
+</td>
+<td>
+<pre>GOOD
+BAD 11
+GOOD
+BAD 23
+GOOD
+BAD 31
+</pre>
+</td>
+</tr>
+</table>
+</div>

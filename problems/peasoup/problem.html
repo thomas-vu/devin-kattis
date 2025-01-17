@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/peasoup/file/statement/en/img-0001.jpg" class="illustration" src="/problems/peasoup/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>As a Swede, you hold a deep love for the traditional
+    Thursday lunch of pea soup and pancakes. You love it so much,
+    in fact, that you will eat it any meal it is available. You
+    find yourself looking at the menus for all your favorite
+    restaurants every day to see if this combination is available,
+    and realized you can do this more easily with a program. Given
+    a list of restaurant menus, decide where to eat.
+    <h2>Input</h2>
+<p>The first line of input contains a number <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10$</span>), the number of restaurants. Then follow
+    the <span class="tex2jax_process">$n$</span> restaurant menus.
+    Each menu starts with a line containing a number <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le k \le 10$</span>), the number of menu items for the day.
+    The remainder of the menu consists of <span class="tex2jax_process">$k + 1$</span> lines, each containing a
+    nonempty string of at most <span class="tex2jax_process">$100$</span> characters. The first of these
+    lines is the restaurant name, and the rest are menu items.
+    Strings consist only of lower case letters ‘<tt class="ttfamily">a</tt>’-‘<tt class="ttfamily">z</tt>’ and spaces,
+    and they always start and end with a letter. All restaurant
+    names are unique.</p>
+<h2>Output</h2>
+<p>Output a single line. If at least one restaurant has both
+    “<tt class="ttfamily">pea soup</tt>” and “<tt class="ttfamily">pancakes</tt>” as menu items, output the name of the
+    first of those restaurants, by the order in which the
+    restaurants appear in the input. Otherwise, output “<tt class="ttfamily">Anywhere is fine I guess</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2
+q
+potatoes
+salad
+3
+nymble
+pancakes
+pea soup
+punsch
+</pre>
+</td>
+<td>
+<pre>nymble
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2
+asian wok house
+paa soup
+pancakes
+2
+kebab kitchen
+pea  soup
+pancakes
+2
+la campus
+tasty pea soup
+pancakes
+3
+slime stand
+slime
+pea soup and pancakes
+slime
+</pre>
+</td>
+<td>
+<pre>Anywhere is fine I guess
+</pre>
+</td>
+</tr>
+</table>
+</div>

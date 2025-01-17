@@ -1,0 +1,84 @@
+<div class="problembody">
+<p><em>Draughts</em> (Or <em>checkers</em>) is a game played by
+    two opponents, on opposite sides of a <span class="tex2jax_process">$10 \times 10$</span> board. The board
+    squares are painted black and white, as on a classic
+    chessboard. One player controls the dark, and the other the
+    light pieces. The pieces can only occupy the black squares. The
+    players make their moves alternately, each moving one of his
+    own pieces.</p>
+<p>The most interesting type of move is <em>capturing</em>: if
+    a diagonally adjacent square contains an opponent’s piece, it
+    may be captured (and removed from the game) by jumping over it
+    to the unoccupied square immediately beyond it. It is allowed
+    to make several consecutive captures in one move, if they are
+    all made with a single piece. It is also legal to capture by
+    either forward or backward jumps.</p>
+<div class="figure" id="a0000000554">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{draughts}" src="/problems/draughts/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The board before and after a single move
+          with two captures.
+        </div>
+</center>
+</div>
+<p>You are given a draughts position. It is the light player’s
+    turn. Compute the maximal possible number of dark pieces he can
+    capture in his next move.</p>
+<h2>Input</h2>
+<p>The first line of input contains the number of test cases
+    <span class="tex2jax_process">$T$</span>. The descriptions of
+    the test cases follow:</p>
+<p>Each test case starts with an empty line. The following 10
+    lines of 10 characters each describe the board squares. The
+    characters <tt class="ttfamily">#</tt> and <tt class="ttfamily">.</tt> denote empty black and white squares,
+    <tt class="ttfamily">W</tt> denotes a square with a light
+    piece, <tt class="ttfamily">B</tt>—a square with a dark
+    piece.</p>
+<h2>Output</h2>
+<p>For each test case print a single line containing the
+    maximal possible number of captures. If there is no legal move
+    (for example, there are no light pieces on the board), simply
+    output 0.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+
+.#.#.#.#.#
+#.#.#.#.#.
+.#.#.B.#.#
+#.#.#.#.#.
+.#.#.B.#.#
+#.#.W.#.#.
+.#.#.#.#.#
+#.#.#.B.#.
+.#.#.#.#.#
+#.#.#.#.#.
+
+.#.#.#.#.#
+#.#.#.#.#.
+.#.#.B.#.#
+#.B.#.B.#.
+.#.#.B.#.#
+#.B.W.#.#.
+.#.B.B.#.#
+#.#.#.#.#.
+.#.B.B.#.#
+#.#.#.#.#.
+</pre>
+</td>
+<td>
+<pre>
+2
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,151 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/presidentialelections/file/statement/en/img-0001.jpg" class="illustration" src="/problems/presidentialelections/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="http://icpcnews.com/photo/?album=2009tag=Bill%20Poucher"><small class="tiny">
+        Picture by David Hill via ICPCNews.com</small></a>
+</div>
+</div>
+<p>In a few weeks time, a new president will be elected in the
+    country of Marecia. There are two political parties: the
+    Constituents and the Federals. Each party has one presidential
+    candidate; one of these will become the new president.</p>
+<p>This year you are more involved than ever before: you are
+    the candidate for the Constituents! With only a few weeks to
+    go, you decide to take stock of the situation. Instead of
+    touring blindly through the country, you feel that it is better
+    to focus your attention on certain particular states.</p>
+<p>The Marecian electoral system is quite complicated. Every
+    registered voter will vote for exactly one of the two
+    candidates, but the totals are not calculated nationwide.
+    Instead, every state has a fixed number of delegates. After the
+    popular vote is in, the delegates from all states travel by
+    foot to the capital of Marecia, the city of Ashwington. One
+    final round of voting is done in Ashwington: every delegate
+    gets to vote for one of the two candidates. A delegate is
+    required by law to vote for the candidate who received the
+    majority of the votes in his own home state.</p>
+<p>Your campaign team has painstakingly compiled a very
+    accurate list of voting preferences per state. Therefore you
+    now have the following information about every state:</p>
+<ul class="itemize">
+<li>
+<p>The number of voters who will definitely vote for the
+        Constituents;</p>
+</li>
+<li>
+<p>The number of voters who will certainly vote for the
+        Federals;</p>
+</li>
+<li>
+<p>The number of voters who have not made up their minds
+        yet.</p>
+</li>
+</ul>
+<p>Voters from the first two categories are not susceptible to
+    any further campaigning, so your focus for the remaining weeks
+    is on people of the third category. Specifically, you would
+    like to know the minimum number of people you still have to
+    convince in order to secure a victory.</p>
+<p>If there is a tie on either state or national level, the law
+    states that it is resolved in favour of the oldest of the two
+    political parties, which unfortunately is the Federal
+    party.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$S$</span>, the number of states.</p>
+<p>The following <span class="tex2jax_process">$S$</span> lines
+    each contain four integers <span class="tex2jax_process">$D_
+    i$</span>, <span class="tex2jax_process">$C_ i$</span>,
+    <span class="tex2jax_process">$F_ i$</span>, <span class="tex2jax_process">$U_ i$</span>, where</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$D_ i$</span> denotes the
+        number of delegates for the <span class="tex2jax_process">$i$</span>-th state,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$C_ i$</span> denotes the
+        number of registered voters in the <span class="tex2jax_process">$i$</span>-th state who will definitely
+        vote for the Constituents,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$F_ i$</span> denotes the
+        number of registered voters in the <span class="tex2jax_process">$i$</span>-th state who will certainly
+        vote for the Federals,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$U_ i$</span> denotes the
+        number of undecided voters in the <span class="tex2jax_process">$i$</span>-th state.</p>
+</li>
+</ul>
+<p>There are at most <span class="tex2jax_process">$2016$</span> delegates in total, and the
+    total number of registered voters is at most <span class="tex2jax_process">$10^9$</span>. Every state has at least one
+    delegate and at least one registered voter. There is at least
+    one state.</p>
+<h2>Output</h2>
+<p>Output one line with a single integer: the minimum number of
+    voters you have to convince to secure a victory. If it is not
+    possible for you to win the election, output “<tt class="ttfamily">impossible</tt>” instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+7 2401 3299 0
+6 2401 2399 0
+2 750 750 99
+</pre>
+</td>
+<td>
+<pre>
+50
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+7 100 200 200
+8 100 300 200
+9 100 400 200
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+32 0 0 20
+32 0 0 20
+64 0 0 41
+</pre>
+</td>
+<td>
+<pre>
+32
+</pre>
+</td>
+</tr>
+</table>
+</div>

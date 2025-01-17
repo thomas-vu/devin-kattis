@@ -1,0 +1,72 @@
+<div class="problembody">
+<p><em>It’s not about what you know, but who you know</em>. A
+    famous saying – but is it true? You start looking around
+    yourself, pondering what lies behind the success of some of
+    your friends. Could it be that life is just one big popularity
+    contest? Are all the hours you spend learning algorithms better
+    used networking?</p>
+<p>Slightly saddened by these thoughts, you realize that this
+    is at least a question you can answer thanks to all those
+    algorithm hours. Among your <span class="tex2jax_process">$N$</span> friends, <span class="tex2jax_process">$M$</span> pairs of them are friends with
+    each other. You have ordered your friends in increasing order
+    by how successful you think they are in life. For the
+    <span class="tex2jax_process">$i$</span>’th friend (starting
+    from <span class="tex2jax_process">$1$</span>) in this order,
+    we let <span class="tex2jax_process">$i$</span> be their
+    <em>success factor</em>. Similarly, we call the number of
+    friends someone has their <em>popularity factor</em>
+<span class="tex2jax_process">$P_ i$</span>.</p>
+<p>To investigate the matter, you decide to compute the
+    <em>marketability coefficient</em> of each friend, defined as
+    the difference between their popularity factor and success
+    factor.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 1\, 000$</span>), the number of your friends, and
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0 \le M \le \frac{N(N - 1)}{2}$</span>), the
+    number of friendships.</p>
+<p>The next <span class="tex2jax_process">$M$</span> lines each
+    contains one of the friendships, given as two integers
+    <span class="tex2jax_process">$1 \le a \neq b \le N$</span>,
+    denoting that the <span class="tex2jax_process">$a$</span>’th
+    and <span class="tex2jax_process">$b$</span>’th of your friends
+    are friends.</p>
+<h2>Output</h2>
+<p>Output a single line with <span class="tex2jax_process">$N$</span> integers – the marketability
+    coefficients of all your friends.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 0
+</pre>
+</td>
+<td>
+<pre>-1 -2 -3 -4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+2 1
+1 4
+2 3
+</pre>
+</td>
+<td>
+<pre>1 0 -2 -3
+</pre>
+</td>
+</tr>
+</table>
+</div>

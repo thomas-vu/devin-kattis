@@ -1,0 +1,187 @@
+<div class="problembody">
+<p>Monopoly is a fast-dealing property trading game, which is
+    firstly designed by Elizabeth Magie and then published as well
+    as owned by Hasbro. Since its first appearance in 1935, this
+    game has quickly become well-known and deserves the best way of
+    enjoying with friends at leisure. In this game, you can
+    demonstrate your powerful investing skill and your great
+    support from the God by throwing dices, travelling on a risky
+    board and building your real estate for the purpose of forcing
+    your opponents to pay huge amounts of money for renting your
+    land, which eventually leads to bankruptcy. Various localized
+    versions of Monopoly have been introduced, consisting of
+    different famous places all over the world, while their layout
+    share the same. The figure below shows the board of <i class="itshape">UK Edition Monopoly</i>.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{board.jpg}" src="/problems/monopoly/file/statement/en/img-0001.jpg" style="width:50.00%"/>
+</center>
+<p>If you have enjoyed delightful moments with <i class="itshape">Monopoly</i>, I wish you can entertain yourselves by
+    solving this problem. Otherwise, do not worry as in this
+    problem we are playing a significantly simplified version of
+    this game. Forget the rules of the traditional game and read
+    carefully the below description:</p>
+<p>In this problem, instead of a board, the game is held in a
+    graph with <span class="tex2jax_process">$N$</span> nodes and
+    <span class="tex2jax_process">$M$</span> directed edges. Two
+    players, Alob and Bice join the game. At the beginning, Alob is
+    at node <span class="tex2jax_process">$s_ a$</span> while Bice
+    is at node <span class="tex2jax_process">$s_ b$</span>. Alob
+    starts first. Two players take turn alternatively. In each
+    turn, a player has to move from his current node, along some
+    edge to another node; and may pay, collect money or buy
+    property, depending on the type of the new node. If he can not
+    choose any edges to pass through, he has to pass that turn (do
+    nothing).</p>
+<p><br/></p>
+<p>Every node belongs to one of the following types:</p>
+<ul class="itemize">
+<li>
+<p><b class="bfseries">Property</b>: You can purchase to
+        own this property and force your opponents to pay you when
+        they reach here. Each property has its own <i class="itshape">buying cost</i> and <i class="itshape">renting
+        cost</i>. Initially, all properties are unowned. When you
+        reach an unowned property, you can decide either to buy
+        this property (you have to pay its <i class="itshape">buying cost</i>) to <b class="bfseries">permanently</b> own it, or to ignore. After you
+        purchase for this property, your opponent has to send you
+        an amount of money equal to its <i class="itshape">renting
+        cost</i> everytime he reaches it. Of course, you have
+        nothing to do while landing on your own properties.</p>
+</li>
+<li>
+<p><b class="bfseries">Salary</b>: Each node of this kind
+        has its own value, which is the amount of money you gain
+        everytime you reach this.</p>
+</li>
+<li>
+<p><b class="bfseries">Tax</b>: Each node of this kind has
+        its own value, which is the amount of money you lose when
+        you reach this node.</p>
+</li>
+</ul>
+<p>Since Alob and Bice are bored of playing an overlong game,
+    each person will take at most <span class="tex2jax_process">$K$</span> turns (including passed turns).
+    After that, the game ends. They had already won the gameshow
+    <i class="itshape">Who Wants to Be a Millionaire?</i> so they
+    never worry about running out of cash. Each player wants his
+    money to be more than his opponent’s money as much as possible.
+    If he has several strategies resulting in the same difference,
+    he always prefers the one giving him largest amount of
+    money.</p>
+<p>Assume that both player play optimally, your task is to
+    determine the outcome of the game.</p>
+<h2>Input</h2>
+<p>The first line contains five integers: <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$K$</span>, <span class="tex2jax_process">$s_
+    a$</span>, <span class="tex2jax_process">$s_ b$</span> - the
+    number of nodes and edges in the graph, the maximum number of
+    turns each player takes, and the starting nodes of Alob and
+    Bice, respectively.</p>
+<p>The <span class="tex2jax_process">$i^{th}$</span> line of
+    the next <span class="tex2jax_process">$M$</span> lines
+    contains two integers <span class="tex2jax_process">$u_
+    i$</span> and <span class="tex2jax_process">$v_ i$</span>,
+    representing an edge from <span class="tex2jax_process">$u_
+    i$</span> to <span class="tex2jax_process">$v_ i$</span>.</p>
+<p>The <span class="tex2jax_process">$i^{th}$</span> line of
+    the last <span class="tex2jax_process">$N$</span> lines
+    describes the <span class="tex2jax_process">$i^{th}$</span>
+    node of the graph in one of the following formats:</p>
+<ul class="itemize">
+<li>
+<p><i class="itshape">PROPERTY b r</i>: Denotes that this
+        node has a property with <i class="itshape">buying_cost</i>
+<span class="tex2jax_process">$b$</span> and <i class="itshape">renting_cost</i> <span class="tex2jax_process">$r$</span>.</p>
+</li>
+<li>
+<p><i class="itshape">SALARY v</i>: Denotes that a player
+        earns <span class="tex2jax_process">$v$</span> when
+        entering this node.</p>
+</li>
+<li>
+<p><i class="itshape">TAX v</i>: Denotes that a player
+        loses <span class="tex2jax_process">$v$</span> when
+        entering this node.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Write out in one line two space-separated integers denoting
+    the amount of money Alob and Bice gain at the end of the game,
+    respectively.</p>
+<h2>Constraints</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq
+        {10}^{5}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq M \leq
+        {10}^{5}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">${10}^{6} \leq K \leq
+        {10}^{9}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq s_ a \leq
+        N$</span>, <span class="tex2jax_process">$1 \leq s_ b \leq
+        N$</span></p>
+</li>
+<li>
+<p>All other numbers in the input files are integers
+        between <span class="tex2jax_process">$1$</span> and
+        <span class="tex2jax_process">${10}^{9}$</span>,
+        inclusive.</p>
+</li>
+<li>
+<p>For all nodes which has property, <span class="tex2jax_process">$renting\_ cost \leq \frac{buying\_
+        cost}{\pi }$</span>.</p>
+</li>
+<li>
+<p>For every <span class="tex2jax_process">$i$</span> from
+        <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$1 \leq u_ i &lt; v_ i \leq
+        N$</span>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+12 12 123456789 1 2
+1 3
+1 5
+3 7
+3 9
+5 9
+7 11
+2 4
+2 6
+4 8
+4 10
+6 8
+8 12
+SALARY 1
+SALARY 10000
+TAX 3
+TAX 200
+SALARY 10
+TAX 1000
+SALARY 7
+PROPERTY 50 14
+TAX 18
+PROPERTY 105 33
+PROPERTY 11 2
+SALARY 7
+</pre>
+</td>
+<td>
+<pre>
+4 -193
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

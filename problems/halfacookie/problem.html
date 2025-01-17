@@ -1,0 +1,47 @@
+<div class="problembody">
+<p>You and your sister have to share a large, circular cookie.
+    The cookie is quite stale, so you must break it by striking it
+    with a hammer. When struck at point <span class="tex2jax_process">$p$</span>, the cookie will break along the
+    shortest chord containing <span class="tex2jax_process">$p$</span>. You follow the usual strategy of
+    one person breaking the cookie into two parts and the other
+    person choosing which part to take. Thus, after the cookie is
+    broken, you want to know which part is larger.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$200$</span> test cases, one per line. Each
+    test case is given as three real numbers <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$x$</span> <span class="tex2jax_process">$y$</span>, where each value is in the range
+    <span class="tex2jax_process">$[0,20]$</span> with at most
+    <span class="tex2jax_process">$8$</span> digits past the
+    decimal point. All units are given in centimeters. The
+    <span class="tex2jax_process">$r$</span> value gives the radius
+    of an origin-centered cookie. The <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> values give the coordinates where
+    the cookie is struck. No strike will be within <span class="tex2jax_process">$0.001$</span> cm of the edge of the cookie.
+    Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each test case, print a line giving the area of the
+    resulting two cookie pieces, larger piece first. Answers should
+    be correct to within <span class="tex2jax_process">$0.001$</span> square centimeters. If the
+    hammer misses the cookie entirely, simply print out the word
+    “miss”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10.0 5.0 0
+5.5 5.0 5.0
+8.0 3.0 4.5
+</pre>
+</td>
+<td>
+<pre>
+252.740780 61.418485
+miss
+179.924668 21.137262
+</pre>
+</td>
+</tr>
+</table>
+</div>

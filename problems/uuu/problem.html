@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:41.00%">
+<img alt="/problems/uuu/file/statement/en/img-0001.png" class="illustration" src="/problems/uuu/file/statement/en/img-0001.png"/>
+<div class="description">
+        This molecule corresponds to the graph in the sample.
+      </div>
+</div>
+<p><em>Unununium</em> (Uuu) was the name of the chemical
+    element with atom number 111, until it changed to
+    <em>Röntgenium</em> (Rg) in 2004. These heavy elements are very
+    unstable and have only been synthesized in a few
+    laboratories.</p>
+<p>You have just been hired by one of these labs to optimize
+    the algorithms used in simulations. For example, when
+    simulating complicated chemical reactions, it is important to
+    keep track of how many particles there are, and this is done by
+    counting connected components in a graph.</p>
+<p>Currently, the lab has some Python code (see attachments)
+    that takes an undirected graph and outputs the number of
+    connected components. As you can see, this code is based on
+    everyone’s favourite data structure <em>union-find</em><a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a>.</p>
+<p>After looking at the code for a while, you notice that it
+    actually has a bug in it! The code still gives correct answers,
+    but the bug could cause it to run inefficiently. Your task is
+    to construct a graph with a given number of vertices and edges
+    where the code runs very slowly. We will count how many times
+    the third line (the one inside the while loop) is visited, and
+    your program will get a score according to this number.</p>
+<h2>Input</h2>
+<p>The input consists of one line with two integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, the number of vertices and edges
+    your graph should have. Apart from the sample, there will be
+    only one test case, with <span class="tex2jax_process">$N =
+    100$</span> and <span class="tex2jax_process">$M =
+    500$</span>.</p>
+<h2>Output</h2>
+<p>The output consists of <span class="tex2jax_process">$M$</span> lines where the <span class="tex2jax_process">$i$</span>:th contains two integers
+    <span class="tex2jax_process">$u_ i$</span> and <span class="tex2jax_process">$v_ i$</span> (<span class="tex2jax_process">$1 \leq u_ i, v_ i \leq N$</span>). This
+    indicates that the vertices <span class="tex2jax_process">$u_
+    i$</span> and <span class="tex2jax_process">$v_ i$</span> are
+    connected with an edge in your graph.</p>
+<p>Your graph must not contain any duplicate edges or
+    self-loops. That is, <span class="tex2jax_process">$u_
+    i$</span> must be different from <span class="tex2jax_process">$v_ i$</span> and all the sets <span class="tex2jax_process">$\{ u_ i, v_ i\} $</span> must be
+    distinct.</p>
+<h2>Scoring</h2>
+<p>Let <span class="tex2jax_process">$X$</span> be the number
+    of times the innermost while loop is visited when given your
+    test case. Then your score will be <span class="tex2jax_process">$\min (X / 200, 100)$</span>.</p>
+<p>You will not get any points for the sample test case.</p>
+<h2>Explanations of Samples</h2>
+<p>In the sample case, the output contains a graph that causes
+    the innermost loop to be visited <span class="tex2jax_process">$20$</span> times. Run the code and see for
+    yourself!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 10
+</pre>
+</td>
+<td>
+<pre>1 2
+2 3
+1 3
+3 4
+5 6
+6 7
+5 7
+1 7
+7 2
+5 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

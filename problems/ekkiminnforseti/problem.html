@@ -1,0 +1,259 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ekkiminnforseti/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ekkiminnforseti/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Mynd fengin af <a href="https://commons.wikimedia.org/wiki/File:Not_My_President_%2830649025060%29.jpg">
+        wikimedia.org</a>
+</div>
+</div>After the 2016 United States Presidential election, a
+    large group of people protested because they felt the president
+    did not have the support of a majority of the population. The
+    words “NOT MY PRESIDENT” were heard all over the country. In
+    the election, Hillary Clinton receieved <span class="tex2jax_process">$48.2\% $</span> of the votes and Donald
+    Trump received <span class="tex2jax_process">$46.1\% $</span>
+    of the votes. Trump was victorious despite that because of the
+    electoral system in the United States.
+    <p>In Iceland it is impossible for a candidate with a lower
+    amount of votes to win against the candidate with the most
+    votes. Even though our electoral system is not susceptible to
+    this flaw in particular, it is hardly perfect. In Iceland’s
+    electoral system, a voter simply chooses a single candidate to
+    vote for and the candidate with the highest number of votes
+    wins.</p>
+<p>Ólafur Þórður Harðarson, a professor of political science at
+    the University of Iceland, has criticized Iceland’s electoral
+    system for decades. In an old article, he wrote about one flaw
+    in particular. He examined the possibility of an almost even
+    distribution of votes between candidates. With two candidates,
+    the winner would have to receive just over half of the votes in
+    order to win, which makes the system seem as fair as it
+    possibly can be. However, if there are ten candidates in the
+    race, then it may be sufficient to receive just over
+    <span class="tex2jax_process">$10\% $</span> of the votes to be
+    elected. Since the voters’ first choice is the only thing that
+    is taken into account, up to <span class="tex2jax_process">$90\% $</span> of the nation may be left with
+    the candidate which they like the least as president.</p>
+<p>Another flaw of the system, which is often criticized, is
+    known as lost votes. It is often clear by the polls before the
+    election, which two candidates are most likely to win. The
+    difference between them and the third, fourth or even ninth
+    place candidates can be so large that the poll clearly shows
+    which candidates will be in the top two places. A voter may
+    then feel their vote is lost since their vote will not impact
+    the battle between the top two candidates. Some voters may even
+    choose to vote for the candidate in the top two which they like
+    the most, even though, in their mind, they may be voting for
+    the lesser of two evils.</p>
+<p>One solution to this issue would be to have multiple rounds
+    of the electoral process so ensure each vote has an impact, but
+    for a small nation like Iceland this can prove financially
+    unviable. Luckily, a system exists which only requires one
+    round and is free of the aforementioned flaws. The system is
+    based on the voter ordering the candidates by their preference.
+    The main flaw of this system then is that the voting process
+    becomes a little more complicated for the voter. The first
+    choice of each voter would then determine the initial result of
+    the elections, which would be the same result as we obtain in
+    the current system. The difference is that while no voter has a
+    majority of the votes, the candidate with the lowest amount of
+    votes is removed from the election. The votes for that
+    candidate are then updated, and each voter’s next option
+    receives the vote. When some candidate has a majority of the
+    votes, the winner of the election has been determined.</p>
+<p>The Competitive Programming Association of Iceland used
+    their time machine to travel back to previous elections, asking
+    every person in the country how they would vote in this new
+    system. The association travelled back in time slowly, but
+    surely, and everything went fine and dandy. Each voter provided
+    an ordered list with all candidates listed. When it was time to
+    travel back to the future, to the year <span class="tex2jax_process">$2023$</span>, it was revealed that the time
+    machine did not work in both directions. The members of the
+    association were therefore stuck in the year <span class="tex2jax_process">$1952$</span>, when there were not many
+    computers to be found in Iceland. Therefore, they were unable
+    to write a program to simulate the elections with the new
+    votes. They decided to freeze themselves in order to reach the
+    year <span class="tex2jax_process">$2023$</span> once more and
+    Arnar left these instructions in the hope that someone would
+    implement the program for him.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of two integers
+    <span class="tex2jax_process">$n$</span>, the number of votes,
+    and <span class="tex2jax_process">$m$</span>, the number of
+    candidates, which are separated by a space.</p>
+<p>Next, <span class="tex2jax_process">$m$</span> lines follow,
+    each of which contains the name of a candidate. Names consist
+    entirely of letters from the English alphabet. The number of
+    letters in each name is between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$50$</span>.</p>
+<p>Finally, <span class="tex2jax_process">$n$</span> lines
+    follow, each of which contains a vote. Each vote consists of
+    <span class="tex2jax_process">$m$</span> integers, the numbers
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span>, where each number appears exactly
+    once, and describes the order in which the voter prefers the
+    candidates. The first number in the line therefore references
+    the voter’s first choice candidates, the second number
+    references the second choice and so forth. The numbers
+    reference the candidates in the order which they appear in the
+    input.</p>
+<p>If two candidates have an equal amount of votes at any point
+    in the process, then the candidate which appear earlier in the
+    input is considered to be placed higher.</p>
+<h2>Output</h2>
+<p>Output a single line with the name of the winner of the
+    elections.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m = 2$</span>,
+          <span class="tex2jax_process">$1 \leq n \leq 2\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2 \leq m \leq
+          3$</span>, <span class="tex2jax_process">$1 \leq n \leq
+          2\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2 \leq m \leq
+          9$</span>, <span class="tex2jax_process">$1 \leq n \leq
+          2\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2 \leq m \leq
+          10^5$</span>, <span class="tex2jax_process">$n \cdot m
+          \leq 2 \cdot 10^6$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 3
+Arnar
+Bjarki
+Unnar
+1 2 3
+1 3 2
+1 3 2
+2 1 3
+2 3 1
+2 3 1
+2 3 1
+3 1 2
+3 1 2
+3 2 1
+</pre>
+</td>
+<td>
+<pre>Arnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12 2
+Winner
+Loser
+1 2
+1 2 
+2 1
+2 1
+1 2
+2 1
+1 2
+1 2
+1 2
+1 2
+1 2
+1 2
+</pre>
+</td>
+<td>
+<pre>Winner
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>11 4
+Bjarki
+Asta
+Unnar
+Arnar
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+2 1 3 4
+2 1 3 4
+2 1 3 4
+3 4 2 1
+4 3 2 1
+4 3 2 1
+</pre>
+</td>
+<td>
+<pre>Asta
+</pre>
+</td>
+</tr>
+</table>
+</div>

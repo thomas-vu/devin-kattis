@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>The <span class="tex2jax_process">$k^{\text{th}}$</span>
+    Champernowne word is obtained by writing down the first
+    <span class="tex2jax_process">$k$</span> positive integers and
+    concatenating them together. For example, the <span class="tex2jax_process">$10^{\text{th}}$</span> Champernowne word is
+    <span class="tex2jax_process">$12345678910$</span>.</p>
+<p>It can be proven that, for any finite string of digits,
+    there exists some integer <span class="tex2jax_process">$k$</span> such that the finite string of
+    digits will appear as a subsequence in the <span class="tex2jax_process">$k^{\text{th}}$</span> Champernowne word.</p>
+<p>String <span class="tex2jax_process">$s$</span> is a
+    subsequence of string <span class="tex2jax_process">$t$</span>
+    if it is possible to delete some (possibly zero) characters
+    from <span class="tex2jax_process">$t$</span> to get
+    <span class="tex2jax_process">$s$</span>.</p>
+<p>Given a string of digits, compute the smallest integer
+    <span class="tex2jax_process">$k$</span> such that the given
+    string of digits is a subsequence of the <span class="tex2jax_process">$k^{\text{th}}$</span> Champernowne word.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \leq n \leq 10^5)$</span>, the length of
+    the string of digits.</p>
+<p>The second line of input contains a string of <span class="tex2jax_process">$n$</span> digits.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$k$</span>, the minimum integer such that the
+    given string is a subsequence of the <span class="tex2jax_process">$k^{\text{th}}$</span> Champernowne word.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+90
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+00
+</pre>
+</td>
+<td>
+<pre>20
+</pre>
+</td>
+</tr>
+</table>
+</div>

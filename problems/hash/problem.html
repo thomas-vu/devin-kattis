@@ -1,0 +1,111 @@
+<div class="problembody">
+<p>Little Mirko is studying the hash function which associates
+    numerical values to words. The function is defined recursively
+    in the following way:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$f( \text {empty word} ) =
+        0$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$f( \text {word} + \text
+        {letter} ) = ( ( f( \text {word} ) \cdot 33 ) \oplus
+        \mathrm{ord}( \text {letter} ) ) \mathbin {\% }
+        \mathrm{MOD}$</span></p>
+</li>
+</ul>
+<p>The function is defined for words that consist of only
+    lowercase letters of the English alphabet. <span class="tex2jax_process">$\oplus $</span> stands for the bitwise
+    exclusive or operator (i.e. <span class="tex2jax_process">$0110
+    \oplus 1010 = 1100$</span>), <span class="tex2jax_process">$\mathrm{ord}(\text {letter})$</span> stands
+    for the ordinal number of the letter in the alphabet
+    (<span class="tex2jax_process">$\mathrm{ord}(\mathtt{a}) =
+    1$</span>, <span class="tex2jax_process">$\mathrm{ord}(\mathtt{z}) = 26$</span>) and
+    <span class="tex2jax_process">$A \mathbin {\% } B$</span>
+    stands for the remainder of the number <span class="tex2jax_process">$A$</span> when performing integer division
+    with the number <span class="tex2jax_process">$B$</span>.
+    <span class="tex2jax_process">$\mathrm{MOD}$</span> will be an
+    integer of the form <span class="tex2jax_process">$2^
+    M$</span>.</p>
+<p>Some values of the hash function when <span class="tex2jax_process">$M$</span> = 10:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$f( \mathtt{a} ) =
+        1$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$f ( \mathtt{aa} ) =
+        32$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$f ( \mathtt{kit} ) =
+        438$</span></p>
+</li>
+</ul>
+<p>Mirko wants to find out how many words of the length
+    <span class="tex2jax_process">$N$</span> there are with the
+    hash value <span class="tex2jax_process">$K$</span>. Write a
+    programme to help him calculate this number.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$K$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10$</span>, <span class="tex2jax_process">$0 \leq K
+    &lt; 2^ M$</span>, <span class="tex2jax_process">$6 \leq M \leq
+    25$</span>).</p>
+<h2>Output</h2>
+<p>The first and only line of output must consist of the
+    required number from the task.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 0 10
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 2 10
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 16 10
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

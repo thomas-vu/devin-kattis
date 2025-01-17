@@ -1,0 +1,256 @@
+<div class="problembody">
+<p>Shortly after founding his lightbulb company in Eindhoven in
+    1891, Frederik Philips made a great discovery: lightbulbs that
+    light up an infinite ray in the horizontal or vertical
+    direction. With this new discovery, he wants to revolutionize
+    the interior design of modern homes.</p>
+<p>He plans an elaborate installation with his son, Gerard.
+    They install <span class="tex2jax_process">$N^2$</span> lamps
+    in an <span class="tex2jax_process">$N \times N$</span> grid in
+    a room. They want to light up the whole room with as few lamps
+    turned on as possible to save electricity. Each lamp is either
+    vertical, meaning it lights up all squares in its column, or
+    horizontal, meaning it lights up all squares in its row.</p>
+<p>The illustration below shows an example of a vertical (left)
+    and a horizontal (right) lamp.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{vert_horiz.pdf}" src="/problems/lightbulbs/file/statement/en/img-0001.png" style="width:70.00%"/>
+</center>
+</div>
+<p>Unfortunately, they did not pay attention when installing
+    the lamps and do not remember which lamps light up horizontally
+    or vertically. Instead, they conduct some experiments to figure
+    out which lamps to use to light up the whole room. Gerard stays
+    in the room with the lamps, while Frederik operates the
+    switches from another room.</p>
+<p>In each experiment, Frederik turns each lamp on or off and
+    Gerard reports how many squares are lit up in total; a square
+    that is lit up by two or more separate lamps is only counted
+    once. It does not matter how many lamps are turned on during
+    the experiments, but they are in a rush and ideally want to
+    conduct as few experiments as possible.</p>
+<p>Help them find an arrangement of lamps that lights up the
+    whole room and uses the fewest lamps. They can conduct at most
+    <span class="tex2jax_process">$2\, 000$</span> experiments.
+    However, you will get a higher score if they use fewer
+    experiments.</p>
+<h2>Interaction</h2>
+<p>This is an interactive problem.</p>
+<ul class="itemize">
+<li>
+<p>Your program should start by reading a line with an
+        integer <span class="tex2jax_process">$N$</span>, the
+        height and width of the grid.</p>
+</li>
+<li>
+<p>Then, your program should interact with the grader. To
+        conduct an experiment, you should first print a line with a
+        question mark “<tt class="ttfamily">?</tt>”. On the next
+        <span class="tex2jax_process">$N$</span> lines, output an
+        <span class="tex2jax_process">$N \times N$</span> grid
+        specifying which lamps are lit. Specifically, on each of
+        these lines, output a string of length <span class="tex2jax_process">$N$</span>, consisting of <span class="tex2jax_process">$0$</span>’s (turned off) and
+        <span class="tex2jax_process">$1$</span>’s (turned on).
+        Then, your program should read a single integer
+        <span class="tex2jax_process">$\ell $</span> (<span class="tex2jax_process">$0 \leq \ell \leq N^2$</span>), the
+        number of grid squares lit up by turning on the lamps
+        specified.</p>
+</li>
+<li>
+<p>When you want to answer, print a line with an
+        exclamation mark “<tt class="ttfamily">!</tt>”, followed by
+        <span class="tex2jax_process">$N$</span> lines with the
+        grid in the same format as above. In order for your answer
+        to be accepted, the <b class="bfseries">lamps must light up
+        the whole grid and the number of turned-on lamps must be
+        the fewest possible</b>.</p>
+</li>
+</ul>
+<p>After this, your program should exit.</p>
+<p>The grader is non-adaptive, meaning that the grid of lamps
+    is determined before the interaction begins.</p>
+<p>Make sure to flush standard output after issuing each
+    experiment; otherwise, your program might get judged as “Time
+    Limit Exceeded”. In Python, this happens automatically as long
+    as you use <tt class="ttfamily">input()</tt> to read lines. In
+    C++, <tt class="ttfamily">cout &lt;&lt; endl;</tt> flushes in
+    addition to printing a newline; if using <tt class="ttfamily">printf</tt>, use <tt class="ttfamily">fflush(stdout)</tt>.</p>
+<h2>Constraints and Scoring</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$3 \le N \le
+        100$</span>.</p>
+</li>
+<li>
+<p>You can issue at most <span class="tex2jax_process">$2\,
+        000$</span> experiments (printing the final answer does not
+        count as an experiment). If you exceed this, you will get
+        the verdict “Wrong Answer”.</p>
+</li>
+</ul>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group, you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N\le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>up to 78</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<p>In the final test group, your <b class="bfseries">score
+    depends on the number of experiments you conduct</b>,
+    calculated by the following formula:</p>
+<p><span class="tex2jax_process">$\text {score} = \begin{cases}
+    (2000-Q)\cdot 29/ 900&amp; \text {if } 200 \le Q \le 2000, \\
+    58 + (200-Q)\cdot 4 / 23 &amp; \text {if } 85 \le Q \le 200, \\
+    78 &amp; \text {if } Q \le 85, \end{cases}$</span></p>
+<p>where <span class="tex2jax_process">$Q$</span> is the
+    maximum number of experiments used on any test case. The score
+    will be rounded down to the nearest integer.</p>
+<p>The plot below shows the number of points, as a function of
+    <span class="tex2jax_process">$Q$</span>, your program will get
+    if it solves all test groups. To obtain a full score of 100
+    points on this problem, you must solve each test case using at
+    most 85 experiments.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{scoreplot.pdf}" src="/problems/lightbulbs/file/statement/en/img-0002.png" style="width:70.00%"/>
+</center>
+</div>
+<h2>Testing Tool</h2>
+<p>To facilitate the testing of your solution, we provide a
+    simple tool that you can download. See “attachments” at the
+    bottom of the Kattis problem page. The tool is optional to use.
+    Note that the official grader program on Kattis is different
+    from the testing tool.</p>
+<p>To use the tool, create an input file, such as “sample1.in”,
+    which should start with a number <span class="tex2jax_process">$N$</span> followed by <span class="tex2jax_process">$N$</span> lines specifying the grid, where
+    <tt class="ttfamily">V</tt> means that the lamp lights up its
+    column and <tt class="ttfamily">H</tt> means that it lights up
+    its row. For example:</p>
+<pre>
+  5
+  VVHVH
+  HVHHV
+  VHHVV
+  HHHVH
+  HHVVV
+  </pre>
+<p>For Python programs, say <tt>solution.py</tt> (normally run
+    as <tt>pypy3 solution.py</tt>):</p>
+<p><tt>python3 testing_tool.py pypy3 solution.py &lt;
+    sample1.in</tt></p>
+<p>For C++ programs, first compile it (e.g. with <tt>g++ -g -O2
+    -std=gnu++20 -static solution.cpp -o solution.out</tt>) and
+    then run:</p>
+<p><tt>python3 testing_tool.py ./solution.out &lt;
+    sample1.in</tt></p>
+<p>The testing tool tells you the number of lamps you use to
+    light up the whole grid, but it does not check whether this is
+    the minimum possible number.</p>
+<h2>Example</h2>
+<p>In the sample interaction, the program starts by reading the
+    grid size <span class="tex2jax_process">$N = 5$</span>. The
+    following figure shows the hidden grid (which the program does
+    not know) and one of many potential answers, using five lamps
+    to light up the whole grid. The marked lamps are turned on and
+    the darker squares are lit up.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{fig1_4.pdf}" src="/problems/lightbulbs/file/statement/en/img-0003.png" style="width:90.00%"/>
+</center>
+</div>
+<p>The program performs two experiments as illustrated below.
+    In the first experiment, a total of 10 squares are lit up using
+    the two vertical lamps in the top left corner. The second
+    experiment lights up a total of 13 squares. Finally, the
+    program writes its answer (illustrated above) and exits.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{fig2_3.pdf}" src="/problems/lightbulbs/file/statement/en/img-0004.png" style="width:90.00%"/>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>5</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>?
+11000
+00000
+00000
+00000
+00000</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>10</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>?
+01000
+01000
+01000
+00100
+00000</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>13</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>!
+00100
+00010
+01000
+00001
+01000</pre>
+</div>
+</div>

@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>One of the most basic problems in information processing is
+    identifying differences between data. This is useful when
+    comparing files, for example. For this problem, write a program
+    which identifies the differences between pairs of strings to
+    make it easier for humans to see the differences.</p>
+<p>Your program should identify those characters which differ
+    between the two given strings in a visually striking way.
+    Output the two input strings on two lines, and then identify
+    the differences on the line below using periods (for identical
+    characters) and asterisks (for differing characters). For
+    example:</p>
+<center>
+<tt>ATCCGCTTAGAGGGATT</tt><br/>
+<tt>GTCCGTTTAGAAGGTTT</tt><br/>
+<tt>*....*.....*..*..</tt><br/>
+</center>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le n \le 500$</span>, indicating the
+    number of test cases that follow. Each test case is a pair of
+    lines of the same length, <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$50$</span> characters. Each string contains
+    only letters (a-z, A-Z) or digits (<span class="tex2jax_process">$0$</span>-<span class="tex2jax_process">$9$</span>).</p>
+<h2>Output</h2>
+<p>For each test case, output the two lines in the order they
+    appear in the input. Output a third line indicating
+    similarities and differences as described above. Finally,
+    output a blank line after each test case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+ATCCGCTTAGAGGGATT
+GTCCGTTTAGAAGGTTT
+abcdefghijklmnopqrstuvwxyz
+bcdefghijklmnopqrstuvwxyza
+abcdefghijklmnopqrstuvwxyz0123456789
+abcdefghijklmnopqrstuvwxyz0123456789
+</pre>
+</td>
+<td>
+<pre>
+ATCCGCTTAGAGGGATT
+GTCCGTTTAGAAGGTTT
+*....*.....*..*..
+
+abcdefghijklmnopqrstuvwxyz
+bcdefghijklmnopqrstuvwxyza
+**************************
+
+abcdefghijklmnopqrstuvwxyz0123456789
+abcdefghijklmnopqrstuvwxyz0123456789
+....................................
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

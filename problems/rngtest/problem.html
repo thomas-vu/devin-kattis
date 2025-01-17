@@ -1,0 +1,148 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/rngtest/file/statement/en/img-0001.jpg" class="illustration" src="/problems/rngtest/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        In the olden days dice were used to generate test data
+      </div>
+</div>
+<p>As per usual an absolute truckload of random test data has
+    to be generated for Forritunarkeppni Framhaldsskólanna to test
+    solutions again. Since it’s not feasible to write all the data
+    by hand KFFÍ uses random number generators. The head honchos at
+    KFFÍ are paranoid about the quality of random number generator
+    implementations, so they want to make their own. Atli was thus
+    tasked with making a linear congruential generator. But because
+    Atli overslept, as per usual, someone has to take care of this,
+    that is to say you (as per usual).</p>
+<p>A linear congruential generator is defined using three
+    integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$x_0$</span>. We let <span class="tex2jax_process">$f(x) = (ax + b)\ \% \ m$</span>. The percent
+    sign denotes modulus and means the result is calculated modulo
+    <span class="tex2jax_process">$m$</span>. That is to say we
+    take the remainder of the result when it is divided by
+    <span class="tex2jax_process">$m$</span>.</p>
+<p>To get the <span class="tex2jax_process">$n$</span>-th
+    random number <span class="tex2jax_process">$f$</span> is
+    applied <span class="tex2jax_process">$n$</span> times to the
+    starting value <span class="tex2jax_process">$x_0$</span>. This
+    means the zeroth number is <span class="tex2jax_process">$x_0$</span>, the first number is
+    <span class="tex2jax_process">$f(x_0)$</span>, the next is
+    <span class="tex2jax_process">$f(f(x_0))$</span> and so on.</p>
+<h2>Input</h2>
+<p>The input consists of one line with five integers
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$x_0$</span>, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> as described above. The integers
+    are non-negative and <span class="tex2jax_process">$m$</span>
+    is positive.</p>
+<h2>Output</h2>
+<p>Print the <span class="tex2jax_process">$n$</span>-th random
+    number the linear congruential generator outputs.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a = 10, b = 3, m = 10^3
+          + 9, x_0 \leq 10^9, 1 \leq n \leq 10^6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m = 10^5 + 3, a, b, x_0
+          \leq 10^9, 1 \leq n \leq 10^{18}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m = 10^9 + 7, a, b, x_0
+          \leq 10^9, 1 \leq n \leq 10^{18}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$a, b, x_0, m \leq 10^9
+          + 7, 1 \leq n \leq 10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 3 42 42 1009
+</pre>
+</td>
+<td>
+<pre>311
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>17 18 20 1000000000000000000 100003
+</pre>
+</td>
+<td>
+<pre>41617
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 164 500000000000000000 1000000007
+</pre>
+</td>
+<td>
+<pre>500000192
+</pre>
+</td>
+</tr>
+</table>
+</div>

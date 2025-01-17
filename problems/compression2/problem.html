@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/compression2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/compression2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image adapted from <a href="https://commons.wikimedia.org/wiki/File:Handy_bench_vice_illustration.png">
+        Wikimedia Commons</a>, public domain
+      </div>
+</div>Infinite Compression Plan Consortium (ICPC) has developed
+    a new, great data compression strategy, called “Don’t Repeat
+    Yourself” (DRY). DRY works on a string of characters, and if
+    the string contains two consecutive instances of the same
+    substring, it simply removes one of them. For example, in the
+    string “<tt class="ttfamily">alfalfa seeds</tt>”, it could
+    remove one of the two “<tt class="ttfamily">e</tt>” substrings
+    in “<tt class="ttfamily">seeds</tt>”, and one of the two
+    “<tt class="ttfamily">lfa</tt>” substrings in “<tt class="ttfamily">alfalfa</tt>”, resulting in “<tt class="ttfamily">alfa seds</tt>”. DRY can also take advantage of
+    previous removals — for instance, in the string “<tt class="ttfamily">seventeenth baggage</tt>”, it will first remove the
+    duplicate “<tt class="ttfamily">e</tt>” in “<tt class="ttfamily">seventeenth</tt>” and the duplicate “<tt class="ttfamily">g</tt>” in “<tt class="ttfamily">baggage</tt>”,
+    resulting in “<tt class="ttfamily">sevententh bagage</tt>”, and
+    then remove the duplicate “<tt class="ttfamily">ent</tt>” in
+    “<tt class="ttfamily">sevententh</tt>” and “<tt class="ttfamily">ag</tt>” in “<tt class="ttfamily">bagage</tt>”,
+    resulting in “<tt class="ttfamily">seventh bage</tt>”.
+    <p>If there are multiple choices of repeating consecutive
+    substrings to remove, DRY should choose in a way that results
+    in the shortest possible final string. For example, in the
+    string “<tt class="ttfamily">ABBCDCABCDCD</tt>”, DRY has two
+    choices — either removing the repeated “<tt class="ttfamily">B</tt>” near the beginning, or the repeated
+    “<tt class="ttfamily">CD</tt>” at the end. If the “<tt class="ttfamily">B</tt>” is removed, then DRY will be able to remove
+    the repeated “<tt class="ttfamily">ABCDC</tt>”, resulting in
+    “<tt class="ttfamily">ABCDCD</tt>”, from which the “<tt class="ttfamily">CD</tt>” at the end will finally be removed,
+    resulting in “<tt class="ttfamily">ABCD</tt>”. However, if DRY
+    removed the “<tt class="ttfamily">CD</tt>” at the end first, it
+    would be left with “<tt class="ttfamily">ABBCDCABCD</tt>”, from
+    which only the repeated “<tt class="ttfamily">B</tt>” can be
+    removed to obtain “<tt class="ttfamily">ABCDCABCD</tt>” — and
+    from that string nothing more can be removed. So, the correct
+    choice for DRY is to begin by compressing the double
+    “<tt class="ttfamily">B</tt>”, and to finally end up with
+    “<tt class="ttfamily">ABCD</tt>”.</p>
+<p>ICPC observed that DRY obtains the best results on binary
+    strings — that is, strings composed only of zeroes and ones.
+    So, it has tasked you with implementing the best possible DRY
+    algorithm working on binary strings. For any binary string, you
+    should output a shortest string that can be obtained by
+    repeatedly applying DRY to it.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing a nonempty
+    string of length less than or equal to <span class="tex2jax_process">$10^5$</span>, consisting only of zeroes and
+    ones.</p>
+<h2>Output</h2>
+<p>Output one line, containing a shortest possible result of
+    running DRY on the input string. If there is more than one
+    possible shortest result, any one will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1111
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>101
+</pre>
+</td>
+<td>
+<pre>101
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10110
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

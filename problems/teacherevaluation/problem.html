@@ -1,0 +1,64 @@
+<div class="problembody">
+<p>In the city of Capitalistan, all education is performed at
+    private school in which parents pay for their students to go to
+    a certain school. Generally, parents base their choice of
+    school on a variety of factors, such as closeness to the home,
+    class size, teaching style and of course, standardized test
+    results. Every year, all the students in Capitalistan take a
+    standardized test, reciving an integer score between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>.</p>
+<p>Sigmund is the teacher of a small urban school, with only
+    capacity for a single class each year. Due to the small class
+    size, the variance of the test results sometimes occasionally
+    make it seem as if his class performed very poorly at the
+    standardized test. Sigmund, who in reality is one of the best
+    teachers in the country, does not like this fact.</p>
+<p>Luckily, the standardized tests are graded at the school at
+    which they are written and then reported in to the country’s
+    education authority. This makes it possible for less scrupulous
+    schools to be a bit generous when reporting their results.
+    Since students know what they answered, they would become very
+    suspicious if their results were altered. Similarly, the school
+    can not ignore certain students when reporting results as they
+    are used for assigning grades to the students.</p>
+<p>Instead, the school can simply add additional results to
+    raise their average score. Sigmund wants to forge some
+    additional results so that his school increases its average to
+    exactly <span class="tex2jax_process">$P$</span>. Since forging
+    results takes a lot of time, he wants to add as few additional
+    results as possible. How many results need to be added to raise
+    the average score to exactly <span class="tex2jax_process">$P$</span>, given the current results of the
+    students?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$1 \le N \le 30$</span> and <span class="tex2jax_process">$0 \le P \le 100$</span>. <span class="tex2jax_process">$N$</span> is the number of students in
+    Sigmund’s class, and <span class="tex2jax_process">$P$</span>
+    the average score he wants.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>. These are the scores Sigmund’s
+    students obtained on the test. It is guaranteed that the
+    average score of his students is strictly less than
+    <span class="tex2jax_process">$P$</span>.</p>
+<h2>Output</h2>
+<p>If it is not possible to raise the average to <span class="tex2jax_process">$P$</span> by adding additional tests, output
+    “<tt class="ttfamily">impossible</tt>”. Otherwise, output the
+    least number of results Sigmund must add to his current set of
+    results to raise the average to exactly <span class="tex2jax_process">$P$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 50
+25 30 10 40
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

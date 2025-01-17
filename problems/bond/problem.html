@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Everyone knows of the secret agent double-oh-seven, the
+    popular Bond (James Bond). A lesser known fact is that he
+    actually did not perform most of his missions by himself; they
+    were instead done by his cousins, Jimmy Bonds. Bond (James
+    Bond) has grown weary of having to distribute assign missions
+    to Jimmy Bonds every time he gets new missions so he has asked
+    you to help him out.</p>
+<p>Every month Bond (James Bond) receives a list of missions.
+    Using his detailed intelligence from past missions, for every
+    mission and for every Jimmy Bond he calculates the probability
+    of that particular mission being successfully completed by that
+    particular Jimmy Bond. Your program should process that data
+    and find the arrangement that will result in the greatest
+    probability that all missions are completed successfully. Note
+    that the number of missions is equal to the number of Bonds, so
+    that every Jimmy Bond needs to be assigned <em>a single
+    mission</em> each.</p>
+<p><b class="bfseries">Note</b>: the probability of all
+    missions being completed successfully is equal to the product
+    of the probabilities of the single missions being completed
+    successfully.</p>
+<h2>Input</h2>
+<p>The first line will contain an integer <span class="tex2jax_process">$N$</span>, the number of Jimmy Bonds and
+    missions (<span class="tex2jax_process">$1 \le N \le
+    20$</span>).</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    will contain <span class="tex2jax_process">$N$</span> integers
+    between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$100$</span>, inclusive. The
+    <span class="tex2jax_process">$j$</span>:th integer on the
+    <span class="tex2jax_process">$i$</span>:th line is the
+    probability that Jimmy Bond <span class="tex2jax_process">$i$</span> would successfully complete
+    mission <span class="tex2jax_process">$j$</span>, given as a
+    percentage.</p>
+<h2>Output</h2>
+<p>Output the maximum probability of Jimmy Bonds successfully
+    completing all the missions, as a percentage.</p>
+<p>Your answer should have an absolute error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<h2>Explanation of third sample</h2>
+<p>If Jimmy bond <span class="tex2jax_process">$1$</span> is
+    assigned the <span class="tex2jax_process">$3$</span>:rd
+    mission, Jimmy Bond <span class="tex2jax_process">$2$</span>
+    the <span class="tex2jax_process">$1$</span>:st mission and
+    Jimmy Bond <span class="tex2jax_process">$3$</span> the
+    <span class="tex2jax_process">$2$</span>:nd mission the
+    probability is: <span class="tex2jax_process">$1.0 \cdot 0.13
+    \cdot 0.7 = 0.091 = 9.1\% $</span>. All other arrangements give
+    a smaller probability of success.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+100 100
+50 50
+</pre>
+</td>
+<td>
+<pre>
+50
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 50
+50 0
+</pre>
+</td>
+<td>
+<pre>
+25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+25 60 100
+13 0 50
+12 70 90
+</pre>
+</td>
+<td>
+<pre>
+9.1
+</pre>
+</td>
+</tr>
+</table>
+</div>

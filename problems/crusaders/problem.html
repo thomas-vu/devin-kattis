@@ -1,0 +1,192 @@
+<div class="problembody">
+<p>Apple Bloom, Sweetie Belle and Scootaloo are trying to
+    discover their calling, and so they are trying various things
+    to see what they are good at. Today, they decided to help
+    ponies find suitable housing. They need to process the
+    applications of ponies who want to settle down in the kingdom,
+    and give suggestions based on their monthly income.</p>
+<p>There are <span class="tex2jax_process">$A$</span>
+    applications to process; the <span class="tex2jax_process">$i^\text {th}$</span> application contains
+    <span class="tex2jax_process">$S_ i$</span>, the monthly income
+    of the <span class="tex2jax_process">$i^\text {th}$</span>
+    applicant. For each application, they want to determine the
+    best city to live that they can afford; that is, the city whose
+    monthly cost of living is largest but still not exceeding their
+    monthly income. It is guaranteed that each pony has at least
+    one city they can afford to live in.</p>
+<p>There are <span class="tex2jax_process">$C$</span> cities in
+    Equestria, labelled <span class="tex2jax_process">$1, 2, \dots
+    , C$</span>, with costs of living <span class="tex2jax_process">$R_1, R_2, \dots , R_ C$</span>,
+    respectively. They don’t actually know the values of
+    <span class="tex2jax_process">$R$</span>; they only know that
+    for all positive integers <span class="tex2jax_process">$i &lt;
+    C$</span>, it holds <span class="tex2jax_process">$R_ i &lt;
+    R_{i+1}$</span>.</p>
+<p>They can call the national housing board to find out the
+    cost of living in a particular city, but they have to pay an
+    administrative fee of <span class="tex2jax_process">$\$
+    1$</span> each time.</p>
+<p>They only have <span class="tex2jax_process">$\$ 1\,
+    500$</span>. Without exceeding their budget, help them
+    determine where each pony should live!</p>
+<h2>Interaction</h2>
+<p>First, your program should read two integers <span class="tex2jax_process">$C$</span> <span class="tex2jax_process">$(1
+    \leq C \leq 10^6)$</span> and <span class="tex2jax_process">$A$</span> <span class="tex2jax_process">$(1
+    \leq A \leq 106)$</span>, the number of cities and the number
+    of applications, respectively, on a single line from standard
+    input.</p>
+<p>Then, your program should read <span class="tex2jax_process">$A$</span> integers <span class="tex2jax_process">$S_1, S_2, \dots , S_ A$</span> <span class="tex2jax_process">$(R_1 \leq S_ i \leq 10^9)$</span>, the
+    monthly incomes of each pony, on a single line from standard
+    input.</p>
+<p>Then, we repeat the following process:</p>
+<ul class="itemize">
+<li>
+<p>Your program writes a single line to the standard output
+        in either format:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$\texttt{Q}\:
+            c$</span> (<span class="tex2jax_process">$1 \leq c \leq
+            C$</span>), meaning that they should spend <span class="tex2jax_process">$\$ 1$</span> to ask for the monthly
+            cost of living in city <span class="tex2jax_process">$c$</span>. Obviously, they can only
+            do this if they have a positive number of dollars
+            left.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{A}\: P_1\:
+            P_2\: \dots \: P_ A$</span> (<span class="tex2jax_process">$1 \leq P_ i \leq C$</span>), meaning
+            that they should suggest pony <span class="tex2jax_process">$i$</span> to live in city
+            <span class="tex2jax_process">$P_ i$</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If your program asks a question, your program should
+        read <span class="tex2jax_process">$R_ c$</span>
+<span class="tex2jax_process">$(1 \leq R_ c \leq
+        10^9)$</span> from standard input.</p>
+</li>
+<li>
+<p>If your program guesses the answer, your answer will be
+        checked. <b class="bfseries">Your program should terminate
+        immediately after this.</b></p>
+</li>
+</ul>
+<p>After asking each question, do not forget to output end of
+    line and <b class="bfseries">flush</b> the output. To do this,
+    use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> or <tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python;</p>
+</li>
+<li>
+<p>see documentation for other languages.</p>
+</li>
+</ul>
+<h2>Sample interaction</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p>Your output (standard output)</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Kattis’ answer (standard input)</p>
+</td>
+<td style="text-align:left">
+<p>Interpretation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$5\: 2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are <span class="tex2jax_process">$C=5$</span>
+          cities and <span class="tex2jax_process">$A=2$</span>
+          applications to process.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$100\: 30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The first pony has a monthly income of <span class="tex2jax_process">$S_1 = \$ 100$</span>, the second has a
+          monthly income of <span class="tex2jax_process">$S_2 = \$
+          30$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{Q}\:
+          2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>They spend <span class="tex2jax_process">$\$ 1$</span>
+          to ask for the monthly cost of living in city
+          <span class="tex2jax_process">$2$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The monthly cost of living in city <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$R_2$</span>, is <span class="tex2jax_process">$\$ 40$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{Q}\:
+          3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>They spend <span class="tex2jax_process">$\$ 1$</span>
+          to ask for the monthly cost of living in city
+          <span class="tex2jax_process">$3$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The monthly cost of living in city <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$R_3$</span>, is <span class="tex2jax_process">$\$ 100$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{A}\: 3\:
+          1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There is now enough information to conclude that pony
+          <span class="tex2jax_process">$1$</span> should live in
+          city <span class="tex2jax_process">$3$</span> and pony
+          <span class="tex2jax_process">$2$</span> should live in
+          city <span class="tex2jax_process">$1$</span>.</p>
+</td>
+</tr>
+</table>
+</div>

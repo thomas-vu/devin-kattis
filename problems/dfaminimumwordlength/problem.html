@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>You are given a deterministic finite automaton that accepts
+    the language <span class="tex2jax_process">$\mathcal{L}$</span>. You should output the
+    length of the shortest word <span class="tex2jax_process">$w$</span> such that <span class="tex2jax_process">$w \in \mathcal{L}$</span> is a finite
+    language. You may assume that <span class="tex2jax_process">$\mathcal{L}$</span> is non-empty.</p>
+<h2>Input</h2>
+<p>The input contains the description of a deterministic finite
+    automaton.</p>
+<p>The first line contains four positive integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$f$</span>, where <span class="tex2jax_process">$n$</span> is the number of states,
+    <span class="tex2jax_process">$c$</span> is the size of the
+    alphabet, <span class="tex2jax_process">$s$</span> is the
+    initial state, and <span class="tex2jax_process">$f$</span> is
+    the number of final states. The second line consists of a
+    string <span class="tex2jax_process">$\Sigma = \Sigma _1\Sigma
+    _2\dots \Sigma _c$</span> of <span class="tex2jax_process">$c$</span> distinct symbols, each of which is
+    a lowercase english character. The third line consists of
+    <span class="tex2jax_process">$f$</span> distinct positive
+    integers, the set of final states. Then <span class="tex2jax_process">$n$</span> lines follow, each with
+    <span class="tex2jax_process">$c$</span> positive integers,
+    describing the symbol table. The <span class="tex2jax_process">$j$</span>-th integer on the <span class="tex2jax_process">$i$</span>-th of those lines represents the
+    state transitioned to from state <span class="tex2jax_process">$i$</span> upon reading <span class="tex2jax_process">$\Sigma _j$</span>.</p>
+<p>Each state is an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$n$</span>. It is guaranteed that
+    <span class="tex2jax_process">$1 \leq n \leq 10\, 000$</span>,
+    <span class="tex2jax_process">$1 \leq s \leq n$</span>, and
+    <span class="tex2jax_process">$0 \leq f \leq n$</span>.</p>
+<h2>Output</h2>
+<p>Output the length of the shortest word in <span class="tex2jax_process">$\mathcal{L}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2 1 2
+ab
+2 4
+2 3
+3 2
+3 3
+1 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 1 2
+acgt
+1 2
+2 2 2 2
+3 3 3 3
+4 4 3 4
+3 3 3 4
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

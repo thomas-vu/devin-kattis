@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>You just finished day one of your alchemy class! For your
+    alchemy homework, you have been given a string of lowercase
+    letters and wish to make it a palindrome. You’re only a
+    beginner at alchemy though, so your powers are limited. In a
+    single operation, you may choose exactly two adjacent letters
+    and change each of them into a different lowercase letter. The
+    resulting characters may be the same as or different from one
+    another, so long as they were both changed by the
+    operation.</p>
+<p>Formally, if the string before the operation is <span class="tex2jax_process">$s$</span> and you chose to change characters
+    <span class="tex2jax_process">$s_ i$</span> and <span class="tex2jax_process">$s_{i+1}$</span> to produce string
+    <span class="tex2jax_process">$t$</span>, then <span class="tex2jax_process">$s_ i \neq t_ i$</span> and <span class="tex2jax_process">$s_{i+1} \neq t_{i+1}$</span> must be true,
+    but <span class="tex2jax_process">$t_ i = t_{i+1}$</span> is
+    permitted.</p>
+<p>Compute the minimum number of operations needed to make the
+    string a palindrome.</p>
+<h2>Input</h2>
+<p>The single line of input contains a string of <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(2
+    \le n \le 100)$</span> lowercase letters, the string you are
+    converting into a palindrome.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    operations needed to make the string a palindrome.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ioi
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>noi
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>ctsc
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>fool
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>vetted
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,191 @@
+<div class="problembody">
+<p>The school administration has encountered a problem with the
+    upcoming school graduation, a problem which they hope you can
+    help them resolve. During the graduation ceremony, students
+    will stand in <span class="tex2jax_process">$N$</span> rows
+    with <span class="tex2jax_process">$M$</span> students in each
+    row. The administration wants the graduation to be as colorful
+    as possible and will therefore hand out hats in different
+    colors for the students.</p>
+<p>For the lineup to look good, it’s important that all the
+    students in the same column have the same color of hat. So that
+    no one feels left out, it is also important that all students
+    in the same class have the same hat color. The row and column
+    for each student has already been decided, but not the hat
+    color. The administration needs your help with assigning hat
+    colors to the students so that the graduation is as colorful as
+    possible.</p>
+<p>Write a program that, given how the students will be lined
+    up, calculates the maximum number of unique hat colors that can
+    be assigned to the students.</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq N, M \leq 700$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq 26$</span>) – the number of lines, the number of
+    columns, and the number of classes.</p>
+<p>Then <span class="tex2jax_process">$N$</span> lines follow,
+    each with <span class="tex2jax_process">$M$</span> characters,
+    describing how the students will be lined up in the graduation.
+    The character in row <span class="tex2jax_process">$i$</span>
+    and column <span class="tex2jax_process">$j$</span> is an
+    uppercase letter between <tt class="ttfamily">A</tt> and the
+    <span class="tex2jax_process">$K$</span>th letter of the
+    alphabet – the class to which the student in row <span class="tex2jax_process">$i$</span>, column <span class="tex2jax_process">$j$</span> belongs. It is guaranteed that
+    each class has at least one student.</p>
+<h2>Output</h2>
+<p>Print an integer – the maximum number of unique hat colors
+    that can be be assigned to the students so that all the
+    students in the same column have the same hat color, and also
+    all students in the same class have the same hat color.</p>
+<h2>Points</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Bounds</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, M \leq 5
+          $</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K = 2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, M \leq 50
+          $</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample cases</h2>
+<p>In the first sample case, the second column has one student
+    from class A and one student from class B. Since both of these
+    students must have the same hat color, everyone in class A must
+    have the same color hat as everyone in class B. The conclusion
+    is that all students must have the same color, so the answer is
+    <span class="tex2jax_process">$1$</span>.</p>
+<p>In the second sample case, classes A and B must have the
+    same color, as there is a student from each of these two
+    classes in the first column. Class C, on the other hand, can
+    use a different color on their hats. Therefore, the answer is
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>In the third sample case, we can give each class its own
+    color, since there are no two students from different classes
+    in the same column. Thus, the answer is <span class="tex2jax_process">$3$</span>.</p>
+<p>In the last sample case, we can assign one color to all
+    students from classes A, B and C, and a different color to all
+    students from classes D and E. So the answer is <span class="tex2jax_process">$2$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3 2
+AAB
+ABB
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 3
+AC
+BC
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 3 3
+ABC
+ABC
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 5 5
+ABECE
+BCDAE
+CADBD
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

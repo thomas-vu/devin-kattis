@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Anders talks in the Swedish dialect of <em>östgötska</em>.
+    Unfortunately, this makes it somewhat hard to get a programming
+    job in the Swedish capital of Stockholm. The trendy Stockholm
+    hipsters only accept applicants speaking the standard Swedish
+    dialect, <em>rikssvenska</em>.</p>
+<p>To increase his chances of passing interviews, he wishes to
+    practice talking rikssvenska. To help him with this, he wants
+    you to write a program that can determine whenever he
+    accidentally reverts to speaking östgötska.</p>
+<p>A simple way of determining if a sentence is written in
+    östgötska is if at least <span class="tex2jax_process">$40\%
+    $</span> of the words in the sentence contains the letter
+    <tt class="ttfamily">ä</tt>. For simplicity, this is encoded as
+    the letter combination <tt class="ttfamily">ae</tt> (meaning
+    any appearance of the substring <tt class="ttfamily">ae</tt> is
+    to be regarded as an occurrence of the letter <tt class="ttfamily">ä</tt>).</p>
+<h2>Input</h2>
+<p>The first and only line of input contains a sequence of
+    space-separated words. Each word consists only of letters
+    <tt class="ttfamily">a-z</tt>. There are at most <span class="tex2jax_process">$100$</span> words, and each word contains at
+    most <span class="tex2jax_process">$15$</span> letters
+    <tt class="ttfamily">a-z</tt> (meaning that the <tt class="ttfamily">ae</tt> combination counts as two letters for this
+    limit).</p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">dae ae ju traeligt va</tt>” if
+    the input sentence is in östgötska, otherwise output
+    “<tt class="ttfamily">haer talar vi rikssvenska</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>dae ae ju traeligt va
+</pre>
+</td>
+<td>
+<pre>dae ae ju traeligt va
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>haer talar vi rikssvenska
+</pre>
+</td>
+<td>
+<pre>haer talar vi rikssvenska
+</pre>
+</td>
+</tr>
+</table>
+</div>

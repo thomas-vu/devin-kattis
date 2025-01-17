@@ -1,0 +1,218 @@
+<div class="problembody">
+<p>There is a secret sequence of zeros and ones of length
+    <span class="tex2jax_process">$n$</span>, and you want to know
+    the number of ones in the sequence. You are allowed to ask
+    queries by giving four integers <span class="tex2jax_process">$0 \leq a \leq b \leq c \leq d \leq
+    n$</span>. The answer to the query will be <span class="tex2jax_process">$-1$</span> if the sum of the numbers at
+    positions <span class="tex2jax_process">$a, a+1, ...,
+    b-1$</span> is larger than the sum of the numbers at positions
+    <span class="tex2jax_process">$c, c+1, ..., d-1$</span>, and
+    <span class="tex2jax_process">$1$</span> if the sum is smaller.
+    If the sums are equal, the answer will be <span class="tex2jax_process">$0$</span>.</p>
+<p>The indices of the sequence start at <span class="tex2jax_process">$0$</span> and end at <span class="tex2jax_process">$n-1$</span>. Note that the intervals you’re
+    querying can be empty, if <span class="tex2jax_process">$a =
+    b$</span> or <span class="tex2jax_process">$c = d$</span>
+    respectively. The sum of the numbers in an empty interval is
+    <span class="tex2jax_process">$0$</span>.</p>
+<p>Figure out the total number of ones in the sequence using at
+    most <span class="tex2jax_process">$200$</span> queries.</p>
+<h2>Interactivity</h2>
+<p>This problem is interactive.</p>
+<p>Your program should start by reading an integer <span class="tex2jax_process">$n$</span>, the length of the sequence
+    (<span class="tex2jax_process">$1 \le n \le 2 \cdot
+    10^5$</span>).</p>
+<p>Then for each query you make, you should print a single line
+    containing a question mark (<tt class="ttfamily">?</tt>) and
+    four integers <span class="tex2jax_process">$0 \leq a \leq b
+    \leq c \leq d \leq n$</span>, separated by spaces. The grader
+    will then read these numbers and in return print a line with
+    either <span class="tex2jax_process">$-1$</span>, <span class="tex2jax_process">$0$</span> or, <span class="tex2jax_process">$1$</span>, which can be read by your
+    program.</p>
+<p>Your program should then repeat this until you want to guess
+    how many ones there are, which you do by printing a line
+    containing an exclamation mark (<tt class="ttfamily">!</tt>)
+    followed by a single integer number <span class="tex2jax_process">$x$</span>, separated by a space. After you
+    print this line, your program should terminate. If the number
+    <span class="tex2jax_process">$x$</span> is correct, i.e. if it
+    equals the number of ones in the sequence, you pass the test
+    case.</p>
+<p>You <em>must</em> make sure to flush standard output before
+    reading the grader’s response, or else your program will get
+    judged as Time Limit Exceeded. This works as follows in various
+    languages:</p>
+<ul class="itemize">
+<li>
+<p>Java: <tt class="ttfamily">System.out.println()</tt>
+        flushes automatically.</p>
+</li>
+<li>
+<p>Python: <tt class="ttfamily">print()</tt> flushes
+        automatically.</p>
+</li>
+<li>
+<p>C++: <tt class="ttfamily">cout &lt;&lt; endl;</tt>
+        flushes, in addition to writing a newline. If using printf,
+        <tt class="ttfamily">fflush(stdout)</tt>.</p>
+</li>
+</ul>
+<p>The grader is <em>not</em> adaptive. That is, the numbers in
+    the sequence are fixed for each test case and will not vary
+    depending on your queries.</p>
+<p>You can make at most <span class="tex2jax_process">$200$</span> <tt class="ttfamily">?</tt>
+    queries.</p>
+<h2>Constraints</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group. Your final score will
+    be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are either no ones or a single one.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 200$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The ones form a contiguous segment.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 4000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p>The secret sequence in this sample is <span class="tex2jax_process">$01101$</span>, so <span class="tex2jax_process">$n = 5$</span>, which is what the judge
+    writes on the first line. The program then asks which number is
+    greater: the first (at position <span class="tex2jax_process">$0$</span>) or the last (at position
+    <span class="tex2jax_process">$4$</span>). The judge answers
+    that the last number is greater, so we then know it has to be a
+    one while the first number is a zero. After this, the program
+    asks which is greater: the sum of the numbers at position
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span> or the number at position
+    <span class="tex2jax_process">$4$</span>. The judge answers
+    that the sum of the two numbers at position <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2$</span> is greater, and since we already
+    know that there is a one at position <span class="tex2jax_process">$4$</span>, this means both the numbers at
+    position <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$2$</span> are ones. Finally, the
+    program asks which is greater: the number at position
+    <span class="tex2jax_process">$0$</span> or the number at
+    position <span class="tex2jax_process">$3$</span>. The judge
+    answers that they are the same, and so since the number at
+    position <span class="tex2jax_process">$0$</span> is zero,
+    which we know from the first query, this is also the case for
+    the number at position <span class="tex2jax_process">$3$</span>.</p>
+<p>Hence there are <span class="tex2jax_process">$3$</span>
+    ones in total, so the program answers this.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>5</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 1 4 5</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 1 3 4 5</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>-1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 1 3 4</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>! 3</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>2</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 1 1 2</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>? 0 1 1 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>-1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>! 2</pre>
+</div>
+</div>

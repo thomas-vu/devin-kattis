@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>One of Atrebla’s favourite pastimes is collecting stickers
+    from all the conferences he attends. Due to a series of
+    unfortunate events, all of the usual ones have been cancelled,
+    so this year he has finally decided to start putting them onto
+    his laptop.</p>
+<p>Atrebla has laid out all of his stickers, decided where he
+    would like to place them and in what order they should be
+    placed. Before he starts sticking, he would like to make one
+    final check to make sure he will be satisfied with the final
+    result.</p>
+<p>The surface of his laptop lid can be represented by a grid
+    with <span class="tex2jax_process">$H$</span> rows and
+    <span class="tex2jax_process">$L$</span> columns. Each
+    character in the grid is either a ’_’, or a lowercase letter
+    denoting a sticker. The first sticker is denoted with ’a’s, the
+    second with ’b’s, and so on. When placed, a sticker will cover
+    up everything beneath it. Any parts of a sticker that hangs off
+    the laptop will be cut off.</p>
+<p>Can you write a program to give a preview of what Atrebla’s
+    laptop will look like after placing all of his stickers?</p>
+<h2>Inputs</h2>
+<p>The first line contains three space separated integers
+    <span class="tex2jax_process">$0 &lt; L, H \leq 50$</span>, the
+    length and height of the laptop lid, and <span class="tex2jax_process">$0 \leq K \leq 26$</span> the number of
+    stickers to be placed.</p>
+<p>Each of the following <span class="tex2jax_process">$K$</span> lines contains four space
+    separated integers <span class="tex2jax_process">$0 &lt; l \leq
+    L$</span>, the length of the sticker, <span class="tex2jax_process">$0 &lt; h \leq H$</span>, the height of the
+    sticker, and <span class="tex2jax_process">$0 \leq a &lt;
+    L$</span> and <span class="tex2jax_process">$0 \leq b &lt;
+    H$</span> denoting the column and row of the top left corner of
+    the sticker respectively.</p>
+<h2>Outputs</h2>
+<p>Output the final state of the laptop lid after all the
+    stickers have been placed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 3 3
+2 3 0 0
+2 1 2 2
+3 2 3 1
+</pre>
+</td>
+<td>
+<pre>aa____
+aa_ccc
+aabccc
+</pre>
+</td>
+</tr>
+</table>
+</div>

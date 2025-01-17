@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:22.00%">
+<img alt="/problems/methodicmultiplication/file/statement/en/img-0001.jpg" class="illustration" src="/problems/methodicmultiplication/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/File:Giuseppe_Peano.jpg">Giuseppe
+        Peano</a>, public domain
+      </div>
+</div>After one computer crash too many, Alonso has had enough
+    of all this shoddy software and poorly written code! He decides
+    that in order for this situation to improve, the glass house
+    that is modern programming needs to be torn down and rebuilt
+    from scratch using only completely formal axiomatic reasoning.
+    As one of the first steps, he decides to implement arithmetic
+    with natural numbers using the Peano axioms.
+    <p>The Peano axioms (named after Italian mathematican Giuseppe
+    Peano) are an axiomatic formalization of the arithmetic
+    properties of the natural numbers. We have two symbols: the
+    constant <span class="tex2jax_process">$0$</span>, and a unary
+    successor function <span class="tex2jax_process">$S$</span>.
+    The natural numbers, starting at <span class="tex2jax_process">$0$</span>, are then <span class="tex2jax_process">$0$</span>, <span class="tex2jax_process">$S(0)$</span>, <span class="tex2jax_process">$S(S(0))$</span>, <span class="tex2jax_process">$S(S(S(0)))$</span>, and so on. With these
+    two symbols, the operations of <em>addition</em> and
+    <em>multiplication</em> are defined inductively by the
+    following axioms: for any natural numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, we have</p><span class="tex2jax_process">\begin{align*} x + 0 &amp; = x &amp; x \cdot
+    0 &amp; = 0 \\ x + S(y) &amp; = S(x + y) &amp; x \cdot S(y)
+    &amp; = x \cdot y + x \end{align*}</span>
+<p>The two axioms on the left define addition, and the two on
+    the right define multiplication.</p>
+<p>For instance, given <span class="tex2jax_process">$x =
+    S(S(0))$</span> and <span class="tex2jax_process">$y =
+    S(0)$</span> we can repeatedly apply these axioms to
+    derive</p><span class="tex2jax_process">\begin{align*} x \cdot
+    y &amp; = S(S(0)) \cdot S(0) = S(S(0)) \cdot 0 + S(S(0))\\
+    &amp; = 0 + S(S(0)) = S(0 + S(0)) = S(S(0 + 0)) = S(S(0))
+    \end{align*}</span>
+<p>Write a program which given two natural numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, defined in Peano arithmetic,
+    computes the product <span class="tex2jax_process">$x \cdot
+    y$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of two lines. Each line contains a
+    natural number defined in Peano arithmatic, using at most
+    <span class="tex2jax_process">$1\, 000$</span> characters.</p>
+<h2>Output</h2>
+<p>Output the product of the two input numbers.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>S(S(0))
+S(S(S(0)))
+</pre>
+</td>
+<td>
+<pre>S(S(S(S(S(S(0))))))
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>S(S(S(S(S(0)))))
+0
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

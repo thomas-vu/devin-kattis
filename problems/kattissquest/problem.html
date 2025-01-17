@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Kattis the Cat enjoys clearing quests on her mobile game.
+    Each quest has an energy consumption <span class="tex2jax_process">$E$</span>, and gold reward <span class="tex2jax_process">$G$</span>. However, as Kattis has become
+    very busy lately with grading her student’s problem sets, she
+    does not have much spare time as before to keep clearing
+    quests. As such, she has adopted a new ‘greedy’ strategy to
+    clear her quests in each session as quickly as possible. With
+    energy <span class="tex2jax_process">$X$</span> for a session,
+    she will do the following:</p>
+<ol class="enumerate">
+<li>
+<p>Find the <b class="bfseries">largest</b> energy quest
+        from the current pool of quest which is <b class="bfseries">smaller or equal</b> to <span class="tex2jax_process">$X$</span>, if tied, by the <b class="bfseries">largest</b> gold reward,</p>
+</li>
+<li>
+<p>Clear the quest, removing it from current pool. Reduce
+        energy <span class="tex2jax_process">$X$</span> by
+        <span class="tex2jax_process">$E$</span> of the quest, and
+        add up the gold reward <span class="tex2jax_process">$G$</span> earned this session.</p>
+</li>
+<li>
+<p>Repeat steps <span class="tex2jax_process">$1$</span>
+        and <span class="tex2jax_process">$2$</span> with remaining
+        amount of energy, until energy left becomes <span class="tex2jax_process">$0$</span>, or if there are no more
+        quests to be cleared with remaining energy.</p>
+</li>
+</ol>
+<p>However, she is not sure if this strategy is optimal, and
+    wants your help in determining how much she has earned in each
+    playing session. Kattis the Cat will give a list of
+    <span class="tex2jax_process">$2$</span> commands:</p>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">add E G</b>: add <b class="bfseries">a copy</b> of the quest with energy consumption
+        <span class="tex2jax_process">$E$</span> and gold reward
+        <span class="tex2jax_process">$G$</span> into the pool,</p>
+</li>
+<li>
+<p><b class="bfseries">query X</b>: using the ‘greedy’
+        quest clearing strategy described above, print out the
+        total amount of gold Kattis the Cat earned in this session
+        with energy <span class="tex2jax_process">$X$</span>.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 2\cdot 10^5$</span>) denoting the number of commands.
+    Each of the next <span class="tex2jax_process">$N$</span> lines
+    contains a string S, denoting one of the above commands. For
+    the <b class="bfseries">add</b> command, two integers will
+    follow, <span class="tex2jax_process">$E$</span> and
+    <span class="tex2jax_process">$G$</span> (<span class="tex2jax_process">$1 \le E, G \le 10^5$</span>), denoting the
+    energy consumption and gold reward of the quest respectively.
+    For the <b class="bfseries">query</b> command, one integer will
+    follow, <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$1 \le X \le 10^5$</span>), denoting the
+    amount of energy Kattis the Cat has for this session.</p>
+<h2>Output</h2>
+<p>For each <b class="bfseries">query X</b> command, print the
+    amount of gold Kattis the Cat earned for that session in a new
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9
+add 8 10
+add 3 25
+add 5 6
+query 7
+query 7
+add 1 9
+add 2 13
+query 20
+query 1
+</pre>
+</td>
+<td>
+<pre>6
+25
+32
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

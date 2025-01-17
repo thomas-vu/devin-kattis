@@ -1,0 +1,159 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bigtruck/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bigtruck/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/19451080@N00/2052718764/">Phil
+        Whitehouse</a>
+</div>
+</div>
+<p>Your boss has hired you to drive a big truck, transporting
+    items between two locations in a city. You’re given a
+    description of the city, with locations of interest and the
+    lengths of roads between them. Your boss requires that you take
+    a shortest path between the starting and ending location, and
+    she’ll check your odometer when you’re done to make sure you
+    didn’t take any unnecessary side trips. However, your friends
+    know you have plenty of unused space in the truck, and they
+    have asked you to stop by several locations in town, to pick up
+    items for them. You’re happy to do this for them. You may not
+    be able to visit every location to pick up everything your
+    friends want, but you’d like to pick up as many items as
+    possible on your trip, as long as it doesn’t make the path any
+    longer than necessary.</p>
+<div class="figure" id="fig:graph">
+<center>
+<img alt="\includegraphics[width=.7\textwidth ]{graph}" src="/problems/bigtruck/file/statement/en/img-0002.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustrations of the first two sample
+          inputs
+        </div>
+</center>
+</div>
+<p>The two graphs above show examples of what the city may look
+    like, with nodes representing locations, edges representing
+    roads and dots inside the nodes representing items your friends
+    have asked you to pick up. Driving through a location allows
+    you to pick up all the items there; it’s a big truck, with no
+    limit on the items it can carry. In the graph on the left, for
+    example, you have to drive the big truck from location
+    <span class="tex2jax_process">$1$</span> to location
+    <span class="tex2jax_process">$6$</span>. If you follow the
+    path <span class="tex2jax_process">$1 \rightarrow 2 \rightarrow
+    3 \rightarrow 6$</span>, the length is <span class="tex2jax_process">$9$</span>, and you’ll get to pick up
+    <span class="tex2jax_process">$4$</span> items. Of course, it
+    would be better to drive <span class="tex2jax_process">$1
+    \rightarrow 4 \rightarrow 5 \rightarrow 6$</span>; that’s still
+    a length of <span class="tex2jax_process">$9$</span>, but going
+    this way instead lets you pick up an additional item. Driving
+    <span class="tex2jax_process">$1 \rightarrow 4 \rightarrow 3
+    \rightarrow 6$</span> would let you pick up even more items,
+    but it would make your trip longer, so you can’t go this
+    way.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 100$</span>), giving the number of locations in the
+    city. Locations are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, with location <span class="tex2jax_process">$1$</span> being the starting location and
+    <span class="tex2jax_process">$n$</span> being the destination.
+    The next input line gives a sequence of <span class="tex2jax_process">$n$</span> integers, <span class="tex2jax_process">$t_1 \ldots t_ n$</span>, where each
+    <span class="tex2jax_process">$t_ i$</span> indicates the
+    number of items your friends have asked you to pick up from
+    location <span class="tex2jax_process">$i$</span>. All the
+    <span class="tex2jax_process">$t_ i$</span> values are between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>, inclusive. The next input line
+    contains a non-negative integer, <span class="tex2jax_process">$m$</span>, giving the number of roads in the
+    city. Each of the following <span class="tex2jax_process">$m$</span> lines is a description of a road,
+    given as three integers, <span class="tex2jax_process">$a \: b
+    \: d$</span>. This indicates that there is a road of length
+    <span class="tex2jax_process">$d$</span> between location
+    <span class="tex2jax_process">$a$</span> and location
+    <span class="tex2jax_process">$b$</span>. The values of
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are in the range <span class="tex2jax_process">$1 \ldots n$</span>, and the value of
+    <span class="tex2jax_process">$d$</span> is between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$100$</span>, inclusive. All roads can be
+    traversed in either direction, there is at most one road
+    between any two locations, and no road starts and ends at the
+    same location.</p>
+<h2>Output</h2>
+<p>If it’s not possible to travel from location <span class="tex2jax_process">$1$</span> to location <span class="tex2jax_process">$n$</span>, just output out the word
+    “impossible”. Otherwise, output the length of a shortest path
+    from location <span class="tex2jax_process">$1$</span> to
+    location <span class="tex2jax_process">$n$</span>, followed by
+    the maximum number of items you can pick up along the way.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+1 1 2 3 1 0
+7
+1 2 2
+2 3 3
+3 6 4
+1 4 4
+4 3 2
+4 5 3
+5 6 2
+</pre>
+</td>
+<td>
+<pre>
+9 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+9
+1 1 1 1 1 1 1 1 1
+10
+1 2 3
+2 5 3
+1 6 2
+6 7 2
+7 5 2
+5 3 1
+3 4 2
+4 9 3
+5 8 2
+8 9 4
+</pre>
+</td>
+<td>
+<pre>
+12 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+5 5
+0
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

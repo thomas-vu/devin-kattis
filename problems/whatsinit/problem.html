@@ -1,0 +1,98 @@
+<div class="problembody">
+<p>Pekka has started preparing for the beautiful summer on the
+    beaches along the great Finnish lakes. He has started his
+    yearly spring diet. Although the diet is very strict and
+    boring, it has given Pekka fruitful results for the last
+    <span class="tex2jax_process">$10$</span> years as well as an
+    increased interest in the food he eats. He always reads the
+    ingredient list of a food item before he puts it into his
+    basket in the grocery store. He has a hard time getting a full
+    overview of how much of each ingredient he actually puts in his
+    body and would like your help to figure it out.</p>
+<p>The ingredient list on a food item always lists all the
+    ingredients, but it seldom tells you how much is used of each
+    one of the single ingredients. It will often tell you how much
+    is used for some of the ingredients. The ingredients list is
+    always sorted from the ingredient with the most content to the
+    ingredient with the least content.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of a single integer
+    <span class="tex2jax_process">$N$</span> indicating the number
+    of ingredients in the thing Pekka wants to eat.<br/>
+    Each of the next <span class="tex2jax_process">$N$</span> lines
+    describe one ingredient, and consist of one word <span class="tex2jax_process">$I$</span> and one number <span class="tex2jax_process">$P$</span>, describing the name of the
+    ingredient and the percentage of the ingredient in this piece
+    of food – if known, otherwise it is a ’?’.<br/>
+    The <span class="tex2jax_process">$N$</span> ingredients are
+    listed in the order on the package of the food item.</p>
+<h2>Output</h2>
+<p>For each test case, output a list of ingredients, one line
+    for each ingredient, in the same order as they were given in
+    the input. Each line should consist of an ingredient name
+    <span class="tex2jax_process">$I$</span>, and two non-negative
+    integers <span class="tex2jax_process">$L$</span> and
+    <span class="tex2jax_process">$H$</span>, describing the
+    minimal and maximal possible quantity of the ingredient in the
+    actual food item.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq
+        1000$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq \operatorname
+        {len}(I) \leq 100$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P$</span> is an integer
+        if the percentage of this ingredient is known, or a
+        <span class="tex2jax_process">$?$</span> if it is not
+        known.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$P$</span> is known:
+        <span class="tex2jax_process">$0 \leq P \leq
+        100$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq \sum (P) \leq
+        100$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$I$</span> consists of the
+        letters from A-Z and a-z.</p>
+</li>
+<li>
+<p>Each ingredient name <span class="tex2jax_process">$I$</span> is unique.</p>
+</li>
+<li>
+<p>It is guaranteed that there exists a solution.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+Strawberries 60
+Sugar ?
+Water 10
+Thickener ?
+</pre>
+</td>
+<td>
+<pre>
+Strawberries 60 60
+Sugar 20 30
+Water 10 10
+Thickener 0 10
+</pre>
+</td>
+</tr>
+</table>
+</div>

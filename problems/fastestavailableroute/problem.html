@@ -1,0 +1,115 @@
+<div class="problembody">
+<p>Your GPS has been directing you to an unknown destination
+    for the past several hours. You are curious about where it will
+    take you to, and how long the remaining drive will be. You try
+    to look at the display of your GPS to find out.</p>
+<p>The screen of your GPS can be modeled as an <span class="tex2jax_process">$w$</span> by <span class="tex2jax_process">$h$</span> grid. Each cell represents an
+    <span class="tex2jax_process">$s$</span> meter by <span class="tex2jax_process">$s$</span> meter square of actual space,
+    where <span class="tex2jax_process">$s$</span> is a power of
+    10. Each cell can display the following characters:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">@</tt> indicates your current
+        location is on the center of this square.</p>
+</li>
+<li>
+<p><tt class="ttfamily">$</tt> indicates that your
+        destination is on the center of this square.</p>
+</li>
+<li>
+<p><tt class="ttfamily">#</tt> is a cell that is not on
+        your current path.</p>
+</li>
+<li>
+<p><tt class="ttfamily">.</tt> is a cell that is on your
+        current path. We call these cells, as well as the start and
+        end locations, <em>path cells</em>.</p>
+</li>
+<li>
+<p>Any lowercase Latin character is part of a label. The
+        cell the character is on is not on your current path.</p>
+</li>
+</ul>
+<p>You wish to find the total remaining distance until your
+    destination arrives. Formally, let <span class="tex2jax_process">$P_1, P_2, \cdots , P_ k$</span> be some
+    sequence of cells on the GPS such that</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$P_1$</span> is your
+        starting cell.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_ k$</span> is your
+        ending cell.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_ i$</span> is a path
+        cell, for every <span class="tex2jax_process">$1 &lt; i
+        &lt; k$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_{i-1}$</span> and
+        <span class="tex2jax_process">$P_ i$</span> are adjacent,
+        for every <span class="tex2jax_process">$2 &lt; i &lt;
+        k$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$P_ i$</span> and
+        <span class="tex2jax_process">$P_ j$</span> are
+        <em>not</em> adjacent, for every <span class="tex2jax_process">$1 \leq i, j \leq k$</span> such that
+        <span class="tex2jax_process">$i + 1 &lt; j$</span>.</p>
+</li>
+<li>
+<p>All cells that are not equal to some <span class="tex2jax_process">$P_ i$</span> are not path cells.</p>
+</li>
+</ul>
+<p>It is guaranteed that such a sequence of cells exists.</p>
+<p>The <em>length</em> of the route represented by the GPS is
+    the length of the shortest path that passes through the centers
+    of <span class="tex2jax_process">$P_1, P_2, \dots , P_
+    k$</span>, in that order. Find the length of your route.</p>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers <span class="tex2jax_process">$h$</span> and
+    <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$1 \leq h, w \leq 580$</span>), the
+    dimensions of your GPS’s display, and <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$10
+    \leq s \leq 10^{18}$</span>), the scale of the GPS’s
+    display.</p>
+<p>The following <span class="tex2jax_process">$h$</span> lines
+    each contain <span class="tex2jax_process">$w$</span>
+    characters, which are each one of the characters mentioned
+    above. It is guaranteed that there will be exactly one
+    <tt class="ttfamily">@</tt> and <tt class="ttfamily">#</tt> in
+    this grid.</p>
+<h2>Output</h2>
+<p>On a single line, output “<tt class="ttfamily">Your
+    destination will arrive in x meters</tt>” (without quotes),
+    where “<tt class="ttfamily">x</tt>” is replaced by the actual
+    length of the path.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 20 10
+#########$###maize##
+mandela##.###hq#####
+#county##.......####
+###############.####
+##moonlight####.####
+##acres########.####
+###############.####
+###############.####
+###@............####
+####bons#burgers####
+</pre>
+</td>
+<td>
+<pre>Your destination will arrive in 260 meters
+</pre>
+</td>
+</tr>
+</table>
+</div>

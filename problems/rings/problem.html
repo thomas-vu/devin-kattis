@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>Little John is in big trouble. Playing with his
+    different-sized (and colored!) rings and glue seemed such a
+    good idea... However, the rings now lay on the floor, glued
+    together with something that will definitely not come off with
+    water. Surprisingly enough, it seems like no rings are actually
+    glued to the floor, only to other rings. How about that!</p>
+<p>You must help Little John to pick the rings off the floor
+    before his mom comes home from work. Since the glue is dry by
+    now, it seems like an easy enough task. This is not the case.
+    Little John is an irrational kid of numbers, and so he has
+    decided to pick up the largest component (most rings) of
+    glued-together rings first. It is the number of rings in this
+    largest component you are asked to find. Two rings are glued
+    together if and only if they overlap at some point but no rings
+    will ever overlap in only a single point. All rings are of the
+    doughnut kind (with a hole in them). They can however,
+    according to Little John, be considered “infinitely thin”.</p>
+<h2>Input</h2>
+<p>Input consists of a number of test cases, at most
+    <span class="tex2jax_process">$20$</span>. Each problem starts
+    with the number of rings, <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$0 \le n &lt; 100$</span>. After that,
+    <span class="tex2jax_process">$n$</span> rows follow, each
+    containing a ring’s physical attributes. This description
+    consists of <span class="tex2jax_process">$3$</span> floating
+    point numbers (with at most <span class="tex2jax_process">$3$</span> decimals), describing the
+    <span class="tex2jax_process">$x$</span> coordinate and
+    <span class="tex2jax_process">$y$</span> coordinate for its
+    center, and its radius. Input ends with a single row with the
+    integer <span class="tex2jax_process">$-1$</span>. Coordinates
+    have absolute value at most <span class="tex2jax_process">$100$</span>, and radii are positive and at
+    most <span class="tex2jax_process">$100$</span>.</p>
+<h2>Output</h2>
+<p>Output consists of as many answers as there were problems,
+    each answer on a separate line and of the form “<tt class="ttfamily">The largest component contains <span class="tex2jax_process">$X$</span> rings.</tt>” where <span class="tex2jax_process">$X$</span> is the number of rings in the
+    largest component. The plural form “rings” is changed to
+    singular if <span class="tex2jax_process">$X = 1$</span> (see
+    last sample case).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+0.0 0.0 1.0
+-1.5 -1.5 0.5
+1.5 1.5 0.5
+-2.0 2.0 3.5
+3
+3.0 2.0 2.0
+0.0 -0.5 1.0
+0.0 0.0 2.0
+5
+-2.0 0.0 1.0
+1.0 -1.0 1.0
+0.0 1.0 0.5
+2.0 0.0 1.0
+-1.0 1.0 1.0
+1
+1.0 1.0 1.0
+-1
+</pre>
+</td>
+<td>
+<pre>
+The largest component contains 4 rings.
+The largest component contains 2 rings.
+The largest component contains 3 rings.
+The largest component contains 1 ring.
+</pre>
+</td>
+</tr>
+</table>
+</div>

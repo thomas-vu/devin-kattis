@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bladra/file/statement/en/img-0001.png" class="illustration" src="/problems/bladra/file/statement/en/img-0001.png"/>
+<div class="description">
+        Blöðrur
+      </div>
+</div>
+<p>In Forritunarkeppni Framhaldsskólanna all teams get a
+    balloon for each problem they solve, the balloons being
+    different colours depending on what problem was solved.</p>
+<p>This year there will be <span class="tex2jax_process">$k$</span> problems. Thus <span class="tex2jax_process">$k$</span> employees will be needed to
+    inflate balloons. Each employee will inflate one balloon for
+    each team that solves their problem.</p>
+<p>Hannes was one of the people hired to inflate balloons this
+    year and had to work hard since so many people solved his
+    problem. He found this unfair since he was paid the same amount
+    as everyone else.</p>
+<p>After the contest Hannes thinks:</p>
+<blockquote class="quote">
+      What problem could I have been assigned in order to do the
+      least work?
+    </blockquote>
+<p>Could you answer this question for Hannes?</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \le k,q \le 10^5$</span>,
+    where <span class="tex2jax_process">$k$</span> denotes the
+    number of problems and <span class="tex2jax_process">$q$</span>
+    denotes how many problems were solved in total. Next there are
+    <span class="tex2jax_process">$q$</span> lines, each containing
+    two integers <span class="tex2jax_process">$1 \le a_ i \le
+    10^5, 1 \le b_ i \le k$</span> which means that team
+    <span class="tex2jax_process">$a_ i$</span> solved problem
+    <span class="tex2jax_process">$b_ i$</span>. No team solves the
+    same problem more than once.</p>
+<h2>Output</h2>
+<p>Print a single integer, the minimum number of balloons
+    Hannes could have had to inflate.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le k,q,a_ i \le
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+1 1
+2 1
+3 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+1 1
+2 1
+3 1
+4 1
+5 2
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

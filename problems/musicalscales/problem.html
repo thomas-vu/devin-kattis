@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>The following are musical notes in “increasing order”:</p>
+<center>
+<span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$A\sharp $</span>, <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$C\sharp $</span>, <span class="tex2jax_process">$D$</span>, <span class="tex2jax_process">$D\sharp $</span>, <span class="tex2jax_process">$E$</span>, <span class="tex2jax_process">$F$</span>, <span class="tex2jax_process">$F\sharp $</span>, <span class="tex2jax_process">$G$</span>, <span class="tex2jax_process">$G\sharp $</span>
+</center>
+<p>The difference between consecutive notes is a
+    <em>semitone</em>, and the sequence wraps around so the note
+    that is one semitone above <span class="tex2jax_process">$G\sharp $</span> is <span class="tex2jax_process">$A$</span>. The difference between a
+    <em>tone</em> is the same as two semitones. So the note that is
+    one tone above <span class="tex2jax_process">$B$</span> is
+    <span class="tex2jax_process">$C\sharp $</span>. The note that
+    is one tone above <span class="tex2jax_process">$G$</span> is
+    <span class="tex2jax_process">$A$</span>.</p>
+<p>We do not worry about flats such as <span class="tex2jax_process">$C\flat $</span> nor do we worry about adding
+    a <span class="tex2jax_process">$\sharp $</span> sign to
+    <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$E$</span> in this problem (they are aliases
+    for notes that are already listed).</p>
+<p>A major scale is defined by a note (such as <span class="tex2jax_process">$A$</span> or <span class="tex2jax_process">$C\sharp $</span>) and all other notes
+    following that one in an arithmetic progression:</p>
+<center>
+<em>tone</em>, <em>tone</em>, <em>semitone</em>,
+      <em>tone</em>, <em>tone</em>, <em>tone</em>,
+      <em>semitone</em>
+</center>
+<p>The starting note appears in the name of the scale.</p>
+<p>For example, the scale <span class="tex2jax_process">$A\sharp $</span>-major consists of the
+    following notes:</p>
+<center>
+<span class="tex2jax_process">$A\sharp $</span>, <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$D$</span>, <span class="tex2jax_process">$D\sharp $</span>, <span class="tex2jax_process">$F$</span>, <span class="tex2jax_process">$G$</span>, <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$A\sharp $</span>
+</center>
+<p>(by convention, the first note is repeated at the end of the
+    sequence).</p>
+<p>Note that <span class="tex2jax_process">$A\sharp
+    $</span>-major is typically <em>not</em> considered a standard
+    musical scale. It is identical in sound to <span class="tex2jax_process">$B\flat $</span>, and proper notation of
+    <span class="tex2jax_process">$A\sharp $</span>-major would
+    require the use of double-sharps. We ignore such issues in this
+    problem and just use the <span class="tex2jax_process">$12$</span> notes given at the top of this
+    problem.</p>
+<p>Finally, in this problem a song is just a sequence of notes.
+    Your job is to identify all major scales such that the song
+    uses only notes in that scale.</p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$1\leq n \leq 100$</span> denoting the number
+    of notes played in a song. The second line consists of a
+    sequence of notes, separated by spaces.</p>
+<h2>Output</h2>
+<p>Output consists of a single line that lists all scales the
+    song may be played in. Consecutive scales should be separated
+    by a single space and the scales must appear in lexicographic
+    order. If the song may not fit in any one of these scales,
+    simply output a line containing the text <tt class="ttfamily">none</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+C D F D C D F F F C 
+</pre>
+</td>
+<td>
+<pre>A# C D# F
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+A B A F# G# C 
+</pre>
+</td>
+<td>
+<pre>none
+</pre>
+</td>
+</tr>
+</table>
+</div>

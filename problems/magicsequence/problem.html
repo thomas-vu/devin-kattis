@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>One day, Bob discovers a magic sequence <span class="tex2jax_process">$\textbf{S}$</span> of <span class="tex2jax_process">$\textbf{N}$</span> integers. The sequence is
+    generated from <span class="tex2jax_process">$3$</span>
+    positive integers <b class="bfseries"><span class="tex2jax_process">$A$</span></b>, <b class="bfseries"><span class="tex2jax_process">$B$</span></b>, and
+    <b class="bfseries"><span class="tex2jax_process">$C$</span></b> as follows:</p>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$S[0]$</span> =
+        <span class="tex2jax_process">$A$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$S[i]$</span> =
+        (<span class="tex2jax_process">$S[i - 1]$</span> *
+        <span class="tex2jax_process">$B$</span> + <span class="tex2jax_process">$A$</span>) % <span class="tex2jax_process">$C$</span> <span class="tex2jax_process">$(1 \leq i &lt; N)$</span></p>
+</li>
+</ol>
+<p>Bob is really thrilled to share his invention with his
+    crush, Alice. However, he knows that Alice does not like
+    numbers without any specific ordering. Hence, he wants to sort
+    the sequence before giving it to her. Please help Bob to make a
+    progress in his relationship with Alice!</p>
+<p>Suppose that <span class="tex2jax_process">$\textbf{R}$</span> is the sorted version of
+    <span class="tex2jax_process">$\textbf{S}$</span>. For
+    simplicity, you don’t need to output <span class="tex2jax_process">$\textbf{R}$</span>. Instead, you just need
+    to output hash value of <span class="tex2jax_process">$\textbf{R}$</span>. The hash value
+    <span class="tex2jax_process">$\textbf{V}$</span> is generated
+    using the following code:</p>
+<pre>
+    V = 0
+    for i from 0 to N - 1:
+        V = (V * X + R[i]) % Y;
+</pre>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$TC$</span>, denoting the number of test
+    cases <span class="tex2jax_process">$(1 \le TC \le 30)$</span>.
+    Each test case consists of three lines:</p>
+<ul class="itemize">
+<li>
+<p>The first line contains one integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1 \le N \le 10^{6})$</span>.</p>
+</li>
+<li>
+<p>The second line contains three integers <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, and <span class="tex2jax_process">$C$</span> <span class="tex2jax_process">$(1 \le A, B, C \le 10^{9})$</span>.</p>
+</li>
+<li>
+<p>The third line contains two integers <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> <span class="tex2jax_process">$(1 \le X, Y \le 10^{9})$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each test case, output the hash value of <span class="tex2jax_process">$\textbf{R}$</span>.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\textbf{(22
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 500$</span>, <span class="tex2jax_process">$1 \le A, B,
+        C, X, Y \le 10\, 000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(36
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 100\, 000, 1 \le A, B, C \le 1\, 000\, 000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(21
+        points)}$</span>: <span class="tex2jax_process">$1 \le A,
+        B, C \le 1\, 000\, 000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(21
+        points)}$</span>: No additional constraint.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+7
+7 7 12
+1 20
+7
+16 1 15
+1 14
+7
+2 5 6
+1 19
+</pre>
+</td>
+<td>
+<pre>0
+1
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

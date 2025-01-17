@@ -1,0 +1,120 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/crisscross/file/statement/en/img-0001.png" class="illustration" src="/problems/crisscross/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Peter is bored during his operating systems class, so he
+    draws doodles on a sheet of paper. He feels like drawing
+    abstract art using his ruler: he draws line segments by
+    choosing two points in the plane and connecting them. Lots of
+    them.</p>
+<p>Can you write a program that counts the number of distinct
+    points at which the line segments he drew intersect or
+    touch?</p>
+<h2>Input</h2>
+<p>The first line in the input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 1\, 000$</span>) which is the number of lines. The
+    following <span class="tex2jax_process">$n$</span> lines
+    contain four integers <span class="tex2jax_process">$x_0 \ \
+    y_0 \ \ x_1 \ \ y_1$</span> (<span class="tex2jax_process">$-1\, 000\, 000 \le x_0, \ y_0, \ x_1, \ y_1
+    \le 1\, 000\, 000$</span>). Lines have non-zero length, i.e.,
+    the two points will be distinct: <span class="tex2jax_process">$x_0 \ne x_1$</span> or <span class="tex2jax_process">$y_0 \ne y_1$</span> or both.</p>
+<h2>Output</h2>
+<p>Output the number of distinct points for which there is at
+    least one pair of line segments that intersects or touches at
+    this point. If there are infinitely many such points, output
+    <tt class="ttfamily">-1</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 3 9 5
+2 2 6 8
+4 8 9 3
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+5 2 7 10
+7 4 4 10
+2 4 10 8
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2 1 6 5
+2 5 5 4
+5 1 7 7
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2
+-1 -2 -1 -1
+-1 2 -1 -1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 0 2 2
+1 1 -5 -5
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,86 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/speed/file/statement/en/img-0001.png" class="illustration" src="/problems/speed/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Sheila is a student and she drives a typical student car:
+    it is old, slow, rusty, and falling apart. Recently, the needle
+    on the speedometer fell off. She glued it back on, but she
+    might have placed it at the wrong angle. Thus, when the
+    speedometer reads <span class="tex2jax_process">$s$</span>, her
+    true speed is <span class="tex2jax_process">$s+c$</span>, where
+    <span class="tex2jax_process">$c$</span> is an unknown constant
+    (possibly negative).
+
+    <p>Sheila made a careful record of a recent journey and wants
+    to use this to compute <span class="tex2jax_process">$c$</span>. The journey consisted of
+    <span class="tex2jax_process">$n$</span> segments. In the
+    <span class="tex2jax_process">$i^{\text {th}}$</span> segment
+    she traveled a distance of <span class="tex2jax_process">$d_
+    i$</span> and the speedometer read <span class="tex2jax_process">$s_ i$</span> for the entire segment. This
+    whole journey took time <span class="tex2jax_process">$t$</span>. Help Sheila by computing
+    <span class="tex2jax_process">$c$</span>.</p>
+<p>Note that while Sheila’s speedometer might have negative
+    readings, her true speed was greater than zero for each segment
+    of the journey.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 1\, 000$</span>), the number of sections in Sheila’s
+    journey, and <span class="tex2jax_process">$t$</span>
+    (<span class="tex2jax_process">$1 \le t \le 10^6$</span>), the
+    total time. This is followed by <span class="tex2jax_process">$n$</span> lines, each describing one segment
+    of Sheila’s journey. The <span class="tex2jax_process">$i^{\text {th}}$</span> of these lines
+    contains two integers <span class="tex2jax_process">$d_
+    i$</span> (<span class="tex2jax_process">$1 \le d_ i \le 1\,
+    000$</span>) and <span class="tex2jax_process">$s_ i$</span>
+    (<span class="tex2jax_process">$|s_ i| \le 1\, 000$</span>),
+    the distance and speedometer reading for the <span class="tex2jax_process">$i^{\text {th}}$</span> segment of the
+    journey. Time is specified in hours, distance in miles, and
+    speed in miles per hour.</p>
+<h2>Output</h2>
+<p>Display the constant <span class="tex2jax_process">$c$</span> in miles per hour. Your answer
+    should have an absolute or relative error of less than
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+4 -1
+4 0
+10 3
+</pre>
+</td>
+<td>
+<pre>
+3.000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 10
+5 3
+2 2
+3 6
+3 1
+</pre>
+</td>
+<td>
+<pre>
+-0.508653377
+</pre>
+</td>
+</tr>
+</table>
+</div>

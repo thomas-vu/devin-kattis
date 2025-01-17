@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>You are an expert on the most difficult field of math —
+    primes! Indeed, you have actually proven the Riemann
+    Hypothesis, but unfortunately, this margin is too narrow to
+    contain the proof.</p>
+<p>Being considered a prime expert, <span class="tex2jax_process">$q$</span> people have come to you for help.
+    The <span class="tex2jax_process">$i$</span>-th person has a
+    favorite number <span class="tex2jax_process">$x_ i$</span>,
+    and they want to find the <em>primmest</em> prime number with
+    respect to <span class="tex2jax_process">$x_ i$</span> — that
+    is, the smallest prime number <span class="tex2jax_process">$p$</span> such that <b class="bfseries">both
+    <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$x_ i + p$</span> are prime</b>!</p>
+<p>Unfortunately, there are too many people, and you don’t want
+    to spend your time answering such trivial questions. Instead,
+    you decide to write a program to answer all of their
+    questions!</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$q$</span>, denoting the number of people
+    (<span class="tex2jax_process">$1 \leq q \leq 100$</span>).</p>
+<p>The next <span class="tex2jax_process">$q$</span> lines each
+    contain an integer <span class="tex2jax_process">$x_ i$</span>,
+    denoting the favorite number of the <span class="tex2jax_process">$i$</span>-th person (<span class="tex2jax_process">$1 \leq x_ i \leq 10^{18}$</span>).</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$q$</span> lines, where
+    the <span class="tex2jax_process">$i$</span>-th line contains
+    the <em>primmest prime</em> <span class="tex2jax_process">$p$</span> with respect to <span class="tex2jax_process">$x_ i$</span>. If there is no such prime
+    <span class="tex2jax_process">$p$</span> where both
+    <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$x_ i + p$</span> are primes, output
+    <span class="tex2jax_process">$-1$</span> instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+1
+2
+3
+4
+5
+3233
+4200
+1000000000
+969268337140823504
+1000000000000000000
+</pre>
+</td>
+<td>
+<pre>2
+3
+2
+3
+2
+-1
+11
+7
+2837
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

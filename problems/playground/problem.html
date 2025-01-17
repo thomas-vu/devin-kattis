@@ -1,0 +1,56 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/playground/file/statement/en/img-0001.png" class="illustration" src="/problems/playground/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>George has <span class="tex2jax_process">$K \le 20$</span>
+    steel wires shaped in the form of half-circles, with radii
+    <span class="tex2jax_process">$a_{1}, a_{2}, ...,
+    a_{K}$</span>. They can be soldered (connected) at the ends, in
+    any angle. Is it possible for George to make a closed shape out
+    of these wires? He does not have to use all the wires. The
+    wires can be combined at any angle, but may not intersect.
+    Beware of floating point errors.</p>
+<h2>Input</h2>
+<p>Each data set consists of a number <span class="tex2jax_process">$0 &lt; K \le 20$</span> on a line by itself,
+    followed by a line of <span class="tex2jax_process">$K$</span>
+    space-separated numbers <span class="tex2jax_process">$a_
+    i$</span>. Each number is in the range <span class="tex2jax_process">$0 &lt; a_ i &lt; 10^7$</span>, and has at
+    most 3 digits after the decimal point.</p>
+<p>The input will be terminated by a zero on a line by
+    itself.</p>
+<h2>Output</h2>
+<p>For each test case, there should be one word on a line by
+    itself; <tt class="ttfamily">"YES"</tt> if it is possible to
+    make a simple connected figure out of the given arcs, and
+    <tt class="ttfamily">"NO"</tt> if it isn’t.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+4.000
+2
+1.000 1.000
+3
+1.455 2.958 4.424
+7
+1.230 2.577 3.411 2.968 5.301 4.398 6.777
+0
+</pre>
+</td>
+<td>
+<pre>
+NO
+YES
+NO
+YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

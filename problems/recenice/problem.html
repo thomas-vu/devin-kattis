@@ -1,0 +1,168 @@
+<div class="problembody">
+<p>Once upon a time in a land far far away, inhabited only by
+    math students, Iva and Vedran were discussing self-explanatory
+    sentences. A part of these sentences is exactly <em>one
+    number</em> and it is <em>equal to the total number of letters
+    in the sentence</em>. Some examples are: “This sentence has
+    thirtyone letters.”, “Blah blah seventeen”.</p>
+<p>Little Jurica overheard his friends’ conversation and
+    decided to impress them with the amount of self-explanatory
+    sentences he knows by heart. He rushed back home and wrote a
+    programme which will, given a sentence, tell him the minimum
+    number he can put inside so that the sentence is valid.
+    Unfortunately, his computer broke and now he needs your help.
+    Write a programme to help Jurica!</p>
+<p>The form of the sentence is: <span class="tex2jax_process">$\mathit{word}_1 \mathit{word}_2
+    \mathit{word}_3 \ldots \$ \mathit{word}_{n-1} \mathit{word}_
+    n$</span>. The character $ represents the place where the
+    number should be put in. For example, the form of the sentence
+    “this sentence has thirtyone letters” would be “this sentence
+    has $ letters”.</p>
+<p>The rules that apply to writing numbers are the
+    following:</p>
+<ul class="itemize">
+<li>
+<p>numbers from 1 to 10 are written “one”, “two”, “three”,
+        “four”, “five”, “six”, “seven”, “eight”, “nine”, “ten”,
+        respectively</p>
+</li>
+<li>
+<p>numbers from 11 to 19 are written “eleven”, “twelve”,
+        “thirteen”, “fourteen”, “fifteen”, “sixteen”, “seventeen”,
+        “eighteen”, “nineteen”</p>
+</li>
+<li>
+<p>the remaining double digit numbers are written in a way
+        that we name the tens’ digit and add to it the name of the
+        one digit remaining when we remove the tens’ digit.
+        Specially, if by removing the tens’ digit we remain with
+        zero, we add nothing to it</p>
+</li>
+<li>
+<p>the tens’ digits (respectively from 2 to 9) are named
+        the following: “twenty”, “thirty”, “forty”, “fifty”,
+        “sixty”, “seventy”, “eighty”, “ninety”</p>
+</li>
+<li>
+<p>three digit numbers are written in a way that we name
+        the hundreds’ digit number and add to it the number of the
+        double digit number remaining. Specially, if by removing
+        the hundreds’ digit we remain with zero, we add nothing to
+        it</p>
+</li>
+<li>
+<p>the hundreds’ digits (respectively from 1 to 9) are
+        named the following: “onehundred”, “twohundred”,
+        “threehundred”, “fourhundred”, “fivehundred”, “sixhundred”,
+        “sevenhundred”, “eighthundred”, “ninehundred”</p>
+</li>
+<li>
+<p>the rules that apply for numbers with more than three
+        digits <em>are not relevant</em> because the input data
+        will always be such that <em>the output is less than a
+        thousand</em></p>
+</li>
+</ul>
+<p>Examples of naming some numbers:</p>
+<ul class="itemize">
+<li>
+<p>68 = “sixty” + “eight” = “sixtyeight”</p>
+</li>
+<li>
+<p>319 = “threehundred” + “nineteen” =
+        “threehundrednineteen”</p>
+</li>
+<li>
+<p>530 = “fivehundred” + “thirty” = “fivehundredthirty”</p>
+</li>
+<li>
+<p>971 = “ninehundred” + “seventy” + “one” =
+        “ninehundredseventyone”</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 20$</span>), the number of words in the sentence.
+    Each of the following <span class="tex2jax_process">$N$</span>
+    lines contains a word not longer than 50 lowercase letters of
+    the English alphabet or the character $ (none of the words will
+    be the name of a number). The character $ will appear exactly
+    once.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    sentence. The numbers are named as mentioned before, even if
+    the sentence sounds gramatically incorrect. The input data will
+    be such that a solution will always exist and is less than
+    1000.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+this
+sentence
+has
+$
+letters
+</pre>
+</td>
+<td>
+<pre>
+this sentence has thirtyone letters 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+$
+is
+the
+number
+of
+letters
+here
+</pre>
+</td>
+<td>
+<pre>
+thirty is the number of letters here 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+the
+letters
+are
+$
+potato
+</pre>
+</td>
+<td>
+<pre>
+the letters are twentynine potato 
+</pre>
+</td>
+</tr>
+</table>
+</div>

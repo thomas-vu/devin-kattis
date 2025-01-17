@@ -1,0 +1,137 @@
+<div class="problembody">
+<div class="illustration" style="width:37.00%">
+<img alt="/problems/riddleofthesphinx/file/statement/en/img-0001.jpg" class="illustration" src="/problems/riddleofthesphinx/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Oedipus and the Sphinx by Gustave Moreau, 1864, public
+        domain
+      </div>
+</div>One of the most remarkable landmarks in Egypt is the
+    Great Sphinx of Giza, a statue depicting a mythical creature
+    with the head of a human, the body of a lion, and the wings of
+    an eagle. Sphinxes were regarded as guardians in Egyptian and
+    Greek mythologies. Probably the most famous sphinx is the one
+    who guarded the Greek city of Thebes. According to myths, when
+    Oedipus tried to enter the city, the sphinx gave him the
+    following riddle: “Which creature has one voice, but has four
+    feet in the morning, two feet in the afternoon, and three feet
+    at night?” As you might have heard, Oedipus correctly answered,
+    “Man — who crawls on all fours as a baby, then walks on two
+    feet as an adult, and then uses a walking stick in old age.”
+    <p>In this problem, you meet a different sphinx who gives you a
+    somewhat reversed riddle: “How many legs do an axex, a
+    basilisk, and a centaur have?” While you recognize these as
+    creatures from Egyptian and Greek mythology, you have no clue
+    how many legs each has (except that it is a nonnegative
+    integer). The sphinx sternly instructs you to not touch
+    anything so you are unable to search for the answer on your
+    phone.</p>
+<p>However, the sphinx allows you to ask her five questions. In
+    each question you can ask the sphinx how many legs some number
+    of these creatures have in total. For instance, you could ask,
+    “How many legs do three basilisks and one axex have in total?”
+    or “How many legs do five centaurs have?” Seems easy enough,
+    you think, but then you remember that sphinxes are tricky
+    creatures: one of the sphinx’s five answers might be an
+    outright lie, and you do not know which one.</p>
+<p>Write a program to talk to the sphinx, ask the five
+    questions, and solve the riddle.</p>
+<h2>Interaction</h2>
+<p>There are exactly five rounds of questions. In each question
+    round, you must first write a line containing three
+    space-separated integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    \le a, b, c \le 10$</span>), representing the question “How
+    many legs do <span class="tex2jax_process">$a$</span> axex,
+    <span class="tex2jax_process">$b$</span> basilisks, and
+    <span class="tex2jax_process">$c$</span> centaurs have in
+    total?” After the question is asked, an input line containing a
+    single integer <span class="tex2jax_process">$r$</span>
+    (<span class="tex2jax_process">$0 \le r \le 10^5$</span>) is
+    available on standard input, giving the sphinx’s answer to your
+    question.</p>
+<p>After the five rounds of questions, output a line containing
+    three space-separated nonnegative integers <span class="tex2jax_process">$\ell _ a$</span>, <span class="tex2jax_process">$\ell _ b$</span>, and <span class="tex2jax_process">$\ell _ c$</span>, indicating the number of
+    legs of an axex, a basilisk, and a centaur, respectively.</p>
+<p><br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre> 1 1 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 12</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 1 1 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 13</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 5 0 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 24</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 1 0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 4</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 1 1 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 8</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 4 4 4</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre> 4 4 4</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 2023</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 1 0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 0 1 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 42</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 0 0 1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 2024</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 0 0 0</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> 0 42 2024</pre>
+</div>
+</div>

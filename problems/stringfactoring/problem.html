@@ -1,0 +1,135 @@
+<div class="problembody">
+<p>Spotting patterns in seemingly random strings is a problem
+    with many applications. E.g., in our efforts to understand the
+    genome we investigate the structure of DNA strings. In data
+    compression we are interested in finding repetitions, so the
+    data can be represented more efficiently with pointers. Another
+    plausible example arises from the area of artificial
+    intelligence, as how to interpret information given to you in a
+    language you do not know. The natural thing to do in order to
+    decode the information message would be to look for repetitions
+    in it. So if the SETI project (the Search for Extra Terrestrial
+    Intelligence) ever get a signal in the H21-spectra, we need to
+    know how to decompose it.</p>
+<p>One way of capturing the redundancy of a string is to find
+    its factoring. If two or more identical substrings <span class="tex2jax_process">$A$</span> follow each other in a string
+    <span class="tex2jax_process">$S$</span>, we can represent this
+    aprt of <span class="tex2jax_process">$S$</span> as the
+    substring <span class="tex2jax_process">$A$</span>, enclosed by
+    parentheses, raised to the power of the number of repetitions.
+    E.g., the string <span class="tex2jax_process">$DOODOO$</span>
+    can be factored as <span class="tex2jax_process">$(DOO)^2$</span>, but also as <span class="tex2jax_process">$(D(O)^2)^2$</span>. Naturally, the latter
+    factoring is considered better since it cannot be factored any
+    further. We say that a factoring is irreducible if it does not
+    contain any consecutive repetition of a substring. A string may
+    have several irreducible factorings, as seen by the example
+    string <span class="tex2jax_process">$POPPOP$</span>. It can be
+    factored as <span class="tex2jax_process">$(POP)^2$</span>, as
+    well as <span class="tex2jax_process">$PO(P)^2OP$</span>. The
+    first factoring has a shorter representation and motivates the
+    following definition. The <em>weigh</em> of a factoring equals
+    the number of characters in it, <em>excluding</em> the
+    parentheses and the exponents. Thus the weight of <span class="tex2jax_process">$(POP)^2$</span> is <span class="tex2jax_process">$3$</span>, whereas <span class="tex2jax_process">$PO(P)^2OP$</span> has weight <span class="tex2jax_process">$5$</span>. A <em>maximal</em> facotring is a
+    factoring with the smallest possible weight. It should be clear
+    that a maximal factoring is always an irreducible one, but
+    there may still be several maximal factorings. E.g., the
+    string <span class="tex2jax_process">$ABABA$</span> has two
+    maximal factorings <span class="tex2jax_process">$(AB)^2A$</span> and <span class="tex2jax_process">$A(BA)^2$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of a single line, containing a string of
+    at least one, but at most <span class="tex2jax_process">$200$</span> characters from the capital
+    alphabet A-Z.</p>
+<h2>Output</h2>
+<p>Output the weight of a maximal factoring of the input
+    string.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+PRATTATTATTIC
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+GGGGGGGGG
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+PRIME
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+BABBABABBABBA
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+ARPARPARPARPAR
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>Dominick Cobb and Arthur are “extractors" who perform
+    corporate espionage. Using experimental military technology
+    that gives them access to shared dream worlds, they infiltrate
+    their targets’ subconscious to extract valuable information.
+    Cobb and his entourage are contacted by a mysterious Japanese
+    syndicate and given a seemingly impossible task: instead of
+    extracting information, do the opposite – plant a new idea in
+    the target’s mind.<br/></p>
+<p>Cobb just figured out how to calculate the slowness of time
+    in each dream level, but he is still missing a vital piece of
+    the plan – the architecture. For this challenging mission he
+    has hired the brilliant young architect Ariadne to design a
+    dream space, complete with all the aesthetic and tactile
+    details. Cobb’s target will be brought into that dream space,
+    where they will fill it with details from their own
+    subconscious and memories.<br/></p>
+<p>As extractors go into deeper dream levels, the perception of
+    time slows down. This means subjects will be able to explore
+    exponentially more space. Since dreams can go infinitely deep
+    (onwards to Limbo), the architecture of a dream should be
+    infinite in area. The master layout is denoted by a
+    two-dimensional grid that starts at row <span class="tex2jax_process">$0$</span>, column <span class="tex2jax_process">$0$</span>, and extends infinitely downwards
+    and to the right. Ariadne cannot simply draw a map of this
+    space (since it is infinite), so she must come up with a
+    program that "generates" the dream space to extend as large as
+    the team needs to go deeper. She has an infinite number of
+    building blocks, numbered <span class="tex2jax_process">$0, 1,
+    2, 3, 4, \dots $</span>, which must be used in that
+    order.<br/></p>
+<p>In dream level <span class="tex2jax_process">$0$</span>
+    (reality), the dream space consists of the single block
+    <span class="tex2jax_process">$0$</span>. With each deeper
+    dream level, the area of the space doubles. To prevent the
+    dream space from implosion due to growing too narrowly in a
+    single direction, Ariadne has designed the space to double in
+    <i class="itshape">alternating directions</i>, with new blocks
+    filling in the space sequentially based on the direction of
+    doubling. For example, the first few levels of the dream map
+    are depicted as follows:<br/></p>
+<center>
+<div class="minipage" style="width:227.622047244pt">
+<pre>
+    0          0 1         0 1       0 1 4 6
+                           2 3       2 3 5 7
+
+(Reality)   (Level 1)   (Level 2)   (Level 3)
+
+
+   0  1  4  6         0  1  4  6 16 20 24 28
+   2  3  5  7         2  3  5  7 17 21 25 29
+   8  9 10 11         8  9 10 11 18 22 26 30
+  12 13 14 15        12 13 14 15 19 23 27 31
+
+   (Level 4)                (Level 5)
+
+</pre>
+</div>
+</center>
+<p>Ariadne’s program must be able to generate any part of the
+    map at will. Given only the row and column coordinates for a
+    particular location in the dream space, can you determine the
+    number of the building block that will be used?</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 100$</span>), the number of
+    test cases.<br/>
+<span class="tex2jax_process">$T$</span> lines follow, each of
+    which is a test case consisting of two space-separated
+    integers, <span class="tex2jax_process">$R$</span> and
+    <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$0 \leq R, C \leq 10^{9}$</span>), specifying
+    a particular row and column in the dream-space.<br/></p>
+<h2>Output</h2>
+<p>For each test case, print, on a separate line, the number of
+    the building block at coordinates <span class="tex2jax_process">$(R, C)$</span>.<br/>
+    Note: the answer can be large, and may not necessarily fit in a
+    32-bit integer.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 0
+1 0
+2 4
+</pre>
+</td>
+<td>
+<pre>0
+2
+18
+</pre>
+</td>
+</tr>
+</table>
+</div>

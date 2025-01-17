@@ -1,0 +1,108 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/keypad/file/statement/en/img-0001.png" class="illustration" src="/problems/keypad/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>A matrix keypad consists of an <span class="tex2jax_process">$r \times c$</span> grid of buttons.
+    Additionally, there is one wire for each row and one wire for
+    each column. These wires are exposed through pins so the keypad
+    can be connected to a larger circuit.
+
+    <p>When a button at row <span class="tex2jax_process">$i$</span> and column <span class="tex2jax_process">$j$</span> is pressed, the wire for row
+    <span class="tex2jax_process">$i$</span> and the wire for
+    column <span class="tex2jax_process">$j$</span> will carry an
+    electrical current. If just a single button is pressed, it can
+    be identified by sequentially checking if a current can be
+    detected at each row wire and at each column wire.</p>
+<p>Unfortunately, when multiple buttons are pressed at the same
+    time, it may not be possible to uniquely identify which buttons
+    are pressed. The only information you can have is this: for
+    each wire, whether there is at least one button along that wire
+    being pressed.</p>
+<p>The software you are using to detect which buttons are
+    pressed was poorly implemented. After probing the keypad, it
+    stores the information in an <span class="tex2jax_process">$r
+    \times c$</span> grid of <tt class="ttfamily">0/1</tt> values.
+    The value stored in row <span class="tex2jax_process">$i$</span> and column <span class="tex2jax_process">$j$</span> of this grid is <tt class="ttfamily">1</tt> if there is at least one button in row
+    <span class="tex2jax_process">$i$</span> and at least one
+    (possibly different) button in column <span class="tex2jax_process">$j$</span> that is pressed. Otherwise, the
+    value that is stored at this position is <tt class="ttfamily">0</tt>.</p>
+<p>Your job is to interpret as much information from such a
+    grid as possible. Determine which buttons are definitely
+    pressed and which buttons are definitely not pressed.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single positive integer
+    <span class="tex2jax_process">$T \leq 200$</span> indicating
+    the number of test cases. The first line of each test case
+    contains two integers <span class="tex2jax_process">$r$</span>
+    and <span class="tex2jax_process">$c$</span> where <span class="tex2jax_process">$1 \leq r \leq 10$</span> and <span class="tex2jax_process">$1 \leq c \leq 10$</span>. This indicates
+    that the keypad is an <span class="tex2jax_process">$r \times
+    c$</span> grid of buttons.</p>
+<p>The remaining <span class="tex2jax_process">$r$</span> lines
+    of a test case describe the grid. The <span class="tex2jax_process">$i$</span>th row contains a string of
+    consecutive <tt class="ttfamily">0</tt> and <tt class="ttfamily">1</tt> characters. These will not be separated by
+    spaces.</p>
+<h2>Output</h2>
+<p>For each test case, output the following. If there is no
+    combination of button presses on the keypad that would produce
+    this <tt class="ttfamily">0</tt>/<tt class="ttfamily">1</tt>
+    grid then simply output a line containing the word <tt class="ttfamily">impossible</tt></p>
+<p>Otherwise, you should output <span class="tex2jax_process">$r$</span> lines, each containing a string of
+    length <span class="tex2jax_process">$c$</span>. This should
+    describe a grid where the character at row <span class="tex2jax_process">$i$</span> and column <span class="tex2jax_process">$j$</span> is:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">N</tt> if no button combination
+        that produces the input grid has the <span class="tex2jax_process">$j$</span>th button on row <span class="tex2jax_process">$i$</span> being pressed.</p>
+</li>
+<li>
+<p><tt class="ttfamily">P</tt> if all button combinations
+        that produce the input grid have the <span class="tex2jax_process">$j$</span>th button on row <span class="tex2jax_process">$i$</span> being pressed.</p>
+</li>
+<li>
+<p><tt class="ttfamily">I</tt> if some, but not all, button
+        combinations that produce the input grid have the
+        <span class="tex2jax_process">$j$</span>th button on row
+        <span class="tex2jax_process">$i$</span> being pressed.</p>
+</li>
+</ul>
+<p>Finally, the last line of each test case should be followed
+    by the string <tt>----------</tt> (10 dashes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+4 3
+110
+000
+110
+000
+2 3
+101
+000
+2 2
+10
+01
+</pre>
+</td>
+<td>
+<pre>
+IIN
+NNN
+IIN
+NNN
+----------
+PNP
+NNN
+----------
+impossible
+----------
+</pre>
+</td>
+</tr>
+</table>
+</div>

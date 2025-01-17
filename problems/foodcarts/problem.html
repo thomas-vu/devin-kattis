@@ -1,0 +1,109 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/foodcarts/file/statement/en/img-0001.jpg" class="illustration" src="/problems/foodcarts/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo from <a href="https://commons.wikimedia.org/wiki/File:Amtrak_Regional_viewed_from_NJ_Transit_train.jpg">
+        Wikimedia</a>
+</div>
+</div>
+<p>Peter is in charge of food service on a passenger train. The
+    train has <span class="tex2jax_process">$n$</span> cars ordered
+    sequentially starting from the locomotive. The <span class="tex2jax_process">$i$</span>-th car has <span class="tex2jax_process">$p_ i$</span> passengers. There are
+    <span class="tex2jax_process">$m$</span> food carts Peter may
+    put into service. Each food cart serves a unique type of food.
+    The <span class="tex2jax_process">$j$</span>-th food cart can
+    move between the <span class="tex2jax_process">$l_ j$</span>-th
+    car and the <span class="tex2jax_process">$r_ j$</span>-th car
+    (both inclusive) and serve the passengers in these cars.</p>
+<p>The passengers on the train are not only hungry, but also
+    adventurous: as long as a food cart is in service, they would
+    love to try it! A passenger will be <i class="it">happy</i> if
+    he/she sits in a car that is served by all the food carts that
+    are in service. Peter would like to design service plans that
+    run one or more of the <span class="tex2jax_process">$m$</span>
+    food carts so that at least <span class="tex2jax_process">$k$</span> of the passengers on the train are
+    happy.</p>
+<p>Peter wants to count the number of different service plans
+    he may choose from (modulo <span class="tex2jax_process">$10^9
+    + 7$</span>). Two service plans are different if one food cart
+    is put into service in one plan but not in the other plan.</p>
+<h2>Input</h2>
+<p>The first line has three integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq n, m \leq 2 \cdot 10^5, 1 \leq k \leq 10^{14}$</span>).
+    The next line has <span class="tex2jax_process">$n$</span>
+    integers. The <span class="tex2jax_process">$i$</span>-th
+    integer is <span class="tex2jax_process">$p_ i$</span>
+    (<span class="tex2jax_process">$1 \leq p_ i \leq 10^9
+    $</span>), the number of passengers in the <span class="tex2jax_process">$i$</span>-th car. Each of the next
+    <span class="tex2jax_process">$m$</span> lines describes a food
+    cart. The <span class="tex2jax_process">$j$</span>-th of these
+    lines has two integers <span class="tex2jax_process">$l_
+    j$</span> and <span class="tex2jax_process">$r_ j$</span>
+    (<span class="tex2jax_process">$1 \leq l_ j \leq r_ j \leq
+    n$</span>), giving the service range of the <span class="tex2jax_process">$j$</span>-th food cart.</p>
+<h2>Output</h2>
+<p>Output the number of different service plans, modulo
+    <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 3
+1 2 3 4
+1 2
+2 3
+3 4
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4 6
+1 2 3 4 5
+1 4
+2 3
+3 5
+4 5
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 1
+1 2 3 4
+1 4
+1 4
+1 4
+1 4
+</pre>
+</td>
+<td>
+<pre>15
+</pre>
+</td>
+</tr>
+</table>
+</div>

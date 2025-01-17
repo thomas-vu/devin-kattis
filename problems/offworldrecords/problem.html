@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/offworldrecords/file/statement/en/img-0001.jpg" class="illustration" src="/problems/offworldrecords/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.istockphoto.com/vector/print-astronaut-on-skateboard-on-the-moon-gm1225216662-360557806">
+        D-V-A (iStock)</a>; Used under license
+      </div>
+</div>
+<p>As humans work toward establishing a permanent presence on
+    other planets and their moons, as well as on our own moon,
+    various sporting bodies are under pressure to rethink the
+    notion of a <em>world record</em>. Traditionally an athlete on
+    Earth sets a new world record in a particular sport by
+    surpassing the previous world record in an official event. For
+    example, in the high jump, a new world record is set by jumping
+    higher than the previous world record height. However, clearly
+    this becomes less meaningful if an athlete jumps higher simply
+    by competing in a high jump event on a planet or moon whose
+    gravity is lower than Earth’s. In light of such considerations,
+    the newly formed Intergalactic Athletics Federation (IAF) has
+    begun debating the criteria for setting an <em>off-world
+    record</em> in each sport it oversees. For the high jump, the
+    IAF has decided that an athlete sets a new off-world record if
+    the height of the athlete’s jump (in an official event) is
+    greater than the <em>sum</em> of the current off-world record
+    and the previous off-world record.</p>
+<p>Given all the high jump heights certified by the IAF during
+    a competition year<a class="footnote" href="#a0000000006"><sup class="footnotemark">1</sup></a> in the
+    chronological order in which they occurred, determine how many
+    of these high jump heights set a new off-world record.</p>
+<p>Note that the instant a new off-world record is set, it
+    becomes the current off-world record, and the off-world record
+    that was just superseded becomes the previous off-world
+    record.</p>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers: <span class="tex2jax_process">$n$</span>, the number
+    of high jump heights certified by the IAF during a competition
+    year <span class="tex2jax_process">$(1 \leq n \leq
+    100)$</span>, <span class="tex2jax_process">$c$</span>, the
+    current off-world record height (i.e., the off-world record
+    immediately prior to start of the competition year), and
+    <span class="tex2jax_process">$p$</span>, the previous
+    off-world record height (i.e., the off-world record immediately
+    before the current off-world record).<a class="footnote" href="#a0000000007"><sup class="footnotemark">2</sup></a> This is
+    followed by <span class="tex2jax_process">$n$</span> lines,
+    each of which contains a high jump height certified by the IAF
+    during the competition year.<a class="footnote" href="#a0000000008"><sup class="footnotemark">3</sup></a> These heights
+    are in the chronological order in which they occurred, all
+    height values lie in the interval <span class="tex2jax_process">$[1, 10^9]$</span>, and <span class="tex2jax_process">$c &gt; p$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of new off-world records
+    set during the competition year.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10 5
+20
+12
+50
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 200 100
+300
+3000
+30000
+300000
+3000000
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

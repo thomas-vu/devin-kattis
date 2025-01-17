@@ -1,0 +1,144 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/lemonadetrade/file/statement/en/img-0001.jpg" class="illustration" src="/problems/lemonadetrade/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by David Wargert via Flickr.
+      </div>
+</div>
+<p>The lunch break just started! Your mother gave you one litre
+    of pink lemonade. You do not like pink lemonade and want blue
+    lemonade instead. Fortunately for you the other children in
+    class are willing to trade with you.</p>
+<p>Each of them is willing to offer you any quantity of the
+    virtually infinite amount of lemonade they got from their
+    mother, in exchange for their favourite lemonade, according to
+    some <em>exchange rate</em>. The other children are sitting in
+    a long row in the class room and you will walk along the row,
+    passing each child only once. You are not allowed to walk back!
+    Of course, you want to maximise the amount of blue lemonade you
+    end up with. In case you can obtain more than <span class="tex2jax_process">$10$</span> litres of blue lemonade, this is
+    more than you will need, and you will throw away any excess
+    (and keep the <span class="tex2jax_process">$10$</span>
+    litres).</p>
+<p>Fortunately, you know in advance what everybody is offering
+    for trade. Your task is to write a program to find the maximum
+    amount of blue lemonade that you can obtain.</p>
+<h2>Input</h2>
+<p>The input consists of the following:</p>
+<ul class="itemize">
+<li>
+<p>One line containing a single integer <span class="tex2jax_process">$0\leq N \leq 10^5$</span>, the number of
+        children in the class room, excluding yourself;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N$</span> lines, each
+        containing two strings <span class="tex2jax_process">$O,
+        W$</span> and a floating point number <span class="tex2jax_process">$0.5 &lt; R &lt; 2$</span>, the name of
+        the lemonade that is offered, the name of the lemonade that
+        is wanted, and the exchange rate: for every litre of
+        lemonade <span class="tex2jax_process">$W$</span> that you
+        trade you get <span class="tex2jax_process">$R$</span>
+        litres of lemonade <span class="tex2jax_process">$O$</span>
+        in return. Exchange rates are given with at most
+        <span class="tex2jax_process">$7$</span> digits after the
+        decimal point.</p>
+</li>
+</ul>
+<p>All strings are guaranteed to have at most <span class="tex2jax_process">$10$</span> alphanumeric characters.</p>
+<h2>Output</h2>
+<p>Output a single line containing a single floating point
+    number <span class="tex2jax_process">$M$</span>, the maximum
+    amount (in litres) of blue lemonade that you can obtain. In
+    case you could obtain more than <span class="tex2jax_process">$10$</span> litres, <span class="tex2jax_process">$M$</span> is considered to be <span class="tex2jax_process">$10$</span>. You are required to output
+    <span class="tex2jax_process">$M$</span> with absolute
+    precision <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+blue pink 1.0
+red pink 1.5
+blue red 1.0
+</pre>
+</td>
+<td>
+<pre>
+1.500000000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+blue red 1.0
+red pink 1.5
+</pre>
+</td>
+<td>
+<pre>
+0.000000000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+orange pink 1.9
+yellow orange 1.9
+green yellow 1.9
+blue green 1.9
+</pre>
+</td>
+<td>
+<pre>
+10.000000000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+red pink 1.9
+orange red 1.9
+yellow orange 1.9
+green yellow 1.9
+indigo green 0.6
+violet indigo 0.6
+purple violet 0.6
+blue purple 0.6
+</pre>
+</td>
+<td>
+<pre>
+1.688960160000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

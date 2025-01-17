@@ -1,0 +1,148 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/pigstep/file/statement/en/img-0001.png" class="illustration" src="/problems/pigstep/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Steve and Alex have a challenge for you. They are each
+    thinking of an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$500$</span>, and your task is to guess their
+    numbers. If you can guess both numbers in <span class="tex2jax_process">$10$</span> guesses, they’ll give you a rare
+    prize: a Pigstep music disc. Are you up to the
+    challenge?<br/></p>
+<p>To make it easier for you, Steve and Alex are letting you
+    give an interval for each guess. They will then tell you if
+    their numbers are within the intervals you guess.</p>
+<h2>Interaction</h2>
+<p>This is an interactive problem. You will interact with Steve
+    and Alex using standard input and output.<br/></p>
+<p>To make a guess of an (inclusive) interval <span class="tex2jax_process">$[a,b]$</span>, write a line to standard
+    output in the following format:</p>
+<ul class="itemize">
+<li>
+<p>“<tt class="ttfamily">ASK a b</tt>” (where <span class="tex2jax_process">$1 \leq a \leq b \leq 500$</span> are the
+        bounds of the interval)</p>
+</li>
+</ul>
+<p>Both Steve and Alex will then tell you if their numbers were
+    within the interval, via a single line of input consisting of
+    two space-separated strings. Each string will be either
+    “<tt class="ttfamily">yes</tt>” or “<tt class="ttfamily">no</tt>”, representing whether or not Steve and
+    Alex’s numbers were in your interval, respectively.<br/></p>
+<p>You may ask at most <span class="tex2jax_process">$10$</span> times, after which you must guess
+    their numbers. When you are ready to guess, write a line to
+    standard output in the format:</p>
+<ul class="itemize">
+<li>
+<p>“<tt class="ttfamily">GUESS s a</tt>” (where
+        <span class="tex2jax_process">$1 \leq s, a \leq 500$</span>
+        are your guesses for Steve and Alex’s numbers,
+        respectively)</p>
+</li>
+</ul>
+<p>Your program should terminate after making your
+    guess.<br/></p>
+<p>After every ask/guess, make sure to output a newline
+    character and flush the output stream. To do this, use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> in C;</p>
+</li>
+<li>
+<p><tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre>ASK 10 20</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes no</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 15 25</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>no yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 14 24</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 14 23</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes no</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>GUESS 14 24</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre>ASK 50 100</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>no yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 50 150</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 90 110</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 91 110</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 92 110</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 93 110</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>yes no</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ASK 92 109</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>no yes</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>GUESS 110 92</pre>
+</div>
+</div>

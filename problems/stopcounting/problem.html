@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/stopcounting/file/statement/en/img-0001.jpg" class="illustration" src="/problems/stopcounting/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.pexels.com/photo/person-playing-poker-1871508/">
+        Drew Rae</a>
+</div>
+</div>
+<p>The Martingale casino is creating new games to lure in new
+    gamblers who tire of the standard fare. Their latest invention
+    is a fast-paced game of chance called <em>Stop Counting!</em>,
+    where a single customer plays with a dealer who has a deck of
+    cards. Each card has some integer value.</p>
+<p>One by one, the dealer reveals the cards in the deck in
+    order, and keeps track of the sum of the played cards and the
+    number of cards shown. At some point before a card is dealt,
+    the player can call “Stop Counting!” After this, the dealer
+    continues displaying cards in order, but does not include them
+    in the running sums. At some point after calling “Stop
+    Counting!”, and just before another card is dealt, the player
+    can also call “Start Counting!” and the dealer then includes
+    subsequent cards in the totals. The player can only call “Stop
+    Counting!” and “Start Counting!” at most once each, and they
+    must call “Stop Counting!” before they can call “Start
+    Counting!”. A card is “counted” if it is dealt before the
+    player calls “Stop Counting!” or is dealt after the player
+    calls “Start Counting!”</p>
+<p>The payout of the game is then the average value of the
+    counted cards. That is, it is the sum of the counted cards
+    divided by the number of counted cards. If there are no counted
+    cards, the payout is <span class="tex2jax_process">$0$</span>.</p>
+<p>You have an ‘in’ with the dealer, and you know the full deck
+    in order ahead of time. What is the maximum payout you can
+    achieve?</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$1 \leq N \leq 1\, 000\,
+    000$</span>, the number of cards in the deck.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> space-separated integers, the
+    values on the cards. The value of each card is in the range
+    <span class="tex2jax_process">$[-10^{9}, 10^{9}]$</span>. The
+    cards are dealt in the same order they are given in the
+    input.</p>
+<h2>Output</h2>
+<p>Output the largest attainable payout. The answer is
+    considered correct if the absolute error is less than
+    <span class="tex2jax_process">$10^{-6}$</span>, or the relative
+    error is less than <span class="tex2jax_process">$10^{-9}$</span>.</p>
+<h2>Sample Explanation</h2>
+<p>In the first sample, by calling “Stop Counting!” before the
+    <span class="tex2jax_process">$-10$</span> and “Start
+    Counting!” before the final <span class="tex2jax_process">$10$</span>, we can achieve an average of
+    <span class="tex2jax_process">$10.0$</span> with the cards that
+    are counted.</p>
+<p>In the second sample, all values are negative, so the best
+    strategy is to call “Stop Counting!” before the first card is
+    dealt and call “Start Counting!” after the last card is dealt.
+    Since no cards were counted, the average of the counted cards
+    is <span class="tex2jax_process">$0.0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10 10 -10 -4 10
+</pre>
+</td>
+<td>
+<pre>10.000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+-3 -1 -4 -1
+</pre>
+</td>
+<td>
+<pre>0.000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

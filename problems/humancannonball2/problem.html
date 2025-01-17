@@ -1,0 +1,89 @@
+<div class="problembody">
+<div class="illustration" style="width:60.00%">
+<img alt="/problems/humancannonball2/file/statement/en/img-0001.png" class="illustration" src="/problems/humancannonball2/file/statement/en/img-0001.png"/>
+<div class="description">
+        Source: picgifs.com
+      </div>
+</div>
+<p>The amazing human cannonball show is coming to town, and you
+    are asked to double-check their calculations to make sure no
+    one gets injured! The human cannonball is fired from a cannon
+    that is a distance <span class="tex2jax_process">$x_1$</span>
+    from a vertical wall with a hole through which the cannonball
+    must fly. The lower edge of the hole is at height <span class="tex2jax_process">$h_1$</span> and the upper edge is at height
+    <span class="tex2jax_process">$h_2$</span>. The initial
+    velocity of the cannonball is given as <span class="tex2jax_process">$v_0$</span> and you also know the angle
+    <span class="tex2jax_process">$\theta $</span> of the cannon
+    relative to the ground.</p>
+<p>Thanks to their innovative suits, human cannonballs can fly
+    without air resistance, and thus their trajectory can be
+    modeled using the following formulas:</p><span class="tex2jax_process">\begin{eqnarray*} x(t) &amp; = &amp; v_0 t
+    \cos {\theta } \\ y(t) &amp; = &amp; v_0 t \sin {\theta } -
+    \frac{1}{2} g t^2 \end{eqnarray*}</span>
+<p>where <span class="tex2jax_process">$x(t), y(t)$</span>
+    provides the position of a cannon ball at time <span class="tex2jax_process">$t$</span> that is fired from point
+    <span class="tex2jax_process">$(0, 0)$</span>. <span class="tex2jax_process">$g$</span> is the acceleration due to gravity
+    (<span class="tex2jax_process">$g = 9.81\ \text {m}/\text
+    {s}^2$</span>).</p>
+<p>Write a program to determine if the human cannonball can
+    make it safely through the hole in the wall. To pass safely,
+    there has to be a vertical safety margin of <span class="tex2jax_process">$1$</span> m both below and above the point
+    where the ball’s trajectory crosses the centerline of the
+    wall.</p>
+<h2>Input</h2>
+<p>The input will consist of up to <span class="tex2jax_process">$100$</span> test cases. The first line
+    contains an integer <span class="tex2jax_process">$N$</span>,
+    denoting the number of test cases that follow. Each test case
+    has <span class="tex2jax_process">$5$</span> parameters:
+    <span class="tex2jax_process">$v_0 \ \theta \ x_1 \ h_1 \
+    h_2$</span>, separated by spaces. <span class="tex2jax_process">$v_0$</span> (<span class="tex2jax_process">$0 &lt; v_0 \le 200$</span>) represents the
+    ball’s initial velocity in m/s. <span class="tex2jax_process">$\theta $</span> is an angle given in degrees
+    (<span class="tex2jax_process">$0 &lt; \theta &lt; 90$</span>),
+    <span class="tex2jax_process">$x_1$</span> (<span class="tex2jax_process">$0 &lt; x_1 &lt; 1000$</span>) is the
+    distance from the cannon to the wall, <span class="tex2jax_process">$h_1$</span> and <span class="tex2jax_process">$h_2$</span> (<span class="tex2jax_process">$0 &lt; h_1 &lt; h_2 &lt; 1000$</span>) are
+    the heights of the lower and upper edges of the wall. All
+    numbers are floating point numbers.</p>
+<h2>Output</h2>
+<p>If the cannon ball can safely make it through the wall,
+    output “<tt class="ttfamily">Safe</tt>”. Otherwise, output
+    “<tt class="ttfamily">Not Safe</tt>”!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+19 45 20 9 12
+20 45 20 9 12
+25 45 20 9 12
+20 43 20 9 12
+20 47.5 20 9 12
+20 45 17 9 12
+20 45 24 9 12
+20 45 20 10 12
+20 45 20 9 11
+20 45 20 9.0 11.5
+20 45 18.1 9 12
+</pre>
+</td>
+<td>
+<pre>
+Not Safe
+Safe
+Not Safe
+Not Safe
+Not Safe
+Not Safe
+Not Safe
+Not Safe
+Not Safe
+Safe
+Safe
+</pre>
+</td>
+</tr>
+</table>
+</div>

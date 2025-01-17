@@ -1,0 +1,99 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/camels/file/statement/en/img-0001.jpg" class="illustration" src="/problems/camels/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Jaap, Jan and Thijs on camels (in some order). Photo by
+        Tobias Werth, cc by-sa.
+      </div>
+</div>Jaap, Jan, and Thijs are on a trip to the desert after
+    having attended the ACM ICPC World Finals 2015 in Morocco. The
+    trip included a camel ride, and after returning from the ride,
+    their guide invited them to a big camel race in the evening.
+    The camels they rode will also participate and it is customary
+    to bet on the results of the race.
+
+    <p>One of the most interesting bets involves guessing the
+    complete order in which the camels will finish the race. This
+    bet offers the biggest return on your money, since it is also
+    the one that is the hardest to get right.</p>
+<p>Jaap, Jan, and Thijs have already placed their bets, but the
+    race will not start until an hour from now, so they are getting
+    bored. They started wondering how many pairs of camels they
+    have put in the same order. If camel <span class="tex2jax_process">$c$</span> is before camel <span class="tex2jax_process">$d$</span> on Jaap’s, Jan’s and Thijs’ bet,
+    it means that all three of them put <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$d$</span> in the same order. Can you help
+    them to calculate the number of pairs of camels for which this
+    happened?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2\leq n \leq 200\, 000$</span>), the
+        number of camels;</p>
+</li>
+<li>
+<p>one line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$a_1, \ldots , a_
+        n$</span> (<span class="tex2jax_process">$1 \le a_ i \le
+        n$</span> for all <span class="tex2jax_process">$i$</span>), Jaap’s bet. Here
+        <span class="tex2jax_process">$a_1$</span> is the camel in
+        the first position of Jaap’s bet, <span class="tex2jax_process">$a_2$</span> is the camel in the second
+        position, and so on;</p>
+</li>
+<li>
+<p>one line with Jan’s bet, in the same format as Jaap’s
+        bet;</p>
+</li>
+<li>
+<p>one line with Thijs’ bet, in the same format as Jaap’s
+        bet.</p>
+</li>
+</ul>
+<p>The camels are numbered <span class="tex2jax_process">$1,
+    \dots , n$</span>. Each camel appears exactly once in each
+    bet.</p>
+<h2>Output</h2>
+<p>Output the number of pairs of camels that appear in the same
+    order in all <span class="tex2jax_process">$3$</span> bets.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3 2 1
+1 2 3
+1 2 3
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 3 1 4
+2 1 4 3
+2 4 3 1
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,77 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/mysterioustower/file/statement/en/img-0001.png" class="illustration" src="/problems/mysterioustower/file/statement/en/img-0001.png"/>
+<div class="description">
+        The Parakeet King’s tower
+      </div>
+</div>
+<p>The Parakeet King is stacking <span class="tex2jax_process">$N$</span> blocks to make a stable tower.
+    There is only one type of block, and each block can be placed
+    face-up or face-down. In order for the tower to be stable, the
+    tower must satisfy the following property: for every face-up
+    block, there exists a face-down block above it such that the
+    numbers of face-up and face-down blocks between them are equal.
+    Similarly, for every face-down block, there exists a face-up
+    block below it such that the number of face-up and face-down
+    blocks between them are equal. The Parakeet King places the
+    <span class="tex2jax_process">$i$</span>th block from the
+    bottom of the tower face up with probability <span class="tex2jax_process">$p_i$</span> and face down with probability
+    <span class="tex2jax_process">$1-p_i$</span>. After building
+    his tower, he removes the minimum number of blocks from it
+    (possibly from the middle of the tower) to make it stable. Find
+    the expected height of the resulting tower.</p>
+<h2>Input</h2>
+<p>Line <span class="tex2jax_process">$1$</span> of the input
+    contains a single integer <span class="tex2jax_process">$N \:
+    (1 \leq N\leq 1000)$</span>, denoting the number of blocks in
+    the Parakeet King’s Tower. For <span class="tex2jax_process">$i=1,\ldots ,N$</span>, line <span class="tex2jax_process">$i+1$</span> of the input contains a single
+    real number <span class="tex2jax_process">$p_i \: (0\leq
+    p_i\leq 1)$</span>, denoting the probability the Parakeet King
+    places the <span class="tex2jax_process">$i$</span>th block
+    from the bottom of the tower face up. All <span class="tex2jax_process">$p_i$</span>’s have at most eight digits
+    after the decimal point.</p>
+<h2>Output</h2>
+<p>Output one line containing the expected height of the stable
+    tower. Answers within a relative or absolute error of
+    <span class="tex2jax_process">$10^{-6}$</span> will be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0.5
+0.5
+0.5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0.1
+0.2
+0.3
+0.4
+</pre>
+</td>
+<td>
+<pre>0.8168
+</pre>
+</td>
+</tr>
+</table>
+</div>

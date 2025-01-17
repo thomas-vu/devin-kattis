@@ -1,0 +1,68 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/isithalloween/file/statement/en/img-0001.jpg" class="illustration" src="/problems/isithalloween/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Happy Halloween! Author: <a href="https://commons.wikimedia.org/wiki/File:Halloween_Jack-o%27-lantern.jpg">
+        Petar Milošević</a>, cc by-sa
+      </div>
+</div>
+<p>HiQ recently got an assignment from a client to create a
+    clone of the immensely popular website <a href="https://IsItHalloween.com">https://IsItHalloween.com</a>. The
+    website is a very simple one. People will visit the site
+    occasionally to see if it is Halloween. Whenever it is, the
+    website should print out <tt class="ttfamily">yup</tt>,
+    otherwise it should print out <tt class="ttfamily">nope</tt> on
+    the screen.</p>
+<p>Since HiQ is such a popular firm, they don’t have time to
+    complete this assignment right now. Their frontend engineers
+    have already programmed the frontend of the website that prints
+    out <tt class="ttfamily">yup</tt> or <tt class="ttfamily">nope</tt>, but not the backend microservice that
+    determines whether it is indeed Halloween or not. Do you have
+    time to help them?</p>
+<p>The behaviour of the server should be as follows: it gets as
+    input the current date in the format <tt class="ttfamily">FEB
+    9</tt>, where <tt class="ttfamily">FEB</tt> is the month given
+    in three letters (<tt class="ttfamily">JAN, FEB, MAR, APR, MAY,
+    JUN, JUL, AUG, SEP, OCT, NOV, DEC</tt>) and <tt class="ttfamily">9</tt> is the day of the month starting at 1. It
+    should then determine if this date represents October 31 or
+    December 25 (since <span class="tex2jax_process">$31_8 =
+    25_{10}$</span>).</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing a date of the
+    format <tt class="ttfamily">FEB 9</tt>, with the month and date
+    separated by a single space.</p>
+<h2>Output</h2>
+<p>If the date is October 31 or December 25, output <tt class="ttfamily">yup</tt>. Otherwise, output <tt class="ttfamily">nope</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>OCT 31
+</pre>
+</td>
+<td>
+<pre>yup
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>JUN 24
+</pre>
+</td>
+<td>
+<pre>nope
+</pre>
+</td>
+</tr>
+</table>
+</div>

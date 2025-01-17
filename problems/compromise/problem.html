@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/compromise/file/statement/en/img-0001.jpg" class="illustration" src="/problems/compromise/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/andynelson/52400624/">Andy
+        Nelson</a>
+</div>
+</div>
+<p>There is a saying “a good compromise makes no one happy”. As
+    distressing as that may be, I guess most people still think it
+    is a good idea to seek the best agreement. The problem though,
+    is to define the measure in which the word “best” gets a
+    meaning. Let us consider <span class="tex2jax_process">$n$</span> people, each with a firm belief on
+    <span class="tex2jax_process">$m$</span> different yes/no
+    issues. We may think of the people’s beliefs as binary strings
+    <span class="tex2jax_process">$b_ i$</span> of length
+    <span class="tex2jax_process">$m$</span> for <span class="tex2jax_process">$0&lt;i\leq n$</span>, i.e. one string per
+    person, with entries reflecting a person’s belief in each of
+    the <span class="tex2jax_process">$m$</span> issues. An
+    <em>agreement</em> is also a binary string <span class="tex2jax_process">$a$</span> of length <span class="tex2jax_process">$m$</span>, indicating the agreed outcome of
+    each of the <span class="tex2jax_process">$m$</span> issues.
+    Some would argue that the agreement <span class="tex2jax_process">$a$</span> that minimises the maximum of
+    <span class="tex2jax_process">$H(b_ i-a)$</span> over all
+    <span class="tex2jax_process">$i$</span>, where <span class="tex2jax_process">$H(x)$</span> is the Hamming function
+    counting the number of non-zero entries of the vector
+    <span class="tex2jax_process">$x$</span>, is the best
+    compromise. Unfortunately, it is widely believed that finding
+    this agreement is computationally infeasible for <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> large. Another reasonable
+    suggestion is the agreement <span class="tex2jax_process">$a$</span> that minimises <span class="tex2jax_process">$\left(\sum _{i=1}^ n H(b_ i-a)^
+    p\right)^{1/p}$</span> for some positive integer <span class="tex2jax_process">$p$</span>. Note in particular that when
+    <span class="tex2jax_process">$p\rightarrow \infty $</span>,
+    this measure coincides with the former. I for one am most
+    content with the choice of <span class="tex2jax_process">$p=1$</span> though, don’t you agree?</p>
+<h2>Input</h2>
+<p>On the first line of input is a single positive integer
+    <span class="tex2jax_process">$t$</span>, telling the number of
+    test scenarios to follow. Each test scenario is described by
+    two positive integers <span class="tex2jax_process">$n\leq
+    100$</span> and <span class="tex2jax_process">$m\leq
+    100$</span>, on a line of their own. Then follow <span class="tex2jax_process">$n$</span> lines, each containing a binary
+    string <span class="tex2jax_process">$b_ i$</span> on
+    <span class="tex2jax_process">$m$</span> ‘0’ and ‘1’
+    characters.</p>
+<h2>Output</h2>
+<p>For each test scenario, output the assignment <span class="tex2jax_process">$a$</span> that minimises the measure above
+    with <span class="tex2jax_process">$p = 1$</span>, on a row of
+    its own. If there are several solutions, output anyone.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+5 5
+00000
+00100
+01001
+01101
+00101
+1 7
+0110010
+</pre>
+</td>
+<td>
+<pre>
+00101
+0110010
+</pre>
+</td>
+</tr>
+</table>
+</div>

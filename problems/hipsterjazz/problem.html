@@ -1,0 +1,162 @@
+<div class="problembody">
+<p>A new class has just started at jazz school, consisting of
+    <span class="tex2jax_process">$N$</span> students. Among them,
+    <span class="tex2jax_process">$M$</span> pairs of students are
+    friends. Each student has to pick an instrument to focus on
+    during their studies, either piano or saxophone. Of course, all
+    the students want to be very original jazz musicians.
+    Therefore, they want to make sure that at least half of their
+    friends choose a different instrument than what they chose.</p>
+<p>It turned out to be hard for the students to choose
+    instruments in this manner by themselves, so they turned to you
+    for some help. Can you select an instrument for each child,
+    such that at least half of their friends play the other
+    instrument?</p>
+<h2>Input</h2>
+<p>The first line contains the number of students <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 200$</span>) and pairs of friends <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0
+    \le M \le \frac{N(N - 1)}{2}$</span>).</p>
+<p>This is followed by <span class="tex2jax_process">$M$</span>
+    lines, one for each friendship. A friendship is described by
+    two integers <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le a \neq b \le N$</span>), denoting that
+    the <span class="tex2jax_process">$a$</span>’th and
+    <span class="tex2jax_process">$b$</span>’th students are
+    friends. No friendship will be listed twice.</p>
+<p>The input will always be chosen in such a way that a valid
+    selection of instruments for the students exists.</p>
+<h2>Output</h2>
+<p>Output a single string with <span class="tex2jax_process">$N$</span> characters. The <span class="tex2jax_process">$i$</span>’th character should denote the
+    instrument of the <span class="tex2jax_process">$i$</span>’th
+    student: either <tt class="ttfamily">P</tt> if they should play
+    the piano, or <tt class="ttfamily">S</tt> if they should play
+    the saxophone.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Every pair of students are friends</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 15$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>A solution exists where no two friends play the same
+          instrument</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 2
+1 3
+2 3
+</pre>
+</td>
+<td>
+<pre>PSP
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 6
+1 2
+1 3
+1 5
+2 4
+3 5
+4 5
+</pre>
+</td>
+<td>
+<pre>SPPSP
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 9
+1 4
+1 5
+1 6
+2 4
+2 5
+2 6
+3 4
+3 5
+3 6
+</pre>
+</td>
+<td>
+<pre>PPPSSS
+</pre>
+</td>
+</tr>
+</table>
+</div>

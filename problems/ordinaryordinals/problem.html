@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>Sets, sets, sets. Everything in math is just a set. Even the
+    natural numbers can be represented as sets. For example, we can
+    represent the the number <span class="tex2jax_process">$0$</span> as the empty set <span class="tex2jax_process">$\{ \} $</span>. The number <span class="tex2jax_process">$1$</span> can be represented as <span class="tex2jax_process">$\{ \{ \} \} $</span>.</p>
+<p>But what about <span class="tex2jax_process">$2$</span>?
+    Consider <span class="tex2jax_process">$\{ \{ \} , \{ \{ \} \}
+    \} $</span>, the set containing both the empty set and
+    <span class="tex2jax_process">$\{ \{ \} \} $</span>. This is a
+    nice choice for <span class="tex2jax_process">$2$</span> for
+    two reasons: we have that <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span> are <em>elements</em> of
+    <span class="tex2jax_process">$2$</span> and we also have that
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span> are <em>subsets</em> of
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>In general, for <span class="tex2jax_process">$N&gt;0$</span> we can represent <span class="tex2jax_process">$N$</span> as the set <span class="tex2jax_process">$\{ 0, 1, \ldots , N-1\} $</span> where we
+    recursively apply the representations for <span class="tex2jax_process">$0, \ldots , N-1$</span>. For
+    example:</p><span class="tex2jax_process">\begin{eqnarray*} 3
+    &amp; = &amp; \{ 0, 1, 2\} \\ &amp; = &amp; \{ \{ \} , \{ 0\} ,
+    \{ 0, 1\} \} \\ &amp; = &amp; \{ \{ \} , \{ \{ \} \} , \{ \{ \}
+    , \{ 0\} \} \} \\ &amp; = &amp; \{ \{ \} , \{ \{ \} \} , \{ \{
+    \} , \{ \{ \} \} \} \} \end{eqnarray*}</span>
+<p>Thus, for each <span class="tex2jax_process">$0 \leq i &lt;
+    N$</span>, <span class="tex2jax_process">$i$</span> is both a
+    member of <span class="tex2jax_process">$N$</span> and a subset
+    of <span class="tex2jax_process">$N$</span>. Another nice
+    feature is the size of the set representing <span class="tex2jax_process">$N$</span> is also <span class="tex2jax_process">$N$</span>. But what is not so nice is the
+    number of characters it takes to write such a set. Given a
+    natural number <span class="tex2jax_process">$N \geq 0$</span>,
+    how many braces and commas are required to write out the set
+    representing <span class="tex2jax_process">$N$</span> in the
+    above manner?</p>
+<p>More specifically, let <span class="tex2jax_process">$f(N)$</span> be the number of bracket and
+    comma characters required to write out the set representing
+    <span class="tex2jax_process">$N$</span>. Since <span class="tex2jax_process">$f(N)$</span> can be quite large, your job is
+    to determine <span class="tex2jax_process">$f(N)$</span> modulo
+    some positive integer <span class="tex2jax_process">$M$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$0
+    \leq N &lt; 2^{63}$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M &lt; 2^{31}$</span>) as described above.</p>
+<h2>Output</h2>
+<p>Display the value of <span class="tex2jax_process">$f(N)$</span> reduced modulo <span class="tex2jax_process">$M$</span>. That is, the remainder that would
+    be left if you divided <span class="tex2jax_process">$f(N)$</span> by <span class="tex2jax_process">$M$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 100
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 100
+</pre>
+</td>
+<td>
+<pre>19
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>1000000000 1000000007
+</pre>
+</td>
+<td>
+<pre>851562505
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,342 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/minorsetback/file/statement/en/img-0001.jpg" class="illustration" src="/problems/minorsetback/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://commons.wikimedia.org/wiki/File:Oscilloscope_sine_square.jpg">
+        Xato</a>
+</div>
+</div>
+<p>You are developing a smartphone app that converts audio
+    recorded from an instrument into sheet music. You already have
+    the code to record the audio and convert it into sequence of
+    frequency values. What is left is to translate those
+    frequencies into pitch names more easily recognizable to
+    musicians.</p>
+<h5>Some Music Theory</h5>
+<p>Musical pitches are described by frequencies using a
+    logarithmic scale. The frequency <span class="tex2jax_process">$440\ \textrm{Hz}$</span> corresponds to the
+    pitch named <span class="tex2jax_process">$\textrm{A}$</span>.
+    Multiplying a pitch’s frequency by <span class="tex2jax_process">$\sqrt [12]{2}$</span> produces the next
+    higher pitch. Table 1 lists pitches used in Western music
+    and their frequencies.</p>
+<div class="table" id="minorsetback:pitchnames">
+<center>
+<div class="caption">
+<b>Table 1</b>: Frequencies and corresponding pitch names
+          of various notes.
+        </div>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>frequency (Hz)</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p>pitch name</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p>frequency (Hz)</p>
+</td>
+<td style="text-align:center">
+<p>pitch name</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$440$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{A}$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{6/12}
+              \approx 622.25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\textrm{D}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{E}^{\flat }$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{1/12}
+              \approx 466.16$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{A}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{B}^{\flat }$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{7/12}
+              \approx 659.26$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{E}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{2/12}
+              \approx 493.88$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{B}$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{8/12}
+              \approx 698.46$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{F}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{3/12}
+              \approx 523.25$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{C}$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{9/12}
+              \approx 739.99$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{F}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{G}^{\flat }$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{4/12}
+              \approx 554.37$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{C}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{D}^{\flat }$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{10/12}
+              \approx 783.99$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{G}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{5/12}
+              \approx 587.33$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{D}$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$440 \cdot 2^{11/12}
+              \approx 830.61$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{G}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{A}^{\flat }$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:center; border-right:1px solid black">
+             </td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$880$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$\textrm{A}$</span></p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<p>Doubling any pitch’s frequency yields the same pitch, but
+    one octave higher (note that both <span class="tex2jax_process">$440$</span> and <span class="tex2jax_process">$880\ \textrm{Hz}$</span> correspond to pitch
+    <span class="tex2jax_process">$\textrm{A}$</span>). This rule
+    generalizes: multiplying <span class="tex2jax_process">$554.37\
+    \textrm{Hz}$</span> by a power of two yields another
+    <span class="tex2jax_process">$\textrm{C}^{\sharp }$</span>.
+    Some pitches have multiple names, as shown in the table.</p>
+<h3>Your Task</h3>
+<p>You have a song, represented as a sequence of frequencies.
+    Songs in a <em>musical key</em> typically contain only a subset
+    of the possible pitches. Assume that the given song is in one
+    of the common keys listed in Table 2. First, determine
+    what key the song is in. Then, translate the song into a
+    sequence of pitch names.</p>
+<div class="table" id="minorsetback:keys">
+<center>
+<div class="caption">
+<b>Table 2</b>: A few musical keys and the pitches they
+          use.
+        </div>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p>key name</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>allowed pitches</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>key name</p>
+</td>
+<td style="text-align:left">
+<p>allowed pitches</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{G}$</span>
+              major</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{G}$</span>,
+              <span class="tex2jax_process">$\textrm{A}$</span>,
+              <span class="tex2jax_process">$\textrm{B}$</span>,
+              <span class="tex2jax_process">$\textrm{C}$</span>,
+              <span class="tex2jax_process">$\textrm{D}$</span>,
+              <span class="tex2jax_process">$\textrm{E}$</span>,
+              and <span class="tex2jax_process">$\textrm{F}^{\sharp
+              }$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{F}^{\sharp
+              }$</span> minor</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$\textrm{F}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{G}^{\sharp }$</span>,
+              <span class="tex2jax_process">$\textrm{A}$</span>,
+              <span class="tex2jax_process">$\textrm{B}$</span>,
+              <span class="tex2jax_process">$\textrm{C}^{\sharp
+              }$</span>, <span class="tex2jax_process">$\textrm{D}$</span>, and
+              <span class="tex2jax_process">$\textrm{E}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{C}$</span>
+              major</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{C}$</span>,
+              <span class="tex2jax_process">$\textrm{D}$</span>,
+              <span class="tex2jax_process">$\textrm{E}$</span>,
+              <span class="tex2jax_process">$\textrm{F}$</span>,
+              <span class="tex2jax_process">$\textrm{G}$</span>,
+              <span class="tex2jax_process">$\textrm{A}$</span>,
+              and <span class="tex2jax_process">$\textrm{B}$</span></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{G}$</span>
+              minor</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$\textrm{G}$</span>,
+              <span class="tex2jax_process">$\textrm{A}$</span>,
+              <span class="tex2jax_process">$\textrm{B}^{\flat
+              }$</span>, <span class="tex2jax_process">$\textrm{C}$</span>, <span class="tex2jax_process">$\textrm{D}$</span>, <span class="tex2jax_process">$\textrm{E}^{\flat }$</span>, and
+              <span class="tex2jax_process">$\textrm{F}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{E}^{\flat
+              }$</span> major</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\textrm{E}^{\flat
+              }$</span>, <span class="tex2jax_process">$\textrm{F}$</span>, <span class="tex2jax_process">$\textrm{G}$</span>, <span class="tex2jax_process">$\textrm{A}^{\flat }$</span>,
+              <span class="tex2jax_process">$\textrm{B}^{\flat
+              }$</span>, <span class="tex2jax_process">$\textrm{C}$</span>, and
+              <span class="tex2jax_process">$\textrm{D}$</span></p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$1 \leq N \leq 100\, 000$</span>,
+    the number of frequencies in the song. The next <span class="tex2jax_process">$N$</span> lines each contain a real number
+    <span class="tex2jax_process">$20 \le f \le 4\, 000$</span>,
+    representing one pitch frequency, with at most <span class="tex2jax_process">$8$</span> digits after the decimal point.
+    You may assume that the song was played using an instrument
+    that is in tune, so that each frequency represents a valid
+    pitch: each frequency approximates <span class="tex2jax_process">$440\cdot 2^{a/12}$</span> for some integer
+    <span class="tex2jax_process">$a$</span> with absolute error at
+    most <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<h2>Output</h2>
+<p>On the first line, output the name of the key that the song
+    was played in: <tt class="ttfamily">G major</tt>, <tt class="ttfamily">F# minor</tt>, etc. See below for instructions for
+    how to format pitch names. If the song does not fit any of the
+    keys in Table 2, or if multiple possible keys could fit the
+    song, print <tt class="ttfamily">cannot determine key</tt>.</p>
+<p>If the key could not be determined, print no further output.
+    Otherwise, print <span class="tex2jax_process">$N$</span>
+    lines, each containing one pitch name (in the order of the
+    input sequence). Each pitch name should be a letter <tt class="ttfamily">A</tt> through <tt class="ttfamily">G</tt> followed
+    optionally by a second character, either <tt class="ttfamily">#</tt> or <tt class="ttfamily">b</tt>, indicating a
+    sharp or flat. Note that although pitches can have multiple
+    names, only one of these names is listed in the allowed-pitches
+    table for any given key, and this is the name you should use.
+    For example, print <tt class="ttfamily">C#</tt>, and not
+    <tt class="ttfamily">Db</tt>, when writing pitches for the key
+    <span class="tex2jax_process">$\textrm{F}^{\sharp }$</span>
+    minor.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+783.9908720
+783.9908720
+587.3295358
+587.3295358
+659.2551138
+659.2551138
+587.3295358
+</pre>
+</td>
+<td>
+<pre>cannot determine key
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+523.2511306
+391.9954360
+440.0
+329.6275569
+369.9944227
+</pre>
+</td>
+<td>
+<pre>G major
+C
+G
+A
+E
+F#
+</pre>
+</td>
+</tr>
+</table>
+</div>

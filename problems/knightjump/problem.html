@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>You are given a two dimensional chess board of size
+    <span class="tex2jax_process">$N \times N$</span> (<span class="tex2jax_process">$1$</span>-based indexing). Some of the cells
+    on this board are ‘<b class="bfseries">.</b>’ denoting an empty
+    cell. Some of the cells on this board are ‘<b class="bfseries">#</b>’ denoting a blocked cell, which you are not
+    allowed to visit. Exactly one of the cells on this board is
+    ‘<b class="bfseries">K</b>’ denoting the initial position of
+    the knight.</p>
+<p>A knight at position <span class="tex2jax_process">$(r,
+    c)$</span> can move to any of the valid positions in set
+    <span class="tex2jax_process">$S$</span> = <span class="tex2jax_process">$\{ (r + 2, c + 1)$</span>, <span class="tex2jax_process">$(r + 2, c - 1)$</span>, <span class="tex2jax_process">$(r - 2, c + 1)$</span>, <span class="tex2jax_process">$(r - 2, c - 1)$</span>, <span class="tex2jax_process">$(r + 1, c + 2)$</span>, <span class="tex2jax_process">$(r + 1, c - 2)$</span>, <span class="tex2jax_process">$(r - 1, c + 2)$</span>, <span class="tex2jax_process">$(r - 1, c - 2)\} $</span>. Here valid
+    position means that the resulting <span class="tex2jax_process">$(r’, c’)$</span> should be within the bounds
+    of the chess grid, i.e. <span class="tex2jax_process">$1 \leq
+    r’ \leq N$</span> and <span class="tex2jax_process">$1 \leq c’
+    \leq N$</span>.</p>
+<p>The question is you have to <b class="bfseries">determine
+    the minimum number of steps required for the Knight to reach
+    cell <span class="tex2jax_process">$(1, 1)$</span> avoiding
+    cells with ‘#’ in the path.</b></p>
+<p>Note - There will be exactly one ‘<b class="bfseries">K</b>’
+    in the grid and cell <span class="tex2jax_process">$(1,
+    1)$</span> will NOT be a ‘<b class="bfseries">#</b>’.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 10^2$</span>) denoting the dimension of the chess
+    board. Each of the next <span class="tex2jax_process">$N$</span> lines contains a string denoting
+    the <span class="tex2jax_process">$i^{th}$</span> row. The
+    length of these strings will be <span class="tex2jax_process">$N$</span>.</p>
+<h2>Output</h2>
+<p>Print the value of minimum number of steps. However, if
+    <span class="tex2jax_process">$(1, 1)$</span> is not reachable,
+    print ‘<b class="bfseries">-<span class="tex2jax_process">$1$</span></b>’ (without the quotes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+....
+....
+....
+...K
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+..K
+...
+###
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

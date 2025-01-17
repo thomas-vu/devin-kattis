@@ -1,0 +1,157 @@
+<div class="problembody">
+<p>Imagine you are in the hiring process for a company whose
+    principal activity is the analysis of information in the Web.
+    One of the tests consists in writing a program for maintaining
+    up to date a set of trending topics. You will be hired
+    depending on the efficiency of your solution.</p>
+<p>They provide you with text from the most active blogs. The
+    text is organised daily and you have to provide the sorted list
+    of the <span class="tex2jax_process">$N$</span> most frequent
+    words during the last 7 days, when asked.</p>
+<h2>Input</h2>
+<p>Each input file contains one test case. The text
+    corresponding to a day is delimited by tag
+    <tt>&lt;text&gt;</tt>. Queries of top <span class="tex2jax_process">$N$</span> words can appear between texts
+    corresponding to two different days. A top <span class="tex2jax_process">$N$</span> query appears as a tag like
+    <tt>&lt;top 10 /&gt;</tt>. In order to facilitate you the
+    process of reading from input, the number always will be
+    delimited by white spaces, as in the sample.</p>
+<p>Notes:</p>
+<ul class="itemize">
+<li>
+<p>All words are composed only of lowercase letters of size
+        at most <span class="tex2jax_process">$20$</span>.</p>
+</li>
+<li>
+<p>The maximum number of different words that can appear is
+        <span class="tex2jax_process">$20\, 000$</span>.</p>
+</li>
+<li>
+<p>The maximum number of words per day is <span class="tex2jax_process">$20\, 000$</span>.</p>
+</li>
+<li>
+<p>Words of length less than four characters are considered
+        of no interest.</p>
+</li>
+<li>
+<p>The number of days will be at most <span class="tex2jax_process">$1\, 000$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq
+        20$</span></p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>The list of <span class="tex2jax_process">$N$</span> most
+    frequent words during the last 7 days must be shown given a
+    query. Words must appear in decreasing order of frequency and
+    in alphabetical order when equal frequency. <em>There must be
+    shown all words whose counter of appearances is equal to the
+    word at position <span class="tex2jax_process">$N$</span>. Even
+    if the amount of words to be shown exceeds <span class="tex2jax_process">$N$</span></em>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+&lt;text&gt;
+imagine you are in the hiring process of a company whose
+main business is analyzing the information that appears
+in the web
+&lt;/text&gt;
+
+&lt;text&gt;
+a simple test consists in writing a program for
+maintaining up to date a set of trending topics
+&lt;/text&gt;
+
+&lt;text&gt;
+you will be hired depending on the efficiency of your solution
+&lt;/text&gt;
+
+&lt;top 5 /&gt;
+
+&lt;text&gt;
+they provide you with a file containing the text
+corresponding to a highly active blog
+&lt;/text&gt;
+
+&lt;text&gt;
+the text is organized daily and you have to provide the
+sorted list of the n most frequent words during last week
+when asked
+&lt;/text&gt;
+
+
+&lt;text&gt;
+each input file contains one test case the text corresponding
+to a day is delimited by tag text
+&lt;/text&gt;
+
+&lt;text&gt;
+the query of top n words can appear between texts corresponding
+to two different days
+&lt;/text&gt;
+
+&lt;top 3 /&gt;
+
+&lt;text&gt;
+blah blah blah blah blah blah blah blah blah
+please please please
+&lt;/text&gt;
+
+&lt;top 3 /&gt;
+</pre>
+</td>
+<td>
+<pre>
+&lt;top 5&gt;
+analyzing 1
+appears 1
+business 1
+company 1
+consists 1
+date 1
+depending 1
+efficiency 1
+hired 1
+hiring 1
+imagine 1
+information 1
+main 1
+maintaining 1
+process 1
+program 1
+simple 1
+solution 1
+test 1
+that 1
+topics 1
+trending 1
+whose 1
+will 1
+writing 1
+your 1
+&lt;/top&gt;
+&lt;top 3&gt;
+text 4
+corresponding 3
+file 2
+provide 2
+test 2
+words 2
+&lt;/top&gt;
+&lt;top 3&gt;
+blah 9
+text 4
+corresponding 3
+please 3
+&lt;/top&gt;
+</pre>
+</td>
+</tr>
+</table>
+</div>

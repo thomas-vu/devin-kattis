@@ -1,0 +1,215 @@
+<div class="problembody">
+<p>You are making a recipe and need to measure a precise volume
+    of liquid. There are an assortment of cups of varying volumes
+    in your kitchen, however no cup has any markings on it other
+    than to indicate its total volume, and none of them match the
+    volume that you want. You start with the biggest cup full of
+    liquid and, to make sure you know precisely how much volume you
+    are working with at any point in time, you consider steps in
+    which you pour from any nonempty cup into another cup, always
+    pouring until either the cup you are pouring into becomes full,
+    or the cup you are pouring from becomes empty (whichever occurs
+    first). As a simple example, assume you start with a full cup
+    having capacity <span class="tex2jax_process">$5$</span>,
+    and you have another cup with capacity <span class="tex2jax_process">$2$</span>, but your goal is to have
+    <span class="tex2jax_process">$3$</span> units of the
+    liquid in the largest cup. In this case, you can start pouring
+    from the larger cup to the smaller, stopping when the smaller
+    one reaches its capacity of <span class="tex2jax_process">$2$</span>. This will leave precisely
+    <span class="tex2jax_process">$3$</span> units in the
+    larger cup. See Figure 1(a).</p>
+<div class="figure" id="first">
+<center>
+<table class="subfigure" id="a0000000008" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.50]{5-2.png}" src="/problems/kitchen/file/statement/en/img-0001.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(1.a)</td>
+</tr>
+</table>  
+
+        <table class="subfigure" id="a0000000009" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.50]{9632-17.png}" src="/problems/kitchen/file/statement/en/img-0002.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(1.b)</td>
+</tr>
+</table>  
+
+        <table class="subfigure" id="a0000000010" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.50]{9632-7.png}" src="/problems/kitchen/file/statement/en/img-0003.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(1.c)</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Pouring between cups
+        </div>
+</center>
+</div>
+<p>As another example, consider a case in which you have
+    <span class="tex2jax_process">$4$</span> cups with capacities
+    <span class="tex2jax_process">$9$</span>, <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$3$</span>, and <span class="tex2jax_process">$2$</span>, and you start with the largest
+    cup full, the rest empty, and a goal of ending with
+    <span class="tex2jax_process">$8$</span> units in the
+    largest cup. For ease of discussion we will refer to the cup
+    with capacity <span class="tex2jax_process">$9$</span> as
+    the “<span class="tex2jax_process">$9$</span>-cup” and
+    similarly for the other sizes. You notice that the <span class="tex2jax_process">$6$</span>-cup and <span class="tex2jax_process">$2$</span>-cup have combined capacity of
+    <span class="tex2jax_process">$8$</span>, and so you could pour
+    from the original <span class="tex2jax_process">$9$</span>-cup
+    to fill those two cups, then dump the remaining <span class="tex2jax_process">$1$</span> unit from the <span class="tex2jax_process">$9$</span>-cup into the <span class="tex2jax_process">$3$</span>-cup, and finally pour the full
+    <span class="tex2jax_process">$6$</span>-cup and <span class="tex2jax_process">$2$</span>-cup back into the <span class="tex2jax_process">$9$</span>-cup. See Figure 1(b). In
+    implementing this strategy, the total volume of liquid poured
+    would be <span class="tex2jax_process">$6+2+1+6+2=17$</span>.
+    You could achieve this goal in another way: pour <span class="tex2jax_process">$3$</span> units from the <span class="tex2jax_process">$9$</span>-cup to the <span class="tex2jax_process">$3$</span>-cup (leaving <span class="tex2jax_process">$6$</span> units in the <span class="tex2jax_process">$9$</span>-cup), then fill the <span class="tex2jax_process">$2$</span>-cup from the <span class="tex2jax_process">$3$</span>-cup (leaving <span class="tex2jax_process">$1$</span> unit in the <span class="tex2jax_process">$2$</span> cup), and finally pour the
+    full <span class="tex2jax_process">$2$</span>-cup back into the
+    <span class="tex2jax_process">$9$</span>-cup, resulting in
+    exactly <span class="tex2jax_process">$8$</span> units in
+    that cup. With this strategy, the total volume poured is only
+    <span class="tex2jax_process">$3+2+2=7$</span>. See
+    Figure 1(c).</p>
+<p>As a final example, you start with cups of capacities
+    <span class="tex2jax_process">$11$</span>, <span class="tex2jax_process">$10$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$4$</span>, and <span class="tex2jax_process">$2$</span>, with the <span class="tex2jax_process">$11$</span>-cup full, and a goal of ending up
+    with <span class="tex2jax_process">$10$</span> units in
+    the <span class="tex2jax_process">$11$</span>-cup. Obviously,
+    you could fill the <span class="tex2jax_process">$10$</span>-cup, dump the remaining
+    <span class="tex2jax_process">$1$</span> unit into another
+    cup, and then pour from the full <span class="tex2jax_process">$10$</span>-cup back into the <span class="tex2jax_process">$11$</span>-cup, as illustrated in
+    Figure 2(a). These three pours would mean transferring a
+    total volume of <span class="tex2jax_process">$10+1+10=21$</span>. Figure 2(b) shows a
+    sequence with more steps, but less liquid poured.</p>
+<div class="figure" id="second">
+<center>
+<table class="subfigure" id="a0000000011" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.5]{11-21.png}" src="/problems/kitchen/file/statement/en/img-0004.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(2.a)</td>
+</tr>
+</table>    
+
+        <table class="subfigure" id="a0000000012" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[scale=0.5]{11-19.png}" src="/problems/kitchen/file/statement/en/img-0005.png" style="width:; height:"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(2.b)</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 2</b>: More pouring
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single line of positive integers:
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$c_1$</span> <span class="tex2jax_process">$c_2$</span> <span class="tex2jax_process">$\ldots $</span> <span class="tex2jax_process">$c_ n$</span> <span class="tex2jax_process">$V$</span>, where there are <span class="tex2jax_process">$n$</span> cups, with <span class="tex2jax_process">$2 \leq n \leq 5$</span>, having capacities
+    satisfying <span class="tex2jax_process">$ 64 \geq
+    c_1&gt;c_2&gt; \ldots &gt; c_ n \geq 1$</span>. The value
+    <span class="tex2jax_process">$V &lt; c_1$</span> designates
+    the desired volume. You must start with largest cup (that with
+    capacity <span class="tex2jax_process">$c_1$</span>) full
+    of liquid and the other cups empty, and the goal is to get
+    exactly volume <span class="tex2jax_process">$V$</span>
+    into the <em>largest</em> cup.</p>
+<h2>Output</h2>
+<p>Output the minimum amount of liquid that must be poured to
+    achieve the goal, or output <tt class="tt">impossible</tt> if
+    the goal cannot be achieved.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5 2 3
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 9 6 3 2 8
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 11 10 7 4 2 10
+</pre>
+</td>
+<td>
+<pre>
+19
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5 2 4
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 64 45 41 28 2 63
+</pre>
+</td>
+<td>
+<pre>
+121
+</pre>
+</td>
+</tr>
+</table>
+</div>

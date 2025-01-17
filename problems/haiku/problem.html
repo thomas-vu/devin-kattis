@@ -1,0 +1,186 @@
+<div class="problembody">
+<p>A haiku is a Japanese form of poetry. It consists of three
+    phrases of <span class="tex2jax_process">$5$</span>,
+    <span class="tex2jax_process">$7$</span> and <span class="tex2jax_process">$5$</span> syllables each.</p>
+<p>Once a year, HiQ has a haiku contest, where employees submit
+    their best poems. The poems are then judged based on a wide
+    range of aspects, such as</p>
+<ul class="itemize">
+<li>
+<p>creativity</p>
+</li>
+<li>
+<p>simplicity</p>
+</li>
+<li>
+<p>beauty</p>
+</li>
+<li>
+<p>whether the poem is actually a haiku</p>
+</li>
+</ul>
+<p>This last point turned out to be quite a challenge for the
+    judges (many problems arose when half the judges indexed
+    syllables starting at <span class="tex2jax_process">$0$</span>
+    and the other half at <span class="tex2jax_process">$1$</span>).</p>
+<p>Can you help the judges to determine whether a submitted
+    poem is a haiku, given a set of syllables? Note that there
+    <b class="bfseries">may exist multiple decompositions</b> of a
+    single word in the poem into syllables. In this case, you
+    should determine whether <b class="bfseries">some</b>
+    decomposition is a haiku.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$1 \le S \le 100$</span>, the
+    number of syllables. The next line contains <span class="tex2jax_process">$S$</span> words separated by spaces (the
+    syllables). Each syllable contains at most <span class="tex2jax_process">$7$</span> lowercase letters <tt class="ttfamily">a-z</tt>.</p>
+<p>Then, three lines containing the poem follow. Each line
+    contains a (non-empty) list of words separated by spaces,
+    representing a phrase. The words contain only lowercase letters
+    <tt class="ttfamily">a-z</tt>. The length of each line is at
+    most <span class="tex2jax_process">$100$</span> characters
+    (including spaces).</p>
+<p>It is guaranteed that there exists <b class="bfseries">at
+    least one</b> decomposition of the poem into the given
+    syllables.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">“haiku”</tt> if the given poem
+    is a haiku, and <tt class="ttfamily">“come back next year”</tt>
+    otherwise (without the quotes).</p>
+<h2>Explanation of Sample Input 1</h2>
+<p>One possible decomposition into a haiku is:</p>
+<pre>
+spe-lling ve-ry hard
+ear-ly in mor-ning ti-red
+i need cov-fe-fe
+</pre>
+<h2>Explanation of Sample Input 3</h2>
+<p>No matter how the third line is decomposed, it contains
+    <span class="tex2jax_process">$8$</span> syllables instead of
+    <span class="tex2jax_process">$5$</span>, so it can not be a
+    haiku.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+20
+va
+fi
+ve
+mor
+lling
+spe
+in
+i
+sh
+ti
+hard
+cov
+ear
+fe
+red
+ja
+ry
+need
+ly
+ning
+spelling very hard
+early in morning tired
+i need covfefe
+</pre>
+</td>
+<td>
+<pre>
+haiku
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+22
+q
+c
+da
+plus
+to
+the
+e
+thee
+un
+late
+ci
+a
+shall
+by
+com
+i
+ru
+pare
+temp
+ble
+hi
+de
+shall i compare thee
+to a c plus plus template
+undecidable
+</pre>
+</td>
+<td>
+<pre>
+haiku
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+19
+ju
+win
+soft
+it
+east
+sun
+and
+light
+der
+the
+is
+through
+li
+but
+yon
+what
+breaks
+et
+dow
+but soft what light through
+yonder window breaks it is
+the east and juliet is the sun
+</pre>
+</td>
+<td>
+<pre>
+come back next year
+</pre>
+</td>
+</tr>
+</table>
+</div>

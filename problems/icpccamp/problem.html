@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>John is a leading organizer of this year’s North America
+    ICPC training camp. The camp lasts several days. On each day,
+    there will be a lecture introducing two problems: one classical
+    problem and one creative problem. Each problem can only be
+    introduced once during the entire camp. Every problem has an
+    integer difficulty level.</p>
+<p>John knows that the lecture on each day should not be too
+    overwhelming. Therefore, the sum of the difficulties of the two
+    problems in a single day shall not exceed some fixed value.
+    Also, the two problems on each day should be roughly on the
+    same level. Let <span class="tex2jax_process">$d$</span>’s be
+    the absolute difference between the difficulties of the two
+    problems introduced on any given day. The maximum of all of the
+    <span class="tex2jax_process">$d$</span>s, defined as
+    <span class="tex2jax_process">$D$</span>, should be as small as
+    possible.</p>
+<p>If John chooses problems well and arranges them wisely, what
+    is the smallest <span class="tex2jax_process">$D$</span> he can
+    achieve for the <span class="tex2jax_process">$n$</span> days
+    of the ICPC training camp?</p>
+<h2>Input</h2>
+<p>The first line of input contains four space-separated
+    integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$q$</span> (<span class="tex2jax_process">$1
+    \leq n, p, q \leq 2 \cdot 10^5$</span>,<br/>
+<span class="tex2jax_process">$n \leq \min (p, q)$</span>) and
+    <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$0 \leq s \leq 10^9$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of days
+    of the camp, <span class="tex2jax_process">$p$</span> is the
+    number of classical problems, <span class="tex2jax_process">$q$</span> is the number of creative
+    problems, and <span class="tex2jax_process">$s$</span> is the
+    maximum sum of difficulties on any given day.</p>
+<p>Each of the next <span class="tex2jax_process">$p$</span>
+    lines contains an integer <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$0
+    \le x \le 10^9$</span>). These are difficulties of the
+    <span class="tex2jax_process">$p$</span> classical
+    problems.</p>
+<p>Each of the next <span class="tex2jax_process">$q$</span>
+    lines contains an integer <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0
+    \le y \le 10^9$</span>). These are difficulties of the
+    <span class="tex2jax_process">$q$</span> creative problems.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the smallest <span class="tex2jax_process">$D$</span> John can achieve, or <span class="tex2jax_process">$-1$</span> if there is no way John can
+    select problems for the <span class="tex2jax_process">$n$</span> training days.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 5 10
+3
+4
+4
+9
+0
+1
+5
+6
+6
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 4 15
+1
+5
+10
+12
+1
+3
+10
+14
+</pre>
+</td>
+<td>
+<pre>13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 4 10
+1
+12
+5
+10
+1
+10
+3
+14
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

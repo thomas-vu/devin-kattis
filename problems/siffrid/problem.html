@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>Siffrid loves playing with numbers! Right now, she is
+    playing with the integer <span class="tex2jax_process">$N$</span>.</p>
+<p>She wonders how to create the smallest and largest number
+    that have the same digit sum and number of digits as
+    <span class="tex2jax_process">$N$</span>. Can you help her?</p>
+<p>The digit sum of a number is defined as the sum of all its
+    digits.</p>
+<p>For example, the digit sum of the number <span class="tex2jax_process">$1234$</span> is:</p><span class="tex2jax_process">\[ 1 + 2 + 3 + 4 = 10, \]</span>
+<p>and the digit sum of the number <span class="tex2jax_process">$220$</span> is:</p><span class="tex2jax_process">\[ 2 + 2 + 0 = 4. \]</span>
+<h2>Input</h2>
+<p>Input consists of the single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Print two integers on the same line: the smallest and
+    largest number with the same digit sum and number of digits as
+    <span class="tex2jax_process">$N$</span>. The numbers should be
+    separated by a space.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$60$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p>We cannot create a number smaller than <span class="tex2jax_process">$101$</span> with the same digit sum and
+    number of digits as <span class="tex2jax_process">$N$</span>.
+    Numbers like <span class="tex2jax_process">$11$</span> and
+    <span class="tex2jax_process">$2$</span> have the same digit
+    sum as <span class="tex2jax_process">$N$</span> but do not have
+    the same number of digits as <span class="tex2jax_process">$101$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>101
+</pre>
+</td>
+<td>
+<pre>101 200
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>878
+</pre>
+</td>
+<td>
+<pre>599 995
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1337
+</pre>
+</td>
+<td>
+<pre>1049 9500
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Ashley and Brandon are playing a game where they roll a
+    six-sided dice four times. Each integer from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$6$</span> is on one face of the dice and all
+    values are equally likely to appear. Each time they roll the
+    dice, they write down the value that shows on the top face of
+    the dice, eventually forming a four-digit integer.</p>
+<p>Ashley wins if all four digits in the integers are
+    different. Otherwise, Brandon wins.</p>
+<p>The dice has been rolled from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$3$</span> times so far. Compute the number
+    of different ways to roll the remaining times such that Ashley
+    wins, and the number of different ways to roll the remaining
+    dice such that Brandon wins. Two ways are different if the
+    integers formed are different - for example, rolling a
+    <span class="tex2jax_process">$1$</span>, then a <span class="tex2jax_process">$2$</span>, then a <span class="tex2jax_process">$3$</span>, then a <span class="tex2jax_process">$4$</span> forms the integer <span class="tex2jax_process">$1234$</span>, and is different from rolling
+    a <span class="tex2jax_process">$1$</span>, then a <span class="tex2jax_process">$2$</span>, then a <span class="tex2jax_process">$4$</span>, then a <span class="tex2jax_process">$3$</span>, which would form the integer
+    <span class="tex2jax_process">$1243$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 3$</span>), which is the number of times the dice
+    have been rolled so far.</p>
+<p>The next line contains <span class="tex2jax_process">$n$</span> integers ranging from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$6$</span>, which are the first <span class="tex2jax_process">$n$</span> rolls of the dice in order.</p>
+<h2>Output</h2>
+<p>Output two space-separated integers on one line, which are
+    the number of ways to roll the remaining times such that Ashley
+    wins, and the number of ways to roll the remaining dice such
+    that Brandon wins.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 2
+</pre>
+</td>
+<td>
+<pre>12 24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 3
+</pre>
+</td>
+<td>
+<pre>0 36
+</pre>
+</td>
+</tr>
+</table>
+</div>

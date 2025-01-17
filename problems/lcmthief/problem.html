@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$n$</span> numbers
+    hidden in the vault of the intergalactic hall of numbers.
+    Visitors to the hall can see the least common multiple (LCM) of
+    these numbers as part of the exhibit. Recall that the LCM of
+    <span class="tex2jax_process">$n$</span> numbers <span class="tex2jax_process">$x_1,x_2,\dots ,x_ n$</span> is the smallest
+    positive integer which is divisible by <span class="tex2jax_process">$x_1,x_2,\dots $</span> and <span class="tex2jax_process">$x_ n$</span>. As you are a member of the
+    thieves guild, you would like to steal one of these numbers for
+    yourself. However, you must be careful about which number you
+    steal, because if the number you steal decreases the LCM too
+    much, the guards may become suspicious.</p>
+<p>Given the list of numbers in the vault, pick a number to
+    steal that maximizes the LCM of the <span class="tex2jax_process">$n-1$</span> remaining numbers.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3\le n\le 10^5$</span>) indicating how many
+    numbers are in the vault. The next <span class="tex2jax_process">$n$</span> lines each contain one of the
+    numbers from the vault. The numbers will all be integers
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$10^6$</span>.</p>
+<h2>Output</h2>
+<p>Output the number that you should steal. If there are
+    multiple optimal choices, output the smallest one.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4
+2
+8
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+24
+7
+8
+31
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+13
+18
+23
+28
+33
+38
+</pre>
+</td>
+<td>
+<pre>18
+</pre>
+</td>
+</tr>
+</table>
+</div>

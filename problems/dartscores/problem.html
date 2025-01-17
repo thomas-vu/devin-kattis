@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Consider a game in which darts are thrown at a board. The
+    board is formed by <span class="tex2jax_process">$10$</span>
+    circles with radii <span class="tex2jax_process">$20$</span>,
+    <span class="tex2jax_process">$40$</span>, <span class="tex2jax_process">$60$</span>, <span class="tex2jax_process">$80$</span>, <span class="tex2jax_process">$100$</span>, <span class="tex2jax_process">$120$</span>, <span class="tex2jax_process">$140$</span>, <span class="tex2jax_process">$160$</span>, <span class="tex2jax_process">$180$</span>, and <span class="tex2jax_process">$200$</span> (measured in millimeters),
+    centered at the origin. Each throw is evaluated depending on
+    where the dart hits the board. The score is <span class="tex2jax_process">$p$</span> points (<span class="tex2jax_process">$p \in \{ 1, 2, \ldots , 10\} $</span>) if
+    the smallest circle enclosing or passing through the hit point
+    is the one with radius <span class="tex2jax_process">$20 \cdot
+    (11 - p)$</span>. No points are awarded for a throw that misses
+    the largest circle. Your task is to compute the total score of
+    a series of <span class="tex2jax_process">$n$</span>
+    throws.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the number of test
+    cases <span class="tex2jax_process">$T$</span>, where
+    <span class="tex2jax_process">$1 \le T \le 10\, 000$</span>.
+    The descriptions of the test cases follow:</p>
+<p>Each test case starts with a line containing the number of
+    throws <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^6$</span>). Each of the
+    next <span class="tex2jax_process">$n$</span> lines contains
+    two integers <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$-200 \leq x, y \leq 200$</span>) separated
+    by a space—the coordinates of the point hit by a throw. The sum
+    of <span class="tex2jax_process">$n$</span> across all
+    <span class="tex2jax_process">$T$</span> test cases is at most
+    <span class="tex2jax_process">$2^{21}$</span>.</p>
+<h2>Output</h2>
+<p>Print the answers to the test cases in the order in which
+    they appear in the input. For each test case print a single
+    line containing one integer—the sum of the scores of all
+    <span class="tex2jax_process">$n$</span> throws.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+5
+32 -39
+71 89
+-60 80
+0 0
+196 89
+</pre>
+</td>
+<td>
+<pre>29
+</pre>
+</td>
+</tr>
+</table>
+</div>

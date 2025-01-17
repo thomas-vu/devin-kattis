@@ -1,0 +1,131 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/redundantbinarynotation/file/statement/en/img-0001.png" class="illustration" src="/problems/redundantbinarynotation/file/statement/en/img-0001.png"/>
+<div class="description">
+        Binomial trees of a binomial heap. Wikimedia, cc-by-sa
+      </div>
+</div>
+<p>Redundant binary notation is similar to binary notation,
+    except instead of allowing only <span class="tex2jax_process">$0$</span>’s and <span class="tex2jax_process">$1$</span>’s for each digit, we allow any
+    integer digit in the range <span class="tex2jax_process">$[0,
+    t]$</span>, where <span class="tex2jax_process">$t$</span> is
+    some specified upper bound. For example, if <span class="tex2jax_process">$t = 2$</span>, the digit <span class="tex2jax_process">$2$</span> is permitted, and we may write the
+    decimal number <span class="tex2jax_process">$4$</span> as
+    <span class="tex2jax_process">$100$</span>, <span class="tex2jax_process">$20$</span>, or <span class="tex2jax_process">$12$</span>. If <span class="tex2jax_process">$t=1$</span>, every number has precisely one
+    representation, which is its typical binary representation. In
+    general, if a number is written as <span class="tex2jax_process">$d_ l d_{l-1} \ldots d_1 d_0$</span> in
+    redundant binary notation, the equivalent decimal number is
+    <span class="tex2jax_process">$d_ l\cdot 2^ l + d_{l-1}\cdot
+    2^{l-1} + \cdots + d_1\cdot 2^1 + d_0\cdot 2^0$</span>.</p>
+<p>Redundant binary notation can allow carryless arithmetic,
+    and thus has applications in hardware design and even in the
+    design of worst-case data structures. For example, consider
+    insertion into a standard binomial heap. This operation takes
+    <span class="tex2jax_process">$O(\log n)$</span> worst-case
+    time but <span class="tex2jax_process">$O(1)$</span> amortized
+    time. This is because the binary number representing the total
+    number of elements in the heap can be incremented in
+    <span class="tex2jax_process">$O(\log n)$</span> worst-case
+    time and <span class="tex2jax_process">$O(1)$</span> amortized
+    time. By using a redundant binary representation of the
+    individual binomial trees in a binomial heap, it is possible to
+    improve the worst-case insertion time of binomial heaps to
+    <span class="tex2jax_process">$O(1)$</span>.</p>
+<p>However, none of that information is relevant to this
+    question. In this question, your task is simple. Given a
+    decimal number <span class="tex2jax_process">$N$</span> and the
+    digit upper bound <span class="tex2jax_process">$t$</span>, you
+    are to count the number of possible representations
+    <span class="tex2jax_process">$N$</span> has in redundant
+    binary notation with each digit in range <span class="tex2jax_process">$[0, t]$</span> with no leading zeros.</p>
+<h2>Input</h2>
+<p>Input consists of a single line with two decimal integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$0 \leq N \leq 10^{16}$</span>) and
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \leq t \leq 100$</span>).</p>
+<h2>Output</h2>
+<p>Output in decimal the number of representations the decimal
+    number <span class="tex2jax_process">$N$</span> has in
+    redundant binary notation with each digit in range <span class="tex2jax_process">$[0, t]$</span> with no leading zeros. Since
+    the number of representations may be very large, output the
+    answer modulo the large prime <span class="tex2jax_process">$998\, 244\, 353$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>479 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3846927384799 62
+</pre>
+</td>
+<td>
+<pre>690163857
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>549755813887 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,118 @@
+<div class="problembody">
+<p><i class="itshape">“Next to the confrontation between two
+    highly honed batteries of lawyers, jungle warfare is a stately
+    minuet.” ­–Bill Veeck.</i></p>
+<p>Frivolous lawsuit or legitimate litigation? That is the
+    question the judge Kattis faces today as she presides over
+    lawsuits between individuals and corporations.</p>
+<p>There are <span class="tex2jax_process">$R$</span>
+    individuals and <span class="tex2jax_process">$S$</span>
+    corporations involved in lawsuits that Kattis must preside over
+    today. For simplicity, we label the individuals <span class="tex2jax_process">$1, 2, \dots , R$</span> and the corporations
+    <span class="tex2jax_process">$1, 2, \dots , S$</span>. Each of
+    the individuals and corporations is involved in at least one of
+    the <span class="tex2jax_process">$L$</span> lawsuits; each
+    lawsuit involves exactly one individual and one corporation,
+    and in particular, the <span class="tex2jax_process">$i^\text
+    {th}$</span> of these lawsuits involves the individual
+    <span class="tex2jax_process">$A_ i$</span> and the corporation
+    <span class="tex2jax_process">$B_ i$</span>.</p>
+<p>There has been a growing resentment among the populace that
+    judges tend to be biased, and Kattis really wants to be known
+    as an equitable and fair judge. For each lawsuit, she needs to
+    rule in favor of one party or the other; the party she rules in
+    favor of is said to have “won” the lawsuit. In an aggressive
+    bid to improve her optics, she has decided to ignore the merits
+    of the arguments involved (as the public is incapable of
+    nuanced discussion anyway), but to rule in such a way that no
+    single individual or corporation wins too many lawsuits, so as
+    to avoid accusations of bias.</p>
+<p>That is, she wants to make rulings with the goal of
+    <i class="itshape">minimizing</i> the maximum number of
+    lawsuits any single individual or corporation wins.</p>
+<p>What ruling should she make for each lawsuit?</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers,
+    <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$1 \leq R \leq 2\, 000$</span>), <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$1
+    \leq S \leq 2\, 000$</span>) and <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$\max (R, S) \leq L \leq 2\, 000$</span>) the
+    number of individuals, the number of corporations and the
+    number of lawsuits.</p>
+<p>The next <span class="tex2jax_process">$L$</span> lines
+    contain the descriptions of the lawsuits. In particular, the
+    <span class="tex2jax_process">$i^\text {th}$</span> of these
+    lines contains two integers <span class="tex2jax_process">$A_
+    i$</span> (<span class="tex2jax_process">$1 \leq A_ i \leq
+    R$</span>) and <span class="tex2jax_process">$B_ i$</span>
+    (<span class="tex2jax_process">$1 \leq B_ i \leq S$</span>),
+    denoting that the <span class="tex2jax_process">$i^\text
+    {th}$</span> lawsuit involves individual <span class="tex2jax_process">$A_ i$</span> and corporation <span class="tex2jax_process">$B_ i$</span>.</p>
+<p>It is guaranteed that each individual and corporation is
+    involved in at least one lawsuit. Note that it is possible for
+    the same pair of one individual and one corporation to be
+    involved in more than one lawsuit.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$L$</span> lines, where
+    the <span class="tex2jax_process">$i^\text {th}$</span> of
+    these lines contains either <tt class="ttfamily">INDV</tt>
+<span class="tex2jax_process">$A_ i$</span> or <tt class="ttfamily">CORP</tt> <span class="tex2jax_process">$B_
+    i$</span>, describing the party Kattis should rule in favor of
+    for the <span class="tex2jax_process">$i^\text {th}$</span>
+    lawsuit, such that the maximum number of lawsuits any single
+    individual or corporation wins is minimized.</p>
+<p>If there are multiple correct answers, you can output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 8
+1 1
+2 1
+3 1
+4 2
+5 2
+3 3
+4 3
+5 3
+</pre>
+</td>
+<td>
+<pre>INDV 1
+INDV 2
+CORP 1
+INDV 4
+CORP 2
+INDV 3
+CORP 3
+INDV 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 4
+1 1
+1 1
+1 1
+1 1
+</pre>
+</td>
+<td>
+<pre>INDV 1
+INDV 1
+CORP 1
+CORP 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,118 @@
+<div class="problembody">
+<p><i class="itshape">“My mom always said life was like a box
+    of chocolates. You never know what you’re gonna
+    get."</i><br/></p>
+<p>Forrest Gump is a young boy who goes to Greenbow County
+    Central School. As a child, he enjoys running, dancing by
+    swinging his hips, and eating chocolates. Most of all, he
+    enjoys spending time with his best friend Jenny. However,
+    Forrest isn’t the brightest boy by conventional means. While he
+    fully embraces the life wisdom that his mama often imparts
+    (such as through analogies with boxes of chocolates), he still
+    has trouble keeping up with his classes.<br/></p>
+<p>Forrest’s math class is currently learning about shapes,
+    specifically polygons. Forrest is falling behind because he
+    doesn’t really understand what a polygon is. Jenny knows that
+    if Forrest doesn’t keep up, his mama would have to take drastic
+    measures to prevent the crooked principal, Mr. Hancock, from
+    transferring Forrest to a special school. As such, Jenny has
+    decided take Forrest’s schooling into her own hands.<br/></p>
+<p>Jenny has decided to use something that Forrest understands
+    to explain polygons to him. She picks up a box of square
+    chocolates and empties the pieces onto a napkin, leaving an
+    empty box with <span class="tex2jax_process">$R$</span> rows
+    and <span class="tex2jax_process">$C$</span> columns of empty
+    cells. She places a single piece of chocolate in the box and
+    says “<i class="itshape">With one chocolate here, I’ve made a
+    square. A square is a polygon, Forrest.</i>"</p>
+<center>
+<img alt="\includegraphics[width=100pt]{chocolates1.png}" src="/problems/chocolates/file/statement/en/img-0001.png" style="width:100pt"/>
+</center>
+<p>Jenny added two more chocolates around the first one and
+    said, “<i class="itshape">We still have here a polygon, because
+    we can trace a border around the chocolates without our fingers
+    leaving the surface of the box.</i>"</p>
+<center>
+<img alt="\includegraphics[width=100pt]{chocolates2.png}" src="/problems/chocolates/file/statement/en/img-0002.png" style="width:100pt"/>
+</center>
+<p>Jenny adds some more chocolates, filling up the entire box
+    except a hole in the middle. “<i class="itshape">Now Forrest,
+    no matter how we trace the outside box, there will always be a
+    hole we can never draw unless our finger leaves the surface. So
+    this here ain’t a polygon.</i>"</p>
+<center>
+<img alt="\includegraphics[width=100pt]{chocolates3.png}" src="/problems/chocolates/file/statement/en/img-0003.png" style="width:100pt"/>
+</center>
+<p>Jenny removes a chocolate from the corner and says,
+    “<i class="itshape">Now we’re back to a polygon again! As long
+    as we can trace the border of our chocolates without crossing
+    over where we already traced, we have ourselves here a polygon.
+    As we trace, we can even have two corners barely touch, so long
+    as we don’t overlap any border line we’ve already gone
+    over.</i>".</p>
+<center>
+<img alt="\includegraphics[width=100pt]{chocolates4.png}" src="/problems/chocolates/file/statement/en/img-0004.png" style="width:100pt"/>
+</center>
+<p>“<i class="itshape">That’s amazing Jenny. Even with just a
+    small box like that, it seems like you can make so many of
+    ’em</i>", said Forrest.<br/></p>
+<p>“<i class="itshape">That’s right Forrest!</i>", said Jenny.
+    “<i class="itshape">There’s so many ways to make a polygon
+    using this box of chocolates, if I just made one at random and
+    had you guess, you truly are never gonna know what you’re gonna
+    get!</i>"<br/></p>
+<p>“<i class="itshape">Well, Jenny. Just how many ways do you
+    think are there?</i>" asked Forrest.<br/></p>
+<p>“<i class="itshape">Hmm, I’m not quite sure about that
+    Forrest.</i>" Jenny thought for a moment. "<i class="itshape">You really have me stumped.</i>"<br/></p>
+<p>Jenny wants to impress Forrest with the answer. Given the
+    dimensions of the chocolate box, can you help her count the
+    number of ways? For example, a <span class="tex2jax_process">$2$</span> by <span class="tex2jax_process">$2$</span> chocolate box has <span class="tex2jax_process">$13$</span> ways of forming a polygon:</p>
+<pre>
+   x.   .x   ..   ..   xx   x.   ..   .x   xx   .x   xx   x.   xx
+   ..   ..   x.   .x   ..   x.   xx   .x   x.   xx   .x   xx   xx
+</pre>
+<h2>Input</h2>
+<p>The first and only line of input consists of two
+    space-separated integers <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$1
+    \leq R, C \leq 4$</span>), specifying the dimensions of the box
+    of chocolates.</p>
+<h2>Output</h2>
+<p>Print, on a single line, the number of different ways that
+    chocolates can form a single polygon in the box. Note that if
+    the same polygon can be placed at multiple different places in
+    the box, then all of those ways are counted separately towards
+    the answer.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+</pre>
+</td>
+<td>
+<pre>13
+</pre>
+</td>
+</tr>
+</table>
+</div>

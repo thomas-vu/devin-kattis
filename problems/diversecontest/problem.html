@@ -1,0 +1,46 @@
+<div class="problembody">
+<p>Write what you know! The judges for a certain programming
+    competition have <span class="tex2jax_process">$n$</span>
+    problems and are trying to prepare a contest using <span class="tex2jax_process">$k$</span> of them.</p>
+<p>The judges have tagged each problem with a list of topics
+    needed to solve that problem. To not overly punish teams for
+    not knowing a specific topic, for any given topic, at most half
+    of the problems on the contest can have that topic.</p>
+<p>Compute the number of distinct contests the judges can
+    prepare. Two contests are different if there is a problem that
+    appears in one contest but not the other. In particular, the
+    order of the problems in the contest does not matter.</p>
+<h2>Input</h2>
+<p>The first line of input has two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> where <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 20$</span>) is the number of proposed problems and
+    <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$2 \leq k \leq n$</span>) is the number of
+    problems that will be used in a contest. The next <span class="tex2jax_process">$n$</span> lines each begin with an integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \leq t \leq 20$</span>), the number of
+    topics for that problem. Then follow <span class="tex2jax_process">$t$</span> unique topics. Each topic is a
+    string of lowercase letters, each of length at most
+    <span class="tex2jax_process">$10$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of distinct contests the judges can
+    prepare.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 string
+2 string queue
+1 queue
+2 dp greedy
+1 math
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

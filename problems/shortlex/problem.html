@@ -1,0 +1,166 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/shortlex/file/statement/en/img-0001.jpg" class="illustration" src="/problems/shortlex/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.axios.com/ai-written-science-book-d5003923-9598-41d9-9e47-e69299d3cc00.html">
+        Sarah Grillo (Axion)</a>, Used with permission
+      </div>
+</div>
+<p>The set of all binary strings of finite length, denoted
+    <span class="tex2jax_process">$\{ 0,1\} ^*$</span>, plays an
+    important role in computer science, and it is often useful to
+    impose an ordering on the elements of this set. One option is
+    standard <em>lexicographic order</em> (dictionary order with
+    the convention that <span class="tex2jax_process">$0$</span>
+    comes before <span class="tex2jax_process">$1$</span>),
+    but this has a serious drawback: every string that starts
+    with <span class="tex2jax_process">$0$</span> appears
+    before every string that starts with <span class="tex2jax_process">$1$</span>, and since there are infinitely
+    many strings that start with <span class="tex2jax_process">$0$</span>, it is impossible to assign a
+    finite index to any string that starts with <span class="tex2jax_process">$1$</span>. A better option is
+    <em>length-lexicographic order</em>, also known as <em>shortlex
+    order</em>, which is based on two simple rules. For
+    <span class="tex2jax_process">$x, y \in \{ 0,1\}
+    ^*$</span>:</p>
+<ol class="enumerate">
+<li>
+<p>if the length of <span class="tex2jax_process">$x$</span> is less than the length of
+        <span class="tex2jax_process">$y$</span>, then <span class="tex2jax_process">$x$</span> precedes <span class="tex2jax_process">$y$</span></p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span> have the same
+        length, then they are ordered lexicographically relative to
+        each other</p>
+</li>
+</ol>
+<p>Following the convention that the empty string (denoted
+    <span class="tex2jax_process">$\varepsilon $</span>) is
+    assigned index <span class="tex2jax_process">$0$</span>,
+    Figure <span class="tex2jax_process">$1$</span> gives the
+    first <span class="tex2jax_process">$8$</span> elements and
+    their associated indices in the shortlex order of <span class="tex2jax_process">$\{ 0,1\} ^*$</span>.</p>
+<p>Your challenge: For <span class="tex2jax_process">$i \geq
+    1$</span>, determine the binary string with
+    index <span class="tex2jax_process">$i$</span> in the
+    shortlex order of <span class="tex2jax_process">$\{ 0,1\}
+    ^*$</span>.</p>
+<div class="figure" id="shortlex-table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Index</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><b class="bfseries">Element of <span class="tex2jax_process">$\{ 0,1\} ^*$</span></b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$\varepsilon
+              $</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$00$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$01$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$000$</span></p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: First <span class="tex2jax_process">$8$</span> elements in the shortlex
+          order of <span class="tex2jax_process">$\{ 0,1\}
+          ^*$</span>
+</div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer, <span class="tex2jax_process">$T$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq T \leq
+    100$</span>)</span>, the number of test cases. This is followed
+    by <span class="tex2jax_process">$T$</span> lines, one per test
+    case. Each test case consists of a single
+    integer, <span class="tex2jax_process">$i$</span>
+<span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq i \leq 10^{18}$</span>)</span>.</p>
+<h2>Output</h2>
+<p>For each test case, <span class="tex2jax_process">$i$</span>, output a single line containing
+    the binary string with index <span class="tex2jax_process">$i$</span> in the shortlex order of
+    <span class="tex2jax_process">$\{ 0,1\} ^*$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+5
+10
+38
+99
+</pre>
+</td>
+<td>
+<pre>10
+011
+00111
+100100
+</pre>
+</td>
+</tr>
+</table>
+</div>

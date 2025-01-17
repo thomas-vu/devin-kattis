@@ -1,0 +1,52 @@
+<div class="problembody">
+<p>The IT department at your school decided to change their
+    password policy. Each password will have to consist of
+    <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$6$</span>-digit numbers separated by dashes,
+    where <span class="tex2jax_process">$N$</span> will be
+    determined by the phase of the moon and the weather forecast
+    for the day after it will be generated.</p>
+<p>You realized that, if all of the numbers were palindromes
+    (same numbers as the original ones if read backwards), you
+    would have to remember a bunch of <span class="tex2jax_process">$3$</span>-digit numbers, which did not sound
+    that bad (at the time).</p>
+<p>In order to generate your password of <span class="tex2jax_process">$N$</span> numbers, you get a list of
+    <span class="tex2jax_process">$N$</span> randomly generated
+    <span class="tex2jax_process">$6$</span>-digit numbers and find
+    the palindromic number closest to them.</p>
+<p>Of course, you would like to automate this process...</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single positive
+    integer <span class="tex2jax_process">$N \leq 1000$</span>
+    indicating the number of six-digit numbers in the input. Each
+    of the next <span class="tex2jax_process">$N$</span> lines
+    contains a six-digit number without leading zeroes.</p>
+<h2>Output</h2>
+<p>For each six-digit number in the input, output another
+    six-digit number that is closest to it and is also a
+    palindrome. “Closest” in this context means “a number having
+    the smallest absolute difference with the original number”. If
+    there are two different numbers satisfying the above condition,
+    output the smaller one of the two. Remember, no leading
+    zeroes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+123321
+123322
+</pre>
+</td>
+<td>
+<pre>
+123321
+123321
+</pre>
+</td>
+</tr>
+</table>
+</div>

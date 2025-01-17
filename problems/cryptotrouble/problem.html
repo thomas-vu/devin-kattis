@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>Mr. Krabs is a hardcore cryptocurrency and blockchain
+    technology enthusiast. In a recent conference, he heard about a
+    new cryptocurrency called <em>ByteConn333ct</em>, which
+    promises a very high rate of return. He wants to invest in this
+    cryptocurrency, but its unique conversion rate to Canadian
+    dollars makes him a bit apprehensive.</p>
+<p>Several steps are need to compute the value of <span class="tex2jax_process">$B$</span> <em>ByteConn333ct</em> dollars
+    (guaranteed to be an integer) in Canadian dollars. First, treat
+    <span class="tex2jax_process">$B$</span> as a string consisting
+    of only digits. Next, define a subset <span class="tex2jax_process">$S$</span> of characters from <span class="tex2jax_process">$B$</span> “valid” iff the characters in
+    <span class="tex2jax_process">$S$</span> can be concatenated
+    together in some way to form a number with no leading zeros
+    that is also divisible by <span class="tex2jax_process">$3$</span>. Finally, the converted value in
+    Canadian dollars is the number of “valid” subsets modulo
+    <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<p>Since Mr. Krabs is already so rich from his successful fast
+    food restaurant business, he has decided to dump all of his
+    life’s saving into investing <em>ByteConn333ct</em>. Mr. Krabs
+    can’t wait to find out what amazing returns he will get, so he
+    has hire you to compute the value of <span class="tex2jax_process">$S$</span> <em>ByteConn333ct</em> dollars in
+    Canadian dollars so that he celebrate in advance this amazing
+    investment he has made.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$1\leq N\leq 200\, 000$</span>.
+    The second line of the input contains a single <span class="tex2jax_process">$N$</span>-digit non-negative integer
+    <span class="tex2jax_process">$S$</span> without leading
+    zeros.</p>
+<h2>Output</h2>
+<p>Output the value of <span class="tex2jax_process">$S$</span>
+<em>ByteConn333ct</em> dollars in Canadian dollars (i.e. the
+    number of valid subsets of <span class="tex2jax_process">$S$</span> modulo <span class="tex2jax_process">$10^9 + 7$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+361
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+11
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+3051
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

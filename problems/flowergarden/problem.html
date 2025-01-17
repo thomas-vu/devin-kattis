@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Due to the high cost of flowers in Alberta, Yraglac decided
+    it would be a good idea to plant his own flower garden instead
+    of buying flowers for his girlfriend. We can model his flower
+    garden on a two-dimensional grid, where the position of each
+    flower is given by an <span class="tex2jax_process">$(x,y)$</span> coordinate. Today, Yraglac
+    decided it would be a good idea to water his flowers one by
+    one, starting at the origin <span class="tex2jax_process">$(0,0)$</span> and walking to each flower. He
+    will take the shortest path at each step. However, it turns out
+    that Yraglac has an important meeting today and has a limited
+    amount of time available to water the flowers. Thus, he has
+    ranked all of the flowers in his garden from most to least
+    important and will water them in that order. For religious
+    reasons, the number of flowers watered by Yraglac must be a
+    prime number, or zero. Help Yraglac find the maximum number of
+    flowers he can water.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$T \leq 10$</span> giving the number of test
+    cases. Each test case starts with a line containing an integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 20\, 000$</span>), the number
+    of flowers in the garden, and an integer <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$0
+    \leq D \leq 10^9$</span>), the maximum total distance that can
+    be travelled by Yraglac. The next <span class="tex2jax_process">$N$</span> lines contain two integers
+    <span class="tex2jax_process">$x_ i$</span> and <span class="tex2jax_process">$y_ i$</span> (<span class="tex2jax_process">$-500 \leq x_ i,y_ i \leq 500$</span>), the
+    coordinates of the <span class="tex2jax_process">$i$</span>th
+    flower. The flowers are ordered from most to least important.
+    Every flower has a different position, and there will not be a
+    flower at the origin <span class="tex2jax_process">$(0,0)$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    maximum number of flowers that Yraglac can water.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 1
+0 1
+1 0
+2 2
+0 1
+1 0
+2 3
+0 1
+1 0
+</pre>
+</td>
+<td>
+<pre>
+0
+0
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

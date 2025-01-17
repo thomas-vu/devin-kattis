@@ -1,0 +1,170 @@
+<div class="problembody">
+<p>A set of gears is installed on the plane. You are given the
+    center coordinate and radius of each gear, which are all
+    integer-valued. For a given source and target gear, indicate
+    what happens to the target gear if you attempt to turn the
+    source gear. Possibilities are:</p>
+<ul class="itemize">
+<li>
+<p>The source gear cannot move, because it would drive some
+        gear in the arrangement to turn in both directions.</p>
+</li>
+<li>
+<p>The source gear can move, but it is not connected to the
+        target gear.</p>
+</li>
+<li>
+<p>The source gear turns the target gear, at a certain
+        ratio</p>
+</li>
+</ul>
+<p>If the source gear cannot move, give this result, even if
+    the source and target gears are not connected.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 1000$</span>), the total number of gears. Following
+    this will be <span class="tex2jax_process">$n$</span> lines,
+    one per gear, containing three integers: the <span class="tex2jax_process">$x, y$</span> (<span class="tex2jax_process">$-10\, 000 \le x, y \le 10\, 000$</span>) and
+    <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$1 \le r \le 10\, 000$</span>) values for the
+    gear, where <span class="tex2jax_process">$(x,y)$</span> is the
+    position of the axle of the gear, and <span class="tex2jax_process">$r$</span> is its radius. Assume that the
+    teeth of the gears are properly designed, and accounted for in
+    the radius, so that any gear will mesh with any other gear if
+    (and only if) they are tangent to each other. The gears will
+    never overlap. The source gear is the first gear, the target
+    gear is the last gear specified.</p>
+<h2>Output</h2>
+<p>Output a single line, with the following content, based on
+    the result:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">-1</tt> if the source gear cannot
+        move.</p>
+</li>
+<li>
+<p><tt class="ttfamily">0</tt> if the source gear can move
+        but is not connected to the target.</p>
+</li>
+<li>
+<p><tt class="ttfamily">a b</tt> if the source gear moves
+        the target gear, where <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are two space-separated
+        integers, and <span class="tex2jax_process">$a:b$</span> is
+        the ratio of source gear revolutions to target gear
+        revolutions reduced to its lowest form (i.e. they have no
+        common factor other than <span class="tex2jax_process">$1$</span>).</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$a$</span> is always
+            positive.</p>
+</li>
+<li>
+<p>If the target turns in the same direction as the
+            source, <span class="tex2jax_process">$b$</span> is
+            positive.</p>
+</li>
+<li>
+<p>If the target turns in the opposite direction as the
+            source, <span class="tex2jax_process">$b$</span> is
+            negative.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 0 100
+0 300 200
+</pre>
+</td>
+<td>
+<pre>
+2 -1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 0 100
+0 300 100
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+16
+10 10 5
+20 10 5
+30 10 5
+40 10 5
+10 20 5
+20 20 5
+30 20 5
+40 20 5
+10 30 5
+20 30 5
+30 30 5
+40 30 5
+10 40 5
+20 40 5
+30 40 5
+40 40 5
+</pre>
+</td>
+<td>
+<pre>
+1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+0 0 1
+0 3 2
+4 0 3
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

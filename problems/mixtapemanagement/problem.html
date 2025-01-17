@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>Mary has created a mixtape with her favourite reggae tracks.
+    The mixtape consists of a list of MP3 files on her computer
+    that she wants to share with her friends Wendy and Larry.
+    However she knows that her friends have different musical
+    tastes and will therefore also have different preferences for
+    the order in which the tracks are played.</p>
+<p>Mary knows that Wendy is a Windows user and Larry is a Linux
+    user and realised that she can use this to her advantage. This
+    is because Windows and Linux use different methods to sort
+    files within a directory in case their names contain numerical
+    data. In Windows, numbers in file names are read as actual
+    numbers, causing the files to be sorted by increasing values of
+    these numbers. In Linux, there is no special handling for
+    numbers, so file names are sorted lexicographically. See
+    Figure 1 for an example of file sorting on the two
+    operating systems.</p>
+<div class="figure" id="fig:filenames">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Linux</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Windows</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">337.mp3</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">7.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">34.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">34.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">3401.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">79.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">7.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">337.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">780.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">780.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">7803.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">3401.mp3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">79.mp3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">7803.mp3</tt></p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the first sample case.
+          Note that the file extensions <tt class="ttfamily">.mp3</tt> do not influence the ordering and
+          are purely for illustration.
+        </div>
+</center>
+</div>
+<p>After deciding on the order in which she wants Wendy and
+    Larry to listen to the tracks, Mary has already sorted the
+    files according to Larry’s taste. Now she wants to rename the
+    files such that the filenames are distinct positive integers
+    without leading zeroes, they are sorted in increasing
+    lexicographic order, and when sorting them by value the new
+    order will match Wendy’s taste. For this purpose, she has come
+    up with a permutation <span class="tex2jax_process">$p_1,\dots
+    ,p_ n$</span> that describes how to rearrange Larry’s list into
+    Wendy’s list: for every <span class="tex2jax_process">$i$</span>, the <span class="tex2jax_process">$i$</span>th number in lexicographic order
+    needs to be the <span class="tex2jax_process">$p_ i$</span>th
+    smallest by value. Help Mary find a suitable sequence of
+    filenames.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 100$</span>), the number of
+        tracks.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$n$</span>
+        distinct integers <span class="tex2jax_process">$p_1,\dots
+        ,p_ n$</span> (<span class="tex2jax_process">$1 \le p_ i
+        \le n$</span> for each <span class="tex2jax_process">$i$</span>), the given permutation.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> distinct
+    integers in lexicographically increasing order, your sequence
+    of filenames. All numbers must be positive integers less than
+    <span class="tex2jax_process">$10^{1000}$</span> and may not
+    contain leading zeroes. Any valid sequence of filenames will be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+4 2 6 1 5 7 3
+</pre>
+</td>
+<td>
+<pre>337 34 3401 7 780 7803 79
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+4 1 3 2
+</pre>
+</td>
+<td>
+<pre>234 6 87 9
+</pre>
+</td>
+</tr>
+</table>
+</div>

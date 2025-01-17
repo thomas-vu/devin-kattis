@@ -1,0 +1,132 @@
+<div class="problembody">
+<p>Nimions speak a funny form of language.</p>
+<p>Whichever word they are trying to say, from which ever
+    language, it doesn’t quite come out the same. There are several
+    rules for converting words, from any language, to
+    nimionese.</p>
+<p>For any word:</p>
+<ul class="itemize">
+<li>
+<p><em>All nimion words start with ‘hard’ consonants</em>
+        (b, c, d, g, k, n, p, t) so you must replace each first
+        letter with the nearest one (choose the option nearest to
+        ‘A’ if there is a tie).</p>
+<ul class="itemize">
+<li>
+<p>“Each” becomes “Dach”.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Any hard consonant</em> in subsequent syllables
+        after the first one is remarkably better if it is replaced
+        with the same consonant as the one at the start of the
+        word.</p>
+<ul class="itemize">
+<li>
+<p>“Hip-po” becomes “Gip-go”.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>No word ends in a hard consonant.</em> You must add
+        an ‘ah’, ‘oh’ or ‘uh’ at the end, whichever is nearest,
+        rounding toward ‘A’ in the case of a tie, to the last hard
+        consonant in the word.</p>
+<ul class="itemize">
+<li>
+<p>“Dog” becomes “Dogah”</p>
+</li>
+<li>
+<p>“Hip” becomes “Gipoh”.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The only line of input contains a sentence of between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$50$</span> words and up to <span class="tex2jax_process">$10^4$</span> symbols, including single
+    whitespace characters (‘ ’) between words and the dashes
+    (‘-’) between each syllable.</p>
+<p>Apart from dashes, the sentence will contain solely
+    lower-and-upper-case Latin letters—and only the first letters
+    of words can be upper-case.</p>
+<h2>Output</h2>
+<p>Write to standard output the same sentence from the input,
+    translated to nimionese. Remove any dashes before printing.</p>
+<p>It is guaranteed that the output will fit within
+    <span class="tex2jax_process">$5 \cdot 10^4$</span>
+    characters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+I love ba-na-na
+</pre>
+</td>
+<td>
+<pre>
+Gah kove bababa
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+Cat-a-pil-lar
+</pre>
+</td>
+<td>
+<pre>
+Catacillar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+Co-ding is the best
+</pre>
+</td>
+<td>
+<pre>
+Cociccah gs the bestuh
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+I rock at co-lour-ing
+</pre>
+</td>
+<td>
+<pre>
+Gah pockoh btuh colouriccah
+</pre>
+</td>
+</tr>
+</table>
+</div>

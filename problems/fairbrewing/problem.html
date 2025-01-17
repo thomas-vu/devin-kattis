@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/fairbrewing/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fairbrewing/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Vats at beer brewery Georgia, USA. <a href="https://www.publicdomainpictures.net/en/view-image.php?image=314197picture=cerveceria-cervecera">
+        Public Domain by Paul Brennan</a>
+</div>
+</div>
+<p><em>United Brewery</em> was born through fusions and mergers
+    of various small and local breweries that each produced their
+    own particular kind of beer. The recipes of the smaller
+    breweries were strongly loved by local fan bases, and the beers
+    continued to be brewed at United Brewery. In an effort to
+    prevent unrest between different fan bases, United Brewery
+    adopted a fairness principle: They agreed to brew and
+    distribute an identical amount of each beer.</p>
+<p>Naturally, the brewery is interested in brewing the largest
+    total amount of beer possible. Due to limitations of the
+    production facilities at United Brewery, all this turned out to
+    be harder than expected.</p>
+<p>United Brewery’s production facilities consist of one tank
+    and one bottling line per beer, as well as some internal
+    joints, connected through a system of pipes. Here is an example
+    with <span class="tex2jax_process">$3$</span> beers and
+    <span class="tex2jax_process">$4$</span> joints that
+    corresponds to the first sample input:</p>
+<center>
+<img alt="\includegraphics[width=.2\textwidth ]{sample1.pdf}" src="/problems/fairbrewing/file/statement/en/img-0002.png" style="width:20.00%"/>
+</center>
+<p>Each tank and each bottling line connects to exactly one
+    pipe, but many pipes may connect to the same joint. Each joint
+    can be configured to internally connect disjoint pairs of
+    incident pipes, without further restrictions. For instance,
+    here are <span class="tex2jax_process">$3$</span> different
+    ways of configuring the same <span class="tex2jax_process">$5$</span>-pipe joint:</p>
+<center>
+<img alt="\includegraphics[width=.5\textwidth ]{joint.pdf}" src="/problems/fairbrewing/file/statement/en/img-0003.png" style="width:50.00%"/>
+</center>
+<p>A valid configuration of the joints allows beer to flow from
+    the beer tanks to distinct bottling lines. The capacity of each
+    pipe limits the amount of beer that can travel through it. The
+    amount of each beer produced in a valid configuration is the
+    minimum capacity of any pipe through which beer travels in that
+    configuration.</p>
+<h2>Input</h2>
+<p>The first line of input consists of <span class="tex2jax_process">$3$</span> integers: the
+    number <span class="tex2jax_process">$K$</span> of beer
+    tanks and bottling lines, where <span class="tex2jax_process">$2 \leq K \leq 10$</span>, the
+    number <span class="tex2jax_process">$N$</span> of joints,
+    where <span class="tex2jax_process">$0 \leq N \leq
+    1000$</span>, and the number <span class="tex2jax_process">$M$</span> of pipes, where <span class="tex2jax_process">$K \leq M \leq 10^4$</span>.</p>
+<p>The following <span class="tex2jax_process">$M$</span> lines
+    each consist of three integers <span class="tex2jax_process">$A_ i$</span>, <span class="tex2jax_process">$B_ i$</span>, and <span class="tex2jax_process">$C_ i$</span> describing the pipes: The
+    <span class="tex2jax_process">$i$</span>th pipe connects
+    <span class="tex2jax_process">$A_ i$</span> with <span class="tex2jax_process">$B_ i$</span> and has a capacity <span class="tex2jax_process">$C_ i$</span>. Here, <span class="tex2jax_process">$A_ i$</span> and <span class="tex2jax_process">$B_ i$</span> are distinct <em>connection
+    points</em>: Each connection point is a number between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2K+N$</span>, where numbers <span class="tex2jax_process">$1, \ldots , K$</span> represent beer tanks,
+    numbers <span class="tex2jax_process">$K+1, \ldots , 2
+    K$</span> represent bottling lines, and numbers <span class="tex2jax_process">$2K+1, \ldots , 2 K + N$</span> represent
+    joints. There is at most one pipe between each pair of
+    connection points. Moreover, we know that <span class="tex2jax_process">$1 \leq C_ i \leq 10^9$</span> holds.</p>
+<p>Finally, each beer tank and each bottling line connects to
+    exactly one pipe.</p>
+<h2>Output</h2>
+<p>If no valid configuration exists, output “Expand brewery”.
+    Otherwise, output a single integer: the amount of each beer
+    produced in the best valid configuration.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 11
+1 7 20
+2 8 10
+3 10 30
+4 7 30
+5 9 20
+6 10 30
+7 8 10
+8 10 12
+8 9 7
+7 9 8
+9 10 9
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 5
+1 5 2
+2 5 2
+5 6 2
+6 3 2
+6 4 2
+</pre>
+</td>
+<td>
+<pre>Expand brewery
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 0 2
+1 2 1
+3 4 1
+</pre>
+</td>
+<td>
+<pre>Expand brewery
+</pre>
+</td>
+</tr>
+</table>
+</div>

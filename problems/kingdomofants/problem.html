@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>The Chimera Ants are building their own kingdom!</p>
+<p>There are <span class="tex2jax_process">$n$</span> ants
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. Each ant is
+    responsible for kingdom construction in a rectangular region.
+    More precisely, the <span class="tex2jax_process">$i$</span>-th
+    ant is assigned a rectangular region in Cartesian plane, with
+    edges parallel to the two axes, and opposite corners at
+    <span class="tex2jax_process">$(x_ i, y_ i)$</span> and
+    <span class="tex2jax_process">$(u_ i, v_ i)$</span>.</p>
+<p>Some regions or parts of some regions might be assigned to
+    multiple ants. Usually, this would pose no problem: when two
+    ants disagree, all the ants assigned to this region will vote
+    for the two options, and the option with more votes will be
+    implemented. However, this method does not work if a non-zero,
+    even number of ants are assigned to a region, as the voting
+    result may be a tie. The ants would like to know what are the
+    total area of such region. Please help them!</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \le n \le 10^5)$</span>.</p>
+<p>In the next <span class="tex2jax_process">$n$</span> line,
+    the <span class="tex2jax_process">$i$</span>-th line contains
+    <span class="tex2jax_process">$4$</span> integers, <span class="tex2jax_process">$x_ i$</span>, <span class="tex2jax_process">$y_ i$</span>, <span class="tex2jax_process">$u_ i$</span> and <span class="tex2jax_process">$v_ i$</span> <span class="tex2jax_process">$(-10^9 \le x_ i, y_ i, u_ i, v_ i \le
+    10^9)$</span>. <span class="tex2jax_process">$(x_ i, y_
+    i)$</span> and <span class="tex2jax_process">$(u_ i, v_
+    i)$</span> are the coordinates of the two opposite corners of
+    the rectangular region assigned to the <span class="tex2jax_process">$i$</span>-th ant.</p>
+<h2>Output</h2>
+<p>Print a single integer — the total area assigned to a
+    positive even number of ants.</p>
+<h2>Explanation of sample test</h2>
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{illustration.png}" src="/problems/kingdomofants/file/statement/en/img-0001.png" style="width:45.00%"/>
+</center>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+10 10 20 20
+15 15 25 30
+</pre>
+</td>
+<td>
+<pre>25
+</pre>
+</td>
+</tr>
+</table>
+</div>

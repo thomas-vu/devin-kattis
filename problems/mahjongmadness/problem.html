@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>Mahjong is an ancient game similar to poker, where players
+    build hands of tiles to win. You are playing a very simple
+    version of the game, where there is only one player and one
+    “suit” of tiles. Tiles can be numbered from <span class="tex2jax_process">$1-9$</span>, and there are a total of
+    <span class="tex2jax_process">$4$</span> of each numbered tile,
+    resulting in a total of <span class="tex2jax_process">$36$</span> tiles.</p>
+<p>You win the game once you complete a hand, which consists of
+    <span class="tex2jax_process">$14$</span> tiles in total:
+    <span class="tex2jax_process">$4$</span> “sets” of tiles and a
+    “pair” of tiles. A “pair” of tiles is any pair of the same
+    numbered tile, and a “set” of tiles can be either <span class="tex2jax_process">$3$</span> of the same numbered tile, or a
+    <span class="tex2jax_process">$3$</span>-length straight of
+    numbered tiles (<span class="tex2jax_process">$1-2-3$</span> or
+    <span class="tex2jax_process">$6-7-8$</span>). If a tile is
+    counted in a “set” or “pair”, it cannot be counted again in any
+    other “set” or “pair”. No set can wrap around (<span class="tex2jax_process">$8-9-1$</span> is not a valid set).</p>
+<p>In addition, different completed hands have different
+    scores. At the start of each game, you will be given a number
+    <span class="tex2jax_process">$x$</span> such that all tiles
+    numbered <span class="tex2jax_process">$x$</span> will be worth
+    more points. In this game, a completed hand is worth
+    <span class="tex2jax_process">$1$</span> point, and each tile
+    numbered <span class="tex2jax_process">$x$</span> in your
+    completed hand is worth <span class="tex2jax_process">$1$</span> additional point. An incomplete
+    hand is worth <span class="tex2jax_process">$0$</span>
+    points.</p>
+<p>In this version of the game, you are given a starting hand
+    of <span class="tex2jax_process">$14$</span> tiles out of the
+    total <span class="tex2jax_process">$36$</span> tiles, and you
+    are given one turn where you must discard a tile from your hand
+    and draw a new tile from the remaining unused tiles. Given a
+    starting hand and the extra point tile, find the maximal
+    expected point value after drawing and discarding a single
+    tile.</p>
+<p>Also note that you must discard a tile even if you are dealt
+    a winning starting hand.<br/></p>
+<p>In the first sample input, you would output <span class="tex2jax_process">$0.863636$</span>, since if you discard the
+    <span class="tex2jax_process">$1$</span>, you complete your
+    hand if you draw any tile other than <span class="tex2jax_process">$1$</span>. This means that out of the
+    <span class="tex2jax_process">$22$</span> tiles remaining,
+    there are <span class="tex2jax_process">$19$</span> tiles that
+    can complete the hand, and the resulting hand will be worth
+    <span class="tex2jax_process">$1$</span> point, so the expected
+    point value after discarding the <span class="tex2jax_process">$1$</span> would be <span class="tex2jax_process">$\frac{19}{22} = 0.863636$</span>. An example
+    of the hand that can be formed after discarding a <span class="tex2jax_process">$1$</span> and picking up a <span class="tex2jax_process">$9$</span> would be <span class="tex2jax_process">$3-3-3, \; \; 4-5-6, \; \; 7-8-9, \; \;
+    9-9-9, \; \; 8-8$</span>. On the other hand, if you discard the
+    <span class="tex2jax_process">$4$</span> or <span class="tex2jax_process">$7$</span> tile instead and wait for the
+    <span class="tex2jax_process">$1$</span>, your expected value
+    is lower: <span class="tex2jax_process">$\frac{3}{22}*3 =
+    0.409091$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$x$</span> that represents the
+    extra point tile. (<span class="tex2jax_process">$1 \leq x \leq
+    9$</span>)</p>
+<p>The second line of input contains <span class="tex2jax_process">$14$</span> space-separated integers
+    <span class="tex2jax_process">$n_ i$</span> representing the
+    tiles in your starting hand. (<span class="tex2jax_process">$1
+    \leq n_ i \leq 9$</span>)</p>
+<h2>Output</h2>
+<p>Output one line containing a single real value representing
+    the maximal expected point value of your starting hand. Your
+    answer will be considered correct if it is within an absolute
+    or relative error of <span class="tex2jax_process">$10^{-6}$</span></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1 3 3 3 4 5 6 7 8 8 8 9 9 9
+</pre>
+</td>
+<td>
+<pre>0.863636
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 3 3 3 4 5 6 7 8 8 8 9 9 9
+</pre>
+</td>
+<td>
+<pre>3.500000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1 1 2 2 4 4 6 6 7 7 8 8 9 9
+</pre>
+</td>
+<td>
+<pre>0.000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

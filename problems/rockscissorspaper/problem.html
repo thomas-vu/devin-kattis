@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>Bart’s sister Lisa has created a new civilization on a
+    two-dimensional grid. At the outset each grid location may be
+    occupied by one of three life forms: Rocks, Scissors, or
+    Papers. Each day, differing life forms occupying horizontally
+    or vertically adjacent grid locations wage war. In each war,
+    Rocks always defeat Scissors, Scissors always defeat Papers,
+    and Papers always defeat Rocks. At the end of the day, the
+    victor expands its territory to include the loser’s grid
+    position. The loser vacates the position.</p>
+<p>Your job is to determine the territory occupied by each life
+    form after <span class="tex2jax_process">$n$</span> days.</p>
+<h2>Input</h2>
+<p>The first line of input contains <span class="tex2jax_process">$1 \le t \le 5$</span>, the number of test
+    cases. Each test case begins with three posititve integers not
+    greater than <span class="tex2jax_process">$100$</span>:
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span>, the number of rows and columns in
+    the grid, and <span class="tex2jax_process">$n$</span>, the
+    number of days. The grid is represented by the <span class="tex2jax_process">$r$</span> lines that follow, each with
+    <span class="tex2jax_process">$c$</span> characters. Each
+    character in the grid is ‘<tt class="ttfamily">R</tt>’,
+    ‘<tt class="ttfamily">S</tt>’, or ‘<tt class="ttfamily">P</tt>’, indicating that it is occupied by Rocks,
+    Scissors, or Papers respectively.</p>
+<h2>Output</h2>
+<p>For each test case, print the grid as it appears at the end
+    of the <span class="tex2jax_process">$n$</span>th day.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3 3 1
+RRR
+RSR
+RRR
+3 4 2
+RSPR
+SPRS
+PRSP
+</pre>
+</td>
+<td>
+<pre>
+RRR
+RRR
+RRR
+
+RRRS
+RRSP
+RSPR
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>You recently discovered there is treasure buried on your
+    farm land. A <b class="bf">lot</b> of treasure! You quickly
+    decide to put a fence around the land.</p>
+<p>Alas, you have but a single fence post! You will have to
+    drive to town to get more fencing material. But you can’t just
+    leave the land as open as it is, so you decide to create a
+    makeshift fence to protect some of the treasure while you are
+    gone. You will place the post in the ground and run some wire
+    in a straight line between two sides of your barn wall and the
+    fence post to section off a triangular area. Also, the ground
+    is very hard: only places that were dug up to bury a treasure
+    are soft enough for you to quickly place the fence post.</p>
+<p>To figure out the best option, you first calculate the
+    following. For each of the treasures in your field, if you were
+    to place the fence post at that treasure and complete the fence
+    as described, then what is the total value of all treasures
+    that would be enclosed by the fence? Note that the treasure
+    under the post you place is not considered enclosed by the
+    fence (it might not be safe since someone could dig around the
+    post).</p>
+<p>Sample Input 1 is illustrated below. The triangle that
+    includes the point <span class="tex2jax_process">$(-1,10)$</span> encloses exactly two other
+    treasure points which have total value <span class="tex2jax_process">$4+8=12$</span>.</p>
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{triangle.pdf}" src="/problems/trianglecontainment/file/statement/en/img-0001.png" style="width:40.00%"/>
+</center>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^5$</span>) and <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$1
+    \leq x \leq 10^9$</span>), where <span class="tex2jax_process">$n$</span> is the number of treasure points
+    and <span class="tex2jax_process">$x$</span> fixes the two
+    corners of the barn wall at locations <span class="tex2jax_process">$(0,0)$</span> and <span class="tex2jax_process">$(x,0)$</span>.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains three integers <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$-10^9 \leq x \leq 10^9$</span>, <span class="tex2jax_process">$1 \leq y \leq 10^9$</span>, and <span class="tex2jax_process">$1 \leq v \leq 10^9$</span>) giving the
+    location <span class="tex2jax_process">$(x,y)$</span> and value
+    <span class="tex2jax_process">$v$</span> of one of the treasure
+    points. All of these points are distinct. It is also guaranteed
+    that for each point, the triangle formed with the barn wall
+    will not contain any other treasure point on its boundary.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines, one
+    for each treasure point in the order of the input. For each
+    point output a single integer, which is the total value of all
+    points in the interior of the triangle that point forms with
+    the barn wall. Note that the value of the point itself should
+    be excluded from this sum.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 8
+-8 1 1
+-1 10 2
+0 3 4
+7 1 8
+8 2 16
+</pre>
+</td>
+<td>
+<pre>0
+12
+0
+0
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 6
+0 1 1
+2 3 10
+2 5 100
+3 1 1000
+3 5 10000
+4 5 100000
+</pre>
+</td>
+<td>
+<pre>0
+1000
+1010
+0
+1010
+1000
+</pre>
+</td>
+</tr>
+</table>
+</div>

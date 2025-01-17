@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>You just got your new passport, fresh with pages ready to be
+    stamped by immigration officers. Sadly, because your passport
+    has so many pages, immigration officers are too lazy to try to
+    use your pages efficiently, so you may need to get a new
+    passport sooner than you think...</p>
+<p>You have some trips prepared. For each trip, when you go
+    through passport control, the immigration officer will look for
+    some contiguous pages, none of which are stamped, and then
+    stamp all of them. Because the officer is lazy, there is no
+    guarantee which contiguous pages get stamped.</p>
+<p>You will start making these trips in order until your
+    passport no longer has enough contiguous empty pages to satisfy
+    the next trip, at which point you will apply for a new
+    passport. Your plans are fixed - you will not skip a trip in
+    the middle even if it means you could make more future
+    trips.</p>
+<p>If the immigration officers conspire against you, find the
+    first trip where it is possible you cannot travel because your
+    passport does not have enough consecutive blank pages (or if
+    you can always make all trips without running out of blank
+    pages).</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^5$</span>) and <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \le p \le 10^{18}$</span>), where <span class="tex2jax_process">$n$</span> is the number of trips you have
+    planned, and <span class="tex2jax_process">$p$</span> is the
+    number of pages in your new passport.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains a single integer <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le c \le 10^{18}$</span>), which is the number of contiguous
+    pages which will need to be stamped for that trip.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    trips you could possibly take before you would need a new
+    passport because there aren’t enough consecutive blank pages
+    for your next trip. Output <span class="tex2jax_process">$n$</span> if you can take all trips, even in
+    the worst case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 15
+1
+2
+3
+4
+5
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

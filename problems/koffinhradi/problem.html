@@ -1,0 +1,126 @@
+<div class="problembody">
+<p>Oh no! Now towards the end of the term there are all kinds
+    of exams and final projects closing in! By your side you of
+    course have your trusty stash of caffeinated drinks. Tea,
+    coffee, energy drinks and more can help you cover all the
+    material and finish all the projects in the time you have. Such
+    drinks are however far from free, so now the question is how
+    deep you have to dip into your stash to get everything done in
+    time.</p>
+<p>Each drink halves the number of hours a task will take,
+    rounded down to the nearest whole number of hours. Two drinks
+    will thus half the hours in this manner twice. For example a
+    <span class="tex2jax_process">$7$</span> hour project goes down
+    to a single hour after two drinks.</p>
+<p>Each exam or project has a deadline and has to be finished
+    by that date. Everything is given in hours and we of course
+    assume there will be no sleep or other distractions from
+    working on studies.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single positive integer
+    <span class="tex2jax_process">$n$</span>, the number of tasks.
+    Next there are <span class="tex2jax_process">$n$</span> lines,
+    each containing two integers <span class="tex2jax_process">$1
+    \leq t_ i, s_ i \leq 10^9$</span>. <span class="tex2jax_process">$t_ i$</span> denotes the number of hours it
+    will take to complete the task without caffeine, <span class="tex2jax_process">$s_ i$</span> denotes how many hours from now
+    the task has to be finished.</p>
+<h2>Output</h2>
+<p>Print the minimum number of caffeinated drinks it will take
+    to finish everything in time. You may assume that all tasks can
+    be finished in time given enough caffeine. Note that this is
+    not true to real life.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All <span class="tex2jax_process">$t_ i = 1$</span>
+          and <span class="tex2jax_process">$n \leq
+          10^5$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All <span class="tex2jax_process">$s_ i = 2016$</span>
+          (<span class="tex2jax_process">$12$</span> weeks) and
+          <span class="tex2jax_process">$n \leq 10^5$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 500$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$n \leq
+          10^5$</span>.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+5 10
+8 10
+10 21
+15 21
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

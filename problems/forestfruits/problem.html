@@ -1,0 +1,121 @@
+<div class="problembody">
+<p>You stay in a cottage at a clearing in a forest. The forest
+    consists of <span class="tex2jax_process">$V$</span> clearings
+    and <span class="tex2jax_process">$E$</span> trails. Clearings
+    are open spots where fruits may be found, and are numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$V$</span>. Your cottage is at clearing
+    <span class="tex2jax_process">$1$</span>. Trails connects two
+    clearings. You ensure self sustainability by gathering fruits
+    in the forest for food.</p>
+<p>Through extensive reconnaissance, you learn that there are
+    <span class="tex2jax_process">$C$</span> clearings containing
+    exactly one batch of growing fruits. You also learn that fruits
+    in this forest, once picked, will take <span class="tex2jax_process">$K$</span> days to grow before it is ready to
+    be picked again. (A fruit picked on day <span class="tex2jax_process">$X$</span> is ready to be picked again on day
+    <span class="tex2jax_process">$X + K$</span>)</p>
+<p>It is currently day <span class="tex2jax_process">$1$</span>. Coincidentally, all <span class="tex2jax_process">$C$</span> clearings have one batch of fruits
+    ready to be picked. From now until day <span class="tex2jax_process">$M$</span> inclusive, what is the minimum
+    distance you have to walk per day in order to be able to gather
+    at least one batch of fruits and return to your cottage every
+    day?</p>
+<h2>Input</h2>
+<p>The first line of the input contains <span class="tex2jax_process">$5$</span> integers <span class="tex2jax_process">$V$</span> (<span class="tex2jax_process">$1
+    \leq V \leq 20\, 000$</span>) <span class="tex2jax_process">$E$</span> (<span class="tex2jax_process">$1
+    \leq E \leq 100\, 000$</span>) <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$1
+    \leq C \leq V$</span>) <span class="tex2jax_process">$K$</span>
+    (<span class="tex2jax_process">$1 \leq K \leq 2\, 000\, 000\,
+    000$</span>) and <span class="tex2jax_process">$M$</span>
+    (<span class="tex2jax_process">$1 \leq M \leq 2\, 000\, 000\,
+    000$</span>).</p>
+<p>The following <span class="tex2jax_process">$E$</span> lines
+    contains <span class="tex2jax_process">$3$</span>
+    space-separated integers each, <span class="tex2jax_process">$u_ i\: v_ i\: w_ i$</span> (<span class="tex2jax_process">$1 \leq u_ i, v_ i \leq V$</span>,
+    <span class="tex2jax_process">$1 \leq w_ i \leq 1\, 000\,
+    000$</span>) describing a trail that directly connects clearing
+    <span class="tex2jax_process">$u$</span> to clearing
+    <span class="tex2jax_process">$v$</span> directly with a length
+    of <span class="tex2jax_process">$w$</span> unit distance.
+    There are at most one trail directly connecting any two
+    clearings, and no trail connects a clearing to itself. There
+    could be clearings that cannot be reached from the cottage.</p>
+<p>The last line of the input contains <span class="tex2jax_process">$C$</span> distinct space separated integers
+    <span class="tex2jax_process">$f_1$</span> to <span class="tex2jax_process">$f_ C$</span> (<span class="tex2jax_process">$1 \leq f \leq V$</span>), the clearings
+    where fruits grow.</p>
+<h2>Output</h2>
+<p>Output a single value—the required answer. If it is
+    impossible to gather at least one batch of fruits every day
+    from day <span class="tex2jax_process">$1$</span> until day
+    <span class="tex2jax_process">$M$</span>, output <span class="tex2jax_process">$-1$</span> instead.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(25 Points)</b>: <span class="tex2jax_process">$C = 1, K = 1$</span></p>
+</li>
+<li>
+<p><b class="bfseries">(25 Points)</b>: <span class="tex2jax_process">$C = M, K = M$</span></p>
+</li>
+<li>
+<p><b class="bfseries">(30 Points)</b>: <span class="tex2jax_process">$1 \leq M \leq 100\, 000$</span></p>
+</li>
+<li>
+<p><b class="bfseries">(20 Points)</b>: No additional
+        constraint.</p>
+</li>
+</ol>
+<h2>Sample Input Explanation</h2>
+<p>For sample <span class="tex2jax_process">$1$</span>, there
+    are <span class="tex2jax_process">$2$</span> clearings with
+    fruits, one located at clearing <span class="tex2jax_process">$2$</span> (<span class="tex2jax_process">$1$</span> unit distance away from the
+    cottage) and one located at clearing <span class="tex2jax_process">$3$</span> (<span class="tex2jax_process">$2$</span> unit distance away from the
+    cottage). Suppose you pick the fruit at clearing <span class="tex2jax_process">$2$</span> on day <span class="tex2jax_process">$1$</span>. The total distance traveled on
+    this day is <span class="tex2jax_process">$2$</span> units- the
+    distance from your cottage to clearing <span class="tex2jax_process">$2$</span> and back. On day <span class="tex2jax_process">$2$</span>, the fruit at clearing
+    <span class="tex2jax_process">$2$</span> has not grown back yet
+    (it will be available for picking on day <span class="tex2jax_process">$3$</span>), and you will have to walk to
+    clearing <span class="tex2jax_process">$3$</span> for fruits.
+    The furthest distance you have walked in a single day so far is
+    <span class="tex2jax_process">$4$</span> units- the distance
+    from the cottage to clearing <span class="tex2jax_process">$3$</span> and back. The answer is the same
+    if you had instead picked the fruits at clearing <span class="tex2jax_process">$3$</span> first and then clearing
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>For sample <span class="tex2jax_process">$2$</span>, the
+    fruits at both clearings do not grow back in time.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 2 2 3
+1 2 1
+2 3 1
+2 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 2 3 3
+1 2 1
+2 3 1
+2 3
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

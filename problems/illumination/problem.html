@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>Consider a square grid with lamps in fixed locations. Each
+    lamp can either illuminate its row or its column, but not both.
+    The illumination of each lamp extends over a limited
+    distance.</p>
+<p>Any square in the grid should only be illuminated by at most
+    one lamp in its row and by at most one lamp in its column (one
+    of each is acceptable, as is just the row, just the column, or
+    neither). Determine if it is possible for all lamps to be lit
+    while satisfying these constraints.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains three positive integers,
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le n, r, k \le 1\, 000, k \le n^2$</span>), where <span class="tex2jax_process">$n$</span> is the size of one side of the
+    square grid, <span class="tex2jax_process">$r$</span> is the
+    maximum reach of a lamp, and <span class="tex2jax_process">$k$</span> is the number of lamps. The next
+    <span class="tex2jax_process">$k$</span> lines will each
+    contain two positive integers <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1
+    \le i, j \le n$</span>), indicating that there is a lamp in the
+    grid at row <span class="tex2jax_process">$i$</span>, column
+    <span class="tex2jax_process">$j$</span>.</p>
+<p>Each lamp can illuminate squares at most <span class="tex2jax_process">$r$</span> units away, and can also
+    illuminate its own square, so the maximum number of squares it
+    can illuminate is <span class="tex2jax_process">$2 r +
+    1$</span>. All lamps will be in distinct locations.</p>
+<h2>Output</h2>
+<p>Output a single integer, <span class="tex2jax_process">$1$</span> if it is possible to light all of
+    the lamps and <span class="tex2jax_process">$0$</span> if it is
+    not possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 5
+1 1
+1 3
+3 1
+3 3
+2 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 6
+1 1
+1 2
+1 3
+3 1
+3 2
+3 3
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{magicbeancube2.png}" src="/problems/magicbeancube/file/statement/en/img-0001.png" style="width:35.00%"/>    <img alt="\includegraphics[width=0.35\textwidth ]{newimage.png}" src="/problems/magicbeancube/file/statement/en/img-0002.png" style="width:35.00%"/>
+</center>
+</div>
+<p>A “Magic Bean” is a combination fidget toy and puzzle, with
+    30 colored beads moving in three circular tracks. In its solved
+    state, the upper circle contains ten indistinguishable orange
+    beads, the lower left circle contains ten indistinguishable
+    grey beads, and the lower right circle contains ten
+    indistinguishable red beads. The beads can be rotated in each
+    circle. In addition, there is a fourth circle in the middle
+    that can be rotated, and in doing so exchanges consecutive
+    triples of beads among the circles.</p>
+<p>Your brother just borrowed your Magic Bean and arbitrarily
+    rotated those circles, scrambling the beads. Your job is to
+    solve the puzzle, by finding a sequence of valid rotations of
+    the four circles that leads back to the solved state. You need
+    not find the shortest such solution, but your solution should
+    use no more than <span class="tex2jax_process">$240$</span>
+    moves. The provided input will be the state of the puzzle after
+    applying some sequence of at most <span class="tex2jax_process">$240$</span> moves.</p>
+<h2>Input</h2>
+<p>Input consists of exactly three lines. Each line contains a
+    string of length ten, consisting only of the characters
+    <tt class="ttfamily">o</tt>, <tt class="ttfamily">g</tt> and
+    <tt class="ttfamily">r</tt>. The first line describes the ten
+    beads in the top circle, the second describes the lower-left
+    circle, and the third describes the lower-right circle.</p>
+<p>The character <tt class="ttfamily">o</tt> designates an
+    orange bead, <tt class="ttfamily">g</tt> a gray bead, and
+    <tt class="ttfamily">r</tt> a red bead. The beads are listed in
+    clockwise order, numbered according to the diagram.</p>
+<p>The input configuration is the result of applying at most
+    <span class="tex2jax_process">$240$</span> moves on a solved
+    puzzle.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$k$</span>, with <span class="tex2jax_process">$0\le k\le 240$</span>, which is the number
+    of moves you needed to solve the puzzle.</p>
+<p>Next, if <span class="tex2jax_process">$k&gt;0$</span>,
+    output the <span class="tex2jax_process">$k$</span> moves on
+    <span class="tex2jax_process">$k$</span> lines, with one move
+    per line, in order. Each move consists of a single character,
+    specifying the circle to be rotated, followed immediately by a
+    single digit specifying how far to rotate the circle in a
+    clockwise direction. The top circle is specified with
+    ‘<tt class="ttfamily">o</tt>’, the lower left circle with
+    ‘<tt class="ttfamily">g</tt>’, the lower right circle with
+    ‘<tt class="ttfamily">r</tt>’, and the center circle with
+    ‘<tt class="ttfamily">c</tt>’. For the first three circles, the
+    digit specifying the rotation has a value from 1 to 9; for the
+    central circle, it has a value from 1 to 2.</p>
+<p>The following two images show the input positions for the
+    two samples.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{t2.png}" src="/problems/magicbeancube/file/statement/en/img-0003.png" style="width:35.00%"/>    <img alt="\includegraphics[width=0.35\textwidth ]{t3.png}" src="/problems/magicbeancube/file/statement/en/img-0004.png" style="width:35.00%"/>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>gggooooooo
+rrrggggggg
+ooorrrrrrr
+</pre>
+</td>
+<td>
+<pre>1
+c2
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>ggooooooog
+rrrggggggg
+ooorrrrrrr
+</pre>
+</td>
+<td>
+<pre>2
+o1
+c2
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ragingriver/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ragingriver/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/sypsyn/13801996963/">Bradley
+        Huchteman</a>
+</div>
+</div>
+<p>Sally and her friends are trying to cross safely from one
+    bank of a raging river to another. Boulders are scattered
+    within the river, with log planks connecting the banks of the
+    river to some of the boulders, and some pairs of boulders to
+    each other.</p>
+<p>Sally begins by trying to cross the river first. She starts
+    at the left bank and crosses one plank at a time, with the goal
+    of reaching the right bank. Walking across a plank takes Sally
+    one second. Each time she crosses a plank, that plank becomes
+    unstable and collapses into the river (so that neither Sally
+    nor her friends can use that plank again). After Sally has
+    safely reached the right bank, another friend tries to cross
+    the river, and so on, until everyone who is able to make it has
+    crossed the river.</p>
+<p>Given the graph of banks/boulders and planks and the number
+    of people who need the cross the river, what is the smallest
+    amount of total time (in seconds) required for everyone to
+    cross the river safely? If it is impossible for all people to
+    cross, compute the minimum number of people <span class="tex2jax_process">$n$</span> who must be left behind and print
+    <tt class="ttfamily">n people left behind</tt>.</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers
+    <span class="tex2jax_process">$P$</span>, <span class="tex2jax_process">$R$</span>, and <span class="tex2jax_process">$L$</span>: the number of people <span class="tex2jax_process">$P$</span> who must cross the river, the
+    number of boulders <span class="tex2jax_process">$R$</span> in
+    the river, and the number of logs <span class="tex2jax_process">$L$</span> spanning boulders/river banks.
+    These integers satisfy <span class="tex2jax_process">$1 \leq P
+    \leq 10$</span> and <span class="tex2jax_process">$0 \leq R
+    \leq 1\, 000$</span> and <span class="tex2jax_process">$0 \leq
+    L \leq 1\, 000$</span>.</p>
+<p>Then follows <span class="tex2jax_process">$L$</span> lines,
+    each of which contains two integers <span class="tex2jax_process">$E_1$</span> and <span class="tex2jax_process">$E_2$</span> specifying the endpoints on one
+    log. The values for <span class="tex2jax_process">$E_1$</span>
+    and <span class="tex2jax_process">$E_2$</span> are in the range
+    <span class="tex2jax_process">$[-2,R-1]$</span>, where
+    <span class="tex2jax_process">$-2$</span> signifies the left
+    river bank, <span class="tex2jax_process">$-1$</span> signifies
+    the right river bank, and all other values indicate one of the
+    boulders in the river.</p>
+<p>You may assume that every log has two distinct endpoints,
+    and that no two logs span the same pair of boulders/river
+    banks. There is no guarantee that every boulder, or even the
+    right river bank, is reachable from the left river bank.</p>
+<h2>Output</h2>
+<p>If it is possible for all <span class="tex2jax_process">$P$</span> people to reach the right bank,
+    print a single integer, the minimum total time (in seconds)
+    required for all people to cross.</p>
+<p>If some people must be left behind at the left bank, instead
+    print <tt class="ttfamily">n people left behind</tt>, where the
+    integer <span class="tex2jax_process">$n$</span> is the least
+    number of people who must be left behind.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4 7
+-2 0
+0 -1
+-2 1
+1 0
+2 1
+2 3
+3 -1
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 5
+-2 0
+-2 1
+0 1
+1 -1
+0 -1
+</pre>
+</td>
+<td>
+<pre>1 people left behind
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:41.00%">
+<img alt="/problems/gameofgnomes/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gameofgnomes/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/25195310@N02/2772163665">Picture</a>
+        by Danielle Walquist Lynch via flickr, cc by
+      </div>
+</div>The enemy and their massive army is approaching your
+    fortress, and all you have to defend it is a legion of guardian
+    gnomes. There is no hope of winning the battle, so your focus
+    will instead be on causing as much damage as possible to the
+    enemy.
+    <p>You have <span class="tex2jax_process">$n$</span> gnomes at
+    your disposal. Before the battle, they must be divided into at
+    most <span class="tex2jax_process">$m$</span> non-empty groups.
+    The battle will then proceed in turns. Each turn, your gnomes
+    will attack the enemy, causing one unit of damage for each
+    living gnome. Then the enemy will attack by throwing a
+    lightning bolt at one of the <span class="tex2jax_process">$m$</span> groups. The lightning bolt kills
+    <span class="tex2jax_process">$k$</span> of the gnomes in that
+    group, or all of them if the number of living gnomes in the
+    group is less than <span class="tex2jax_process">$k$</span>.
+    The battle ends when all gnomes are dead. The enemy will always
+    throw the lightning bolts in an optimal way such that the total
+    damage caused by the gnomes is minimized.</p>
+<p>Now you wonder, what is the maximum amount of damage you can
+    cause to the enemy if you divide the gnomes into groups in an
+    optimal way?</p>
+<p>For example, if as in Sample Input 1 you have <span class="tex2jax_process">$n=10$</span> gnomes that are to be divided
+    into <span class="tex2jax_process">$m=4$</span> groups, and the
+    lightning bolt does at most <span class="tex2jax_process">$k=3$</span> damage, then an optimal solution
+    would be to create one large group of size <span class="tex2jax_process">$7$</span> and three small groups of size
+    <span class="tex2jax_process">$1$</span>. In the first round,
+    you cause <span class="tex2jax_process">$10$</span> damage and
+    the lightning bolt reduces the large group by <span class="tex2jax_process">$3$</span>. In the next round, you cause
+    <span class="tex2jax_process">$7$</span> damage and the large
+    group is reduced down to size <span class="tex2jax_process">$1$</span>. In the remaining four rounds you
+    do <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$1$</span> damage respectively and the
+    lightning bolt removes one group each round. In total you do
+    <span class="tex2jax_process">$10+7+4+3+2+1 = 27$</span>
+    damage.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing the three
+    integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^9$</span>, <span class="tex2jax_process">$1 \le m,
+    k \le 10^7$</span>), with meanings as described above.</p>
+<h2>Output</h2>
+<p>Output the maximum amount of damage you can cause to the
+    enemy.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 4 3
+</pre>
+</td>
+<td>
+<pre>27
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 10 100
+</pre>
+</td>
+<td>
+<pre>15
+</pre>
+</td>
+</tr>
+</table>
+</div>

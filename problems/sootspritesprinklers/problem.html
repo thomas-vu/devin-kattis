@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>The latest decree from the Castle in the Sky Homeowners
+    Association (CSHOA) announces a new regulation where you are
+    required to water your garden with at least <span class="tex2jax_process">$w$</span> gallons of water between every
+    inspection, which comes around every <span class="tex2jax_process">$p$</span> minutes. You already have a
+    working watering schedule: the Soot Sprite Sprinklers are
+    configured to be on a <span class="tex2jax_process">$(t +
+    b)$</span>-minute cycle, where they water your garden at
+    <span class="tex2jax_process">$r$</span> gallons of water per
+    minute for <span class="tex2jax_process">$t$</span> minutes and
+    then take a <span class="tex2jax_process">$b$</span>-minute
+    break. Coincidentally, the next watering cycle begins exactly
+    on the next CSHOA inspection, when the new regulation will
+    begin to take effect. You are lazy and would rather not change
+    the sprinkler configurations if the current watering schedule
+    already complies with the new regulation. Print “The CSHOA
+    decrees are as murky as the Forest Spirit” if you have to
+    change the configuration and “Soot Sprites sing a lullaby”
+    otherwise.</p>
+<h2>Input</h2>
+<p>The only line of input consists of five space-separated
+    integers <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$t$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$r \: (1 \leq w, p, t, b, r \leq
+    10^9)$</span>. <span class="tex2jax_process">$w$</span> is the
+    required number of gallons of water per inspection.
+    <span class="tex2jax_process">$p$</span> is the inspection
+    interval in minutes. <span class="tex2jax_process">$t$</span>
+    is the watering time per watering cycle in minutes.
+    <span class="tex2jax_process">$b$</span> is the break time per
+    watering cycle in minutes. <span class="tex2jax_process">$r$</span> is the rate at which the Soot
+    Sprite Sprinklers water your garden in gallons per minute.</p>
+<h2>Output</h2>
+<p>Output a single line containing “The CSHOA decrees are as
+    murky as the Forest Spirit” if you have to change the
+    configuration and “Soot Sprites sing a lullaby” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 6 2 2 1
+</pre>
+</td>
+<td>
+<pre>The CSHOA decrees are as murky as the Forest Spirit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 2 1 2
+</pre>
+</td>
+<td>
+<pre>Soot Sprites sing a lullaby
+</pre>
+</td>
+</tr>
+</table>
+</div>

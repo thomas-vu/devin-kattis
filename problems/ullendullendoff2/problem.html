@@ -1,0 +1,216 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/ullendullendoff2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ullendullendoff2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo from <a href="https://flickr.com/photos/pipstar/75570251">flickr.com</a>
+</div>
+</div>
+<p>Lárus is a middle manager at a stellar company, He manages
+    <span class="tex2jax_process">$n$</span> members of the staff,
+    all of which are related to him except for one.</p>
+<p>When a new assignment pops up, Lárus is in charge of
+    assigning it to a member of the staff. Lárus wants to minimise
+    the work his relatives must do. However, he cannot simply pick
+    the same person every time.</p>
+<p>To ensure people do not believe Lárus is practising
+    nepotism, He lines the people up in a circle and uses a mantra
+    to pick a person at random for the assignment. First he picks a
+    staff member at which to point and recites the first word. He
+    then recites the rest of the mantra and points to the next
+    staff member to the right for each word that he recites.</p>
+<p>The mantra is as follows:</p>
+<blockquote class="quote">
+      Úllen dúllen doff kikke lane koff koffe lane bikke bane úllen
+      dúllen doff.
+    </blockquote>
+<p>How can Lárus line up the staff members so that his
+    relatives do not get the assignment?</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$n$</span>, the number of staff members. Then
+    <span class="tex2jax_process">$n$</span> lines follow, where
+    each line contains one name. The first name is the staff member
+    which is not related to Lárus.</p>
+<p>You may assume that each name is unique and consists of
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$10$</span> lowercase English letters.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines, where
+    each line contains one name of a staff member and such that no
+    name is repeated. Lárus will use the ordering you output to
+    recite the mantra and pick the staff member receiving the
+    assignment. If the ordering you output results in one of his
+    relatives being picked, then your solution will be considered
+    wrong.</p>
+<h2>Scoring</h2>
+<p>The number of staff members, <span class="tex2jax_process">$n$</span>, can range from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span>. There exists a test group for
+    each possible value of <span class="tex2jax_process">$n$</span>
+    and each group is worth <span class="tex2jax_process">$5$</span> points. You must solve all the
+    test cases in a test group to earn the points for that
+    group.</p>
+<h2>Explanation of samples</h2>
+<p>In the first sample, one possible solution is to iterate
+    through the same order as the input, resulting in the following
+    steps:</p>
+<ul class="itemize">
+<li>
+<p>Úllen: Arnar</p>
+</li>
+<li>
+<p>dúllen: Atli</p>
+</li>
+<li>
+<p>doff: Bjarni</p>
+</li>
+<li>
+<p>kikke: Bjarki</p>
+</li>
+<li>
+<p>lane: Hannes</p>
+</li>
+<li>
+<p>koff: Unnar</p>
+</li>
+<li>
+<p>koffe: Arnar</p>
+</li>
+<li>
+<p>lane: Atli</p>
+</li>
+<li>
+<p>bikke: Bjarni</p>
+</li>
+<li>
+<p>bane: Bjarki</p>
+</li>
+<li>
+<p>úllen: Hannes</p>
+</li>
+<li>
+<p>dúllen: Unnar</p>
+</li>
+<li>
+<p>doff: Arnar</p>
+</li>
+</ul>
+<p>Since Arnar ends up being the final choice, the output is
+    considered correct.</p>
+<p>In the second sample, one possible answer is to iterate
+    through the following order:</p>
+<ul class="itemize">
+<li>
+<p>Úllen: v</p>
+</li>
+<li>
+<p>dúllen: x</p>
+</li>
+<li>
+<p>doff: y</p>
+</li>
+<li>
+<p>kikke: a</p>
+</li>
+<li>
+<p>lane: b</p>
+</li>
+<li>
+<p>koff: c</p>
+</li>
+<li>
+<p>koffe: p</p>
+</li>
+<li>
+<p>lane: q</p>
+</li>
+<li>
+<p>bikke: r</p>
+</li>
+<li>
+<p>bane: s</p>
+</li>
+<li>
+<p>úllen: t</p>
+</li>
+<li>
+<p>dúllen: u</p>
+</li>
+<li>
+<p>doff: z</p>
+</li>
+</ul>
+<p>In the end, z is chosen and the output is considered
+    correct.</p>
+<p>Note that many other correct outputs exist and that in the
+    second sample we do not reach the final two values in the order
+    given.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+arnar
+atli
+bjarni
+bjarki
+hannes
+unnar
+</pre>
+</td>
+<td>
+<pre>arnar
+atli
+bjarni
+bjarki
+hannes
+unnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>15
+z
+x
+y
+a
+b
+c
+p
+q
+r
+s
+t
+u
+v
+w
+o
+</pre>
+</td>
+<td>
+<pre>v
+x
+y
+a
+b
+c
+p
+q
+r
+s
+t
+u
+z
+w
+o
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>You and your friend are playing a game involving chance, and
+    you are interested in the odds of winning the game. The game
+    proceeds as follows:</p>
+<ul class="itemize">
+<li>
+<p>Your friend chooses <span class="tex2jax_process">$m$</span> tiles, each labeled with a
+        positive integer. He shows them to you, and puts them in a
+        bag. He then chooses an integer <span class="tex2jax_process">$0 \leq n \leq m$</span>, and tells you
+        what it is.</p>
+</li>
+<li>
+<p>You choose an integer <span class="tex2jax_process">$t$</span> (the ‘target’), and tell your
+        friend what it is.</p>
+</li>
+<li>
+<p>Your friend reaches into the bag (without looking!) and
+        draws out <span class="tex2jax_process">$n$</span> of the
+        tiles, all at once.</p>
+</li>
+<li>
+<p>If the sum of the drawn tiles equals <span class="tex2jax_process">$t$</span>, you win. Otherwise, you
+        lose.</p>
+</li>
+</ul>
+<p>Write a program that determines the odds of you winning at
+    this game. Assume that, when drawing out <span class="tex2jax_process">$n$</span> tiles, each tile in the bag has
+    the same probability of being chosen.</p>
+<h2>Input</h2>
+<p>Input starts with an integer <span class="tex2jax_process">$1 \leq g \leq 200$</span> indicating the
+    number of games that follow. Each game description has three
+    lines. The first contains an integer <span class="tex2jax_process">$0 &lt; m \leq 30$</span>, indicating the
+    number of tiles in the bag. The second line contains
+    <span class="tex2jax_process">$m$</span> labels of the tiles in
+    the bag. Each tile’s label will be an integer in the range 1 to
+    10,000. The third line contains the two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$t$</span>, where <span class="tex2jax_process">$0\leq n\leq m$</span> and <span class="tex2jax_process">$0\leq t &lt; 10\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each game, print the odds that you win that game. Print
+    the odds in the form “<tt class="tt">Game <span class="tex2jax_process">$n$</span> – <span class="tex2jax_process">$a$</span> : <span class="tex2jax_process">$b$</span></tt>”, where <span class="tex2jax_process">$a$</span> represents the number of possible
+    draws that would cause you to win, and <span class="tex2jax_process">$b$</span> represents the number of possible
+    draws that would cause you to lose.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+2
+1 2
+2 3
+2
+2 3
+2 3
+5
+1 2 3 4 5
+2 5
+10
+1 2 2 2 2 2 2 2 2 2
+3 6
+10
+1 2 2 2 2 2 2 2 2 2
+0 0
+</pre>
+</td>
+<td>
+<pre>
+Game 1 -- 1 : 0
+Game 2 -- 0 : 1
+Game 3 -- 2 : 8
+Game 4 -- 84 : 36
+Game 5 -- 1 : 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

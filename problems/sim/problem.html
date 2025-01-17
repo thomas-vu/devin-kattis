@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>This problem is an extension of another Kattis problem -
+    backspace. In that problem, every time we see a character
+    ‘<tt>&lt;</tt>’, it actually means that the ‘Backspace’ key is
+    pressed and we undo the last character that was just
+    typed.<br/></p>
+<p>The extension is as follows: Now, pressing a ‘<tt>&lt;</tt>’
+    (the ‘Backspace’ key) when the (typing) cursor is at the front
+    of the line <b class="bfseries">does nothing</b>. Now if we see
+    a character ‘<tt>[</tt>’, it actually means that the ‘Home’ key
+    is pressed and we move the (typing) cursor to the front of the
+    line. Similarly, if we see a character ‘<tt>]</tt>’, it
+    actually means that the ‘End’ key is pressed and we move the
+    (typing) cursor the back of the line. For all other valid
+    character in the input, it actually means that the
+    corresponding key is pressed, we insert that character at the
+    (typing) cursor position, and advance one position to the right
+    the cursor accordingly.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing just one integer
+    <span class="tex2jax_process">$T \: (1 \le T \le 10)$</span>,
+    denoting the number of test cases.<br/></p>
+<p>Each test case is a line containing the string that was
+    written in the Text Editor Sim (Steven IMproved). The length of
+    the string is at most <span class="tex2jax_process">$10^{6}$</span>, and it will only contain
+    lowercase letters from the English alphabet [‘<span class="tex2jax_process">$a$</span>’<span class="tex2jax_process">$\;
+    \ldots \; $</span>‘<span class="tex2jax_process">$z$</span>’],
+    digits [‘<span class="tex2jax_process">$0$</span>’<span class="tex2jax_process">$\; \ldots \; $</span>‘<span class="tex2jax_process">$9$</span>’], spaces, as well as some of the
+    three special characters: ‘<tt>&lt;</tt>’, ‘<tt>[</tt>’, or
+    ‘<tt>]</tt>’.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing the final
+    string that is displayed on screen.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\textbf{(27.5
+        points)}$</span>: <span class="tex2jax_process">$1 \le T
+        \le 10$</span>, string length is at most <span class="tex2jax_process">$10^{3}$</span>, there is no
+        ‘<tt>[</tt>’, as seen in sample <span class="tex2jax_process">$1$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(32.5
+        points)}$</span>: <span class="tex2jax_process">$1 \le T
+        \le 10$</span>, string length is at most <span class="tex2jax_process">$10^{3}$</span>, there may be
+        ‘<tt>[</tt>’, as seen in sample <span class="tex2jax_process">$2$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(40
+        points)}$</span>: <span class="tex2jax_process">$1 \le T
+        \le 4$</span>, string length is at most <span class="tex2jax_process">$10^{6}$</span>.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+my ]]name]] is]] steva&lt;en]&lt;n halim]]]]]
+</pre>
+</td>
+<td>
+<pre>my name is steven halim
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+&lt;&lt;hate&lt;&lt;&lt;&lt;loves[steva&lt;en ] cs2040c&lt; and also cs2040c
+</pre>
+</td>
+<td>
+<pre>steven loves cs2040 and also cs2040c
+</pre>
+</td>
+</tr>
+</table>
+</div>

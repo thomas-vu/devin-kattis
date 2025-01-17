@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/armcoordination/file/statement/en/img-0001.jpg" class="illustration" src="/problems/armcoordination/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        By Sergey ‘maxuser’ Soldatov<br/>
+        on Shutterstock
+      </div>
+</div>
+<p>All the cool kids in town want to become a member of the
+    Bots and Androids Programmer Club (BAPC). To become a member of
+    the club, applicants must show a feat of their skills with a
+    home-made robot that is programmed to perform some tricks. Just
+    like your older brother, you want to become a member of the
+    BAPC, so it’s time to lock yourself in the hobby basement and
+    start building some robots!</p>
+<p>Since your older brother has used up almost all of the parts
+    for his own projects at the BAPC, you will have to get creative
+    with whatever is still left. You find a robotic arm that has
+    only a single purpose: fitting circle-shaped objects into
+    square-shaped holes. Not exactly what you had in mind, but it
+    will have to do. After all, you only have five hours left to
+    apply for your BAPC membership.</p>
+<p>The memory chip of the robotic arm seems to be wiped, but
+    luckily you do know the programming interface of its ARM
+    processor. Firstly, the robotic arm only supports integer
+    coordinates. Secondly, when the arm picks up a circle-shaped
+    object, you need to calculate the smallest possible square that
+    it could fit the object in, after which it will autonomically
+    find a suitable square-shaped hole.</p>
+<p>Given the location of a circle-shaped object, calculate the
+    smallest possible square which encloses the object.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line containing two integers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$-10^9\leq x,y\leq 10^9$</span>), the
+        coordinates of the center of the circle.</p>
+</li>
+<li>
+<p>One line containing one integer <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$1\leq r\leq 10^9$</span>), the radius of
+        the circle.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output four lines, each line containing two integers,
+    representing the <span class="tex2jax_process">$x$</span>- and
+    <span class="tex2jax_process">$y$</span>-coordinates of one of
+    the corners of the square. The coordinates should be printed in
+    either clockwise or counter-clockwise order.</p>
+<p>If there are multiple valid solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>-3 6
+5
+</pre>
+</td>
+<td>
+<pre>-10 7
+-2 13
+4 5
+-4 -1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 0
+10
+</pre>
+</td>
+<td>
+<pre>-14 -2
+-2 14
+14 2
+2 -14
+</pre>
+</td>
+</tr>
+</table>
+</div>

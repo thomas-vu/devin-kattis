@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Wherever there is large-scale construction, you will find
+    cranes that do the lifting. One hardly ever thinks about what
+    marvelous examples of engineering cranes are: a structure of
+    (relatively) little weight that can lift much heavier loads.
+    But even the best-built cranes may have a limit on how much
+    weight they can lift.</p>
+<p>The Association of Crane Manufacturers (ACM) needs a program
+    to compute the range of weights that a crane can lift. Since
+    cranes are symmetric, ACM engineers have decided to consider
+    only a cross section of each crane, which can be viewed as a
+    polygon resting on the <span class="tex2jax_process">$x$</span>-axis.</p>
+<div class="figure" id="fig:crane">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{crane-2.pdf}" src="/problems/crane/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Crane cross section
+        </div>
+</center>
+</div>
+<p>Figure 1 shows a cross section of the crane in the first
+    sample input. Assume that every <span class="tex2jax_process">$1 \times 1$</span> unit of crane cross
+    section weighs 1 kilogram and that the weight to be lifted will
+    be attached at one of the polygon vertices (indicated by the
+    arrow in Figure 1). Write a program that determines the weight
+    range for which the crane will not topple to the left or to the
+    right.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The test case
+    starts with a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3
+    \le n \le 100$</span>), the number of points of the polygon
+    used to describe the crane’s shape. The following <span class="tex2jax_process">$n$</span> pairs of integers <span class="tex2jax_process">$x_ i, y_ i$</span> (<span class="tex2jax_process">$-2\, 000 \le x_ i \le 2\, 000, 0 \le y_ i
+    \le 2\, 000$</span>) are the coordinates of the polygon points
+    in order. The weight is attached at the first polygon point and
+    at least two polygon points are lying on the <span class="tex2jax_process">$x$</span>-axis.</p>
+<h2>Output</h2>
+<p>Display the weight range (in kilograms) that can be attached
+    to the crane without the crane toppling over. If the range is
+    <span class="tex2jax_process">$[a,b]$</span>, display
+    <span class="tex2jax_process">$\lfloor a \rfloor $</span>
+<tt class="tt">..</tt> <span class="tex2jax_process">$\lceil b
+    \rceil $</span>. For example, if the range is <span class="tex2jax_process">$[1.5,13.3]$</span>, display <tt class="tt">1</tt> <tt class="tt">..</tt> <tt class="tt">14</tt>. If
+    the range is <span class="tex2jax_process">$[a,\infty
+    )$</span>, display <span class="tex2jax_process">$\lfloor a
+    \rfloor $</span> <tt class="tt">..</tt> <tt class="tt">inf</tt>. If the crane cannot carry any weight, display
+    <tt class="tt">unstable</tt> instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+50 50
+0 50
+0 0
+30 0
+30 30
+40 40
+50 40
+</pre>
+</td>
+<td>
+<pre>
+0 .. 1017
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+50 50
+0 50
+0 0
+10 0
+10 30
+20 40
+50 40
+</pre>
+</td>
+<td>
+<pre>
+unstable
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>“The Drinking Musicians”, a widely known and popular folk
+    group, are coming to your town. The musicians are known not
+    only by their playing skills, but also their rough character.
+    They never arrive on time, don’t know which town they’re in,
+    and frequently have trouble finding the stage.</p>
+<p>Additionally, during the concert, each of the musicians at
+    one point takes a break. If three or more of them are on a
+    break at the same time, they start stirring trouble in town and
+    the rest of the group start panicking and playing the wrong
+    chords.</p>
+<p>The concert will be <span class="tex2jax_process">$T$</span>
+    minutes long, during which each of the <span class="tex2jax_process">$N$</span> members will take a break. The
+    length of the break is known for each member.</p>
+<p>Help the organizer of the concert by writing a program that
+    determines how to schedule the breaks of the members so that,
+    at any given moment, at most two are absent from the stage. All
+    breaks must be <b class="bfseries">entirely</b> during the
+    concert.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integers <span class="tex2jax_process">$T$</span> and <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le T \le 5000$</span>, <span class="tex2jax_process">$1 \le N
+    \le 500$</span>), the length of the concert in minutes and the
+    number of musicians in the group.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers (each between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$T$</span> inclusive) separated by single
+    spaces, the length of the break in minutes for each member.</p>
+<p>Note: The input data will be such that a solution, although
+    not necessarily unique, will always exist.</p>
+<h2>Output</h2>
+<p>For each musician output one integer, the number of minutes
+    the musician will spend on stage before going on the break.
+    Output the musicians in the same order they were given in the
+    input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 3
+4 4 4
+</pre>
+</td>
+<td>
+<pre>
+0 2 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 5
+7 5 1 2 3
+</pre>
+</td>
+<td>
+<pre>
+3 3 9 0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

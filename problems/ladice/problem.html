@@ -1,0 +1,121 @@
+<div class="problembody">
+<p>Mirko has <span class="tex2jax_process">$N$</span> items
+    (labeled with numbers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>) and <span class="tex2jax_process">$L$</span> drawers (labeled with numbers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$L$</span>). All items are currently
+    scattered throughout his room, so he decided to clean them up.
+    Each drawer can contain one item, and in order to make it
+    easier for Mirko to find them later, he has determined in
+    advance exactly two drawers (<span class="tex2jax_process">$A_
+    i$</span> and <span class="tex2jax_process">$B_ i$</span>) for
+    each item <span class="tex2jax_process">$i$</span>.</p>
+<p>Mirko stores the items in order from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> using the first rule he can
+    apply:</p>
+<ol class="enumerate">
+<li>
+<p>If the drawer <span class="tex2jax_process">$A_
+        i$</span> is empty, he stores the item <span class="tex2jax_process">$i$</span> in that drawer.</p>
+</li>
+<li>
+<p>If the drawer <span class="tex2jax_process">$B_
+        i$</span> is empty, he stores the item <span class="tex2jax_process">$i$</span> in that drawer.</p>
+</li>
+<li>
+<p>Try to move the item from <span class="tex2jax_process">$A_ i$</span> to its other drawer; if
+        that one’s filled too, try moving that item to its other
+        drawer, and so on until you either succeed or get back to a
+        previously seen drawer. In case of success, store the item
+        <span class="tex2jax_process">$i$</span> in the drawer
+        <span class="tex2jax_process">$A_ i$</span>. In case of
+        failure, continue to next rule.</p>
+</li>
+<li>
+<p>Try moving the item from <span class="tex2jax_process">$B_ i$</span> to its other drawer; if
+        that one’s filled too, try moving that item to its other
+        drawer, and so on until you either succeed or get back to a
+        previously seen drawer. In case of success, store the item
+        <span class="tex2jax_process">$i$</span> in the drawer
+        <span class="tex2jax_process">$B_ i$</span>. In case of
+        failure, continue to next rule.</p>
+</li>
+<li>
+<p>Give up and throw away the item <span class="tex2jax_process">$i$</span>.</p>
+</li>
+</ol>
+<p>For given pairs of drawers for each item, determine which
+    items will be stored and which will be thrown away.</p>
+<h2>Input</h2>
+<p>The first line of input consists of two integers,
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1
+    \leq N, L \leq 300\, 000$</span>), the number of items and the
+    number of drawers.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains two integers:
+    <span class="tex2jax_process">$A_ i$</span> and <span class="tex2jax_process">$B_ i$</span> (<span class="tex2jax_process">$1 \leq A_ i, B_ i \leq L$</span>), the pair
+    of drawers corresponding to item <span class="tex2jax_process">$i$</span>. The numbers <span class="tex2jax_process">$A_ i$</span> and <span class="tex2jax_process">$B_ i$</span> will be different.</p>
+<h2>Output</h2>
+<p>For each item, respectively, output where it ends up. In
+    case the item is stored successfully, output “<tt class="ttfamily">LADICA</tt>” (without quotes, Croatian word for
+    drawer). In case the item is thrown away, output “<tt class="ttfamily">SMECE</tt>” (without quotes, Croatian word for
+    trash).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+1 2
+1 3
+1 2
+1 3
+1 2
+</pre>
+</td>
+<td>
+<pre>
+LADICA
+LADICA
+LADICA
+SMECE
+SMECE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 10
+1 2
+3 4
+5 6
+7 8
+9 10
+2 3
+1 5
+8 2
+7 9
+</pre>
+</td>
+<td>
+<pre>
+LADICA
+LADICA
+LADICA
+LADICA
+LADICA
+LADICA
+LADICA
+LADICA
+LADICA
+</pre>
+</td>
+</tr>
+</table>
+</div>

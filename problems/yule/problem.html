@@ -1,0 +1,232 @@
+<div class="problembody">
+<p>The kids in Iceland are pretty lucky. Not only do they have
+    one Santa Claus, but <span class="tex2jax_process">$N$</span>
+    of them! They’re called the Yule Lads, and on each of the
+    <span class="tex2jax_process">$N$</span> nights before
+    Christmas, one of them comes to town, giving those that have
+    been nice a small present, and those that have been naughty a
+    potato.</p>
+<p>On a street in a small town in Iceland, there are
+    <span class="tex2jax_process">$N$</span> houses, numbered in
+    turn from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$N$</span>. Each house is
+    beautifully decorated with Christmas lights, and initially they
+    are all turned on.</p>
+<p>On each of the <span class="tex2jax_process">$N$</span>
+    nights before Christmas, one of the Yule Lads visits this
+    street. The Yule Lad visiting <span class="tex2jax_process">$K$</span> nights before Christmas is very
+    fond of the number <span class="tex2jax_process">$K$</span>,
+    and will only visit the houses whose house number is
+    divisible<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> by <span class="tex2jax_process">$K$</span>. Furthermore, the Yule Lads are
+    troublemakers, and will toggle the state of the Christmas
+    lights on every house that they visit (i.e. turning the lights
+    off if they are on, or turning them on if they are off).</p>
+<p>However, some of the Yule Lads have been feeling sick, and
+    did not come to town. On Christmas day all but the first house
+    had their lights turned on. How many Yule Lads came to
+    town?</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$N$</span>, the number of Yule
+    Lads and the number of houses in the street.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of Yule Lads that came
+    to town. You can assume that there is only one scenario that
+    leads to all houses having their lights on except for house
+    number <span class="tex2jax_process">$1$</span>.</p>
+<h2>Example</h2>
+<p>Consider the case <span class="tex2jax_process">$N =
+    6$</span>. Then there are six Yule Lads, and six houses in the
+    street. Here is what happens on each of the six nights before
+    Christmas, assuming that no Yule Lad is sick.</p>
+<ul class="itemize">
+<li>
+<p>Six nights before Christmas, the Yule Lad will turn the
+        lights at house <span class="tex2jax_process">$6$</span>
+        off.</p>
+</li>
+<li>
+<p>Five nights before Christmas, the Yule Lad will turn the
+        lights at house <span class="tex2jax_process">$5$</span>
+        off.</p>
+</li>
+<li>
+<p>Four nights before Christmas, the Yule Lad will turn the
+        lights at house <span class="tex2jax_process">$4$</span>
+        off.</p>
+</li>
+<li>
+<p>Three nights before Christmas, the Yule Lad will turn
+        the lights at house <span class="tex2jax_process">$3$</span> off, and the lights at house
+        <span class="tex2jax_process">$6$</span> on.</p>
+</li>
+<li>
+<p>Two nights before Christmas, the Yule Lad will turn the
+        lights at houses <span class="tex2jax_process">$2$</span>
+        and <span class="tex2jax_process">$6$</span> off, and the
+        lights at house <span class="tex2jax_process">$4$</span>
+        on.</p>
+</li>
+<li>
+<p>The night before Christmas, the Yule Lad will turn the
+        lights at houses <span class="tex2jax_process">$1$</span>
+        and <span class="tex2jax_process">$4$</span> off, and the
+        lights at houses <span class="tex2jax_process">$2$</span>,
+        <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$6$</span> on.</p>
+</li>
+</ul>
+<p>However, house number <span class="tex2jax_process">$4$</span> has its lights off on Christmas
+    day, contrary to what actually happened.</p>
+<p>On the other hand, if only the Yule Lad that was supposed to
+    come into town four days before Christmas is sick, then all
+    lights, except for at house number <span class="tex2jax_process">$1$</span>, will be lit on Christmas day. The
+    correct answer is thus <span class="tex2jax_process">$5$</span>: Yule Lads came to town
+    <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$1$</span> days before Christmas.</p>
+<h2>Grading</h2>
+<p>Your solution will be graded on a set of subtasks. A subtask
+    will consist of multiple test cases. To get the points for a
+    subtask, your solution must pass all test cases that are part
+    of the subtask.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Subtask</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 13$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>12</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 5 \cdot
+          10^{6}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq
+          10^{8}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq
+          10^{10}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>21</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq
+          10^{13}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>13
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>68
+</pre>
+</td>
+<td>
+<pre>42
+</pre>
+</td>
+</tr>
+</table>
+</div>

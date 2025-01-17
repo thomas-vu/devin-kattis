@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/princesspeach/file/statement/en/img-0001.png" class="illustration" src="/problems/princesspeach/file/statement/en/img-0001.png"/>
+<div class="description">
+        Source: <a href="https://commons.wikimedia.org/wiki/File:Super_Mario_Bros._2_(1).jpg">
+        WikiMedia Commons</a>
+</div>
+</div>
+<p>Mario is trying to save his beloved Princess Peach! However,
+    in order to do that, Mario must jump over many obstacles in
+    order to save Princess Peach. Thus, he makes a grand plan to
+    infiltrate Bowser’s castle.</p>
+<p>But first, he needs to practice. His brother Luigi makes a
+    practice course for Mario to train on. On this course, Mario
+    practices looking for all the possible obstacles that could
+    take away his life. But Mario is sloppy and misses some
+    obstacles, counts some obstacles more than once, and generally
+    screws up the order of the obstacles he does find when he lists
+    them!</p>
+<p>Write a program so that Luigi can tell his brother which
+    obstacles he’s missed!</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$2$</span> values. The first value
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$0 &lt; N \le 100$</span>) is the total
+    number of obstacles. Obstacles are numbered <span class="tex2jax_process">$0 \ldots N-1$</span>. The second value
+    <span class="tex2jax_process">$Y$</span> (<span class="tex2jax_process">$0 \le Y \le 200$</span>) represents how many
+    obstacles Mario said he’s found on his practice run. The next
+    <span class="tex2jax_process">$Y$</span> lines each list a
+    single integer <span class="tex2jax_process">$k$</span>
+    (<span class="tex2jax_process">$0 \le k &lt; N$</span>) which
+    is the number of an obstacle Mario says he’s found.</p>
+<h2>Output</h2>
+<p>First, output the obstacles that Mario missed in increasing
+    order, each on a separate line. On the last line, print
+    <tt class="ttfamily">Mario got X of the dangerous
+    obstacles.</tt> where <span class="tex2jax_process">$X$</span>
+    is the number of distinct obstacles Mario found.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>20 4
+5
+10
+12
+16
+</pre>
+</td>
+<td>
+<pre>0
+1
+2
+3
+4
+6
+7
+8
+9
+11
+13
+14
+15
+17
+18
+19
+Mario got 4 of the dangerous obstacles.
+</pre>
+</td>
+</tr>
+</table>
+</div>

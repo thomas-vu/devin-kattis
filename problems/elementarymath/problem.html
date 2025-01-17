@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/elementarymath/file/statement/en/img-0001.jpg" class="illustration" src="/problems/elementarymath/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Example exam by Ellen
+      </div>
+</div>Ellen is teaching elementary math to her students and the
+    time for the final exam has come. The exam consists of
+    <span class="tex2jax_process">$n$</span> questions. In each
+    question the students have to add (<span class="tex2jax_process">$+$</span>), subtract (<span class="tex2jax_process">$-$</span>) or multiply (<span class="tex2jax_process">$*$</span>) a pair of numbers.
+
+    <p>Ellen has already chosen the <span class="tex2jax_process">$n$</span> pairs of numbers. All that remains
+    is to decide for each pair which of the three possible
+    operations the students should perform. To avoid students
+    getting bored, Ellen wants to make sure that the <span class="tex2jax_process">$n$</span> correct answers to her exam are
+    all different.</p>
+<p>Please help Ellen finish constructing the exam by automating
+    this task.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n \leq 2\, 500$</span>), the
+        number of pairs of numbers;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each with
+        two integers <span class="tex2jax_process">$a$</span> and
+        <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$-10^6 \leq a, b \leq 10^6$</span>), a
+        pair of numbers used.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each pair of numbers <span class="tex2jax_process">$(a,b)$</span> in the same order as in the
+    input, output a line containing a valid equation. Each equation
+    should consist of five parts: <span class="tex2jax_process">$a$</span>, one of the three operators,
+    <span class="tex2jax_process">$b$</span>, an equals sign
+    (<span class="tex2jax_process">$=$</span>), and the result of
+    the expression. All the <span class="tex2jax_process">$n$</span> expression results must be
+    different.</p>
+<p>If there are multiple valid answers you may output any of
+    them. If there is no valid answer, output a single line with
+    the string “<tt class="ttfamily">impossible</tt>” instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 5
+3 3
+4 5
+-1 -6
+</pre>
+</td>
+<td>
+<pre>
+1 + 5 = 6
+3 * 3 = 9
+4 - 5 = -1
+-1 - -6 = 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+-4 2
+-4 2
+-4 2
+-4 2
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,194 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/2048/file/statement/en/img-0001.jpg" class="illustration" src="/problems/2048/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        screenshot taken from
+        http://gabrielecirulli.github.io/2048/
+      </div>
+</div>
+<p><b class="bfseries">2048</b> is a single-player puzzle game
+    created by Gabriele Cirulli<a class="footnote" href="#a0000000002"><sup class="footnotemark">1</sup></a>. It is played
+    on a <span class="tex2jax_process">$4 \times 4$</span> grid
+    that contains integers <span class="tex2jax_process">$\geq
+    2$</span> that are powers of 2. The player can use a keyboard
+    arrow key (left/up/right/down) to move all the tiles
+    simultaneously. Tiles slide as far as possible in the chosen
+    direction until they are stopped by either another tile or the
+    edge of the grid. If two tiles of the same number collide while
+    moving, they will merge into a tile with the total value of the
+    two tiles that collided. The resulting tile cannot merge with
+    another tile again in the same move. Please observe this
+    merging behavior carefully in all Sample Inputs and
+    Outputs.</p>
+<h2>Input</h2>
+<p>The input is always a valid game state of a 2048 puzzle. The
+    first four lines of input, that each contains four integers,
+    describe the 16 integers in the <span class="tex2jax_process">$4 \times 4$</span> grid of 2048 puzzle. The
+    <span class="tex2jax_process">$j$</span>-th integer in the
+    <span class="tex2jax_process">$i$</span>-th line denotes the
+    content of the cell located at the <span class="tex2jax_process">$i$</span>-th row and the <span class="tex2jax_process">$j$</span>-th cell. For this problem, all
+    integers in the input will be either {0, 2, 4, 8, 16, 32, 64,
+    128, 256, 512, 1024}. Integer 0 means an empty cell.</p>
+<p>The fifth line of input contains an integer 0, 1, 2, or 3
+    that denotes a left, up, right, or down move executed by the
+    player, respectively.</p>
+<h2>Output</h2>
+<p>Output four lines with four integers each. Two integers in a
+    line must be separated by a single space. This describes the
+    new state of the <span class="tex2jax_process">$4 \times
+    4$</span> grid of 2048 puzzle. Again, integer 0 means an empty
+    cell. Note that in this problem, you can ignore the part from
+    the 2048 puzzle where it introduces a new random tile with a
+    value of either 2 or 4 in an empty spot of the board at the
+    start of a new turn.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 0 0 2
+4 16 8 2
+2 64 32 4
+1024 1024 64 0
+0
+</pre>
+</td>
+<td>
+<pre>
+4 0 0 0
+4 16 8 2
+2 64 32 4
+2048 64 0 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 0 0 2
+4 16 8 2
+2 64 32 4
+1024 1024 64 0
+1
+</pre>
+</td>
+<td>
+<pre>
+2 16 8 4
+4 64 32 4
+2 1024 64 0
+1024 0 0 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 0 0 2
+4 16 8 2
+2 64 32 4
+1024 1024 64 0
+2
+</pre>
+</td>
+<td>
+<pre>
+0 0 0 4
+4 16 8 2
+2 64 32 4
+0 0 2048 64
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 0 0 2
+4 16 8 2
+2 64 32 4
+1024 1024 64 0
+3
+</pre>
+</td>
+<td>
+<pre>
+2 0 0 0
+4 16 8 0
+2 64 32 4
+1024 1024 64 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2 4 8
+4 0 4 4
+16 16 16 16
+32 16 16 32
+0
+</pre>
+</td>
+<td>
+<pre>
+4 4 8 0
+8 4 0 0
+32 32 0 0
+32 32 32 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2 4 8
+4 0 4 4
+16 16 16 16
+32 16 16 32
+2
+</pre>
+</td>
+<td>
+<pre>
+0 4 4 8
+0 0 4 8
+0 0 32 32
+0 32 32 32
+</pre>
+</td>
+</tr>
+</table>
+</div>

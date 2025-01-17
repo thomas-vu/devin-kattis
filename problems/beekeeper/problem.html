@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/beekeeper/file/statement/en/img-0001.png" class="illustration" src="/problems/beekeeper/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>It’s Bill the beekeeper again. In this problem, we learn
+    that didn’t choose his career for the best reason. Bill chose
+    to be a beekeeper because he really, really likes the look of
+    the double e’s in the word “beekeeper”. Your task is to help
+    identify other words Bill will really like.
+
+    <p>Bill’s affinity for a word is determined by how many pairs
+    of double vowels it has, where vowels are the letters
+    {a,e,i,o,u,y}. Given a list of words, find the word that has
+    the most pairs of double vowels, as it will be Bill’s favorite
+    word.</p>
+<p>Notes:</p>
+<ul class="itemize">
+<li>
+<p>It is guaranteed that there will be a unique correct
+        answer. That is, one word in the list will have strictly
+        more pairs of vowels than all other words in the list.</p>
+</li>
+<li>
+<p>No word in the input will have three or more of the same
+        vowel consecutively, because that would just be too much
+        for poor Bill.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The input will contain multiple test cases, up to
+    <span class="tex2jax_process">$10$</span>. The first line of
+    each case contains <span class="tex2jax_process">$N$</span>,
+    the number of words in that case (<span class="tex2jax_process">$0 &lt; N \le 1000$</span>). The next
+    <span class="tex2jax_process">$N$</span> lines will contain the
+    words that make up that case. Each word will contain only
+    lowercase English letters <tt class="ttfamily">[a-z]</tt>, and
+    no word will be longer than <span class="tex2jax_process">$80$</span> characters. Words will not
+    necessarily be actual English words, but they will contain at
+    least one letter. The input will be terminated by a line
+    containing a single zero.</p>
+<h2>Output</h2>
+<p>For each case, print Bill’s favorite word. Each output
+    should be printed on its own line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+artist
+engineer
+beekeeper
+programmer
+3
+bookkatt
+jailaikia
+yeehaaw
+0
+</pre>
+</td>
+<td>
+<pre>
+beekeeper
+yeehaaw
+</pre>
+</td>
+</tr>
+</table>
+</div>

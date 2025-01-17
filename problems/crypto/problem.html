@@ -1,0 +1,39 @@
+<div class="problembody">
+<p>Lukáš invented a special cryptographic algorithm. He can not
+    tell you the details, of course. However, there is one problem.
+    He doesn’t know how to select strong keys for messages. Can you
+    help him?</p>
+<p>Suppose that a message is a positive integer <span class="tex2jax_process">$N$</span>. The strongest key is an integer
+    <span class="tex2jax_process">$K$</span> such that <span class="tex2jax_process">$N$</span> written in base <span class="tex2jax_process">$K$</span> has the most zeros at the end. In
+    case of a tie, the smallest such <span class="tex2jax_process">$K$</span> is the strongest.</p>
+<p>For example, the strongest key for <span class="tex2jax_process">$N = 72$</span> is <span class="tex2jax_process">$K = 2$</span>, because <span class="tex2jax_process">$72 = 1001000_2$</span> (<span class="tex2jax_process">$72$</span> written in base <span class="tex2jax_process">$2$</span>) has <span class="tex2jax_process">$3$</span> zeros at the end. Using base
+    <span class="tex2jax_process">$3$</span>, we only get
+    <span class="tex2jax_process">$2$</span> zeroes at the end
+    (because <span class="tex2jax_process">$72 = 2200_3$</span>),
+    using base <span class="tex2jax_process">$6$</span> would also
+    give us <span class="tex2jax_process">$2$</span> zeros, and no
+    other base would give us more than <span class="tex2jax_process">$1$</span> zero.</p>
+<h2>Input</h2>
+<p>Input contains one line with one integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$2
+    \le N \le 10^{12}$</span>.</p>
+<h2>Output</h2>
+<p>Output contains one line with one integer <span class="tex2jax_process">$K$</span> such that <span class="tex2jax_process">$N$</span> written in base <span class="tex2jax_process">$K$</span> has the most zeros at the end and
+    is the smallest <span class="tex2jax_process">$K$</span> with
+    this property.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>72
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

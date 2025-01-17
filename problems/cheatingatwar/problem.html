@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>War is a classic and very simple two-player card game played
+    with a standard <span class="tex2jax_process">$52$</span>-card
+    deck. The deck is shuffled and split into two equal-sized
+    piles, one for each player, with cards face down. To play, both
+    players turn over the top card of their draw pile. The player
+    whose card rank is higher (suit doesn’t matter) wins both
+    cards. In our variant of War for this problem, when a tie in
+    rank occurs, both players take their one card back.<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> The ranks of the cards, from highest
+    to lowest, are [A]ce, [K]ing, [Q]ueen, [J]ack, [T]en,
+    <span class="tex2jax_process">$9$</span>, <span class="tex2jax_process">$8$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$3$</span>, and <span class="tex2jax_process">$2$</span>. After the card battle is settled,
+    both players would turn over the next card in their draw piles
+    for the following battle, and so forth. Also in our variant,
+    after the initial <span class="tex2jax_process">$26$</span>-card piles have been exhausted,
+    both players count the cards they have won, and the player with
+    the most cards wins the game.</p>
+<p>Yraglac found himself playing War with a friend, and the
+    first ten card battles of a game went like this:</p>
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{figure-war.pdf}" src="/problems/cheatingatwar/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+<p>At this point in the game, Yraglac would have won a total of
+    <span class="tex2jax_process">$10$</span> cards.<br/></p>
+<p>After a few games, Yraglac was bored out of his mind because
+    the game, clearly, has <i class="itshape">absolutely no element
+    of strategy whatsoever!</i> At the beginning of the next game,
+    when his friend wasn’t looking, he decided to take a peek
+    through both piles of cards and wondered, “How many cards could
+    I win if I could rearrange my own pile of cards?” Now there’s a
+    challenge worthy of his mighty brain!</p>
+<p>It turned out for Yraglac that cheating at War was a little
+    harder than he initially thought. Can you help by writing a
+    program that, given lists of the cards in Yraglac’s opponent’s
+    pile and in his own pile, determines the most cards Yraglac can
+    win if he could rearrange the cards in his draw pile in any
+    order he likes?</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer,
+    <span class="tex2jax_process">$1 \leq N \leq 50$</span>,
+    indicating the number of games of war to be played. Following,
+    there are two lines of input for each game. The first of the
+    two lines contains a <span class="tex2jax_process">$26$</span>-character string indicating the
+    cards in the opponent’s pile, in the order that they will be
+    played. Non-numeric cards are encoded with a single capital
+    letter as described in the problem statement. The second of the
+    two lines indicates the <span class="tex2jax_process">$26$</span> cards in Yraglac’s pile. Both
+    piles together will always form the set of cards in a standard
+    <span class="tex2jax_process">$52$</span>-card deck.<br/></p>
+<h2>Output</h2>
+<p>For each game of War described in the input, output on a
+    single line the highest number of cards Yraglac can win if he
+    were able to rearrange his pile of cards to be played in any
+    order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3J665T72457Q2J3AA9K3TK7T5A
+296K979725JQA3K686679KT338
+AKQJT98765432AKQJT98765432
+AKQJT98765432AKQJT98765432
+AAAAKKKKQQQQJJJJTTTT999988
+22223333444455556666777788
+</pre>
+</td>
+<td>
+<pre>42
+48
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>In the past century, a new style of music composition has
+    emerged. Unlike more traditional methods based on keys and
+    chords, the technique known as <i class="itshape">dodecaphony</i> focuses on using all twelve notes
+    equally. As a quick reminder, the twelve notes, in ascending
+    order are,</p><span class="tex2jax_process">\[ C, C\sharp , D,
+    D\sharp , E, F, F\sharp , G, G\sharp , A, A\sharp , B \]</span>
+<p>The sequence then wraps around so that the next note after
+    <span class="tex2jax_process">$B$</span> is <span class="tex2jax_process">$C$</span> and so on. For this problem, we’ll
+    ignore equivalent notations that use flats, double sharps, or
+    double flats.</p>
+<p>Each successive note above is considered one <i class="itshape">semitone</i> away from the next. Now in our
+    simplified version of dodecaphony, a melody is a permutation of
+    the previous melody by one of three relations.</p>
+<p>First, we have <i class="itshape">transposition</i>, where
+    each note has been shifted up by <span class="tex2jax_process">$n$</span> semitones. A <i class="itshape">retrograde</i> is when the notes have their order
+    reversed. Finally we have <i class="itshape">inversion</i>
+    about the first note of the melody. With inversions, the first
+    note doesn’t change, but the rest of the notes are inverted
+    such that the the interval (number of semitones) between that
+    note and the first note is negated.</p>
+<p>For example, if <span class="tex2jax_process">$F$</span> is
+    our first note, and we want to invert an <span class="tex2jax_process">$A\sharp $</span>, which is <span class="tex2jax_process">$5$</span> semitones higher, the inverted
+    note would be a <span class="tex2jax_process">$C$</span>, which
+    is <span class="tex2jax_process">$5$</span> semitones lower.
+    Note that the first note in an inverted melody is always just
+    the first note of the original melody.</p>
+<p>Given two melodies, can you tell what relation the second
+    has to the first?</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$2 \leq l \leq 50$</span>, the number of
+    notes in each melody.</p>
+<p>The next two lines each contain <span class="tex2jax_process">$l$</span> space separated notes. It is
+    guaranteed that each note will be one of the twelve listed
+    above.</p>
+<h2>Output</h2>
+<p>Output on a single line “Transposition” if the second melody
+    is a transposition of the first, “Retrograde” if the second
+    melody is the first melody reversed, “Inversion” if the second
+    melody is an inversion of the first melody, else “Nonsense” if
+    it is none of the other cases.</p>
+<p>If the second melody satisfies more than one relation,
+    output the first valid relation in the order of
+    “Transposition”, then “Retrograde”, then “Inversion”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+C E G
+D F# A
+</pre>
+</td>
+<td>
+<pre>Transposition
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+C C G G A A G
+C C F F D# D# F
+</pre>
+</td>
+<td>
+<pre>Inversion
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+A B C D E F G
+G F E D C B A
+</pre>
+</td>
+<td>
+<pre>Retrograde
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5
+C D E F G
+C C C C C
+</pre>
+</td>
+<td>
+<pre>Nonsense
+</pre>
+</td>
+</tr>
+</table>
+</div>

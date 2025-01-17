@@ -1,0 +1,52 @@
+<div class="problembody">
+<p>Take a deck of <span class="tex2jax_process">$n$</span>
+    unique cards. Deal the entire deck out to <span class="tex2jax_process">$k$</span> players in the usual way: the top
+    card to player <span class="tex2jax_process">$1$</span>, the
+    next to player <span class="tex2jax_process">$2$</span>, the
+    <span class="tex2jax_process">$k^{th}$</span> to player
+    <span class="tex2jax_process">$k$</span>, the <span class="tex2jax_process">$(k+1)^{st}$</span> to player <span class="tex2jax_process">$1$</span>, and so on. Then pick up the cards
+    – place player <span class="tex2jax_process">$1$</span>’s cards
+    on top, then player <span class="tex2jax_process">$2$</span>,
+    and so on, so that player <span class="tex2jax_process">$k$</span>’s cards are on the bottom. Each
+    player’s cards are in reverse order – the last card that they
+    were dealt is on the top, and the first on the bottom.</p>
+<p>How many times, including the first, must this process be
+    repeated before the deck is back in its original order?</p>
+<h2>Input</h2>
+<p>There will be up to <span class="tex2jax_process">$32\,
+    000$</span> test cases in the input. Each case will consist of
+    a single line with two integers, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le n \le 800$</span>, <span class="tex2jax_process">$1 \le k
+    \le 800$</span>). The input will end with a line with two
+    0s.</p>
+<h2>Output</h2>
+<p>For each test case in the input, print a single integer,
+    indicating the number of deals required to return the deck to
+    its original order. Output each integer on its own line, with
+    no extra spaces, and no blank lines between answers. All
+    possible inputs yield answers which will fit in a signed
+    <span class="tex2jax_process">$64$</span>-bit integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 3
+10 3
+52 4
+0 0
+</pre>
+</td>
+<td>
+<pre>
+1
+4
+13
+</pre>
+</td>
+</tr>
+</table>
+</div>

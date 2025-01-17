@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="illustration" style="width:36.00%">
+<img alt="/problems/redistribution/file/statement/en/img-0001.jpg" class="illustration" src="/problems/redistribution/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:US_Navy_010120-N-2198V-001_Chief_Master-at-Arms_Jennifer_Sayler,_a_proctor_for_the_annual_chief_petty_officer_advancement_exam,_provides_assistance_to_one_of_the_many_Sailors_taking_the_exam.jpg">
+        Picture</a> from US Navy, public domain
+      </div>
+</div>
+<p>Linda is giving an exam. When the exam is over, Linda will
+    redistribute the exams among the students for a peer review, so
+    they may grade each other’s answers and assign preliminary
+    scores.</p>
+<p>The students are split up in several rooms of varying sizes.
+    Linda has devised the following scheme for redistributing the
+    exams:</p>
+<ol class="enumerate">
+<li>
+<p>Linda visits the first room, picks up all exams written
+        there, and places them in a pile.</p>
+</li>
+<li>
+<p>In each subsequent room Linda takes exams from the top
+        of her pile and randomly distributes them to the students
+        in the room. She then picks up all exams written in that
+        room and adds them to the bottom of her pile.</p>
+</li>
+<li>
+<p>After having visited each room exactly once, Linda
+        returns to the first room, and distributes the remaining
+        exams from her pile there.</p>
+</li>
+</ol>
+<p>Naturally, it is imperative that no student receives their
+    own exam to review, and that Linda does not run out of exams in
+    her pile while doing the redistribution (i.e., that when
+    entering a room after the first one, Linda’s pile contains at
+    least as many exams as there are students in the room). Whether
+    or not this is the case depends on the order in which the rooms
+    are visited. We say that an ordering of the rooms is
+    <em>safe</em> if Linda will not run out of exams in her pile
+    when visiting rooms in that order, and that there is no chance
+    that any student receives their own exam to review.</p>
+<p>Can you find a safe order in which to visit the rooms (or
+    determine that no safe order exists)?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line containing an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le n \le 30$</span>), the number of
+        rooms.</p>
+</li>
+<li>
+<p>one line containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$s_1, \ldots , s_ n$</span> (<span class="tex2jax_process">$1 \le s_ i \le 100$</span> for each
+        <span class="tex2jax_process">$i$</span>), where
+        <span class="tex2jax_process">$s_ i$</span> is the number
+        of students in room <span class="tex2jax_process">$i$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If it is impossible to redistribute the exams safely, output
+    “<tt class="ttfamily">impossible</tt>”. Otherwise, output a
+    safe order in which to visit the rooms. If there are multiple
+    safe orders, you may give any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 3 3 1
+</pre>
+</td>
+<td>
+<pre>
+2 3 4 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+10 20
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

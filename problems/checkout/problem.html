@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/checkout/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/checkout/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        Single 1, triple 5, bullseye, for a total of <span class="tex2jax_process">$1+3\cdot 5+50= 66$</span>. Photo: Jeremy
+        Bishop
+      </div>
+</div>
+<p>You recently started playing darts and want to learn the
+    “<span class="tex2jax_process">$501$</span>” variant.</p>
+<p>Players take turns throwing three darts; the aim is to
+    reduce your score from <span class="tex2jax_process">$501$</span> to <span class="tex2jax_process">$0$</span>. The darts board contains of
+    slices numbered <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$20$</span>, with the obvious
+    scoring rule: when your dart hits <span class="tex2jax_process">$17$</span> (called “single <span class="tex2jax_process">$17$</span>” in darts lingo), your score is
+    reduced by <span class="tex2jax_process">$17$</span>. Each of
+    the twenty slices contains smaller areas called “double” and
+    “triple”; hitting “double <span class="tex2jax_process">$6$</span>” reduces your score by
+    <span class="tex2jax_process">$2\cdot 6 = 12$</span>, hitting
+    ”triple <span class="tex2jax_process">$4$</span>” reduces it by
+    <span class="tex2jax_process">$3\cdot 4 = 12$</span>”. In the
+    middle of the darts board, ”single bull” is worth <span class="tex2jax_process">$25$</span> points, “bullseye” is worth
+    <span class="tex2jax_process">$50$</span>.</p>
+<p>In the <span class="tex2jax_process">$501$</span> variant,
+    your final throw—called the <em>checkout</em>—must reduce your
+    score to <span class="tex2jax_process">$0$</span> using a
+    double or bullseye. (Not a triple, and not single bull.)</p>
+<p>It is difficult to calculate the scores in the heat of the
+    game—instead you write a problem to help you.</p>
+<h2>Input</h2>
+<p>The only line of input contains an integer <span class="tex2jax_process">$2 \leq T \leq 501$</span>, your current
+    score.</p>
+<h2>Output</h2>
+<p>If it is not possible to reduce your score to <span class="tex2jax_process">$0$</span> with at most three throws, print
+    “<tt class="ttfamily">impossible</tt>”. Otherwise, output
+    between one and three lines. Each line contains a dart throw,
+    either of the form “<tt class="ttfamily">single bull</tt>” or
+    “<tt class="ttfamily">bullseye</tt>”, or of the form
+    “<tt class="ttfamily">single</tt> <span class="tex2jax_process">$s$</span>”, “<tt class="ttfamily">double</tt> <span class="tex2jax_process">$s$</span>”, or “<tt class="ttfamily">triple</tt> <span class="tex2jax_process">$s$</span>”, for integer <span class="tex2jax_process">$s\in \{ 1,\ldots , 20\} $</span>. The total
+    points of all throws must equal <span class="tex2jax_process">$T$</span> and the last throw must be either
+    “<tt class="ttfamily">bullseye</tt>” or a “<tt class="ttfamily">double</tt>”. If there are multiple valid answers,
+    output any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>42
+</pre>
+</td>
+<td>
+<pre>triple 13
+single 1
+double 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>90
+</pre>
+</td>
+<td>
+<pre>triple 13
+single 1
+bullseye
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>270
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

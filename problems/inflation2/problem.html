@@ -1,0 +1,202 @@
+<div class="problembody">
+<p>People in southern Sweden are known to eat falafel a lot.
+    The price of falafel is highly volatile, and the best way to
+    analyze the state of the economy is to go to the same falafel
+    place every day and add up all the prices on their menu.</p>
+<p>A falafel place has <span class="tex2jax_process">$N$</span>
+    different dishes on their menu. The <span class="tex2jax_process">$i$</span>th dish has price <span class="tex2jax_process">$p_ i$</span>.</p>
+<p>Every day, one of the following events happen:</p>
+<ol class="enumerate">
+<li>
+<p><tt>INFLATION x</tt>: The integer <span class="tex2jax_process">$x$</span> is added to all prices.</p>
+</li>
+<li>
+<p><tt>SET x y</tt>: Every dish with price <span class="tex2jax_process">$x$</span> gets its price set to
+        <span class="tex2jax_process">$y$</span>.</p>
+</li>
+</ol>
+<p>Your task is to process <span class="tex2jax_process">$Q$</span> days, and after each day print the
+    sum of all prices <span class="tex2jax_process">$p_
+    i$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains one integer <span class="tex2jax_process">$N$</span>, the number of dishes.</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$p_1, p_2, \ldots , p_ N$</span>.</p>
+<p>The third line contains one integer <span class="tex2jax_process">$Q$</span>, the number of days.</p>
+<p>The following <span class="tex2jax_process">$Q$</span> lines
+    each contain a string <span class="tex2jax_process">$s$</span>
+    followed by either one or two integers.</p>
+<p>If <span class="tex2jax_process">$s$</span> is
+    <tt>INFLATION</tt>, then one integer <span class="tex2jax_process">$x$</span> follows. This means that
+    <span class="tex2jax_process">$x$</span> is added to all prices
+    on this day.</p>
+<p>If <span class="tex2jax_process">$s$</span> is <tt>SET</tt>,
+    then two integers <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> follow. This means
+    that all dishes with price <span class="tex2jax_process">$x$</span> get their price set to
+    <span class="tex2jax_process">$y$</span> on this day.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$Q$</span> lines, the
+    sum of all prices <span class="tex2jax_process">$p_ i$</span>
+    after each day.</p>
+<h2>Constraints and Scoring</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq 3 \cdot
+        10^5$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq p_ i \leq
+        10^6$</span> (for each <span class="tex2jax_process">$i$</span> such that <span class="tex2jax_process">$1 \leq i \leq N$</span>).</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq Q \leq
+        10^5$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq x,y \leq
+        10^6$</span> for all days.</p>
+</li>
+</ul>
+<p><b class="bfseries">Note</b>: The answer may not fit in a
+    <span class="tex2jax_process">$32$</span>-bit integer, so be
+    aware of overflows if you are using C++.</p>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N=1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>28</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N, Q, p_ i, x, y \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are only <tt>INFLATION</tt> events</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are only <tt>SET</tt> events</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>16</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<h2>Example</h2>
+<p>This figure corresponds to the first two days of sample
+    <span class="tex2jax_process">$1$</span>. Note that the sum of
+    prices after the first day is <span class="tex2jax_process">$16$</span>, so the first integer in the
+    output is <span class="tex2jax_process">$16$</span>.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics{inflation-sample-2.png}" src="/problems/inflation2/file/statement/en/img-0001.png" style="width:; height:"/>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+2 1 1 2 5
+6
+INFLATION 1
+SET 3 2
+SET 5 2
+INFLATION 4
+SET 6 1
+SET 10 1
+</pre>
+</td>
+<td>
+<pre>16
+14
+14
+34
+14
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 4 1
+5
+SET 1 1
+SET 3 4
+INFLATION 2
+SET 3 1
+SET 6 4
+</pre>
+</td>
+<td>
+<pre>6
+6
+12
+8
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

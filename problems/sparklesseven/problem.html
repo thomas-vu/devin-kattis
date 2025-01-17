@@ -1,0 +1,155 @@
+<div class="problembody">
+<p>In the wake of King Sombra’s siege on Equestria, Princess
+    Celestia and Princess Luna have solicited the help of Shining
+    Armor—Twilight Sparkle’s older brother—to ramp up the defenses
+    of Canterlot Castle. Now, they have asked of Twilight to
+    assemble a squad and try to break into the castle, hopefully
+    exposing any security flaws it might have in the process.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.43\textwidth ]{TBO_Heist.png}" src="/problems/sparklesseven/file/statement/en/img-0001.png" style="width:43.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1269348546538606593/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>The sibling rivalry between Twilight and Shining Armor is
+    obviously well-known, and Twilight could not resist the
+    opportunity to once again one-up her brother.</p>
+<p>Twilight quickly assembled her heist squad, consisting of
+    herself, Applejack, Rarity, Pinkie Pie, Fluttershy, Rainbow
+    Dash and Spike, and sketched out a scheme to break into the
+    castle.</p>
+<p>They have identified <i class="itshape">seven</i> potential
+    points of weakness in the defenses of Canterlot Castle. To
+    complete the heist successfully, they need to exploit <i class="itshape">all</i> seven points of weakness. Unfortunately, not
+    all points of weakness can be exploited by every member of the
+    squad; for example, it may be the case that only Rarity can
+    construct costumes intricate enough to fool the royal guards,
+    and only Rainbow Dash can fly fast enough to defeat the system
+    of giant fans that have been installed.</p>
+<p>Twilight has noted for every member of the squad whether or
+    not that member can exploit each of the seven points of
+    weakness.</p>
+<p>In one operation, Twilight must choose some non-empty subset
+    of the members of the squad (possibly everyone) and have each
+    chosen member exploit one weakness. It might not be possible to
+    exploit all seven points of weakness in just one operation, so
+    she can construct multiple such operations, possibly sending
+    the same member on multiple operations. After all operations
+    have been conducted, every weakness must have been exploited
+    exactly once.</p>
+<p>Of course, the more operations she needs to execute, the
+    longer the heist will take and the greater the chance her
+    conspiracy will be discovered; therefore, the number of
+    operations should be as small as possible.</p>
+<p>Can you help her plan out the heist?</p>
+<p>If it is not possible for the heist to succeed at all, you
+    should also let her know.</p>
+<h2>Input</h2>
+<p>There will be seven lines of input.</p>
+<p>Each line contains seven integers. In particular, the
+    <span class="tex2jax_process">$j^\text {th}$</span> integer on
+    the <span class="tex2jax_process">$i^\text {th}$</span> of
+    these lines is either:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0$</span>, if the
+        <span class="tex2jax_process">$i^\text {th}$</span> member
+        cannot exploit the <span class="tex2jax_process">$j^\text
+        {th}$</span> weakness;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1$</span>, if the
+        <span class="tex2jax_process">$i^\text {th}$</span> member
+        can exploit the <span class="tex2jax_process">$j^\text
+        {th}$</span> weakness.</p>
+</li>
+</ul>
+<p>The members are, in order, <tt class="ttfamily">Twilight
+    Sparkle</tt>, <tt class="ttfamily">Applejack</tt>, <tt class="ttfamily">Rarity</tt>, <tt class="ttfamily">Pinkie Pie</tt>,
+    <tt class="ttfamily">Fluttershy</tt>, <tt class="ttfamily">Rainbow Dash</tt> and <tt class="ttfamily">Spike</tt>.</p>
+<h2>Output</h2>
+<p>If it is not possible for the heist to succeed, output a
+    single line containing the string <tt class="ttfamily">IMPOSSIBLE</tt>.</p>
+<p>Otherwise, on the first line, output a single integer
+    <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1 \leq p \leq 7$</span>), the minimum number
+    of operations needed to complete the heist successfully.</p>
+<p>Then, output the <span class="tex2jax_process">$p$</span>
+    operations.</p>
+<p>The <span class="tex2jax_process">$i^\text {th}$</span>
+    operation should first contain a single integer <span class="tex2jax_process">$m_ i$</span> (<span class="tex2jax_process">$1 \leq m_ i \leq 7$</span>) on a single
+    line, the number of members involved in the <span class="tex2jax_process">$i^\text {th}$</span> operation.</p>
+<p>Then, on the next <span class="tex2jax_process">$m_
+    i$</span> lines, output the members involved in the
+    <span class="tex2jax_process">$i^\text {th}$</span> plan. In
+    particular, the <span class="tex2jax_process">$j^\text
+    {th}$</span> of these lines should contain one of <tt class="ttfamily">Twilight Sparkle</tt>, <tt class="ttfamily">Applejack</tt>, <tt class="ttfamily">Rarity</tt>,
+    <tt class="ttfamily">Pinkie Pie</tt>, <tt class="ttfamily">Fluttershy</tt>, <tt class="ttfamily">Rainbow
+    Dash</tt> or <tt class="ttfamily">Spike</tt> followed by a
+    single integer <span class="tex2jax_process">$e_{i, j}$</span>
+    (<span class="tex2jax_process">$1 \leq e_{i, j} \leq
+    7$</span>), separated by a space, denoting that the given
+    member should exploit the <span class="tex2jax_process">$e_{i,
+    j}^\text {th}$</span> point of weakness.</p>
+<p>Each member should appear at most once in one operation, and
+    every weakness should be exploited exactly once across all the
+    operations. Within each operation, you can output the members
+    in any order.</p>
+<p>If there are multiple correct answers, you can output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 0 1 0 0 0 0
+0 1 1 0 0 0 0
+1 0 1 0 0 1 0
+0 0 1 1 0 0 0
+1 0 1 0 0 1 0
+0 0 1 0 1 0 1
+0 0 1 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>2
+4
+Applejack 2
+Pinkie Pie 4
+Rarity 6
+Rainbow Dash 7
+3
+Twilight Sparkle 1
+Fluttershy 3
+Rainbow Dash 5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 0 0 0 0 0 0
+0 0 1 0 1 0 0
+0 0 1 0 1 0 0
+0 0 0 0 0 0 0
+0 0 1 1 1 0 0
+0 1 0 0 0 1 0
+0 0 0 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

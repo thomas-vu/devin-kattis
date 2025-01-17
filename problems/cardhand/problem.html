@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/cardhand/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cardhand/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Sample Input 2 (cc by-sa NCPC 2016)
+      </div>
+</div>When dealt cards in the card game Plump it is a good idea
+    to start by sorting the cards in hand by suit and rank. The
+    different suits should be grouped and the ranks should be
+    sorted within each suit. But the order of the suits does not
+    matter and within each suit, the cards may be sorted in either
+    ascending or descending order on rank. It is allowed for some
+    suits to be sorted in ascending order and others in descending
+    order.
+
+    <p>Sorting is done by moving one card at a time from its
+    current position to a new position in the hand, at the start,
+    end, or in between two adjacent cards. What is the smallest
+    number of moves required to sort a given hand of cards?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 52$</span>), the number of cards in the hand. The
+    second line contains <span class="tex2jax_process">$n$</span>
+    pairwise distinct space-separated cards, each represented by
+    two characters. The first character of a card represents the
+    rank and is either a digit from <tt class="ttfamily">2</tt> to
+    <tt class="ttfamily">9</tt> or one of the letters <tt class="ttfamily">T</tt>, <tt class="ttfamily">J</tt>, <tt class="ttfamily">Q</tt>, <tt class="ttfamily">K</tt>, and <tt class="ttfamily">A</tt> representing Ten, Jack, Queen, King and Ace,
+    respectively, given here in increasing order. The second
+    character of a card is from the set {<tt class="ttfamily">s</tt>, <tt class="ttfamily">h</tt>, <tt class="ttfamily">d</tt>, <tt class="ttfamily">c</tt>} representing
+    the suits spades <span class="tex2jax_process">$\spadesuit
+    $</span>, hearts <span class="tex2jax_process">$\heartsuit
+    $</span>, diamonds <span class="tex2jax_process">$\diamondsuit $</span>, and
+    clubs <span class="tex2jax_process">$\clubsuit
+    $</span>.</p>
+<h2>Output</h2>
+<p>Output the minimum number of card moves required to sort the
+    hand as described above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2h Th 8c Qh
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+9d As 2s Qd 2c Jd 8h
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2h 3h 9c 8c
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

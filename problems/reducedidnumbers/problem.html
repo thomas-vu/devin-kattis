@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>T. Chur teaches various groups of students at
+    university U. Every U-student has a unique Student
+    Identification Number (SIN). A SIN <span class="tex2jax_process">$s$</span> is an integer in the range
+    <span class="tex2jax_process">$0\le s\le
+    \mathit{MaxSIN}$</span> with <span class="tex2jax_process">$\mathit{MaxSIN}=10^6-1$</span>. T. Chur
+    finds this range of SINs too large for identification within
+    her groups. For each group, she wants to find the smallest
+    positive integer <span class="tex2jax_process">$m$</span>,
+    such that within the group all SINs reduced
+    modulo <span class="tex2jax_process">$m$</span> are
+    unique.</p>
+<h2>Input</h2>
+<p>The first line of input contains the
+    integer <span class="tex2jax_process">$G$</span>
+    (<span class="tex2jax_process">$1\le G\le 300$</span>): the
+    number of students in the group. The following <span class="tex2jax_process">$G$</span> lines each contain one SIN.
+    The SINs are distinct, though not necessarily sorted.</p>
+<h2>Output</h2>
+<p>Output one line containing the smallest
+    modulus <span class="tex2jax_process">$m$</span>, such
+    that all SINs reduced modulo <span class="tex2jax_process">$m$</span> are distinct.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+124866
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+124866
+111111
+987651
+</pre>
+</td>
+<td>
+<pre>
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

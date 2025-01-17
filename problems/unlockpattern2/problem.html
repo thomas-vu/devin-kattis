@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/unlockpattern2/file/statement/en/img-0001.png" class="illustration" src="/problems/unlockpattern2/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Many phones use a nine-pivot unlock pattern. The nine
+    pivots are arranged as a <span class="tex2jax_process">$3
+    \times 3$</span> grid, and numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$9$</span> as shown in the figure. The unlock
+    pattern is a single stroke that starts at any pivot and visits
+    each pivot exactly once. The stroke goes in a straight line
+    segment between each pair of consecutive pivots. It may pass a
+    pivot multiple times but only the first time counts as a visit.
+    The phone unlocks if the pivots are visited in a predefined
+    secret order. The figure illustrates an unlock pattern of
+    <span class="tex2jax_process">$2 \rightarrow 5 \rightarrow 3
+    \rightarrow 6 \rightarrow 7 \rightarrow 4 \rightarrow 1
+    \rightarrow 8 \rightarrow 9$</span>. Due to physical
+    constraints, it is not possible for the stroke to pass but not
+    visit a pivot if it has not been visited before. For instance,
+    a pattern that starts with <span class="tex2jax_process">$1
+    \rightarrow 7 \rightarrow \dots $</span> is invalid because it
+    must visit pivot <span class="tex2jax_process">$4$</span>
+    before visiting pivot <span class="tex2jax_process">$7$</span>.
+    However, starting with <span class="tex2jax_process">$4
+    \rightarrow 1 \rightarrow 7 \dots $</span> is fine because
+    pivot <span class="tex2jax_process">$4$</span> is already
+    visited when the stroke passes it again.
+    <p>Consider the directional changes along the unlock pattern.
+    The pattern may take a left turn (‘<tt class="tt">L</tt>’), a
+    right turn (‘<tt class="tt">R</tt>’), go straight (‘<tt class="tt">S</tt>’), or turn around (‘<tt class="tt">A</tt>’) at each
+    pivot except for the first and the last pivot. If we write down
+    the directional changes into one string, we get a string of
+    length seven. This is the <i class="it">turn sequence</i> of
+    the unlock pattern. The turn sequence of the unlock pattern
+    shown in the figure is “<tt class="tt">LRRRSRL</tt>”.</p>
+<p>Given a turn sequence, with some of the directional changes
+    replaced by question marks (‘<tt class="tt">?</tt>’), which
+    mean we can take any direction at those pivots, how many
+    different unlock patterns are consistent with this turn
+    sequence?</p>
+<h2>Input</h2>
+<p>The input has a single string of length seven. The string
+    consists of characters ‘<tt class="tt">L</tt>’, ‘<tt class="tt">R</tt>’, ‘<tt class="tt">S</tt>’, ‘<tt class="tt">A</tt>’
+    and ‘<tt class="tt">?</tt>’ that describe the directional
+    changes at the pivots in the order of their visit.</p>
+<h2>Output</h2>
+<p>Output the number of different unlock patterns that have a
+    turn sequence matching the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>LRRRSRL
+</pre>
+</td>
+<td>
+<pre>44
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>??AS???
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

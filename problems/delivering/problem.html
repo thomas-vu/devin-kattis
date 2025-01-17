@@ -1,0 +1,145 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/delivering/file/statement/en/img-0001.jpg" class="illustration" src="/problems/delivering/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/kamshots/">Photo</a>
+        by kamyar adl cc by-sa 2.0
+      </div>
+</div>You run a delivery company and must deploy a fleet of
+    vehicles to deliver goods to clients. All of the goods and
+    delivery trucks are initially located at your warehouse.
+
+    <p>The road network consists of one-way streets between
+    junctions. The warehouse and clients are all located at a
+    junction. You know the driving time across each street.</p>
+<p>You guarantee extremely fast shipping: the trucks start
+    driving immediately at the start of the day and each client
+    <span class="tex2jax_process">$i$</span> will receive the
+    package at time <span class="tex2jax_process">$T_ i$</span>
+    where <span class="tex2jax_process">$T_ i$</span> is the
+    shortest possible driving time for a truck to go from the
+    warehouse to the location of the client <span class="tex2jax_process">$i$</span>.</p>
+<p>What is the minimum number of trucks you have to deploy to
+    ensure this guarantee is met? That is, what is the minimum
+    number of trucks such that it is possible to give each truck a
+    driving route so that every client <span class="tex2jax_process">$i$</span> is visited by some truck at time
+    <span class="tex2jax_process">$T_ i$</span>. Assume it takes no
+    time to load the trucks with the appropriate goods at the start
+    of the day, and it takes no time to drop goods off at a client
+    once the truck arrives at the client. These goods are small
+    enough that each truck can carry goods for as many clients as
+    necessary.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line of
+    each test case consists of three numbers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, and <span class="tex2jax_process">$C$</span>. Here <span class="tex2jax_process">$N$</span> denotes the number of junctions in
+    the road network (<span class="tex2jax_process">$2 \leq N \leq
+    10^3$</span>), <span class="tex2jax_process">$M$</span> denotes
+    the number of streets (<span class="tex2jax_process">$1 \leq M
+    \leq 10^5$</span>), and <span class="tex2jax_process">$C$</span> denotes the number of clients
+    (<span class="tex2jax_process">$1 \leq C \leq 300$</span>,
+    <span class="tex2jax_process">$C &lt; N$</span>).</p>
+<p>The junctions are numbered <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$N-1$</span>. The warehouse is always at
+    junction <span class="tex2jax_process">$0$</span>. The second
+    line consists of <span class="tex2jax_process">$C$</span>
+    distinct integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N-1$</span> indicating the junctions where
+    the clients reside.</p>
+<p>The rest of the input consists of <span class="tex2jax_process">$M$</span> lines, each containing integers
+    <span class="tex2jax_process">$U,V,W$</span> where <span class="tex2jax_process">$0 \leq U,V \leq N-1$</span> and <span class="tex2jax_process">$U \neq V$</span>. This indicates there is a
+    one-way street from <span class="tex2jax_process">$U$</span> to
+    <span class="tex2jax_process">$V$</span> with driving time
+    <span class="tex2jax_process">$W$</span>. Each street’s driving
+    time <span class="tex2jax_process">$W$</span> satisfies
+    <span class="tex2jax_process">$1 \leq W \leq 10^9$</span>. It
+    will always be possible to reach every client from the
+    warehouse.</p>
+<p>There will be at most one street from a vertex <span class="tex2jax_process">$U$</span> to another vertex <span class="tex2jax_process">$V$</span>, but there may be streets from
+    both <span class="tex2jax_process">$U$</span> to <span class="tex2jax_process">$V$</span> and from <span class="tex2jax_process">$V$</span> to <span class="tex2jax_process">$U$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer that is the minimum number of
+    vehicles required to ensure each client <span class="tex2jax_process">$i$</span> is visited at time <span class="tex2jax_process">$T_ i$</span> by some vehicle.</p>
+<h2>Explanations of Sample Inputs</h2>
+<p>In the first sample, one vehicle can follow the path
+    <span class="tex2jax_process">$(0,1,2)$</span> and the other
+    can follow <span class="tex2jax_process">$(0,3)$</span>. In the
+    second sample, the only solution is to use paths <span class="tex2jax_process">$(0,1)$</span>, <span class="tex2jax_process">$(0,2)$</span>, and <span class="tex2jax_process">$(0,3)$</span>. In the final sample, one
+    vehicle can follow <span class="tex2jax_process">$(0,1)$</span>, another <span class="tex2jax_process">$(0,4,6)$</span>, and the last one
+    <span class="tex2jax_process">$(0,2,3,5,7)$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5 3
+1 2 3
+0 1 1
+0 3 1
+0 2 2
+1 2 1
+3 2 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5 3
+1 2 3
+0 1 1
+0 3 1
+0 2 1
+1 2 1
+3 2 1
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 11 5
+1 3 4 6 7
+0 1 5
+0 4 1
+0 2 2
+0 6 6
+2 3 1
+2 6 3
+3 5 7
+4 1 5
+5 7 3
+6 5 6
+4 6 4
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

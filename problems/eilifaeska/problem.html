@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Hildur enjoys mixing drinks and has now created the drink
+    <i class="itshape">eternal youth</i>. She poured the drink into
+    a few glasses and intends to share it with some friends. After
+    having poured into the glasses she noticed there isn’t an equal
+    amount between all the glasses. To make sure everything is fair
+    she has to fix this by pouring from one glass to another, as
+    often as needed, until all are equal. When she pours from glass
+    <span class="tex2jax_process">$i$</span> to glass <span class="tex2jax_process">$j$</span> then glass <span class="tex2jax_process">$i$</span> has to contain at least as much as
+    glass <span class="tex2jax_process">$j$</span>. She stops
+    pouring from glass <span class="tex2jax_process">$i$</span>
+    into glass <span class="tex2jax_process">$j$</span> when they
+    have become equal. Help Hildur and her friends obtain <i class="itshape">eternal youth</i>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> where <span class="tex2jax_process">$1 \leq n \leq 4$</span>. Then there is a
+    single line with <span class="tex2jax_process">$n$</span>
+    integers <span class="tex2jax_process">$a_i$</span>, the amount
+    of liquid in the <span class="tex2jax_process">$i$</span>-th
+    glass in milliliters. It is guaranteed that <span class="tex2jax_process">$0 \leq a_i \leq 10^8$</span>.</p>
+<h2>Output</h2>
+<p>If there is no solution print <span class="tex2jax_process">$-1$</span>. Otherwise print an integer
+    <span class="tex2jax_process">$0 \leq k \leq 1000$</span>
+    giving the number of pourings between glasses. If the problem
+    is solvable it can be done in at most <span class="tex2jax_process">$1000$</span> operations. Next you should
+    print <span class="tex2jax_process">$k$</span> lines with two
+    integers <span class="tex2jax_process">$1 \leq i, j \leq
+    n$</span> each, denoting that one is to pour from glass
+    <span class="tex2jax_process">$i$</span> to glass <span class="tex2jax_process">$j$</span> until they have the same amount of
+    liquid. The answer is considered correct if all glasses contain
+    an equal amount of liquid after all the operations, assuming
+    all the operations are valid. If an operation refers to a glass
+    that does not exist or pours from glass <span class="tex2jax_process">$i$</span> to glass <span class="tex2jax_process">$j$</span> when there is less in glass
+    <span class="tex2jax_process">$i$</span> than in glass
+    <span class="tex2jax_process">$j$</span> then the operation is
+    considered invalid.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3 \leq n \leq
+          4$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 5
+</pre>
+</td>
+<td>
+<pre>1
+2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+100 200 200 100
+</pre>
+</td>
+<td>
+<pre>2
+3 4
+2 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

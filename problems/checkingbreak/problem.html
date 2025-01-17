@@ -1,0 +1,140 @@
+<div class="problembody">
+<p>As you already know from the previous problem, ‘Breaking
+    Cake’, the first round of the Hunter Exam has begun.</p>
+<p>The following paragraphs are copied from the problem
+    statement of ‘Breaking Cake’:</p>
+<blockquote class="quotation">
+<p>The first round of the Hunter Exam is a real-life problem
+      solving test: Each candidate is given a rectangular
+      parallelepiped cake of size <span class="tex2jax_process">$a
+      \cdot b \cdot c$</span>, which can be divided into unit cubes
+      of size <span class="tex2jax_process">$1 \cdot 1 \cdot
+      1$</span>.</p>
+<p>Inside the cake, there are <span class="tex2jax_process">$m$</span> unit cubes containing chocolate
+      chips. The <span class="tex2jax_process">$i$</span>-th cube
+      is located at position <span class="tex2jax_process">$(x_ i,
+      y_ i, z_ i)$</span>.</p>
+<p>The candidates must divide their given cake into exactly
+      <span class="tex2jax_process">$m$</span> rectangular
+      parallelepiped parts, satisfying all the following
+      conditions:</p>
+<ul class="itemize">
+<li>
+<p>For every two parts, their common space’s volume must
+          be zero.</p>
+</li>
+<li>
+<p>Each part must contain exactly one chocolate chip.</p>
+</li>
+<li>
+<p>The coordinates of the corners of all <span class="tex2jax_process">$m$</span> parts must be integers.</p>
+</li>
+<li>
+<p>To prevent wasted food, candidates cannot throw away
+          any part of the cake.</p>
+</li>
+</ul>
+<p>Can you divide the cake satisfying all the constraints and
+      pass the first round of the Hunter Exam?</p>
+</blockquote>
+<p>This year, <span class="tex2jax_process">$10^9 + 7$</span>
+    candidates participated in the first round of the Hunter Exam!
+    Obviously, it is impossible for the Hunter Exam organizers, the
+    Hunter Association, to manually check all the candidates’
+    solutions. As the only programmer of the Hunter Association,
+    you have been tasked with writing a program to automatically
+    check whether the candidates’ solutions are valid.</p>
+<h2>Input</h2>
+<p>The input contains multiple test cases. Each test case is
+    described as below:</p>
+<ul class="itemize">
+<li>
+<p>The first line contains exactly <span class="tex2jax_process">$4$</span> positive integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$m$</span>. <span class="tex2jax_process">$(1 \le a, b, c \le 10^6, 1 \le m \le
+        10^3)$</span>.</p>
+</li>
+<li>
+<p>In the next <span class="tex2jax_process">$m$</span>
+        lines, the <span class="tex2jax_process">$i$</span>-th line
+        contains exactly <span class="tex2jax_process">$3$</span>
+        positive integers <span class="tex2jax_process">$x_
+        i$</span>, <span class="tex2jax_process">$y_ i$</span> and
+        <span class="tex2jax_process">$z_ i$</span> — the
+        coordinates of the <span class="tex2jax_process">$i$</span>-th chocolate chip <span class="tex2jax_process">$(1 \le x_ i \le a, 1 \le y_ i \le b, 1
+        \le z_ i \le c)$</span>. No two chips are in the same
+        position.</p>
+</li>
+<li>
+<p>The next <span class="tex2jax_process">$m$</span> lines
+        describe a solution given by a candidate:</p>
+<ul class="itemize">
+<li>
+<p>The <span class="tex2jax_process">$i$</span>-th line
+            <span class="tex2jax_process">$(1 \le i \le m)$</span>
+            contains exactly <span class="tex2jax_process">$6$</span> integers, <span class="tex2jax_process">$x_ i$</span>, <span class="tex2jax_process">$y_ i$</span>, <span class="tex2jax_process">$z_ i$</span>, <span class="tex2jax_process">$u_ i$</span>, <span class="tex2jax_process">$v_ i$</span> and <span class="tex2jax_process">$w_ i$</span> representing the
+            <span class="tex2jax_process">$i$</span>-th part
+            <span class="tex2jax_process">$(1 \le x_ i, u_ i, y_ i,
+            v_ i, z_ i, w_ i \le 10^6)$</span>. <span class="tex2jax_process">$(x_ i, y_ i, z_ i)$</span> and
+            <span class="tex2jax_process">$(u_ i, v_ i, w_
+            i)$</span> are the coordinates of two opposite unit
+            cubes of the <span class="tex2jax_process">$i$</span>-th part.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Sum of <span class="tex2jax_process">$m$</span> over all
+    test cases in one input file is at most <span class="tex2jax_process">$5 \cdot 10^4$</span>.</p>
+<p>The last line of the input contains a single number
+    <span class="tex2jax_process">$-1$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print exactly one line, containing ‘YES’
+    if the candidate’s solution satisfies all the given
+    constraints:</p>
+<ul class="itemize">
+<li>
+<p>The <span class="tex2jax_process">$i$</span>-th part
+        must contains the <span class="tex2jax_process">$i$</span>-th chocolate chip.</p>
+</li>
+<li>
+<p>Candidate did not throw away any part of the cake.</p>
+</li>
+<li>
+<p>The volume of the intersection of any two parts must be
+        equal to zero.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le x_ i \le u_ i \le
+        a, 1 \le y_ i \le v_ i \le b, 1 \le z_ i \le w_ i \le
+        c$</span>.</p>
+</li>
+</ul>
+<p>Otherwise, print ‘NO’.</p>
+<p>Note that it is <b class="bfseries">not</b> guaranteed that
+    the cake can be divided into <span class="tex2jax_process">$m$</span> parts satisfying all the given
+    constraints. In which case, the output for that test case would
+    be ‘NO’.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 5 2
+1 1 1
+5 5 5
+1 1 1 5 5 1
+1 1 2 5 5 5
+5 5 5 1
+3 3 3
+1 1 1 5 5 6
+-1
+</pre>
+</td>
+<td>
+<pre>YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

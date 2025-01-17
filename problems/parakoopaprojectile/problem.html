@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$N$</span>
+    Parakoopas scattered across the first quadrant of the Cartesian
+    plane (positive <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> coordinates), and
+    Mario stands at the origin, located at <span class="tex2jax_process">$(0,0)$</span>, waiting to put a well-known
+    proverb to the test. He wants to hit two parakoopas (he’s fine
+    hitting more too) with one snowball throw, where a throw is a
+    parabola from his starting point at the origin. The throw can
+    be modeled by the equation of a parabola <span class="tex2jax_process">$y = a(x-h)^2+k$</span> with <span class="tex2jax_process">$a &lt; 0$</span> (since gravity pulls all
+    projectile downwards). The only constraints on <span class="tex2jax_process">$a, h, k$</span> are that <span class="tex2jax_process">$a$</span> must be negative and the parabola
+    must pass through the origin. Mario wants to show off to his
+    brother Luigi while exerting the least amount of effort as
+    possible, so he decides to throw the snowball the shortest
+    distance possible while still hitting at least two parakoopas.
+    Determine the shortest distance in the <span class="tex2jax_process">$x$</span>-direction that he can throw the
+    snowball, given that the snowball stops moving when it hits the
+    ground at the x-axis.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{parakoopa.png}" src="/problems/parakoopaprojectile/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Example of Mario’s throw in the first
+          sample case
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$2 \leq n \leq 100\, 000$</span>,
+    which denotes the number of parakoopas.<br/>
+    The next <span class="tex2jax_process">$n$</span> lines each
+    contain a pair of space separated integers <span class="tex2jax_process">$x,y$</span> denoting the coordinates of a
+    parakoopa. The coordinates satisfy <span class="tex2jax_process">$0 &lt; x,y \leq 10^{18}$</span>. The test
+    data for this problem is constructed in such a way that there
+    exists a snowball throw that satisfies the constraints.</p>
+<h2>Output</h2>
+<p>Output a single real number denoting the minimum distance
+    that Mario can throw the snowball, while still hitting at least
+    two parakoopas. Your answer will be considered correct if it
+    has a relative or absolute error of at most <span class="tex2jax_process">$10^{-6}$</span>. It is guaranteed that the
+    answer will be less than <span class="tex2jax_process">$10^{18}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3 2
+1 3
+2 3
+</pre>
+</td>
+<td>
+<pre>3.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

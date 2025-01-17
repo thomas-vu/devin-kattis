@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:27.00%">
+<img alt="/problems/intergalacticbidding/file/statement/en/img-0001.jpg" class="illustration" src="/problems/intergalacticbidding/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/en/law-justice-court-judge-legal-1063249/">
+        Picture</a> by Activedia via Pixabay, CC0
+      </div>
+</div>Today the Intergalactic Council of Pebble Coins (ICPC)
+    conducted an intergalactic auction of the Neutronium Chaos
+    Pebble Coin (NCPC). This coin, which was forged in the Ancient
+    Coin Machine (ACM), is rumored to be the key to ruling the
+    universe.
+    <p>Due to the extremely competitive nature of the auction, as
+    well as the odd mechanics of the intergalactic currency used
+    (far too advanced for mere mortals to understand), the auction
+    was conducted with the following rules:</p>
+<ol class="enumerate">
+<li>
+<p>only one participant was allowed to make a bid at a
+        time,</p>
+</li>
+<li>
+<p>each participant was only allowed to make one bid,
+        and</p>
+</li>
+<li>
+<p>a participant making a bid had to bid at least twice the
+        amount of the highest bid at the time.</p>
+</li>
+</ol>
+<p>The first participant making a bid was allowed to make a bid
+    of any positive amount.</p>
+<p>After the auction there were a lot of sore losers –
+    understandably, having just lost their chance at world
+    domination. To make the losers feel a little better and prevent
+    possible rioting, the ICPC has decided to hold a lottery for
+    the participants. The winners of the lottery are determined as
+    follows. The ICPC picks a random number <span class="tex2jax_process">$s$</span>. A group of participants is called
+    <em>winning</em> if the sum of their bets from the auction is
+    equal to <span class="tex2jax_process">$s$</span>. A
+    participant wins the lottery and receives a prize – a shiny
+    Pebble Coin – if they belong to any winning group of
+    participants.</p>
+<p>Given the names of the participants, the bets that they
+    made, and the random number <span class="tex2jax_process">$s$</span> chosen by the ICPC, help them
+    determine which participants won the lottery.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$s$</span>, where <span class="tex2jax_process">$1 \le n \le 1\, 000$</span> is the number of
+    participants, and <span class="tex2jax_process">$1 \le s &lt;
+    10^{1\, 000}$</span> is the random number chosen by the
+    ICPC.</p>
+<p>Then follow <span class="tex2jax_process">$n$</span> lines
+    describing the participants. Each line contains a string
+    <span class="tex2jax_process">$t$</span> and an integer
+    <span class="tex2jax_process">$b$</span>, where <span class="tex2jax_process">$t$</span> is the name of a participant, and
+    <span class="tex2jax_process">$1 \le b &lt; 10^{1\,
+    000}$</span> is the amount of his bet. The name of each
+    participant is unique and consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> letters from the English
+    alphabet.</p>
+<h2>Output</h2>
+<p>Output an integer <span class="tex2jax_process">$k$</span>
+    denoting the number of participants that won the lottery. Then
+    output <span class="tex2jax_process">$k$</span> lines
+    containing the names of the participants that won the lottery,
+    one per line, in any order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 63
+Vader 3
+Voldemort 7
+BorgQueen 20
+Terminator 40
+Megatron 101
+</pre>
+</td>
+<td>
+<pre>3
+BorgQueen
+Terminator
+Vader
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 1112
+Blorg 10
+Glorg 1000
+Klorg 1
+Zlorg 100
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

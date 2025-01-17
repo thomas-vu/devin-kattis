@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/gulegummistoevler/file/statement/en/img-0001.png" class="illustration" src="/problems/gulegummistoevler/file/statement/en/img-0001.png"/>
+<div class="description">
+        Sample 1.
+      </div>
+</div>You are participating in a silly game show on prime time
+    Danish TV. Wearing a pair of yellow rubberboots you have been
+    led blindfolded through a labyrinth, which you now want to
+    leave along the shortest path. The labyrinth has no walls but
+    consists of square tiles; you can safely walk on these tiles,
+    but stepping off them means immediate defeat. You have been led
+    to your current position along safe tiles, and have perfect
+    memory.
+    <h2>Input</h2>
+<p>On the first line, the integer <span class="tex2jax_process">$n\in \{ 0,\ldots , 501\} $</span>,
+    specifying the number of instructions you have received. The
+    follows a line with <span class="tex2jax_process">$n$</span>
+    space-separated instructions. Each instruction is either an
+    integer <span class="tex2jax_process">$k\in \{ 1,\ldots ,
+    10^6\} $</span> meaning “walk forward <span class="tex2jax_process">$k$</span> tiles”, a capital
+    “<tt>U</tt>” meaning “make a U-turn”, or either of
+    “<tt>&gt;</tt>” or “<tt>&lt;</tt>” meaning “make a 90 degree
+    turn” to the right or left, respectively.</p>
+<h2>Output</h2>
+<p>No more than <span class="tex2jax_process">$503$</span>
+    space-separated instructions leading you back to start along
+    safe tiles, such that the sum of integers is minimal. The last
+    instruction must be the word <tt class="tt">exit</tt>.</p>
+<h2>Points</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Point</p>
+</td>
+<td style="text-align:left">
+<p>Input constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Neither “<tt>&gt;</tt>” or “<tt>&lt;</tt>” occur</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>19</p>
+</td>
+<td style="text-align:left">
+<p>“<tt class="ttfamily">U</tt>” does not occur;
+          “<tt>&gt;</tt>” and “<tt>&lt;</tt>” alternate</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>21</p>
+</td>
+<td style="text-align:left">
+<p>All “walk forward” integers equal <span class="tex2jax_process">$2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>4</p>
+</td>
+<td style="text-align:left">
+<p>22</p>
+</td>
+<td style="text-align:left">
+<p>All “walk forward” integers are even</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>5</p>
+</td>
+<td style="text-align:left">
+<p>23</p>
+</td>
+<td style="text-align:left">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>11
+2 &lt; 2 2 &gt; 2 &gt; 2 &gt; 2 2
+</pre>
+</td>
+<td>
+<pre>U 2 &gt; 2 &gt; 2 exit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+10 U U 10 U 20
+</pre>
+</td>
+<td>
+<pre>exit
+</pre>
+</td>
+</tr>
+</table>
+</div>

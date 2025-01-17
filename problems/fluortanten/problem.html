@@ -1,0 +1,170 @@
+<div class="problembody">
+<p>Björn and <span class="tex2jax_process">$n-1$</span> other
+    children stand in line to meet the "fluortant" (the fluoride
+    administrator, who comes to school to give children fluoride
+    treatments). Different children are more or less scared of the
+    fluortant. The children are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, and child <span class="tex2jax_process">$i$</span> is in position <span class="tex2jax_process">$i$</span> in the queue. Child <span class="tex2jax_process">$i$</span> also has associated value
+    <span class="tex2jax_process">$a_ i$</span>, which shows how
+    reluctant the child is to meet the fluortant. The happiness
+    that child <span class="tex2jax_process">$i$</span> feels of
+    their place in the queue is <span class="tex2jax_process">$i
+    \cdot a_ i$</span>. A child can have negative <span class="tex2jax_process">$a_ i$</span>, which means that they actually
+    want to meet the fluortant and thus are sorry to have to
+    wait.</p>
+<p>Björn is the only child who is completely indifferent to
+    meeting the fluortant, that is, he is the only child who has
+    <span class="tex2jax_process">$a_ i = 0$</span>. In addition,
+    he is very kindhearted, so he decides to leave the queue and
+    then enter the queue again somewhere so that the total
+    happiness of everyone in the queue is as great as possible.
+    Write a program that, given the values <span class="tex2jax_process">$a_ i$</span> for all children, calculates
+    the maximum sum of the happiness in the queue if Björn stands
+    in an optimal place.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, the number of children in the
+    queue. On the next line are <span class="tex2jax_process">$n$</span> integers, where the <span class="tex2jax_process">$i$</span>th number is <span class="tex2jax_process">$a_ i$</span>. <span class="tex2jax_process">$1 \leq n \leq 10^6 $</span>, <span class="tex2jax_process">$-1\, 000 \leq a_ i \leq 1\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Print a line with one integer: the maximum total happiness
+    in the queue.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get points for a group your submission must pass all the test
+    cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Bounds</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Other</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$32$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$12$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The sequence <span class="tex2jax_process">$a_1 \dots
+          a_ n$</span> is non-decreasing.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The sequence <span class="tex2jax_process">$a_1 \dots
+          a_ n$</span> is non-increasing.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$45$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+         </td>
+</tr>
+</table>
+<h2>Explanation of example 1</h2>
+<p>Björn is last in the queue. The sum of the happiness is then
+    <span class="tex2jax_process">$1 \cdot 1 + 2\cdot (-2) + 3
+    \cdot 0 = -3$</span>.</p>
+<p>If Björn moves to the front of the queue, the sum of the
+    happiness would be <span class="tex2jax_process">$1 \cdot 0 + 2
+    \cdot 1 + 3 \cdot (-2) = -4$</span>, and in the middle it would
+    be <span class="tex2jax_process">$1 \cdot 1 + 2 \cdot 0 + 3
+    \cdot (-2) = -5$</span>. Both of these are worse
+    alternatives.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 0 -2
+</pre>
+</td>
+<td>
+<pre>-3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 -8 1 1 5
+</pre>
+</td>
+<td>
+<pre>24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+2 -4 5 -3 0 -1 2
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/dailydivision/file/statement/en/img-0001.jpg" class="illustration" src="/problems/dailydivision/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/biskyt30/4236217625/">biskyt30</a>.
+      </div>
+</div>
+<p>Oostende Beach is a very long beach located in the north of
+    Belgium. On this beach, there are <span class="tex2jax_process">$n$</span> huts located along a straight
+    line. People can rent a room in one of those huts to spend
+    their beach vacations together with the other tenants.</p>
+<p>Every day at lunch time, a food truck drives by to serve
+    fries to the guests. The truck parks in front of one of the
+    huts and people form two queues. The people staying in huts to
+    the left of the food truck queue on the left, and the people to
+    the right of the food truck queue on the right. The people
+    staying in the hut in front of the food truck split their group
+    in half, one half going to the left queue and the other half
+    going to the right queue. If this is an odd number of people,
+    the remaining person will go to the queue with fewer people, or
+    choose one randomly if the queues have the same length. The
+    food truck always positions itself so that the difference
+    between the number of people in the left queue and the number
+    of people in the right queue is as small as possible.</p>
+<p>Each night the number of guests in exactly one of the huts
+    changes. Can you help the food truck find the best position for
+    each day?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line of the input consists of two integers
+        <span class="tex2jax_process">$1\leq n \leq 10^5$</span>,
+        the number of huts, and <span class="tex2jax_process">$1\leq q\leq 10^5$</span>, the number of
+        days.</p>
+</li>
+<li>
+<p>The second line has <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_0$</span>, <span class="tex2jax_process">$\dots $</span>, <span class="tex2jax_process">$a_{n-1}$</span> satisfying <span class="tex2jax_process">$1\leq a_ i \leq 10^6$</span> for
+        <span class="tex2jax_process">$0\leq i &lt; n$</span>,
+        where <span class="tex2jax_process">$a_ i$</span> is the
+        current number of people in hut <span class="tex2jax_process">$i$</span>.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$q$</span>
+        lines with two integers <span class="tex2jax_process">$0\leq i&lt;n$</span> and <span class="tex2jax_process">$1\leq x \leq 10^6$</span>. The
+        <span class="tex2jax_process">$j^\textrm {th}$</span> of
+        these lines indicates that at day <span class="tex2jax_process">$j$</span> the number of people in hut
+        <span class="tex2jax_process">$i$</span> changes to
+        <span class="tex2jax_process">$x$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Print <span class="tex2jax_process">$q$</span> lines:
+        the optimal position of the food truck after each of the
+        <span class="tex2jax_process">$q$</span> nights. If there
+        are multiple optimal positions, print the smallest one.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+3 1 3 4 2
+0 5
+0 9
+4 5
+2 1
+</pre>
+</td>
+<td>
+<pre>2
+1
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 8
+1 1 1 1
+2 2
+1 2
+2 1
+1 1
+3 2
+2 2
+1 2
+2 1
+</pre>
+</td>
+<td>
+<pre>1
+1
+1
+1
+1
+2
+2
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Yraglac really hates early winter. So he was greatly annoyed
+    when it snowed early this year. His friend however claimed that
+    summer is always too short in Galcary so there’s nothing to
+    complain about.</p>
+<p>Yraglac doesn’t believe his friend. So he decides to look up
+    the historical weather report for the past <span class="tex2jax_process">$n$</span> years to figure out when it
+    usually starts snowing. For each year in the past <span class="tex2jax_process">$n$</span> years, the historical weather
+    report records <span class="tex2jax_process">$d_ i$</span>, the
+    number of days between the end of summer and the first day of
+    snow on the <span class="tex2jax_process">$i^\textrm
+    {th}$</span> year. You may assume it never snows during summer
+    in Galcary, as that would be absurd.</p>
+<p>Given the historical data, Yraglac would like to know the
+    number of consecutive years right before the current year with
+    a larger gap between the end of summer and the first day of
+    snow. More formally, suppose the current year is <span class="tex2jax_process">$m$</span>. Then he’d like to determine the
+    largest integer <span class="tex2jax_process">$k$</span> for
+    which <span class="tex2jax_process">$d_{m-1}, d_{m-2},\ldots
+    ,d_{m-k}&gt; d_ m$</span>, or determine that it had never
+    snowed this early in the last <span class="tex2jax_process">$n$</span> years.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$d_ m$</span>. It is guaranteed that
+    <span class="tex2jax_process">$1\leq n\leq 100$</span> and
+    <span class="tex2jax_process">$0\leq d_ m\leq 100$</span>.</p>
+<p>The next line of the input contains <span class="tex2jax_process">$n$</span> integers. The <span class="tex2jax_process">$i^\textrm {th}$</span> integer denotes
+    <span class="tex2jax_process">$d_{m-i}$</span>. It is
+    guaranteed that <span class="tex2jax_process">$0\leq
+    d_{m-i}\leq 100$</span>.</p>
+<h2>Output</h2>
+<p>If there exists an integer <span class="tex2jax_process">$k$</span> for which <span class="tex2jax_process">$d_{m-k}\leq d_ m$</span>, print “It hadn’t
+    snowed this early in <span class="tex2jax_process">$k$</span>
+    years!” (without quotes). Otherwise, print “It had never snowed
+    this early!” (without quotes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+3 3 3 2
+</pre>
+</td>
+<td>
+<pre>It hadn't snowed this early in 3 years!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 10
+0 100
+</pre>
+</td>
+<td>
+<pre>It hadn't snowed this early in 0 years!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+42 43 44
+</pre>
+</td>
+<td>
+<pre>It had never snowed this early!
+</pre>
+</td>
+</tr>
+</table>
+</div>

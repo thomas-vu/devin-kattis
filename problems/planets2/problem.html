@@ -1,0 +1,56 @@
+<div class="problembody">
+<p>The spaceport likes collecting data on its visitors. We know
+    that there are <span class="tex2jax_process">$p$</span> nearby
+    planets that generate all traffic in and out of the spaceport.
+    Each planet contains <span class="tex2jax_process">$n$</span>
+    species and every ship contains <span class="tex2jax_process">$m$</span> passengers of a particular
+    species. No two planets contain the same species.</p>
+<p>Can you help identify how many visitors from each planet
+    come across the spaceport?</p>
+<h2>Input</h2>
+<p>Input begins with a number <span class="tex2jax_process">$2\le p\le 15$</span>, the number of planets
+    whose ships are known to frequent the spaceport. Then
+    <span class="tex2jax_process">$p$</span> lines follow: each
+    line contains a unique planet name <span class="tex2jax_process">$P$</span> (from one to six uppercase ASCII
+    letters), the number of alien species on the planet
+    <span class="tex2jax_process">$1\le n\le 12$</span>, and
+    <span class="tex2jax_process">$n$</span> words indicating the
+    names of those species. Each species name <span class="tex2jax_process">$s_ i$</span> is a string of one to six
+    uppercase ASCII letters.</p>
+<p>The next line contains an integer <span class="tex2jax_process">$1\le v\le 15$</span>, indicating the number
+    of visiting spacecraft. The next <span class="tex2jax_process">$v$</span> lines contain an integer
+    <span class="tex2jax_process">$1\le m\le 12$</span>, where
+    <span class="tex2jax_process">$m$</span> is the number of
+    visitors, and a word <span class="tex2jax_process">$r$</span>
+    which is the name of their species, which live on one of the
+    <span class="tex2jax_process">$p$</span> planets.</p>
+<h2>Output</h2>
+<p>Print, in alphabetical order, each planet’s name followed by
+    the number of incoming visitors from that planet.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+A 2 X Y
+B 2 E F
+C 4 Z W L K
+4
+3 X
+6 Y
+2 Z
+5 E
+</pre>
+</td>
+<td>
+<pre>A 9
+B 5
+C 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

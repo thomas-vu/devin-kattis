@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>You are running a programming contest that features
+    <span class="tex2jax_process">$n$</span> problems of distinct
+    difficulties. You wish to announce ahead of time that the
+    problems are ordered in such a way that, if the problems are
+    divided into <span class="tex2jax_process">$k$</span> sections
+    numbered <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$k$</span>, each with exactly
+    <span class="tex2jax_process">$\frac{n}{k}$</span> problems,
+    and problem <span class="tex2jax_process">$p$</span> is
+    assigned to section <span class="tex2jax_process">$\left\lceil
+    \frac{kp}{n} \right\rceil $</span>, then for every pair of
+    sections <span class="tex2jax_process">$i$</span> and
+    <span class="tex2jax_process">$j$</span> with <span class="tex2jax_process">$i &lt; j$</span>, every problem in section
+    <span class="tex2jax_process">$i$</span> is easier than every
+    problem in section <span class="tex2jax_process">$j$</span>.
+    Note that <span class="tex2jax_process">$k$</span> must be
+    greater than <span class="tex2jax_process">$1$</span> and be a
+    factor of <span class="tex2jax_process">$n$</span>.</p>
+<p>However, you have just sent your problems to the printer so
+    the order cannot be changed. For what values of <span class="tex2jax_process">$k$</span> would this claim be true?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le n \le 50$</span>), which is the number
+    of problems.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains a single integer <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \le d \le n$</span>). These are the difficulties for the
+    problems in the order that they appear in the problem set. The
+    difficulties are distinct. The problem with difficulty
+    <span class="tex2jax_process">$1$</span> is the easiest problem
+    and the problem with difficulty <span class="tex2jax_process">$n$</span> is the hardest problem.</p>
+<h2>Output</h2>
+<p>Output a list of integers, one per line. The integers are
+    all valid values of <span class="tex2jax_process">$k$</span> in
+    increasing order. If no such values exist, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1
+3
+2
+4
+5
+6
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+1
+2
+3
+4
+5
+6
+</pre>
+</td>
+<td>
+<pre>2
+3
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6
+6
+5
+4
+3
+2
+1
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

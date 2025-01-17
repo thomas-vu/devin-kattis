@@ -1,0 +1,65 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/junk/file/statement/en/img-0001.png" class="illustration" src="/problems/junk/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>According to NASA’s web page, there are more than
+    <span class="tex2jax_process">$500\, 000$</span> pieces of
+    “space junk” that are tracked. Care must be taken in mission
+    planning so satellites and other spacecrafts do not collide
+    with these pieces of space junk.
+    <p>For this problem, we will consider the simplified case in
+    which both the spacecraft and the space junk can be modelled as
+    spheres that are travelling in a straight line. Given the
+    current locations of the two spheres as well as their
+    velocities, when would they collide in the future, if ever?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single positive integer
+    <span class="tex2jax_process">$T \leq 500$</span> indicating
+    the number of test cases. Each test case is specified by two
+    lines. The first line specifies the sphere representing the
+    spacecraft, while the second line specifies the sphere
+    representing the space junk. Each sphere is specified by the
+    seven integers <span class="tex2jax_process">$ x, y, z, r, v_
+    x, v_ y, v_ z$</span>. The center of the sphere is currently
+    located at <span class="tex2jax_process">$(x,y,z)$</span>, the
+    radius of the sphere is <span class="tex2jax_process">$r$</span>, and the sphere is travelling
+    along the direction specified by the vector <span class="tex2jax_process">$(v_ x,v_ y, v_ z)$</span>. If the vector is
+    <span class="tex2jax_process">$(0,0,0)$</span>, the sphere is
+    stationary.</p>
+<p>The absolute value of all integers are at most 100, and
+    <span class="tex2jax_process">$r$</span> is positive. All
+    coordinates and radii are measured in meters, and the
+    velocities are measured in meters/second.</p>
+<p>You may assume that the two spheres do not touch each other
+    initially.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing the time (in
+    seconds) at which the spacecraft first collides with the space
+    junk. If they never collide, print <tt>No collision</tt>
+    instead. Answers within 0.01 of the correct result are
+    acceptable.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10 3 -10 5 -9 3 -8
+2 0 0 6 -4 3 -10
+-7 5 0 3 -1 0 3
+10 7 -6 6 -2 0 4
+-4 -1 0 3 -1 -5 -6
+2 1 8 6 4 0 -1
+</pre>
+</td>
+<td>
+<pre>0.492
+8.628
+No collision
+</pre>
+</td>
+</tr>
+</table>
+</div>

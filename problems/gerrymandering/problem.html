@@ -1,0 +1,167 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/gerrymandering/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gerrymandering/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        The original political cartoon about Gerrymandering. Image
+        from <a href="https://commons.wikimedia.org/wiki/File:The_Gerry-Mander_Edit.png">
+        Wikipedia</a>.
+      </div>
+</div>
+<p>Electoral systems across the world can vary widely. In some
+    systems, such as <em>winner-take-all</em>, the winner is
+    determined by the plurality of votes—the candidate that
+    receives the most votes wins, and the loser(s) do not get a
+    position.</p>
+<p>Such elections can have “wasted votes.” Conceptually, a
+    wasted vote is a vote that did not affect the election outcome.
+    While the exact definition of a wasted vote varies, we’ll adopt
+    the following definition: in an election with <span class="tex2jax_process">$V$</span> voters, every vote for a losing
+    candidate is wasted (these are called <em>lost votes</em>), and
+    every vote for a winning candidate beyond the strict majority
+    of <span class="tex2jax_process">$\lfloor V/2\rfloor +
+    1$</span> votes the candidate needs to win is wasted (these are
+    called <em>excess votes</em>). For this problem we’ll consider
+    a two-party system (let’s call the parties A and B) with
+    elections that always involve one candidate from each
+    party.</p>
+<p>Let’s illustrate wasted votes with a simple example between
+    two candidates in a district. Suppose that the candidate for
+    party A receives <span class="tex2jax_process">$100$</span>
+    votes and the candidate for party B receives <span class="tex2jax_process">$200$</span> votes. All <span class="tex2jax_process">$100$</span> votes for party A are wasted
+    (lost votes for A), and <span class="tex2jax_process">$49$</span> votes for party B are wasted
+    (excess votes for B). This is because B needs <span class="tex2jax_process">$151$</span> (<span class="tex2jax_process">$\lfloor (100 + 200) / 2 \rfloor + 1$</span>)
+    votes to win (over A), so the remaining <span class="tex2jax_process">$49$</span> are wasted.</p>
+<p>Political scientists use wasted votes to compute the
+    <em>efficiency gap</em>, a single number that summarizes wasted
+    votes. Suppose we have a number of races in different
+    districts, where each district elects one person. Across all
+    districts there are <span class="tex2jax_process">$V$</span>
+    total votes cast, with <span class="tex2jax_process">$w_
+    A$</span> total wasted votes for party A and <span class="tex2jax_process">$w_ B$</span> total wasted votes for party B.
+    Then the efficiency gap is:</p><span class="tex2jax_process">\[
+    E(V, w_ A, w_ B) = \frac{|w_ A - w_ B|}{V}. \]</span>
+<p>A low efficiency gap indicates that the elections are
+    competitive, and that the number of candidates elected from
+    each party is representative of the total voting share for each
+    party. When the efficiency gap is high, this can be an
+    indication of <em>gerrymandering</em>. Gerrymandering refers to
+    organizing voting districts in a way that favors a particular
+    political outcome. Two common ways of doing this are to “pack”
+    similar voters into districts, or “crack” them across multiple
+    districts; both ways tend to diminish those voters’ influence
+    in electing candidates they would like to win.</p>
+<p>In an election, districts are made up of precincts. A
+    precinct is an indivisible group of voters. The votes for all
+    precincts in a district are added together to find the results
+    for that district. In this problem you are given a description
+    of a number of precincts: the party vote totals for each
+    precinct, and how those precincts have been grouped into
+    districts. For each district, determine the party that wins and
+    the wasted votes for each party. Then determine the efficiency
+    gap between the two parties over all the districts.</p>
+<h2>Input</h2>
+<p>The input describes one election. The first line contains
+    two integers <span class="tex2jax_process">$P$</span> and
+    <span class="tex2jax_process">$D$</span>, where <span class="tex2jax_process">$1 \le P \le 10\, 000$</span> and
+    <span class="tex2jax_process">$1 \le D \le \min (1\, 000,
+    P)$</span>. These indicate, respectively, the number of voting
+    precincts and districts. Following this are <span class="tex2jax_process">$P$</span> lines describing the precincts.
+    Line <span class="tex2jax_process">$i$</span> contains
+    <span class="tex2jax_process">$3$</span> numbers: the district
+    <span class="tex2jax_process">$d_ i$</span> that precinct
+    <span class="tex2jax_process">$i$</span> is assigned to
+    (<span class="tex2jax_process">$1 \le d_ i \le D$</span>), the
+    number of votes for the candidate from party A (<span class="tex2jax_process">$0 \le a_ i \le 100\, 000$</span>), and the
+    number of votes for the candidate from party B (<span class="tex2jax_process">$0 \le b_ i \le 100\, 000$</span>). It is
+    guaranteed that:</p>
+<ul class="itemize">
+<li>
+<p>for each precinct <span class="tex2jax_process">$i$</span>, <span class="tex2jax_process">$0 &lt; a_ i + b_ i$</span>,</p>
+</li>
+<li>
+<p>each district is assigned at least one precinct, and</p>
+</li>
+<li>
+<p>there are no ties within any district.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each of the districts from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$D$</span>, print which party wins (a single
+    character, either <tt class="ttfamily">A</tt> or <tt class="ttfamily">B</tt>). Then print the number of wasted votes for
+    party A and for party B, in order. Finally, after reporting on
+    all the districts, print the efficiency gap as measured over
+    all the districts. The efficiency gap should be accurate to
+    within an absolute error of <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 100 200
+2 100 99
+3 100 50
+3 100 50
+2 100 98
+</pre>
+</td>
+<td>
+<pre>B 100 49
+A 1 197
+A 49 100
+0.1965897693
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+3 100 99
+2 100 99
+1 100 99
+4 100 99
+</pre>
+</td>
+<td>
+<pre>A 0 99
+A 0 99
+A 0 99
+A 0 99
+0.4974874372
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+4 99 100
+1 100 99
+3 100 99
+2 99 100
+</pre>
+</td>
+<td>
+<pre>A 0 99
+B 99 0
+A 0 99
+B 99 0
+0.0000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,86 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/keepitcool/file/statement/en/img-0001.jpg" class="illustration" src="/problems/keepitcool/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://vimeo.com/145812402">Picture</a> by
+        Fitness First via Vimeo, cc by
+      </div>
+</div>As the workload of the semester is ramping up you get the
+    task of refilling the fridge in the lab with soda. The fridge
+    has <span class="tex2jax_process">$s$</span> slots, each with a
+    capacity for <span class="tex2jax_process">$d$</span> bottles
+    of soda, and you have <span class="tex2jax_process">$n$</span>
+    new soda bottles to add to the fridge. The sodas currently in
+    the fridge are all nice and cold, but the new ones are not and
+    need to be cooled in the fridge for a while until they are
+    ready to drink.
+    <p>You can only refill the fridge from the front, so in an
+    ideal world, you would first take out all the sodas currently
+    in the fridge, then put in the <span class="tex2jax_process">$n$</span> new ones, and then put the old and
+    cold sodas in front of the new ones. But in an ideal world you
+    would also not have two exams and a homework deadline coming.
+    You are simply way too busy to do all this work.</p>
+<p>Instead, you are going to just put the new bottles in the
+    front of the fridge and hope for the best. However, you can
+    still to be clever about which slots to put the new sodas in.
+    Each time a student comes for a soda, they will take one from
+    the front of a uniformly random non-empty slot in the fridge.
+    You decide to add the new bottles to the fridge so as to
+    maximize the probability that all the next <span class="tex2jax_process">$m$</span> students getting a soda from the
+    fridge will get a cold one.</p>
+<h2>Input</h2>
+<p>The first line of input contains four integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \le n, m, s, d \le 100$</span>), the number of new soda
+    bottles, number of students to optimize for, number of slots in
+    the fridge, and capacity of each slot, respectively. Then
+    follows a line containing <span class="tex2jax_process">$s$</span> integers <span class="tex2jax_process">$c_1, \ldots , c_ s$</span> (<span class="tex2jax_process">$0 \le c_ i \le d$</span> for each
+    <span class="tex2jax_process">$i$</span>), where <span class="tex2jax_process">$c_ i$</span> is the number of soda bottles
+    currently in slot <span class="tex2jax_process">$i$</span> of
+    the fridge.</p>
+<p>You may assume that there is free space for all the
+    <span class="tex2jax_process">$n$</span> new bottles in the
+    fridge.</p>
+<h2>Output</h2>
+<p>If there is a chance that all the next <span class="tex2jax_process">$m$</span> students will get a cold bottle,
+    then output <span class="tex2jax_process">$s$</span> integers
+    describing a refill scheme for the <span class="tex2jax_process">$n$</span> soda bottles that maximizes the
+    probability of this happening. The <span class="tex2jax_process">$i^{\text {th}}$</span> of these <span class="tex2jax_process">$s$</span> integers indicates how many of the
+    new bottles are placed in the front of slot <span class="tex2jax_process">$i$</span> in the fridge. If there are
+    multiple optimal refill schemes, output any one of them.
+    Otherwise, if it is impossible for all the next <span class="tex2jax_process">$m$</span> students to get a cold soda,
+    output “<tt class="ttfamily">impossible</tt>” instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 3 4
+0 1 4
+</pre>
+</td>
+<td>
+<pre>2 3 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 7 6 4
+0 1 2 2 0 1
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

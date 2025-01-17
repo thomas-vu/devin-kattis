@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>The Dutch political system is in turmoil. There have been
+    six coalition governments in the past fourteen years, all of
+    which have fallen before completing their term in office.
+    Recently there have been elections (again), the outcome of
+    which has been described as “impossible” by several political
+    commentators. The only bright spot in this bleak situation is
+    that they have appointed <em>you</em> as the “informateur”. As
+    the informateur it is your task to find a suitable
+    coalition.</p>
+<p>Being the rational person you are, you have decided the
+    first negotiation attempt should be started between the parties
+    forming the <em>most stable coalition</em>. A coalition is
+    formed by a set of parties having won a strict majority of
+    seats in the election (i.e. at least 76 seats out of a
+    total of 150). The most stable coalition is one that has the
+    highest chance of completing its term in office. A coalition
+    falls (and new elections must be held) if a single party leaves
+    the coalition. The probability of a coalition completing their
+    term is estimated by the product of the probabilities of each
+    party in the coalition completing their term. This probability
+    is in turn based on historical data.</p>
+<p>Find the best coalition and save the Netherlands from
+    becoming a banana republic!</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 150$</span>), the number
+        of political parties that have won at least one seat in the
+        election.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with two space-separated integers <span class="tex2jax_process">$s_ i$</span> and <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$1 \leq s_ i \leq 150$</span> and
+        <span class="tex2jax_process">$1 \leq p_ i \leq
+        100$</span>): the number of seats won by the <span class="tex2jax_process">$i$</span>-th party and the probability
+        (expressed as a percentage) that the <span class="tex2jax_process">$i$</span>-th party will complete its
+        term in office, respectively.</p>
+</li>
+</ul>
+<p>Note that there are exactly 150 seats divided among all
+    parties <span class="tex2jax_process">$\left(\sum \limits
+    _{i=1}^ n s_ i = 150\right)$</span>.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a floating point number: the probability
+        (expressed as a percentage) of the most stable coalition
+        sitting out their term in office.</p>
+</li>
+</ul>
+<p>This number should be accurate up to <span class="tex2jax_process">$10^{-6}$</span> relative or absolute
+    precision.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+4
+35 80
+25 70
+60 60
+30 90
+</pre>
+</td>
+<td>
+<pre>
+54.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

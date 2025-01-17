@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Define a <i class="itshape"><span class="tex2jax_process">$k$</span>-periodic string</i> as
+    follows:</p>
+<p>A string <span class="tex2jax_process">$s$</span> is
+    <i class="itshape"><span class="tex2jax_process">$k$</span>-periodic</i> if the length of the
+    string <span class="tex2jax_process">$|s|$</span> is a multiple
+    of <span class="tex2jax_process">$k$</span>, and if you chop
+    the string up into <span class="tex2jax_process">$|s|/k$</span>
+    substrings of length <span class="tex2jax_process">$k$</span>,
+    then each of those substrings (except the first) is the same as
+    the previous substring, but with its last character moved to
+    the front.</p>
+<p>For example, the following string is <i class="itshape"><span class="tex2jax_process">$3$</span>-periodic</i>:</p>
+<center>
+<tt class="ttfamily">abccabbcaabc</tt>
+</center>
+<p>The above string can break up into substrings <tt class="ttfamily">abc</tt>, <tt class="ttfamily">cab</tt>, <tt class="ttfamily">bca</tt>, and <tt class="ttfamily">abc</tt>, and
+    each substring (except the first) is a right-rotation of the
+    previous substring (<tt class="ttfamily">abc -&gt; cab -&gt;
+    bca -&gt; abc</tt>)</p>
+<p>Given a string, determine the smallest k for which the
+    string is k-periodic.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    single line of input contains a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \le |s| \le 100$</span>) consisting only of lowercase
+    letters.</p>
+<h2>Output</h2>
+<p>Output the integer <span class="tex2jax_process">$k$</span>,
+    which is the smallest <span class="tex2jax_process">$k$</span>
+    for which the input string is <i class="itshape"><span class="tex2jax_process">$k$</span>-periodic</i>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>aaaaaaaa
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>abbaabbaabba
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>abcdef
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>abccabbcaabc
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

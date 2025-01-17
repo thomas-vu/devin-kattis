@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/haybales/file/statement/en/img-0001.jpg" class="illustration" src="/problems/haybales/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by <a href="https://www.flickr.com/photos/stanzebla/14603941029">stanze</a>
+</div>
+</div>
+<p>Peter has lined up hay bales. Some hay bales contain
+    parasites and he wants to move the infected hay bales to the
+    back of the sequence, to minimize the chance that the parasites
+    spread. To sort the haybales, he repeatedly takes out any three
+    consecutive hay bales and puts them back in sorted order. Your
+    task is to calculate the minimum number of operations Peter has
+    to execute to sort the sequence.</p>
+<h2>Input</h2>
+<p>The input contains a single string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$3
+    \leq |s| \leq 500$</span>), the sequence of hay bales. Each
+    character of <span class="tex2jax_process">$s$</span> is either
+    ‘<tt class="ttfamily">C</tt>’ (for a clean hay bale) or
+    ‘<tt class="ttfamily">P</tt>’ (for an infected one).</p>
+<h2>Output</h2>
+<p>The output must contain one integer, the minimum number of
+    steps Peter has to execute.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+CPCC
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+PPPPCCCC
+</pre>
+</td>
+<td>
+<pre>
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+CCCCPPPP
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

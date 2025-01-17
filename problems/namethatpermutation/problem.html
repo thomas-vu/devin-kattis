@@ -1,0 +1,259 @@
+<div class="problembody">
+<p>The concept of permutations comes up frequently in the
+    analysis of computer algorithms, in probability theory, and in
+    many other fields. For many algorithmic problems, the easiest
+    brute-force-type solution is to enumerate all possible
+    permutations of some list or set, and test each permutation to
+    see if it provides the correct solution. One problems which is
+    easy to view this way is the classic traveling salesman
+    problem. This is not to suggest that enumerating all
+    permutations is the most efficient solution method!</p>
+<p>For this problem, write a program that takes a list of
+    unique numbers from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span> and produces the
+    <span class="tex2jax_process">$k$</span>th permutation of that
+    list. The first permutation (<span class="tex2jax_process">$k=0$</span>) is the list in sorted order,
+    i.e. <span class="tex2jax_process">$1, 2, 3, \ldots ,
+    n$</span>. The last permutation (<span class="tex2jax_process">$k=n!-1$</span>) is the list in reverse
+    sorted order. The progression of permutations follows the
+    standard numeric sorting rules. So for <span class="tex2jax_process">$n=4$</span>, the following are the order of
+    permutations, from <span class="tex2jax_process">$k=0$</span>
+    to <span class="tex2jax_process">$k=4!-1=23$</span>:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$k$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>permutation</p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$k$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>permutation</p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$k$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>permutation</p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$k$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>permutation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1~ 2~ 3~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2~ 1~ 3~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$12$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3~ 1~ 2~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$18$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4~ 1~ 2~
+            3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1~ 2~ 4~
+            3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2~ 1~ 4~
+            3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$13$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3~ 1~ 4~
+            2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$19$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4~ 1~ 3~
+            2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1~ 3~ 2~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2~ 3~ 1~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$14$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3~ 2~ 1~
+            4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4~ 2~ 1~
+            3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1~ 3~ 4~
+            2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2~ 3~ 4~
+            1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3~ 2~ 4~
+            1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$21$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4~ 2~ 3~
+            1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1~ 4~ 2~
+            3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2~ 4~ 1~
+            3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$16$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3~ 4~ 1~
+            2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$22$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4~ 3~ 1~
+            2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:right">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$1~ 4~ 3~
+            2$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$2~ 4~ 3~
+            1$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$17$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$3~ 4~ 2~
+            1$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:right">
+<p><span class="tex2jax_process">$23$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$4~ 3~ 2~
+            1$</span></p>
+</td>
+</tr>
+</table>
+</center>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$1\,
+    000$</span> test cases, one per line. Each test case has two
+    integers <span class="tex2jax_process">$1 \leq n \leq
+    50$</span> and <span class="tex2jax_process">$0 \leq k \leq
+    n!-1$</span>. Input ends at the end of file.</p>
+<h2>Output</h2>
+<p>For each test case, print a line containing the <span class="tex2jax_process">$k$</span>th permutation of the numbers
+    <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$n$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+10 3
+</pre>
+</td>
+<td>
+<pre>3 1 2
+1 2 3 4 5 6 7 9 10 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

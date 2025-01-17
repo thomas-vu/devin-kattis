@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>Masking greatly reduces the transmission of certain viruses.
+    This is true for computer viruses as well. In order to protect
+    binary data from infection, we must cover it up with masks!</p>
+<p>Binary data can be represented as a string of <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$0$</span>s and <span class="tex2jax_process">$1$</span>s. A bitmask can be used to cover a
+    portion of the data. Specifically, a bitmask of length
+    <span class="tex2jax_process">$m \leq n$</span> can be used to
+    cover <span class="tex2jax_process">$m$</span> consecutive bits
+    in the data. To maximize protection, only well-fitting masks
+    can be used. That is, each covered bit in the binary data is
+    the opposite to the corresponding bit in the mask. For example,
+    if the data is</p><span class="tex2jax_process">\[ 1001\ 0110\
+    1010 \]</span>
+<p>then the mask <span class="tex2jax_process">$011$</span> can
+    be used to cover positions <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$3$</span>. The mask <span class="tex2jax_process">$101$</span> can be used to cover positions
+    <span class="tex2jax_process">$3$</span>–<span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$10$</span>–<span class="tex2jax_process">$12$</span>.</p>
+<p>The cost to produce a bitmask of length <span class="tex2jax_process">$i$</span> is <span class="tex2jax_process">$C_ i$</span>. Fortunately, if you have
+    already produced a particular bitmask, you can make as many
+    copies as you wish for free! Thus, one can produce two masks of
+    101 for only <span class="tex2jax_process">$C_3$</span>.</p>
+<p>What is the minimum cost to cover a particular piece of
+    binary data with bitmasks? Every bit in the data must be
+    covered by exactly one bitmask.</p>
+<h2>Input</h2>
+<p>The first line of input consists of a string of <span class="tex2jax_process">$0$</span>s and <span class="tex2jax_process">$1$</span>s representing the binary data. The
+    length of the string <span class="tex2jax_process">$n$</span>
+    satisfies <span class="tex2jax_process">$1 \leq n \leq
+    12$</span>. The second line of input consists of <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$C_1, \ldots , C_ n$</span>, where
+    <span class="tex2jax_process">$1 \leq C_ i \leq
+    100$</span>.</p>
+<h2>Output</h2>
+<p>Output the minimum cost to produce the bitmasks to cover the
+    binary data.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10101010
+2 3 7 1 4 3 8 9
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>101010101111
+26 51 24 79 15 46 22 79 47 84 60 100
+</pre>
+</td>
+<td>
+<pre>37
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>Tetris is a popular computer game played in a field
+    consisting of <span class="tex2jax_process">$C$</span> columns
+    and an unlimited number of rows. In one move, one of the
+    following seven pieces is dropped into the field:</p>
+<center>
+<img alt="\includegraphics[width=0.95\textwidth ]{tetris1}" src="/problems/tetris/file/statement/en/img-0001.png" style="width:95.00%"/>
+</center>
+<p>When dropping a piece, the player is free to rotate the
+    piece <span class="tex2jax_process">$90$</span>, <span class="tex2jax_process">$180$</span> or <span class="tex2jax_process">$270$</span> degrees and to move it left or
+    right, as long as the piece stays entirely in the field. The
+    piece then falls until it settles on the bottom of the field or
+    on already occupied squares. In our variant of Tetris the piece
+    <b class="bfseries">must</b> fall so that <b class="bfseries">all parts</b> of the piece are on the bottom of the
+    field or on already occupied squares. In other words, after the
+    piece has fallen there may not be <b class="bfseries">a free
+    square</b> such that <b class="bfseries">some square above it
+    is occupied</b>.</p>
+<p>For example, let the field be six columns wide with initial
+    heights (the number of already occupied squares in each column)
+    <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span>. Piece number <span class="tex2jax_process">$5$</span> can then be dropped into the field
+    in five different ways:</p>
+<center>
+<img alt="\includegraphics[width=0.95\textwidth ]{tetris2}" src="/problems/tetris/file/statement/en/img-0002.png" style="width:95.00%"/>
+</center>
+<p>You are given the initial heights of all columns and the
+    figure to be dropped into the field.</p>
+<p>Write a program that calculates the number of different ways
+    to do this, i.e., the number of different field configurations
+    that can be achieved by dropping the piece.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$P$</span>, <span class="tex2jax_process">$1
+    \le C \le 100$</span>, <span class="tex2jax_process">$1 \le P
+    \le 7$</span>, the number of columns and the number of the
+    piece to be dropped.</p>
+<p>The second line contains <span class="tex2jax_process">$C$</span> integers separated by single
+    spaces, each between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$100$</span>, inclusive.
+    These are the initial heights of the columns.</p>
+<h2>Output</h2>
+<p>Output on a single line the number of different ways to drop
+    the piece in the field.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 5
+2 1 1 1 0 1
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 1
+0 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 4
+4 3 5 4 6 5 7 6 6
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

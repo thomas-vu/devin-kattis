@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>As you know, after the award ceremony of SWERC it is
+    customary to publish a complete scoreboard with detailed
+    information on the submissions and verdicts received. However,
+    due to the buggy contest management system, most of the
+    relevant data are not being recorded today. Clearly such state
+    of affairs fails to meet the high standards we are committed
+    to, so the judges have resolved to make up the rest of the data
+    based on whatever shred of information left, and hope
+    contestants are unable to tell the difference. To make our
+    lives even simpler, we kindly ask you to provide a solution for
+    us, or else today’s scoreboard will remain forever veiled in
+    mystery (even the fake one).</p>
+<p>What we will know by the end of the contest is the number
+    <span class="tex2jax_process">$T$</span> of teams, the number
+    <span class="tex2jax_process">$P$</span> of problems, and the
+    number of accepted submissions by each team. From the number
+    and colour of balloons floating around on the premises we will
+    also be able to infer how many teams solved each of the
+    problems. Your task is to figure out which teams solved which
+    problems.</p>
+<p>Our counting skills are not up to par, so your program
+    should be able to detect when the data we collected must be
+    wrong (see sample input 1). Otherwise you should output a
+    possible solution, represented as a sequence of T strings of P
+    characters each, in the following way. Both problems and teams
+    are assigned with distinct integers, from 1 to P and 1 to T ,
+    respectively. For team number <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$1
+    \leq i \leq T$</span>), write the string on alphabet <tt class="ttfamily">N</tt>,<tt class="ttfamily">Y</tt> such that its
+    <span class="tex2jax_process">$j$</span>-th (<span class="tex2jax_process">$1 \leq j \leq P$</span>) character is
+    <tt class="ttfamily">Y</tt> if the team managed to get problem
+    <span class="tex2jax_process">$j$</span> accepted, and
+    <tt class="ttfamily">N</tt> otherwise. For example, the
+    following three strings form a solution to the second sample
+    case, where the score of each of three teams is <span class="tex2jax_process">$2, 1, 2$</span>, and the count of accepted
+    submissions for each of three problems is <span class="tex2jax_process">$1, 2, 2$</span>:</p>
+<center>
+<tt class="ttfamily">NYY<br/>
+      NNY<br/>
+      YYN<br/></tt>
+</center>
+<p>There is at least one other solution, namely</p>
+<center>
+<tt class="ttfamily">NYY<br/>
+      NYN<br/>
+      YNY<br/></tt>
+</center>
+<p>When several solutions are possible we ask you to supply the
+    one giving rise to the lexicographically smallest string, when
+    each of the T rows are concatenated in order. In the example
+    above we prefer the first solution, since <tt class="ttfamily">NYYNNYYYN</tt> comes before <tt class="ttfamily">NYYNYNYNY</tt> in lexicographical order. (String
+    <span class="tex2jax_process">$S$</span> comes before
+    <span class="tex2jax_process">$S’$</span> in lexicographical
+    order if the first different character between the two is
+    <tt class="ttfamily">N</tt> in <span class="tex2jax_process">$S$</span> but <tt class="ttfamily">Y</tt> in
+    <span class="tex2jax_process">$S’$</span>).</p>
+<h2>Input</h2>
+<p>The input consists of at most <span class="tex2jax_process">$5$</span> test cases, separated by single
+    blank lines. Each input case is described by three lines:</p>
+<p>The first contains two space-separated integers <span class="tex2jax_process">$T$</span> (the number of teams) and
+    <span class="tex2jax_process">$P$</span> (the number of
+    problems), with <span class="tex2jax_process">$1 \leq T, P \leq
+    80$</span>. The second contains <span class="tex2jax_process">$T$</span> space-separated integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$90$</span> (inclusive), the <span class="tex2jax_process">$i$</span>-th of which indicates the number
+    of problems solved by team <span class="tex2jax_process">$i$</span>. The third (and last) line has
+    <span class="tex2jax_process">$P$</span> integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$90$</span>, the <span class="tex2jax_process">$j$</span>-th of which describes the number
+    of teams successfully solving problem <span class="tex2jax_process">$j$</span>.</p>
+<p>The last line of the input file will be <tt class="ttfamily">0 0</tt>.</p>
+<h2>Output</h2>
+<p>If the input data has a solution, print <span class="tex2jax_process">$T$</span> lines of <span class="tex2jax_process">$P$</span> characters each, depicting the
+    lexicographically smallest solution as explained above.
+    Otherwise output a single line with the word <tt class="ttfamily">Impossible</tt>. In any case a blank line should
+    separate outputs for different test cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+1 2
+1 1
+
+3 3
+2 1 2
+1 2 2
+
+3 5
+3 3 1
+3 1 1 0 2
+
+0 0
+</pre>
+</td>
+<td>
+<pre>
+Impossible
+
+NYY
+NNY
+YYN
+
+YNYNY
+YYNNY
+YNNNN
+</pre>
+</td>
+</tr>
+</table>
+</div>

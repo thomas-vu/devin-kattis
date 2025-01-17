@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/kuggfragan/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/kuggfragan/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        An example poster. Source: <a href="https://imgur.com/L3tRjiv">Imgur</a>
+</div>
+</div>
+<p>Tyko is about to start kindergarten so Maj and Måns have
+    started looking for options. During a visit to one of the
+    kindergartens Tyko noticed a poster on the wall. It was one of
+    those usual PR posters on how well the the teachers, kids and
+    parents worked together. However, on this one they tried to do
+    it with gears. While this may seem like a cute metaphor, the
+    gears on this particular poster don’t actually work together.
+    Realizing this, there is no way Tyko would attend this
+    kindergarten. Similar posters appeared at a few other places
+    too but with increased complexity. The increased complexity is
+    a bit too hard for a one year old to analyze, even for Tyko. So
+    now Tyko needs your help to construct a program which can check
+    if the posters are working or not.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 100,000$</span> and <span class="tex2jax_process">$1 \leq M \leq 2,000,000$</span>).</p>
+<p>The following <span class="tex2jax_process">$M$</span> lines
+    describe a connection between two gears. Each such line
+    contains two integers <span class="tex2jax_process">$u$</span>
+    and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0 \leq u, v &lt; N$</span>, <span class="tex2jax_process">$u \ne v$</span>), which means gears
+    <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> are connected.</p>
+<h2>Output</h2>
+<p>A string containing "attend here" if the gears would work
+    together or "no way" if they don’t.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$N \leq 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>40</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$N \leq 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>40</p>
+</td>
+<td style="text-align:left">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+0 1
+1 2
+2 0
+</pre>
+</td>
+<td>
+<pre>no way
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+0 1
+</pre>
+</td>
+<td>
+<pre>attend here
+</pre>
+</td>
+</tr>
+</table>
+</div>

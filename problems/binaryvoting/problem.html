@@ -1,0 +1,108 @@
+<div class="problembody">
+<p>Binary Town is holding its biennial elections. All
+    <span class="tex2jax_process">$k$</span> positions on its
+    council are open, and as usual Notnomde and Yraglac are the
+    only ones running for each position.</p>
+<p>Having long since abandoned quaint majority voting, Binary
+    Town uses binary voting instead. In binary voting, all
+    <span class="tex2jax_process">$v$</span> voters can cast any
+    number of ballots, or not vote at all. The <span class="tex2jax_process">$k^\mathrm {th}$</span> least significant
+    bits of the total number of ballots are then used to determine
+    which candidate wins each position. That is, Notnomde wins
+    position <span class="tex2jax_process">$j$</span> if the
+    <span class="tex2jax_process">$j^\mathrm {th}$</span> least
+    significant bit of the total number of ballots is <span class="tex2jax_process">$0$</span>, otherwise Yraglac wins.</p>
+<p>You know your neighbours well, and know exactly how many
+    ballots <span class="tex2jax_process">$b_ i$</span> each one
+    will cast if they choose to vote. For some reason, not everyone
+    is happy with the electoral system so not everyone votes.
+    Thankfully, you also know the probability <span class="tex2jax_process">$p_ i$</span> of each citizen voting.</p>
+<p>Since you like Yraglac more than Notnomde, you want to cast
+    the number of ballots which maximizes the expected number of
+    positions held by Yraglac.</p>
+<p>Suppose there are <span class="tex2jax_process">$k =
+    2$</span> positions and <span class="tex2jax_process">$v =
+    2$</span> voters, and you know with <span class="tex2jax_process">$50\% $</span> probability that the voter
+    other than yourself will cast one ballot. If you cast one
+    ballot, the total number of ballots could be <span class="tex2jax_process">$01_2$</span> or <span class="tex2jax_process">$10_2$</span> with equal probability, so the
+    expected number of positions for Yraglac is <span class="tex2jax_process">$1$</span>. If you cast two ballots, the
+    total number of ballots could be <span class="tex2jax_process">$10_2$</span> or <span class="tex2jax_process">$11_2$</span> with equal probability, making
+    Yraglac’s expected number of positions <span class="tex2jax_process">$1.5$</span>. In this case, you then decide
+    to cast two ballots since that maximizes Yraglac’s expected
+    number of positions.</p>
+<h2>Input</h2>
+<p>The first line contains two space-separated integers
+    <span class="tex2jax_process">$1 \leq k \leq 16$</span>, the
+    number of positions, and <span class="tex2jax_process">$2 \leq
+    v \leq 100$</span>, the number of voters (including yourself).
+    It is followed by <span class="tex2jax_process">$v - 1$</span>
+    lines, each containing two space-separated numbers: a decimal
+    <span class="tex2jax_process">$0 \leq p_ i \leq 1$</span>, the
+    probability of voter <span class="tex2jax_process">$i$</span>
+    casting ballots, and an integer <span class="tex2jax_process">$0 \leq b_ i \leq 2^ k - 1$</span>, the
+    number of ballots voter <span class="tex2jax_process">$i$</span> would cast should they vote.</p>
+<h2>Output</h2>
+<p>Output on a single line the number of ballots <span class="tex2jax_process">$0 \leq b_ v \leq 2^ k - 1$</span> you should
+    cast to maximize the expected number of positions held by
+    Yraglac. The answer is guaranteed to be unique.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+0.5 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+1 11
+0.4 1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 10
+0.2774 31
+0.1377 156
+0.2958 162
+0.8703 149
+0.5157 16
+0.8503 145
+0.5338 44
+0.6871 9
+0.5280 161
+</pre>
+</td>
+<td>
+<pre>124
+</pre>
+</td>
+</tr>
+</table>
+</div>

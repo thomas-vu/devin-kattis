@@ -1,0 +1,117 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/cats/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cats/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Your crazy aunt has asked you to watch her cats while she’s
+    attending a seminar about making cat hats out of cat fur. Your
+    aunt owns a great number of cats – all toms – and, due to the
+    complex social structure of cats, every cat has a specific but
+    different amount of hate reserved for every other cat.</p>
+<p>Over the years, the cats have been spoiled to the point that
+    they demand (at the least) <span class="tex2jax_process">$1$</span> milliliter of milk at tea time.
+    Your task is to feed the cats the aforementioned milk, in order
+    to dull their primal instincts and prevent an all-out cat
+    war.</p>
+<p>The task is complicated by three things:</p>
+<ol class="enumerate">
+<li>
+<p>Your aunt has a limited amount of milk stored in the
+        fridge.</p>
+</li>
+<li>
+<p>For each pair of cats, there is a distance they have to
+        be kept from each other to avoid infighting.</p>
+</li>
+<li>
+<p>The excessive amount of meowing has driven you to drink
+        large amounts of hard liquor, and now you can’t move
+        liquids without constant spilling. You will spill
+        <span class="tex2jax_process">$1$</span> milliliter of the
+        milk you carry for every meter you walk.</p>
+</li>
+</ol>
+<p>Given an amount of milk, and a set of cats – each pair of
+    cats being a given distance apart from each other – determine
+    if it’s possible to feed every cat at least <span class="tex2jax_process">$1$</span> milliliter of milk. Every cat has
+    a cat bowl that can hold an arbitrary amount of milk. For every
+    meter you walk, you will definitely spill <span class="tex2jax_process">$1$</span> milliliter of milk (instantly
+    spoiling it), but instead of carrying all the milk at once, you
+    may serve a cat more milk than needed and pick it up when
+    backtracking (the cat will not drink the excess milk before
+    you’re finished walking). The cats will never move, but they
+    will eye each other with intense hate.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of a single integer
+    <span class="tex2jax_process">$T$</span>, the number of test
+    cases.<br/>
+    Each of the following <span class="tex2jax_process">$T$</span>
+    cases begins with a line containing two positive integers
+    <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$C$</span>, separated by a space, denoting
+    the amount of milk in the fridge in milliliters and the number
+    of cats, respectively.<br/>
+    This is followed by <span class="tex2jax_process">$\frac{C
+    \cdot (C-1)}{2}$</span> (combinations of cats) lines containing
+    three positive integers <span class="tex2jax_process">$i$</span> <span class="tex2jax_process">$j$</span> <span class="tex2jax_process">$D_{i,j}$</span>, separated by single spaces,
+    describing the distance between the cat with index <span class="tex2jax_process">$i$</span> and the cat with index
+    <span class="tex2jax_process">$j$</span> in meters. Cats are
+    numbered from <span class="tex2jax_process">$0$</span> up to
+    and including <span class="tex2jax_process">$C-1$</span>, and
+    each pair of cats will be listed exactly once. You may assume
+    that the fridge is placed at the very same location as cat
+    <span class="tex2jax_process">$0$</span>.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq T \leq
+        20$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq M \leq 20\,
+        000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq C \leq 2\,
+        000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq D_{i,j} \leq 3\,
+        000$</span></p>
+</li>
+<li>
+<p>Cats co-exist in dimensions far greater than our three,
+        so you can assume that every pair of cats is correctly
+        separated by <em>exactly</em> the given distance.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">yes</tt> if it’s possible to
+    serve every cat at least <span class="tex2jax_process">$1$</span> milliliter of milk. Output
+    <tt class="ttfamily">no</tt> if it’s not.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+20 5
+0 1 4
+0 2 3
+0 3 10
+0 4 15
+1 2 7
+1 3 3
+1 4 5
+2 3 4
+2 4 3
+3 4 8
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

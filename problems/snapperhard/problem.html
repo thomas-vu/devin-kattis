@@ -1,0 +1,75 @@
+<div class="problembody">
+<p><em>Note that this is a harder version of the problem
+    snappereasy</em></p>
+<p>The <em>Snapper</em> is a clever little device that, on one
+    side, plugs its input plug into an output socket, and, on the
+    other side, exposes an output socket for plugging in a light or
+    other device.</p>
+<p>When a <em>Snapper</em> is in the ON state and is receiving
+    power from its input plug, then the device connected to its
+    output socket is receiving power as well. When you snap your
+    fingers – making a clicking sound – any <em>Snapper</em>
+    receiving power at the time of the snap toggles between the ON
+    and OFF states.</p>
+<p>In hopes of destroying the universe by means of a
+    singularity, I have purchased <span class="tex2jax_process">$N$</span> <em>Snapper</em> devices and
+    chained them together by plugging the first one into a power
+    socket, the second one into the first one, and so on. The light
+    is plugged into the <span class="tex2jax_process">$N$</span>th
+    <em>Snapper</em>.</p>
+<p>Initially, all the <em>Snapper</em>s are in the OFF state,
+    so only the first one is receiving power from the socket, and
+    the light is off. I snap my fingers once, which toggles the
+    first <em>Snapper</em> into the ON state and gives power to the
+    second one. I snap my fingers again, which toggles both
+    <em>Snapper</em>s and then promptly cuts power off from the
+    second one, leaving it in the ON state, but with no power. I
+    snap my fingers the third time, which toggles the first
+    <em>Snapper</em> again and gives power to the second one. Now
+    both <em>Snapper</em>s are in the ON state, and if my light is
+    plugged into the second <em>Snapper</em> it will be
+    <em>on</em>.</p>
+<p>I keep doing this for hours. Will the light be <em>on</em>
+    or <em>off</em> after I have snapped my fingers <span class="tex2jax_process">$K$</span> times? The light is <em>on</em> if
+    and only if it’s receiving power from the <em>Snapper</em> it’s
+    plugged into.</p>
+<h3>Input</h3>
+<p>The first line of the input gives the number of test cases,
+    <span class="tex2jax_process">$T$</span>. <span class="tex2jax_process">$T$</span> lines follow. Each one contains
+    two integers, <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$K$</span>.</p>
+<p>You may assume that <span class="tex2jax_process">$1 \leq T
+    \leq 10\, 000$</span>, <span class="tex2jax_process">$1 \leq N
+    \leq 30$</span> and <span class="tex2jax_process">$0 \leq K
+    \leq 10^{8}$</span>.</p>
+<h3>Output</h3>
+<p>For each test case, output one line containing “Case
+    #<span class="tex2jax_process">$x$</span>: <span class="tex2jax_process">$y$</span>”, where <span class="tex2jax_process">$x$</span> is the case number (starting from
+    1) and <span class="tex2jax_process">$y$</span> is either "ON"
+    or "OFF", indicating the state of the light bulb.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 0
+1 1
+4 0
+4 47
+</pre>
+</td>
+<td>
+<pre>
+Case #1: OFF
+Case #2: ON
+Case #3: OFF
+Case #4: ON
+</pre>
+</td>
+</tr>
+</table>
+</div>

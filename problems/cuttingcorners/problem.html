@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>You work for a day care center. You have a big tub of convex
+    polygons that you are going to let the children play with.
+    However, you notice that some of the shapes have pointy
+    corners. You decide to make them safer by cutting off the most
+    pointy corners as illustrated below. You choose the corner that
+    has the most acute angle. You then cut straight across from its
+    two neighboring corners. In the following figure, the
+    <span class="tex2jax_process">$cde$</span> angle is the
+    sharpest. You cut it off by cutting straight from <span class="tex2jax_process">$c$</span> to <span class="tex2jax_process">$e$</span>. You then throw away the
+    <span class="tex2jax_process">$d$</span> corner you just cut
+    off and keep the <span class="tex2jax_process">$abce$</span>
+    shape.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{sample}" src="/problems/cuttingcorners/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+<p>You repeatedly cut off the sharpest corner until you are
+    left with a triangle or until cutting off the most pointy
+    corner produces an even more pointy corner. For example, after
+    cutting off the <span class="tex2jax_process">$d$</span> corner
+    above, angle <span class="tex2jax_process">$cea$</span> is the
+    sharpest. However, if you cut it off, you would just produce
+    even sharper angles. Thus, you should stop after just one cut.
+    For some shapes, you may not be able to cut off any corners
+    because they either start as a triangle or are not improved by
+    cutting off the sharpest corner. There will never be more than
+    one sharpest corner that is also cuttable.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> shape descriptions. Each shape
+    starts with a number <span class="tex2jax_process">$1 \le n \le
+    20$</span> giving the number of corners. This is followed by a
+    sequence of <span class="tex2jax_process">$n$</span> pairs of
+    integers, each pair giving the <span class="tex2jax_process">$X
+    \; Y$</span> location of a corner. All coordinates are in the
+    range <span class="tex2jax_process">$[0, 15\, 000]$</span>.
+    Corners are given in clockwise order around the perimeter of
+    each shape. Every shape has at least three corners and no two
+    corners are coincident. The end of input is marked with a value
+    of zero for <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each shape, print a line giving what the shape looks
+    like after you are done cutting it. Use the same format as the
+    input and print the corners in the same order they were given
+    in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 0 3 4 7 7 6 10 1 4 0
+5 0 0 3 5 6 7 9 8 6 0
+0
+</pre>
+</td>
+<td>
+<pre>
+4 0 3 4 7 7 6 4 0
+3 0 0 3 5 6 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

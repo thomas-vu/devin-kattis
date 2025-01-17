@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>Every day, Eugene logs how many cups of water he drank. He
+    forgot to log one entry in his journal though, but he remembers
+    the minimum number and maximum number of cups of water he drank
+    every day since he started logging his journal, and that there
+    was at least one day where he drank the minimum and one day
+    where he drank the maximum. Compute all possible amounts of
+    cups of water he could have imbibed on the day he forgot to
+    log.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \le n \le 50$</span>), <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le a \le b \le 50$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of days
+    in Eugene’s log, <span class="tex2jax_process">$a$</span> is
+    the minimum number of cups of water he drank on any day, and
+    <span class="tex2jax_process">$b$</span> is the associated
+    maximum.</p>
+<p>Each of the next <span class="tex2jax_process">$n-1$</span>
+    lines contains a single integers <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$a
+    \le w \le b$</span>). These are the entries in Eugene’s log for
+    every day except the day he forgot to log an entry.</p>
+<h2>Output</h2>
+<p>Output in increasing order, all of the possible values for
+    the missing entry separated by whitespace, or simply output -1
+    if Eugene’s memory is faulty and it isn’t possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 1 5
+1
+2
+4
+5
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+4
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 1 5
+1
+2
+3
+4
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

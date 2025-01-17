@@ -1,0 +1,122 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/vinir/file/statement/en/img-0001.png" class="illustration" src="/problems/vinir/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://pixabay.com/p-1921637/?no_redirect">Pixabay</a>
+</div>
+</div>Benni is quite fascinated with how many friends people
+    have and one weekend when he was at a large get-together he
+    decided to write down every friendship made. As everyone knows,
+    friendship is transitive, that is to say, if Hannes and Bjarki
+    are friends and Bjarki and Arnar are friends, then Hannes and
+    Arnar are also friends. Can you help Benni figure out how many
+    friends everyone has?
+    <h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$N$</span>, the number of people
+    present, and <span class="tex2jax_process">$Q$</span>, the
+    number of queries. The next <span class="tex2jax_process">$Q$</span> lines contain one query each.
+    There are two kinds of queries, <tt class="ttfamily">1 a b</tt>
+    signifies that Benni saw <span class="tex2jax_process">$1 \leq
+    a \leq n$</span> and <span class="tex2jax_process">$1 \leq b
+    \leq n$</span> becoming friends. The other kind of query is of
+    the form <tt class="ttfamily">2 a</tt> which means Benni wants
+    to know how many friends <span class="tex2jax_process">$a$</span> has made.</p>
+<h2>Output</h2>
+<p>For each query of the type <tt class="ttfamily">2 a</tt>,
+    print a single line denoting how many friends <span class="tex2jax_process">$a$</span> has made.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N,Q \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq N,Q \leq
+          10^5$</span>, all friendships made come before the
+          queries asking for the number of friends.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq N,Q \leq
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+1 1 2
+2 1
+2 2
+</pre>
+</td>
+<td>
+<pre>1
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+2 1
+1 1 4
+2 4
+1 3 4
+2 3
+</pre>
+</td>
+<td>
+<pre>0
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

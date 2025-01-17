@@ -1,0 +1,115 @@
+<div class="problembody">
+<p>You are the boss of <span class="scshape">ACM</span>
+    (Apples, Cherries, and Mangos), an upstanding company with a
+    single goal of world domination.</p>
+<p>ACM have provided lots of fruits for the last programming
+    competition for minions in Helsinki. The leftovers should now
+    be shipped to Singapore. There is, however, one constraint: In
+    the case that one box of apples is infested with apple-eating
+    insects and the next one in the line is also a box of apples,
+    the insects might move on to the neighboring box and infect it
+    as well. This constraint is applicable for boxes of cherries
+    and boxes of mangos too.</p>
+<p>In order to avoid this, ACM decides that the boxes of fruits
+    are to be sent in such a way that two consecutive boxes contain
+    different types of fruits. The statistics department of ACM
+    wants to know how many ways there are to arrange the shipments
+    of <span class="tex2jax_process">$A$</span> boxes of apples,
+    <span class="tex2jax_process">$C$</span> boxes of cherries and
+    <span class="tex2jax_process">$M$</span> boxes of mangos under
+    this constraint.</p>
+<p>Please provide a computer program to compute this for
+    various choices of <span class="tex2jax_process">$A$</span>,
+    <span class="tex2jax_process">$C$</span>, and <span class="tex2jax_process">$M$</span>. Two arrangements are different if
+    there exists <span class="tex2jax_process">$i$</span> such that
+    the <span class="tex2jax_process">$i$</span>-th box delivered
+    in the two arrangements contain different types of fruits.
+    Since the answer may be very big, output the answer modulo a
+    prime number <span class="tex2jax_process">$10^9+7$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of a single line consisting of three
+    single space separated integers <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$C$</span>, and <span class="tex2jax_process">$M$</span>, denoting the total number of
+    boxes of apples, cherries, and mangos you need to ship to
+    Singapore, respectively. All three integers will be between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$200\, 000$</span>, respectively.</p>
+<h2>Output</h2>
+<p>Output the number of different possible arrangements of
+    delivery, modulo a prime number <span class="tex2jax_process">$10^9+7$</span>. If there is no such order,
+    output <span class="tex2jax_process">$0$</span>.</p>
+<h3>Sample Data Explanation</h3>
+<p>In the first example, the <span class="tex2jax_process">$6$</span> possible ways are:</p>
+<ol class="enumerate">
+<li>
+<p>Apple, Cherry, Mango, Cherry.</p>
+</li>
+<li>
+<p>Cherry, Apple, Cherry, Mango.</p>
+</li>
+<li>
+<p>Cherry, Apple, Mango, Cherry.</p>
+</li>
+<li>
+<p>Cherry, Mango, Apple, Cherry.</p>
+</li>
+<li>
+<p>Cherry, Mango, Cherry, Apple.</p>
+</li>
+<li>
+<p>Mango, Cherry, Apple, Cherry.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 2 1
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2 2
+</pre>
+</td>
+<td>
+<pre>
+30
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 1 10
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,231 @@
+<div class="problembody">
+<p>A maze consists of a collection of equal sized square cells,
+    where any or all of the sides may be a wall or a door. The maze
+    may have no exit or multiple exits. Cells are typically
+    arranged so that they may share sides with other cells as shown
+    in the four sample mazes below:</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=.6\textwidth ]{amazing-001.png}" src="/problems/amazing/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: (The numbers in the cells above are for
+          illustrative purposes only.)
+        </div>
+</center>
+</div>
+<p>Each side of a cell is labeled with a direction to allow
+    navigation:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=.2\textwidth ]{amazing-002.png}" src="/problems/amazing/file/statement/en/img-0002.png" style="width:20.00%"/>
+</center>
+</div>
+<p>For each maze, the starting point is someplace in the maze
+    (for example, any of the numbered cells in the samples above).
+    In the samples above:</p>
+<ul class="itemize">
+<li>
+<p>Maze A has no way out.</p>
+</li>
+<li>
+<p>Maze B has an exit (solution) to the right of cell
+        2.</p>
+</li>
+<li>
+<p>Maze C has an exit down from cell 3, unless the starting
+        point is cell 5, in which case there is no way out</p>
+</li>
+<li>
+<p>Maze D has an exit up from cell 6.</p>
+</li>
+</ul>
+<p>For example, using Maze D above, if the starting point is
+    cell 9, one possible set of directions to get to the exit would
+    be: <tt class="ttfamily">right</tt>, <tt class="ttfamily">right</tt>, <tt class="ttfamily">right</tt>,
+    <tt class="ttfamily">right</tt>, <tt class="ttfamily">right</tt>, <tt class="ttfamily">up</tt>, <tt class="ttfamily">up</tt>, <tt class="ttfamily">up</tt>.</p>
+<p>For this problem, you will write a program that finds an
+    exit to a maze. Your program must operate
+    <em>interactively</em>. That is, your program will make a move
+    by providing a direction (right, down, left or up), and the
+    judging software will send back one of four responses:</p>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">wall</b> - indicates that a wall is
+        there and you cannot proceed in that direction</p>
+</li>
+<li>
+<p><b class="bfseries">ok</b> - indicates that there is
+        door there and you may proceed in that direction to the
+        neighboring cell.</p>
+</li>
+<li>
+<p><b class="bfseries">solved</b> - indicates that you have
+        successfully found an exit to the maze.</p>
+</li>
+<li>
+<p><b class="bfseries">wrong</b> - indicates that your
+        program made an error, as discussed below.</p>
+</li>
+</ol>
+<p>If your program determines there is no way out of the maze,
+    you should send the precise string “<tt class="ttfamily">no way
+    out</tt>” (without the quotes) instead of a direction. If there
+    is in fact no way out of the maze, you will receive a <b class="bfseries">solved</b> reply.</p>
+<p>Your program will receive a <b class="bfseries">wrong</b>
+    indication if any of the following occur:</p>
+<ol class="enumerate">
+<li>
+<p>Your program sends “<tt class="ttfamily">no way
+        out</tt>”, even though there is a way out.</p>
+</li>
+<li>
+<p>Your program makes the same move (direction) from the
+        same cell twice.</p>
+</li>
+</ol>
+<p>After receiving a <b class="bfseries">wrong</b> or a
+    <b class="bfseries">solved</b> reply, your program should
+    exit.</p>
+<h2>Input/Output</h2>
+<p>This is an interactive program. The input you receive is a
+    function of the output you generate. All input and output
+    strings must end in a new-line character. You should never send
+    extra blank lines.</p>
+<p>You must make sure that your program’s standard output
+    stream is flushed after you output a the new-line character
+    that completes a command. This is accomplished with <tt class="ttfamily">System.out.flush()</tt> in Java, <tt class="ttfamily">stdout.flush()</tt> in Python, <tt class="ttfamily">fflush(stdout)</tt> in C, and <tt class="ttfamily">cout &lt;&lt; flush</tt> in C++.</p>
+<p>The first thing your program must do when it starts up is to
+    send its first move (<tt class="ttfamily">up</tt>, <tt class="ttfamily">down</tt>, <tt class="ttfamily">right</tt> or
+    <tt class="ttfamily">left</tt>), followed by a new-line
+    character. It will then wait for a new-line terminated response
+    on the standard input. The response will be one of <b class="bfseries">wall</b>, <b class="bfseries">ok</b>, <b class="bfseries">solved</b>, or <b class="bfseries">wrong</b>
+    indication. Your program will then make another move based on
+    the response it received as discussed above. This process will
+    repeat until your program receives a <b class="bfseries">wrong</b> or <b class="bfseries">solved</b>
+    indication.</p>
+<p>Example (User output in <tt class="ttfamily">Teletype</tt>,
+    Computer judge output in <b class="bfseries">Bold</b>). (This
+    sample run has no relationship to the samples shown above).</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><b class="bfseries">Sample Run</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="ttfamily">down</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">right</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">left</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">up</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">ok</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">right</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">ok</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">down</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">ok</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">down</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">right</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">left</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">wall</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">up</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">ok</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">right</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; text-align:left; border-bottom-color:black">
+<p><b class="bfseries">solved</b></p>
+</td>
+</tr>
+</table>
+</center>
+<p>It is guaranteed that the maze will not be larger than
+    <span class="tex2jax_process">$100 \times 100$</span> in any
+    dimension.</p>
+</div>

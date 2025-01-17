@@ -1,0 +1,136 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/archimedes/file/statement/en/img-0001.png" class="illustration" src="/problems/archimedes/file/statement/en/img-0001.png"/>
+<div class="description">
+        Archimedes’s Spiral, <span class="tex2jax_process">$b =
+        \frac{1}{2}$</span>
+</div>
+</div>
+<p>Archimedes is the name of a new 2D video game, which is very
+    simple: the player hits start, at which point their avatar
+    moves along an Archimedean spiral starting from the origin.
+    When they hit a button, the avatar detaches from the spiral in
+    the direction it is currently moving. The goal is to hit a
+    target. The avatar’s path after it detaches must not intersect
+    with any part of the spiral.</p>
+<p>To help study this game, you’re asked to write a program
+    that given the spiral’s angular velocity computes the point at
+    which the player would need to press the button to release the
+    avatar from the spiral in order to hit the target.</p>
+<p>An Archimedean spiral is created when a point moves with
+    constant velocity along a line that rotates with constant
+    angular velocity around the origin. When expressed in polar
+    coordinates <span class="tex2jax_process">$(r, \phi )$</span>,
+    an Archimedean spiral has a simple formulation: <span class="tex2jax_process">$r = b \ \phi $</span> where <span class="tex2jax_process">$r$</span> is the distance from the origin
+    and <span class="tex2jax_process">$\phi $</span> is the angle
+    between the point, origin, and the unit vector <span class="tex2jax_process">$(1, 0)$</span>. <span class="tex2jax_process">$b$</span> is a constant that determines the
+    distance between successive rings of the spiral.</p>
+<h2>Input</h2>
+<p>The input consists of a single line with <span class="tex2jax_process">$3$</span> real numbers <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$t_
+    x$</span>, and <span class="tex2jax_process">$t_ y$</span>,
+    denoting the parameter <span class="tex2jax_process">$b$</span>
+    (<span class="tex2jax_process">$0.01 \le b \le 10$</span>) of
+    the spiral described by <span class="tex2jax_process">$r = b \
+    \phi $</span> and the <span class="tex2jax_process">$x,
+    y$</span> coordinates of the target <span class="tex2jax_process">$T = (t_ x, t_ y)$</span>, restricted by
+    <span class="tex2jax_process">$-10\, 000 \le t_ x, t_ y \le
+    10\, 000$</span>. It is guaranteed that <span class="tex2jax_process">$\sqrt{t_ x^2+t_ y^2} &gt; 2 \pi b$</span>,
+    i.e., the avatar will stay on the spiral for at least one full
+    <span class="tex2jax_process">$360$</span> degree turn. It is
+    also guaranteed that the distance from point <span class="tex2jax_process">$T$</span> to the closest point on the spiral
+    will be greater than <span class="tex2jax_process">$10^{-3}$</span>. There may be up to
+    <span class="tex2jax_process">$12$</span> significant digits in
+    <span class="tex2jax_process">$b$</span>, and up to
+    <span class="tex2jax_process">$3$</span> digits after the
+    decimal point in <span class="tex2jax_process">$t_ x$</span>
+    and <span class="tex2jax_process">$t_ y$</span>.</p>
+<h2>Output</h2>
+<p>Output the <span class="tex2jax_process">$x, y$</span>
+    coordinates of the point on the spiral where the avatar should
+    leave the spiral, continue in the direction it is moving, and
+    hit the target without intersecting the spiral.</p>
+<p>Your answer will be considered correct if the absolute or
+    relative error of both <span class="tex2jax_process">$x$</span>
+    and <span class="tex2jax_process">$y$</span> does not exceed
+    <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0.5 -5.301 3.098
+</pre>
+</td>
+<td>
+<pre>-1.26167861 3.88425357
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0.5 8 8
+</pre>
+</td>
+<td>
+<pre>9.21068947 2.56226688
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 8 8
+</pre>
+</td>
+<td>
+<pre>6.22375968 -0.31921472
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>0.5 -8 8
+</pre>
+</td>
+<td>
+<pre>-4.36385220 9.46891588
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>0.5 0 -8
+</pre>
+</td>
+<td>
+<pre>-3.60855706 -3.61140618
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,81 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/janeeyre/file/statement/en/img-0001.jpg" class="illustration" src="/problems/janeeyre/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/britishlibrary/11298156955">Public
+        Domain, British Library via Flickr</a>
+</div>
+</div>
+<p>Anna wants to read the famous book <em>Jane Eyre</em>, but
+    annoyingly its title is somewhat late in the alphabet. This is
+    a problem, since Anna always reads books in alphabetical order;
+    as soon as she finish reading a book, she immediately begins
+    reading the next book in her possession which comes first
+    according to ASCII-order.</p>
+<p>To make matters even worse, Anna often receives new books as
+    presents. Such books go into the pile of Anna’s unread books
+    (she will finish the book she is currently reading even if the
+    received book is earlier in the alphabet). If she receives one
+    or more books at the exact same moment as she finishes another
+    book, though, then she will pick her next book among both the
+    books in her existing pile and the newly received books.</p>
+<p>Given Anna’s pile of unread books and a schedule for at
+    which points in time Anna’s friends will give her new books,
+    can you figure out when she will finish reading <em>Jane
+    Eyre</em>? Anna reads at a speed of one page per minute.</p>
+<h2>Input</h2>
+<p>On the first line are three non-negative integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span>; here <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0
+    \leq n &lt; 100\, 000$</span>) indicates the number of unread
+    books in Anna’s pile (in addition to <em>Jane Eyre</em>),
+    <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0 \leq m &lt; 100\, 000$</span>) indicates
+    the number of books her friends will give her, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k &lt; 100\, 000$</span>) indicates the number of pages in
+    <em>Jane Eyre</em>.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines
+    describe the other unread books in Anna’s pile; the
+    <span class="tex2jax_process">$i^{\text {th}}$</span> such line
+    contains a string <span class="tex2jax_process">$s_ i$</span>
+    (<span class="tex2jax_process">$1 \leq |s_ i| \leq 20$</span>)
+    and a positive integer <span class="tex2jax_process">$k_
+    i$</span> (<span class="tex2jax_process">$1 \leq k_ i &lt;
+    100\, 000$</span>) indicating respectively the title of the
+    book and how many pages it contains. The string <span class="tex2jax_process">$s_ i$</span> will be enclosed in double
+    quotes (<tt class="ttfamily">"</tt>), and consists of a mixture
+    of spaces and alphanumeric ASCII characters.</p>
+<p>Finally follows <span class="tex2jax_process">$m$</span>
+    lines describing the books Anna’s friends will give her; the
+    <span class="tex2jax_process">$j^{\text {th}}$</span> such line
+    contains a non-negative integer <span class="tex2jax_process">$t_ j$</span> (<span class="tex2jax_process">$0 \leq t_ j \leq 1\, 000\, 000\,
+    000$</span>), a string <span class="tex2jax_process">$s_
+    j$</span> (<span class="tex2jax_process">$1 \leq |s_ j| \leq
+    20$</span>) and a positive integer <span class="tex2jax_process">$k_ j$</span> (<span class="tex2jax_process">$1 \leq k_ j &lt; 100\, 000$</span>)
+    indicating respectively the time (in minutes from now) Anna
+    will receive the book, the title of the book and how many pages
+    it contains. The string <span class="tex2jax_process">$s_
+    j$</span> will be enclosed in double quotes (<tt class="ttfamily">"</tt>), and consists of a mixture of spaces and
+    alphanumeric ASCII characters.</p>
+<h2>Output</h2>
+<p>A single integer, the minute at which Anna finish reading
+    <em>Jane Eyre</em>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 592
+"Pride and Predjudice" 432
+"Don Quixote" 863
+863 "Great Gatsby" 218
+1082 "Crime and Punishment" 545
+</pre>
+</td>
+<td>
+<pre>1673
+</pre>
+</td>
+</tr>
+</table>
+</div>

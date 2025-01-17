@@ -1,0 +1,206 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/gameofdice/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gameofdice/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>In the game Yatzy, the player rolls <span class="tex2jax_process">$5$</span> plain six-sided dice, with each
+    face numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$6$</span>. Each roll can score
+    in several categories:
+    <dl class="description">
+<dt>ones:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        ones, you get <span class="tex2jax_process">$k$</span>
+        points.</p>
+</dd>
+<dt>twos:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        twos, you get <span class="tex2jax_process">$2k$</span>
+        points.</p>
+</dd>
+<dt>threes:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        threes, you get <span class="tex2jax_process">$3k$</span>
+        points.</p>
+</dd>
+<dt>fours:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        fours, you get <span class="tex2jax_process">$4k$</span>
+        points.</p>
+</dd>
+<dt>fives:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        fives, you get <span class="tex2jax_process">$5k$</span>
+        points.</p>
+</dd>
+<dt>sixes:</dt>
+<dd>
+<p>if you have <span class="tex2jax_process">$k$</span>
+        sixes, you get <span class="tex2jax_process">$6k$</span>
+        points.</p>
+</dd>
+<dt>pair:</dt>
+<dd>
+<p>if you have at least two dice showing <span class="tex2jax_process">$x$</span>, you get <span class="tex2jax_process">$2x$</span> points.</p>
+</dd>
+<dt>two pairs:</dt>
+<dd>
+<p>if you have at least two dice showing <span class="tex2jax_process">$x$</span>, and at least two dice of
+        another kind showing <span class="tex2jax_process">$y$</span>, you get <span class="tex2jax_process">$2x + 2y$</span> points.</p>
+</dd>
+<dt>three of a kind:</dt>
+<dd>
+<p>if you have at least three dice showing <span class="tex2jax_process">$x$</span>, you get <span class="tex2jax_process">$3x$</span> points.</p>
+</dd>
+<dt>four of a kind:</dt>
+<dd>
+<p>if you have at least four dice showing <span class="tex2jax_process">$x$</span>, you get <span class="tex2jax_process">$4x$</span> points.</p>
+</dd>
+<dt>full house:</dt>
+<dd>
+<p>if you have two dice of one kind <span class="tex2jax_process">$x$</span>, and three dice of another
+        kind <span class="tex2jax_process">$y$</span>, you get
+        <span class="tex2jax_process">$2x + 3y$</span> points.</p>
+</dd>
+<dt>small straight:</dt>
+<dd>
+<p>if you have the numbers <span class="tex2jax_process">$1-5$</span>, you get <span class="tex2jax_process">$15$</span> points.</p>
+</dd>
+<dt>large straight:</dt>
+<dd>
+<p>if you have the numbers <span class="tex2jax_process">$2-6$</span>, you get <span class="tex2jax_process">$20$</span> points.</p>
+</dd>
+<dt>yatzy:</dt>
+<dd>
+<p>if you have five dice of the same kind, you get
+        <span class="tex2jax_process">$50$</span> points.</p>
+</dd>
+<dt>chance:</dt>
+<dd>
+<p>you get points equal to the sum of the numbers on all
+        the dice.</p>
+</dd>
+</dl>
+<p>Given the results of all 5 dice, output for each category
+    the maximum score for that category. If the roll doesn’t score
+    in that category, print <span class="tex2jax_process">$0$</span> instead.</p>
+<h2>Input</h2>
+<p>The input consists of the faces of all the five dice, as
+    shown in the sample inputs.</p>
+<h2>Ouptut</h2>
+<p>Output <span class="tex2jax_process">$15$</span> integers
+    separated by whitespace – the point values of each score type.
+    For readability, the example outputs show the first
+    <span class="tex2jax_process">$6$</span> scores on one line,
+    followed by the <span class="tex2jax_process">$11$</span> other
+    types</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>+-------+ +-------+ +-------+ +-------+ +-------+
+|       | |     o | |     o | | o   o | | o   o |
+|   o   | |       | |   o   | |       | |   o   |
+|       | | o     | | o     | | o   o | | o   o |
++-------+ +-------+ +-------+ +-------+ +-------+
+</pre>
+</td>
+<td>
+<pre>1 2 3 4 5 0
+0 0 0 0 0 15 0 0 15
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>+-------+ +-------+ +-------+ +-------+ +-------+
+| o   o | | o   o | |     o | | o   o | |       |
+|       | | o   o | |       | |       | |   o   |
+| o   o | | o   o | | o     | | o   o | |       |
++-------+ +-------+ +-------+ +-------+ +-------+
+</pre>
+</td>
+<td>
+<pre>1 2 0 8 0 6
+8 0 0 0 0 0 0 0 17
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>+-------+ +-------+ +-------+ +-------+ +-------+
+| o   o | | o   o | |     o | |     o | | o   o |
+|   o   | |   o   | |   o   | |   o   | |   o   |
+| o   o | | o   o | | o     | | o     | | o   o |
++-------+ +-------+ +-------+ +-------+ +-------+
+</pre>
+</td>
+<td>
+<pre>0 0 6 0 15 0
+10 16 15 0 21 0 0 0 21
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>+-------+ +-------+ +-------+ +-------+ +-------+
+| o   o | | o   o | | o   o | | o   o | | o   o |
+|   o   | |   o   | |   o   | |   o   | |   o   |
+| o   o | | o   o | | o   o | | o   o | | o   o |
++-------+ +-------+ +-------+ +-------+ +-------+
+</pre>
+</td>
+<td>
+<pre>0 0 0 0 25 0
+10 0 15 20 0 0 0 50 25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>+-------+ +-------+ +-------+ +-------+ +-------+
+|     o | |     o | |     o | | o   o | |     o |
+|       | |       | |       | |       | |       |
+| o     | | o     | | o     | | o   o | | o     |
++-------+ +-------+ +-------+ +-------+ +-------+
+</pre>
+</td>
+<td>
+<pre>0 8 0 4 0 0
+4 0 6 8 0 0 0 0 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

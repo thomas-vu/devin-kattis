@@ -1,0 +1,54 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/basic/file/statement/en/img-0001.jpg" class="illustration" src="/problems/basic/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>The programming language Ada has integer constants that look
+    like this: <tt class="ttfamily">123</tt>, <tt class="ttfamily">8#123#</tt>, <tt class="ttfamily">16#abc#</tt>.
+    These constants represent the integers <span class="tex2jax_process">$123$</span>, <span class="tex2jax_process">$83$</span> (<tt class="ttfamily">123</tt>
+    base <span class="tex2jax_process">$8$</span>) and <span class="tex2jax_process">$2739$</span> (<tt class="ttfamily">abc</tt>
+    base <span class="tex2jax_process">$16$</span>). More
+    precisely, an integer may be a decimal integer given as a
+    sequence of one or more digits less than <span class="tex2jax_process">$10$</span>, or it may be an integer to some
+    specific base, given as the base followed by a sequence of one
+    or more digits less than the base enclosed by <tt class="ttfamily">#</tt> symbols. Lower case letters from <tt class="ttfamily">a</tt> through <tt class="ttfamily">f</tt> are used
+    as the digits representing <span class="tex2jax_process">$10$</span> through <span class="tex2jax_process">$15$</span>. In Ada, the base, if specified,
+    must be a sequence of decimal digits. For this problem,
+    however, the base may be of any form described above so long as
+    it represents an integer between <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$16$</span> inclusive.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$n \le 100$</span>. <span class="tex2jax_process">$n$</span> lines follow. Input lines use
+    ASCII characters <span class="tex2jax_process">$33$</span>-<span class="tex2jax_process">$126$</span>, and are between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$80$</span> characters in length.</p>
+<h2>Output</h2>
+<p>For each line of input, output a line “<tt class="ttfamily">yes</tt>” if it is a valid integer constant
+    according to the above rules; otherwise output a line
+    containing “<tt class="ttfamily">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+2#101#
+2#101##123#
+17#abc#
+16#123456789abcdef#
+16#123456789abcdef#123456789abcdef#
+</pre>
+</td>
+<td>
+<pre>
+yes
+yes
+no
+yes
+no
+</pre>
+</td>
+</tr>
+</table>
+</div>

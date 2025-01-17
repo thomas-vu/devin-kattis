@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/combinationlock/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/combinationlock/file/statement/en/img-0001.jpeg"/>
+<div class="description"></div>
+</div>
+<p>Now that you’re back to school for another term, you need to
+    remember how to work the combination lock on your locker. A
+    common design is that of the Master Brand, shown at right. The
+    lock has a dial with <span class="tex2jax_process">$40$</span>
+    calibration marks numbered <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$39$</span> with <span class="tex2jax_process">$0$</span> at the top and then increasing in
+    clockwise order. A combination consists of <span class="tex2jax_process">$3$</span> of these numbers; for example:
+    <span class="tex2jax_process">$15$</span>-<span class="tex2jax_process">$25$</span>-<span class="tex2jax_process">$8$</span>. To open the lock, the following
+    steps are taken:</p>
+<ul class="itemize">
+<li>
+<p>turn the dial clockwise <span class="tex2jax_process">$2$</span> full turns</p>
+</li>
+<li>
+<p>stop at the first number of the combination</p>
+</li>
+<li>
+<p>turn the dial counter-clockwise <span class="tex2jax_process">$1$</span> full turn</p>
+</li>
+<li>
+<p>continue turning counter-clockwise until the
+        <span class="tex2jax_process">$2$</span>nd number is
+        reached</p>
+</li>
+<li>
+<p>turn the dial clockwise again until the <span class="tex2jax_process">$3$</span>rd number is reached</p>
+</li>
+<li>
+<p>pull the shank and the lock will open.</p>
+</li>
+</ul>
+<p>Given the initial position of the dial and the combination
+    for the lock, how many degrees is the dial rotated in total
+    (clockwise plus counter-clockwise) in opening the lock?</p>
+<h2>Input</h2>
+<p>Input consists of several test cases, at most <span class="tex2jax_process">$2\, 000$</span>. For each case there is a
+    line of input containing <span class="tex2jax_process">$4$</span> numbers between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$39$</span>. The first number is the position
+    of the dial. The next three numbers are the combination.
+    Consecutive numbers in the combination will be distinct. A line
+    containing four zeros follows the last case.</p>
+<h2>Output</h2>
+<p>For each case, print a line with a single integer: the
+    number of degrees that the dial must be turned to open the
+    lock.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 30 0 30
+5 35 5 35
+0 20 0 20
+7 27 7 27
+0 10 0 10
+9 19 9 19
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+1350
+1350
+1620
+1620
+1890
+1890
+</pre>
+</td>
+</tr>
+</table>
+</div>

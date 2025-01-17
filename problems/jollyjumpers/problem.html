@@ -1,0 +1,44 @@
+<div class="problembody">
+<p>A sequence of <span class="tex2jax_process">$n &gt;
+    0$</span> integers is called a jolly jumper if the absolute
+    values of the difference between successive elements take on
+    all the values <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$n-1$</span>. For instance,</p>
+<pre>
+1 4 2 3
+</pre>
+<p>is a jolly jumper, because the absolutes differences are
+    <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$1$</span> respectively. The definition
+    implies that any sequence of a single integer is a jolly
+    jumper. You are to write a program to determine whether or not
+    each of a number of sequences is a jolly jumper.</p>
+<h2>Input</h2>
+<p>Each line of input contains an integer <span class="tex2jax_process">$n \le 3000$</span> followed by <span class="tex2jax_process">$n$</span> integers representing the
+    sequence. The values in the sequence are at most <span class="tex2jax_process">$300\, 000$</span> in absolute value. Input
+    contains at most <span class="tex2jax_process">$10$</span>
+    lines.</p>
+<h2>Output</h2>
+<p>For each line of input, generate a line of output saying
+    “<tt class="ttfamily">Jolly</tt>” or “<tt class="ttfamily">Not
+    jolly</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 1 4 2 3
+5 1 4 2 -1 6
+</pre>
+</td>
+<td>
+<pre>
+Jolly
+Not jolly
+</pre>
+</td>
+</tr>
+</table>
+</div>

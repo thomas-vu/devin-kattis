@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>The country of Singanesia consists of <span class="tex2jax_process">$N$</span> cities, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>. From a recent survey, each city
+    is assigned a level which denote how problematic it is. The
+    <span class="tex2jax_process">$i$</span>-th city have a
+    problematic level of <span class="tex2jax_process">$A_
+    i$</span>. To improve the welfare, recently there is a plan to
+    build intercities highways. As problematic cities tend to
+    hinder the development of the highway, the government decided
+    to use the problematic level to estimate how difficult it is to
+    build a highway between two cities. The difficulty level of
+    building a highway connecting <span class="tex2jax_process">$i$</span>-th city and <span class="tex2jax_process">$j$</span>-th city is <span class="tex2jax_process">$A_ i+A_ j$</span>. Now, the government plan
+    for the intercities highways goes like the following:</p>
+<ul class="itemize">
+<li>
+<p>They will build several highways such that from any
+        city, someone can go to any other cities using the built
+        highways</p>
+</li>
+<li>
+<p>They will minimize the sum of the difficulty level of
+        building the intercities highways</p>
+</li>
+</ul>
+<p>As the leader for this development plan, your task is to
+    find the minimum sum of the difficulty level to build the
+    intercities highways.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 200\, 000$</span>).</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$A_ i$</span> (<span class="tex2jax_process">$1 \leq A_ i \leq 1\, 000\, 000$</span>).</p>
+<h2>Output</h2>
+<p>Output the minimum sum of the difficulty level to build the
+    highways.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \leq 1\, 000$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): All <span class="tex2jax_process">$A_ i$</span> have the same value.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$40$</span> Points</b>): No additional
+        constraints.</p>
+</li>
+</ol>
+<h2>Explanation</h2>
+<p>Below is the explanation for the first sample. Each line
+    denotes the difficulty of building the highway. The red lines
+    denote one possible intercities highways plan with the minimum
+    sum of the difficulty level.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{sample1.png}" src="/problems/buildinghighways/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+<p>Below is the explanation for the second sample.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{sample2.png}" src="/problems/buildinghighways/file/statement/en/img-0002.png" style="width:60.00%"/>
+</center>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2 3 2 5
+</pre>
+</td>
+<td>
+<pre>16
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+3 1 7 5 1
+</pre>
+</td>
+<td>
+<pre>20
+</pre>
+</td>
+</tr>
+</table>
+</div>

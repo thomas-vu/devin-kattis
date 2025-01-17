@@ -1,0 +1,71 @@
+<div class="problembody">
+<div class="illustration" style="width:26.00%">
+<img alt="/problems/hothike/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hothike/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/danboarder/11955166696">Picture</a>
+        by dan lundmark on flickr, cc by
+      </div>
+</div>In order to pass time during your vacation, you decided
+    to go on a hike to visit a scenic lake up in the mountains.
+    Hiking to the lake will take you a full day, then you will stay
+    there for a day to rest and enjoy the scenery, and then spend
+    another day hiking home, for a total of three days. However,
+    the accursed weather this summer is ridiculously warm and
+    sunny, and since severe dehydration is not at the top of your
+    priority list you want to schedule the three-day trip during
+    some days where the two hiking days are the least warm. In
+    particular you want to minimize the maximum temperature during
+    the two hiking days.
+    <p>Given the current forecast of daily maximum temperatures
+    during your vacation, what are the best days for your trip?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3
+    \le n \le 50$</span>), the length of your vacation in days.
+    Then follows a line containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$t_1, t_2, \ldots , t_ n$</span>
+    (<span class="tex2jax_process">$-20 \le t_ i \le 40$</span>),
+    where <span class="tex2jax_process">$t_ i$</span> is the
+    temperature forecast for the <span class="tex2jax_process">$i$</span>’th day of your vacation.</p>
+<h2>Output</h2>
+<p>Output two integers <span class="tex2jax_process">$d$</span>
+    and <span class="tex2jax_process">$t$</span>, where
+    <span class="tex2jax_process">$d$</span> is the best day to
+    start your trip, and <span class="tex2jax_process">$t$</span>
+    is the resulting maximum temperature during the two hiking
+    days. If there are many choices of <span class="tex2jax_process">$d$</span> that minimize the value of
+    <span class="tex2jax_process">$t$</span>, then output the
+    smallest such <span class="tex2jax_process">$d$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+23 27 31 28 30
+</pre>
+</td>
+<td>
+<pre>2 28
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+30 20 20 30
+</pre>
+</td>
+<td>
+<pre>1 30
+</pre>
+</td>
+</tr>
+</table>
+</div>

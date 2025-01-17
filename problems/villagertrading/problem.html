@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/villagertrading/file/statement/en/img-0001.jpg" class="illustration" src="/problems/villagertrading/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Steve is planning his retirement. He has decided to settle
+    down in a nice town full of villagers. Of course, he doesn’t
+    want to ever have to leave the village and go mining once he
+    retires, so he is planning to collect every resource he’ll need
+    now.<br/></p>
+<p>Unfortunately, he doesn’t know what materials he will need
+    in the future. However, the town is full of villagers who will
+    do anything for emeralds, including collecting whatever
+    resources he may need in the future. So, Steve would instead
+    like to create a stable source of emeralds he can use for the
+    rest of his life.<br/></p>
+<p>As it turns out, all the villagers love to make trades. In
+    particular, each villager offers a certain amount of trades,
+    where Steve may trade some of one item for another. Steve wants
+    to know whether it is possible to create an infinite source of
+    emeralds by trading repeatedly, assuming he can strategically
+    collect finite amounts of any resource before his retirement.
+    Write a program to help him determine whether or not this is
+    possible.<br/></p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$1 \leq N \leq 1\, 000$</span>,
+    the number of villagers.<br/></p>
+<p>The subsequent lines describe the trades of each of the
+    <span class="tex2jax_process">$N$</span> villagers. The input
+    for each villager begins with a line containing a single
+    integer <span class="tex2jax_process">$1 \leq t \leq
+    10$</span>, the number of trades offered by the villager.
+    Following this are <span class="tex2jax_process">$t$</span>
+    lines, each containing integer <span class="tex2jax_process">$1
+    \leq a_1 \leq 64$</span>, string <span class="tex2jax_process">$s_1$</span>, integer <span class="tex2jax_process">$1 \leq a_2 \leq 64$</span>, and string
+    <span class="tex2jax_process">$s_2$</span>, separated by
+    spaces, indicating that Steve may give <span class="tex2jax_process">$a_1$</span> of the item named <span class="tex2jax_process">$s_1$</span> to the villager in exchange for
+    <span class="tex2jax_process">$a_2$</span> of the item
+    <span class="tex2jax_process">$s_2$</span>.<br/></p>
+<p>Assume that there are at most <span class="tex2jax_process">$5\, 000$</span> tradable items, each with a
+    unique one-word name consisting of 1-16 lower-case or
+    upper-case letters. The name used for emeralds is “Emerald”
+    (case-sensitive), although not all villagers trade for
+    emeralds, so there may be inputs without emerald trades.</p>
+<h2>Output</h2>
+<p>If it is possible for Steve to trade for infinite emeralds,
+    output “yes”. Otherwise, output “no”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3
+6 Paper 3 Book
+6 Book 2 Bookshelf
+1 Bookshelf 8 Paper
+1
+32 Paper 1 Emerald
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+2
+32 Stick 1 Emerald
+3 Emerald 64 Stick
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

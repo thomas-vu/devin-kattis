@@ -1,0 +1,103 @@
+<div class="problembody">
+<p>Map websites such as Bing Maps and Google Maps often store
+    their maps as many different image files, called tiles. The
+    lowest zoom level (level <span class="tex2jax_process">$0$</span>) consists of a single tile with a
+    low-detail image of the whole map, zoom level <span class="tex2jax_process">$1$</span> consists of four tiles each
+    containing a slightly more detailed version of a quarter of the
+    map, and in general zoom level <span class="tex2jax_process">$n$</span> contains <span class="tex2jax_process">$4^ n$</span> different tiles that each
+    contain a part of the map.</p>
+<p>One way of identifying a tile is by means of a
+    <em>quadkey</em>. A quadkey is a string of digits uniquely
+    identifying a tile at a certain zoom level. The first digit
+    specifies in which of the four quadrants of the whole map the
+    tile lies: <tt class="ttfamily">0</tt> for the top-left
+    quadrant, <tt class="ttfamily">1</tt> for the top-right
+    quadrant, <tt class="ttfamily">2</tt> for the bottom-left
+    quadrant and <tt class="ttfamily">3</tt> for the bottom-right
+    quadrant. The subsequent digits specify in which sub quadrant
+    of the current quadrant the tile is. The quadkeys for zoom
+    levels <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$3$</span> are shown in Figure 1(a).</p>
+<div class="figure" id="fig:maps">
+<center>
+<table class="subfigure" id="fig:quadkey" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=0.85\textwidth ]{maptiles.jpg}" src="/problems/maptiles2/file/statement/en/img-0001.jpg" style="width:85.00%"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(a) <span>Quadkeys for
+            zoom levels <span class="tex2jax_process">$1$</span> to
+            <span class="tex2jax_process">$3$</span></span></td>
+</tr>
+</table>
+<table class="subfigure" id="fig:coords" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=0.90\textwidth ]{maptiles2.jpg}" src="/problems/maptiles2/file/statement/en/img-0002.jpg" style="width:90.00%"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(b) <span>Coordinates for
+            zoom level 3</span></td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Visualisation of the two
+          representations. The images are taken from the <a href="https://msdn.microsoft.com/en-us/library/bb259689.aspx">MSDN</a>.
+        </div>
+</center>
+</div>
+<p>Another way of identifying a tile is to give the zoom level
+    and <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates, where <span class="tex2jax_process">$(0,0)$</span> is the left-top corner. The
+    coordinates for the tiles of zoom level 3 are shown in
+    Figure 1(b). Given the quadkey of a tile, output the zoom
+    level and <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> coordinates of that
+    tile.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1\leq \text {length}(s) \leq
+        30$</span>), the quadkey of the map tile.</p>
+</li>
+</ul>
+<p>The string <span class="tex2jax_process">$s$</span> consists
+    of only the digits ‘<tt class="ttfamily">0</tt>’, ‘<tt class="ttfamily">1</tt>’, ‘<tt class="ttfamily">2</tt>’ and
+    ‘<tt class="ttfamily">3</tt>’.</p>
+<h2>Output</h2>
+<p>Output three integers, the zoom level and the <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> coordinates of the tile.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+</pre>
+</td>
+<td>
+<pre>
+1 1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+130
+</pre>
+</td>
+<td>
+<pre>
+3 6 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

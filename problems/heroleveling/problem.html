@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>Edgar wants to be a hero! However, to take the Hero
+    Qualification Test, he must be at least level <span class="tex2jax_process">$L$</span>. He is currently level 0, and
+    there are <span class="tex2jax_process">$N$</span> quests
+    available for him to take. Quest <span class="tex2jax_process">$i$</span> requires him to be at least level
+    <span class="tex2jax_process">$M_ i$</span> to complete, and he
+    will gain <span class="tex2jax_process">$X_ i$</span> levels
+    upon completing the quest. Each quest can only be done at most
+    once. Additionally, due to the nature of these quests, quest
+    <span class="tex2jax_process">$i$</span> has a trauma level
+    <span class="tex2jax_process">$T_ i$</span> associated with
+    it.</p>
+<p>Luckily, Edgar has poor memory so he will only remember the
+    <span class="tex2jax_process">$K$</span> most traumatic quests
+    he has done! His <i class="itshape">trauma rating</i> is
+    therefore the sum of the <span class="tex2jax_process">$K$</span> largest trauma values among the
+    quests he has done. If he does less than <span class="tex2jax_process">$K$</span> quests, then his trauma rating is
+    just the sum of the trauma level of all quests he has done.</p>
+<p>Help Edgar determine what is the minimum trauma rating he
+    needs to reach at least level <span class="tex2jax_process">$L$</span> and take the Hero Qualification
+    Test!</p>
+<h2>Input</h2>
+<p>The first line of input consists of a three positive
+    integers <span class="tex2jax_process">$N, K, L$</span>, the
+    number of quests, the maximum number of trauma levels he can
+    remember, and the minimum level he needs to reach <span class="tex2jax_process">$(1 \leq N \leq 150, 1 \leq K \leq N, 1 \leq
+    L \leq 1.5 \cdot 10^{11})$</span>.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    each contain three positive integers <span class="tex2jax_process">$M_ i, X_ i, T_ i$</span>, the minimum level
+    Edgar needs to be to do quest <span class="tex2jax_process">$i$</span>, the number of levels he gains
+    from doing it, and the trauma level of the quest <span class="tex2jax_process">$(0 \leq M_ i \leq 1.5 \cdot 10^{11}, 1 \leq
+    X_ i \leq 10^9, 1 \leq T_ i \leq 150)$</span>.</p>
+<p><b class="bfseries">Additional Constraint: It is guaranteed
+    that Edgar will be able to reach level</b> <span class="tex2jax_process">$L$</span> <b class="bfseries">with the
+    quests given.</b></p>
+<h2>Output</h2>
+<p>Output a single integer, the minimum trauma rating Edgar
+    needs to reach at least level <span class="tex2jax_process">$L$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 10
+0 3 5
+5 5 9
+2 2 3
+7 4 6
+0 4 7
+</pre>
+</td>
+<td>
+<pre>13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 4 10
+3 6 6
+0 4 7
+0 3 5
+4 2 4
+6 7 4
+7 3 3
+</pre>
+</td>
+<td>
+<pre>13
+</pre>
+</td>
+</tr>
+</table>
+</div>

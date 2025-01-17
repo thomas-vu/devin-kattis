@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>As part of the Constellation Commerce and Planetary
+    Connections company (CCPC), you are tasked with mining
+    resources from planets in the Milky Way. As a part of this
+    task, you are given a spaceship that can travel to different
+    planets in the Milky Way, as well as a device that can
+    determine the resources on each planet near your location.</p>
+<p>The device displays a matrix of size <span class="tex2jax_process">$n \times n$</span> where each cell
+    represents a planet. Each planet has a certain amount of
+    resources that can be mined. You want to mine as many resources
+    as possible by visiting different planets in a certain order.
+    You can start at any planet located at a cell that is touching
+    a border, and end whenever you either have no more planets left
+    to traverse, or when you can no longer travel to another planet
+    (e.g. when your fuel is 0).</p>
+<p>Your spaceship has limited fuel and can only travel a
+    certain distance before needing to refuel. You can only travel
+    to adjacent planets (up, down, left, right) that are within
+    your fuel range, and one point of fuel is consumed per planet
+    travelled to.</p>
+<p>Your boss is on the spaceship with you and will only stay
+    impressed if each planet you visit has more resources on it
+    than the last one you mined, so you will mine a sequence of
+    planets with strictly increasing resource values. Given this
+    constraint, your goal is to determine the maximum amount of
+    resources you can mine before running out of fuel. You can only
+    visit each planet once, and you must mine every planet you go
+    to including the starting planet.</p>
+<h2>Input</h2>
+<p>The first line of input will contain two space-separated
+    integers <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$f$</span> where <span class="tex2jax_process">$1 \leq n \leq 20$</span> and <span class="tex2jax_process">$1 \leq f \leq 400$</span>. This represents
+    the size of the <span class="tex2jax_process">$n \times
+    n$</span> matrix as well as the fuel you are given,
+    <span class="tex2jax_process">$f$</span>. The next <span class="tex2jax_process">$n$</span> lines consist of <span class="tex2jax_process">$n$</span> space-separated integers, where
+    each integer represents the amount of resources on that planet.
+    The resources on each planet will be integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$400$</span>.</p>
+<h2>Output</h2>
+<p>The output should be an integer representing the maximum
+    amount of resources you can mine with the given
+    constraints.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 5 3
+2 6 9
+3 7 6
+</pre>
+</td>
+<td>
+<pre>20
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 5 3
+2 6 9
+3 7 6
+</pre>
+</td>
+<td>
+<pre>23
+</pre>
+</td>
+</tr>
+</table>
+</div>

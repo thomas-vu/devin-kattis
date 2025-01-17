@@ -1,0 +1,50 @@
+<div class="problembody">
+<p>The fundamental theorem of arithmetic states that every
+    integer greater than 1 can be uniquely represented as a product
+    of one or more primes. While unique, several arrangements of
+    the prime factors may be possible. For example:</p><span class="tex2jax_process">\begin{align*} 10 &amp; = 2 \cdot 5 &amp; 20
+    &amp; = 2 \cdot 2 \cdot 5 \\ &amp; = 5 \cdot 2 &amp; &amp; = 2
+    \cdot 5 \cdot 2 \\ &amp; &amp; &amp; = 5 \cdot 2 \cdot 2
+    \end{align*}</span>
+<p>Let <span class="tex2jax_process">$f(k)$</span> be the
+    number of different arrangements of the prime factors of
+    <span class="tex2jax_process">$k$</span>. So <span class="tex2jax_process">$f(10) = 2$</span> and <span class="tex2jax_process">$f(20) = 3$</span>.</p>
+<p>Given a positive number <span class="tex2jax_process">$n$</span>, there always exists at least one
+    number <span class="tex2jax_process">$k$</span> such that
+    <span class="tex2jax_process">$f(k) = n$</span>. We want to
+    know the smallest such <span class="tex2jax_process">$k$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of at most <span class="tex2jax_process">$1\, 000$</span> test cases, each on a
+    separate line. Each test case is a positive integer
+    <span class="tex2jax_process">$n &lt; 2^{63}$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, display its number <span class="tex2jax_process">$n$</span> and the smallest number
+    <span class="tex2jax_process">$k &gt; 1$</span> such that
+    <span class="tex2jax_process">$f(k) = n$</span>. The numbers in
+    the input are chosen such that <span class="tex2jax_process">$k
+    &lt; 2^{63}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+2
+3
+105
+</pre>
+</td>
+<td>
+<pre>
+1 2
+2 6
+3 12
+105 720
+</pre>
+</td>
+</tr>
+</table>
+</div>

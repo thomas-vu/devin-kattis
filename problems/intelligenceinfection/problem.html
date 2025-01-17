@@ -1,0 +1,138 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/intelligenceinfection/file/statement/en/img-0001.jpg" class="illustration" src="/problems/intelligenceinfection/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by Kieran Lamb via Flickr
+      </div>
+</div>
+<p>You are a spy for the Benevolent Agent Protection Center
+    (BAPC) and have recently obtained some top secret information.
+    As you are very excited about this discovery, you want to
+    inform your fellow spies of these newfound documents by sending
+    a message to each of them. One option is to privately message
+    all spies within your organization, but this takes a lot of
+    time. Fortunately, the other spies have networks of their own,
+    so they are able to pass on your message to other spies.</p>
+<p>However, there are enemy spies in the network, who will pass
+    along the message to the enemy organization. It is therefore
+    vital that the enemy spies do not receive your message.
+    Luckily, you happen to know who these traitors are, so you can
+    avoid them.</p>
+<p>There are two ways for you to send the information to other
+    spies in the network: either by private or by public message.
+    If you use a private message, the receiving spy knows that the
+    message is confidential and they will not tell any other spy.
+    If, on the other hand, you send a spy a public message, the spy
+    will notify all other spies he/she can contact about the
+    message. Since the message is not deemed confidential for them,
+    these spies will in turn contact all spies they can get in
+    contact with and so on (regardless of any messages that they
+    received before). Since you do not want anyone else to know who
+    the enemy spies are, you cannot tell people to contact only
+    specific connections.</p>
+<p>Because of the huge size of your spy network, you would like
+    to minimize the number of people you personally need to tell
+    the secret message, while ensuring that no enemy spies receive
+    the message. Can you find out how many spies you need to
+    message?</p>
+<h2>Input</h2>
+<p>The input consists of three parts:</p>
+<ul class="itemize">
+<li>
+<p>The first line contains three integers, <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$E$</span> and <span class="tex2jax_process">$C$</span>. The first integer
+        (<span class="tex2jax_process">$1\le S \le
+        50{.}000$</span>) denotes the total number of spies in the
+        network (yourself not included), the second integer
+        (<span class="tex2jax_process">$0 \le E \le S$</span>)
+        denotes the total number of enemies in the network and the
+        third integer specifies the total number of connections
+        (<span class="tex2jax_process">$0 \le C \le 10^5$</span>)
+        between spies in the network.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$C$</span>
+        lines, with two integers <span class="tex2jax_process">$0\leq S_1&lt;S$</span> and <span class="tex2jax_process">$0\leq S_2&lt;S$</span> on each line,
+        indicating that there is a connection from spy <span class="tex2jax_process">$S_1$</span> to spy <span class="tex2jax_process">$S_2$</span>. These connections are not
+        symmetric.</p>
+</li>
+<li>
+<p>Finally, one line with <span class="tex2jax_process">$E$</span> integers, indicating that
+        these spies are enemies.</p>
+</li>
+</ul>
+<p>You may assume that you can message every spy in the network
+    directly.</p>
+<h2>Output</h2>
+<p>Output a single line with one integer indicating the minimum
+    number of messages you need to send to other spies, counting
+    both private and public messages.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 1 3
+0 1
+1 2
+2 3
+1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 0 4
+0 2
+0 1
+2 1
+2 3
+
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 2 5
+0 1
+0 2
+0 3
+1 3
+2 3
+1 2
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

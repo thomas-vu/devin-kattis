@@ -1,0 +1,120 @@
+<div class="problembody">
+<p>A Star Battle (of the <span class="tex2jax_process">$2$</span>-star variety), also known as “Two
+    Not Touch” as published by <i class="itshape">The New York
+    Times</i>, is a solitary star-placement puzzle played on a
+    <span class="tex2jax_process">$10\times 10$</span> grid. The
+    grid is divided into exactly ten <span class="tex2jax_process">$4$</span>-connected regions, and the
+    objective is to place exactly <span class="tex2jax_process">$20$</span> stars in the grid, each in its
+    own cell, such that following conditions are satisfied:</p>
+<ul class="itemize">
+<li>
+<p>Every row, column, and region of the grid contains
+        exactly two stars.</p>
+</li>
+<li>
+<p>No two stars are in adjacent cells, i.e. cells next to
+        each other horizontally, vertically, <em>or
+        diagonally</em>.</p>
+</li>
+</ul>
+<p>Below is an example of a Star Battle puzzle,<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> where regions are delimited by bold
+    lines. The unique solution to this puzzle is shown on the
+    right.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{star_battle_sample.png}" src="/problems/starbattles1/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+</div>
+<p>Given a description of a Star Battle puzzle and a candidate
+    solution, your task for this problem is to write a program that
+    will determine whether or not the candidate is indeed a valid
+    solution to the puzzle. The input to your program is guaranteed
+    to be a valid Star Battle puzzle with a unique solution.</p>
+<h2>Input</h2>
+<p>The first <span class="tex2jax_process">$10$</span> lines of
+    input contain a description of the Star Battle puzzle. Every
+    line contains exactly <span class="tex2jax_process">$10$</span>
+    digits, where the digit names the region to which its cell
+    belongs. There will be exactly <span class="tex2jax_process">$10$</span> contiguous, <span class="tex2jax_process">$4$</span>-connected (i.e. left, right, top,
+    bottom, but not diagonal) regions in the puzzle.</p>
+<p>The next <span class="tex2jax_process">$10$</span> lines of
+    input contain a description of the candidate solution. Every
+    line contains exactly <span class="tex2jax_process">$10$</span>
+    characters, each a ‘<tt class="ttfamily">.</tt>’ to indicate an
+    empty cell or a ‘<tt class="ttfamily">*</tt>’ to indicate
+    placement of a star.</p>
+<h2>Output</h2>
+<p>If the candidate solution is consistent with all the Star
+    Battle rules for the provided puzzle, output the word “valid”
+    on a single line. Otherwise, output “invalid”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0001111223
+0001221223
+0001222223
+0000224433
+5544444433
+5555466663
+5575566663
+8877666663
+8997777663
+8999976666
+......*.*.
+.*.*......
+.....*...*
+...*...*..
+.*...*....
+.......*.*
+..*.*.....
+*.......*.
+..*...*...
+*...*.....
+</pre>
+</td>
+<td>
+<pre>valid
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0000001111
+0022221111
+3322222111
+3322222141
+3355511144
+3555516664
+3771116664
+7788811644
+7888919944
+7999999444
+......*.*.
+.*.*......
+.....*...*
+...*...*..
+.*...*....
+.......*.*
+..*.*.....
+*.......*.
+..*...*...
+*...*.....
+</pre>
+</td>
+<td>
+<pre>invalid
+</pre>
+</td>
+</tr>
+</table>
+</div>

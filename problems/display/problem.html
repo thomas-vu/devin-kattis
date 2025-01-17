@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>There is a suspicion that some officers cheat when reporting
+    exact time of various events. They antedate important documents
+    and gain enormous profit by that. To eliminate such practices,
+    ACM decided to install big digital clock on the wall of each
+    office. Thank to this, everyone can easily see the current time
+    and verify that it is correctly recorded on documents.</p>
+<p>Your task is to write a firmware for this digital clock.
+    Digits will be shown using the classical seven-segment
+    display.</p>
+<h2>Input Specification</h2>
+<p>On each line of the input, there are exactly five
+    characters: two digits, a colon (“<tt>:</tt>”) and another two
+    digits. These characters specify a time between 00:00 and
+    23:59, inclusive.</p>
+<p>The last time is followed by a line containing the word
+    “<tt>end</tt>”.</p>
+<h2>Output Specification</h2>
+<p>For each input line, print a display consisting of seven
+    rows of exactly 29 characters each. The only characters allowed
+    are dashes (“<tt>-</tt>”) for horizontal segments, pipes
+    (“<tt>|</tt>”) for vertical segments, plus signs (“<tt>+</tt>”)
+    for corners, small latin letter “<tt>o</tt>” for the colon
+    between hours and minutes, and spaces (“ ”).</p>
+<p>The area for each digit is exactly 5 characters wide and
+    there are two empty columns (spaces) between neighboring digit
+    areas or between a digit area and the colon. Exact digit shapes
+    and placements can be seen in Sample Output.</p>
+<p>Always print two empty lines after each time displayed.
+    Also, print the word “<tt>end</tt>” on a line of its own at the
+    end of the output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>16:47
+23:59
+00:08
+end
+</pre>
+</td>
+<td>
+<pre>    +  +---+     +   +  +---+
+    |  |         |   |      |
+    |  |      o  |   |      |
+    +  +---+     +---+      +
+    |  |   |  o      |      |
+    |  |   |         |      |
+    +  +---+         +      +
+
+
++---+  +---+     +---+  +---+
+    |      |     |      |   |
+    |      |  o  |      |   |
++---+  +---+     +---+  +---+
+|          |  o      |      |
+|          |         |      |
++---+  +---+     +---+  +---+
+
+
++---+  +---+     +---+  +---+
+|   |  |   |     |   |  |   |
+|   |  |   |  o  |   |  |   |
++   +  +   +     +   +  +---+
+|   |  |   |  o  |   |  |   |
+|   |  |   |     |   |  |   |
++---+  +---+     +---+  +---+
+
+
+end
+</pre>
+</td>
+</tr>
+</table>
+</div>

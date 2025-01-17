@@ -1,0 +1,155 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/backspace/file/statement/en/img-0001.png" class="illustration" src="/problems/backspace/file/statement/en/img-0001.png"/>
+<div class="description">
+        Bjarki having problems
+      </div>
+</div>
+<p>Right before Forritunarkeppni Framhaldsskólanna started,
+    Bjarki decided to update his computer. He didn’t notice
+    anything off until he started writing code in his favourite
+    editor Bim (Bjarki IMproved). Usually when he uses this editor
+    and presses <em>backspace</em> one letter to the left of the
+    cursor is erased. But after the update it instead writes the
+    letter <b class="bfseries"><tt class="ttfamily">&lt;</tt></b>.
+    He has tried all of his editors, Bmacs, Neobim, bjedit,
+    NoteBjad++, Subjark Text, but they all seem to have this same
+    issue. He doesn’t have the time to scour the internet to find a
+    solution to this problem, so he decides to take matters into
+    his own hands and just solve this.</p>
+<p>Help Bjarki write a program that takes as input a string he
+    wrote and prints the string as he intended to write it.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains a string
+    <span class="tex2jax_process">$S$</span> of length <span class="tex2jax_process">$N$</span> containing only lower case English
+    letters and the symbol <tt class="ttfamily">&lt;</tt>.</p>
+<h2>Output</h2>
+<p>Print the string as Bjarki intended to write it. That is to
+    say, if the string is printed letter by letter, <tt class="ttfamily">&lt;</tt> denotes the removal of the last printed
+    letter as if it were a <em>backspace</em>.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample Bjarki starts by writing a <tt class="ttfamily">a</tt> which he then erases, then writes <tt class="ttfamily">b</tt> and <tt class="ttfamily">c</tt> but then
+    erases the <tt class="ttfamily">c</tt>. The output is thus
+    <tt class="ttfamily">b</tt>. In the next sample Bjarki writes
+    <tt class="ttfamily">foss</tt> but then erases the last two
+    letters with <tt class="ttfamily">&lt;</tt><tt class="ttfamily">&lt;</tt>, the output at this point is thus
+    <tt class="ttfamily">fo</tt>. He then adds to this <tt class="ttfamily">rritun</tt> and the output is thus <tt class="ttfamily">forritun</tt>. In the last sample he writes
+    <tt class="ttfamily">a</tt> and erases it immediately
+    afterwards twice. Then finally he writes <tt class="ttfamily">aa</tt> and ereases it with <tt class="ttfamily">&lt;</tt><tt class="ttfamily">&lt;</tt>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          100$</span>, The string <span class="tex2jax_process">$S$</span> only contains the letter
+          <tt class="ttfamily">a</tt> and the symbol <tt class="ttfamily">&lt;</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          100$</span>, The string <span class="tex2jax_process">$S$</span> does not contain two
+          consecutive <tt class="ttfamily">&lt;</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          10^6$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>a&lt;bc&lt;
+</pre>
+</td>
+<td>
+<pre>b
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>foss&lt;&lt;rritun
+</pre>
+</td>
+<td>
+<pre>forritun
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>a&lt;a&lt;a&lt;aa&lt;&lt;
+</pre>
+</td>
+<td>
+<pre>
+</pre>
+</td>
+</tr>
+</table>
+</div>

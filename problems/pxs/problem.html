@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>Let <span class="tex2jax_process">$n$</span> be any positive
+    integer. A <em>factor</em> of <span class="tex2jax_process">$n$</span> is any number that divides evenly
+    into <span class="tex2jax_process">$n$</span>, without leaving
+    a remainder. For example, <span class="tex2jax_process">$13$</span> is a factor of <span class="tex2jax_process">$52$</span>, since <span class="tex2jax_process">$52/13 = 4$</span>. A <em>subsequence</em> of
+    <span class="tex2jax_process">$n$</span> is a number without a
+    leading zero that can be obtained from <span class="tex2jax_process">$n$</span> by discarding one or more of its
+    digits. For example, <span class="tex2jax_process">$2$</span>,
+    <span class="tex2jax_process">$13$</span>, <span class="tex2jax_process">$801$</span>, <span class="tex2jax_process">$882$</span>, and <span class="tex2jax_process">$1324$</span> are all subsequences of
+    <span class="tex2jax_process">$8013824$</span>, but
+    <span class="tex2jax_process">$214$</span> is not (you can’t
+    rearrange digits), <span class="tex2jax_process">$8334$</span>
+    is not (you can’t have more occurrences of a digit than appear
+    in the original number), <span class="tex2jax_process">$8013824$</span> is not (you must discard at
+    least one digit), and <span class="tex2jax_process">$01$</span>
+    is not (you can’t have a leading zero). A <em>subfactor</em> of
+    <span class="tex2jax_process">$n$</span> is an integer greater
+    than <span class="tex2jax_process">$1$</span> that is both a
+    factor and a subsequence of <span class="tex2jax_process">$n$</span>. <span class="tex2jax_process">$8013824$</span> has subfactors <span class="tex2jax_process">$8$</span>, <span class="tex2jax_process">$13$</span>, and <span class="tex2jax_process">$14$</span>. Some numbers do not have a
+    subfactor; for example, <span class="tex2jax_process">$6341$</span> is not divisible by
+    <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$63$</span>, <span class="tex2jax_process">$64$</span>, <span class="tex2jax_process">$61$</span>, <span class="tex2jax_process">$34$</span>, <span class="tex2jax_process">$31$</span>, <span class="tex2jax_process">$41$</span>, <span class="tex2jax_process">$634$</span>, <span class="tex2jax_process">$631$</span>, <span class="tex2jax_process">$641$</span>, or <span class="tex2jax_process">$341$</span>.</p>
+<p>An x-subfactor series of <span class="tex2jax_process">$n$</span> is a decreasing series of integers
+    <span class="tex2jax_process">$n_1, \ldots , n_ k$</span>, in
+    which (1) <span class="tex2jax_process">$n = n_1$</span>, (2)
+    <span class="tex2jax_process">$k \ge 1$</span>, (3) for all
+    <span class="tex2jax_process">$1 \le i &lt; k$</span>,
+    <span class="tex2jax_process">$n_{i+1}$</span> is obtained from
+    <span class="tex2jax_process">$n_ i$</span> by first discarding
+    the digits of a subfactor of <span class="tex2jax_process">$n_
+    i$</span>, and then discarding leading zeros, if any, and (4)
+    <span class="tex2jax_process">$n_ k$</span> has no subfactor.
+    The term “x-subfactor” is meant to suggest that a subfactor
+    gets x’ed, or discarded, as you go from one number to the next.
+    For example, <span class="tex2jax_process">$2004$</span> has
+    two distinct x-subfactor series, the second of which can be
+    obtained in two distinct ways. The highlighted digits show the
+    subfactor that was removed to produce the next number in the
+    series.</p>
+<p><b class="bfseries"><u><u>2</u></u></b>004 4<br/>
+    200<b class="bfseries"><u><u>4</u></u></b> <b class="bfseries"><u><u>20</u></u></b>0 0<br/>
+    200<b class="bfseries"><u><u>4</u></u></b> <b class="bfseries"><u><u>2</u></u></b>00 0<br/></p>
+<p>The <em>primary</em> x-subfactor series has maximal length
+    (the largest <span class="tex2jax_process">$k$</span> possible,
+    using the notation above). If there are two or more
+    maximal-length series, then the one with the smallest second
+    number is primary; if all maximal-length series have the same
+    first and second numbers, then the one with the smallest third
+    number is primary; and so on. Every positive integer has a
+    unique primary x-subfactor series, although it may be possible
+    to obtain it in more than one way, as is the case with
+    <span class="tex2jax_process">$2004$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of at most <span class="tex2jax_process">$25$</span> positive integers, each less than
+    one billion, without leading zeroes, and on a line by itself.
+    Following is a line containing only “0” that signals the end of
+    the input.</p>
+<h2>Output</h2>
+<p>For each positive integer, output its primary x-subfactor
+    series using the exact format shown in the examples below.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>123456789
+7
+2004
+6341
+8013824
+0
+</pre>
+</td>
+<td>
+<pre>123456789 12345678 1245678 124568 12456 1245 124 12 1
+7
+2004 200 0
+6341
+8013824 13824 1324 132 12 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

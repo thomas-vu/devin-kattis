@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>This year, there have been unusually many UFO sightings
+    reported. Nobody knows if they are caused by optical illusions,
+    weather phenomena, or secret technology being tested by foreign
+    powers (terrestrial or not). UFO enthusiasts across the world
+    rejoice, and speculations run wild. But someone who is not
+    impressed is the farmer Celeste. Her large grain field has
+    repeatedly been used as a landing site by the UFOs, destroying
+    her crops. Celeste would like to bring whoever is responsible
+    to justice, but before she can do so she must assess the damage
+    caused by the unidentified flying offenders.</p>
+<p>In total <span class="tex2jax_process">$n$</span> circular
+    UFOs have landed in Celeste’s field. The <span class="tex2jax_process">$i$</span>th one left a crop circle which
+    destroyed all crops within radius <span class="tex2jax_process">$r_ i$</span> of the point <span class="tex2jax_process">$x_ i, y_ i$</span>. The field is very large,
+    so you can assume that it extends infinitely in all directions.
+    Your task is to estimate the total area of crops destroyed by
+    the UFOs. Celeste only needs a rough estimate of the true
+    answer, and your answer will be counted as correct if its
+    relative error is less than <span class="tex2jax_process">$10\%
+    $</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10$</span>), the number of UFOs. Then follow
+    <span class="tex2jax_process">$n$</span> lines, the
+    <span class="tex2jax_process">$i$</span>th of which contains
+    the three integers <span class="tex2jax_process">$x_ i$</span>,
+    <span class="tex2jax_process">$y_ i$</span>, and <span class="tex2jax_process">$r_ i$</span> (<span class="tex2jax_process">$0 \leq x_ i, y_ i \leq 10$</span>,
+    <span class="tex2jax_process">$1 \leq r_ i \leq 10$</span>),
+    describing the crop circle left by the <span class="tex2jax_process">$i$</span>th UFO.</p>
+<h2>Output</h2>
+<p>Output the total area covered by the crop circles in the
+    input, with a relative error of at most <span class="tex2jax_process">$1/10$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+0 0 1
+</pre>
+</td>
+<td>
+<pre>3.1415926535
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0 0 2
+1 0 1
+2 2 2
+10 10 1
+</pre>
+</td>
+<td>
+<pre>25.991148
+</pre>
+</td>
+</tr>
+</table>
+</div>

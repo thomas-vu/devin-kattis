@@ -1,0 +1,175 @@
+<div class="problembody">
+<p>Charlotte is watching Vasaloppet on TV. The broadcast starts
+    at second <span class="tex2jax_process">$0$</span> and ends at
+    second <span class="tex2jax_process">$T$</span>. Unfortunately,
+    there are also <span class="tex2jax_process">$N$</span> ad
+    breaks, lasting during <span class="tex2jax_process">$N$</span>
+    non-overlapping intervals of seconds between second
+    <span class="tex2jax_process">$0$</span> and second
+    <span class="tex2jax_process">$T$</span>. Charlotte becomes
+    very inspired by seeing the competitors at the starting line
+    and wants to go skiing herself during the race. The skiing trip
+    takes <span class="tex2jax_process">$S$</span> seconds, and she
+    must be back by second <span class="tex2jax_process">$T$</span>
+    (to see who wins).</p>
+<p>Charlotte wants to go on her skiing trip at a time when she
+    misses as little of Vasaloppet as possible. Your task is to
+    calculate the minimum number of seconds of Vasaloppet that
+    Charlotte can miss if she optimally chooses when to go on her
+    skiing trip. Missed seconds are the seconds when Charlotte is
+    out on her skiing trip while there is no ad break running.</p>
+<center>
+<div class="figure" id="fig:enter-label">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{sample1.PNG}" src="/problems/vasaloppet/file/statement/en/img-0001.PNG" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The picture describes the first sample
+            case. The red rectangles are the ad breaks. If
+            Charlotte starts her skiing trip when the first ad
+            break starts and gets back home when the second break
+            ends, she only misses <span class="tex2jax_process">$2$</span> seconds of Vasaloppet.
+          </div>
+</center>
+</div>
+</center>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$N, T,$</span> and <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$0
+    \leq N \leq 10^5$</span>, <span class="tex2jax_process">$1 \leq
+    S \leq T \leq 10^9$</span>). <span class="tex2jax_process">$N$</span> is the number of ad breaks,
+    <span class="tex2jax_process">$T$</span> is the duration of the
+    broadcast in seconds, and <span class="tex2jax_process">$S$</span> is the length of the skiing trip
+    in seconds.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    each contain two integers <span class="tex2jax_process">$l_ i,
+    r_ i$</span> (<span class="tex2jax_process">$0 \leq l_ i &lt;
+    r_ i \leq T$</span>), indicating that the <span class="tex2jax_process">$i$</span>-th commercial break lasts from
+    second <span class="tex2jax_process">$l_ i$</span> to second
+    <span class="tex2jax_process">$r_ i$</span>.<br/>
+    The commercial breaks are given in the order they occur, and
+    all breaks are disjoint and sorted, which means that
+    <span class="tex2jax_process">$r_ i &lt; l_{i+1}$</span> for
+    <span class="tex2jax_process">$i &lt; N$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer, the minimum number of seconds that
+    Charlotte can miss of Vasaloppet during her skiing trip if it
+    is chosen optimally. Note that the skiing trip can end exactly
+    at second <span class="tex2jax_process">$T$</span>. For
+    example, the skiing trip can cover the entire duration of
+    Vasaloppet if <span class="tex2jax_process">$S=3$</span> and
+    <span class="tex2jax_process">$T=3$</span>.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N=1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$T \leq 10^6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 10 5
+1 2
+4 6
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 10 7
+0 2
+3 4
+5 6
+9 10
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0 1000000000 1000000000
+</pre>
+</td>
+<td>
+<pre>1000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

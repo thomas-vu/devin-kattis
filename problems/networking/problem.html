@@ -1,0 +1,136 @@
+<div class="problembody">
+<p>Gustaf will graduate next year and needs to choose his final
+    courses to study before starting his thesis project. Each
+    course provides a certain number of credits, but as a true
+    academic weapon, he already has more than enough credits to
+    graduate. His real goal is to study as much as possible, but
+    the university has blocked him from studying more than
+    <span class="tex2jax_process">$K$</span> credits because it is
+    becoming too expensive.</p>
+<p>Gustaf now needs your help to figure out which courses to
+    take to maximize the amount of credits without breaking the
+    university’s limit. "Easy!", you say, "I learned this in
+    algodat!". But Gustaf has an additional requirement. Each
+    course has a lecturer, and he does not want to take two courses
+    given by the same lecturer (each new lecturer he meets is a new
+    potential connection on LinkedIn!).</p>
+<p>Of course, he could have done it himself, with all the
+    courses he has taken he is more than capable, but he is waiting
+    for an important email and is afraid that he will miss it if he
+    looks away.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, the number of courses
+    <span class="tex2jax_process">$1 \le N \le 10^3$</span>, and
+    the maximum amount of credits he can take <span class="tex2jax_process">$1 \le K \le 10^4$</span>. Each of the next
+    <span class="tex2jax_process">$N$</span> lines describe a
+    course by giving its credits <span class="tex2jax_process">$1
+    \le d \le K$</span>, followed by a string <span class="tex2jax_process">$s$</span>, the name of the lecturer. The
+    strings only contain lowercase characters between ’a’ and ’z’,
+    and are between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$10$</span> characters in
+    length.</p>
+<h2>Output</h2>
+<p>Output the maximum amount of credits <span class="tex2jax_process">$\le K$</span> that Gustaf can take without
+    taking two courses with the same lecturer.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are at most two different lecturers</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>15</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$N \le 14$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>20</p>
+</td>
+<td style="text-align:left">
+<p>No two courses have the same lecturer</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>4</p>
+</td>
+<td style="text-align:left">
+<p>60</p>
+</td>
+<td style="text-align:left">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+1 tyko
+2 maj
+5 tyko
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 100
+79 per
+43 viktor
+94 anna
+91 carl
+25 per
+31 anna
+70 anna
+12 viktor
+</pre>
+</td>
+<td>
+<pre>99
+</pre>
+</td>
+</tr>
+</table>
+</div>

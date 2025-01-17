@@ -1,0 +1,51 @@
+<div class="problembody">
+<p>Many gas stations use plastic digits on an illuminated sign
+    to indicate prices. When there is an insufficient quantity of a
+    particular digit, the attendant may substitute another one
+    upside down.</p>
+<p>The digit “6” looks much like “9” upside down. The digits
+    “0”, “1” and “8” look like themselves. The digit “2” looks a
+    bit like a “5” upside down (well, at least enough so that gas
+    stations use it).</p>
+<p>Due to rapidly increasing prices, a certain gas station has
+    used all of its available digits to display the current price.
+    Fortunately, this shortage of digits need not prevent the
+    attendant from raising prices. She can simply rearrange the
+    digits, possibly reversing some of them as described above.</p>
+<p>Your job is to compute, given the current price of gas, the
+    next highest price that can be displayed using exactly the same
+    digits.</p>
+<h2>Input</h2>
+<p>The input consists of several lines, each containing between
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$30$</span> digits (to account for future
+    prices) and a decimal point immediately before the last digit.
+    There are no useless leading zeroes; that is, there is a
+    leading zero only if the price is less than <span class="tex2jax_process">$1$</span>. An input line containing a
+    decimal point alone terminates the input. There are at most
+    <span class="tex2jax_process">$250$</span> test cases.</p>
+<h2>Output</h2>
+<p>For each number in the input, output the next highest price
+    that can be displayed using the same digits and the same format
+    rules. If the price cannot be raised, print “<tt class="ttfamily">The price cannot be raised</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>65.2
+76.7
+77.7
+.
+</pre>
+</td>
+<td>
+<pre>65.5
+77.6
+The price cannot be raised
+</pre>
+</td>
+</tr>
+</table>
+</div>

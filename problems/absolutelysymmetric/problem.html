@@ -1,0 +1,114 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Mathematician is a very curious cat. Currently,
+      SoCCat is learning linear algebra!
+    </blockquote>
+<p>SoCCat deemed a matrix <span class="tex2jax_process">$T$</span> of size <span class="tex2jax_process">$n \times n$</span> consisting of integers to
+    be <i class="itshape">absolutely symmetric</i> if and only if
+    <span class="tex2jax_process">$|T_{i,j}| = |T_{j,i}|$</span>
+    for all <span class="tex2jax_process">$1 \leq i, j \leq
+    n$</span>. In other words, the absolute value of the entry in
+    the <span class="tex2jax_process">$i$</span>-th row and
+    <span class="tex2jax_process">$j$</span>-th column is equal to
+    the absolute value of the entry in the <span class="tex2jax_process">$j$</span>-th row and <span class="tex2jax_process">$i$</span>-th column.</p>
+<p>Now, SoCCat has a matrix <span class="tex2jax_process">$A$</span> of size <span class="tex2jax_process">$n \times n$</span> consisting of integers.
+    SoCCat wants to decompose this matrix <span class="tex2jax_process">$A$</span> into a sum of matrices
+    <span class="tex2jax_process">$X_1 + X_2 + X_3 + \ldots + X_
+    k$</span>, where all matrices <span class="tex2jax_process">$X_
+    i$</span> consist of integers and are <i class="itshape">absolutely symmetric</i>.</p>
+<p>Additionally, SoCCat wants to minimize the number
+    <span class="tex2jax_process">$k$</span> of matrices
+    <span class="tex2jax_process">$X_ i$</span> in the
+    decomposition. If there are multiple possible decompositions,
+    SoCCat will be satisfied by any of them. Of course, SoCCat will
+    also want to find out if no such decomposition exists.</p>
+<p>Unfortunately, SoCCat is stumped by this problem. Can you
+    help SoCCat?</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$n$</span> denoting the size of the matrix
+    <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$1 \leq n \leq 50$</span>). The next
+    <span class="tex2jax_process">$n$</span> lines each contain
+    <span class="tex2jax_process">$n$</span> integers. The
+    <span class="tex2jax_process">$j$</span>-th integer in the
+    <span class="tex2jax_process">$i$</span>-th line denotes the
+    value of <span class="tex2jax_process">$A_{i,j}$</span>; that
+    is, the entry in the <span class="tex2jax_process">$i$</span>-th row and <span class="tex2jax_process">$j$</span>-th column of the matrix
+    <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$-10^9 \leq A_{i,j} \leq 10^9$</span>).</p>
+<h2>Output</h2>
+<p>If no decomposition exists, print a single integer
+    <span class="tex2jax_process">$-1$</span>.</p>
+<p>Otherwise, the first line of output should contain one
+    integer <span class="tex2jax_process">$k$</span>, the minimum
+    number of matrices <span class="tex2jax_process">$X_ i$</span>
+    in the decomposition.</p>
+<p>Then, if <span class="tex2jax_process">$k \leq 50$</span>,
+    you should additionally output the <span class="tex2jax_process">$k$</span> matrices <span class="tex2jax_process">$X_1, X_2, \dots , X_ k$</span>. For each
+    matrix, you should output <span class="tex2jax_process">$n$</span> lines, each containing
+    <span class="tex2jax_process">$n$</span> integers, denoting the
+    entries of the matrix. The value of each entry should be an
+    integer between <span class="tex2jax_process">$-10^{18}$</span>
+    and <span class="tex2jax_process">$10^{18}$</span>,
+    inclusive.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 0 0
+0 0 0
+0 0 0
+</pre>
+</td>
+<td>
+<pre>1
+0 0 0
+0 0 0
+0 0 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 1
+0 0
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 3
+5 7
+</pre>
+</td>
+<td>
+<pre>2
+1 -1
+1 -1
+0 4
+4 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

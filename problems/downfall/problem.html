@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>There is a heavy rainfall over the Antique Cultural Museum,
+    and the roof has sprung a leak! All the beautiful paintings
+    risk destruction, if it weren’t for one brave night watchman
+    standing in the water’s way – Klunkas Plaskocek.</p>
+<p>To protect all of the paintings, Klunkas has brought
+    <span class="tex2jax_process">$N$</span> buckets and placed
+    them in a long row to catch the water falling from the ceiling.
+    Each bucket can hold exactly <span class="tex2jax_process">$K$</span> drops of water. If a drop falls
+    into a bucket which is full, the water drop will overflow to
+    the bucket standing to the left. If that bucket is full as
+    well, the drop will keep flowing left until there is a non-full
+    bucket.</p>
+<p>Klunkas needs your help to prevent the leftmost bucket
+    overflowing. After every drop of water falls, Klunkas wants to
+    know which bucket it ended up in, so that he can keep track of
+    the water levels of the buckets.</p>
+<p>Due to the very regular nature of rain, Klunkas figured that
+    the <span class="tex2jax_process">$R$</span> rain drops fall in
+    a very nice pattern. Given constants <span class="tex2jax_process">$X_0, A, B$</span>, we define the sequence
+    <span class="tex2jax_process">$X_ i$</span> as</p><span class="tex2jax_process">\[ X_ i = (A \cdot X_{i-1} + B) \mod N
+    \]</span>
+<p>The bucket which the <span class="tex2jax_process">$i$</span>-th rain drop falls into, is then
+    <span class="tex2jax_process">$X_ i$</span> for <span class="tex2jax_process">$i = 1, \dots , R$</span>. The leftmost
+    bucket has the number <span class="tex2jax_process">$0$</span>,
+    and the rightmost bucket has the number <span class="tex2jax_process">$N-1$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of the space-separated integers <span class="tex2jax_process">$1 \le N \le 10^6$</span>, <span class="tex2jax_process">$1 \le R \le 10^7$</span>, <span class="tex2jax_process">$1 \le K \le 10$</span>, <span class="tex2jax_process">$0 \le X_0, A, B \le 2^{31} - 1$</span>.</p>
+<h2>Output</h2>
+<p>If the leftmost bucket overflows, output “<tt class="ttfamily">OVERFLOW</tt>”.</p>
+<p>Otherwise, the output should be calculated as follows:</p>
+<p>Let <span class="tex2jax_process">$O_ i$</span> be the
+    bucket which the <span class="tex2jax_process">$i$</span>:th
+    rain drop ended up in, and let <span class="tex2jax_process">$a
+    = 0$</span>.</p>
+<p>Then, for every <span class="tex2jax_process">$i$</span>
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$R$</span>, set <span class="tex2jax_process">$a := (53 \cdot a + O_ i) \mod
+    199933$</span>.</p>
+<p>The output should then be a line with the integer
+    <span class="tex2jax_process">$a$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 6 1 2 1 8
+</pre>
+</td>
+<td>
+<pre>
+OVERFLOW
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 6 1 4 1 8
+</pre>
+</td>
+<td>
+<pre>
+79732
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 20 2 8 7 3
+</pre>
+</td>
+<td>
+<pre>
+31786
+</pre>
+</td>
+</tr>
+</table>
+</div>

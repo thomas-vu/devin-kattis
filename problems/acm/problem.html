@@ -1,0 +1,139 @@
+<div class="problembody">
+<p>Our new contest submission system keeps a chronological log
+    of all submissions made by each team during the contest. With
+    each entry, it records the number of minutes into the
+    competition at which the submission was received, the letter
+    that identifies the relevant contest problem, and the result of
+    testing the submission (designated for the sake of this problem
+    simply as <tt class="tt">right</tt> or <tt class="tt">wrong</tt>). As an example, the following is a
+    hypothetical log for a particular team:</p>
+<pre>
+3 E right
+10 A wrong
+30 C wrong
+50 B wrong
+100 A wrong
+200 A right
+250 C wrong
+300 D right
+</pre>
+<p>The rank of a team relative to others is determined by a
+    primary and secondary scoring measure calculated from the
+    submission data. The primary measure is the number of problems
+    that were solved. The secondary measure is based on a
+    combination of time and penalties. Specifically, a team’s time
+    score is equal to the sum of those submission times that
+    resulted in <tt class="tt">right</tt> answers, plus a 20-minute
+    penalty for each wrong submission of a problem that is
+    ultimately solved. If no problems are solved, the time measure
+    is <span class="tex2jax_process">$0$</span>.</p>
+<p>In the above example, we see that this team successfully
+    completed three problems: <tt class="tt">E</tt> on their first
+    attempt (<span class="tex2jax_process">$3$</span> minutes
+    into the contest); <tt class="tt">A</tt> on their third attempt
+    at that problem (<span class="tex2jax_process">$200$</span> minutes into the contest);
+    and <tt class="tt">D</tt> on their first attempt at that
+    problem (<span class="tex2jax_process">$300$</span> minutes into the contest).
+    This team’s time score (including penalties) is <span class="tex2jax_process">$543$</span>. This is computed to include
+    <span class="tex2jax_process">$3$</span> minutes for
+    solving <tt class="tt">E</tt>, <span class="tex2jax_process">$200$</span> minutes for solving
+    <tt class="tt">A</tt> with an additional <span class="tex2jax_process">$40$</span> penalty minutes for two
+    earlier mistakes on that problem, and finally <span class="tex2jax_process">$300$</span> minutes for solving
+    <tt class="tt">D</tt>. Note that the team also attempted
+    problems <tt class="tt">B</tt> and <tt class="tt">C</tt>, but
+    were never successful in solving those problems, and thus
+    received no penalties for those attempts.</p>
+<p>According to contest rules, after a team solves a particular
+    problem, any further submissions of the same problem are
+    ignored (and thus omitted from the log). Because times are
+    discretized to whole minutes, there may be more than one
+    submission showing the same number of minutes. In particular
+    there could be more than one submission of the same problem in
+    the same minute, but they are chronological, so only the last
+    entry could possibly be correct. As a second example, consider
+    the following submission log:</p>
+<pre>
+7 H right
+15 B wrong
+30 E wrong
+35 E right
+80 B wrong
+80 B right
+100 D wrong
+100 C wrong
+300 C right
+300 D wrong
+</pre>
+<p>This team solved 4 problems, and their total time score
+    (including penalties) is <span class="tex2jax_process">$502$</span>, with <span class="tex2jax_process">$7$</span> minutes for <tt class="tt">H</tt>, <span class="tex2jax_process">$35+20$</span> for
+    <tt class="tt">E</tt>, <span class="tex2jax_process">$80+40$</span> for <tt class="tt">B</tt>, and
+    <span class="tex2jax_process">$300+20$</span> for <tt class="tt">C</tt>.</p>
+<h2>Input</h2>
+<p>The input contains <span class="tex2jax_process">$n$</span>
+    lines for <span class="tex2jax_process">$0 \leq n \leq
+    100$</span>, with each line describing a particular log entry.
+    A log entry has three parts: an integer <span class="tex2jax_process">$m$</span>, with <span class="tex2jax_process">$1 \leq m \leq 300$</span>, designating the
+    number of minutes at which a submission was received, an
+    uppercase letter designating the problem, and either the word
+    <tt class="tt">right</tt> or <tt class="tt">wrong</tt>. The
+    integers will be in nondecreasing order and may contain
+    repeats. After all the log entries is a line containing just
+    the number <span class="tex2jax_process">$-1$</span>.</p>
+<h2>Output</h2>
+<p>Output two integers on a single line: the number of problems
+    solved and the total time measure (including penalties).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 E right
+10 A wrong
+30 C wrong
+50 B wrong
+100 A wrong
+200 A right
+250 C wrong
+300 D right
+-1
+</pre>
+</td>
+<td>
+<pre>
+3 543
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 H right
+15 B wrong
+30 E wrong
+35 E right
+80 B wrong
+80 B right
+100 D wrong
+100 C wrong
+300 C right
+300 D wrong
+-1
+</pre>
+</td>
+<td>
+<pre>
+4 502
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>It’s a grid system! You begin at the top left corner and
+    want to walk to the bottom right corner. Every location is at
+    integer coordinates, and has an arrow pointing down or right
+    and a timer that, every few seconds, flips the arrow from down
+    to right, or from right to down. When you begin your walk,
+    every arrow is pointing down or right with equal probability,
+    and every timer has a real value chosen uniformly in the range
+    from zero to its maximum wait time.</p>
+<p>At any moment in time, if you are at a given location, you
+    can:</p>
+<ul class="itemize">
+<li>
+<p>Move down one location if the new location is on the
+        grid and the arrow is pointing down.</p>
+</li>
+<li>
+<p>Move right one location if the new location is on the
+        grid and the arrow is pointing right.</p>
+</li>
+<li>
+<p>Wait for the timer to finish its countdown so that the
+        arrow flips from down to right, or from right to down.</p>
+</li>
+</ul>
+<p>When you arrive at a new location, you are able to see the
+    timer and can therefore take that into account when deciding
+    which action to take. However, you are not able to look
+    ahead—you can only see the timer and arrow for the exact grid
+    point you occupy. You hate waiting, and want to minimize the
+    total amount of time you’re waiting for an arrow to flip.</p>
+<p>What is the expected amount of time you have to wait if you
+    make decisions optimally?</p>
+<h2>Input</h2>
+<p>The single line of input contains three integers
+    <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \leq r, c \leq 10^3$</span>), and <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \leq p \leq 10^9$</span>), where <span class="tex2jax_process">$r$</span> is the number of rows in the grid,
+    <span class="tex2jax_process">$c$</span> is the number of
+    columns in the grid, and <span class="tex2jax_process">$p$</span> is the maximum value a timer can
+    show.</p>
+<h2>Output</h2>
+<p>Output a single number, which is the expected time you have
+    to wait if you make optimal decisions. Your answer will be
+    accepted if the absolute or relative error is within
+    <span class="tex2jax_process">$10^{-6}$</span> of the judge’s
+    answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3 8
+</pre>
+</td>
+<td>
+<pre>2.875
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 5
+</pre>
+</td>
+<td>
+<pre>2.43223387
+</pre>
+</td>
+</tr>
+</table>
+</div>

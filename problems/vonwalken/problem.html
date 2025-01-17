@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/vonwalken/file/statement/en/img-0001.jpg" class="illustration" src="/problems/vonwalken/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://en.wikipedia.org/wiki/File:Christopher_Walken_-_1984.jpg">
+        Lascher</a>
+</div>
+</div>
+<p>The old Count von Walken ponders along the fence of his
+    backyard. The fence has a repeating pattern with poles in the
+    ground at equal distances. Since von Walken has nothing better
+    to do, he counts the number of steps he takes between each
+    pole.</p>
+<p>The distance between two consecutive poles turns out not to
+    be an integer multiple of the length of his steps because
+    sometimes he takes two steps between the poles, and sometimes
+    he takes three steps.</p>
+<div class="figure" id="a0000002198">
+<center>
+<img alt="\includegraphics[width=1\textwidth ]{figure}" src="/problems/vonwalken/file/statement/en/img-0002.png" style="width:100.00%"/>
+<div class="caption">
+<b>Figure 1</b>: A picture of sample case 2
+        </div>
+</center>
+</div>
+<p>Von Walken knows that his steps are always 1 meter long, so
+    he starts thinking of what the distance between the poles may
+    be. <em>“It must be more than 2 meters, since I occasionally
+    can fit 3 steps between the poles, but it must be less than 3
+    meters, since I sometimes only fit 2 steps in
+    between.”</em></p>
+<h2>Task</h2>
+<p>Given a list of step counts and a distance <span class="tex2jax_process">$D$</span>, determine whether it is possible
+    that the distance between two poles is <span class="tex2jax_process">$D$</span> meters. The poles can be
+    considered to have width <span class="tex2jax_process">$0$</span>, and each step is strictly between
+    two poles.</p>
+<p>To avoid problems with floating point numbers, the result is
+    guaranteed to be the same even if any pole is moved up to
+    <span class="tex2jax_process">$10^{-7}$</span> meters.</p>
+<h2>Input</h2>
+<p>The input consists of a line containing the real number
+    <span class="tex2jax_process">$D$</span> and an integer
+    <span class="tex2jax_process">$N$</span>, followed by a line
+    with the space-separated list of integer step counts,
+    <span class="tex2jax_process">$c_1, c_2, \ldots , c_ N$</span>.
+    It holds that <span class="tex2jax_process">$2 \leq c_ i, D
+    \leq 3$</span> and that <span class="tex2jax_process">$0 \leq N
+    \leq 10\, 000$</span>.</p>
+<h2>Output</h2>
+<p>The program should print “<tt>possible</tt>” if <span class="tex2jax_process">$D$</span> meters is a possible distance
+    between the poles, and “<tt>impossible</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2.505 4
+2 2 3 2
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2.1 4
+2 2 3 2
+</pre>
+</td>
+<td>
+<pre>
+possible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>In this economy, we all know how hard it is to get a job.
+    Mirko, a recent college graduate, however, got lucky – he is
+    now employed as a runeologist by the Language Institute of
+    Croatia. His friend Slavko believes runeology isn’t a science
+    and is hence angry at Mirko for believing the opposite. One
+    foggy Christmas day, Mirko’s laptop broke. Since he isn’t great
+    with computers, he gave it to Slavko to repair it. Slavko,
+    feeling a little naughty, decided to mess up a particular file
+    Mirko was working on.</p>
+<p>This file contains a <b class="bfseries">matrix</b> of
+    <span class="tex2jax_process">$R$</span> rows and <span class="tex2jax_process">$C$</span> columns. Each element of the
+    matrix is a single letter. <b class="bfseries">No two columns
+    of the matrix are equal.</b> To have some fun with
+    pseudo-scientist Mirko, Slavko decided he will <b class="bfseries">delete as many rows as possible</b> from the top of
+    the table, without breaking the no-equal-column rule.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$2
+    \le R, C \le 1\, 000$</span>), the number of rows and the
+    number of columns, respectively.</p>
+<p>In each of the next <span class="tex2jax_process">$R$</span>
+    lines there are <span class="tex2jax_process">$C$</span> small
+    letters of the English alphabet. These <span class="tex2jax_process">$R \times C$</span> letters represent Mirko’s
+    table (which does not have two equal columns).</p>
+<h2>Output</h2>
+<p>Output a single integer, the maximum number of rows which
+    can be deleted from the top of the table so that no two columns
+    are equal.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 6
+dobarz
+adatak
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4
+alfa
+beta
+zeta
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 6
+mrvica
+mrvica
+marica
+mateja
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

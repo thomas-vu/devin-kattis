@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/flowshop/file/statement/en/img-0001.jpg" class="illustration" src="/problems/flowshop/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/discover-central-california/">
+        Photo</a> by ken figlioli cc by-sa 2.0
+      </div>
+</div>Sean’s Swathers makes custom swathers (equipment used to
+    harvest grain). All swathers go through the same basic stages
+    in their construction: for example they all need to have a
+    cutting bar, a grain belt, and a reel fitted. However, these
+    components can be customized based on the buyer’s needs, so
+    these various stages may take different amounts of time between
+    different swathers.
+
+    <p><span class="tex2jax_process">$N$</span> swathers have been
+    ordered and there are <span class="tex2jax_process">$M$</span>
+    stages in the manufacturing process. The swathers will each go
+    through the same sequence of stages.</p>
+<p>In particular, the processing occurs as follows: For each
+    swather <span class="tex2jax_process">$i$</span> and each stage
+    <span class="tex2jax_process">$j$</span>, it takes <span class="tex2jax_process">$P_{i,j}$</span> units of time to complete
+    stage <span class="tex2jax_process">$j$</span> for swather
+    <span class="tex2jax_process">$i$</span>. The workers at each
+    stage may only work on one swather at a time. At the start of
+    the day all swather orders are ready to be processed by the
+    first stage. At any point in the process, if the workers at
+    stage <span class="tex2jax_process">$j$</span> are idle and
+    there are swathers waiting to be processed at this stage then
+    the workers will pick the swather that has the lowest label
+    (they are labelled from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>). Note that the work on a stage
+    <span class="tex2jax_process">$j$</span> can only be started
+    after the work on the stage <span class="tex2jax_process">$j-1$</span> is completed.</p>
+<p>Determine the time each swather is completed.</p>
+<h2>Input</h2>
+<p>There is only one test case in each file. It begins with a
+    single line containing <span class="tex2jax_process">$N$</span>
+    and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \leq N,M \leq 1000$</span>), the number of
+    swathers and stages (respectively). Following this are
+    <span class="tex2jax_process">$N$</span> lines, each with
+    <span class="tex2jax_process">$M$</span> integers. The
+    <span class="tex2jax_process">$j$</span>’th integer of the
+    <span class="tex2jax_process">$i$</span>’th line is
+    <span class="tex2jax_process">$P_{i,j}$</span>, giving the
+    amount of time it will take for the workers at stage
+    <span class="tex2jax_process">$j$</span> to complete swather
+    <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$1 \leq P_{i,j} \leq 10^6$</span>).</p>
+<h2>Output</h2>
+<p>Output a single line containing <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$T_1~ T_2~ \ldots ~ T_ n$</span> with a
+    single space between consecutive integers. These should be such
+    that stage <span class="tex2jax_process">$M$</span> for swather
+    <span class="tex2jax_process">$i$</span> is completed at time
+    <span class="tex2jax_process">$T_ i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3
+1 2 3
+3 2 1
+</pre>
+</td>
+<td>
+<pre>
+6 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+3 1
+4 7
+2 5
+</pre>
+</td>
+<td>
+<pre>
+4 14 19
+</pre>
+</td>
+</tr>
+</table>
+</div>

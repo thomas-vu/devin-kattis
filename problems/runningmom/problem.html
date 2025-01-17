@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>The bad thing about being an international Man of Mystery
+    (MoM) is there’s usually someone who wants to kill you.
+    Sometimes you have to stay on the run just to stay alive. You
+    have to think ahead. You have to make sure you don’t end up
+    trapped somewhere with no escape.</p>
+<p>Of course, not all MoMs are blessed with a great deal of
+    intelligence. You are going to write a program to help them
+    out. You are going to make sure our MoM knows what cities are
+    safe to visit and which are not. It’s not enough to just be
+    able to run (or fly) for one or two days, we have to guarantee
+    that the MoM can keep running for as long as might be
+    necessary. Given a list of regular, daily flights between pairs
+    of cities, you are going to make sure our MoM never gets stuck
+    in a city from which there is no escape. We’ll say there is an
+    escape from some location if there is an infinitely long
+    sequence of cities the MoM could fly to making one flight each
+    day.</p>
+<h2>Input</h2>
+<p>Input starts with a number, <span class="tex2jax_process">$1
+    \le n \le 5\, 000$</span>, giving the number of daily flights
+    there are between pairs of cities. Each of the next
+    <span class="tex2jax_process">$n$</span> lines contain a pair
+    of city names separated by a space. Each city name is a string
+    of up to <span class="tex2jax_process">$30$</span> characters
+    using only characters a–z, A–Z, and underscore. A line
+    containing the name <span class="tex2jax_process">$o$</span>
+    followed by <span class="tex2jax_process">$d$</span> indicates
+    that there is a one-way flight from city <span class="tex2jax_process">$o$</span> to city <span class="tex2jax_process">$d$</span> every day. There are no flights
+    that originate from and are destined for the same city.</p>
+<p>The description of daily flights is followed by a list of up
+    to <span class="tex2jax_process">$1\, 000$</span> city names
+    that have previously been named, one per line. The list ends at
+    end of file.</p>
+<h2>Output</h2>
+<p>Your job is to examine the list of city names at the end and
+    determine whether or not there is an escape from each one. For
+    each, output the name of the city, followed by the word “safe”
+    if there is an escape and “trapped” if there is no escape.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+Arlington San_Antonio
+San_Antonio Baltimore
+Baltimore New_York
+New_York Dallas
+Baltimore Arlington
+San_Antonio
+Baltimore
+New_York
+</pre>
+</td>
+<td>
+<pre>
+San_Antonio safe
+Baltimore safe
+New_York trapped
+</pre>
+</td>
+</tr>
+</table>
+</div>

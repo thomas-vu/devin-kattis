@@ -1,0 +1,57 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/satisfiability/file/statement/en/img-0001.png" class="illustration" src="/problems/satisfiability/file/statement/en/img-0001.png"/>
+<div class="description">
+        Picture from Wikimedia Commons
+      </div>
+</div>Alice recently started to work for a hardware design
+    company and as a part of her job, she needs to identify defects
+    in fabricated integrated circuits. An approach for identifying
+    these defects boils down to solving a satisfiability instance.
+    She needs your help to write a program to do this task.
+    <h2>Input</h2>
+<p>The first line of input contains a single integer, not more
+    than <span class="tex2jax_process">$5$</span>, indicating the
+    number of test cases to follow. The first line of each test
+    case contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> where <span class="tex2jax_process">$1 \le n \le 20$</span> indicates the number
+    of variables and <span class="tex2jax_process">$1 \le m \le
+    100$</span> indicates the number of clauses. Then, <span class="tex2jax_process">$m$</span> lines follow corresponding to each
+    clause. Each clause is a disjunction of literals in the form
+    <tt>X</tt><span class="tex2jax_process">$i$</span> or
+    <tt>~X</tt><span class="tex2jax_process">$i$</span> for some
+    <span class="tex2jax_process">$1 \le i \le n$</span>, where
+    <tt>~X</tt><span class="tex2jax_process">$i$</span> indicates
+    the negation of the literal <tt>X</tt><span class="tex2jax_process">$i$</span>. The “or” operator is denoted by a
+    ‘<tt class="ttfamily">v</tt>’ character and is seperated from
+    literals with a single space.</p>
+<h2>Output</h2>
+<p>For each test case, display <tt class="ttfamily">satisfiable</tt> on a single line if there is a
+    satisfiable assignment; otherwise display <tt class="ttfamily">unsatisfiable</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 3
+X1 v X2
+~X1
+~X2 v X3
+3 5
+X1 v X2 v X3
+X1 v ~X2
+X2 v ~X3
+X3 v ~X1
+~X1 v ~X2 v ~X3
+</pre>
+</td>
+<td>
+<pre>satisfiable
+unsatisfiable
+</pre>
+</td>
+</tr>
+</table>
+</div>

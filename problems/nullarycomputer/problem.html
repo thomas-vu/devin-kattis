@@ -1,0 +1,646 @@
+<div class="problembody">
+<p>Brian Huck has invented a new power-saving computer. With
+    the current CMOS-based processors, a certain amount of power is
+    lost each time a bit is changed from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$1$</span> or back. To avoid this problem,
+    Brian’s new Nullary Core stores only zeros. All numbers are
+    stored in nullary form, as shown in the following table.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Decimal</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Nullary</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>00</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>00000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>...</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>...</p>
+</td>
+</tr>
+</table>
+</center>
+<p>His initial <span class="tex2jax_process">$64$</span>-nit
+    model has <span class="tex2jax_process">$26$</span> registers,
+    each of which may store up to (and including) <span class="tex2jax_process">$64$</span> nits, and any attempt to store
+    more than <span class="tex2jax_process">$64$</span> nits will
+    result in a run time error. There is also a flag register,
+    which contains either a zero, or nothing. The instruction set
+    is as follows:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Instruction</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Explanation and how to simulate
+            in C</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>A</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Add a zero to the value in register A (similarly for
+            all uppercase letters).</p>
+<p><tt>a++;</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>a</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>First, empty the flag register. Then, if possible,
+            remove a zero from register A, and place it in the flag
+            register (similarly for all lowercase letters)</p>
+<p><tt>flag = 0; if(a&gt;0) { flag=1; a--; }</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>(</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>If the flag register is empty, jump past the
+            matching <tt>)</tt>. Otherwise, empty the flag
+            register.</p>
+<p><tt>while(flag) { flag=0; ....</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>)</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Jump to the matching <tt>(</tt>.</p>
+<p><tt>... }</tt></p>
+</td>
+</tr>
+</table>
+</center>
+<p>Apart from instructions, no other characters than whitespace
+    (which are ignored) are allowed in a nullary program.</p>
+<p>To illustrate the elegance and simplicity of his computer,
+    Brian has provided the following two example programs.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>b(b)a(Ba)</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Move register A to register B (by first emptying
+            register B, then repeatedly pulling a single zero from
+            register A and placing it into B).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>XXXa(GIa)i(g(FY</tt></p>
+<p><tt>g)y(Gy)f(Zb(z)z</tt></p>
+<p><tt>(i(YBi)y(Iy))f)</tt></p>
+<p><tt>Zb(zb)z(xz)i)x</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Set the flag register if the number of zeros in
+            register A is prime.</p>
+</td>
+</tr>
+</table>
+</center>
+<h2>Task</h2>
+<p>Your task is to write a sorting program for Brian’s Nullary
+    Core-based Prototype Computer. The NCPC has limited memory, so
+    your program must be no longer than <span class="tex2jax_process">$5432$</span> instructions. Also, the running
+    time of your program must be no more than <span class="tex2jax_process">$5 \cdot 10^6$</span> steps for any possible
+    input, where a step is considered to be the execution of one
+    instruction.</p>
+<p>The numbers to be sorted will be given in the first
+    <span class="tex2jax_process">$24$</span> registers
+    <tt>A</tt>-<tt>X</tt>; the remaining two registers (<tt>Y</tt>
+    and <tt>Z</tt>) will be empty. After executing your sorting
+    program, the sorted numbers should be in registers <tt>A</tt>
+    through <tt>X</tt>, in increasing order. Registers <tt>Y</tt>
+    and <tt>Z</tt> should be empty.</p>
+<p>For example, if at the start of execution of your program
+    the register values are as follows:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>A</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>J</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>000</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>S</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>B</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>K</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>T</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>C</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>L</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>U</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>M</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>V</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>E</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>00000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>N</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>W</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>F</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>O</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>X</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>G</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>P</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>Y</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>H</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>Q</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>Z</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>I</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>000000000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>R</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+</tr>
+</table>
+</center>
+<p>Then after executing your program, the register values
+    should be</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Reg.</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Value</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>A</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>J</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+           </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>S</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>B</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>K</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>T</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>C</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>L</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>U</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>M</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>V</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>00000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>E</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>N</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>W</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>F</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>O</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>X</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000000000</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>G</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>P</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Y</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>H</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Q</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+           </td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Z</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>I</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>R</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0000</p>
+</td>
+<td style="text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+           </td>
+</tr>
+</table>
+</center>
+<p>Note: any error with your Nullary program, whether it be
+    syntactically incorrect, runs for too long, or crashes, will
+    all result in a “Wrong Answer” judgement on Kattis, but
+    detailed information about the cause of the error will be
+    provided in the details for your submission.</p>
+<h2>Input</h2>
+<p>This problem has no input.</p>
+<h2>Output</h2>
+<p>Output the nullary source code of your sorting program.</p>
+</div>

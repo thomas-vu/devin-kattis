@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>You are given two strings <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$t$</span>. Count the number of substrings of
+    <span class="tex2jax_process">$s$</span> that contain
+    <span class="tex2jax_process">$t$</span> as a subsequence at
+    least once.</p>
+<p>Note that a <span class="tex2jax_process">$substring$</span>
+    and a <span class="tex2jax_process">$subsequence$</span> both
+    consist of characters from the original string, in order. In a
+    <span class="tex2jax_process">$substring$</span>, the
+    characters must be contiguous in the original string, but in a
+    <span class="tex2jax_process">$subsequence$</span>, they are
+    not required to be contiguous. In the string <b class="bf">abcde</b>, <b class="bf">ace</b> is a <i class="itshape">subsequence</i> but not a <i class="itshape">substring</i>.</p>
+<p>If <span class="tex2jax_process">$s$</span> is <b class="bf">aa</b> and <span class="tex2jax_process">$t$</span> is
+    <b class="bf">a</b>, then the answer is <span class="tex2jax_process">$3$</span>: <b class="bf">[a]a</b>, <b class="bf">[aa]</b>, and <b class="bf">a[a]</b>.</p>
+<h2>Input</h2>
+<p>Each test case will consist of exactly two lines.</p>
+<p>The first line will contain string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1\! \le \! |s|\! \le \! 10^5, s\! \in \!
+    [a{-}z]^*$</span>), with no other characters.</p>
+<p>The second line will contain string <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1\! \le \! |t|\! \le \! 100, |t|\! \le \!
+    |s|, t\! \in \! [a{-}z]^*$</span>), with no other
+    characters.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the number of substrings
+    of <span class="tex2jax_process">$s$</span> that contain
+    <span class="tex2jax_process">$t$</span> as a subsequence at
+    least once.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>abcdefghijklmnopqrstuvwxyz
+a
+</pre>
+</td>
+<td>
+<pre>26
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>abcdefghijklmnopqrstuvwxyz
+m
+</pre>
+</td>
+<td>
+<pre>182
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>penpineappleapplepen
+ppap
+</pre>
+</td>
+<td>
+<pre>68
+</pre>
+</td>
+</tr>
+</table>
+</div>

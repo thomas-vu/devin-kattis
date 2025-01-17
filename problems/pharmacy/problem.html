@@ -1,0 +1,131 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/pharmacy/file/statement/en/img-0001.png" class="illustration" src="/problems/pharmacy/file/statement/en/img-0001.png"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/en/medicine-pills-bottles-medical-296966/">
+        pixabay</a>
+</div>
+</div>
+<p>Many pharmacies in the United States fill prescriptions
+    strictly on a first-come, first-served basis, even preferring
+    prescriptions submitted electronically from a remote site to
+    prescriptions dropped off by waiting customers in the store.
+    This frequently leads to situations where customers have to
+    wait for prescriptions because pharmacy technicians are busy
+    filling prescriptions that may not be picked up until much
+    later anyway.</p>
+<p>This problem asks you to investigate the effect of an
+    “in-store customers first” policy. Under this policy,
+    technicians fill prescriptions in the order in which they are
+    dropped off, but they will not start filling remote
+    prescriptions as long as there are in-store prescriptions to be
+    filled.</p>
+<p>Write a program that computes the average completion time
+    for in-store and remote customers under this policy!</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    contains two integers <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$0 &lt; n \le 100\, 000$</span>)
+    and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0 &lt; T \le 10$</span>), where <span class="tex2jax_process">$n$</span> denotes the number of
+    prescriptions and <span class="tex2jax_process">$T$</span> the
+    number of technicians working at the pharmacy. This is followed
+    by <span class="tex2jax_process">$n$</span> lines, one line per
+    prescription.</p>
+<p>Each line consists of one integer <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0
+    &lt; d \le 10^9$</span>), which is the time (in seconds) when
+    the prescription was dropped off, followed by a single
+    character ‘<tt class="ttfamily">R</tt>’ or ‘<tt class="ttfamily">S</tt>’ for a remote or in-store prescription,
+    followed by a single integer <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$0
+    &lt; k \le 500$</span>) describing the number of seconds it
+    takes a technician to fill this prescription. Prescriptions are
+    listed in increasing order of drop-off time, but multiple
+    prescriptions may be dropped off at the same time, in which
+    case preference should be given to any in-store prescriptions,
+    regardless of the order in which they appear in the input. If
+    two prescriptions of the same type are dropped off at the same
+    time, the prescription needing the shorter fill time must be
+    filled first, again regardless of the order in which they
+    appear in the input.</p>
+<p>Once a technician starts working on a prescription, they
+    will finish filling it, even if an in-store prescription is
+    dropped off while they are working. Each prescription requires
+    one pharmacy technician to fill it, and each technician can
+    work on only one prescription at a time. The technicians work
+    until all prescriptions are filled. You should ignore the time
+    it would take for technicians to decide which prescription to
+    fill next, so a technician who finishes a prescription can
+    start working immediately on the next prescription.</p>
+<h2>Output</h2>
+<p>Output two numbers <span class="tex2jax_process">$o$</span>
+    and <span class="tex2jax_process">$r$</span>, denoting the
+    average completion time for in-store and remote prescriptions,
+    respectively. A prescription’s completion time is defined as
+    the time difference between when a prescription was dropped off
+    and when it was filled. If there were no in-store or remote
+    prescriptions in the input, output <span class="tex2jax_process">$0$</span> for <span class="tex2jax_process">$o$</span> or <span class="tex2jax_process">$r$</span> instead. Your answer is considered
+    correct if it is within a relative or absolute error of
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 R 4
+2 R 2
+3 R 2
+4 S 2
+5 S 1
+</pre>
+</td>
+<td>
+<pre>1.500000 2.666667
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1 R 4
+2 R 2
+3 R 2
+4 S 2
+5 S 1
+</pre>
+</td>
+<td>
+<pre>1.500000 3.666667
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+1 R 4
+2 R 2
+3 R 2
+4 S 2
+5 S 1
+</pre>
+</td>
+<td>
+<pre>3.000000 7.000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

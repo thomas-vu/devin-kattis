@@ -1,0 +1,115 @@
+<div class="problembody">
+<p>Your volume control is at a comfortable <span class="tex2jax_process">$7$</span> – not too high, not too low. Your
+    friends entirely disagree, and frequently request you turn it
+    up or turn it down, often in a somewhat inappropriate tone of
+    voice.</p>
+<p>Ever aiming to please, you try to accomodate their requests
+    and increase or decrease the volume by one step accordingly.
+    There are <span class="tex2jax_process">$11$</span> steps on
+    your volume control: <span class="tex2jax_process">$0$</span>,
+    <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, and so on up to <span class="tex2jax_process">$10$</span>.</p>
+<p>When the volume is set to <span class="tex2jax_process">$0$</span>, you can’t turn it further down
+    and can ignore any misguided request to that effect. Similarly,
+    you can’t turn it up to more than <span class="tex2jax_process">$10$</span>.</p>
+<p>Where is your volume control after <span class="tex2jax_process">$n$</span> requests?</p>
+<h2>Input</h2>
+<p>A single integer <span class="tex2jax_process">$n$</span> on
+    the first line, the number of requests.</p>
+<p>The following <span class="tex2jax_process">$n$</span> lines
+    contain either “Skru op!” (Danish for “Turn it up!”) or “Skru
+    ned!” (Danish for “Turn it down!”.)</p>
+<h2>Output</h2>
+<p>Write a single integer: The position of your volume control
+    after all <span class="tex2jax_process">$n$</span>
+    requests.</p>
+<h2>Points</h2>
+<p>There are three test groups.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$n=1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>25</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1\leq n\leq
+          3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>50</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1\leq n\leq
+          100$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Skru op!
+Skru op!
+Skru ned!
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+Skru op!
+Skru op!
+Skru op!
+Skru op!
+Skru ned!
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+</div>

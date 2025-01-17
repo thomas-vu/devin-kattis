@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{BluePlatonicDice.png}" src="/problems/dicecup/file/statement/en/img-0001.png" style="width:70.00%"/>
+</center>
+</div>
+<p>In many table-top games it is common to use different dice
+    to simulate random events. A “<em>d</em>” or “<em>D</em>” is
+    used to indicate a die with a specific number of faces,
+    <em>d4</em> indicating a four-sided die, for example. If
+    several dice of the same type are to be rolled, this is
+    indicated by a leading number specifying the number of dice.
+    Hence, <em>2d6</em> means the player should roll two six-sided
+    dice and sum the result face values.</p>
+<h3>Task</h3>
+<p>Write a program to compute the most likely outcomes for the
+    sum of two dice rolls. Assume each die has numbered faces
+    starting at 1 and that each face has equal roll
+    probability.</p>
+<h3>Input</h3>
+<p>The input consists of a single line with two integer
+    numbers, <span class="tex2jax_process">$N, M$</span>,
+    specifying the number of faces of the two dice.</p>
+<h3>Constraints</h3>
+<p><span class="tex2jax_process">$4 \leq N,M\leq 20$</span>
+    Number of faces.</p>
+<h3>Output</h3>
+<p>A line with the most likely outcome for the sum; in case of
+    several outcomes with the same probability, they must be listed
+    from lowest to highest value in separate lines.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 6
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 4
+</pre>
+</td>
+<td>
+<pre>
+5
+6
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+12 20
+</pre>
+</td>
+<td>
+<pre>
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre>
+</td>
+</tr>
+</table>
+</div>

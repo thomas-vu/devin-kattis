@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/convexhull2/file/statement/en/img-0001.png" class="illustration" src="/problems/convexhull2/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Finding the convex hull of a set of points is an important
+    problem that is often part of a larger problem. There are many
+    algorithms for finding the convex hull. Since problems
+    involving the convex hull sometimes appear in the ACM World
+    Finals, it is a good idea for contestants to know some of these
+    algorithms.</p>
+<p>Finding the convex hull of a set of points in the plane can
+    be divided into two sub-tasks. First, given a set of points,
+    find a subset of those points that, when joined with line
+    segments, form a convex polygon that encloses all of the
+    original points. Second, output the points of the convex hull
+    in order, walking counter-clockwise around the polygon. In this
+    problem, the first sub-task has already been done for you, and
+    your program should complete the second sub-task. That is,
+    given the points that are known to lie on the convex hull,
+    output them in order walking counter-clockwise around the
+    hull.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$3 \le n \le 100\, 000$</span>,
+    the number of points. The following <span class="tex2jax_process">$n$</span> lines of input each describe a
+    point. Each of these lines contains two integers and either a
+    <tt class="ttfamily">Y</tt> or an <tt class="ttfamily">N</tt>,
+    separated by spaces. The two integers specify the <span class="tex2jax_process">$x$</span>- and <span class="tex2jax_process">$y$</span>-coordinates of the point. A
+    <tt class="ttfamily">Y</tt> indicates that the point is on the
+    convex hull of all the points, and a <tt class="ttfamily">N</tt> indicates that it is not. The <span class="tex2jax_process">$x$</span>- and <span class="tex2jax_process">$y$</span>-coordinates of each point will be
+    no less than <span class="tex2jax_process">$-1\, 000\, 000\,
+    000$</span> and no greater than <span class="tex2jax_process">$1\, 000\, 000\, 000$</span>. No point will
+    appear more than once in the input. The points in the input
+    will never all lie on a line.</p>
+<h2>Output</h2>
+<p>First, output a line containing a single integer
+    <span class="tex2jax_process">$m$</span>, the number of points
+    on the convex hull. Next output <span class="tex2jax_process">$m$</span> lines, each describing a point on
+    the convex hull, in counter-clockwise order around the hull.
+    Each of these lines should contain the <span class="tex2jax_process">$x$</span>-coordinate of the point, followed
+    by a space, followed by the <span class="tex2jax_process">$y$</span>-coordinate of the point. Start
+    with the point on the hull whose <span class="tex2jax_process">$x$</span>-coordinate is minimal. If there
+    are multiple such points, start with the one whose <span class="tex2jax_process">$y$</span>-coordinate is minimal.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+1 1 Y
+1 -1 Y
+0 0 N
+-1 -1 Y
+-1 1 Y
+</pre>
+</td>
+<td>
+<pre>
+4
+-1 -1
+1 -1
+1 1
+-1 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

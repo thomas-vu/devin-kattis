@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>The Slovak national railroad company has recently built new
+    tracks. They want to update their railroad map according to
+    these changes. But they want the map to be as simple as
+    possible. So they decided to remove from the map all the
+    stations that have exactly two other direct connections to
+    other stations (i.e., a single railroad passing through the
+    station).</p>
+<p>You will be given the complete map of Slovak railroads. It
+    consists of railway stations numbered from 1 to <span class="tex2jax_process">$N$</span>, and railroad segments between
+    some pairs of these stations. For each railroad segment we are
+    given its length. Your task is to remove all such stations that
+    are directly connected with exactly two other stations, and
+    output the new map. The new map must contain correct distances
+    between the remaining stations.</p>
+<h2>Input</h2>
+<p>The first line of the input file contains an integer
+    <span class="tex2jax_process">$T\leq 10$</span> specifying the
+    number of test cases. Each test case is preceded by a blank
+    line.</p>
+<p>Each test case begins with a line with two integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$1\leq N\leq 10\, 000, 1\leq M\leq 30\,
+    000$</span>. The number <span class="tex2jax_process">$N$</span> denotes the number of stations and
+    <span class="tex2jax_process">$M$</span> is the number of
+    railroad segments. <span class="tex2jax_process">$M$</span>
+    lines follow, each with 3 integers <span class="tex2jax_process">$a, b$</span>, and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1\leq a, b\leq N$</span>) specifying that
+    there is a railroad segment of length <span class="tex2jax_process">$c$</span> connecting stations <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>.</p>
+<p>You can assume that in each test case there is a path
+    between every two stations. Also, there will always be at least
+    2 stations that are not directly connected to exactly two other
+    stations.</p>
+<h2>Output</h2>
+<p>For each test case, the output shall consist of multiple
+    lines. The first line shall contain a positive integer
+    <span class="tex2jax_process">$K$</span> – the number of
+    railroads on the simplified map. Each of the next <span class="tex2jax_process">$K$</span> lines shall contain three integers
+    <span class="tex2jax_process">$a, b$</span>, and <span class="tex2jax_process">$c$</span> stating that there is a railroad
+    of length <span class="tex2jax_process">$c$</span> between
+    stations <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> on the simplified
+    map.</p>
+<p>Print a blank line between outputs for different test
+    cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+
+3 2
+1 2 1
+2 3 1
+
+4 4
+1 2 1
+2 3 2
+3 4 3
+4 2 1
+</pre>
+</td>
+<td>
+<pre>
+1
+1 3 2
+
+2
+1 2 1
+2 2 6
+</pre>
+</td>
+</tr>
+</table>
+</div>

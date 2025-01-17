@@ -1,0 +1,79 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/oddgnome/file/statement/en/img-0001.jpg" class="illustration" src="/problems/oddgnome/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/free-zee/11956239456/">Chris
+        Friese</a>
+</div>
+</div>
+<p>According to the legend of Wizardry and Witchcraft, gnomes
+    live in burrows underground, known as gnome holes. There they
+    dig up and eat the roots of plants, creating little heaps of
+    earth around gardens, causing considerable damage to them.</p>
+<p>Mrs. W, very annoyed by the damage, has to regularly
+    de-gnome her garden by throwing the gnomes over the fence. It
+    is a lot of work to throw them one by one because there are so
+    many. Fortunately, the species is so devoted to their kings
+    that each group always follows its king no matter what. In
+    other words, if she were to throw just the king over the fence,
+    all the other gnomes in that group would leave.</p>
+<p>So how does Mrs. W identify the king in a group of gnomes?
+    She knows that gnomes travel in a certain order, and the king,
+    being special, is always the only gnome who does not follow
+    that order.</p>
+<p>Here are some helpful tips about gnome groups:</p>
+<ul class="itemize">
+<li>
+<p>There is exactly one king in a group.</p>
+</li>
+<li>
+<p>Except for the king, gnomes arrange themselves in
+        strictly increasing ID order.</p>
+</li>
+<li>
+<p>The king is always the only gnome out of that order.</p>
+</li>
+<li>
+<p>The king is never the first nor the last in the group,
+        because kings like to hide themselves.</p>
+</li>
+</ul>
+<p>Help Mrs. W by finding all the kings!</p>
+<h2>Input</h2>
+<p>The input starts with an integer <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$1 \leq n \leq 100$</span>, representing the
+    number of gnome groups. Each of the <span class="tex2jax_process">$n$</span> following lines contains one group
+    of gnomes, starting with an integer <span class="tex2jax_process">$g$</span>, where <span class="tex2jax_process">$3 \leq g \leq 1\, 000$</span>, representing
+    the number of gnomes in that group. Following on the same line
+    are <span class="tex2jax_process">$g$</span> space-separated
+    integers, representing the gnome ordering. Within each group
+    all the integers (including the king) are unique and in the
+    range <span class="tex2jax_process">$[0,10\, 000]$</span>.
+    Excluding the king, each integer is exactly one more than the
+    integer preceding it.</p>
+<h2>Output</h2>
+<p>For each group, output the king’s position in the group
+    (where the first gnome in line is number one).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+7 1 2 3 4 8 5 6
+5 3 4 5 2 6
+4 10 20 11 12
+</pre>
+</td>
+<td>
+<pre>
+5
+4
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

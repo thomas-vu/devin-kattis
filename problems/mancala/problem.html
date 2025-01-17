@@ -1,0 +1,84 @@
+<div class="problembody">
+<p><em>Mancala</em> is a family of board games played around
+    the world, sometimes called <em>sowing</em> games, or
+    <em>count-and-capture</em> games, which describes the game
+    play. One simple variant is a solitaire game called
+    <em>Tchoukaillon</em> which was described by Véronique
+    Gautheron. <em>Tchoukaillon</em> is played on a board with an
+    arbitrary number of bins numbered <span class="tex2jax_process">$1, 2, \ldots $</span>, containing
+    <span class="tex2jax_process">$b[1], b[2], \ldots $</span>
+    counters respectively and an extra empty bin called the Roumba
+    on the left.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{e1.png}" src="/problems/mancala/file/statement/en/img-0001.png" style="width:; height:"/>
+</center>
+</div>
+<p>A single play consists on choosing a bin, <span class="tex2jax_process">$n$</span>, for which <span class="tex2jax_process">$b[n] = n$</span> (indicated by the darker
+    circles in the diagram) and distributing the counters one per
+    bin to the bins to the left including the <em>Roumba</em>
+    (getting the next diagram below in the figure above). If there
+    is no bin where <span class="tex2jax_process">$b[n] =
+    n$</span>, then the board is a losing board.</p>
+<p>If there is a sequence of plays which takes the initial
+    board distribution to one in which every counter is in the
+    <em>Roumba</em>, the initial distribution is called a winnable
+    board. In the example above, <span class="tex2jax_process">$0,1,3,\ldots $</span> is a winnable board
+    (the “<span class="tex2jax_process">$\ldots $</span>” indicates
+    all the bins to the right of bin <span class="tex2jax_process">$3$</span> contain <span class="tex2jax_process">$0$</span>). For each total number of
+    counters, there is a unique distribution of the counters to
+    bins to make a winnable board for that total count (so
+    <span class="tex2jax_process">$0,1,3,\ldots $</span> is the
+    only winnable board with <span class="tex2jax_process">$4$</span> counters).</p>
+<p>Write a program which finds the winnable board for a total
+    count input.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 200$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space,
+    followed by the total count <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 2000$</span>) of the winnable board to be found.</p>
+<h2>Output</h2>
+<p>For each data set there will be multiple lines of output.
+    The first line of output contains the data set number,
+    <span class="tex2jax_process">$K$</span>, followed by a single
+    space, followed by the index of the last bin, <span class="tex2jax_process">$B$</span>, with a non-zero count. Input will
+    be chosen so that <span class="tex2jax_process">$B$</span> will
+    be no more than <span class="tex2jax_process">$80$</span>. The
+    first line of output for each dataset is followed by the bin
+    counts <span class="tex2jax_process">$b[1], b[2], \ldots ,
+    b[B]$</span>, 10 per line separated by single spaces.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 4
+2 57
+3 500
+</pre>
+</td>
+<td>
+<pre>
+1 3
+0 1 3
+2 12
+1 2 2 2 2 6 2 4 6 8
+10 12
+3 39
+0 2 2 1 3 2 2 2 6 7
+5 0 6 12 2 6 10 14 18 1
+3 5 7 9 11 13 15 17 19 21
+23 25 27 29 31 33 35 37 39
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/memory/file/statement/en/img-0001.jpg" class="illustration" src="/problems/memory/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/thinkpublic/2556091952/">thinkpublic</a>
+</div>
+</div>As you might know, the memory in current computers
+    consists of a sequence of bits and each of these bits can be in
+    two possible states. Megan’s company has now developed a great
+    new memory unit where every bit has three possible states. This
+    would all be great, if it wasn’t for Megan’s boss. The boss
+    wants her to write a program for this memory unit for integer
+    operations, but instead of using ternary base (i.e., base 3),
+    Megan’s boss decided that the bits should be interpreted as a
+    binary number, with the exception that the digit 2 is allowed
+    as well.
+
+    <p>For example, <span class="tex2jax_process">$201$</span> in
+    this strange representation is <span class="tex2jax_process">$2\cdot 2^2+0\cdot 2^1+ 1\cdot 2^0=9$</span>.
+    Some numbers are shorter in this representation, but for other
+    numbers it doesn’t help at all – for instance, <span class="tex2jax_process">$15$</span> is <span class="tex2jax_process">$1111$</span> in binary and this is the only
+    way of writing it in the new representation as well.</p>
+<p>It seems that there is nothing else that Megan can do to
+    convince her boss. Since she likes math, she started wondering
+    about different representations of the same number. For example
+    9 has three representations: <span class="tex2jax_process">$201, 121$</span> and <span class="tex2jax_process">$1001$</span>. Can you help her figure out
+    how many representations a given number has?</p>
+<h2>Input</h2>
+<p>The first and only line of the input contains a string
+    consisting of <tt class="tt">’0’</tt> and <tt class="tt">’1’</tt>. The string represents a non-negative integer
+    <span class="tex2jax_process">$N$</span> in binary. The
+    leftmost bit is the most significant one. The number of bits
+    will be at least <span class="tex2jax_process">$1$</span> and
+    at most <span class="tex2jax_process">$10\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Output a line giving the number of different binary
+    representations of <span class="tex2jax_process">$N$</span>
+    that also use <span class="tex2jax_process">$2$</span> as a
+    digit. Since this number might be big, output the remainder
+    modulo <span class="tex2jax_process">$1\, 000\, 000\,
+    009$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1001
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1111
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+00000
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

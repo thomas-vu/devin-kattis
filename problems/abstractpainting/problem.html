@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Gon is currently training to become a modern artist.</p>
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/abstractpainting/file/statement/en/img-0001.jpg" class="illustration" src="/problems/abstractpainting/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/Category:Abstract_art">Abstract
+        Painting</a>.
+      </div>
+</div>
+<p>Everyday, Gon practices his painting skill on a rectangular
+    canvas, divided into <span class="tex2jax_process">$R \cdot
+    C$</span> unit squares, with <span class="tex2jax_process">$R$</span> rows and <span class="tex2jax_process">$C$</span> columns. Gon wants to paint all
+    the edges of all unit squares.</p>
+<p>Contrary to popular belief, creating a good modern painting
+    is not an easy task. A good modern painting should use a
+    limited number of colors, simple yet elegant. Thus, when
+    creating his painting, Gon strictly adheres to the following
+    rules:</p>
+<ul class="itemize">
+<li>
+<p>Only <span class="tex2jax_process">$3$</span> colors are
+        used: Red, Green and Blue.</p>
+</li>
+<li>
+<p>All edges of all unit squares must be painted. Each edge
+        must be painted with exactly one color.</p>
+</li>
+<li>
+<p>For each unit square, exactly <span class="tex2jax_process">$2$</span> colors must be used to paint
+        its <span class="tex2jax_process">$4$</span> edges.
+        Furthermore, each color must be used to paint exactly
+        <span class="tex2jax_process">$2$</span> edges.</p>
+</li>
+</ul>
+<p>In the following figure:</p>
+<ul class="itemize">
+<li>
+<p>The painting on the left is a good painting.</p>
+</li>
+<li>
+<p>The painting on the right is <b class="bfseries">not</b>
+        a good painting, because the top-left unit square has
+        <span class="tex2jax_process">$3$</span> blue edges.</p>
+</li>
+</ul>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{figure2.jpg}" src="/problems/abstractpainting/file/statement/en/img-0002.jpg" style="width:50.00%"/>
+</center>
+<p>Now Gon is wondering, how many different good paintings are
+    there? Two paintings, both with <span class="tex2jax_process">$R$</span> rows and <span class="tex2jax_process">$C$</span> columns, are considered different,
+    if there exists one edge painted with different colors in the
+    two paintings. Please help Gon!</p>
+<h2>Input</h2>
+<p>The first line contains exactly one integer <span class="tex2jax_process">$T$</span> — the number of test cases
+    <span class="tex2jax_process">$(1 \le T \le 5)$</span>.</p>
+<p><span class="tex2jax_process">$T$</span> lines follow, each
+    line contains exactly two integers <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> <span class="tex2jax_process">$(1
+    \le R \le 14, 1 \le C \le 2\, 000)$</span>.</p>
+<h2>Output</h2>
+<p>Output exactly <span class="tex2jax_process">$T$</span>
+    lines, each line contains a single integer — the number of
+    different good paintings, modulo <span class="tex2jax_process">$10^{9} + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1
+1 2
+2 1
+</pre>
+</td>
+<td>
+<pre>18
+108
+108
+</pre>
+</td>
+</tr>
+</table>
+</div>

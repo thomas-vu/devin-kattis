@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>It is game night and Alice and Bob are playing chess. After
+    beating Bob at chess several times, Alice suggests they should
+    play a chess variant instead called <em>hexagonal chess</em>.
+    Although the game is very rarely played nowadays, Alice knows
+    the rules very well and has obtained a hexagonal chessboard
+    from her subscription to the magazine of Bizarre Artifacts for
+    Playing Chess.</p>
+<div class="figure" id="fig:H">
+<center>
+<div class="minipage" style="width:240.0pt">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{board_layout2.pdf}" src="/problems/hexagonalrooks/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+</div>
+<div class="minipage" style="width:240.0pt">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{rook_movement2.pdf}" src="/problems/hexagonalrooks/file/statement/en/img-0002.png" style="width:90.00%"/>
+</center>
+</div>
+<div class="caption">
+<b>Figure 1</b>: The field naming of the hexagonal chess
+          board and the directions in which a rook can move.
+        </div>
+</center>
+</div>
+<p>The hexagonal chess board, shown above, consists of
+    <span class="tex2jax_process">$91$</span> hexagonal cells
+    arranged in the shape of a hexagon with side length
+    <span class="tex2jax_process">$6$</span> as depicted in the
+    above diagrams. The board is divided into <span class="tex2jax_process">$11$</span> columns, each called a file, and
+    the files are labeled <tt class="ttfamily">a</tt> to <tt class="ttfamily">k</tt> from left to right. It is also divided into
+    <span class="tex2jax_process">$11$</span> v-shaped rows, each
+    called a rank, which are labeled <tt class="ttfamily">1</tt> to
+    <tt class="ttfamily">11</tt> from bottom to top. The unique
+    cell in file <span class="tex2jax_process">$x$</span> and rank
+    <span class="tex2jax_process">$y$</span> is then denoted by the
+    coordinate <span class="tex2jax_process">$xy$</span>. For
+    example, rank <tt class="ttfamily">11</tt> contains only a
+    single cell <tt class="ttfamily">f11</tt> and rank <tt class="ttfamily">7</tt> is occupied entirely by the black player’s
+    pawns.</p>
+<p>Alice begins by explaining how all the pieces move. The
+    simplest piece is the rook, which can move an arbitrary
+    positive number of steps in a straight line in the direction of
+    any of its <span class="tex2jax_process">$6$</span> adjacent
+    cells, as depicted in the figure on the right. Bob immediately
+    realises that the hexagonal rook already is more difficult to
+    work with than its regular chess counterpart.</p>
+<p>In order to attack one of the opponents pieces, it is useful
+    to know which cells his rook can move to such that it attacks
+    the opposing piece. The more of these cells there are, the more
+    valuable the current position of his rook is. However,
+    calculating this number is too much for Bob. After losing so
+    many games of regular chess, Alice allows Bob to use a program
+    to assist in his rook placement. While Alice explains the rest
+    of the game you get busy coding.</p>
+<p>As a small simplification, Bob will compute the number of
+    ways his rook can move to the destination cell assuming there
+    are no other pieces on the board, not even the piece he wants
+    to attack.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The input consists of one line, containing two different
+        coordinates on the hexagonal chess board, the current
+        positions of your rook and the piece you want to
+        attack.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output a single integer, the number of ways the rook can
+    move from its current position to the position of the piece it
+    wants to attack in exactly two moves, assuming there are no
+    other pieces on the board.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>c4 h4
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>a1 a2
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

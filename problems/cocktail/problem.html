@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/cocktail/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cocktail/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Getting the “A Furious Cocktail” advancement
+      </div>
+</div>
+<p>In Minecraft, potions can be made and drank. When drank,
+    they apply the corresponding potion effect to the player for
+    some specified amount of time. “A Furious Cocktail” is the name
+    of the advancement where a player has every potion effect
+    applied at the same time. This is a challenging feat, as it
+    takes time to drink each potion, and only one potion can be
+    drank at a time.<br/></p>
+<p>Suppose that in your inventory, there are <span class="tex2jax_process">$N$</span> unique potions that have a time
+    duration of <span class="tex2jax_process">$t_1, \ldots , t_
+    N$</span> seconds, respectively. Assuming that it takes
+    <span class="tex2jax_process">$T$</span> seconds to drink a
+    potion, is it possible to have all <span class="tex2jax_process">$N$</span> potion effects applied at the same
+    time? Note that if one potion’s effect ends at the same time
+    you finish drinking another potion, the potions are not
+    considered to be applied at the same time.<br/></p>
+<h2>Input</h2>
+<p>The first line consists of <span class="tex2jax_process">$2$</span> integers, <span class="tex2jax_process">$0 &lt; N &lt; 1\, 000$</span> and
+    <span class="tex2jax_process">$1 \leq T \leq 10$</span>, the
+    number of potions in your inventory and time in seconds it
+    takes to drink each potion, respectively. The next <span class="tex2jax_process">$N$</span> lines each consists of an integer
+    <span class="tex2jax_process">$1 \leq t_ i \leq 10^6$</span>,
+    the time duration of the <span class="tex2jax_process">$i$</span>-th potion where <span class="tex2jax_process">$i$</span> ranges from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>.<br/></p>
+<h2>Output</h2>
+<p>Output “YES” if it is possible to have all <span class="tex2jax_process">$N$</span> potion effects applied at the same
+    time, “NO” if otherwise.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+1
+2
+3
+4
+5
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+4
+3
+2
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+2
+3
+5
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

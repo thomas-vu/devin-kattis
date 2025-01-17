@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/researchproductivityindex/file/statement/en/img-0001.jpg" class="illustration" src="/problems/researchproductivityindex/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>Angela is a new PhD student and she is nervous about the
+    upcoming paper submission deadline of this year’s research
+    conference. She has been working on multiple projects
+    throughout the past year. Luckily most of the projects
+    concluded successfully, and she came up with <span class="tex2jax_process">$n$</span> candidate papers. However not all
+    of the papers were born equal—some have better results than
+    others. Her advisor believes she should only submit the papers
+    with “good enough” results so they have a high chance of
+    getting accepted.
+    <p>Angela’s research group has a unique way of evaluating the
+    success of paper submissions. They use the <em>research
+    productivity index</em>, defined as <span class="tex2jax_process">$a^{a/s}$</span>, where <span class="tex2jax_process">$s$</span> is the total number of papers
+    submitted, and <span class="tex2jax_process">$a$</span> is the
+    number of papers that are accepted by the conference. When
+    <span class="tex2jax_process">$a = 0$</span>, the index is
+    defined to be zero. For example:</p>
+<ul class="itemize">
+<li>
+<p>if one paper is submitted and it gets accepted, the
+        index is <span class="tex2jax_process">$1^{1/1} =
+        1$</span>;</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$4$</span> papers are
+        submitted and all get accepted, the index is <span class="tex2jax_process">$4^{4/4} = 4$</span>;</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$10$</span> papers are
+        submitted and <span class="tex2jax_process">$3$</span> get
+        accepted, the index is <span class="tex2jax_process">$3^{3/10} \approx 1.390389$</span>;</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$5$</span> papers are
+        submitted and <span class="tex2jax_process">$4$</span> get
+        accepted, the index is <span class="tex2jax_process">$4^{4/5} \approx 3.031433$</span>;</p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$3$</span> papers are
+        submitted and all get rejected (<span class="tex2jax_process">$a=0$</span>), the index is <span class="tex2jax_process">$0$</span>.</p>
+</li>
+</ul>
+<p>Intuitively, to get a high research productivity index one
+    wants to get as many papers accepted as possible while keeping
+    the acceptance rate high.</p>
+<p>For each of her <span class="tex2jax_process">$n$</span>
+    papers, Angela knows exactly how likely it is that the
+    conference would accept the paper. If she chooses wisely which
+    papers to submit, what is the maximum expected value of her
+    research productivity index?</p>
+<h2>Input</h2>
+<p>The first line of the input has a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 100$</span>), the number of
+    Angela’s candidate papers. The next line has <span class="tex2jax_process">$n$</span> space-separated integers giving
+    the probability of each paper getting accepted. Each
+    probability value is given as an integer percentage between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$100$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Output the maximum expected value of Angela’s research
+    productivity index. Your answer is considered correct if it has
+    an absolute or relative error of no more than <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+30 50 70 60 90
+</pre>
+</td>
+<td>
+<pre>2.220889579
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+30 90 30 90 30 90
+</pre>
+</td>
+<td>
+<pre>2.599738456
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+10 10 10 10
+</pre>
+</td>
+<td>
+<pre>0.368937005
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/marblestree/file/statement/en/img-0001.jpg" class="illustration" src="/problems/marblestree/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.fotopedia.com/items/flickr-2127749330">chefranden
+        on Flickr</a>
+</div>
+</div><span class="tex2jax_process">$n$</span> boxes are placed
+    on the vertices of a rooted tree, which are numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \le n \le 10\, 000$</span>. Each box is either empty or
+    contains a number of marbles; the total number of marbles is
+    <span class="tex2jax_process">$n$</span>.
+    <p>The task is to move the marbles such that each box contains
+    exactly one marble. This is to be accomplished be a sequence of
+    moves; each move consists of moving one marble to a box at an
+    adjacent vertex. What is the minimum number of moves required
+    to achieve the goal?</p>
+<h2>Input</h2>
+<p>The input contains up to <span class="tex2jax_process">$10$</span> cases. Each case starts with the
+    number <span class="tex2jax_process">$n$</span> followed by
+    <span class="tex2jax_process">$n$</span> lines. Each line
+    contains at least three numbers which are:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \le v \le n$</span>,
+        the number of a vertex. The vertices are numbered from
+        <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span> and are given in increasing
+        order in the input.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \le m \le n$</span>,
+        the number of marbles originally placed at vertex
+        <span class="tex2jax_process">$v$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \le d \le n-1$</span>,
+        the number of children of <span class="tex2jax_process">$v$</span>.</p>
+</li>
+</ul>
+<p>Then (on the same line) follow <span class="tex2jax_process">$d$</span> distinct vertex numbers giving the
+    identities of the children of <span class="tex2jax_process">$v$</span>.</p>
+<p>The input is terminated by a case where <span class="tex2jax_process">$n = 0$</span> and this case should not be
+    processed.</p>
+<h2>Output</h2>
+<p>For each case in the input, output the smallest number of
+    moves of marbles resulting in one marble at each vertex of the
+    tree.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9
+1 2 3 2 3 4
+2 1 0
+3 0 2 5 6
+4 1 3 7 8 9
+5 3 0
+6 0 0
+7 0 0
+8 2 0
+9 0 0
+9
+1 0 3 2 3 4
+2 0 0
+3 0 2 5 6
+4 9 3 7 8 9
+5 0 0
+6 0 0
+7 0 0
+8 0 0
+9 0 0
+9
+1 0 3 2 3 4
+2 9 0
+3 0 2 5 6
+4 0 3 7 8 9
+5 0 0
+6 0 0
+7 0 0
+8 0 0
+9 0 0
+0
+</pre>
+</td>
+<td>
+<pre>7
+14
+20
+</pre>
+</td>
+</tr>
+</table>
+</div>

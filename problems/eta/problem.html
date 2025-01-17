@@ -1,0 +1,119 @@
+<div class="problembody">
+<p>You want to design a level for a computer game. The level
+    can be described as a connected undirected graph with vertices
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>. In the game, the
+    player’s character is dropped at one of the <span class="tex2jax_process">$n$</span> vertices uniformly at random and
+    their goal is to reach the exit located at vertex <span class="tex2jax_process">$1$</span> as quickly as possible. Traversing
+    an edge takes exactly <span class="tex2jax_process">$1$</span>
+    second.</p>
+<div class="figure" id="fig:e">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{sample}" src="/problems/eta/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Output 3, a level
+          where the average optimal time to reach vertex
+          <span class="tex2jax_process">$1$</span> is <span class="tex2jax_process">$\frac{7}{4}$</span>.
+        </div>
+</center>
+</div>
+<p>The difficulty of the level is determined by the average
+    optimal time to reach the exit. Given a target value for this
+    average optimal time, construct a level so that this target
+    value is reached. See Figure 1 for an example.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two coprime integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le a,b \le 1000$</span>) separated by
+        a ‘<tt class="ttfamily">/</tt>’, giving the desired average
+        optimal time to reach the exit as the fraction <span class="tex2jax_process">$\frac{a}{b}$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If no connected graph with the average optimal time
+    <span class="tex2jax_process">$\frac{a}{b}$</span> to reach
+    vertex <span class="tex2jax_process">$1$</span> exists, output
+    “<tt class="ttfamily">impossible</tt>”. Otherwise, output one
+    such graph in the following format:</p>
+<ul class="itemize">
+<li>
+<p>Two integers <span class="tex2jax_process">$n$</span>
+        and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le n, m \le 10^6$</span>), the number
+        of vertices and the number of edges.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> pairs of
+        integers <span class="tex2jax_process">$u$</span> and
+        <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1 \le u,v \le n$</span>), indicating an
+        edge between vertices <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>.</p>
+</li>
+</ul>
+<p>The graph may include self loops and parallel edges. You are
+    given that if there exists a valid graph, then there also
+    exists one with <span class="tex2jax_process">$1 \le n, m \le
+    10^6$</span>.</p>
+<p>If there are multiple valid solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1/2
+</pre>
+</td>
+<td>
+<pre>2 1
+1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1/3
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7/4
+</pre>
+</td>
+<td>
+<pre>8 12
+1 2
+1 3
+2 3
+2 4
+3 5
+3 6
+4 5
+5 6
+4 7
+5 7
+4 8
+6 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

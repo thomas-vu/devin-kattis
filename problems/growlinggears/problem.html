@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>The <em>Best Acceleration Production Company</em>
+    specializes in multi-gear engines. The performance of an engine
+    in a certain gear, measured in the amount of torque produced,
+    is not constant: the amount of torque depends on the RPM of the
+    engine. This relationship can be described using a
+    <em>torque-RPM curve</em>.</p>
+<div class="figure" id="a0000000836">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{torque-rpm-graph}" src="/problems/growlinggears/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<span class="parbox" style="width:420.0pt"><b>Figure
+          1</b>: The torque-RPM curve of the gears given in the
+          second sample input. The second gear can produce the
+          highest torque.</span>
+</div>
+</center>
+</div>
+<p>For the latest line of engines, the torque-RPM curve of all
+    gears in the engine is a parabola of the form <span class="tex2jax_process">$T = -aR^2 + bR + c$</span>, where
+    <span class="tex2jax_process">$R$</span> is the RPM of the
+    engine, and <span class="tex2jax_process">$T$</span> is the
+    resulting torque.</p>
+<p>Given the parabolas describing all gears in an engine,
+    determine the gear in which the highest torque is produced. The
+    first gear is gear 1, the second gear is gear 2, etc. There
+    will be only one gear that produces the highest torque: all
+    test cases are such that the maximum torque is at least 1
+    higher than the maximum torque in all the other gears.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10$</span>): the number of
+        gears in the engine.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with three space-separated integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1 \leq a,b,c \leq 10\, 000$</span>): the
+        parameters of the parabola <span class="tex2jax_process">$T
+        = -aR^2 + bR + c$</span> describing the torque-RPM curve of
+        each engine.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single integer: the gear in which the
+        maximum torque is generated.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1
+1 4 2
+2
+3 126 1400
+2 152 208
+2
+3 127 1400
+2 154 208
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/highesthill/file/statement/en/img-0001.jpg" class="illustration" src="/problems/highesthill/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:237_Suur-Munam%C3%A4gi.jpg">
+        An old photograph</a> of Suur Munamägi, public domain
+      </div>
+</div>
+<p>Sweden may not have a particularly impressive mountain range
+    compared to other NCPC countries such as Norway and Iceland,
+    but at least it beats the flatlands of Denmark. The situation
+    is not so clear when comparing other member countries though.
+    For example, is Estonia more mountainous than Lithuania<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a>? To settle this question, you want
+    to determine which of the two countries has the most impressive
+    mountain peak.</p>
+<p>A mountain range is defined by sampling the heights
+    <span class="tex2jax_process">$h_ i$</span> of <span class="tex2jax_process">$n$</span> equidistant points. Within a
+    mountain range, we call a triple of indices <span class="tex2jax_process">$1 \le i &lt; j &lt; k \le n$</span> a
+    <i class="itshape">peak</i> if <span class="tex2jax_process">$h_ i \leq \cdots \leq h_ j \geq \cdots \geq
+    h_ k$</span>. The <i class="itshape">height</i> of a peak is
+    defined as the smaller of <span class="tex2jax_process">$h_ j -
+    h_ i$</span> and <span class="tex2jax_process">$h_ j-h_
+    k$</span>.</p>
+<p>Given a mountain range, can you find the height of its
+    highest peak?</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$3
+    \le n \le 200\, 000$</span>), the number of sampled points of
+    the mountain range.</p>
+<p>The second and final line contains the heights <span class="tex2jax_process">$h_1, \dots , h_ N$</span> (<span class="tex2jax_process">$0 \le h_ i \le 318 \cdot 10^9$</span>) of
+    the sampled points, in nanometers above sea level.</p>
+<p>It is guaranteed that the mountain range contains at least
+    one peak.</p>
+<h2>Output</h2>
+<p>Output a single integer: the height of the highest peak.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>11
+0 1 2 3 4 5 4 3 2 1 0
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+29 85 88 12 52 37 19 86 7 44
+</pre>
+</td>
+<td>
+<pre>67
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2147483647 318000000000 2147483647
+</pre>
+</td>
+<td>
+<pre>315852516353
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1 1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

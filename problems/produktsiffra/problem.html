@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Nikolaj works at a company that sells a large number of
+    products. Each product has a product ID, which is a large
+    integer. For error detection, in particular in connection with
+    manual database entry, it would be useful if each product also
+    had a single “check” digit between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span> that can be quickly computed from
+    the product ID. Nikolaj has been tasked with implementing this.
+    He recently solved the problem “Digit Product” on Open Kattis
+    and considers using the procedure described there.</p>
+<p>He recalls that the idea is to start with a positive integer
+    <span class="tex2jax_process">$x$</span> and repeatedly
+    multiply all its nonzero digits, until only a single digit is
+    left. For instance, if <span class="tex2jax_process">$x$</span>
+    is <span class="tex2jax_process">$808$</span> then the
+    resulting digit is <span class="tex2jax_process">$8$</span>,
+    because <span class="tex2jax_process">$8 \cdot 8 = 64$</span>,
+    <span class="tex2jax_process">$6 \cdot 4 = 24$</span>, and
+    <span class="tex2jax_process">$2 \cdot 4 = 8$</span>.</p>
+<p>However, Nikolaj is unsure about using this method, because
+    the distribution of resulting digits seems uneven to him. To
+    determine how the distribution looks, he writes a program that
+    given two integers <span class="tex2jax_process">$L$</span> and
+    <span class="tex2jax_process">$R$</span> determines how many
+    numbers in the interval <span class="tex2jax_process">$[L,
+    R]$</span> result in each digit.</p>
+<h2>Input</h2>
+<p>A single line consisting of two integers <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span> with <span class="tex2jax_process">$1 \leq L \leq R \leq 10^{15}$</span>.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$9$</span> integers
+    <span class="tex2jax_process">$a_1, a_2, \ldots , a_9$</span>
+    on a single line. The <span class="tex2jax_process">$i$</span>th number <span class="tex2jax_process">$a_ i$</span> is the number of integers
+    <span class="tex2jax_process">$x$</span> satisfying
+    <span class="tex2jax_process">$L \leq x \leq R$</span> such
+    that repeated multiplication of the nonzero digits of
+    <span class="tex2jax_process">$x$</span> results in the digit
+    <span class="tex2jax_process">$i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>50 100
+</pre>
+</td>
+<td>
+<pre>3 7 4 6 5 7 2 15 2 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+</pre>
+</td>
+<td>
+<pre>0 0 1 1 1 1 1 0 0 
+</pre>
+</td>
+</tr>
+</table>
+</div>

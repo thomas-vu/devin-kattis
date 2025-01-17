@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>The Minimum Weighted Vertex Cover (<span class="scshape">MWVC</span>) problem is to find the vertex cover with
+    the minimum sum of weights of a particular given graph.</p>
+<p>Your program should take as input a single MWVC instance. It
+    will be run several times, once for every test case. The time
+    limit is per test case.</p>
+<p>For simplicity, the graph will contain <span class="tex2jax_process">$N$</span> vertices and <span class="tex2jax_process">$E$</span> undirected edges. The vertices
+    will be labelled from <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$N-1$</span> and the graph
+    will not contain multi-edges or self-loop.</p>
+<h2>Input</h2>
+<p>The first line of standard input contains two integers:
+    <span class="tex2jax_process">$1 \leq N \leq 4000$</span> and
+    <span class="tex2jax_process">$0 \leq E \leq 600000$</span>
+    representing the number of vertices and edges respectively. The
+    second line of standard input contains <span class="tex2jax_process">$N$</span> integers. The <span class="tex2jax_process">$i^{th}$</span> integer represents the vertex
+    weight for the <span class="tex2jax_process">$i^{th}$</span>
+    vertex. All vertex weights are positive and will be not more
+    than 1 000 000. The following <span class="tex2jax_process">$E$</span> lines each contain a pair of
+    vertex numbers, <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span>. This denotes that
+    there is an undirected edge connecting vertices <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>. It is guaranteed that
+    <span class="tex2jax_process">$x \neq y$</span>.</p>
+<h2>Output</h2>
+<p>On the first line, output the total sum of vertex weights in
+    the vertex cover. On the second line, output up to <span class="tex2jax_process">$N$</span> vertices on a single line. These
+    <span class="tex2jax_process">$N$</span> vertices should not
+    contain duplicate values and should form a vertex cover. More
+    specifically, all vertex numbers must be within <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$N-1$</span> and there should not be two of
+    the same vertex number in the line.</p>
+<h2>Score</h2>
+<p>Let <span class="tex2jax_process">$Opt$</span> be the length
+    of an optimal minimum weighted vertex cover, <span class="tex2jax_process">$Val$</span> be the sum of vertex weights of
+    the vertex cover found by your solution, and <span class="tex2jax_process">$Naive$</span> be the sum of vertex weights
+    found by the algorithm below.</p>
+<p>Define <span class="tex2jax_process">$x=(Val - Opt)/(Naive -
+    Opt)$</span>. (In the special case that <span class="tex2jax_process">$Naive=Opt$</span>, define <span class="tex2jax_process">$x=0$</span> if <span class="tex2jax_process">$Val=Opt$</span>, and <span class="tex2jax_process">$x=\inf $</span> if <span class="tex2jax_process">$Val&gt;Opt$</span>.)</p>
+<p>The score on a test case is <span class="tex2jax_process">$0.02^{x}$</span>. Thus, if your vertex cover
+    is optimal, you will get 1 point on this test case. If your
+    score is halfway between <span class="tex2jax_process">$Naive$</span> and <span class="tex2jax_process">$Opt$</span>, you get roughly <span class="tex2jax_process">$0.14$</span> points. The total score of your
+    submission is the sum of your score over all test cases. There
+    will be a total of <span class="tex2jax_process">$40$</span>
+    test cases. Thus, an implementation of the algorithm below
+    should give a score of at least <span class="tex2jax_process">$0.8$</span> (it will get 0.02 points on most
+    test cases, and 1.0 points on some easy cases where it manages
+    to find an optimal solution).</p>
+<p>The algorithm giving the value <span class="tex2jax_process">$Naive$</span> is the as follows:</p>
+<pre>
+SimpleWVC(vertices, edges)
+  for every edge (u, v) in edges
+    if weight[u] &lt; weight[v]
+      used[u] = True
+    else if weight[u] &gt; weight[v]
+      used[v] = True
+    else if u &lt; v
+      used[u] = True
+    else
+      used[v] = True
+  
+  initialize vertex_cover to an empty list
+  for i = 0 to n-1
+    if used[i]
+      append i to vertex_cover
+  return vertex_cover
+</pre>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 9
+1 1 999 1 1 1 999 100
+0 1
+1 2
+1 4
+2 3
+2 5
+3 6
+4 5
+5 6
+6 7
+</pre>
+</td>
+<td>
+<pre>103
+1 3 5 7
+</pre>
+</td>
+</tr>
+</table>
+</div>

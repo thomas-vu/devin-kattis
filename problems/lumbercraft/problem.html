@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>In a variety of popular strategy games, you must harvest
+    materials in order to build up your forces and eventually
+    defeat your opponents (who are, of course, trying to do the
+    same thing). Let’s play a simplified version of this kind of
+    game. Here, a number of players (A, B, C <span class="tex2jax_process">$\ldots $</span>) are competing to harvest as
+    much lumber as possible.</p>
+<p>Each player has one lumber mill marked with the player’s
+    letter, and one lumberjack. In each turn, every player sends
+    their lumberjack out from their mill to cut down a tree and
+    return it to the mill. The lumberjack always chooses the tree
+    closest to the mill. If multiple trees are equally close, the
+    lumberjack chooses the one farthest to the east. If there is
+    still a tie, the lumberjack chooses the southernmost.</p>
+<p>If all goes well, each team gets to cut down one tree per
+    turn. However, if more than one lumberjack chooses the same
+    tree in a turn, they have to share the lumber. For example, if
+    three lumberjacks all choose the same tree, they each get
+    <span class="tex2jax_process">$1/3$</span> of the wood. Once
+    all the trees are gone, no player can accumulate more lumber.
+    Your job is to display the map and report how much lumber each
+    player accumulates after a given number of turns.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$20$</span> test cases. Each test case starts
+    with a line containing three integers, <span class="tex2jax_process">$1 \leq n \leq 100$</span>, <span class="tex2jax_process">$1 \leq h \leq 50$</span> and <span class="tex2jax_process">$1 \leq w \leq 50$</span>. The values for
+    <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span> give the height and width of the
+    map. The value of <span class="tex2jax_process">$n$</span> is
+    the number of turns the players have to harvest lumber. The
+    next <span class="tex2jax_process">$h$</span> input lines give
+    the initial state of the map, and each line is <span class="tex2jax_process">$w$</span> characters long. In the map,
+    <tt>!</tt> represents a tree, <tt>.</tt> represents a tree
+    stump and the uppercase letters <tt>A</tt> through <tt>Z</tt>
+    represent the mill locations for up to <span class="tex2jax_process">$26$</span> players. A line containing three
+    zeros terminates the input.</p>
+<h2>Output</h2>
+<p>For each test case, output the state of the map after
+    <span class="tex2jax_process">$n$</span> turns and the amount
+    of lumber accumulated by each player, ordered alphabetically.
+    For each player, output the player’s letter and then the lumber
+    total, accurate within <span class="tex2jax_process">$0.01$</span> units.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 10 10
+!!!!!!.!!!
+!!!!!.B.!!
+!!!!!!.!!!
+!!!!.!!!!!
+!!!...!!!!
+.!!!.!!!!!
+..!!!!!!Z!
+.!!!!!!!!!
+!A!!!!!!!.
+!!!!!!!!!!
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+!!!!!....!
+!!!!..B..!
+!!!!!....!
+!!!!.!..!!
+!!!...!!.!
+.!!!.!!...
+..!!!!!.Z.
+....!!!...
+.A..!!!!..
+....!!!!!!
+A 10.000000
+B 10.000000
+Z 10.000000
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

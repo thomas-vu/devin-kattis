@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/bloopergame/file/statement/en/img-0001.png" class="illustration" src="/problems/bloopergame/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Mario is competing in the most important elimination game of
+    his entire life. He has been given a dalgona cookie, which is a
+    cookie made out of caramelized sugar, that has a shape with
+    <span class="tex2jax_process">$N$</span> sides etched into its
+    surface. He also have a sewing needle that he is using to cut
+    out the shape that is on the cookie. It sounds easy enough but
+    if he messes up any of the edges and breaks the cookie, he will
+    be inked by a Blooper and eliminated. As it currently stands,
+    if he tries to cut an edge of length <span class="tex2jax_process">$s$</span> from the shape, he has a
+    probability of <span class="tex2jax_process">$\frac{1}{s}$</span> of succeeding at the
+    cut. The chances of him successfully cutting every edge, and
+    thus cutting out the shape from the cookie, is quite slim so he
+    devises a strategy to succeed. At any point in time, he can
+    lick a single edge of the shape, and by licking away some of
+    the sugar, this raises the probability of cutting <b class="bfseries">that</b> edge to the <span class="tex2jax_process">$P$</span>-th power <span class="tex2jax_process">$(0 &lt; P &lt; 1)$</span>, thus improving
+    his chances at avoiding the icky inkage. Mario can also lick
+    the same edge multiple times if he thinks that will be optimal,
+    in which case the probability of cutting that edge is raised to
+    the <span class="tex2jax_process">$P$</span>-th power for every
+    lick. However, time is running out so he can only lick
+    <span class="tex2jax_process">$L$</span> times before time runs
+    out. What is the maximum probability of avoiding the icky
+    inkage after time runs out?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(3
+    \leq N \leq 100\, 000)$</span> and <span class="tex2jax_process">$L$</span> <span class="tex2jax_process">$(0
+    \leq L \leq 10^9)$</span> and a real number <span class="tex2jax_process">$P$</span> <span class="tex2jax_process">$(0
+    &lt; P &lt; 1)$</span>, representing the number of sides of the
+    shape that is etched into the cookie, the number of licks Mario
+    can make before time runs out, and the power that each side’s
+    probability is raised to after a lick respectively.
+    <span class="tex2jax_process">$P$</span> will contain at most
+    <span class="tex2jax_process">$7$</span> digits after the
+    decimal point.<br/>
+    Another <span class="tex2jax_process">$N$</span> lines follow
+    with a single integer <span class="tex2jax_process">$s_
+    i$</span> <span class="tex2jax_process">$(1 \leq s_ i \leq
+    10^9)$</span> representing a side length of the cookie. Note
+    that the sides are not necessarily straight, so these side
+    lengths may not necessarily follow the triangle inequality.</p>
+<h2>Output</h2>
+<p>Output one line containing a single real number <span class="tex2jax_process">$d$</span> equal to the maximum probability
+    of avoiding getting inked, assuming he uses his licks wisely.
+    Your answer should not exceed an absolute or relative error of
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1 0.5
+2
+2
+2
+</pre>
+</td>
+<td>
+<pre>0.1767767
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 10 0.25
+7
+7
+5
+1
+9
+1
+9
+5
+2
+6
+</pre>
+</td>
+<td>
+<pre>0.0690066
+</pre>
+</td>
+</tr>
+</table>
+</div>

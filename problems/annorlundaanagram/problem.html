@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Consider a string of <span class="tex2jax_process">$N$</span> letters, where <span class="tex2jax_process">$N$</span> is an even number. Rearrange the
+    letters such that all <span class="tex2jax_process">$N/2+1$</span> substrings of length
+    <span class="tex2jax_process">$N/2$</span> are different.</p>
+<h2>Input</h2>
+<p>A single line containing string <span class="tex2jax_process">$S$</span> of length <span class="tex2jax_process">$N$</span>, where <span class="tex2jax_process">$2 \leq N \leq 10^5$</span> and <span class="tex2jax_process">$N$</span> is even. The string consists of
+    lower-case letters from the English alphabet, “a” to “z”.</p>
+<h2>Output</h2>
+<p>If possible, print a string of length <span class="tex2jax_process">$N$</span> that is a rearrangement of the
+    letters in <span class="tex2jax_process">$S$</span> such that
+    all substrings of length <span class="tex2jax_process">$N/2$</span> are different. If this is
+    impossible, print <span class="tex2jax_process">$-1$</span>.</p>
+<p>If there is more than one solution, any one will do.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first example, the substrings before rearrangement
+    are “tral”, “rala”, “alal”, “lala”, and “alal”. Note that
+    “alal” appears twice. After the rearrangement, all substrings
+    are different.</p>
+<p>In the third example, all substrings are different already
+    in the input, so it suffices to print the original string.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>tralalal
+</pre>
+</td>
+<td>
+<pre>allatral
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>zzzz
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>annorlunda
+</pre>
+</td>
+<td>
+<pre>annorlunda
+</pre>
+</td>
+</tr>
+</table>
+</div>

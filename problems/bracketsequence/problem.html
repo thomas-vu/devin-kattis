@@ -1,0 +1,163 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bracketsequence/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bracketsequence/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Two great friends, Eddie John and Kris Cross, are attending
+    the Brackets Are Perfection Conference. They wholeheartedly
+    agree with the main message of the conference and they are
+    delighted with all the new things they learn about
+    brackets.</p>
+<p>One of these things is a <em>bracket sequence</em>. If you
+    want to do a computation with <span class="tex2jax_process">$+$</span> and <span class="tex2jax_process">$\times $</span>, you usually write it like
+    so:</p><span class="tex2jax_process">\[ (2 \times (2 + 1 + 0 +
+    1) \times 1) + 3 + 2. \]</span>
+<p>The brackets are only used to group multiplications and
+    additions together. This means that you can remove all the
+    operators, as long as you remember that addition is used for
+    numbers outside any parentheses! A <em>bracket sequence</em>
+    can then be shortened to</p><span class="tex2jax_process">\[
+    (\; 2 \; ( \; 2 \; 1 \; 0 \; 1 \; ) \; 1 \; ) \; 3 \; 2.
+    \]</span>
+<p>That is much better, because it saves on writing all those
+    operators. Reading bracket sequences is easy, too. Suppose you
+    have the following bracket sequence</p><span class="tex2jax_process">\[ 5 \; 2 \; (\; 3 \; 1 \; (\; 2 \; 2 \; ) \;
+    ( \; 3 \; 3 \; ) \; 1 \; ). \]</span>
+<p>You start with addition, so this is the same as the
+    following:</p><span class="tex2jax_process">\[ 5 + 2 + (\; 3 \;
+    1 \; (\; 2 \; 2 \; ) \; ( \; 3 \; 3 \; ) \; 1 \; ). \]</span>
+<p>You know the parentheses group a multiplication, so this is
+    equal to</p><span class="tex2jax_process">\[ 5 + 2 + (3 \times
+    1 \times (\; 2 \; 2 \; ) \times ( \; 3 \; 3 \; ) \times 1).
+    \]</span>
+<p>Then there is another level of parentheses: that groups an
+    operation within a multiplication, so the operation must be
+    addition.</p><span class="tex2jax_process">\[ 5 + 2 + (3 \times
+    1 \times (2 + 2 ) \times (3 + 3) \times 1 ) = 5 + 2 + (3 \times
+    1 \times 4 \times 6 \times 1) = 5+2 + 72 = 79. \]</span>
+<p>Since bracket sequences are so much easier than normal
+    expressions with operators, it should be easy to evaluate some
+    big ones. We will even allow you to write a program to do it
+    for you.</p>
+<p>Note that <span class="tex2jax_process">$(\; )$</span> is
+    not a valid bracket sequence, nor a subsequence of any valid
+    bracket sequence.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing a single integer <span class="tex2jax_process">$1\leq n\leq 3\cdot 10^5$</span>.</p>
+</li>
+<li>
+<p>One line consisting of <span class="tex2jax_process">$n$</span> tokens, each being either
+        <tt class="ttfamily">(</tt>, <tt class="ttfamily">)</tt>,
+        or an integer <span class="tex2jax_process">$0\leq x &lt;
+        10^9+7$</span>. It is guaranteed that the tokens form a
+        bracket sequence.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the value of the given bracket sequence. Since this
+    may be very large, you should print it modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 3
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+( 2 ( 2 1 ) ) 3
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+( 12 3 )
+</pre>
+</td>
+<td>
+<pre>36
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>6
+( 2 ) ( 3 )
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>6
+( ( 2 3 ) )
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>11
+1 ( 0 ( 583920 ( 2839 82 ) ) )
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

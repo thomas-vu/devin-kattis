@@ -1,0 +1,163 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/skotleikur/file/statement/en/img-0001.jpg" class="illustration" src="/problems/skotleikur/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Mynd fengin af <a href="https://www.flickr.com/photos/anporsche/28698595812/">flickr.com</a>
+</div>
+</div>
+<p>Recently, Elvar has been playing the new shooter that
+    everyone is playing; Medal of Valor: Contemporary Tactics
+    2.</p>
+<p>Elvar has finally played long enough to unlock access to his
+    favourite gun, but whenever he uses it, he notices that it is
+    not particularly good, and other players always seem to get the
+    kill on Elvar’s target.</p>
+<p>That’s why Elvar has been thinking how many <em>kills</em>
+    and how many <em>assists</em>, which is when you’ve hit a
+    target but an ally gets the kill, he has truly gotten in the
+    time he has been using this gun.</p>
+<p>The issue is that in MoV: CT2, you are only shown the number
+    of points you have, where each kill grants <span class="tex2jax_process">$a$</span> points, and each assist grants
+    <span class="tex2jax_process">$b$</span> points.</p>
+<p>You would like to help Elvar by writing a program, which
+    accepts the total number of points <span class="tex2jax_process">$K$</span> that Elvar scored in a match, the
+    number of points each kill grants and the number of points each
+    assist grants. The program then computes all possible
+    combinations of kills and assists which would grant Elvar
+    <span class="tex2jax_process">$K$</span> points total.</p>
+<p>You may assume that Elvar has been using his favourite gun
+    for the entire match.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$K$</span>, the total number of
+    points Elvar scored in the match. The second line of the input
+    contains a single integer <span class="tex2jax_process">$a$</span>, the number of points each kill
+    grants. The third and final lines of the input contains a
+    single integer <span class="tex2jax_process">$b$</span>, the
+    number of points each assist grants.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span>, the total
+    number of combinations of kills and asists which would grant
+    Elvar <span class="tex2jax_process">$K$</span> points total.
+    After that you should output each of the <span class="tex2jax_process">$N$</span> combinations. Each combination
+    consists of two space separated integers <span class="tex2jax_process">$x_ i$</span>, which represents the number of
+    kills in the <span class="tex2jax_process">$i$</span>-th
+    combination, and <span class="tex2jax_process">$y_ i$</span>,
+    which represents the number of assists in the <span class="tex2jax_process">$i$</span>-th combination, for <span class="tex2jax_process">$1 \leq i \leq N$</span>.</p>
+<p>The order of the combinations does not matter.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$a = 100$</span>,
+          <span class="tex2jax_process">$b = 50$</span>,
+          <span class="tex2jax_process">$0 \leq K \leq 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq a, b \leq 1\,
+          000$</span>, <span class="tex2jax_process">$0 \leq
+          \frac{K}{a} \leq 500$</span>, <span class="tex2jax_process">$0 \leq \frac{K}{b} \leq
+          500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq a, b \leq 1\,
+          000$</span>, <span class="tex2jax_process">$0 \leq
+          \frac{K}{a} \leq 10^5$</span>, <span class="tex2jax_process">$0 \leq \frac{K}{b} \leq
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>150
+100
+50
+</pre>
+</td>
+<td>
+<pre>2
+0 3
+1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+10
+5
+</pre>
+</td>
+<td>
+<pre>2
+0 2
+1 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0
+100
+50
+</pre>
+</td>
+<td>
+<pre>1
+0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

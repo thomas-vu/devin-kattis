@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>Your friend Sue B. Tree, of the Rootingford Trees is facing
+    a problem. Her clan of well-known algorithmic problem solvers
+    has a large painting of their family tree hanging on the wall,
+    tracing the lineage of the <span class="tex2jax_process">$N$</span> family members all the way back to
+    Enar E. Tree himself, known for the invention of the B-tree
+    data structure. After some <span class="tex2jax_process">$32$</span> generations or so, many names on
+    the painting have faded so much that nobody knows exactly which
+    vertex in the family tree belongs to the founder of the
+    clan.</p>
+<p>Sue has managed to read the names of some adjacent pairs of
+    names for which she knows which one of them is the parent of
+    the other. Given the layout of the family tree and the list of
+    known parental relations, can you help Sue figure out what
+    vertices in the tree could possibly represent Enar E. Tree? It
+    is known that each person (except Enar) has exactly one parent
+    within the clan – causing cycles in the family tree is grounds
+    for immediate excommunication.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100\, 000$</span>), the number of family members on
+    the painting. Each family member is numbered between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$N - 1$</span>, inclusive.</p>
+<p>The next <span class="tex2jax_process">$N - 1$</span> lines
+    describes the parental relations on the painting. Each line has
+    the format <tt class="ttfamily">a &gt; b</tt> or <tt class="ttfamily">a ? b</tt>, where <span class="tex2jax_process">$0
+    \le a \neq b &lt; N - 1$</span> are two integers. The first
+    format means that Sue knows that <span class="tex2jax_process">$a$</span> is the parent of <span class="tex2jax_process">$b$</span>, while the second one means that
+    Sue does not know which person is the parent of the other.</p>
+<p>It is guaranteed that there exists at least one vertex that
+    could correspond to Enar.</p>
+<h2>Output</h2>
+<p>Output, <b class="bfseries">in increasing order</b>, the
+    numbers of the family members on the painting who could be
+    Enar, separated by spaces.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>0 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 &gt; 1
+</pre>
+</td>
+<td>
+<pre>0 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 ? 0
+</pre>
+</td>
+<td>
+<pre>0 1 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 ? 2
+0 &gt; 1
+</pre>
+</td>
+<td>
+<pre>0 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 ? 0
+1 &gt; 2
+</pre>
+</td>
+<td>
+<pre>0 1 
+</pre>
+</td>
+</tr>
+</table>
+</div>

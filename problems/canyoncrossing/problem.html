@@ -1,0 +1,139 @@
+<div class="problembody">
+<p>The Bridge And Passageway Creators are responsible for
+    making new paths through the local mountains. They have
+    approved your plan to build a new route through your favorite
+    canyon. You feverishly start working on this beautiful new
+    path, when you realize you failed to take into account the flow
+    of a nearby river: the canyon is flooded! Apparently this
+    happens once every blue moon, making some parts of the path
+    inaccessible. Because of this, you want to build a path such
+    that the lowest point on the path is as high as possible. You
+    quickly return to the village and use all of your money to buy
+    rope bridges. You plan to use these to circumvent the lowest
+    parts of the canyon.</p>
+<div class="figure" id="fig:C1">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{fig1}" src="/problems/canyoncrossing/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Canyon and two possible paths with
+          minimal height <span class="tex2jax_process">$1$</span>
+          and <span class="tex2jax_process">$2$</span> for sample
+          input <span class="tex2jax_process">$1$</span>. The
+          <tt class="ttfamily">B</tt> indicate bridges.
+        </div>
+</center>
+</div>
+<p>Your map of the canyon consists of a rectangular grid of
+    cells, each containing a number giving the height of the
+    terrain at that cell. The path will go from the south side of
+    the canyon (bottom on your map) to the north side (top of your
+    map), moving through a connected sequence of cells. Two cells
+    are considered connected if and only if they share an edge. In
+    particular, two diagonally touching cells are not considered to
+    be connected. This means that for any cell not on the edge of
+    the map, there are <span class="tex2jax_process">$4$</span>
+    other cells connected to it. The left of figure 1 contains the
+    map for the first sample input.</p>
+<p>The path through the canyon can start on any of the bottom
+    cells of the grid, and end on any of the cells in the top tow,
+    like the two paths on the right in 1. The lowest height is
+    given by the lowest height of any of the cells the paths goes
+    through. Each bridge can be used to cross exactly one cell.
+    This cell is then not taken into account when calculating the
+    minimal height of the path. Note that is allowed to chain
+    multiple bridges to use them to cross multiple cells,</p>
+<p>Given the map of the canyon and the number of bridges
+    available, find the lowest height of an optimal path.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{fig2}" src="/problems/canyoncrossing/file/statement/en/img-0002.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Canyon and an optimal path for sample
+          input <span class="tex2jax_process">$2$</span>.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>A single line containing three integers: <span class="tex2jax_process">$1\leq R\leq 1\, 000$</span> and
+        <span class="tex2jax_process">$1\leq C\leq 1\, 000$</span>,
+        the size of the map, and <span class="tex2jax_process">$0\leq K\leq R-1$</span>, the number of
+        bridges you can build.</p>
+</li>
+<li>
+<p>This is followed by <span class="tex2jax_process">$R$</span> lines each containing
+        <span class="tex2jax_process">$C$</span> integers. The
+        <span class="tex2jax_process">$j$</span>-th integer on the
+        <span class="tex2jax_process">$i$</span>-th line
+        corresponds to the height <span class="tex2jax_process">$0\leq H_{i,j} \leq 10^9$</span> of the
+        canyon at point <span class="tex2jax_process">$(i,j)$</span>. The first line
+        corresponds to the northern edge of the canyon, the last
+        line to the southern edge.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output a single integer, the lowest height of the optimal
+    path.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 1
+1 1 3
+3 3 3
+0 0 0
+2 2 1
+1 2 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 3
+2 1 1
+2 1 1
+1 1 1
+1 1 2
+1 1 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 2
+1 1
+4 4
+1 2
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,108 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bungeejumping/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bungeejumping/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Once again, James Bond is fleeing from some evil people who
+    want to see him dead. Fortunately, he has left a bungee rope on
+    a nearby highway bridge which he can use to escape from his
+    enemies. His plan is to attach one end of the rope to the
+    bridge, the other end of the rope to his body and jump off the
+    bridge. At the moment he reaches the ground, he will cut the
+    rope, jump into his car and be gone.</p>
+<p>Unfortunately, he had not had enough time to calculate
+    whether the bungee rope has the right length, so it is not
+    clear at all what is going to happen when he jumps off the
+    bridge. There are three possible scenarios:</p>
+<ul class="itemize">
+<li>
+<p>The rope is too short (or too strong), and James Bond
+        will never reach the ground.</p>
+</li>
+<li>
+<p>The rope is too long (or too weak), and James Bond will
+        be going too fast when he touches the ground. Even for a
+        special agent, this can be very dangerous. You may assume
+        that if he collides at a speed of more than 10 m/s, he will
+        not survive the impact.</p>
+</li>
+<li>
+<p>The rope’s length and strength are good. James Bond
+        touches the ground at a comfortable speed and can
+        escape.</p>
+</li>
+</ul>
+<p>As his employer, you would like to know whether James Bond
+    survives or whether you should place a job ad for the
+    soon-to-be vacant position in the local newspaper. Your
+    physicists claim that:</p>
+<ul class="itemize">
+<li>
+<p>The force with which James is pulled towards the earth
+        is</p><span class="tex2jax_process">\[ 9.81 * w, \]</span>
+<p>where <span class="tex2jax_process">$w$</span> is his
+        weight in kilograms and 9.81 is the Earth acceleration in
+        meters over squared seconds.</p>
+</li>
+<li>
+<p>Mr. Bond falls freely until the rope tautens. Then the
+        force with which the bungee rope pulls him back into the
+        sky depends on the current length of the rope and
+        is</p><span class="tex2jax_process">\[ k * \Delta l,
+        \]</span>
+<p>where <span class="tex2jax_process">$\Delta l$</span> is
+        the difference between the rope’s current length and its
+        nominal, unexpanded length, and <span class="tex2jax_process">$k$</span> is a rope-specific
+        constant.</p>
+</li>
+</ul>
+<p>Given the rope’s strength <span class="tex2jax_process">$k$</span>, the nominal length of the rope
+    <span class="tex2jax_process">$l$</span> in meters, the height
+    of the bridge <span class="tex2jax_process">$s$</span> in
+    meters, and James Bond’s body weight <span class="tex2jax_process">$w$</span>, you have to determine what is
+    going to happen to our hero. For all your calculations, you may
+    assume that James Bond is a point at the end of the rope and
+    the rope has no mass. You may further assume that <span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$l$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$w$</span> are non-negative and that
+    <span class="tex2jax_process">$s$</span> &lt; 200.</p>
+<p>The input contains several test cases, one test case per
+    line. Each test case consists of four floating-point numbers
+    (<span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$l$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$w$</span>) that describe the situation.
+    Depending on what is going to happen, your program must print
+    "<tt>Stuck in the air.</tt>", "<tt>Killed by the impact.</tt>",
+    or "<tt>James Bond survives.</tt>". Input is terminated by a
+    line containing four 0s, this line should not be processed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+350 20 30 75
+375 20 30 75
+400 20 30 75
+425 20 30 75
+450 20 30 75
+400 20 30 50
+400 20 30 80
+400 20 30 85
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+Killed by the impact.
+James Bond survives. 
+James Bond survives. 
+James Bond survives. 
+Stuck in the air.
+Stuck in the air.
+James Bond survives. 
+Killed by the impact.
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

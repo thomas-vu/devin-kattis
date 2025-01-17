@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/allaboutthatbase/file/statement/en/img-0001.jpg" class="illustration" src="/problems/allaboutthatbase/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/rwoan/15812368967/">Ronald
+        Woan</a>
+</div>
+</div>
+<p>The <em>base</em> (or <em>radix</em>) of a positional
+    numeral system is the number of symbols that can be used to
+    represent a number in that system. The base <span class="tex2jax_process">$10$</span> system (also known as decimal)
+    uses <span class="tex2jax_process">$10$</span> distinct
+    symbols: <span class="tex2jax_process">$0, 1, \ldots ,
+    9$</span>. For example, we interpret the number <span class="tex2jax_process">$72345$</span> as:</p><span class="tex2jax_process">\[ 7 \times 10^4 + 2 \times 10^3 + 3 \times
+    10^2 + 4 \times 10^1 + 5 \times 10^0. \]</span>
+<p>This example illustrates that in base <span class="tex2jax_process">$10$</span> the symbol at place <span class="tex2jax_process">$P\ge 0$</span> (starting from the right) is
+    multiplied by <span class="tex2jax_process">$10^ P$</span> to
+    get its value. More generally, in base <span class="tex2jax_process">$B$</span> we use <span class="tex2jax_process">$B$</span> symbols to represent <span class="tex2jax_process">$0, \ldots , B-1$</span>, and the symbol at
+    the <span class="tex2jax_process">$P$</span>th place is
+    multiplied by <span class="tex2jax_process">$B^ P$</span> to
+    get its value.</p>
+<p>Other bases commonly used in computation include base
+    <span class="tex2jax_process">$2$</span> (or binary, using
+    symbols <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$1$</span>), base <span class="tex2jax_process">$8$</span> (or octal, using symbols
+    <span class="tex2jax_process">$0$</span>–<span class="tex2jax_process">$7$</span>), and base <span class="tex2jax_process">$16$</span> (or hexadecimal, using symbols
+    <span class="tex2jax_process">$0$</span>–<span class="tex2jax_process">$9$</span> and <span class="tex2jax_process">$a$</span>–<span class="tex2jax_process">$f$</span>). In bases higher than
+    <span class="tex2jax_process">$10$</span>, letters represent
+    the higher values. Thus in hexadecimal <span class="tex2jax_process">$a$</span>–<span class="tex2jax_process">$f$</span> represent the decimal values
+    <span class="tex2jax_process">$10$</span>–<span class="tex2jax_process">$15$</span>, and in bases <span class="tex2jax_process">$\ge 36$</span> the letter <span class="tex2jax_process">$z$</span> represents the decimal value
+    <span class="tex2jax_process">$35$</span>.</p>
+<p>Your job is to determine the bases in which given arithmetic
+    expressions are valid. We define an expression as
+    <em>valid</em> in base <span class="tex2jax_process">$B$</span>
+    if two conditions are true. First, all the operands used are
+    interpretable in base <span class="tex2jax_process">$B$</span>
+    as having values in the decimal range <span class="tex2jax_process">$[1,2^{32}-1]$</span>. Second, the expression
+    is true. Any arbitrary expression might be valid in zero, one,
+    or more bases. In this problem we will only consider bases
+    <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$36$</span>, where base <span class="tex2jax_process">$1$</span> is unary.</p>
+<p>Note that following the convention listed above, unary would
+    consist of a single symbol: <span class="tex2jax_process">$0$</span>. In this problem, unary numbers
+    use the symbol <span class="tex2jax_process">$1$</span> rather
+    than <span class="tex2jax_process">$0$</span> (think “tally
+    marks”). E.g., <span class="tex2jax_process">$111$</span> in
+    unary is equivalent to the decimal number <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$1111111$</span> in unary is equivalent to
+    the decimal number <span class="tex2jax_process">$7$</span>.</p>
+<h2>Input</h2>
+<p>Input for this problem starts with a line containing an
+    integer <span class="tex2jax_process">$0\le N \le 20$</span>.
+    The following <span class="tex2jax_process">$N$</span> lines
+    each contain an arithmetic expression with the following
+    form:</p><span class="tex2jax_process">\[ X ~ op ~ Y ~ = ~ Z
+    \]</span>
+<p>where <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$Z$</span> are positive, whole numbers
+    consisting of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$100$</span> symbols from the set
+    <span class="tex2jax_process">$0$</span>–<span class="tex2jax_process">$9$</span> and <span class="tex2jax_process">$a$</span>–<span class="tex2jax_process">$z$</span>, and <span class="tex2jax_process">$op$</span> is one of the four operators
+    <tt class="tt">+, -, *, /</tt>. For each statement there is at
+    least one base <span class="tex2jax_process">$1\le B \le
+    36$</span> such that <span class="tex2jax_process">$X$</span>,
+    <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$Z$</span> can all be interpreted in base
+    <span class="tex2jax_process">$B$</span> as having values in
+    the decimal range <span class="tex2jax_process">$[1,2^{32}-1]$</span>.</p>
+<h2>Output</h2>
+<p>For each expression, list the bases in which the expression
+    is valid (sorted in ascending base order) or the word “invalid”
+    if the expression not valid in any of the bases <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$36$</span>. Use symbols <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$9$</span>, then <span class="tex2jax_process">$a$</span>–<span class="tex2jax_process">$z$</span>, then <span class="tex2jax_process">$0$</span> to represent bases <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$36$</span> (with the last symbol,
+    <span class="tex2jax_process">$0$</span>, representing base
+    <span class="tex2jax_process">$36$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+6ef + d1 = 7c0
+3 / 2 = 1
+444 / 2 = 222
+10111 * 11 = 1000101
+10111 * 11 = 111221
+5k - 1z = 46
+1111111111 - 1111111 = 111
+2048 - 512 = 1536
+</pre>
+</td>
+<td>
+<pre>
+g
+invalid
+56789abcdefghijklmnopqrstuvwxyz0
+2
+3456789abcdefghijklmnopqrstuvwxyz0
+invalid
+1
+a
+</pre>
+</td>
+</tr>
+</table>
+</div>

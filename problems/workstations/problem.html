@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:48.00%">
+<img alt="/problems/workstations/file/statement/en/img-0001.jpg" class="illustration" src="/problems/workstations/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by NASA via <a href="https://upload.wikimedia.org/wikipedia/commons/1/19/STS-128_ISS-20_Destiny_Canadarm2.jpg">
+        WikiMedia Commons</a>
+</div>
+</div>Penelope is part of the admin team of the newly built
+    supercomputer. Her job is to assign workstations to the
+    researchers who come here to run their computations at the
+    supercomputer.
+
+    <p>Penelope is very lazy and hates unlocking machines for the
+    arriving researchers. She can unlock the machines remotely from
+    her desk, but does not feel that this menial task matches her
+    qualifications. Should she decide to ignore the security
+    guidelines she could simply ask the researchers not to lock
+    their workstations when they leave, and then assign new
+    researchers to workstations that are not used any more but that
+    are still unlocked. That way, she only needs to unlock each
+    workstation for the first researcher using it, which would be a
+    huge improvement for Penelope.</p>
+<p>Unfortunately, unused workstations lock themselves
+    automatically if they are unused for more than <span class="tex2jax_process">$m$</span> minutes. After a workstation has
+    locked itself, Penelope has to unlock it again for the next
+    researcher using it. Given the exact schedule of arriving and
+    leaving researchers, can you tell Penelope how many unlockings
+    she may save by asking the researchers not to lock their
+    workstations when they leave and assigning arriving researchers
+    to workstations in an optimal way? You may assume that there
+    are always enough workstations available.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 300\, 000$</span>), the
+        number of researchers, and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq m \leq 10^8$</span>), the number
+        of minutes of inactivity after which a workstation locks
+        itself;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each with
+        two integers <span class="tex2jax_process">$a$</span> and
+        <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1 \leq a, s \leq 10^8$</span>),
+        representing a researcher that arrives after <span class="tex2jax_process">$a$</span> minutes and stays for exactly
+        <span class="tex2jax_process">$s$</span> minutes.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the maximum number of unlockings Penelope may save
+    herself.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+1 5
+6 3
+14 6
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 10
+2 6
+1 2
+17 7
+3 9
+15 6
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

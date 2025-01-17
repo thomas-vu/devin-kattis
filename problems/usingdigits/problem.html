@@ -1,0 +1,130 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/usingdigits/file/statement/en/img-0001.png" class="illustration" src="/problems/usingdigits/file/statement/en/img-0001.png"/>
+<div class="description">
+        From Gorman Lobby at University of Dallas
+      </div>
+</div>As the door slams shut behind Agent Youdy, he realizes
+    that his daring escape from his arch-enemy’s lair is not quite
+    done. Before him lies a grid of numbered squares, and off in
+    the distance he sees the exit door. He recognizes this setup
+    from his training. It’s a Sum Trap, and works as follows:
+    <p>He must begin by stepping onto the square closest to
+    himself, which we can think of as square <span class="tex2jax_process">$(1, 1)$</span>, and walk to some other
+    square, which we can think of as square <span class="tex2jax_process">$(X, Y)$</span> for some <span class="tex2jax_process">$X, Y &gt; 1$</span>. Each step he takes is
+    in either the positive-X or positive-Y direction, one square at
+    a time. Every square has a number on it in the range
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$9$</span>, and the grid carefully monitors
+    which squares he steps on. When he reaches the door, if the sum
+    of the squares that he stepped on is sufficiently small, the
+    door will open and he will be free. If not, he will be trapped
+    forever.</p>
+<p>After scanning the board for a while Agent Youdy becomes
+    convinced that there is no path to success. But then he
+    remembers a cryptic Code Key that he found while searching the
+    lair. He reaches into his pocket and removes a paper with a
+    large integer on it, each of whose digits is in the range
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$9$</span>. His training kicks in again, and
+    he remembers the way this works: whenever he wishes, he may use
+    the leading digit of the key, which permits him to hop over
+    exactly that many squares. Whenever he uses a leading digit, it
+    is removed from the number. Note that hops, no matter how far,
+    change only his <span class="tex2jax_process">$x$</span>- or
+    <span class="tex2jax_process">$y$</span>-coordinate, but not
+    both.</p>
+<p>For example, starting at the “1” on the bottom left corner
+    in the figure shown, with Code Key <span class="tex2jax_process">$11$</span>, his best path is step right,
+    step right, hop right, hop up, step right, step up, for a total
+    of <span class="tex2jax_process">$1+0+3+2+1+1+8=16$</span>. But
+    starting with Code Key <span class="tex2jax_process">$12$</span>, his best path is step right, hop
+    up, hop right, step right, step up, for a total of <span class="tex2jax_process">$18$</span>.</p>
+<div class="figure" id="fig">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{sample.png}" src="/problems/usingdigits/file/statement/en/img-0002.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration for the sample inputs.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers <span class="tex2jax_process">$X$</span> and
+    <span class="tex2jax_process">$Y$</span>, giving the width and
+    height of the grid (<span class="tex2jax_process">$1\leq X, Y
+    \leq 100$</span>). The next line contains a positive integer,
+    the Code Key, guaranteed to be less than <span class="tex2jax_process">$10^{50}$</span> and containing only positive
+    digits. Then follow <span class="tex2jax_process">$Y$</span>
+    lines, each containing <span class="tex2jax_process">$X$</span>
+    digits, giving the numbers on the grid of squares. The last
+    digit of the first of these lines represents Agent Youdy’s
+    destination, and the first digit of the last line represents
+    his starting square.</p>
+<h2>Output</h2>
+<p>The smallest sum possible on a path from <span class="tex2jax_process">$(1, 1)$</span> to <span class="tex2jax_process">$(X, Y)$</span>, including the endpoints.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 4
+11
+329178
+978211
+837698
+103725
+</pre>
+</td>
+<td>
+<pre>16
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 4
+12
+329178
+978211
+837698
+103725
+</pre>
+</td>
+<td>
+<pre>18
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 4
+23232345
+329178
+978211
+837698
+103725
+</pre>
+</td>
+<td>
+<pre>11
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

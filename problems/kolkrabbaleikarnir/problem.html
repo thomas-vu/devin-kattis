@@ -1,0 +1,172 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/kolkrabbaleikarnir/file/statement/en/img-0001.jpg" class="illustration" src="/problems/kolkrabbaleikarnir/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://upload.wikimedia.org/wikipedia/commons/9/96/Hongya_Valley_glass_bridge_(cropped).jpg">
+        wikimedia.org</a>
+</div>
+</div>
+<p>The Oktopus Games 2022 have begun. Arnar, also known as
+    Oktopus, invited a number of contestants to participate in this
+    exciting contest, in which the prize is a large sum of cash.
+    The contest includes multiple different games. At the start of
+    the contest, the number of contestants was <span class="tex2jax_process">$1\, 234\, 567$</span>, but after competing
+    in the past four games, many contestants have been eliminated.
+    Therefore only <span class="tex2jax_process">$m$</span>
+    contestants remain.</p>
+<p>It is now time for the fifth game and the contestants have
+    been put in a single queue. The person at the front of the
+    queue is none other than Hlini. He steps into the gameroom and
+    realizes that he stands on a platform. On the other side of the
+    room is another platform, and between the platforms is a long
+    bridge. However, this is no ordinary bridge. The bridge
+    consists of <span class="tex2jax_process">$n$</span> rows,
+    where each row has two glass tiles. The contestants must cross
+    the glass bridge by picking either glass tile in each row.</p>
+<p>The glass tiles look identical, but not everything is as it
+    seems and assuming so may prove fatal. One of the tiles is made
+    of tempered glass and can support the weight of a person. The
+    other tile is made of ordinary glass and will break under the
+    weight of a person. The contestant would then fall down and be
+    eliminated.</p>
+<p>After Arnar explains the rules, Hlini exclaims: “This is
+    just fifty-fifty, either I cross or I don’t.” Arnar explains to
+    him that his statement is incorrect, since for each step he
+    takes there is a fifty-fifty chance of him guessing correctly.
+    Each contestant, except for Hlini, has perfect memory. Each
+    contestant has a perfect sense of balance.</p>
+<p>There are many members in the audience and a common minigame
+    for them is guessing how many contestants will remain at the
+    end of each game. What is the expected number of contestants
+    after this game?</p>
+<h2>Input</h2>
+<p>Input is a single line with two integers <span class="tex2jax_process">$n$</span>, the number of rows in the bridge,
+    and <span class="tex2jax_process">$m$</span>, the number of
+    contestants in the game, where <span class="tex2jax_process">$0
+    \leq n \leq 10^6$</span> and <span class="tex2jax_process">$0
+    \leq m \leq 10^6$</span>.</p>
+<h2>Output</h2>
+<p>Your output should consist of a single line with a single
+    real number, the expected number of contestants at the end of
+    the game. The output should have an absolute or relative error
+    of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The bridge has one row.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Hlini is the only remaining contestant.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, m \leq
+          10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, m, \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 5
+</pre>
+</td>
+<td>
+<pre>4.5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+</pre>
+</td>
+<td>
+<pre>0.125
+</pre>
+</td>
+</tr>
+</table>
+</div>

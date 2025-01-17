@@ -1,0 +1,111 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/umferd/file/statement/en/img-0001.jpg" class="illustration" src="/problems/umferd/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/seattlecamera/51511583493/">flickr.com</a>
+</div>
+</div>
+<p>Traffic jams are a major problem in larger cities like Njú
+    Jork and Síattúl, especially during rush hour.</p>
+<p>In a traffic jam there are many cars with very little
+    spacing between them, and they are not moving particularly
+    fast. To simplify things we will assume that traffic is divided
+    into <em>lanes</em> and each lane consists of <span class="tex2jax_process">$m$</span> <em>cells</em>. Each cell can
+    contain at most <span class="tex2jax_process">$1$</span> car,
+    but a cell can also be empty.</p>
+<p>The length <span class="tex2jax_process">$m$</span> of the
+    lanes, the number of lanes <span class="tex2jax_process">$n$</span> and a textual description of each
+    cell, such that a cell containing a car is denoted <tt class="ttfamily">#</tt> and an empty cell is denoted <tt class="ttfamily">.</tt>, is given.</p>
+<p>The task at hand is to calculate the proportion of empty
+    cells, as a number between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span>, inclusive.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$m$</span>, the number of cells
+    per lane. The next line contains a single integer <span class="tex2jax_process">$n$</span>, the number of lanes. Next there
+    are <span class="tex2jax_process">$n$</span> lines. Each line
+    contains <span class="tex2jax_process">$m$</span> letters, each
+    being either <tt class="ttfamily">.</tt> or <tt class="ttfamily">#</tt>.</p>
+<h2>Output</h2>
+<p>Print the proportion of empty cells as a value from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$1$</span>.</p>
+<p>The output is considered correct if its relative or absolute
+    error is at most <span class="tex2jax_process">$10^{-5}$</span>. This means that the exact
+    number of digits after the decimal point does not matter as
+    long as the value is accurate enough.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span> and
+          <span class="tex2jax_process">$ 1 \leq m \leq
+          500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>60</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          500$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1
+.#
+</pre>
+</td>
+<td>
+<pre>0.5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2
+#.#.
+.###
+</pre>
+</td>
+<td>
+<pre>0.375
+</pre>
+</td>
+</tr>
+</table>
+</div>

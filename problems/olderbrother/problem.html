@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Your older brother is an amateur mathematician with lots of
+    experience. However, his memory is very bad. He recently got
+    interested in linear algebra over finite fields, but he does
+    not remember exactly which finite fields exist. For you, this
+    is an easy question: a finite field of order <span class="tex2jax_process">$q$</span> exists if and only if <span class="tex2jax_process">$q$</span> is a prime power, that is,
+    <span class="tex2jax_process">$q = p^ k$</span> holds for some
+    prime number <span class="tex2jax_process">$p$</span> and some
+    integer <span class="tex2jax_process">$k \geq 1$</span>.
+    Furthermore, in that case the field is unique (up to
+    isomorphism).</p>
+<p>The conversation with your brother went something like
+    this:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.95\textwidth ]{conversation.pdf}" src="/problems/olderbrother/file/statement/en/img-0001.png" style="width:95.00%"/>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of one integer <span class="tex2jax_process">$q$</span>, satisfying <span class="tex2jax_process">$1 \leq q \leq 10^9$</span>.</p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">yes</tt>” if there exists a
+    finite field of order <span class="tex2jax_process">$q$</span>.
+    Otherwise, output “<tt class="ttfamily">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+</pre>
+</td>
+<td>
+<pre>
+no
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+37
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+65536
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

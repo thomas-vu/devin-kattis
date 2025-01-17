@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>Lt. Columbo, arguably the best detective in the world,
+    was faced with a problem. He was asked: if he was placed in a
+    room with some number of stacks of gold-colored coins, where
+    all but one stack consisted solely of tungsten coins, and the
+    remaining stack consisted solely of pure gold coins, how could
+    he determine which stack had the pure gold coins? Oh, excuse
+    me, there’s just one more thing … he was also told he is given
+    a modern penny scale and one penny. A modern version of the
+    penny scale operates as follows: when you deposit a penny and
+    put an object (or objects) on the scale, the machine displays
+    the weight on a digital display. The scale is extremely
+    accurate, down to milligrams. Every coin is the same size and
+    color, but the tungsten coins weigh <span class="tex2jax_process">$29\, 260$</span> mg each and the gold coins
+    weigh <span class="tex2jax_process">$29\, 370$</span> mg
+    each.</p>
+<p>Being the genius that he is, Columbo came up with the
+    solution to figure out which stack contained the gold coins
+    using a single weighing (since he has only one penny for the
+    penny scale). As an example, suppose there are four stacks of
+    coins labeled <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$4$</span>. If he took one coin
+    from stack <span class="tex2jax_process">$1$</span>, two coins
+    from stack <span class="tex2jax_process">$2$</span>, three
+    coins from stack <span class="tex2jax_process">$3$</span> and
+    four coins from stack <span class="tex2jax_process">$4$</span>,
+    and weighed those <span class="tex2jax_process">$10$</span>
+    coins together on the penny scale, he could determine which
+    stack had the gold coins. “How?” you might ask. Suppose all
+    four stacks were tungsten. The total weight of the <span class="tex2jax_process">$10$</span> coins would be <span class="tex2jax_process">$292\, 600$</span> mg. If, say, stack
+    <span class="tex2jax_process">$1$</span> was gold (one gold
+    coin in the pile that was weighed), the total weight would be
+    <span class="tex2jax_process">$292\, 710$</span> mg. If stack
+    <span class="tex2jax_process">$2$</span> was gold (two gold
+    coins in the pile that was weighed), the total weight would be
+    <span class="tex2jax_process">$292\, 820$</span> mg. So, if you
+    know the number of coins being weighed and the total weight of
+    those coins, you can determine which stack has the gold coins.
+    Just as a reminder, given a number of stacks, <span class="tex2jax_process">$s$</span>, the number of coins, <span class="tex2jax_process">$c$</span>, being weighed will
+    be:</p><span class="tex2jax_process">\[ c = \frac{s(s+1)}{2}
+    \]</span>
+<h2>Input</h2>
+<p>Input consists of a single line containing two integers
+    <span class="tex2jax_process">$w$</span> <span class="tex2jax_process">$s$</span>, where <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$87\, 890 \leq w \leq 147\, 774\,
+    000$</span>) is the weight in milligrams reported by the scale
+    and <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$2 \leq s \leq 100$</span>) is the number of
+    coin stacks. The stacks are labeled <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$s$</span> with <span class="tex2jax_process">$i$</span> coins from stack <span class="tex2jax_process">$i$</span> moved to the scale for
+    <span class="tex2jax_process">$1 \leq i \leq s$</span>. For
+    given values of <span class="tex2jax_process">$w$</span> and
+    <span class="tex2jax_process">$s$</span>, it will always be
+    possible to determine which stack is composed solely of gold
+    coins.</p>
+<h2>Output</h2>
+<p>Output consists of a single positive integer indicating
+    which stack contains the gold coins.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>292930 4
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>147774000 100
+</pre>
+</td>
+<td>
+<pre>100
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/lockout/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/lockout/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        Mario worlds
+      </div>
+</div>
+<p>Mario and Luigi are speedrunning Super Mario Odyssey to
+    determine who is the better speedrunner. In Super Mario
+    Odyssey, there is a collection of <span class="tex2jax_process">$N$</span> worlds, where world <span class="tex2jax_process">$i$</span> has <span class="tex2jax_process">$a_ i$</span> coins and takes <span class="tex2jax_process">$t_ i$</span> seconds to clear. If Mario or
+    Luigi are the first to enter a world, then they will collect
+    all <span class="tex2jax_process">$a_ i$</span> coins from it,
+    leaving none for the other. If Mario and Luigi both enter the
+    same world at the same time, there is a <span class="tex2jax_process">$50/50$</span> chance for who will receive
+    all of the coins (in other words, Mario has a <span class="tex2jax_process">$50 \% $</span> chance of receiving all the
+    coins, and Luigi does as well). Note that neither player knows
+    which worlds have coins left at any moment. Once they enter a
+    world, they must spend <span class="tex2jax_process">$t_
+    i$</span> seconds clearing it regardless of whether it has
+    coins.</p>
+<p>Fortunately for Mario, Luigi’s planning was leaked and the
+    ordering of worlds he will enter is known. That is, Luigi will
+    begin with the first world on his list, then move to the next
+    world, and so on. Knowing this, Mario is asking you for help to
+    determine the optimal ordering of worlds to enter. Please
+    determine which permutation of worlds to enter to maximize his
+    chances of beating Luigi. Mario wins if he has strictly more
+    coins than Luigi.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 100,000)$</span>, representing the number of
+    worlds. The second line contains <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$a_1, a_2, \dots , a_ N$</span>
+<span class="tex2jax_process">$(1 \leq a_ i \leq 10^9)$</span>,
+    representing the number of coins in each world. The third line
+    contains <span class="tex2jax_process">$N$</span>
+    space-separated integers <span class="tex2jax_process">$t_1,
+    t_2, \dots , t_ N$</span> <span class="tex2jax_process">$(1
+    \leq t_ i \leq 10^9)$</span>, representing the time it takes to
+    clear each world. The fourth line contains <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$p_1, p_2, \dots , p_ N$</span>
+<span class="tex2jax_process">$(1 \leq t_ i \leq N)$</span>,
+    representing Luigi’s ordering of worlds: Luigi will explore
+    world <span class="tex2jax_process">$p_1$</span> first, then
+    world <span class="tex2jax_process">$p_2$</span>, and so on. It
+    is guaranteed that <span class="tex2jax_process">$p$</span> is
+    a permutation of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$N$</span>.</p>
+<h2>Output</h2>
+<p>Output one line consisting of a single double <span class="tex2jax_process">$r$</span>, the maximum chance for Mario to
+    win. This probability should not exceed an absolute error of
+    more than <span class="tex2jax_process">$10^{-5}$</span>. On
+    the next line, output <span class="tex2jax_process">$N$</span>
+    spaced integers, denoting the optimal permutation. If there is
+    more than one correct permutation, then print any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+10 10 10
+2 3 1
+1 2 3
+</pre>
+</td>
+<td>
+<pre>1
+3 2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+10
+5
+1
+</pre>
+</td>
+<td>
+<pre>0.5
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

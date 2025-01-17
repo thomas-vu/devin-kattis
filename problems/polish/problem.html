@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>One way of representing mathematical expressions is with
+    Polish (or prefix) notation, initially developed by Jan
+    Łukasiewicz (1878–1956) for use in logic. In this notation, the
+    operator appears before its operands. For example, rather than
+    writing</p><span class="tex2jax_process">\[ 3\ +\ 4\ *\ 7
+    \]</span>
+<p>using so-called infix notation, we could write the
+    equivalent expression in Polish notation</p><span class="tex2jax_process">\[ +\ 3\ *\ 4\ 7 \]</span>
+<p>In this example, the addition applies to the values of the
+    two following expressions, ‘<span class="tex2jax_process">$3$</span>’ and ‘<span class="tex2jax_process">$*\ 4\ 7$</span>’. Further, the
+    multiplication applies to two values that follow it,
+    <span class="tex2jax_process">$4$</span> and <span class="tex2jax_process">$7$</span>.</p>
+<p>In general, we can write an expression in Polish notation
+    using the following rules:</p>
+<ul class="itemize">
+<li>
+<p>A constant integer is an expression (e.g. <span class="tex2jax_process">$3$</span>).</p>
+</li>
+<li>
+<p>A lowercase single character is an expression (a
+        variable, e.g. <span class="tex2jax_process">$x$</span>).</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$A$</span> and
+        <span class="tex2jax_process">$B$</span> are expressions
+        and <span class="tex2jax_process">$O$</span> is an
+        operator, then the following is an expression:
+        ‘<span class="tex2jax_process">$O\ A\ B$</span>’. The
+        meaning of this expression in infix notation is
+        ‘<span class="tex2jax_process">$A\ O\ B$</span>’.</p>
+</li>
+</ul>
+<p>The operators that can occur are all binary: addition
+    (<span class="tex2jax_process">$+$</span>), subtraction
+    (<span class="tex2jax_process">$-$</span>), and multiplication
+    (<span class="tex2jax_process">$*$</span>).</p>
+<p>Polish notation has the advantage of being easy to parse for
+    a computer. Write a program that reads an expression in Polish
+    notation, simplifies the expression as much as possible, and
+    prints it out in Polish notation. The simplification procedure
+    is just replacing subexpressions that contain no variables with
+    their values wherever possible.</p>
+<h2>Input</h2>
+<p>Input consists of several test cases (at most <span class="tex2jax_process">$5$</span>). Each test case is described by a
+    single line containing an expression. The expression is a
+    sequence of space-separated tokens (integers, operators, and
+    single-character lowercase variables). Each expression is
+    correctly formatted in Polish notation, with at most
+    <span class="tex2jax_process">$2\, 048$</span> symbols
+    (operators and operands combined). Integer constants are in the
+    range <span class="tex2jax_process">$[-10, 10]$</span>.</p>
+<h2>Output</h2>
+<p>For each case, display the case number followed by the
+    simplified expression in Polish notation, in the same format as
+    the input. Do not modify the expression other than the
+    simplification step described earlier. All intermediate
+    computations fit within a signed <span class="tex2jax_process">$32$</span>-bit integer. Follow the format of
+    the sample output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>+ 3 4
+- x x
+* - 6 + x -6 - - 9 6 * 0 c
+</pre>
+</td>
+<td>
+<pre>Case 1: 7
+Case 2: - x x
+Case 3: * - 6 + x -6 - 3 * 0 c
+</pre>
+</td>
+</tr>
+</table>
+</div>

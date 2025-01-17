@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>The Association for Curtailing Parentheses in Computations
+    is having some trouble. Some members learned in class that
+    <span class="tex2jax_process">$a^{b^ c} = a^{(b^ c)}$</span>,
+    but others insist that <span class="tex2jax_process">${a^ b}^ c
+    = {(a^ b)}^ c$</span>. You are trying to keep the peace by
+    assuring them that it works either way, but you just noticed
+    that <span class="tex2jax_process">${(2^3)}^2 = 64 \neq 512 =
+    2^{(3^2)}$</span>. Can you write a program to help the
+    association members focus on what they can all agree on?</p>
+<h2>Input</h2>
+<p>Input consists of three space-separated integers
+    <span class="tex2jax_process">$1 \leq a, b, c \leq 2 \cdot
+    10^6$</span> on a single line.</p>
+<h2>Output</h2>
+<p>If <span class="tex2jax_process">$a^{(b^ c)} = {(a^ b)}^
+    c$</span>, output “<tt class="ttfamily">What an excellent
+    example!</tt>” and if <span class="tex2jax_process">$a^{(b^ c)}
+    \neq {(a^ b)}^ c$</span> output “<tt class="ttfamily">Oh look,
+    a squirrel!</tt>”</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3 2
+</pre>
+</td>
+<td>
+<pre>Oh look, a squirrel!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 1
+</pre>
+</td>
+<td>
+<pre>What an excellent example!
+</pre>
+</td>
+</tr>
+</table>
+</div>

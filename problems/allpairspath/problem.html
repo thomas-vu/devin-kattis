@@ -1,0 +1,64 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The input consists of several test cases. Each test case
+    starts with a line with three non-negative integers,
+    <span class="tex2jax_process">$1 \le n \le 150$</span>,
+    <span class="tex2jax_process">$0 \le m \le 5000$</span> and
+    <span class="tex2jax_process">$1 \le q \le 1000$</span>,
+    separated by single single spaces, where <span class="tex2jax_process">$n$</span> is the numbers of nodes in the
+    graph, <span class="tex2jax_process">$m$</span> the number of
+    edges and <span class="tex2jax_process">$q$</span> the number
+    of queries. Nodes are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. Then follow <span class="tex2jax_process">$m$</span> lines, each line consisting of
+    three (space-separated) integers <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span> and <span class="tex2jax_process">$w$</span> indicating that there is an edge
+    from <span class="tex2jax_process">$u$</span> to <span class="tex2jax_process">$v$</span> in the graph with weight
+    <span class="tex2jax_process">$-1000 \le w \le 1000$</span>.
+    Then follow <span class="tex2jax_process">$q$</span> lines of
+    queries, each consisting of two node numbers <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> (separated by a space), asking for
+    the minimum distance from node <span class="tex2jax_process">$u$</span> to node <span class="tex2jax_process">$v$</span>.</p>
+<p>Input will be terminated by a line containing <tt class="ttfamily">0 0 0</tt>, this line should <em>not</em> be
+    processed.</p>
+<h2>Output</h2>
+<p>For each query, output a single line containing the minimum
+    distance from node <span class="tex2jax_process">$u$</span> to
+    <span class="tex2jax_process">$v$</span>, or the word
+    <tt class="ttfamily">Impossible</tt> if there is no path from
+    <span class="tex2jax_process">$u$</span> to <span class="tex2jax_process">$v$</span>, or <tt class="ttfamily">-Infinity</tt> if there are arbitrarily short paths
+    from <span class="tex2jax_process">$u$</span> to <span class="tex2jax_process">$v$</span>. Print a blank line after each
+    test case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3 4
+0 1 2
+1 2 2
+3 3 1
+0 2
+1 2
+3 0
+3 3
+2 1 2
+0 1 100
+0 1
+1 0
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+4
+2
+Impossible
+0
+
+100
+Impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/pyramidkonstruktion/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pyramidkonstruktion/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A finished and an unfinished pyramid of
+        height <span class="tex2jax_process">$4$</span>.
+      </div>
+</div>
+<p>Kim likes building Lego pyramids and now wants to build one
+    of height <span class="tex2jax_process">$H$</span>. How
+    many more bricks are needed if Kim already has <span class="tex2jax_process">$N$</span> bricks of size <span class="tex2jax_process">$2 \times 2$</span> and <span class="tex2jax_process">$M$</span> bricks of size <span class="tex2jax_process">$4 \times 2$</span>? A pyramid is hollow and
+    consists of <span class="tex2jax_process">$H$</span> layers, as
+    shown in the image. The <span class="tex2jax_process">$k$</span>th layer has width <span class="tex2jax_process">$2k$</span> for <span class="tex2jax_process">$1\leq k\leq H$</span>.</p>
+<h2>Input</h2>
+<p>Three integers <span class="tex2jax_process">$1 \leq H \leq
+    1\, 000$</span>, <span class="tex2jax_process">$0 \leq N \leq
+    10^6$</span>, and <span class="tex2jax_process">$0 \leq M \leq
+    10^6$</span>.</p>
+<h2>Output</h2>
+<p>Print two integers <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span> on a single line,
+    where <span class="tex2jax_process">$A$</span> is the number of
+    extra <span class="tex2jax_process">$2 \times 2$</span>-bricks
+    needed and <span class="tex2jax_process">$B$</span> is the
+    number of extra <span class="tex2jax_process">$4 \times
+    2$</span>-bricks. You must use as few extra bricks as possible,
+    so you must minimise <span class="tex2jax_process">$A+B$</span>. If there is more than one such
+    solution, print the one maximising <span class="tex2jax_process">$A$</span>.</p>
+<h2>Explanation of Sample 2</h2>
+<p>Sample input <span class="tex2jax_process">$2$</span>
+    corresponds to the situation shown in the image. Starting with
+    the bricks in the unfinished pyramid to the right, Kim can
+    build the left pyramid using an extra <span class="tex2jax_process">$2 \times 2$</span>-brick and <span class="tex2jax_process">$4$</span> extra <span class="tex2jax_process">$4 \times 2$</span>-bricks. There is no way
+    to finish a height-<span class="tex2jax_process">$4$</span>
+    pyramid with fewer than <span class="tex2jax_process">$5$</span> extra bricks. Note that it is also
+    possible to build a height-<span class="tex2jax_process">$4$</span> pyramid using <span class="tex2jax_process">$5$</span> extra bricks of size <span class="tex2jax_process">$4\times 2$</span> (and no extra <span class="tex2jax_process">$2\times 2$</span>-bricks). However, the
+    sample output is correct because it uses more extra
+    <span class="tex2jax_process">$2 \times 2$</span>-bricks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 0
+</pre>
+</td>
+<td>
+<pre>0 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 2 7
+</pre>
+</td>
+<td>
+<pre>1 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 0 0
+</pre>
+</td>
+<td>
+<pre>1 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>1 0 5
+</pre>
+</td>
+<td>
+<pre>1 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

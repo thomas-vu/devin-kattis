@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/eulerian/file/statement/en/img-0001.jpg" class="illustration" src="/problems/eulerian/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Leonhard Euler
+      </div>
+</div>In the 1700’s, Leonhard Euler got word of a graph
+    theoretical problem that came to be of practical significance
+    centuries later. It was related to the seven bridges of the
+    city then known as Königsberg (today Kaliningrad).
+    <p>The seven bridges connected four different pieces of land,
+    all separated by rivers. The question was whether it was
+    possible to walk over all the bridges in a tour exactly once.
+    Euler solved the problem by proving that no such walk was
+    possible.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{konigsberg.jpg}" src="/problems/eulerian/file/statement/en/img-0002.jpg" style="width:50.00%"/>
+</center>
+</div>
+<p>The problem can be generalized using graphs, where we ask if
+    there is any walk in a connected graph that passes each edge
+    exactly once. Euler realized that this is the case exactly when
+    all vertices have even degree, possibly except for two (which
+    must then be the first and last vertices of the walk).</p>
+<p>A generalization of Euler’s result is for <em>directed</em>
+    graphs, where an edge may be walked only in the direction it is
+    pointing. Euler’s rule is simple to adapt to the directed case.
+    A graph has such a walk exactly when the number of incoming and
+    outgoing edges for each vertex are equal, except that one
+    vertex may have one more outgoing edge than incoming edges, and
+    one vertex can have one more incoming than outgoing edge. The
+    walk must then start and end at those vertices, respectively.
+    Furthermore, the graph must be connected if the edges were
+    undirected<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a>.</p>
+<p>Given all the edges in a directed graph (which is connected
+    if its edges were undirected), determine if it has a walk that
+    passes each edge exactly once. Also, determine if the walk can
+    start anywhere or if there are specific vertices where the walk
+    must start and end.</p>
+<h2>Input</h2>
+<p>The first line contains integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 100\, 000$</span>), the number of vertices, and
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0 \le M \le 1\, 000\, 000$</span>), the
+    number of edges. This is followed by <span class="tex2jax_process">$M$</span> lines, one for each edge
+    <span class="tex2jax_process">$a \rightarrow b$</span>,
+    containing the numbers <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le a, b \le N$</span>).</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">no</tt> if there is no such
+    walk, <tt class="ttfamily">anywhere</tt> if there is a walk
+    that may start anywhere, or the numbers of the start and end
+    vertices if there is a walk that must start and end at two
+    specific vertices.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+1 2
+</pre>
+</td>
+<td>
+<pre>1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+1 2
+1 2
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+1 2
+2 1
+1 1
+2 2
+</pre>
+</td>
+<td>
+<pre>anywhere
+</pre>
+</td>
+</tr>
+</table>
+</div>

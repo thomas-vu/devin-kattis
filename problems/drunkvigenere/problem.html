@@ -1,0 +1,71 @@
+<div class="problembody">
+<p>One of the most well-known and classic methods of encryption
+    is the Vigenère cipher. Given a message and key of equal
+    length, all you need to do to encrypt the message is shift each
+    character forward by a certain number of characters in the
+    alphabet.</p>
+<p>For example, if your string is <tt class="ttfamily">CALGARY</tt> and key is <tt class="ttfamily">ALBERTA</tt>, the number of letters to shift the
+    <span class="tex2jax_process">$i$</span>-th letter in the
+    message is given by the position in the alphabet of the
+    <span class="tex2jax_process">$i$</span>-th letter in the key,
+    using <span class="tex2jax_process">$0$</span>-based indexing.
+    So the first character in our message <tt class="ttfamily">C</tt> is shifted <span class="tex2jax_process">$0$</span> letters forward since the first
+    character in our key is <tt class="ttfamily">A</tt>. Likewise,
+    <tt class="ttfamily">A</tt> is shifted <span class="tex2jax_process">$11$</span> characters since <tt class="ttfamily">L</tt> is the <span class="tex2jax_process">$11$</span>-th letter in the alphabet.
+    Repeating for each character, we’ll find the encrypted message
+    ends up being <tt class="ttfamily">CLMKRKY</tt>.</p>
+<p>Of course since this is such a well known encryption method,
+    it isn’t very safe so your friend Yraglac has come up with a
+    brilliant idea: for each even-indexed character in your
+    message, you do the usual encryption as described above, but
+    for the odd-indexed characters, instead of shifting forwards by
+    the key, you actually shift backwards. Thus, our example above
+    would actually be encrypted as <tt class="ttfamily">CPMCRYY</tt>. That’ll throw off any pesky hackers
+    trying to read your secrets!</p>
+<p>Of course Yraglac has left the implementation up to you.
+    Given an encrypted message and the key, can you write a program
+    to decrypt it? Don’t forget that everything is using
+    <span class="tex2jax_process">$0$</span>-based indexing.</p>
+<h2>Input</h2>
+<p>Input consists of two lines. The first contains the
+    encrypted message <span class="tex2jax_process">$C$</span> and
+    the second contains the key <span class="tex2jax_process">$K$</span>. <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$K$</span> are always of equal length between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$200$</span> characters long and consists
+    only of uppercase alphabetic letters.</p>
+<h2>Output</h2>
+<p>Output the decrypted message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>CPMCRYY
+ALBERTA
+</pre>
+</td>
+<td>
+<pre>CALGARY
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>TDLIVA
+OILERS
+</pre>
+</td>
+<td>
+<pre>FLAMES
+</pre>
+</td>
+</tr>
+</table>
+</div>

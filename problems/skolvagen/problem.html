@@ -1,0 +1,101 @@
+<div class="problembody">
+<div class="figure" id="a0000000010">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{skolvag.png}" src="/problems/skolvagen/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: The dotted line shows Cissi’s optimal path
+        in the first example.
+      </div>
+</div>
+<p>Cissi is walking from her home to school, following a long
+    street going from the west to the east. On her way, she passes
+    a number of street crossings where the crossing street either
+    goes north (<tt class="ttfamily">N</tt>), south (<tt class="ttfamily">S</tt>) or both (<tt class="ttfamily">B</tt>). At
+    every street crossing, there are crosswalks on both the
+    crossing streets and the main street (see the figure above),
+    and she can only cross the street on the crosswalks.</p>
+<p>Her home is to the north of the main street, furthermost to
+    the west. The school is to the north of the main street,
+    furthermost to the east. Write a program that helps Cissi
+    compute the smallest number of streets that she must cross on
+    her path to school.</p>
+<h2>Input</h2>
+<p>The input contains a single line with at most <span class="tex2jax_process">$1\, 000$</span> letters, each of which is
+    <tt class="tt">N</tt>, <tt class="tt">S</tt> or <tt class="tt">B</tt>. The letters describe the crossing streets exactly
+    in the order Cissi will pass them on her way to school.</p>
+<h2>Output</h2>
+<p>A single line with an integer, the smallest number of
+    streets Cissi needs to cross.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test case groups.
+    To get the points for a group, you need to pass all the test
+    cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are at most <span class="tex2jax_process">$20$</span> crossing streets</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$60$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>SNBNNSB
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>SBSNNBSNNSSSNNNB
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+</div>

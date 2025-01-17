@@ -1,0 +1,149 @@
+<div class="problembody">
+<p>An <em>RSA</em> number is a positive integer <span class="tex2jax_process">$n$</span> that is the product of two
+    distinct primes. For example, <span class="tex2jax_process">$10
+    = 2 \cdot 5$</span> and <span class="tex2jax_process">$77 = 7
+    \cdot 11$</span> are RSA numbers whereas <span class="tex2jax_process">$7 = 7, 9 = 3 \cdot 3$</span>, and
+    <span class="tex2jax_process">$105 = 3 \cdot 5 \cdot 7$</span>
+    are not.</p>
+<p>You are teaching a course that covers RSA cryptography. For
+    one assignment problem, you asked students to generate RSA
+    numbers. They were to submit two positive integers <span class="tex2jax_process">$A, B$</span>. Ideally, these would be
+    distinct prime numbers. But some students submitted incorrect
+    solutions. If they were not distinct primes, partial credit can
+    be earned if <span class="tex2jax_process">$A \cdot B$</span>
+    is not an integer multiple of <span class="tex2jax_process">$k^2$</span> for any integer <span class="tex2jax_process">$k \geq 2$</span>. If there is an integer
+    <span class="tex2jax_process">$k \geq 2$</span> such that
+    <span class="tex2jax_process">$k^2$</span> divides <span class="tex2jax_process">$A \cdot B$</span>, then the student receives
+    no credit.</p>
+<p>For a pair of positive integers submitted by a student for
+    the assignment, determine if they should receive full credit,
+    partial credit, or no credit for this submission.</p>
+<p><b class="bf">Note</b>: In the sixth sample case below, the
+    number <span class="tex2jax_process">$545\, 528\, 636\, 581
+    \cdot 876\, 571\, 629\, 707$</span> is divisible by
+    <span class="tex2jax_process">$1\, 000\, 003^2$</span> and in
+    the seventh sample case below, the number <span class="tex2jax_process">$431\, 348\, 146\, 441 \cdot 3$</span> is
+    divisible by <span class="tex2jax_process">$656\,
+    771^2$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing two integers
+    <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$2 \leq A \leq 10^{12}$</span>) and
+    <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$2 \leq B \leq 10^{12}$</span>), which are
+    the two submitted numbers.</p>
+<h2>Output</h2>
+<p>Display if the student should receive <tt class="ttfamily">full credit</tt>, <tt class="ttfamily">partial
+    credit</tt>, or <tt class="ttfamily">no credit</tt> for the
+    submitted numbers.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>13 23
+</pre>
+</td>
+<td>
+<pre>full credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>35 6
+</pre>
+</td>
+<td>
+<pre>partial credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+</pre>
+</td>
+<td>
+<pre>no credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>17 17
+</pre>
+</td>
+<td>
+<pre>no credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>15 21
+</pre>
+</td>
+<td>
+<pre>no credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>545528636581 876571629707
+</pre>
+</td>
+<td>
+<pre>no credit
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 7</th>
+<th>Sample Output 7</th>
+</tr>
+<tr>
+<td>
+<pre>431348146441 3
+</pre>
+</td>
+<td>
+<pre>no credit
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,98 @@
+<div class="problembody">
+<p>You are an expert in bonsai, the Japanese art of cultivating
+    small trees in small containers. Every year, you win the Bonsai
+    Association’s Pruning Competition (BAPC). With all this talent,
+    it would be a shame not to turn your hobby into your job.
+    Recently, you have rented a small store where you will sell
+    your creations. Now you need to make a window display to draw
+    in customers. Of course, you would like to grow the most
+    impressive tree that will fit the window, but the window is
+    only so tall, and the floor of the display can only bear so
+    much weight. Therefore, you want a tree that is exactly so tall
+    and so heavy that it can fit in your window.</p>
+<p>Being an expert, you know that by definition a bonsai tree
+    consists of a single branch, with 0 or more smaller bonsai
+    trees branching off from that branch.</p>
+<div class="figure" id="fig:bonsai">
+<center>
+<img alt="\includegraphics[width=0.95\textwidth ]{image.pdf}" src="/problems/boomingbusiness/file/statement/en/img-0001.png" style="width:95.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Four distinct examples of bonsai trees.
+        </div>
+</center>
+</div>
+<p>The height and weight of a bonsai tree can be carefully
+    determined. A tree’s weight is equal to the number of branches
+    that appear in it. The weights of the trees in Figure 1 are 1,
+    4, 6 and 6, respectively. A tree’s height is equal to the
+    length of the longest chain of branches from the root to the
+    top of the tree. The heights of the trees in Figure 1 are 1, 2,
+    3 and 3, respectively.</p>
+<p>To make the most use of your window, you want to produce a
+    bonsai tree of the precise height and weight that it can
+    support. To get an idea of the number of options available to
+    you, you would like to know how many different trees you could
+    possibly grow for your store. Given a height and a weight, can
+    you determine the number of trees with exactly that height and
+    weight? Because the number may be very large, you may give your
+    answer modulo 1,000,000,007.</p>
+<h2>Input</h2>
+<p>A single line containing two integers, <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span>, with <span class="tex2jax_process">$1 \leq h, w \leq 300$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line containing a single integer, the number
+    of bonsai trees of height <span class="tex2jax_process">$h$</span> and weight <span class="tex2jax_process">$w$</span>, modulo <span class="tex2jax_process">$10^9+7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+20 50
+</pre>
+</td>
+<td>
+<pre>
+573689752
+</pre>
+</td>
+</tr>
+</table>
+</div>

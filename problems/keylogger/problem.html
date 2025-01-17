@@ -1,0 +1,201 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/keylogger/file/statement/en/img-0001.jpg" class="illustration" src="/problems/keylogger/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by Christian Söderberg, no rights reserved.
+      </div>
+</div>
+<p>Thore likes mechanical keyboards. He uses a highly
+    customised design, where every key has been carefully selected
+    for resistance, actuation point, tactile feedback, travel
+    distance, and clickiness. He finds the sound of the mechanical
+    keys very satisfying. Your office is next to Thore’s and you
+    hear the <i class="itshape">click-clock-clinging</i> of him
+    typing. After a while you notice that every key has a unique
+    sound.</p>
+<p>Given the sounds from Thore’s office, can you hear what he’s
+    typing?</p>
+<p>Each key except shift can be <em>tapped</em>, and has its
+    own distinctive sound when tapped. The spacebar inserts a
+    single space character at the end. The letter keys insert a
+    single letter in their upper- or lowercase form at the end. For
+    instance, tapping <tt class="ttfamily">M</tt> inserts the
+    lowercase “m” or the uppercase “M”. The delete key removes a
+    single symbol, starting from the latest inserted symbol,
+    provided there are symbols left. (Otherwise, nothing
+    happens.)</p>
+<p>Case is determined by the keyboard’s state, which is either
+    <em>capslocked</em> or not, and whether the shift key is held
+    down. Tapping the capslock key switches the state to
+    <em>capslocked</em> or back. In the <em>capslocked</em> state,
+    all letter keys produce their uppercase form. This behaviour is
+    inverted when the shift key is held down. For instance, if the
+    keyboard is not <em>capslocked</em> and shift is held down then
+    tapping <tt class="ttfamily">M</tt> inserts an uppercase “M”.
+    Likewise, if the keyboard is <em>capslocked</em> and shift is
+    held down then tapping <tt class="ttfamily">M</tt> inserts a
+    lowercase “m”.</p>
+<p>The shift key is never tapped. Instead, it is either
+    <em>held down</em> or <em>released</em>, each with its own
+    sound. Thore’s keyboard has a single shift key (under his left
+    thumb), so the two sounds must alternate.</p>
+<p>Thore starts the work day with the keyboard not in
+    <em>capslocked</em> state and with the shift key not held
+    down.</p>
+<p>The following table shows the sound each key makes. You hear
+    no other sounds than those listed in the table.</p>
+<p><img alt="\includegraphics[width=0.7\textwidth ]{img/table-en.pdf}" src="/problems/keylogger/file/statement/en/img-0002.png" style="width:70.00%"/></p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$N$</span>, where <span class="tex2jax_process">$N &gt; 0$</span>, the number of sounds you
+    hear from Thore’s office. The following <span class="tex2jax_process">$N$</span> lines each contain a single sound,
+    matching one of the keys in the table.</p>
+<h2>Output</h2>
+<p>Print the resulting text.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Thore only types letters, <span class="tex2jax_process">$N \leq 1\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>30</p>
+</td>
+<td style="text-align:left">
+<p>Thore can also use spacebar, capslock, and delete,
+          <span class="tex2jax_process">$N \leq 100\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>50</p>
+</td>
+<td style="text-align:left">
+<p>Thore can use any key, <span class="tex2jax_process">$N \leq 100\, 000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>26
+clank
+bong
+click
+tap
+poing
+clonk
+clack
+ping
+tip
+cloing
+tic
+cling
+bing
+pong
+clang
+pang
+clong
+tac
+boing
+boink
+cloink
+rattle
+clock
+toc
+clink
+tuc
+</pre>
+</td>
+<td>
+<pre>abcdefghijklmnopqrstuvwxyz
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14
+bump
+tip
+whack
+bump
+clock
+clank
+pong
+boink
+whack
+pang
+tip
+tuc
+tuc
+clank
+</pre>
+</td>
+<td>
+<pre>I want pizza
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10
+dink
+pong
+clang
+whack
+bump
+click
+thumb
+clank
+pang
+boing
+</pre>
+</td>
+<td>
+<pre>NO cAPS
+</pre>
+</td>
+</tr>
+</table>
+</div>

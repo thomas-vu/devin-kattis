@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Company Z has purchased a land lot for their new office
+    building. The land is shaped like a rectangular grid with
+    <span class="tex2jax_process">$r$</span> rows and <span class="tex2jax_process">$c$</span> columns, in which each cell has a
+    tree. The age of each tree is known.</p>
+<p>Because Company Z is at the innovative front of the world,
+    their new office building will not just be rectangular.
+    Instead, it will have some exotic shape and a very special
+    floor plan. The shape can be represented by some connected grid
+    cells. There is no particular facing requirement of the
+    building, and the floor plan can be rotated by <span class="tex2jax_process">$90$</span> degrees an arbitrary number of
+    times. However, the floor plan cannot be flipped vertically or
+    horizontally.</p>
+<p>Company Z wants to choose a building location within their
+    land lot. The trees in those cells that are occupied by the
+    building will have to be cut down. Company Z would like to
+    preserve the trees so that the sum of age of the remaining
+    trees is as large as possible. Could you help them choose the
+    best location for their new office building?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1\leq r, c \leq 20$</span>), the dimensions
+    of the land lot.</p>
+<p>The next <span class="tex2jax_process">$r$</span> lines each
+    contain <span class="tex2jax_process">$c$</span> integers
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$100$</span> (both inclusive)
+    describing the ages of the trees in the land lot.</p>
+<p>The next line contains two integer <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1
+    \leq s \leq r, 1 \leq t \leq c$</span>), the dimensions of the
+    floor plan.</p>
+<p>The next <span class="tex2jax_process">$s$</span> lines each
+    contain <span class="tex2jax_process">$t$</span> characters
+    that describe the floor plan of the building. A hash
+    (<tt class="tt">#</tt>) denotes a cell occupied by the building
+    and a dot (<tt class="tt">.</tt>) denotes a non-occupied cell.
+    There is at least one hash. It is guaranteed that the hashes
+    form a connected shape. Two hashes are directly connected if
+    their cells share a side, and a shape is connected when all its
+    hashes are either directly or indirectly connected. There is no
+    row or column in the floor plan that is completely empty.</p>
+<h2>Output</h2>
+<p>Output a single integer, the maximum sum of age of the trees
+    that can be preserved.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+4 3 1 1 1
+5 4 3 5 1
+9 6 2 1 1
+8 7 1 1 2
+3 4
+###.
+#.##
+#..#
+</pre>
+</td>
+<td>
+<pre>58
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+6 6 6
+3 6 1
+1 1 1
+2 3
+#..
+###
+</pre>
+</td>
+<td>
+<pre>25
+</pre>
+</td>
+</tr>
+</table>
+</div>

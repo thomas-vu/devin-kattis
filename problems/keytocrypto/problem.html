@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Suppose you need to encrypt a top secret message like “SEND
+    MORE MONKEYS”. You could use a simple substitution cipher,
+    where each letter in the alphabet is replaced with a different
+    letter. However, these ciphers are easily broken by using the
+    fact that certain letters of the alphabet (like ‘E’, ‘S’, and
+    ‘A’) appear more frequently than others (like ‘Q’, ‘Z’, and
+    ‘X’). A better encryption scheme would vary the substitutions
+    used for each letter. One such system is the <i class="it">autokey</i> cipher.</p>
+<p>To encrypt a message, you first select a secret word – say
+    “ACM” – and prepend it to the front of the message. This longer
+    string is truncated to the length of the message and called the
+    <i class="it">key</i>, and the <span class="tex2jax_process">$n^{th}$</span> letter of the key is used to
+    encrypt the <span class="tex2jax_process">$n^{th}$</span>
+    letter of the original message. This encryption is done by
+    treating each letter in the key as a cyclic shift value for the
+    corresponding letter in the message, where ‘A’ indicates a
+    shift of <span class="tex2jax_process">$0$</span>, ‘B’ a shift
+    of <span class="tex2jax_process">$1$</span>, and so on. Using
+    “ACM” as the secret word, we would encrypt our message as
+    follows:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><tt class="tt">SENDMOREMONKEYS</tt></p>
+</td>
+<td style="text-align:left">
+<p>(message)</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><tt class="tt">ACMSENDMOREMONK</tt></p>
+</td>
+<td style="text-align:left">
+<p>(key)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt class="tt">SGZVQBUQAFRWSLC</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>(ciphertext)</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Note that the letter ‘E’ in the message was encrypted as ‘G’
+    the first time it was encountered (since the corresponding
+    letter in the key was ‘C’ indicating a shift of <span class="tex2jax_process">$2$</span>), but then as ‘Q’ and ‘S’ the next
+    two times.</p>
+<p>Your task is simple: given a ciphertext and the secret word,
+    you must determine the original message.</p>
+<h2>Input</h2>
+<p>Input consists of two lines. The first contains the
+    ciphertext and the second contains the secret word (which may
+    be longer than the ciphertext). Both lines contain only
+    uppercase alphabetic letters. Both the ciphertext and the
+    secret word are between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$500$</span> letters long.</p>
+<h2>Output</h2>
+<p>Display the original message that generated the given
+    ciphertext using the given secret word.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+SGZVQBUQAFRWSLC
+ACM
+</pre>
+</td>
+<td>
+<pre>
+SENDMOREMONKEYS
+</pre>
+</td>
+</tr>
+</table>
+</div>

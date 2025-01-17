@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>In mathematics, it’s always important to check your work.
+    Usually, this means making some sort of quick calculation
+    (either in your head, or on paper) to ensure that the answers
+    you find make sense.</p>
+<p>Your colleague has written an implementation of a general
+    arithmetic system which supports arbitrarily large numbers and
+    operations like addition, multiplication, exponentiation. She
+    has asked you to write an independent program that checks that
+    the answers her software gives make sense (though they may not
+    be perfectly correct!).</p>
+<p>Write a program that checks the correctness of simple
+    arithmetic statements of the form:</p>
+<pre>
+    a + b
+    a * b
+    a ^ b
+</pre>
+<p>That is, addition, multiplication, and exponentiation. The
+    output of your program is the value of the smallest-order
+    <span class="tex2jax_process">$4$</span> digits of the
+    answer. Then your colleague can check whether her software gave
+    the same digits for that portion. If not, you know there’s a
+    problem!</p>
+<h2>Input</h2>
+<p>Input consists of a sequence of up to <span class="tex2jax_process">$30\, 000$</span> arithmetic expressions, one
+    per line, in the format given above. All tokens are separated
+    by single spaces. All numbers are integers in the range
+    <span class="tex2jax_process">$[0, 2^{32})$</span>. Input ends
+    at the end of file.</p>
+<h2>Output</h2>
+<p>For each expression, print the last <span class="tex2jax_process">$4$</span> digits of the answer,
+    omitting any leading zeros.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4231 + 13402
+4231 * 13402
+4231 ^ 13402
+4321 ^ 7
+</pre>
+</td>
+<td>
+<pre>
+7633
+3862
+3361
+641
+</pre>
+</td>
+</tr>
+</table>
+</div>

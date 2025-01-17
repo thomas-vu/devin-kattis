@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>It is known by all that the *creepy* <em>Lord Pooty</em>
+    loves observing people for <em>“research”</em> purposes. Today,
+    he is in a mall and would like to stare at people like usual.
+    The mall is modelled as a grid and there are <span class="tex2jax_process">$N$</span> people, standing at locations
+    <span class="tex2jax_process">$(x_ i, y_ i)$</span> that
+    <em>Lord Pooty</em> wants to observe. There are also
+    <span class="tex2jax_process">$K$</span> seats at locations
+    <span class="tex2jax_process">$(x_ i,y_ i)$</span> that
+    <em>Lord Pooty</em> can sit at to do his observation. <b class="bfseries">Due to the inherent randomness of the universe that
+    none can control, all the locations of people and seats are
+    random.</b></p>
+<p>He want to choose a seat where the <b class="bfseries">maximum</b> distance<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> from the seat
+    to any one person is <b class="bfseries">minimised</b>, to
+    allow him better observation. As his fellow <em>research</em>
+    buddy, help him find such a seat! If more than one seat is
+    optimal, give him the <b class="bfseries">minimum</b>
+<span class="tex2jax_process">$(x,y)$</span> pair (i.e.
+    <span class="tex2jax_process">$x$</span> is minimised, followed
+    by <span class="tex2jax_process">$y$</span>)!</p>
+<h2>Input</h2>
+<p>The first line contains integers <span class="tex2jax_process">$N$</span>. (<span class="tex2jax_process">$1
+    \leq N \leq 200\, 000$</span>). This is followed by
+    <span class="tex2jax_process">$N$</span> lines of the following
+    form: <span class="tex2jax_process">$x~ y$</span> (<span class="tex2jax_process">$-10^9 \leq x,y \leq 10^9$</span>). These are
+    the locations of the people. Then, you have an integer
+    <span class="tex2jax_process">$K$</span>. (<span class="tex2jax_process">$1 \leq K \leq 200\, 000$</span>). This is
+    followed by <span class="tex2jax_process">$K$</span> lines of
+    the following form: <span class="tex2jax_process">$x~ y$</span>
+    (<span class="tex2jax_process">$-10^9 \leq x,y \leq
+    10^9$</span>). These are the locations of the seats.</p>
+<p><b class="bfseries">All location inputs (people and seats)
+    <span class="tex2jax_process">$(x, y)$</span> are UNIFORMLY,
+    INDEPENDENTLY, RANDOMLY GENERATED integers from the range
+    <span class="tex2jax_process">$[-10^9, 10^9]$</span>. Note that
+    it is possible for multiple inputs (seats and people) to be in
+    the same location.</b></p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span>, the location of the
+    optimal seat. If more than one seat is optimal, print the
+    minimum one.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+10 0
+0 0
+3
+1 0
+5 1
+5 -1
+</pre>
+</td>
+<td>
+<pre>5 -1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,127 @@
+<div class="problembody">
+<p><i class="itshape">Mr. G</i> is one of the most excellent
+    students in <i class="itshape">North River High School for
+    Gifted Students</i>. Despite having impressive performance in a
+    programming competition and making it to the next round, he was
+    not totally happy since his best friend did not get such a
+    great achievement. In order to appease the poor girl, <i class="itshape">Mr. G</i> has to deal with a very hard challenge: Buy
+    her some ginger candies!</p>
+<p>The road system in <i class="itshape">North River
+    province</i> consists of <span class="tex2jax_process">$N$</span> junctions and <span class="tex2jax_process">$M$</span> bidirectional roads. Junctions are
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$N$</span>, and roads are
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$M$</span>, inclusive. On the
+    <span class="tex2jax_process">$i^{th}$</span> road, which
+    connects two junctions <span class="tex2jax_process">$u_
+    i$</span> and <span class="tex2jax_process">$v_ i$</span>,
+    there is a shop in which <i class="itshape">Mr. G</i> can buy
+    <span class="tex2jax_process">$c_ i$</span> ginger candies. No
+    two roads have the same number of candies. <i class="itshape">Mr. G</i> wants to meet his friend at some junction,
+    travel through several roads <b class="bfseries">without
+    visiting the same road twice</b>, buy <b class="bfseries">all</b> candies on those roads, and finish at the
+    same junction where he starts.</p>
+<p>Using his humble knowledge in Physics, <i class="itshape">Mr. G</i> calculates the amount of energy he needs to
+    spend as follow: Let <span class="tex2jax_process">$L$</span>
+    be the <b class="bfseries">maximum</b> number of candies he
+    buys in one road, and <span class="tex2jax_process">$K$</span>
+    be the number of roads he passes through. The amount of energy
+    he needs to spend is <span class="tex2jax_process">$L^2+\alpha
+    K$</span>, where <span class="tex2jax_process">$\alpha $</span>
+    is some constant he has already known.</p>
+<p>Help him to satisfy his friend with the minimum amount of
+    energy.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains three integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$\alpha $</span>, the number of
+        junctions, the number of roads and the predefined constant
+        <i class="itshape">Mr. G</i> uses to calculate the amount
+        of energy, respectively (<span class="tex2jax_process">$1
+        \leq N \leq 10^5$</span>, <span class="tex2jax_process">$1
+        \leq M \leq 2 \times 10^5$</span>, <span class="tex2jax_process">$1 \leq \alpha \leq 20$</span>).</p>
+</li>
+<li>
+<p>In the next <span class="tex2jax_process">$M$</span>
+        lines, each contains three integers <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span>, <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1 \leq u \leq N$</span>, <span class="tex2jax_process">$1 \leq v \leq N$</span>, <span class="tex2jax_process">$10^6 \leq c \leq 10^9$</span>), meaning
+        that there is a road connecting two junctions <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>, which sells <span class="tex2jax_process">$c$</span> ginger candies.</p>
+</li>
+</ul>
+<p>It is guaranteed that all <span class="tex2jax_process">$c$</span> in the above <span class="tex2jax_process">$M$</span> lines are distinct.</p>
+<h2>Output</h2>
+<p>Write one integer denoting the minimum amount of energy
+    <i class="itshape">Mr. G</i> has to spend. If there is no route
+    satisfying the condition, output <i class="itshape">Poor
+    girl</i> instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 7 10
+1 2 1000000
+2 3 2000000
+3 4 3000000
+4 5 4000000
+5 6 5000000
+6 7 6000000
+7 1 7000000
+</pre>
+</td>
+<td>
+<pre>
+49000000000070
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 6 7
+1 3 1000000
+3 5 3000000
+5 1 5000000
+2 4 2000000
+4 6 4000000
+6 2 6000000
+</pre>
+</td>
+<td>
+<pre>
+25000000000021
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4 1
+1 2 22081999
+1 3 28021999
+2 4 19992208
+2 5 19992802
+</pre>
+</td>
+<td>
+<pre>
+Poor girl
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,238 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/talnalas/file/statement/en/img-0001.jpg" class="illustration" src="/problems/talnalas/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/images/id-2580718/">Bicycle
+        lock</a> by Photorama, Pixabay
+      </div>
+</div>Anna biked to school this morning. She locked her bike in
+    the bike storage using a combination lock and then scrambled
+    the digits on the lock. The lock is made up of <span class="tex2jax_process">$n$</span> disks that have the digits
+    <span class="tex2jax_process">$0$</span> through <span class="tex2jax_process">$9$</span> written on them. The disks can be
+    rotated in either direction. With one move, a disk can be
+    rotated such that the selected number on it increases or
+    decreases by one. The disk is cyclical so if you increase
+    <span class="tex2jax_process">$9$</span> you get <span class="tex2jax_process">$0$</span> and if you decrease <span class="tex2jax_process">$0$</span> you get <span class="tex2jax_process">$9$</span>.
+    <p>Anna is now heading home and has to open the combination
+    lock. She does this by rotating the disks, each one step at a
+    time, such that the selected digits end up being a specific
+    passcode. But Anna is very superstitious and has <span class="tex2jax_process">$m$</span> lucky numbers. After each step she
+    wants to make sure the currently selected number is a lucky
+    number, because otherwise it brings bad luck.</p>
+<p>Given the currently selected digits, the passcode for the
+    lock and the list of Anna’s lucky numbers, help her find in
+    what order she should rotate the disks to open the lock, making
+    sure that the digits displayed are always a lucky number after
+    each step. Since Anna is in a rush, she wants to do this in the
+    minimum number of steps possible.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq n, m$</span>), the number of disks on the lock and the
+    number of lucky numbers. The second line of the input contains
+    an <span class="tex2jax_process">$n$</span>-digit number, where
+    the <span class="tex2jax_process">$i$</span>-th digit denotes
+    the currently selected digit on the <span class="tex2jax_process">$i$</span>-th disk of the combination lock.
+    The third line of the input contains an <span class="tex2jax_process">$n$</span>-digit number where the
+    <span class="tex2jax_process">$i$</span>-th digit is the digit
+    that needs to be selected on the <span class="tex2jax_process">$i$</span>-th disk to open the lock. Finally
+    there are <span class="tex2jax_process">$m$</span> lines, each
+    with an <span class="tex2jax_process">$n$</span>-digit number
+    which are Anna’s lucky numbers. The initial state and the
+    passcode are both guaranteed to be lucky numbers.</p>
+<p>You can assume that the initial state and the passcode are
+    different.</p>
+<h2>Output</h2>
+<p>Print a single line containing the integer <span class="tex2jax_process">$k$</span>, the minimum number of steps Anna
+    needs to open the lock given the constraints above. Then print
+    <span class="tex2jax_process">$k+1$</span> lines, each with an
+    <span class="tex2jax_process">$n$</span>-digit numbers, where
+    the first contains the initial state of the lock and the
+    following <span class="tex2jax_process">$k$</span> lines show
+    the selected digits on the lock after each step in your
+    solution. The final number must then be the passcode of the
+    lock.</p>
+<p>If there are multiple solutions, you can print any one of
+    them. If there is no solution just print a single line
+    containing “<tt class="ttfamily">Neibb</tt>”.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>9</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span>,
+          <span class="tex2jax_process">$m \leq 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 2$</span>,
+          <span class="tex2jax_process">$m \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>17</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 3$</span>,
+          <span class="tex2jax_process">$m \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 5$</span>,
+          <span class="tex2jax_process">$m \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>12</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 50$</span>,
+          <span class="tex2jax_process">$m \leq 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 50$</span>,
+          <span class="tex2jax_process">$m \leq 20$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>18</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$n = 50$</span>,
+          <span class="tex2jax_process">$n\cdot m \leq
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+1234
+1337
+1236
+2234
+1336
+1235
+0234
+</pre>
+</td>
+<td>
+<pre>4
+1234
+1235
+1236
+1336
+1337
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 8
+2
+8
+1
+9
+6
+4
+5
+3
+0
+7
+</pre>
+</td>
+<td>
+<pre>4
+2
+1
+0
+9
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 4
+85362837
+63812736
+13248765
+89816432
+85362838
+81234876
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

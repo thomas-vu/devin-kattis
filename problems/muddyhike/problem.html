@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/muddyhike/file/statement/en/img-0001.jpg" class="illustration" src="/problems/muddyhike/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by Kerstin Herrmann (<a href="https://pixabay.com/en/mud-pit-forest-pools-mud-1006137/">Pixabay</a>),
+        Public Domain
+      </div>
+</div>
+<p>Liam is planning out his route for an upcoming nature hike.
+    Unfortunately, the region that he plans on hiking through is
+    notoriously muddy, so in order to prevent his floral shirt from
+    getting covered with mud, he has decided to pick a route for
+    which the maximum depth of mud encountered is minimized.</p>
+<p>The terrain is modelled as a two-dimensional grid, with
+    nonnegative integers giving the depth of the mud in each cell
+    in micrometers (millionths of a meter). The hike must begin at
+    one of the cells in the leftmost column of the grid and finish
+    at one of the cells in the rightmost column of the grid. Liam
+    is allowed to move either north, south, east, or west, but he
+    cannot travel diagonally.</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers, <span class="tex2jax_process">$r$</span> and
+    <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(2 \leq r, c \leq 1\, 000)$</span>,
+    indicating the number of rows and the number of columns in the
+    grid, respectively. Each of the next <span class="tex2jax_process">$r$</span> lines contains <span class="tex2jax_process">$c$</span> space-separated integers,
+    indicating the depth of mud in the cells of the corresponding
+    grid row from left to right. Each depth is measured in
+    micrometers and is given as an integer in the interval
+    <span class="tex2jax_process">$[0,1\, 000\, 000]$</span>.</p>
+<h2>Output</h2>
+<p>The output should contain a single integer, the depth of the
+    deepest mud that Liam is forced to hike through if his route
+    minimizes this value.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4
+2 1 0 8
+3 7 3 5
+3 1 2 4
+9 0 4 6
+5 3 2 3
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+3 0
+1 2
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 4
+31415 92653 58979 32384
+62643 38327 95028 84197
+16939 93751 5820 97494
+45923 7816 40628 62089
+98628 3482 53421 17067
+98214 80865 13282 30664
+</pre>
+</td>
+<td>
+<pre>
+53421
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,121 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/groupthink/file/statement/en/img-0001.jpg" class="illustration" src="/problems/groupthink/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.istockphoto.com/photo/3d-models-of-team-unity-and-cooperation-gm146758744-8391415">
+        kabliczech (iStock)</a>, Used under license
+      </div>
+</div>
+<p>One of the most fundamental structures in abstract algebra
+    is called a <em>magma</em>. A magma is a pair <span class="tex2jax_process">$(M,\bullet )$</span>, where <span class="tex2jax_process">$M$</span> is a nonempty set and <span class="tex2jax_process">$\bullet $</span> is a binary operation on
+    <span class="tex2jax_process">$M$</span>. This means that
+    <span class="tex2jax_process">$\bullet $</span> maps each
+    ordered pair of elements <span class="tex2jax_process">$(x,y)$</span> in <span class="tex2jax_process">$M$</span> to an element in <span class="tex2jax_process">$M$</span> (in other words, <span class="tex2jax_process">$\bullet $</span> is a function from
+    <span class="tex2jax_process">$M \times M$</span> to
+    <span class="tex2jax_process">$M$</span>). The element to which
+    <span class="tex2jax_process">$\bullet $</span> maps
+    <span class="tex2jax_process">$(x,y)$</span> is denoted
+    <span class="tex2jax_process">$x \bullet y$</span>.</p>
+<p>Magmas that satisfy certain properties are given more
+    specialized names. Here are three important properties that
+    <span class="tex2jax_process">$(M,\bullet )$</span> could
+    satisfy:</p>
+<ul class="itemize">
+<li>
+<p><b class="bfseries">P1</b> <em>(associativity)</em>: For
+        all <span class="tex2jax_process">$x,y,z \in M$</span>,
+        <span class="tex2jax_process">$(x \bullet y) \bullet z = x
+        \bullet (y \bullet z)$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">P2</b> <em>(identity)</em>: There is
+        an element <span class="tex2jax_process">$I \in M$</span>
+        such that <span class="tex2jax_process">$x \bullet I = I
+        \bullet x = x$</span> for all <span class="tex2jax_process">$x \in M$</span> (<span class="tex2jax_process">$I$</span> is called an
+        <em>identity</em>).</p>
+</li>
+<li>
+<p><b class="bfseries">P3</b> [depends on <b class="bfseries">P2</b>] <em>(inverses)</em>: There is an
+        identity <span class="tex2jax_process">$I \in M$</span>,
+        and for every <span class="tex2jax_process">$x \in
+        M$</span>, there exists <span class="tex2jax_process">$x^*
+        \in M$</span> such that <span class="tex2jax_process">$x
+        \bullet x^* = x^* \bullet x = I$</span> (<span class="tex2jax_process">$x^*$</span> is called an
+        <em>inverse</em> of <span class="tex2jax_process">$x$</span>).</p>
+</li>
+</ul>
+<p>A magma that satisfies <b class="bfseries">P1</b> is called
+    a <em>semigroup</em>. A semigroup that satisfies <b class="bfseries">P2</b> is called a <em>monoid</em>. A monoid that
+    satisfies <b class="bfseries">P3</b> is called a
+    <em>group</em>. Given a magma <span class="tex2jax_process">$(M,\bullet )$</span>, determine its most
+    specialized name.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case specifying a magma
+    <span class="tex2jax_process">$(M,\bullet )$</span>. The first
+    line contains an integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1
+    \leq n \leq 120)$</span>, the size of <span class="tex2jax_process">$M$</span>. Assume that the elements of
+    <span class="tex2jax_process">$M$</span> are indexed
+    <span class="tex2jax_process">$0,1,2,\ldots ,n-1$</span>. Each
+    of the next <span class="tex2jax_process">$n^2$</span> lines
+    contains three integers <span class="tex2jax_process">$i~ j~
+    k$</span> <span class="tex2jax_process">$(0 \leq i,j,k \leq
+    n-1)$</span>, meaning that <span class="tex2jax_process">$x
+    \bullet y = z$</span>, where <span class="tex2jax_process">$x$</span> is the element indexed by
+    <span class="tex2jax_process">$i$</span>, <span class="tex2jax_process">$y$</span> is the element indexed by
+    <span class="tex2jax_process">$j$</span>, and <span class="tex2jax_process">$z$</span> is the element indexed by
+    <span class="tex2jax_process">$k$</span>. Each ordered pair
+    <span class="tex2jax_process">$(i,j)$</span> will appear
+    exactly once as the first two values on a line.</p>
+<h2>Output</h2>
+<p>The output consists of a single line. Output “<tt class="ttfamily">group</tt>” if <span class="tex2jax_process">$(M,\bullet )$</span> satisfies <b class="bfseries">P1</b>, <b class="bfseries">P2</b>, and <b class="bfseries">P3</b>. Output “<tt class="ttfamily">monoid</tt>” if
+    <span class="tex2jax_process">$(M,\bullet )$</span> satisfies
+    <b class="bfseries">P1</b> and <b class="bfseries">P2</b>, but
+    not <b class="bfseries">P3</b>. Output “<tt class="ttfamily">semigroup</tt>” if <span class="tex2jax_process">$(M,\bullet )$</span> satisfies <b class="bfseries">P1</b>, but not <b class="bfseries">P2</b> (and
+    therefore not <b class="bfseries">P3</b>). Otherwise, output
+    “<tt class="ttfamily">magma</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 0 0
+0 1 1
+1 0 1
+1 1 0
+</pre>
+</td>
+<td>
+<pre>group
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 1
+2 0 0
+0 1 0
+2 2 2
+1 0 0
+0 0 0
+2 1 1
+0 2 0
+1 1 2
+</pre>
+</td>
+<td>
+<pre>monoid
+</pre>
+</td>
+</tr>
+</table>
+</div>

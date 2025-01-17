@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>Seasoned competitive programmers are quite familiar with
+    <a href="https://github.com/kth-competitive-programming/kactl"><span class="scshape">
+    KACTL</span></a>, a very good algorithm repository designed for
+    use in the ICPC. The problem setters of Chalmers Challenge 2021
+    count themselves to this group, but have in preparation for
+    this contest noticed two serious flaws with it.</p>
+<p>First, it turns out the <span class="scshape">K</span> in
+    <span class="scshape">KACTL</span> stands for <span class="scshape">KTH</span>! This is clearly unacceptable and needs to
+    be remedied. Second, the <span class="tex2jax_process">$26$</span>-page limit prevents the
+    repository from achieving true greatness. Hence, we introduce
+    <span class="scshape">CHACTL</span>: Chalmers Competition
+    Template Library with no less than <span class="tex2jax_process">$2^{26}$</span> pages. This is plenty space
+    for all distributed quadratic SIMD, assault and battery of
+    floating-point numbers and cryptic guides to crossword solving
+    you could ever wish for!</p>
+<p>During development, Dragos came up to us and said that our
+    users need a proper navigation system to handle the scale and
+    intensity of <span class="scshape">CHACTL</span>. He
+    recommended buttons that traverse the pages a power of two at a
+    time. We implemented this, so from page <span class="tex2jax_process">$i$</span> you can go to page <span class="tex2jax_process">$i + 2^ t$</span> or <span class="tex2jax_process">$i - 2^ t$</span> in a single step for any
+    <span class="tex2jax_process">$t$</span>.</p>
+<p>Although there are no pages with negative numbers, or with
+    arbitrarily large numbers, the navigation system supports
+    jumping to such pages as it might reduce the number of jumps
+    needed.</p>
+<p>We want to test this by looking up algorithms on pages
+    <span class="tex2jax_process">$P_0, P_1, \ldots
+    P_{N-1}$</span>, in that order. <span class="scshape">CHACTL</span>’s pages are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$2^{26} - 1$</span>. Starting from page
+    <span class="tex2jax_process">$0$</span>, what is the smallest
+    number of jumps required to look up all the algorithms?</p>
+<h2>Input</h2>
+<p>The first line contains one integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$1
+    \le N \le 10^5$</span>. The following <span class="tex2jax_process">$N$</span> lines each contain one integer.
+    Line <span class="tex2jax_process">$i$</span> contains
+    <span class="tex2jax_process">$P_ i$</span>, <span class="tex2jax_process">$0 \le P_ i &lt; 2^{26}$</span>.</p>
+<h2>Output</h2>
+<p>Output the smallest number of jumps required to look up the
+    algorithms.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+63
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0
+1
+23
+1
+7
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>12
+8137
+16777170
+127
+131121
+4194378
+221
+2105
+524249
+65616
+131152
+131118
+48
+</pre>
+</td>
+<td>
+<pre>46
+</pre>
+</td>
+</tr>
+</table>
+</div>

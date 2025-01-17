@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/knitpicking/file/statement/en/img-0001.jpg" class="illustration" src="/problems/knitpicking/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:Gillie_in_one_of_his_resting_places_(3284394473).jpg">
+        Gillie in one of his resting places By Dwight Sipler</a>
+        (cc by-sa)
+      </div>
+</div>Kattis has many pairs of nice, warm, knit socks in her
+    sock drawer that are perfect for the winter. These socks come
+    in a wide range of colours and types, and have all been mixed
+    together. Each morning Kattis needs to pick two matching socks.
+    <p>To find matching socks, she simply randomly takes single
+    socks out of the drawer until she has a matching pair. It may
+    take a long time, for example when she keeps drawing right
+    socks without a matching left one. How long does she need to
+    keep drawing socks until she is guaranteed to have a pair to
+    wear?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 1\, 000$</span>), the
+        number of groups of identical socks.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        describing a group of identical socks with the
+        following:</p>
+<ul class="itemize">
+<li>
+<p>A string <span class="tex2jax_process">$i$</span>,
+            the type of the socks in the group. The type
+            <span class="tex2jax_process">$i$</span> consists of
+            between <span class="tex2jax_process">$1$</span> and
+            <span class="tex2jax_process">$20$</span> lowercase
+            English letters. Socks with the same type are
+            considered compatible for fashion purposes.</p>
+</li>
+<li>
+<p>A string <span class="tex2jax_process">$j$</span>,
+            the fit of the socks in the group, which is either
+            <tt class="ttfamily">left</tt>, <tt class="ttfamily">right</tt> or <tt class="ttfamily">any</tt>,
+            indicating whether the socks fit on the left foot, the
+            right foot or any foot.</p>
+</li>
+<li>
+<p>An integer <span class="tex2jax_process">$k$</span>
+            (<span class="tex2jax_process">$1\leq k \leq 1\,
+            000$</span>), the number of socks in the drawer that
+            are of this type and fit.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>A given fit of a given type of sock appears at most once in
+    the input.</p>
+<h2>Output</h2>
+<p>Output the minimum number of socks Kattis needs to draw to
+    be guaranteed to get a matching pair. If it is not possible to
+    get a matching pair at all, output <tt class="ttfamily">impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+fuzzy any 10
+wool left 6
+wool right 4
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+sports any 1
+black left 6
+white right 6
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+warm any 5
+warm left 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

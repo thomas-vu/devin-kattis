@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>For a boat on a small, constrained body of water, other
+    traffic can be a major hazard. The more traffic there is in the
+    same area, the higher the risk of a collision.</p>
+<p>Your job is to monitor traffic and help detect likely
+    collisions before they occur. You have sensors to detect the
+    position, direction, and speed of each boat. Assuming the
+    direction and speed remain constant, your task is to determine
+    whether any of the boats will collide. Two boats are considered
+    to collide if they come within a given distance of each
+    other.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$c$</span>, the number of test
+    cases to follow. Each test case starts with a line containing
+    two numbers, <span class="tex2jax_process">$n$</span>, the
+    number of boats, and <span class="tex2jax_process">$r$</span>,
+    the collision distance. Two boats are considered to collide if
+    they come within <span class="tex2jax_process">$r$</span>
+    metres of each other. There will be no more than 1000 boats.
+    Each boat is identified by a line containing four numbers
+    <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$s$</span>. The numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> give the current position of the
+    boat as a distance east and north, respectively, from a common
+    origin, and will be between <span class="tex2jax_process">$-1\,
+    000$</span> and <span class="tex2jax_process">$1\, 000$</span>,
+    inclusive. The lake is small enough that we can model it as a
+    flat surface. The number <span class="tex2jax_process">$d$</span> gives the direction in which the
+    boat is heading in degrees clockwise from north (so east is 90
+    degrees). The number <span class="tex2jax_process">$s$</span>
+    gives the speed of the boat in metres per second, and will be
+    between <span class="tex2jax_process">$0.001$</span> and
+    <span class="tex2jax_process">$1\, 000$</span>. Note that
+    <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$d$</span>, and <span class="tex2jax_process">$s$</span> are not necessarily integers. The
+    input data will be such that the answer will not change if any
+    of the numbers <span class="tex2jax_process">$x$</span>,
+    <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$d$</span> and <span class="tex2jax_process">$s$</span> are changed by <span class="tex2jax_process">$10^{-6}$</span> or less.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing a single
+    integer, the number of seconds, rounded to the nearest second,
+    before any of the boats come within <span class="tex2jax_process">$r$</span> metres of each other. If none of
+    the boats ever collide, output the line:</p>
+<p><tt class="ttfamily">No collision.</tt></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+2 5
+0 0 90 1
+10 10 180 1
+2 10
+0 0 0 0
+8 8 270 1
+</pre>
+</td>
+<td>
+<pre>
+6
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>You’ve just finished writing a random array generator for
+    your <del>competitive programming</del> practical examination
+    problem. However, when you tested it, you noticed that the
+    distribution is skewed; some values may appear much more times
+    than the other values. You wanted to smoothen the distribution,
+    but you don’t want to modify your generator anymore. Thus, you
+    decide to remove exactly <span class="tex2jax_process">$K$</span> elements from the array, such that
+    the maximum occurrence of a value is minimized. Now, given an
+    array <span class="tex2jax_process">$A$</span> of size
+    <span class="tex2jax_process">$N$</span>, determine the minimum
+    possible maximum occurrence of a value from the array after you
+    remove exactly <span class="tex2jax_process">$K$</span>
+    elements from it.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 200\, 000$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$0
+    \leq K \leq N$</span>).</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$A[i]$</span> (<span class="tex2jax_process">$1 \leq A[i] \leq 10^9$</span>), the elements
+    of the array <span class="tex2jax_process">$A$</span>.</p>
+<h2>Output</h2>
+<p>Print the minimum possible maximum occurrence of a value of
+    <span class="tex2jax_process">$A$</span> after exactly
+    <span class="tex2jax_process">$K$</span> removal.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): <span class="tex2jax_process">$K = 0$</span>, <span class="tex2jax_process">$N \leq 3\, 000$</span>, <span class="tex2jax_process">$A[i] \leq 3\, 000$</span>, and
+        <span class="tex2jax_process">$A$</span> is sorted in
+        non-decreasing order.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): <span class="tex2jax_process">$K = 0$</span>, <span class="tex2jax_process">$N \leq 3\, 000$</span>, and <span class="tex2jax_process">$A[i] \leq 3\, 000$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$10$</span> Points</b>): <span class="tex2jax_process">$K = 0$</span> and <span class="tex2jax_process">$N \leq 3\, 000$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$20$</span> Points</b>): <span class="tex2jax_process">$K = 0$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$30$</span> Points</b>): <span class="tex2jax_process">$N \leq 3\, 000$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$20$</span> Points</b>): No additional
+        constraints.</p>
+</li>
+</ol>
+<h2>Explanation</h2>
+<p>In the first sample, <span class="tex2jax_process">$1$</span> appears twice, <span class="tex2jax_process">$7$</span> appears three times, <span class="tex2jax_process">$3$</span> appears five times, and none of
+    the elements will be removed. Thus, the maximum occurrence is
+    five.</p>
+<p>In the second sample, we can remove two occurrences of
+    <span class="tex2jax_process">$3$</span> and one occurrence of
+    <span class="tex2jax_process">$7$</span>. Hence, <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$7$</span> appear twice, and <span class="tex2jax_process">$3$</span> appears three times. Thus, the
+    maximum occurrence is three.</p>
+<h2>Warning</h2>
+<p>The I/O files are large. Please use fast I/O methods.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 0
+1 1 3 3 3 3 3 7 7 7
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 3
+3 1 7 3 3 3 7 3 1 7
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>Your friend is an organizer of the International Chess
+    Playing Championship. He is worried that some of the
+    contestants may be cheating, and he has asked you to help out.
+    The chess players are allowed to report matches to the jury
+    themselves, and this is not checked with the reported opponent.
+    So, it is possible for competitors to make up matches and
+    falsely report themselves as the winners.</p>
+<p>Since chess is a game of skill, and not of chance, a player
+    will <em>always</em> beat their opponent if their skill level
+    is higher. A game will result in a draw if and only if the two
+    players’ skills are exactly equal.</p>
+<p>However, the skill level of the players is not known. He has
+    therefore asked you to write a program that, given a list of
+    reported matches, determines whether this list is consistent or
+    not. The list is inconsistent if we can determine that at least
+    one reported match is falsely reported, otherwise it is
+    consistent.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 50\, 000$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq 250\, 000$</span>), to describe a championship with
+    <span class="tex2jax_process">$N$</span> players and
+    <span class="tex2jax_process">$M$</span> reported matches.</p>
+<p>The following <span class="tex2jax_process">$M$</span> lines
+    each consist of an integer <span class="tex2jax_process">$K$</span>, a symbol which is either
+    ‘<tt class="ttfamily">=</tt>’ or ‘<tt class="ttfamily">&gt;</tt>’, and another integer <span class="tex2jax_process">$L$</span>. The integers <span class="tex2jax_process">$K$</span> and <span class="tex2jax_process">$L$</span> each uniquely identify a player
+    (<span class="tex2jax_process">$0 \leq K, L &lt; N$</span>). If
+    the symbol is ‘<tt class="ttfamily">=</tt>’, then the game
+    between <span class="tex2jax_process">$K$</span> and
+    <span class="tex2jax_process">$L$</span> was a draw. If the
+    symbol is ‘<tt class="ttfamily">&gt;</tt>’, then <span class="tex2jax_process">$K$</span> beat <span class="tex2jax_process">$L$</span> in a match.</p>
+<p>You may assume that there is at most one reported match
+    between any given pair of players. Also, each player takes part
+    in at least one reported match.</p>
+<h2>Output</h2>
+<p>Output a single line containing a single word: “<tt class="ttfamily">consistent</tt>” if the list of recorded matches is
+    consistent, and “<tt class="ttfamily">inconsistent</tt>” if it
+    is not.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+0 &gt; 1
+1 = 2
+0 = 2
+</pre>
+</td>
+<td>
+<pre>inconsistent
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+0 = 1
+1 = 2
+3 = 4
+0 &gt; 3
+1 &gt; 4
+</pre>
+</td>
+<td>
+<pre>consistent
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+0 &gt; 1
+1 &gt; 2
+3 = 4
+4 = 5
+5 &gt; 3
+</pre>
+</td>
+<td>
+<pre>inconsistent
+</pre>
+</td>
+</tr>
+</table>
+</div>

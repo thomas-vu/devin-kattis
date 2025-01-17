@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Evelina is going to start speculating on the stock market to
+    become rich. She is actually not really interested in economics
+    and never bothers to read more than the first stock price in
+    the newspaper. But, she thinks, it’s everyone else who is
+    complicating things. If you buy and sell a stock at the right
+    time you could just as well earn money on this one company,
+    which we call <span class="tex2jax_process">$A$</span>. By
+    always asking her friends about the amount of fish balls they
+    eat she has learned to exactly predict the price of
+    <span class="tex2jax_process">$A$</span> for the next
+    <span class="tex2jax_process">$N$</span> days. Write a program
+    that computes the amount of money she has at the end of that
+    period if she starts with <span class="tex2jax_process">$100$</span> SEK and invests optimally. She
+    can never borrow money, she must use her own.</p>
+<p>The stock price is updated daily and is the same for both
+    buying and selling stocks. Each day Evelina can either buy any
+    amount of stock, sell any amount of stock or do nothing. The
+    amount she purchases doesn’t have to be an integer. For each
+    transaction, she must pay a fixed fee as a commission. The fee
+    is paid in cash, that is before she buys stocks she must pay a
+    fee, and after she sells stocks she must pay a fee.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 100\, 000$</span>), the number or days.</p>
+<p>The second line contains a decimal number <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$0
+    \le Q \le 100$</span>), the fee in SEK per transaction.</p>
+<p>This is followed by <span class="tex2jax_process">$N$</span>
+    lines each containing a decimal number, the stock price for
+    each day. The price is always between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000$</span> SEK.</p>
+<p>All decimal numbers have at most <span class="tex2jax_process">$10$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>Output the maximum amount of money she can have after
+    <span class="tex2jax_process">$N$</span> days. Your answer will
+    be considered correct if it has a relative or absolute error of
+    at most <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test case groups.
+    To get the points for a group, you need to pass all the test
+    cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 14$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+2.3
+75.6
+86.2
+83.1
+91.3
+72.5
+95.7
+</pre>
+</td>
+<td>
+<pre>147.3742063492
+</pre>
+</td>
+</tr>
+</table>
+</div>

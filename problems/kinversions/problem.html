@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>You are given a string <span class="tex2jax_process">$s$</span> consisting only of upper case
+    letters <b class="bf">A</b> and <b class="bf">B</b>. For an
+    integer <span class="tex2jax_process">$k$</span>, a pair of
+    indices <span class="tex2jax_process">$i$</span> and
+    <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1 \le i&lt;j \le n$</span>) is called a
+    <span class="tex2jax_process">$k$</span>-inversion if and only
+    if <span class="tex2jax_process">$s[i] = \textbf{B}$</span>,
+    <span class="tex2jax_process">$s[j] = \textbf{A}$</span> and
+    <span class="tex2jax_process">$j-i = k$</span>.</p>
+<p>Consider the string <b class="bf">BABA</b>. It has two
+    <span class="tex2jax_process">$1$</span>-inversions and one
+    <span class="tex2jax_process">$3$</span>-inversion. It has no
+    <span class="tex2jax_process">$2$</span>-inversions.</p>
+<center>
+<img alt="\includegraphics{k.jpg}" src="/problems/kinversions/file/statement/en/img-0001.jpg" style="width:; height:"/>
+</center>
+<p>For each <span class="tex2jax_process">$k$</span> between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$n-1$</span> (inclusive), print the number of
+    <span class="tex2jax_process">$k$</span>-inversions in the
+    string <span class="tex2jax_process">$s$</span>.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    input will consist of a single line with a string <span class="tex2jax_process">$s$</span>, which consists of only upper case
+    <b class="bf">A</b>s and <b class="bf">B</b>s. The string
+    <span class="tex2jax_process">$s$</span> will be between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span> characters long. There
+    will be no spaces.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n-1$</span> lines,
+    each with a single integer. The first line’s integer should be
+    the number of <span class="tex2jax_process">$1$</span>-inversions, the second should be
+    the number of <span class="tex2jax_process">$2$</span>-inversions, and so on.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+BABA
+</pre>
+</td>
+<td>
+<pre>
+2
+0
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+BBBBBAAAAA
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+3
+4
+5
+4
+3
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bottleopening/file/statement/en/img-0001.gif" class="illustration" src="/problems/bottleopening/file/statement/en/img-0001.gif"/>
+<div class="description"></div>
+</div>
+<p>The crown cork bottle stopper, used to seal beer bottles,
+    was the first highly successful disposable product. It was
+    invented by William Painter in 1892 in Baltimore; the product’s
+    disposability and success inspired King C. Gillette to invent
+    the disposable razor when he was a salesman for the Crown Cork
+    Company.</p>
+<p>Crown-corked bottles are supposed to be opened with a
+    special tool called a bottle opener. However, with some
+    practice, you can learn how to open a crown-corked bottle using
+    another crown-corked bottle. This process opens the first
+    bottle but leaves the second crown-corked; the first bottle’s
+    cork is disposed of and not used again.</p>
+<p>Given <span class="tex2jax_process">$n$</span> crow-corked
+    bottles, devise a plan to open <span class="tex2jax_process">$k$</span> of them with this procedure (if
+    possible).</p>
+<h2>Input</h2>
+<p>The integer <span class="tex2jax_process">$n$</span> (the
+    number of crown-corked bottles), followed by the integer
+    <span class="tex2jax_process">$k$</span> (the desired number of
+    open bottles), on separate lines. You can assume <span class="tex2jax_process">$1\leq k\leq n\leq 100$</span>.</p>
+<h2>Output</h2>
+<p>Print “<tt class="ttfamily">impossible</tt>” if there is no
+    way to open <span class="tex2jax_process">$k$</span> of the
+    bottles. Otherwise print exactly <span class="tex2jax_process">$k$</span> lines for the form “<tt class="ttfamily">open 4 using 9</tt>”, meaning that bottle 4 is
+    opened with bottle 9. In general, the form is “<tt class="ttfamily">open <span class="tex2jax_process">$t$</span> using
+    <span class="tex2jax_process">$b$</span></tt>”, where
+    <span class="tex2jax_process">$t$</span> and <span class="tex2jax_process">$b$</span> are distinct integers from
+    <span class="tex2jax_process">$\{ 1,\ldots , n\} $</span> and
+    <span class="tex2jax_process">$b$</span> is not yet opened.</p>
+<h2>Explanation of sample 1</h2>
+<p>In sample <span class="tex2jax_process">$1$</span>, there
+    are three bottles, and you want to open one of them. This can
+    be done, for instance using bottle <span class="tex2jax_process">$2$</span> to open bottle <span class="tex2jax_process">$1$</span>. (There are other ways of doing
+    this. Any valid answer is accepted.)</p>
+<h2>Explanation of sample 2</h2>
+<p>In sample <span class="tex2jax_process">$2$</span>, there is
+    one bottle. Bottles can’t be used to open themselves, so it is
+    impossible to achieve an open bottle.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1
+</pre>
+</td>
+<td>
+<pre>open 1 using 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,226 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/mylla/file/statement/en/img-0001.png" class="illustration" src="/problems/mylla/file/statement/en/img-0001.png"/>
+<div class="description">
+        Fullkomin mylla
+      </div>
+</div>
+<p>Arnar and Hannes are very competitive friends and love
+    competing with one another. They are always looking for new
+    games to compete at and they both prefer games involving a lot
+    of thinking.</p>
+<p>Hannes found a new version of tic-tac-toe called
+    <em>Fullkomin mylla</em> and found it likely he’d beat Arnar at
+    this game. He thus went to Arnar and asked him whether he was
+    up for it. Arnar said he’d be up for it but only if the loser
+    paid for the food next time they went to American Style.</p>
+<p>To be sure that the better player won, and that luck
+    wouldn’t be involved, they decided to play a few rounds, and
+    the first player to win <span class="tex2jax_process">$n$</span> rounds would win the bet. Each
+    round will consist of <span class="tex2jax_process">$5$</span>
+    games of Fullkomin Mylla and whoever wins more games out of the
+    <span class="tex2jax_process">$5$</span>, wins that round.</p>
+<p>Furthermore they aren’t going to spend time on unneccesary
+    games. Thus they will stop a round as soon as its victor is
+    clear. For example if Arnar wins the first three games of a
+    round they won’t play more games in this round, since Arnar
+    will win the round no matter what the results of the last two
+    games are.</p>
+<h2>Rules</h2>
+<p>Fullkomin mylla is played by creating one large tic-tac-toe
+    board and then in each cell of the large board there is a
+    smaller tic-tac-toe board. Players take alternating turns and
+    choose cells in the small boards to play in until a victor
+    emerges. If a player wins one of the small boards, the
+    corresponding cell in the large board is filled in with that
+    players mark. If a player wins the large board, they win the
+    game.</p>
+<p>Player <span class="tex2jax_process">$1$</span> starts and
+    can choose any cell in the large board to play in and then
+    chooses a cell in the smaller board contained in that cell.
+    After that player <span class="tex2jax_process">$2$</span> has
+    to play in the smaller board that corresponds to the cell in
+    the small board that player <span class="tex2jax_process">$1$</span> chose. If that board is already
+    won then player <span class="tex2jax_process">$2$</span> can
+    choose any cell. This repeats until one player wins the game or
+    there are no moves left to make and the game’s a tie.</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> which is the number of rounds
+    needed to win the bet. The next line contains a string
+    <span class="tex2jax_process">$S$</span> describing who won
+    each game, A if Arnar won and H if Hannes won. You may assime
+    that no ties came up and that the string describes exactly the
+    games that were played, in the order they were played.</p>
+<h2>Output</h2>
+<p>Print who lost the bet.</p>
+<h2>Explanation of Sample Input</h2>
+<p>In the first sample the winner is the first player to win
+    <span class="tex2jax_process">$2$</span> rounds. The games
+    proceeded as follows:</p>
+<ol class="enumerate">
+<li>
+<p>The first round begins. Arnar wins the first game of
+        this round.</p>
+</li>
+<li>
+<p>Hannes wins the second game.</p>
+</li>
+<li>
+<p>Arnar wins the third game. The score is now 2-1 for
+        Arnar, but Hannes could still win the round, so they
+        continue.</p>
+</li>
+<li>
+<p>Hannes wins the fourth game.</p>
+</li>
+<li>
+<p>Arnar wins the fifth game, so Arnar wins the first round
+        3-2.</p>
+</li>
+<li>
+<p>The second round begins. Arnar wins the first game.</p>
+</li>
+<li>
+<p>Arnar also wins the second game.</p>
+</li>
+<li>
+<p>Hannes now comes in hot and wins the third game.</p>
+</li>
+<li>
+<p>Hannes wins the fourth game.</p>
+</li>
+<li>
+<p>Hannes is on a roll and wins the fifth game, so he wins
+        the second round 3-2. Now both have won 1 round.</p>
+</li>
+<li>
+<p>The third round begins. Hannes wins the first game.</p>
+</li>
+<li>
+<p>Arnar wins the second game.</p>
+</li>
+<li>
+<p>Hannes wins the third game.</p>
+</li>
+<li>
+<p>Arnar wins the fourth game.</p>
+</li>
+<li>
+<p>Arnar wins the fifth game and thus wins the round 3-2.
+        Now Arnar has won two rounds and is thus victorious!</p>
+</li>
+</ol>
+<p>In the second sample the winner is the first player to win
+    <span class="tex2jax_process">$2$</span> rounds. The games
+    proceeded as follows:</p>
+<ol class="enumerate">
+<li>
+<p>The first round begins. Hannes wins the first game.</p>
+</li>
+<li>
+<p>Hannes wins the second game.</p>
+</li>
+<li>
+<p>Hannes is on a wild roll and also wins the third games.
+        Now Hannes has three wins, but there are only games left in
+        the round. Thus Arnar has no chance of winning this round,
+        so the round ends 3-0 for Hannes.</p>
+</li>
+<li>
+<p>The second round starts. Arnar wins the first ggame and
+        thus wins back some respect after being steamrolled by
+        Hannes in the first round.</p>
+</li>
+<li>
+<p>Hannes doesn’t let this affect him and wins the second
+        game.</p>
+</li>
+<li>
+<p>Hannes then just keeps going and wins the third
+        game.</p>
+</li>
+<li>
+<p>He shoots and he scores! Hannes wins the fourth game. He
+        has three wins this round and Arnar only one. There is only
+        one game left and no matter how it goes Hannes will win it.
+        Thus they stop this round and Hannes wins 3-1. Hannes has
+        now won two rounds and thus wins the bet.</p>
+</li>
+</ol>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Scoring</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          1000$</span>, no round contains less than <span class="tex2jax_process">$5$</span> games</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          1000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+AHAHAAAHHHHAHAA
+</pre>
+</td>
+<td>
+<pre>Hannes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+HHHAHHH
+</pre>
+</td>
+<td>
+<pre>Arnar
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,140 @@
+<div class="problembody">
+<p>As we know, the security of the RSA problem relies on the
+    difficulty of factoring integers. Generally, the RSA modulus is
+    generated as follows:</p>
+<ul class="itemize">
+<li>
+<p>Pick two large prime integers <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span>,</p>
+</li>
+<li>
+<p>Compute <span class="tex2jax_process">$n = p \cdot
+        q$</span>.</p>
+</li>
+</ul>
+<p>Generally speaking, if <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span> are large enough (e.g.
+    <span class="tex2jax_process">$1024$</span>-bit primes), then
+    it is infeasible to factorize <span class="tex2jax_process">$n$</span>, which is our only known strategy
+    to break the security of RSA.</p>
+<p>The problem with this strategy, however, is that if we have
+    two modulus <span class="tex2jax_process">$n = p \cdot
+    q$</span> and <span class="tex2jax_process">$n’ = p \cdot
+    q’$</span> for <span class="tex2jax_process">$q \ne q’$</span>,
+    then we can compute <span class="tex2jax_process">$p = \gcd (n,
+    n’)$</span>, thus factoring both <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$n’$</span>. See <a href="https://crypto.stackexchange.com/q/76757">https://crypto.stackexchange.com/q/76757</a>
+    for some recent researches on this topic, the most recent
+    research can factors <span class="tex2jax_process">$1$</span>
+    in <span class="tex2jax_process">$172$</span> in RSA
+    certificates.</p>
+<p>Usually, the cause of such collision is poor randomization
+    in the devices used to generate the random primes. Some ways to
+    mitigate the issue is discussed in the question linked
+    above.</p>
+<p>If you have a huge collection of, for example, 340 million
+    integers, it would be completely infeasible to compute the
+    <span class="tex2jax_process">$\gcd $</span> of each pair.
+    Instead, a <em>batch GCD algorithm</em> is needed. Common
+    implementation of that algorithm is the following:</p>
+<ul class="itemize">
+<li>
+<p>Divide the set of modulus into two sets <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> of roughly equal sizes.</p>
+</li>
+<li>
+<p>Use divide and conquer, compute the product <span class="tex2jax_process">$\prod A$</span> of all elements in
+        <span class="tex2jax_process">$A$</span>, as well as the
+        product <span class="tex2jax_process">$\prod B$</span> of
+        all elements in <span class="tex2jax_process">$B$</span>.</p>
+<p>Using one of the fast integer multiplication algorithms
+        based on FFT, this step can be done in time <span class="tex2jax_process">$\tilde O(n)$</span>, where <span class="tex2jax_process">$n$</span> is the total number of bits
+        representing the numbers in the input.</p>
+</li>
+<li>
+<p>Compute <span class="tex2jax_process">$\gcd (\prod
+        A,\prod B)$</span>. With the half-GCD algorithm, this step
+        can also be done in time <span class="tex2jax_process">$\tilde O(n)$</span>.</p>
+</li>
+</ul>
+<p>If there’s any pair <span class="tex2jax_process">$a\in
+    A$</span>, <span class="tex2jax_process">$b\in B$</span> with
+    <span class="tex2jax_process">$\gcd (a, b)&gt;1$</span>, this
+    algorithm would detect that pair. Otherwise, the algorithm
+    recurses down to the sets <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>.</p>
+<p>In this problem, you will be solving a much simpler instance
+    with smaller size of integers: Given <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \dots , a_ n$</span>, determine if
+    there exists any pair with <span class="tex2jax_process">$\gcd
+    (a_ i, a_ j)&gt;1$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains a positive integer <span class="tex2jax_process">$n \le 10^6$</span>, the second line contains
+    <span class="tex2jax_process">$n$</span> positive integers
+    <span class="tex2jax_process">$a_ i \le 10^{10}$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print the string “<tt class="ttfamily">YES</tt>” or “<tt class="ttfamily">NO</tt>” on a
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+2
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 2
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3
+6 10 15
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

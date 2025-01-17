@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/wipeyourwhiteboards/file/statement/en/img-0001.jpg" class="illustration" src="/problems/wipeyourwhiteboards/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by: <a href="https://commons.wikimedia.org/wiki/File:Inverter_whiteboard_1000.jpg">
+        Cyril Mechkov</a>
+</div>
+</div>
+<p>You enter an empty classroom to do some homework, and you
+    find out that someone did not clean the whiteboard properly.
+    Apparently, the previous instruction in that room has been
+    about the Extended Euclidean algorithm, because you see lots of
+    intermediate results of this algorithm on the whiteboard.
+    However, some parts of it have been wiped out, so you don’t see
+    everything they did. In particular, you’re not sure what
+    numbers they used as the inputs for the algorithm. As you
+    didn’t really feel like doing your homework in the first place,
+    you decide to see if you can figure out the numbers they
+    started with.</p>
+<p>Looking at the algorithm as executed on the whiteboard, you
+    can determine one thing for certain from their intermediate
+    results: given that their inputs were <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$A,
+    B \geq 1$</span>, both integers), you see three integers
+    <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$Q$</span> (with <span class="tex2jax_process">$R \geq 2$</span>, <span class="tex2jax_process">$S \leq -2$</span> and <span class="tex2jax_process">$Q \geq 1$</span>), for which you know that
+    <span class="tex2jax_process">$A \cdot R + B \cdot S =
+    Q$</span>. Now, given these three numbers, you want to figure
+    out the <span class="tex2jax_process">$A$</span> and
+    <span class="tex2jax_process">$B$</span> they started out with.
+    Unfortunately, you quickly realize that there may not be a
+    single <span class="tex2jax_process">$A$</span> and
+    <span class="tex2jax_process">$B$</span> pair that fit this, so
+    you decide to go looking for the pair with smallest positive
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. Finally, you decide to not
+    actually bother trying to find an <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> such that <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$Q$</span> are intermediate results of the
+    Extended Euclidean algorithm applied on <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>: you decide you’re happy if they
+    just satisfy <span class="tex2jax_process">$A \cdot R + B \cdot
+    S = Q$</span>.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 250$</span>), the number of
+    test cases. Then for each test case:</p>
+<ul class="itemize">
+<li>
+<p>One line with three space-separated integers
+        <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$Q$</span>. These satisfy <span class="tex2jax_process">$2 \leq R \leq 10^8$</span>, <span class="tex2jax_process">$-10^8 \leq S \leq -2$</span> and
+        <span class="tex2jax_process">$1 \leq Q \leq 10^8$</span>.
+        You are given that <span class="tex2jax_process">$Q$</span>
+        is a multiple of the greatest common divisor of
+        <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$S$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each test case, output one line with two space-separated
+    integers <span class="tex2jax_process">$A \geq 1$</span> and
+    <span class="tex2jax_process">$B \geq 1$</span>, the smallest
+    such pair of numbers so that <span class="tex2jax_process">$A
+    \cdot R + B \cdot S = Q$</span>. By the smallest pair, we mean
+    the pair such that <span class="tex2jax_process">$A$</span> is
+    minimal and if there are multiple such pairs the one of these
+    for which <span class="tex2jax_process">$B$</span> is
+    minimal.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+3 -5 15
+110 -29 1
+6 -5 12
+6 -5 11
+</pre>
+</td>
+<td>
+<pre>
+10 3
+24 91
+7 6
+6 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

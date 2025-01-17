@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>John is on a mission to get two people out of prison. This
+    particular prison is a one-story building. He has managed to
+    get hold of a detailed floor plan, indicating all the walls and
+    doors. He also knows the locations of the two people he needs
+    to set free. The prison guards are not the problem – he has
+    planned a diversion that should leave the building practically
+    void.</p>
+<p>The doors are his main concern. All doors are normally
+    opened remotely from a control room, but John can open them by
+    other means. Once he has managed to open a door, it remains
+    open. However, opening a door takes time, which he does not
+    have much of, since his diversion will only work for so long.
+    He therefore wants to minimize the number of doors he needs to
+    open. Can you help him plan the optimal route to get to the two
+    prisoners?</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{cartoon}" src="/problems/jailbreak/file/statement/en/img-0001.jpg" style="width:50.00%"/>
+</center>
+</div>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$2 \leq h,w \leq 100$</span>): the width
+        and height of the map.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$h$</span> lines with
+        <span class="tex2jax_process">$w$</span> characters
+        describing the prison building:</p>
+<ul class="itemize">
+<li>
+<p>‘<tt>.</tt>’ is an empty space.</p>
+</li>
+<li>
+<p>‘<tt>*</tt>’ is an impenetrable wall.</p>
+</li>
+<li>
+<p>‘<tt>#</tt>’ is a door.</p>
+</li>
+<li>
+<p>‘<tt>$</tt>’ is one of the two people to be
+            liberated.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>John can freely move around the outside of the building.
+    There are exactly two people on the map. For each person, a
+    path from the outside to that person is guaranteed to
+    exist.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single integer: the minimum number of
+        doors John needs to open in order to get to both
+        prisoners.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+5 9
+****#****
+*..#.#..*
+****.****
+*$#.#.#$*
+*********
+5 11
+*#*********
+*$*...*...*
+*$*.*.*.*.*
+*...*...*.*
+*********.*
+9 9
+*#**#**#*
+*#**#**#*
+*#**#**#*
+*#**.**#*
+*#*#.#*#*
+*$##*##$*
+*#*****#*
+*.#.#.#.*
+*********
+</pre>
+</td>
+<td>
+<pre>
+4
+0
+9
+</pre>
+</td>
+</tr>
+</table>
+</div>

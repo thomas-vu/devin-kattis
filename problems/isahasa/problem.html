@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Two familiar concepts in object oriented programming are the
+    is-a and has-a relationships. Given two classes A and B, we say
+    that A is-a B if A is a subclass of B; we say A has-a B if one
+    of the fields of A is of type B. For example, we could imagine
+    an object-oriented language (call it ICPC++) with code like
+    that in Figure 1, where the class <tt class="tt">Day</tt> is-a
+    <tt class="tt">Time</tt>, the class <tt class="tt">Appointment</tt> is both a <tt class="tt">DateBook</tt>
+    and a <tt class="tt">Reminder</tt>, and class <tt class="tt">Appointment</tt> has-a <tt class="tt">Day</tt>.</p>
+<div class="figure" id="isa_1">
+<center>
+<pre>
+ class Day extends Time    class Appointment extends Datebook, Reminder
+ {                         {
+    ...                       private Day date;
+ }                            ...
+                           }
+</pre>
+<div class="caption">
+<b>Figure 1</b>: Two ICPC++ classes.
+        </div>
+</center>
+</div>
+<p>These two relationships are transitive. For example if A
+    is-a B and B is-a C then it follows that A is-a C. This holds
+    as well if we change all the is-a’s in the last sentence to
+    has-a’s. It also works with combinations of is-a’s and has-a’s:
+    in the example above, <tt class="tt">Appointment</tt> has-a
+    <tt class="tt">Time</tt>, since it has-a <tt class="tt">Day</tt> and <tt class="tt">Day</tt> is-a <tt class="tt">Time</tt>. Similarly, if class <tt class="tt">DateBook</tt> has-a <tt class="tt">Year</tt> then
+    <tt class="tt">Appointment</tt> has-a <tt class="tt">Year</tt>,
+    since <tt class="tt">Appointment</tt> is-a <tt class="tt">DateBook</tt>.</p>
+<p>In this problem you will be given a set of is-a and has-a
+    relationships and a set of queries of the form A is/has-a B.
+    You must determine if each query is true or false.</p>
+<h2>Input:</h2>
+<p>Input starts with two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, (<span class="tex2jax_process">$1
+    \leq n,m \leq 10\, 000$</span>), where <span class="tex2jax_process">$n$</span> specifies the number of given is-a
+    and has-a relationships and <span class="tex2jax_process">$m$</span> specifies the number of queries.
+    The next <span class="tex2jax_process">$n$</span> lines each
+    contain one given relationship in the form <span class="tex2jax_process">$c_1$</span> <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$c_2$</span> where <span class="tex2jax_process">$c_1$</span> and <span class="tex2jax_process">$c_2$</span> are single-word class names, and
+    <span class="tex2jax_process">$r$</span> is either the string
+    “is-a” or “has-a”. Following this are <span class="tex2jax_process">$m$</span> queries, one per line, using the
+    same format. There will be at most <span class="tex2jax_process">$500$</span> distinct class names in the
+    <span class="tex2jax_process">$n+m$</span> lines, and all class
+    names in the last <span class="tex2jax_process">$m$</span>
+    lines will appear at least once in the initial <span class="tex2jax_process">$n$</span> lines. All is-a and has-a
+    relationships between the given classes can be deduced from the
+    <span class="tex2jax_process">$n$</span> given relationships.
+    Is-a relationships can not be circular (apart from the trivial
+    identity “<span class="tex2jax_process">$x$</span> is-a
+    <span class="tex2jax_process">$x$</span>”).</p>
+<h2>Output</h2>
+<p>For each query, display the query number (starting at one)
+    and whether the query is true or false.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+Day is-a Time
+Appointment is-a Datebook
+Appointment is-a Reminder
+Appointment has-a Day
+Datebook has-a Year
+Day is-a Time
+Time is-a Day
+Appointment has-a Time
+Appointment has-a Year
+Day is-a Day
+</pre>
+</td>
+<td>
+<pre>
+Query 1: true
+Query 2: false
+Query 3: true
+Query 4: true
+Query 5: true
+</pre>
+</td>
+</tr>
+</table>
+</div>

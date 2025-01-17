@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>Oh no! Both you and your lab partner forgot to complete one
+    part of the latest assignment and it is due in an hour!</p>
+<p>The purpose of this lab assignment was to have you analyze
+    some experimental data, find a quadratic function that best
+    describes the data, and report the minimum value that can be
+    taken by this quadratic.</p>
+<p>Both you and your partner have tried this part on your own,
+    in order to double-check your answers. Unfortunately, you both
+    found different quadratic functions!</p>
+<p>You don’t have time to repeat the experiment. To try and
+    maximize your chances of reporting a value that is close to the
+    minimum (i.e. to get partial credit), you decide to find a
+    value <span class="tex2jax_process">$x$</span> that minimizes
+    the maximum of your two quadratic functions.</p>
+<p>More precisely, your task is the following. Given two
+    quadratic functions <span class="tex2jax_process">$f(x) = x^2 +
+    A\cdot x + B$</span> and <span class="tex2jax_process">$g(x) =
+    x^2 + C \cdot x + D$</span> (here <span class="tex2jax_process">$A,B,C,D$</span> will be given values), you
+    should find a value <span class="tex2jax_process">$x^*$</span>
+    minimizing the maximum of these two functions. That is,
+    <span class="tex2jax_process">$x^*$</span> should be chosen to
+    minimize the function <span class="tex2jax_process">$h(x) =
+    \max \{ f(x), g(x)\} $</span>.</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing four integers
+    <span class="tex2jax_process">$A, B, C, D$</span>, each lying
+    in the range <span class="tex2jax_process">$[-1\, 000, 1\,
+    000]$</span>.</p>
+<h2>Output</h2>
+<p>Display two values <span class="tex2jax_process">$x^*,
+    h(x^*)$</span> on a single line where <span class="tex2jax_process">$x^*$</span> is the point that minimizes the
+    function <span class="tex2jax_process">$h(x) = \max \{ x^2 + A
+    \cdot x + B, x^2 + C \cdot x + D\} $</span>.</p>
+<p>Your answer will be accepted if both values are within an
+    absolute or relative error of <span class="tex2jax_process">$10^{-4}$</span> of the correct answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 0 0 1
+</pre>
+</td>
+<td>
+<pre>0 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 -1 0 -2
+</pre>
+</td>
+<td>
+<pre>-0.5 -1.75
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 1 3 -2
+</pre>
+</td>
+<td>
+<pre>-1.5 -1.25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 2 2
+</pre>
+</td>
+<td>
+<pre>-1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>25 -73 -23 41
+</pre>
+</td>
+<td>
+<pre>2.375 -7.984375
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,123 @@
+<div class="problembody">
+<div class="illustration" style="width:60.00%">
+<img alt="/problems/orchard/file/statement/en/img-0001.jpg" class="illustration" src="/problems/orchard/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: Media-mania.de
+      </div>
+</div>
+<p>First Orchard is a cooperative game for children 2 years and
+    up. In this simple game, the players pick colored fruits from
+    trees in an orchard and place them into a basket. To make the
+    game more interesting, a raven tries to reach the orchard to
+    steal the fruits. If the players are successful in moving all
+    fruits into the basket before the raven can get to the orchard,
+    they’ll win. If the raven gets there first, the players
+    lose!</p>
+<p>Your task is to determine the probability with which the
+    players will win!</p>
+<p>The game is played as follows. There are <span class="tex2jax_process">$4$</span> trees in the orchard, each bearing
+    a different type of fruit: red apples, green apples, blue
+    plums, and yellow pears. The raven tries to reach the orchard
+    through a pathway containing one or more steps.</p>
+<p>At each turn, the players roll a six-sided die. Four of the
+    faces show a color (red, green, yellow, blue), the fifth face
+    shows a fruit basket, and the sixth face shows a raven. All six
+    faces can appear with equal probability.</p>
+<ul class="itemize">
+<li>
+<p><em>Red</em>, <em>Green</em>, <em>Yellow</em>,
+        <em>Blue</em>. In these cases, a fruit with the
+        corresponding color is placed into the basket, provided the
+        tree corresponding to this color still has any fruits left
+        to pick. Otherwise, the players move on to the next
+        turn.</p>
+</li>
+<li>
+<p><em>Fruit Basket</em>. If the players roll the ’basket’
+        face, they will pick a fruit from the tree that has the
+        largest number of fruits left. If there are multiple such
+        trees with the same number of fruits, any of the trees can
+        be chosen.</p>
+</li>
+<li>
+<p><em>Raven</em>. If the ’raven’ face appears on the die,
+        then the raven moves one step closer towards the
+        orchard.</p>
+</li>
+</ul>
+<p>The game is over if either the players have picked all
+    fruits, or if the raven reaches the orchard, whichever happens
+    first. If the raven reaches the orchard before the players have
+    placed all fruits into the basket, the players lose.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case with a single line
+    of input. The input contains five integer numbers: <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$G$</span>, <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$Y$</span> and <span class="tex2jax_process">$S$</span>. The values of <span class="tex2jax_process">$R, G, B$</span> and <span class="tex2jax_process">$Y$</span> are the number of red, green,
+    blue, and yellow fruits initially on each tree, respectively,
+    and <span class="tex2jax_process">$S$</span> denotes the number
+    of steps on the raven’s pathway. Since the game is intended for
+    young children, there will be at most <span class="tex2jax_process">$4$</span> fruits of each color: <span class="tex2jax_process">$0 \le R, G, B, Y \le 4$</span>. There will
+    be at least one fruit overall: <span class="tex2jax_process">$0
+    &lt; R + G + B + Y$</span>. The raven will require at least
+    <span class="tex2jax_process">$1$</span> and at most
+    <span class="tex2jax_process">$8$</span> steps: <span class="tex2jax_process">$1 \le S \le 8$</span>. The number of steps
+    is equal to the number of times the raven must appear on the
+    die for the players to lose.</p>
+<h2>Output</h2>
+<p>Output the probability that the players will win as a
+    floating point number. The absolute error of your result should
+    be less than <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 1 0 0 3
+</pre>
+</td>
+<td>
+<pre>
+0.920138888889
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4 4 4 5
+</pre>
+</td>
+<td>
+<pre>
+0.631357306601
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4 4 4 4
+</pre>
+</td>
+<td>
+<pre>
+0.459393713591
+</pre>
+</td>
+</tr>
+</table>
+</div>

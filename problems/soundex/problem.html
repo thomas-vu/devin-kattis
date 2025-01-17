@@ -1,0 +1,47 @@
+<div class="problembody">
+<p>Soundex coding groups together words that appear to sound
+    alike based on their spelling. For example, “can” and “khawn”,
+    “con” and “gone” would be equivalent under Soundex coding.</p>
+<p>Soundex coding involves translating each word into a series
+    of digits in which each digit represents a letter:</p>
+<pre>
+      1 represents B, F, P, or V
+      2 represents C, G, J, K, Q, S, X,  or Z
+      3 represents D or T
+      4 represents L
+      5 represents M or N
+      6 represents R
+</pre>
+<p>The letters A, E, I, O, U, H, W, and Y are not represented
+    in Soundex coding, and repeated letters with the same code
+    digit are represented by a single instance of that digit. Words
+    with the same Soundex coding are considered equivalent.</p>
+<h2>Input</h2>
+<p>Each line of input contains a single word, all upper case,
+    less than <span class="tex2jax_process">$20$</span> letters
+    long. There are at most <span class="tex2jax_process">$10\,
+    000$</span> lines of input.</p>
+<h2>Output</h2>
+<p>For each line of input, produce a line of output giving its
+    Soundex code.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>KHAWN
+PFISTER
+BOBBY
+</pre>
+</td>
+<td>
+<pre>25
+1236
+11
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,64 @@
+<div class="problembody">
+<p>A partition of an integer <span class="tex2jax_process">$n$</span> is a set of positive integers
+    which sum to <span class="tex2jax_process">$n$</span>,
+    typically written in descending order. For example:</p>
+<pre>
+        10 = 4+3+2+1
+</pre>
+<p>A partition is <span class="tex2jax_process">$m$</span>-ary
+    if each term in the partition is a power of <span class="tex2jax_process">$m$</span>. For example, the <span class="tex2jax_process">$3$</span>-ary partitions of <span class="tex2jax_process">$9$</span> are:</p>
+<pre>
+        9
+        3+3+3
+        3+3+1+1+1
+        3+1+1+1+1+1+1
+        1+1+1+1+1+1+1+1+1
+</pre>
+<p>Write a program to find the number of <span class="tex2jax_process">$m$</span>-ary partitions of an integer
+    <span class="tex2jax_process">$n$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single decimal integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 1\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently.</p>
+<p>Each data set consists of a single line of input. The line
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by the base of powers,
+    <span class="tex2jax_process">$m$</span>, (<span class="tex2jax_process">$3 \le m \le 100$</span>), followed by a
+    space, followed by the integer, <span class="tex2jax_process">$n$</span>, (<span class="tex2jax_process">$3
+    \le n \le 10\, 000$</span>), for which the number of
+    <span class="tex2jax_process">$m$</span>-ary partitions is to
+    be found.</p>
+<h2>Output</h2>
+<p>For each data set there is one line of output. The output
+    line contains the data set number, <span class="tex2jax_process">$K$</span>, a space, and the number of
+    <span class="tex2jax_process">$m$</span>-ary partitions of
+    <span class="tex2jax_process">$n$</span>. The result should fit
+    in a 32-bit unsigned integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+1 3 9
+2 3 47
+3 5 123
+4 7 4321
+5 97 9999
+</pre>
+</td>
+<td>
+<pre>
+1 5
+2 63
+3 75
+4 144236
+5 111
+</pre>
+</td>
+</tr>
+</table>
+</div>

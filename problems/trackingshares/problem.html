@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/trackingshares/file/statement/en/img-0001.jpg" class="illustration" src="/problems/trackingshares/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/photos/stock-trading-monitor-business-1863880/">
+        Pixabay</a>
+</div>
+</div>
+<p>You are an experienced investor who is investing in multiple
+    companies. At the end of the year you are expected to file your
+    taxes, which requires you to track and report the total number
+    of shares you held during any of your trading days during the
+    year.</p>
+<p>The records you have kept are sorted by company: for each
+    company, you have a list of notes stating how many shares of
+    that company you owned on a given day.</p>
+<p>Your tax accountant has asked you to produce a list of the
+    total number of shares across all companies you have held on
+    each of the days on which you have traded and recorded your
+    holdings.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$1
+    \le C \le 20$</span>), the total number of companies of which
+    you hold shares. Next will be <span class="tex2jax_process">$C$</span> blocks of records, one for each
+    company.</p>
+<p>Each record block starts with an integer <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \le K \le 50$</span>), which is the number of records you have
+    kept for this company. This is followed by <span class="tex2jax_process">$K$</span> lines of input, each containing
+    two integers <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$1 \le N \le 1\, 000$</span>)
+    and <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$1 \le D \le 365$</span>), denoting that you
+    held <span class="tex2jax_process">$N$</span> shares of this
+    company on day <span class="tex2jax_process">$D$</span>. In
+    each company’s record block, there will be at most one entry
+    for each possible trading day, but the days in the record block
+    may be specified in any order.</p>
+<h2>Output</h2>
+<p>Print, on a single line, for each day for which you have at
+    least one record, the total number of shares held on that day.
+    The share totals shall be printed in increasing order of
+    trading days.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2
+20 100
+100 10
+1
+150 50
+1
+150 100
+</pre>
+</td>
+<td>
+<pre>100 250 320
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2
+200 63
+100 25
+2
+50 278
+100 63
+2
+50 25
+100 278
+</pre>
+</td>
+<td>
+<pre>150 350 350
+</pre>
+</td>
+</tr>
+</table>
+</div>

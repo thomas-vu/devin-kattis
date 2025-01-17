@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>You’re playing hopscotch! You start at the origin and your
+    goal is to hop to the lattice point <span class="tex2jax_process">$(N, N)$</span>. A hop consists of going from
+    lattice point <span class="tex2jax_process">$(x_1, y_1)$</span>
+    to <span class="tex2jax_process">$(x_2, y_2)$</span>, where
+    <span class="tex2jax_process">$x_1 &lt; x_2$</span> and
+    <span class="tex2jax_process">$y_1 &lt; y_2$</span>.</p>
+<p>You dislike making small hops though. You’ve decided that
+    for every hop you make between two lattice points, the
+    x-coordinate must increase by at least <span class="tex2jax_process">$X$</span> and the y-coordinate must increase
+    by at least <span class="tex2jax_process">$Y$</span>.</p>
+<p>Compute the number of distinct paths you can take between
+    <span class="tex2jax_process">$(0, 0)$</span> and <span class="tex2jax_process">$(N, N)$</span> that respect the above
+    constraints. Two paths are distinct if there is some lattice
+    point that you visit in one path which you don’t visit in the
+    other.</p>
+<p>Hint: The output involves arithmetic mod <span class="tex2jax_process">$10^9+7$</span>. Note that with <span class="tex2jax_process">$p$</span> a prime like <span class="tex2jax_process">$10^9+7$</span>, and <span class="tex2jax_process">$x$</span> an integer not equal to
+    <span class="tex2jax_process">$0$</span> mod <span class="tex2jax_process">$p$</span>, then <span class="tex2jax_process">$x(x^{p-2})$</span> mod <span class="tex2jax_process">$p$</span> equals <span class="tex2jax_process">$1$</span> mod <span class="tex2jax_process">$p$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of a line of three integers, <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$X$</span> <span class="tex2jax_process">$Y$</span>. You may assume <span class="tex2jax_process">$1 \le X, Y \le N \le 10^{6}$</span>.</p>
+<h2>Output</h2>
+<p>The number of distinct paths you can take between the two
+    lattice points can be very large. Hence output this number
+    modulo 1 000 000 007 (<span class="tex2jax_process">$10^9 +
+    7$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 2 3
+</pre>
+</td>
+<td>
+<pre>
+9
+</pre>
+</td>
+</tr>
+</table>
+</div>

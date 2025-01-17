@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>“A watched pot never boils”, as the saying goes. Chef Edward
+    has been cooking for ages, and empirically the saying seems to
+    be true in his kitchen – he has yet to see a pot actually start
+    boiling. His wife Gunilla is a bit suspicious of Edward’s claim
+    though. She knows how he often loses focus after a little
+    while, and thinks that it is very likely Edward gets tired of
+    watching after about the same period of time starting when he
+    puts it on the stove.</p>
+<p>Being scientifically minded, Gunilla quickly designed an
+    experiment which could help Edward gain more insight into the
+    boiling of pots. Every time during the last week when Edward
+    boiled a pot of water, he wrote down the intervals of time when
+    he was not watching the pot. Now, he has a large log of these
+    intervals, and wonders whether Gunilla is right (i.e. it may be
+    the case Edward just happened to watch away every time the pot
+    started boiling), or if his hypothesis is correct.</p>
+<p>Given this data, is it possible that the pot actually starts
+    boiling after the same amount of time, every time?</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$1 \le N \le 1\, 000$</span>, the number of
+    times Edward boiled water in the last week. Then, <span class="tex2jax_process">$N$</span> descriptions of a boiling follow.
+    Each description contains two numbers <span class="tex2jax_process">$0 \le a \le b \le 1\, 000$</span>. This
+    means that Edward looked away during seconds <span class="tex2jax_process">$[a, b]$</span> (i.e. from the start of
+    second <span class="tex2jax_process">$a$</span>, to the end of
+    second <span class="tex2jax_process">$b$</span>), and that
+    Edward first saw the pot boiling once he looked back.</p>
+<h2>Output</h2>
+<p>If it is impossible that all the pots actually started
+    boiling at the same point in time, output <tt class="ttfamily">edward is right</tt>. Otherwise, output <tt class="ttfamily">gunilla has a point</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 7
+5 5
+</pre>
+</td>
+<td>
+<pre>
+gunilla has a point
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+4 6
+4 8
+7 8
+</pre>
+</td>
+<td>
+<pre>
+edward is right
+</pre>
+</td>
+</tr>
+</table>
+</div>

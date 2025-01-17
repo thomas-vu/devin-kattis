@@ -1,0 +1,89 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/magicbitstrings/file/statement/en/img-0001.jpg" class="illustration" src="/problems/magicbitstrings/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>A bitstring, whose length is one less than a prime, might be
+    magic. 1001 is one such string. In order to see the magic in
+    the string let us append a non-bit x to it, regard the new
+    thingy as a cyclic string, and make this square matrix of
+    bits</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>each bit</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1001</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>every 2nd bit</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>0110</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>every 3rd bit</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>0110</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p>every 4th bit</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1001</p>
+</td>
+</tr>
+</table>
+<p>This matrix has the same number of rows as the length of the
+    original bitstring. The <span class="tex2jax_process">$m$</span>-th row of the matrix has every
+    <span class="tex2jax_process">$m$</span>-th bit of the original
+    string starting with the <span class="tex2jax_process">$m$</span>-th bit. Because the enlarged
+    thingy has prime length, the appended x never gets used.</p>
+<p>If each row of the matrix is either the original bitstring
+    or its complement, the original bitstring is magic.</p>
+<p>Each line of input (except last) contains a prime number
+    <span class="tex2jax_process">$p \leq 100000$</span>. The last
+    line contains 0 and this line should not be processed. For each
+    prime number from the input produce one line of output
+    containing the lexicographically smallest, non-constant magic
+    bitstring of length <span class="tex2jax_process">$p-1$</span>,
+    if such a string exists, otherwise output
+    <tt>Impossible</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+3
+17
+47
+2
+79
+0
+</pre>
+</td>
+<td>
+<pre>
+0110
+01
+0010111001110100
+0000100001101010001101100100111010100111101111
+Impossible
+001001100001011010000001001111001110101010100011000011011111101001011110011011
+</pre>
+</td>
+</tr>
+</table>
+</div>

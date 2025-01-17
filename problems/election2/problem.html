@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>Canada has a multi-party system of government. Each
+    candidate is generally associated with a party, and the party
+    whose candidates win the most ridings generally forms the
+    government. Some candidates run as independents, meaning they
+    are not associated with any party. Your job is to count the
+    votes for a particular riding and to determine the party with
+    which the winning candidate is associated.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$n$</span> satisfying
+    <span class="tex2jax_process">$2 \le n \le 20$</span>, the
+    number of candidates in the riding. <span class="tex2jax_process">$n$</span> pairs of lines follow: the first
+    line in each pair is the name of the candidate; the second line
+    is the name of the party, or the word “independent” if the
+    candidate has no party. No candidate name is repeated and no
+    party name appears more than once in this part of the
+    input.</p>
+<p>The next line contains a positive integer <span class="tex2jax_process">$m \le 10\, 000$</span>, and is followed by
+    <span class="tex2jax_process">$m$</span> lines each indicating
+    the name of a candidate for which a ballot is cast. Any names
+    not in the list of candidates should be ignored.</p>
+<p>Each name line consists of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$80$</span> characters, uses only ASCII
+    characters <span class="tex2jax_process">$32$</span> to
+    <span class="tex2jax_process">$126$</span> (inclusive), and
+    does not contain any leading or trailing blanks.</p>
+<h2>Output</h2>
+<p>Output consists of a single line containing one of:</p>
+<ul class="itemize">
+<li>
+<p>The name of the party with whom the winning candidate is
+        associated, if there is a winning candidate and that
+        candidate is associated with a party.</p>
+</li>
+<li>
+<p>The word “<tt class="ttfamily">independent</tt>” if
+        there is a winning candidate and that candidate is not
+        associated with a party.</p>
+</li>
+<li>
+<p>The word “<tt class="ttfamily">tie</tt>” if there is no
+        winner; that is, if no candidate receives more votes than
+        every other candidate.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Marilyn Manson
+Rhinoceros
+Jane Doe
+Family Coalition
+John Smith
+independent
+6
+John Smith
+Marilyn Manson
+Marilyn Manson
+Jane Doe
+John Smith
+Marilyn Manson
+</pre>
+</td>
+<td>
+<pre>Rhinoceros
+</pre>
+</td>
+</tr>
+</table>
+</div>

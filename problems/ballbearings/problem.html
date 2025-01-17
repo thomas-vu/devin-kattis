@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>The Swedish company SKF makes ball bearings. As explained by
+    Britannica Online, a ball bearing is</p>
+<blockquote class="quote">
+<p><em>“one of the two types of rolling, or anti friction,
+      bearings (the other is the roller bearing).</em></p>
+<p><em>Its function is to connect two machine members that
+      move relative to one another so that the frictional
+      resistance to motion is minimal. In many applications, one of
+      the members is a rotating shaft and the other a fixed
+      housing. Each ball bearing has three main parts: two grooved,
+      ring like races and a number of balls. The balls fill the
+      space between the two races and roll with negligible friction
+      in the grooves. The balls may be loosely restrained and
+      separated by means of a retainer or cage.”</em></p>
+</blockquote>
+<p>Presumably, the more balls you have inside the outer ring,
+    the smoother the ride will be, but how many can you fit within
+    the outer ring? You will be given the inner diameter of the
+    outer ring, the diameter of the balls, and the minimum distance
+    between neighboring balls. Your task is to compute the maximum
+    number of balls that will fit on the inside of the outer ring
+    (all balls must touch the outer ring).</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics{ballbearings}" src="/problems/ballbearings/file/statement/en/img-0001.png" style="width:; height:"/>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$n$</span> that indicates the
+    number of test cases. Then follow <span class="tex2jax_process">$n$</span> lines, each describing a test
+    case. Each test case consists of three positive floating point
+    numbers, <span class="tex2jax_process">$D$</span>, <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$s$</span>, where <span class="tex2jax_process">$D$</span> is the inner diameter of the outer
+    ring, <span class="tex2jax_process">$d$</span> is the diameter
+    of a ball, and <span class="tex2jax_process">$s$</span> is the
+    minimum distance between balls. All parameters are in the range
+    <span class="tex2jax_process">$[0.0001, 500.0]$</span>.</p>
+<h2>Output</h2>
+<p>For each test case output a single integer <span class="tex2jax_process">$m$</span> on a line by itself, where
+    <span class="tex2jax_process">$m$</span> is the maximum number
+    of balls that can fit in the ball bearing, given the above
+    constraints. There will always be room for at least three
+    balls.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+20 1 0.1
+100.0 13.0 0.2
+</pre>
+</td>
+<td>
+<pre>
+54
+20
+</pre>
+</td>
+</tr>
+</table>
+</div>

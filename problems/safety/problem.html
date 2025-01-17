@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$N$</span>
+    contestants in a reality TV show. Each contestant is assigned a
+    point value by the judges and receives votes from the audience.
+    The point value given by the judges and the audience’s votes
+    are combined to form a <em>final</em> score for the contestant,
+    in the following way:</p>
+<p>Let <span class="tex2jax_process">$X$</span> be the sum of
+    the judge-assigned point values of all contestants. Now suppose
+    a contestant got <span class="tex2jax_process">$J$</span>
+    points from the judges, and that she received a fraction
+    <span class="tex2jax_process">$Y$</span> (between 0 and 1,
+    inclusive) of the audience’s votes (<span class="tex2jax_process">$Y$</span> might be, for example, 0.3). Then
+    that contestant’s final score is <span class="tex2jax_process">$J+XY$</span>. Note that the sum of all
+    contestants’ audience vote fractions must be 1.</p>
+<p>The contestant with the lowest score is eliminated.</p>
+<p>Given the points contestants got from judges, your job is to
+    find out, for each contestant, the minimum percentage of
+    audience votes he/she must receive in order for him/her to be
+    guaranteed not to be eliminated, no matter how the rest of the
+    audience’s votes are distributed.</p>
+<p>If the lowest score is shared by multiple contestants, no
+    contestants will be eliminated.</p>
+<h2>Input</h2>
+<p>The first line of the input gives the number of test cases,
+    <span class="tex2jax_process">$T$</span>. <span class="tex2jax_process">$T$</span> test cases follow, one per line.
+    Each line starts with an integer <span class="tex2jax_process">$N$</span>, the number of contestants,
+    followed by a space, followed by <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$s_0, s_1, \ldots , s_{N-1}$</span>,
+    separated by single spaces. The integer <span class="tex2jax_process">$s_ i$</span> is the point value assigned to
+    contestant <span class="tex2jax_process">$i$</span> by the
+    judges.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing <tt>Case
+    #x:</tt> followed by <span class="tex2jax_process">$N$</span>
+    real numbers: <span class="tex2jax_process">$m_ i$</span>s. The
+    value <span class="tex2jax_process">$x$</span> is the case
+    number (starting from 1). The value <span class="tex2jax_process">$m_ i$</span> is the smallest percentage of
+    audience votes required for contestant <span class="tex2jax_process">$i$</span> to definitely avoid
+    elimination.</p>
+<p>Answers within an absolute or relative error of <span class="tex2jax_process">$10^{-5}$</span> of the correct answer will
+    be accepted.</p>
+<h2>Limits</h2>
+<p><span class="tex2jax_process">$0 \leq s_ i \leq 100$</span>.
+    <span class="tex2jax_process">$s_ i &gt; 0$</span> for some
+    <span class="tex2jax_process">$i$</span>. This means at least
+    one contestant will have a point value greater than 0.
+    <span class="tex2jax_process">$1 \leq T \leq 50$</span>.
+    <span class="tex2jax_process">$2 \leq N \leq 200$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 20 10
+2 10 0
+4 25 25 25 25
+3 24 30 21
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 33.333333 66.666667
+Case #2: 0.000000 100.000000
+Case #3: 25.0 25.0 25.0 25.0
+Case #4: 34.666667 26.666667 38.666667
+</pre>
+</td>
+</tr>
+</table>
+</div>

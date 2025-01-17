@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>All of you are probably very familiar with the problem of
+    finding the longest monotone subsequence. You probably think
+    you know all about it. In order to convince us, solve the
+    problem “opposite” to finding the longest monotone
+    subsequence.</p>
+<p>For given <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$K$</span>, find a sequence that
+    consists of numbers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> such that each of the numbers in
+    it appears exactly once and the length of its longest monotone
+    subsequence (ascending or descending) is exactly <span class="tex2jax_process">$K$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq N \leq 10^6$</span>), the length of the sequence
+    and the required length of the longest monotone
+    subsequence.</p>
+<h2>Output</h2>
+<p>If the required sequence doesn’t exist, output <span class="tex2jax_process">$-1$</span> in the first and only line.</p>
+<p>If the required sequence exists, output the required
+    sequence of <span class="tex2jax_process">$N$</span> numbers in
+    the first and only line. Separate the numbers with a single
+    space.</p>
+<p>The required sequence (if it exists) is not necessarily
+    unique, so you can output any valid sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3
+</pre>
+</td>
+<td>
+<pre>
+1 4 2 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 1
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+</pre>
+</td>
+<td>
+<pre>
+1 2 3 4 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

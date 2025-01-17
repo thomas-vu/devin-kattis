@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/flowfree/file/statement/en/img-0001.png" class="illustration" src="/problems/flowfree/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Flow Free is a puzzle that is played on a 2D grid of cells,
+    with some cells marked as endpoints of certain colors and the
+    rest of cells being blank.</p>
+<p>To solve the puzzle, you have to connect each pair of
+    colored endpoints with a path, following these rules:</p>
+<ul class="itemize">
+<li>
+<p>there is a path connecting two points with the same
+        color, and that path also has that color</p>
+</li>
+<li>
+<p>all cells in the grid are used and each cell belongs to
+        exactly one path (of the same color as the endpoints of the
+        path)</p>
+</li>
+</ul>
+<p>The rules imply that different colored paths cannot
+    intersect.</p>
+<p>The path is defined as a connected series of segments where
+    each segment connects two neighbouring cells. Two cells are
+    neighbours if they share a side (so all segments are either
+    horizontal or vertical). By these definitions and rules above,
+    each colored cell will be an endpoint of exactly one segment
+    and each blank cell will be an endpoint of exactly two
+    segments.</p>
+<p>In this problem we will consider only the <span class="tex2jax_process">$4 \times 4$</span> puzzle, with <span class="tex2jax_process">$3$</span> or <span class="tex2jax_process">$4$</span> pairs of colored endpoints
+    given.</p>
+<p>Your task is to determine if a given puzzle is solvable or
+    not.</p>
+<h2>Input</h2>
+<p>The input consists of <span class="tex2jax_process">$4$</span> lines, each line containing
+    <span class="tex2jax_process">$4$</span> characters. Each
+    character is from the set <span class="tex2jax_process">$\{ R,
+    G, B, Y, W\} $</span> where <span class="tex2jax_process">$W$</span> denotes the blank cells and the
+    other characters denote endpoints with the specified color. You
+    are guaranteed that there will be exactly <span class="tex2jax_process">$3$</span> or <span class="tex2jax_process">$4$</span> pairs of colored cells. If there
+    are <span class="tex2jax_process">$3$</span> colors in the
+    grid, <span class="tex2jax_process">$Y$</span> will be
+    omitted.</p>
+<h2>Output</h2>
+<p>On a single line output either “<tt class="ttfamily">solvable</tt>” or “<tt class="ttfamily">not
+    solvable</tt>” (without the quotes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+RGBW
+WWWW
+RGBY
+YWWW
+</pre>
+</td>
+<td>
+<pre>
+solvable
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+RGBW
+WWWW
+RGBW
+YWWY
+</pre>
+</td>
+<td>
+<pre>
+not solvable
+</pre>
+</td>
+</tr>
+</table>
+</div>

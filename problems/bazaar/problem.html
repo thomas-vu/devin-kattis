@@ -1,0 +1,171 @@
+<div class="problembody">
+<p>In an epic but tiny pirate game, several players compete for
+    resources in order to gain a large enough booty to bury at
+    deserted islands. After pillaging resources from peaceful
+    settlements, players need to visit the bazaar in order to
+    exchange their goods for pieces o’ eight to add to their
+    booty.</p>
+<p>There are <span class="tex2jax_process">$2N$</span>
+    different goods in the game, each of a different type such as
+    coffee, silk and sugarcane. The bazaar has the following
+    mechanism for setting the prices of each good. There is always
+    exactly one good that is priced <span class="tex2jax_process">$i$</span> pieces o’ eight, for each positive
+    integer <span class="tex2jax_process">$i$</span> such that
+    <span class="tex2jax_process">$1 \le i \le 2N$</span>. At the
+    start of the game, the prices of the goods are arbitrarily
+    assigned. Whenever a pirate sells a good priced <span class="tex2jax_process">$i$</span>, its new price becomes
+    <span class="tex2jax_process">$1$</span>, and any good
+    previously priced <span class="tex2jax_process">$j$</span>
+    where <span class="tex2jax_process">$1 \le j &lt; i$</span> has
+    its price set to <span class="tex2jax_process">$j +
+    1$</span>.</p>
+<p>Two players are in the endgame phase of a match, and are now
+    rapidly trying to sell off all their pillaged goods. At the
+    moment, each player is in possession of exactly <span class="tex2jax_process">$N$</span> goods. A player can only exchange
+    a single good per turn, after which the turn passes over to the
+    other player. Given the current prices of the goods and what
+    goods each player has, your task is to compute the difference
+    between the amount of pieces o’ eight the players receive, if
+    they are playing optimally. Optimal play means that if
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are the numbers of pieces o’ eight
+    the first and second player receives respectively, player
+    <span class="tex2jax_process">$A$</span> tries to maximize
+    <span class="tex2jax_process">$A - B$</span>, while player
+    <span class="tex2jax_process">$B$</span> tries to maximize
+    <span class="tex2jax_process">$B - A$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains the even integer <span class="tex2jax_process">$2N$</span> (<span class="tex2jax_process">$1
+    \le 2N \le 100\, 000$</span>), the number of types of goods in
+    the game.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$a_1, \dots , a_ N$</span>
+    (<span class="tex2jax_process">$1 \le a_ i \le 2N$</span>), the
+    prices of the goods that the first player has. This is followed
+    by a line of the same format containing the prices of goods
+    that the second player has.</p>
+<h2>Output</h2>
+<p>Output a single integer: the number of pieces o’ eight the
+    first player receives minus the number of pieces o’ eight the
+    second player receives, if playing optimally as described in
+    the statement.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$13$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2N \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$26$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$2N \le 2\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 3</h2>
+<p>At the start of the game, the goods of the first player are
+    priced <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$2$</span>, and those of the
+    second player are priced <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span>. One optimal strategy is for the
+    first player to start by selling the good priced <span class="tex2jax_process">$2$</span>, which increases the price of
+    their remaining good to <span class="tex2jax_process">$2$</span>. The second player can then sell
+    the good priced <span class="tex2jax_process">$4$</span>,
+    increasing the price of the first player’s good to <span class="tex2jax_process">$3$</span> and the price of second player’s
+    remaining good to <span class="tex2jax_process">$4$</span>. The
+    two players then sell their remaining good at prices
+    <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span>.</p>
+<p>The first player receives a total of <span class="tex2jax_process">$2 + 3 = 5$</span> pieces o’ eight, while the
+    second one gets a total of <span class="tex2jax_process">$4 + 4
+    = 8$</span> pieces o’ eight, o the answer is <span class="tex2jax_process">$5 - 8 = -3$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1
+2
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2
+1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2
+3 4
+</pre>
+</td>
+<td>
+<pre>-3
+</pre>
+</td>
+</tr>
+</table>
+</div>

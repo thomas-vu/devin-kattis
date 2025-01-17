@@ -1,0 +1,64 @@
+<div class="problembody">
+<p><span class="tex2jax_process">$N$</span>-puzzle is a puzzle
+    that goes by many names and has many variants. In this problem
+    we will use the <span class="tex2jax_process">$15$</span>-puzzle. It consists of a
+    <span class="tex2jax_process">$4$</span>-by-<span class="tex2jax_process">$4$</span> grid of sliding squares where one
+    square is missing. The squares are labeled with uppercase
+    letters ’A’ through ’O’, with the desired layout as
+    follows:</p>
+<div class="figure">
+<p><img alt="\includegraphics{table}" src="/problems/npuzzle/file/statement/en/img-0001.png" style="width:; height:"/></p>
+</div>
+<p>It can be useful (for example, when solving the puzzle using
+    a computer) to define the "scatter" of a puzzle as the sum of
+    distances between each square’s current position and its
+    position in the desired layout. The distance between two
+    squares is their Manhattan distance (the sum of the absolute
+    values of the differences between the two rows and the two
+    columns).</p>
+<p>Write a program that calculates the scatter of the given
+    puzzle.</p>
+<h2>Input</h2>
+<p>Four lines of input contain four characters each,
+    representing the state of the puzzle.</p>
+<h2>Output</h2>
+<p>Output the scatter of the puzzle on a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ABCD
+EFGH
+IJKL
+M.NO
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>.BCD
+EAGH
+IJFL
+MNOK
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

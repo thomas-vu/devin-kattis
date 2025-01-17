@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/robotsonagrid/file/statement/en/img-0001.jpg" class="illustration" src="/problems/robotsonagrid/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You have recently made a grid traversing robot that can find
+    its way from the top left corner of a grid to the bottom right
+    corner. However, you had forgotten all your AI programming
+    skills, so you only programmed your robot to go rightwards and
+    downwards (that’s after all where the goal is). You have placed
+    your robot on a grid with some obstacles, and you sit and
+    observe. However, after a while you get tired of observing it
+    getting stuck, and ask yourself “How many paths are there from
+    the start position to the goal position?”, and “If there are
+    none, could the robot have made it to the goal if it could walk
+    upwards and leftwards?”</p>
+<p>So you decide to write a program that, given a grid of size
+    <span class="tex2jax_process">$n \times n$</span> with some
+    obstacles marked on it where the robot cannot walk, counts the
+    different ways the robot could go from the top left corner
+    <span class="tex2jax_process">$s$</span> to the bottom right
+    <span class="tex2jax_process">$t$</span>, and if none, tests if
+    it were possible if it could walk up and left as well. However,
+    your program does not handle very large numbers, so the answer
+    should be given modulo <span class="tex2jax_process">$2^{31} -
+    1$</span>.</p>
+<h2>Input</h2>
+<p>On the first line is one integer, <span class="tex2jax_process">$1 \leq n \leq 1000$</span>. Then follows
+    <span class="tex2jax_process">$n$</span> lines, each with
+    <span class="tex2jax_process">$n$</span> characters, where each
+    character is one of <tt class="tt">’.’</tt> and <tt class="tt">’#’</tt>, where <tt class="tt">’.’</tt> is to be
+    interpreted as a walkable tile and <tt class="tt">’#’</tt> as a
+    non-walkable tile. There will never be a wall at <span class="tex2jax_process">$s$</span>, and there will never be a wall at
+    <span class="tex2jax_process">$t$</span>.</p>
+<h2>Output</h2>
+<p>Output one line with the number of different paths starting
+    in <span class="tex2jax_process">$s$</span> and ending in
+    <span class="tex2jax_process">$t$</span> (modulo <span class="tex2jax_process">$2^{31} - 1$</span>) or <tt class="ttfamily">THE GAME IS A LIE</tt> if you cannot go from
+    <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$t$</span> going only rightwards and
+    downwards but you can if you are allowed to go left and up as
+    well, or <tt class="ttfamily">INCONCEIVABLE</tt> if there
+    simply is no path from <span class="tex2jax_process">$s$</span>
+    to <span class="tex2jax_process">$t$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+.....
+#..#.
+#..#.
+...#.
+.....
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+......#
+####...
+.#.....
+.#...#.
+.#.....
+.#..###
+.#.....
+</pre>
+</td>
+<td>
+<pre>
+THE GAME IS A LIE
+</pre>
+</td>
+</tr>
+</table>
+</div>

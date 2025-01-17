@@ -1,0 +1,126 @@
+<div class="problembody">
+<p>In her bike rides around Warsaw, Jill happened upon a shop
+    that sold interesting glass bottles. She thought it might make
+    an interesting project to use such bottles for measuring
+    liquids, but this would require placing markings on the bottles
+    to indicate various volumes. Where should those volume marks be
+    placed?</p>
+<p>Jill formalized the problem as follows. Assume a bottle is
+    formed by revolving a shape that is the same as the graph of a
+    polynomial <span class="tex2jax_process">$P$</span> between
+    <span class="tex2jax_process">$x = x_{\text {low}}$</span> and
+    <span class="tex2jax_process">$x = x_{\text {high}}$</span>
+    around the <span class="tex2jax_process">$x$</span>-axis. Thus
+    the <span class="tex2jax_process">$x$</span>-axis is coincident
+    with a vertical line through the center of the bottle. The
+    bottom of the bottle is formed by a solid circular region at
+    <span class="tex2jax_process">$x = x_{\text {low}}$</span>, and
+    the top of the bottle, at <span class="tex2jax_process">$x =
+    x_{\text {high}}$</span>, is left open.</p>
+<p>The first sample input represents a bottle formed using the
+    simple polynomial <span class="tex2jax_process">$4 -
+    0.25x$</span>, with <span class="tex2jax_process">$x_{\text
+    {low}}= 0$</span> and <span class="tex2jax_process">$x_{\text
+    {high}}= 12$</span>. The bottom of this bottle is a circle with
+    a radius of <span class="tex2jax_process">$4$</span>, and the
+    opening at the top is a circle with a radius of <span class="tex2jax_process">$1$</span>. The height of this bottle is
+    <span class="tex2jax_process">$12$</span>. Volume markings are
+    in increments of <span class="tex2jax_process">$25$</span>.</p>
+<p>Given a polynomial <span class="tex2jax_process">$P$</span>,
+    <span class="tex2jax_process">$x_{\text {low}}$</span>,
+    <span class="tex2jax_process">$x_{\text {high}}$</span>, and
+    the volume increment between successive marks on the bottle,
+    compute the distances up from <span class="tex2jax_process">$x_{\text {low}}$</span> for the marks at
+    successive volume increments. A mark cannot be made past the
+    top of the bottle, and no more than the first <span class="tex2jax_process">$8$</span> increments should be marked.
+    Assume the value of <span class="tex2jax_process">$P$</span> is
+    greater than zero everywhere between <span class="tex2jax_process">$x_{\text {low}}$</span> and <span class="tex2jax_process">$x_{\text {high}}$</span>.</p>
+<h2>Input</h2>
+<p>Each test case consists of three lines of bottle data:</p>
+<ul class="itemize">
+<li>
+<p>Line 1: <span class="tex2jax_process">$n$</span>, the
+        degree of the polynomial (an integer satisfying
+        <span class="tex2jax_process">$0 \le n \le 10$</span>).</p>
+</li>
+<li>
+<p>Line 2: <span class="tex2jax_process">$a_0$</span>,
+        <span class="tex2jax_process">$a_1$</span>, <span class="tex2jax_process">$\ldots $</span>, <span class="tex2jax_process">$a_ n$</span>, the real coefficients of
+        the polynomial <span class="tex2jax_process">$P$</span>
+        defining the bottle’s shape, where <span class="tex2jax_process">$a_0$</span> is the constant term,
+        <span class="tex2jax_process">$a_1$</span> is the
+        coefficient of <span class="tex2jax_process">$x^1$</span>,
+        <span class="tex2jax_process">$\ldots $</span>, and
+        <span class="tex2jax_process">$a_ n$</span> is the
+        coefficient of <span class="tex2jax_process">$x^ n$</span>.
+        For each <span class="tex2jax_process">$i$</span>,
+        <span class="tex2jax_process">$-100 \le a_ i \le
+        100$</span>, and <span class="tex2jax_process">$a_ n \ne
+        0$</span>.</p>
+</li>
+<li>
+<p>Line 3:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x_{\text
+            {low}}$</span> and <span class="tex2jax_process">$x_{\text {high}}$</span>, the real
+            valued boundaries of the bottle (<span class="tex2jax_process">$-100 \le x_{\text {low}} &lt;
+            x_{\text {high}} \le 100$</span> and <span class="mbox" style="width:"><span class="tex2jax_process">$x_{\text {high}}- x_{\text {low}}
+            &gt; 0.1$</span></span>).</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$inc$</span>, an
+            integer which is the volume increment before each
+            successive mark on the bottle (<span class="tex2jax_process">$1 \le inc \le 500$</span>).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each test case, display the case number and the volume
+    of the full bottle on one line. On a second line, display the
+    increasing sequence of no more than <span class="tex2jax_process">$8$</span> successive distances up from the
+    bottom of the bottle for the volume markings. All volumes and
+    height marks should be given with exactly two decimal places.
+    If the bottle does not have a volume that allows at least one
+    mark, display the phrase <tt class="ttfamily">insufficient volume</tt>. No test case will
+    result in a mark within <span class="tex2jax_process">$0.01$</span> from the top of the bottle. The
+    volume of the bottle will not exceed <span class="tex2jax_process">$1\, 000$</span>. All rounded distances for
+    marks on a bottle differ by at least <span class="tex2jax_process">$0.05$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+4.0 -0.25
+0.0 12.0 25
+1
+4.0 -0.25
+0.0 12.0 300
+0
+1.7841241161782
+5.0 10.0 20
+0
+1.0
+0.0 10.0 10
+</pre>
+</td>
+<td>
+<pre>
+Case 1: 263.89
+0.51 1.06 1.66 2.31 3.02 3.83 4.75 5.87
+Case 2: 263.89
+insufficient volume
+Case 3: 50.00
+2.00 4.00
+Case 4: 31.42
+3.18 6.37 9.55
+</pre>
+</td>
+</tr>
+</table>
+</div>

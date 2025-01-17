@@ -1,0 +1,157 @@
+<div class="problembody">
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{rmc22-wordle.png}" src="/problems/wordlewithfriends/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+</div>
+<p>Zoe and her friends enjoy playing Wordle<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> together and have decided to work
+    cooperatively to solve the daily puzzle.</p>
+<p>Wordle is a game where players get six attempts to guess a
+    hidden 5-letter word. With each word guessed, the system will
+    mark each letter with one of three feedback colors:</p>
+<ol class="enumerate">
+<li>
+<p><tt class="ttfamily">Green</tt> - this letter is in the
+        word and occurs at this location.</p>
+</li>
+<li>
+<p><tt class="ttfamily">Yellow</tt> - this letter is in the
+        word, but not at this location.</p>
+</li>
+<li>
+<p><tt class="ttfamily">Gray</tt> - this letter is not in
+        the hidden word (with an exception for duplicate letters,
+        see below).</p>
+</li>
+</ol>
+<p>Note that duplicate letters can be a little tricky. First,
+    <tt class="ttfamily">Green</tt> letters are marked. For a
+    single letter, suppose there are <span class="tex2jax_process">$X$</span> non-<tt class="ttfamily">Green</tt> occurrences in the hidden word and
+    <span class="tex2jax_process">$Y$</span> non-<tt class="ttfamily">Green</tt> occurrences in the guess. The
+    <em>leftmost</em> <span class="tex2jax_process">$\min
+    (X,Y)$</span> of the non-<tt class="ttfamily">Green</tt>
+    occurrences of this letter will be marked <tt class="ttfamily">Yellow</tt> and the rest will be <tt class="ttfamily">Gray</tt>.</p>
+<p>For example, if the hidden word was <tt class="ttfamily">FREED</tt> and a guessed word was <tt class="ttfamily">GEESE</tt>, the feedback would show the second
+    <tt class="ttfamily">E</tt> (the third letter) in <tt class="ttfamily">Green</tt>, and the first and third <tt class="ttfamily">E</tt>s (second and fifth letters of <tt class="ttfamily">GEESE</tt>) respectively in <tt class="ttfamily">Yellow</tt> and <tt class="ttfamily">Gray</tt>.</p>
+<p>Knowing the list of all guessable words, help Zoe determine
+    which words are still valid given their original guesses.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10$</span>), which is the number of guesses Zoe and
+    her friends have made, and <span class="tex2jax_process">$W$</span> (<span class="tex2jax_process">$1
+    \leq W \leq 10^4$</span>), which is the number of guessable
+    words.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    describe the guesses. Each line contains two 5-letter strings
+    <span class="tex2jax_process">$g$</span> and <span class="tex2jax_process">$f$</span>. The first string, <span class="tex2jax_process">$g$</span>, is the guess which consists only
+    of uppercase English letters and is in the list of guessable
+    words. The second string, <span class="tex2jax_process">$f$</span>, is the feedback. The feedback is
+    composed of the characters <tt class="ttfamily">G</tt>,
+    <tt class="ttfamily">Y</tt>, and <tt class="ttfamily">-</tt>,
+    respectively indicating <tt class="ttfamily">Green</tt>,
+    <tt class="ttfamily">Yellow</tt>, and <tt class="ttfamily">Gray</tt> for the guess.</p>
+<p>The last <span class="tex2jax_process">$W$</span> lines
+    describe the list of distinct guessable words. Each line
+    contains a 5-letter string of uppercase English letters.</p>
+<h2>Output</h2>
+<p>Display all valid words, in the order they appear, from the
+    guessable list of words. There will always be at least one
+    valid word.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+BERRY -G---
+APPLE ---YY
+MELON
+BERRY
+LEMON
+LIMES
+APPLE
+</pre>
+</td>
+<td>
+<pre>MELON
+LEMON
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+BERRY -G---
+APPLE ---YY
+LIMES G-GY-
+APPLE
+BERRY
+LEMON
+LIMES
+MELON
+</pre>
+</td>
+<td>
+<pre>LEMON
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+BLANK --Y--
+SIGHS ----G
+STORM YGG-Y
+ATOMS
+BLANK
+MOATS
+SIGHS
+STORM
+</pre>
+</td>
+<td>
+<pre>ATOMS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+FRUIT -G--Y
+NUTTY --Y--
+ROOTS Y--YG
+SEEDS -YG-G
+FRUIT
+NUTTY
+ROOTS
+SEEDS
+TREES
+</pre>
+</td>
+<td>
+<pre>TREES
+</pre>
+</td>
+</tr>
+</table>
+</div>

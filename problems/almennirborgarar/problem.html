@@ -1,0 +1,160 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/almennirborgarar/file/statement/en/img-0001.jpg" class="illustration" src="/problems/almennirborgarar/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://unsplash.com/photos/ysambitxV8M">Unsplash</a>
+</div>
+</div>For years contestants in Forritunarkeppni
+    Framhaldsskólanna have gotten delicious hamburgers from
+    Hamborgarabúlla Tómasar for lunch. The contestants form an
+    orderly line where they wait while the chefs are hard at work
+    at the grills. Búllan’s chefs are very talented. They are so
+    talented that they assemble the burger instantly. The only
+    thing that takes time is the grilling process. Búllan has
+    <span class="tex2jax_process">$n$</span> small grills (numbered
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>) and each grill can grill one
+    burger at a time. The grills also work at different
+    temperatures, so they don’t take the same time to grill a
+    burger. The chefs have measured that grill <span class="tex2jax_process">$i$</span> takes <span class="tex2jax_process">$t_ i$</span> seconds to grill a single
+    burger.
+    <p>Benni, an ardent competitive programmer (and hamburger
+    enthusiast), is waiting in line with <span class="tex2jax_process">$m$</span> other contestants in front of him.
+    How long will Benni have to wait if the chefs utilize the
+    grills optimally?</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 2\cdot 10^5$</span>), the
+    number of grills, and <span class="tex2jax_process">$m$</span>
+    (<span class="tex2jax_process">$0 \leq m \leq 10^9$</span>),
+    the number of contestants ahead of Benni in line.</p>
+<p>Then there is a line with <span class="tex2jax_process">$n$</span> integers, <span class="tex2jax_process">$t_1, t_2, \ldots , t_ n$</span>, where
+    <span class="tex2jax_process">$t_ i$</span> (<span class="tex2jax_process">$1 \leq t_ i \leq 10^9$</span>) is the number
+    of seconds it takes the <span class="tex2jax_process">$i$</span>-th grill to grill a burger.</p>
+<h2>Output</h2>
+<p>Print the number of seconds Benni has to wait before he gets
+    his burger, assuming the chefs utilize the grills
+    optimally.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n, m, t_ i \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n, m \leq
+          10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m, t_ i \leq
+          10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m \leq 10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 6
+1 2
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+2 7 5
+</pre>
+</td>
+<td>
+<pre>14
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 6
+10 120 25 30
+</pre>
+</td>
+<td>
+<pre>50
+</pre>
+</td>
+</tr>
+</table>
+</div>

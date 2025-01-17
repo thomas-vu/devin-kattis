@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>You just got a summer internship at a local translation
+    bureau. However, the job is very boring. They refuse to
+    actually use the human mind to make translations; instead, they
+    get “optimal” translations by directly translating each word
+    from a dictionary. Because this is extremely boring, you want
+    to optimize your job by writing a program.</p>
+<p>You will be given a sentence in Swedish, and should
+    translate it to English. You will also be given the
+    dictionary.</p>
+<h2>Input</h2>
+<p>The first line of input containts the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10^4$</span>), the number of words in the
+    sentence.</p>
+<p>The next line of input contains a sentence consisting of
+    <span class="tex2jax_process">$N$</span> words in Swedish, the
+    sentence that you want to translate.</p>
+<p>The following line contains the integer <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq 10^4$</span>), the number of word pairs in the
+    dictionary.</p>
+<p>Then follow <span class="tex2jax_process">$M$</span> lines,
+    each containing a pair of words <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, which means that the Swedish word
+    <span class="tex2jax_process">$a$</span> should be translated
+    to the english word <span class="tex2jax_process">$b$</span>.</p>
+<p>It is guaranteed that each <span class="tex2jax_process">$a$</span> is unique and that all words in
+    the sentence to translate appears in the dictionary. All words
+    in the input consist of letters <tt class="ttfamily">a</tt>-<tt class="ttfamily">z</tt> and are at most
+    15 letters long. Some of the words may not be real Swedish or
+    English words.</p>
+<h2>Output</h2>
+<p>Print the sentence, where each word has been translated from
+    Swedish to English.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+hej jag gillar ikea
+7
+hej hello
+ikea ikea
+jag i
+bil car
+haj shark
+gillar like
+bord table
+</pre>
+</td>
+<td>
+<pre>hello i like ikea 
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/slalom2/file/statement/en/img-0001.png" class="illustration" src="/problems/slalom2/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>You are competing in a ski slalom, and you need to select
+    the best skis for the race. The format of the race is that
+    there are <span class="tex2jax_process">$N$</span> pairs of
+    left and right gates, where each right gate is <span class="tex2jax_process">$W$</span> metres to the right of its
+    corresponding left gate, and you may neither pass to the left
+    of the left gate nor to the right of the right gate. The
+    <span class="tex2jax_process">$i$</span>-th pair of gates
+    occurs at distance <span class="tex2jax_process">$y_{i}$</span>
+    down the hill, with the horizontal position of the <span class="tex2jax_process">$i$</span>&lt;sup&gt;th&lt;/sup&gt; left gate
+    given by <span class="tex2jax_process">$x_{i}$</span>. Each
+    gate is further down the hill than the previous gate (i.e.
+    <span class="tex2jax_process">$y_{i}$</span> &lt; <span class="tex2jax_process">$y_{i+1}$</span> for all <span class="tex2jax_process">$i$</span>).
+
+    <p>You may select from <span class="tex2jax_process">$S$</span>
+    pairs of skis, where the <span class="tex2jax_process">$j$</span>-th pair has speed <span class="tex2jax_process">$s_{j}$</span>. Your movement is governed by
+    the following rule: if you select a pair of skis with speed
+    <span class="tex2jax_process">$s_{j}$</span>, you move with a
+    constant downward velocity of <span class="tex2jax_process">$s_{j}$</span> metres per second.
+    Additionally, at any time you may move at a horizontal speed of
+    at most <span class="tex2jax_process">$v_{h}$</span> metres per
+    second.</p>
+<p>You may start and finish at any two horizontal positions.
+    Determine which pair of skis will allow you to get through the
+    race course, passing through all the gates, in the shortest
+    amount of time.</p>
+<h2>Input Specification</h2>
+<p>The first line of input contains the three integers
+    <span class="tex2jax_process">$W$</span>, <span class="tex2jax_process">$v_{h}$</span>, and <span class="tex2jax_process">$N$</span>, separated by spaces, with
+    <span class="tex2jax_process">$1 &lt;= W &lt;= 10^8$</span>,
+    <span class="tex2jax_process">$1 \leq v_{h} \leq 10^6$</span>,
+    and <span class="tex2jax_process">$1 \leq N \leq
+    10^5$</span>.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    of input each contain two integers <span class="tex2jax_process">$x_{i}$</span> and <span class="tex2jax_process">$y_{i}$</span>, the horizontal and vertical
+    positions respectively of the <span class="tex2jax_process">$i$</span>-th left gate, with <span class="tex2jax_process">$1 \leq x_{i},\, y_{i} \leq 10^8$</span>.</p>
+<p>The next line of input contains an integer <span class="tex2jax_process">$S$</span>, the number of skis, with
+    <span class="tex2jax_process">$1 \leq S \leq 10^6$</span>.</p>
+<p>The following <span class="tex2jax_process">$S$</span> lines
+    of input each contain one integer <span class="tex2jax_process">$s_{j}$</span>, the speed of the <span class="tex2jax_process">$j$</span>-th pair of skis, with <span class="tex2jax_process">$1 \leq s_{j} \leq 10^6$</span>.</p>
+<h2>Output Specification</h2>
+<p>If it is impossible to complete the race with any pair of
+    skis, print the line <tt class="ttfamily">IMPOSSIBLE</tt>.
+    Otherwise, print the vertical speed <span class="tex2jax_process">$s_{j}$</span> of the pair of skis that
+    allows you to get through the race course in the shortest
+    time.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 3
+1 1
+5 2
+1 3
+3
+3
+2
+1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 3
+1 1
+5 2
+1 3
+1
+3
+</pre>
+</td>
+<td>
+<pre>
+IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

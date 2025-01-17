@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>In the game of chess, knights are unique due to their
+    “L-shaped” movement. A knight can move, as shown in
+    Figure 1, by either moving two squares sideways and one
+    square up or down, or moving one square sideways and two
+    squares either up or down.</p>
+<div class="figure" id="fig:moves">
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{moves.png}" src="/problems/nineknights/file/statement/en/img-0001.png" style="width:35.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The highlighted squares show all
+          possible moves for a knight.
+        </div>
+</center>
+</div>
+<p>In the Nine Knights puzzle, exactly nine knights must be
+    positioned on a 5-by-5 board so that no knight can attack
+    another knight with a single move. The configuration shown in
+    Figure 2 is an invalid solution because two of the knights
+    can attack each other, where the configuration shown in Figure
+    3 is a valid solution.</p>
+<div class="figure">
+<center>
+<p><img alt="\includegraphics[width=0.35\textwidth ]{invalid_nocolor.png}" src="/problems/nineknights/file/statement/en/img-0002.png" style="width:35.00%"/></p>
+<div class="caption">
+<b>Figure 2</b>: Invalid game configuration
+        </div>
+<p><img alt="\includegraphics[width=0.35\textwidth ]{valid_nocolor.png}" src="/problems/nineknights/file/statement/en/img-0003.png" style="width:35.00%"/></p>
+<div class="caption">
+<b>Figure 3</b>: Valid game configuration
+        </div>
+</center>
+</div>
+<p>Given the description of a game configuration, your job is
+    to determine whether or not it represents a valid solution to
+    the Nine Knights puzzle.</p>
+<h2>Input</h2>
+<p>The input will consist of <span class="tex2jax_process">$5$</span> lines, each having <span class="tex2jax_process">$5$</span> characters. All characters will be
+    either ’<tt class="tt">k</tt>’, indicating the placement of a
+    knight, or ’<tt class="tt">.</tt>’, indicating an empty space
+    on the board.</p>
+<h2>Output</h2>
+<p>Display the word <tt class="ttfamily">valid</tt> if the
+    given chess board is a valid solution to the Nine Knights
+    puzzle. Otherwise, display the word <tt class="ttfamily">invalid</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+...k.
+...k.
+k.k..
+.k.k.
+k.k.k
+</pre>
+</td>
+<td>
+<pre>
+invalid
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+.....
+...k.
+k.k.k
+.k.k.
+k.k.k
+</pre>
+</td>
+<td>
+<pre>
+valid
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+.....
+...k.
+k.k.k
+.k.k.
+k...k
+</pre>
+</td>
+<td>
+<pre>
+invalid
+</pre>
+</td>
+</tr>
+</table>
+</div>

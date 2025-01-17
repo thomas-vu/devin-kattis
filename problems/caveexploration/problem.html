@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Alice is a soccer coach who occasionally bring her soccer
+    team to explore Caveland (that can be modeled as an undirected
+    unweighted connected graph) for special event, e.g. for
+    initiation ceremony, to celebrate birthdays, etc. Caveland has
+    <span class="tex2jax_process">$N$</span> junctions and
+    <span class="tex2jax_process">$M$</span> tunnels.</p>
+<p>Caveland is quite prone to flooding, but that does not stop
+    Alice and her soccer team from doing what they enjoy. You are
+    Bob, Alice’s good friend. You want to ensure Alice and her
+    soccer team are as safe as possible by letting her know which
+    junction(s) is/are safe(r) than the rest. You decide that a
+    junction <span class="tex2jax_process">$v$</span> is considered
+    to be safe(r) if <b class="bfseries">any one tunnel</b> is
+    flooded, Alice and her soccer team can still go out from
+    junction <span class="tex2jax_process">$v$</span> to the
+    entrance of Caveland (which is always junction <span class="tex2jax_process">$0$</span>) via a non-flooded path.</p>
+<center>
+<img alt="\includegraphics[width=8cm]{caveland.png}" src="/problems/caveexploration/file/statement/en/img-0001.png" style="width:8cm"/>
+</center>
+<p>For this example, junctions <span class="tex2jax_process">$\{ 0, 1, 2, 3\} $</span> are considered
+    safe(r). If tunnel <span class="tex2jax_process">$0–2$</span>
+    is flooded for example, Alice and her soccer team can detour
+    via path <span class="tex2jax_process">$2 \rightarrow 3
+    \rightarrow 1 \rightarrow 0$</span> to reach Caveland entrance.
+    However junctions <span class="tex2jax_process">$\{ 4, 5, 6, 7,
+    8\} $</span> are quite dangerous. If tunnel <span class="tex2jax_process">$2–8$</span> (or tunnel <span class="tex2jax_process">$3–4$</span>) is flooded, Alice and her
+    soccer team will be trapped (cannot reach safety/junction
+    <span class="tex2jax_process">$0$</span>).</p>
+<h2>Input</h2>
+<p>The first line of input consists of <span class="tex2jax_process">$2$</span> integers: <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>. (<span class="tex2jax_process">$2
+    \leq N \leq 10\, 000$</span>, <span class="tex2jax_process">$1
+    \leq M \leq min(N(N-1)/2, 100\, 000)$</span>). The next
+    <span class="tex2jax_process">$M$</span> lines contains
+    <span class="tex2jax_process">$M$</span> pairs of integers
+    <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> that describe <span class="tex2jax_process">$0$</span>-based indices of the two junctions
+    that are connected with a tunnel in Caveland (<span class="tex2jax_process">$0 \leq u, v &lt; N$</span>, and <span class="tex2jax_process">$u \neq v$</span>). No two junctions are
+    directly connected with more than one tunnel. You are
+    guaranteed that junction <span class="tex2jax_process">$0$</span> can reach all the other
+    <span class="tex2jax_process">$N-1$</span> junctions (if there
+    is no flood).</p>
+<h2>Output</h2>
+<p>Print an integer in one line: The total number of
+    junction(s) in Caveland that is/are safe(r) for Alice and her
+    soccer team to explore. The actual junction numbers are not
+    needed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9 10
+0 1
+0 2
+1 3
+2 3
+2 8
+3 4
+4 5
+4 6
+5 7
+6 7
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

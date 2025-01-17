@@ -1,0 +1,66 @@
+<div class="problembody">
+<center>
+<span style="float:right"><img alt="\includegraphics[width=0.3\textwidth ]{cartoon}" src="/problems/incognito/file/statement/en/img-0001.jpg" style="width:30.00%"/></span>
+</center>Spies use attributes to disguise themselves to make
+    sure that they are not recognized. For example, when putting on
+    sunglasses, a spy suddenly looks completely different and
+    cannot be recognized anymore. Every combination of attributes
+    gives a different appearance, but not all combinations are
+    possible. For example, a hat and a turban are both headgear and
+    cannot be used at the same time. Given the list of available
+    attributes, compute how many distinct disguises can be made.
+
+    <h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0\le n \le 30$</span>): the number of
+        available attributes.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines with two
+        space-separated strings: the name and the category of the
+        attribute.</p>
+</li>
+</ul>
+<p>All strings consist of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$20$</span> lowercase letters. Within a test
+    case all names are distinct.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with an integer: the number of possible
+        distinct disguises that can be made with the given
+        attributes, such that at most one attribute from each
+        category is used.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3
+hat headgear
+sunglasses eyewear
+turban headgear
+3
+mask face
+sunglasses face
+makeup face
+</pre>
+</td>
+<td>
+<pre>
+5
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

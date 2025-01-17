@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:32.00%">
+<img alt="/problems/calculatingdartscores/file/statement/en/img-0001.png" class="illustration" src="/problems/calculatingdartscores/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/File:Dartboard_diagram.svg">Image</a>
+        by Tijmen Stam via Wikimedia Commons.
+      </div>
+</div>In a game of darts a player throws darts at a board
+    consisting of 20 different sections labelled <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span>. When the dart hits section
+    <span class="tex2jax_process">$i$</span> the player scores
+    <span class="tex2jax_process">$i$</span> points. Each section
+    also contains a <em>double</em> area and a <em>triple</em>
+    area. When the dart hits the <em>double</em> area of section
+    <span class="tex2jax_process">$i$</span> the player scores
+    <span class="tex2jax_process">$2 i$</span> points, and when the
+    dart hits the <em>triple</em> area the player scores
+    <span class="tex2jax_process">$3 i$</span> points, instead of
+    <span class="tex2jax_process">$i$</span> points. When throwing
+    three darts, the player can therefore score a total of at most
+    <span class="tex2jax_process">$180$</span> points by throwing
+    all three darts in the triple area of section <span class="tex2jax_process">$20$</span>.
+
+    <p>Given a target score, output at most three throw scores such
+    that their sum is equal to the given target score. Note that
+    the centre of the dartboard, which is usually called bullseye,
+    is not taken into account is this problem.</p>
+<h2>Input</h2>
+<p>The input consists of a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n \leq 180$</span>), the target
+    score.</p>
+<h2>Output</h2>
+<p>If the target score can be achieved, output at most three
+    lines, each of the form “<tt class="ttfamily">single
+    <span class="tex2jax_process">$d$</span></tt>”, “<tt class="ttfamily">double <span class="tex2jax_process">$d$</span></tt>”, or “<tt class="ttfamily">triple <span class="tex2jax_process">$d$</span></tt>”, where <span class="tex2jax_process">$d$</span> is an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> (inclusive), such that the sum of
+    these scores is equal to <span class="tex2jax_process">$n$</span>. Otherwise, output “<tt class="ttfamily">impossible</tt>”. If there are multiple valid
+    answers you may output any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+180
+</pre>
+</td>
+<td>
+<pre>
+triple 20
+triple 20
+triple 20
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+96
+</pre>
+</td>
+<td>
+<pre>
+triple 19
+double 15
+single 9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+27
+</pre>
+</td>
+<td>
+<pre>
+triple 9
+</pre>
+</td>
+</tr>
+</table>
+</div>

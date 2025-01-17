@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>It’s final exam season and Ashley is heading to her favorite
+    library to cram for finals.</p>
+<p>The library has a dedicated floor for studying where there
+    are <span class="tex2jax_process">$r$</span> rows of
+    <span class="tex2jax_process">$c$</span> tables evenly spaced.
+    Each table only has room for one student, and some students
+    have already arrived and claimed their favorite tables.</p>
+<p>Because the floor is usually very quiet, it is possible to
+    hear sounds from other students who are nearby – for example,
+    frustrated typing on a laptop keyboard or nervous leg shaking.
+    Specifically, if one student is studying at the table in row
+    <span class="tex2jax_process">$i_1$</span> and column
+    <span class="tex2jax_process">$j_1$</span>, and another student
+    is studying at the table in row <span class="tex2jax_process">$i_2$</span> and column <span class="tex2jax_process">$j_2$</span>, it is possible for the two
+    students to hear sounds from each other if and only if
+    <span class="tex2jax_process">$\sqrt{(i_1 - i_2)^2 + (j_1 -
+    j_2)^2} \le d$</span>.</p>
+<p>With this, Ashley wants to find an empty table where she can
+    hear as few other students as possible. Compute the minimum
+    number of students that Ashley can hear if she selects her
+    table optimally.</p>
+<h2>Input</h2>
+<p>The first line of input has four integers <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$2
+    \leq r, c \leq 10^9$</span>), <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1
+    \leq d \leq 2\, 500$</span>), and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^3$</span> and <span class="tex2jax_process">$n
+    \leq r \cdot c - 1$</span>).</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains two integers <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$1
+    \le i \le r$</span>) and <span class="tex2jax_process">$j$</span> (<span class="tex2jax_process">$1
+    \le j \le c$</span>), indicating that a student is studying at
+    the table at row <span class="tex2jax_process">$i$</span> and
+    column <span class="tex2jax_process">$j$</span>. It is
+    guaranteed that no two students are sitting at the same
+    table.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    students that Ashley can hear if she selects her table
+    optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 1 3
+1 1
+2 2
+3 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

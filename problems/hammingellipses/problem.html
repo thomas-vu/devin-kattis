@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>In geometry, ellipses are defined by two focal points
+    <span class="tex2jax_process">$f_1, f_2$</span> and a length
+    <span class="tex2jax_process">$D$</span>. The ellipse consists
+    of all points <span class="tex2jax_process">$p$</span> such
+    that <span class="tex2jax_process">$\mathop
+    {\mathrm{distance}}(f_1, p) + \mathop {\mathrm{distance}}(f_2,
+    p) = D$</span>.</p>
+<p>When one normally thinks of ellipses, it is in the context
+    of the Euclidean 2D plane, with the Euclidean distance as a
+    distance measure.</p>
+<p>This problem explores a different kind of ellipse. The space
+    we will work in is the space of words of length <span class="tex2jax_process">$n$</span> using an alphabet of <span class="tex2jax_process">$q$</span> different symbols, often denoted
+    as <span class="tex2jax_process">$F_ q^ n$</span>. As you can
+    probably see, for given values of <span class="tex2jax_process">$q$</span> and <span class="tex2jax_process">$n$</span>, there are <span class="tex2jax_process">$q^ n$</span> different words (points) in the
+    space <span class="tex2jax_process">$F_ q^ n$</span>.</p>
+<p>For a distance measure, we use the <em>Hamming
+    distance</em>. The Hamming distance between two words
+    <span class="tex2jax_process">$x, y \in F_ q^ n$</span> is
+    simply the number of positions where the symbols that make up
+    the words <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> differ. For example,
+    the Hamming distance between words <tt class="ttfamily">01201</tt> and <tt class="ttfamily">21210</tt> is 3
+    because there are 3 positions where the words have different
+    symbols. The Hamming distance between any two words in
+    <span class="tex2jax_process">$F_ q^ n$</span> will always be
+    an integer between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$n$</span>, inclusive.</p>
+<p>Within the space <span class="tex2jax_process">$F_ q^
+    n$</span>, we now define the <em>Hamming ellipse</em> as the
+    set of all points <span class="tex2jax_process">$p$</span> such
+    that <span class="tex2jax_process">$\mathop
+    {\mathrm{hammingdistance}}(f_1, p) + \mathop
+    {\mathrm{hammingdistance}}(f_2, p) = D$</span>. Given values
+    <span class="tex2jax_process">$q$</span> and <span class="tex2jax_process">$n$</span>, focal points <span class="tex2jax_process">$f_1$</span> and <span class="tex2jax_process">$f_2$</span> and distance <span class="tex2jax_process">$D$</span>, we ask you to determine the
+    number of points <span class="tex2jax_process">$p \in F_ q^
+    n$</span> that lie on this Hamming ellipse.</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$q$</span> (<span class="tex2jax_process">$2
+    \le q \le 10$</span>), <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \le n \le 100$</span>) and
+    <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$1 \le D \le 2 n$</span>).</p>
+<p>The second and third lines specify the two focal points
+    <span class="tex2jax_process">$f_1$</span> and <span class="tex2jax_process">$f_2$</span>, each formatted as a string of
+    length <span class="tex2jax_process">$n$</span> using digits
+    <span class="tex2jax_process">$\{ 0, 1 \ldots q - 1\}
+    $</span>.</p>
+<h2>Output</h2>
+<p>Output one line containing a single integer, denoting the
+    number of points on the ellipse.</p>
+<p>The input is chosen such that the answer is less than
+    <span class="tex2jax_process">$2^{63}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 5 9
+01201
+21210
+</pre>
+</td>
+<td>
+<pre>
+24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 6 5
+123031
+231222
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 32 32
+01010101010101010101010101010101
+01010101010101010101010101010101
+</pre>
+</td>
+<td>
+<pre>
+601080390
+</pre>
+</td>
+</tr>
+</table>
+</div>

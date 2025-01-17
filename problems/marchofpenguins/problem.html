@@ -1,0 +1,103 @@
+<div class="problembody">
+<p>Somewhere near the south pole, a number of penguins are
+    standing on a number of ice floes. Being social animals, the
+    penguins would like to get together, all on the same floe. The
+    penguins do not want to get wet, so they have use their limited
+    jump distance to get together by jumping from piece to piece.
+    However, temperatures have been high lately, and the floes are
+    showing cracks, and they get damaged further by the force
+    needed to jump to another floe. Fortunately the penguins are
+    real experts on cracking ice floes, and know exactly how many
+    times a penguin can jump off each floe before it disintegrates
+    and disappears. Landing on an ice floe does not damage it. You
+    have to help the penguins find all floes where they can
+    meet.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{penguins}" src="/problems/marchofpenguins/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the first sample input,
+          <span class="tex2jax_process">$5$</span> ice floes with
+          <span class="tex2jax_process">$3$</span> penguins on
+          them.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input contains a single test case, consisting of:</p>
+<ul class="itemize">
+<li>
+<p>One line with the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 100$</span>) and a real
+        number <span class="tex2jax_process">$D$</span>
+        (<span class="tex2jax_process">$0 \le D \le 100\,
+        000$</span>, at most <span class="tex2jax_process">$2$</span> decimals after the decimal
+        point), denoting the number of ice pieces and the maximum
+        distance a penguin can jump.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N$</span> lines, each
+        line containing four integers <span class="tex2jax_process">$x_ i$</span>, <span class="tex2jax_process">$y_ i$</span>, <span class="tex2jax_process">$n_ i$</span> and <span class="tex2jax_process">$m_ i$</span>, denoting for each ice
+        piece its <span class="tex2jax_process">$X$</span> and
+        <span class="tex2jax_process">$Y$</span> coordinate, the
+        number of penguins on it and the maximum number of times a
+        penguin can jump off this piece before it disappears
+        (<span class="tex2jax_process">$-10\, 000 \le x_ i, y_ i
+        \le 10\, 000$</span>, <span class="tex2jax_process">$0 \le
+        n_ i \le 10$</span>, <span class="tex2jax_process">$1 \le
+        m_ i \le 200$</span>).</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>One line containing a space-separated list of
+        <span class="tex2jax_process">$0$</span>-based indices of
+        the pieces on which all penguins can meet. If no such piece
+        exists, output a line with the single number <span class="tex2jax_process">$-1$</span>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3.5
+1 1 1 1
+2 3 0 1
+3 5 1 1
+5 1 1 1
+5 4 0 1
+</pre>
+</td>
+<td>
+<pre>
+1 2 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1.1
+-1 0 5 10
+0 0 3 9
+2 0 1 1
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

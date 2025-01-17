@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>Dee Siduous is a botanist who specializes in trees. A lot of
+    her research has to do with the formation of tree rings, and
+    what they say about the growing conditions over the tree’s
+    lifetime. She has a certain theory and wants to run some
+    simulations to see if it holds up to the evidence gathered in
+    the field.</p>
+<p>One thing that needs to be done is to determine the expected
+    number of rings given the outline of a tree. Dee has decided to
+    model a cross section of a tree on a two dimenional grid, with
+    the interior of the tree represented by a closed polygon of
+    grid squares. Given this set of squares, she assigns rings from
+    the outer parts of the tree to the inner as follows: calling
+    the non-tree grid squares “ring <span class="tex2jax_process">$0$</span>”, each ring <span class="tex2jax_process">$n$</span> is made up of all those grid
+    squares that have at least one ring <span class="tex2jax_process">$(n-1)$</span> square as a neighbor (where
+    neighboring squares are those that share an edge).</p>
+<p>An example of this is shown in the figure below.</p>
+<center>
+<img alt="\includegraphics[width=0.60\textwidth ]{ring}" src="/problems/rings2/file/statement/en/img-0001.jpg" style="width:60.00%"/><br/>
+      Figure D.1
+    </center>
+<p>Most of Dee’s models have been drawn on graph paper, and she
+    has come to you to write a program to do this automatically for
+    her. This way she’ll use less paper and save some <span class="tex2jax_process">$\ldots $</span> well, you know.</p>
+<h2>Input</h2>
+<p>The input will start with a line containing two positive
+    integers <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span> specifying the number of rows and
+    columns in the tree grid, where <span class="tex2jax_process">$n, m \leq 100$</span>. After this will be
+    <span class="tex2jax_process">$n$</span> rows containing
+    <span class="tex2jax_process">$m$</span> characters each. These
+    characters will be either ‘T’ indicating a tree grid square, or
+    ‘.’.<br/></p>
+<h2>Output</h2>
+<p>Output a grid with the ring numbers. If the number of rings
+    is less than 10, use two characters for each grid square;
+    otherwise use three characters for each grid square. Right
+    justify all ring numbers in the grid squares, and use ‘.’ to
+    fill in the remaining characters.</p>
+<p>If a row or column does not contain a ring number it should
+    still be output, filled entirely with ‘.’s.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 6
+.TT...
+TTTT..
+TTTTT.
+TTTTT.
+TTTTTT
+..T...
+</pre>
+</td>
+<td>
+<pre>
+...1.1......
+.1.2.2.1....
+.1.2.3.2.1..
+.1.2.3.2.1..
+.1.1.2.1.1.1
+.....1......
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4
+TT..
+TT..
+....
+</pre>
+</td>
+<td>
+<pre>
+.1.1....
+.1.1....
+........
+</pre>
+</td>
+</tr>
+</table>
+</div>

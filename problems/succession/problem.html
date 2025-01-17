@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>The king in Utopia has died without an heir. Now several
+    nobles in the country claim the throne. The country law states
+    that if the ruler has no heir, the person who is most related
+    to the founder of the country should rule.</p>
+<p>To determine who is most related we measure the amount of
+    blood in the veins of a claimant that comes from the founder. A
+    person gets half the blood from the father and the other half
+    from the mother. A child to the founder would have <span class="tex2jax_process">$1/2$</span> royal blood, that child’s child
+    with another parent who is not of royal lineage would have
+    <span class="tex2jax_process">$1/4$</span> royal blood, and so
+    on. The person with the most blood from the founder is the one
+    most related.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 50$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$2
+    \le M \le 50$</span>). The second line contains the name of the
+    founder of Utopia.</p>
+<p>Then follows <span class="tex2jax_process">$N$</span> lines
+    describing a family relation. Each such line contains three
+    names, separated with a single space. The first name is a child
+    and the remaining two names are the parents of the child.</p>
+<p>Then follows <span class="tex2jax_process">$M$</span> lines
+    containing the names of those who claim the throne.</p>
+<p>All names in the input will be between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> characters long and only contain
+    the lowercase English letters ‘a’–‘z’. The founder will not
+    appear among the claimants, nor be described as a child to
+    someone else.</p>
+<h2>Output</h2>
+<p>A single line containing the name of the claimant with most
+    blood from the founder. The input will be constructed so that
+    the answer is unique.</p>
+<p><i class="itshape">The family relations may not be realistic
+    when considering sex, age etc. However, every child will have
+    two unique parents and no one will be a descendent from
+    themselves. No one will be listed as a child twice.</i></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+andrew
+betsy andrew flora
+carol andrew betsy
+dora andrew carol
+elena andrew dora
+carol
+dora
+elena
+flora
+gloria
+</pre>
+</td>
+<td>
+<pre>elena
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>9 2
+edwardi
+charlesi edwardi diana
+philip charlesi mistress
+wilhelm mary philip
+matthew wilhelm helen
+edwardii charlesi laura
+alice laura charlesi
+helen alice bernard
+henrii edwardii roxane
+charlesii elizabeth henrii
+charlesii
+matthew
+</pre>
+</td>
+<td>
+<pre>matthew
+</pre>
+</td>
+</tr>
+</table>
+</div>

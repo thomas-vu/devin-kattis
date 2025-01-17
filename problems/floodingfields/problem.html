@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Farmer John has a problem: it’s raining, and his pastures
+    are at risk of flooding. Luckily he’s invested in a
+    state-of-the-art drain system that ensures that the water level
+    is the same across the farm. He hasn’t been as lucky with the
+    terrain. Farmer John’s cows can only stand on dry land: if the
+    land becomes wet, any cow on that land drowns. Luckily, cows
+    can move one grid sector each hour, giving them a chance to
+    escape the water (the levels of which rise and fall each
+    hour).</p>
+<p>Farmer John has divided his field into grid sectors, which
+    he indexes with a row and column. Each grid sector is small
+    enough to only be able to hold one cow.</p>
+<p>Given a description of Farmer John’s field, the starting
+    locations of his cows, and the height of the water at each
+    hour, and assuming that Farmer John’s cows are extremely
+    intelligent and prescient, and so can always make the best
+    move, what is the maximum number of Farmer John’s cows that
+    could survive?</p>
+<h2>Input</h2>
+<p>There will be a single test case in the input. This test
+    case will begin with a line with three integers, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 100$</span>), <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$0
+    \le k \le 100$</span>), and <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$1
+    \le h \le 24$</span>), where <span class="tex2jax_process">$n$</span> represents the size of Farmer
+    John’s field (it’s <span class="tex2jax_process">$n \times
+    n$</span> grid sectors), <span class="tex2jax_process">$k$</span> is the number of cows in the
+    field, and <span class="tex2jax_process">$h$</span> is the
+    number of hours he needs to track.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines will contain <span class="tex2jax_process">$n$</span>
+    integers each, which represent the height of each grid sector
+    of Farmer John’s field (<span class="tex2jax_process">$0 \le
+    \text {height} \le 100$</span>). The first row in the input is
+    row <span class="tex2jax_process">$0$</span>, and the last is
+    row <span class="tex2jax_process">$n-1$</span>. The first
+    column in each row is column <span class="tex2jax_process">$0$</span>, and the last is column
+    <span class="tex2jax_process">$n-1$</span>.</p>
+<p>The following <span class="tex2jax_process">$k$</span> lines
+    will each contain a pair of integers, <span class="tex2jax_process">$r$</span> followed by <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    \le r &lt; n, 0 \le c &lt; n$</span>). Each line indicates the
+    grid sector position of one cow at hour 0, where <span class="tex2jax_process">$r$</span> is the row and <span class="tex2jax_process">$c$</span> is the column. No two cows will be
+    in the same position. The next <span class="tex2jax_process">$h$</span> lines will each contain a single
+    integer, indicating the level of the flood at that hour
+    (<span class="tex2jax_process">$0 \le \text {level} \le
+    100$</span>). These lines are given in order: hour <span class="tex2jax_process">$1$</span> first, then hour <span class="tex2jax_process">$2$</span>, and so on. Note that the times
+    start at hour <span class="tex2jax_process">$1$</span>, and the
+    cows’ positions are given at hour <span class="tex2jax_process">$0$</span>, so the cows have an opportunity
+    to move (or MOOOOve) before the first hour’s flood. A grid
+    square is considered to be flooded if its <span class="tex2jax_process">$\text {height} \le \text {level}$</span> of
+    the flood at a given hour.</p>
+<h2>Output</h2>
+<p>Output a single integer denoting the maximum possible number
+    of surviving cows.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 3
+2 1 2
+3 1 3
+2 4 2
+1 1
+0
+2
+1
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

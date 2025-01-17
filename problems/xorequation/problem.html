@@ -1,0 +1,61 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/xorequation/file/statement/en/img-0001.png" class="illustration" src="/problems/xorequation/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://pixabay.com/en/question-mark-note-duplicate-2405202/">
+        geralt</a>
+</div>
+</div>
+<p>Once there was a great general Paul who issued the following
+    warning:</p>
+<blockquote class="quote">
+<em>Suppose aliens invade the earth and threaten to
+      obliterate it in a year’s time unless human beings can find
+      the Ramsey number for red five and blue five. We could
+      marshal the world’s best minds and fastest computers, and
+      within a year we could probably calculate the value. If the
+      aliens demanded the Ramsey number for red six and blue six,
+      however, we would have no choice but to launch a preemptive
+      attack.</em>
+</blockquote>
+<p>However this time, when the aliens come, they only write
+    down a single line of XOR equation in the form of <span class="tex2jax_process">$a$</span> <tt class="tt">xor</tt> <span class="tex2jax_process">$b~ =~
+    c$</span> (here “<tt class="tt">xor</tt>” denotes the bitwise
+    XOR operator) with some digits hidden in question marks. The
+    aliens ask humans to calculate the number of ways that this
+    equation can be satisfied. For example, two ways to satisfy
+    <span class="tex2jax_process">$?3$</span> <tt class="tt">xor</tt> <span class="tex2jax_process">$1?~ =~
+    ?$</span> are <span class="tex2jax_process">$13$</span> <tt class="tt">xor</tt> <span class="tex2jax_process">$10~ =~
+    7$</span> and <span class="tex2jax_process">$13$</span> <tt class="tt">xor</tt> <span class="tex2jax_process">$13~ =~
+    0$</span>. Obviously, the aliens will not be happy if humans
+    count it wrong.</p>
+<h2>Input</h2>
+<p>The input has a single line that contains the XOR equation
+    <span class="tex2jax_process">$a$</span> <tt class="tt">xor</tt> <span class="tex2jax_process">$b~ =~
+    c$</span> with some digits replaced by question marks. A single
+    space is used to separate the integers, the string “<tt class="tt">xor</tt>”, and the equals sign. The three integers
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span> are non-negative and written in
+    base-<span class="tex2jax_process">$10$</span> without leading
+    zeroes. No integer has more than <span class="tex2jax_process">$9$</span> digits. There is at least one and
+    at most ten question marks in the equation.</p>
+<h2>Output</h2>
+<p>Output the number of ways in which the XOR equation can be
+    satisfied after all the question marks are replaced by
+    digits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>?3 xor 1? = ?
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

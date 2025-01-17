@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>As you design your new household helper robot, the
+    SERVE-O-MATIC 1000, you are running it through a number of
+    tests. In one test, you want to make sure that it always knows
+    where it is. In particular, you’re concerned about the
+    situation where the robot runs into a wall that it is not aware
+    of. For example, if it tries to walk forward <span class="tex2jax_process">$10$</span> meters and runs into a wall it
+    didn’t know about after <span class="tex2jax_process">$3$</span> meters, then there will be a
+    <span class="tex2jax_process">$7$</span>-meter difference in
+    where it stopped and where it <em>thinks</em> it stopped. Your
+    robot does not yet have the intelligence to incorporate new
+    information on the fly, such as this new wall, so it still
+    thinks it walked <span class="tex2jax_process">$10$</span>
+    meters.</p>
+<p>To test how bad this problem might be, you test a virtual
+    robot in a virtual room, where the robot is not aware of the
+    size of the room. The robot chooses a walking course, and your
+    program simulates the robot’s walk, keeping track of where it
+    thinks it is, and where it actually is (by preventing it from
+    walking through walls). After the simulation finishes, you want
+    to know how far off the robot is from where it thinks it
+    is.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> simulations.</p>
+<p>Each simulation starts with a room description, which is two
+    integers <span class="tex2jax_process">$w$</span> and
+    <span class="tex2jax_process">$l$</span> (for width and length
+    of the rectangular room, in meters). Each is in the range
+    <span class="tex2jax_process">$[2, 100]$</span>. The robot may
+    walk anywhere in the rectangle marked by the corners
+    <span class="tex2jax_process">$(0,0)$</span> to (<span class="tex2jax_process">$w-1$</span>, <span class="tex2jax_process">$l-1$</span>), including the edges (so it may
+    walk to <span class="tex2jax_process">$(0,0)$</span> or
+    <span class="tex2jax_process">$(w-1, 0)$</span>, for example).
+    The robot always starts at <span class="tex2jax_process">$(0,0)$</span>, and its steps are each
+    exactly one meter long.</p>
+<p>After the room description is a description of the path the
+    robot plans to take. This description starts with an integer
+    <span class="tex2jax_process">$1 \le n \le 100$</span>, the
+    number of walking segments in the path. This is followed by
+    <span class="tex2jax_process">$n$</span> segment descriptions
+    to be followed in order. Each segment is given on a line as
+    <tt class="tt">x y</tt>, where <tt class="tt">x</tt> is one of
+    <tt class="tt">u</tt>, <tt class="tt">d</tt>, <tt class="tt">l</tt>, or <tt class="tt">r</tt> (for up, down, left, or
+    right, respectively), and <tt class="tt">y</tt> is number of
+    meters to move in that direction (in the range <span class="tex2jax_process">$[0, 30]$</span>). Up and down move along the
+    length of the room, left and right along the width. Up and
+    right are in the positive direction, while down and left are in
+    the negative direction.</p>
+<p>Input ends when <span class="tex2jax_process">$w$</span> and
+    <span class="tex2jax_process">$l$</span> are zero.</p>
+<h2>Output</h2>
+<p>For each simulation, output where the robot thinks it is as
+    <tt class="tt">Robot thinks x y</tt>, and where it actually is
+    as <tt class="tt">Actually at x y</tt> (for appropriate
+    coordinate values x and y).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+1
+u 1
+4 5
+2
+u 3
+r 4
+10 10
+4
+r 30
+d 30
+l 25
+u 5
+0 0
+</pre>
+</td>
+<td>
+<pre>
+Robot thinks 0 1
+Actually at 0 1
+
+Robot thinks 4 3
+Actually at 3 3
+
+Robot thinks 5 -25
+Actually at 0 5
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

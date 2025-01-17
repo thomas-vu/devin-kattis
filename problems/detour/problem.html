@@ -1,0 +1,150 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/detour/file/statement/en/img-0001.jpg" class="illustration" src="/problems/detour/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>After last year’s edition of the BAPC, you are still stuck
+    in Delft. In order to participate again this year, you are
+    going to Amsterdam by bus. During the journey you look out of
+    the window and look for traffic signs that point in the
+    direction of Amsterdam. To your surprise, you notice that the
+    bus is never taking the roads that are pointed out by the
+    signs!</p>
+<p>You think that the bus company might have chosen a route
+    such that, at no intersection, the bus goes in the direction
+    that is pointed to by the signs. Your friends, however, find
+    this very unbelievable, and don’t think this is possible. Can
+    you figure out whether there exists a bus route that satisfies
+    this requirement? Note that a bus route never visits the same
+    place twice.</p>
+<p>A traffic sign pointing in the direction of the shortest
+    route to Amsterdam is placed at every intersection. You may
+    assume that the input graph is both simple and connected, and
+    that there is a unique optimal route to Amsterdam from every
+    intersection.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>A single line containing two integers: <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le n \le 10^5$</span>), the number of
+        intersections, and <span class="tex2jax_process">$m$</span>
+        (<span class="tex2jax_process">$1 \le m \le 10^6$</span>),
+        the number of undirected roads that connect the
+        intersections. The intersections are numbered from
+        <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>. Delft is denoted by
+        intersection <span class="tex2jax_process">$i=0$</span> and
+        Amsterdam is denoted by intersection <span class="tex2jax_process">$i=1$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines that
+        specify the roads</p>
+<ul class="itemize">
+<li>
+<p>A road is specified by three integers, <span class="tex2jax_process">$a_ i$</span>, <span class="tex2jax_process">$b_ i$</span> (<span class="tex2jax_process">$0 \leq a_ i, b_ i &lt; n$</span> and
+            <span class="tex2jax_process">$a_ i \ne b_ i$</span>)
+            and <span class="tex2jax_process">$d_ i$</span>
+            (<span class="tex2jax_process">$0 \le d_ i \leq
+            500000$</span>), where <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$b_ i$</span> are ids of the two
+            intersections that are connected by this road and
+            <span class="tex2jax_process">$d_ i$</span> is the
+            distance that the bus has to travel to get from
+            <span class="tex2jax_process">$a_ i$</span> to
+            <span class="tex2jax_process">$b_ i$</span> or vice
+            versa.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Output</h2>
+<p>As output, give one of the following:</p>
+<ul class="itemize">
+<li>
+<p>A path from Delft to Amsterdam that satisfies the
+        requirements, in case such a path exists.</p>
+<ul class="itemize">
+<li>
+<p>A path is specified by a single line containing an
+            integer <span class="tex2jax_process">$k$</span>, the
+            length of the path, followed by <span class="tex2jax_process">$k$</span> integers <span class="tex2jax_process">$p_ i$</span> that specify the
+            intersections along the path in the order in which they
+            are crossed, with <span class="tex2jax_process">$p_0 =
+            0$</span> and <span class="tex2jax_process">$p_{k-1}=1$</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The text “<tt class="ttfamily">impossible</tt>”, if such
+        a path does not exist.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5
+0 2 5
+2 1 5
+0 3 10
+3 1 20
+3 2 5
+</pre>
+</td>
+<td>
+<pre>
+3 0 3 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3
+0 1 10
+1 2 20
+2 3 30
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 9
+0 1 800
+6 2 300
+2 3 75
+3 4 80
+4 5 50
+4 1 100
+1 6 35
+0 2 120
+0 3 100
+</pre>
+</td>
+<td>
+<pre>
+2 0 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

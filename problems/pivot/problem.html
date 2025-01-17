@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>An <span class="tex2jax_process">$O(n)$</span> <tt class="ttfamily">Partition</tt> algorithm partitions an array
+    <tt class="ttfamily">A</tt> around a <tt class="ttfamily">pivot</tt> element (<tt class="ttfamily">pivot</tt>
+    is a member of <tt class="ttfamily">A</tt>) into three parts: a
+    left sub-array that contains elements that are <span class="tex2jax_process">$\leq $</span> <tt class="ttfamily">pivot</tt>, the <tt class="ttfamily">pivot</tt>
+    itself, and a right sub-array that contains elements that are
+    <span class="tex2jax_process">$&gt;$</span> <tt class="ttfamily">pivot</tt>.</p>
+<p>A <tt class="ttfamily">Partition</tt> algorithm is an
+    integral part of a popular sorting algorithm <tt class="ttfamily">Quicksort</tt>. Usually, the choice of <tt class="ttfamily">pivot</tt> is randomized so that <tt class="ttfamily">Quicksort</tt> has an expected <span class="tex2jax_process">$O(n \log n)$</span> running time
+    performance.</p>
+<p>Now the actual job in this problem is this: Starting from an
+    array <tt class="ttfamily">A</tt> that has <span class="tex2jax_process">$n$</span> distinct integers, we partition
+    <tt class="ttfamily">A</tt> using one of the member of
+    <tt class="ttfamily">A</tt> as pivot to produce a transformed
+    array <tt class="ttfamily">A’</tt>. Given this transformed
+    array <tt class="ttfamily">A’</tt>, your job is to count how
+    many integers that could have been the chosen pivot.</p>
+<p>For example, if <tt class="ttfamily">A’</tt> = <span class="tex2jax_process">$\{ 2, 1, 3, 4, 7, 5, 6, 8\} $</span>, then 3
+    integers: <span class="tex2jax_process">$\{ 3, 4, 8\} $</span>
+    could have been the pivot of partition, e.g. <span class="tex2jax_process">$\{ 2, 1, 3\} $</span> to the left of integer
+    <span class="tex2jax_process">$4$</span> are smaller than
+    <span class="tex2jax_process">$4$</span> and <span class="tex2jax_process">$\{ 7, 5, 6, 8\} $</span> to the right of
+    integer <span class="tex2jax_process">$4$</span> are greater
+    than <span class="tex2jax_process">$4$</span>. However, the
+    other 5 integers cannot possibly be the pivot, e.g. integer
+    <span class="tex2jax_process">$7$</span> cannot possibly be the
+    pivot as there are <span class="tex2jax_process">$\{ 5, 6\}
+    $</span> to the right of integer <span class="tex2jax_process">$7$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of two lines. The first line contains
+    integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3 \leq n \leq 100\, 000$</span>). The second
+    line contains <span class="tex2jax_process">$n$</span> distinct
+    32-bit signed integers that describes the transformed array
+    <span class="tex2jax_process">$A’$</span>.</p>
+<h2>Output</h2>
+<p>Output the required answer as a single integer in one
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+2 1 3 4 7 5 6 8
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+1 2 3 4 5 7 6
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

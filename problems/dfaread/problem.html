@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>You are given a deterministic finite automaton and a list of
+    strings. For each string given, you should determine whether
+    the automaton accepts or rejects the string.</p>
+<h2>Input</h2>
+<p>The first line of input contains four positive integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$f$</span>, where <span class="tex2jax_process">$n$</span> is the number of states,
+    <span class="tex2jax_process">$c$</span> is the size of the
+    alphabet, <span class="tex2jax_process">$s$</span> is the
+    initial state, and <span class="tex2jax_process">$f$</span> is
+    the number of final states. The second line consists of a
+    string <span class="tex2jax_process">$\Sigma = \Sigma _1\Sigma
+    _2\dots \Sigma _c$</span> of <span class="tex2jax_process">$c$</span> distinct symbols, each of which is
+    a lowercase english character. The third line consists of
+    <span class="tex2jax_process">$f$</span> distinct positive
+    integers, the set of final states. Then <span class="tex2jax_process">$n$</span> lines follow, each with
+    <span class="tex2jax_process">$c$</span> positive integers,
+    describing the symbol table. The <span class="tex2jax_process">$j$</span>-th integer on the <span class="tex2jax_process">$i$</span>-th of those lines represents the
+    state transitioned to from state <span class="tex2jax_process">$i$</span> upon reading <span class="tex2jax_process">$\Sigma _j$</span>.</p>
+<p>Each state is an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$n$</span>. It is guaranteed that
+    <span class="tex2jax_process">$n \cdot c \leq 100\,
+    022$</span>, <span class="tex2jax_process">$1 \leq s \leq
+    n$</span>, and <span class="tex2jax_process">$0 \leq f \leq
+    n$</span>.</p>
+<p>After that a line with the integer <span class="tex2jax_process">$m$</span> follows, the number of strings to
+    check, where <span class="tex2jax_process">$1 \leq m \leq 100\,
+    000$</span>. Then <span class="tex2jax_process">$m$</span>
+    lines follow, each with a string to check. Each string is
+    between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$100\, 000$</span> characters in
+    length and the total length of all strings combined is at most
+    <span class="tex2jax_process">$100\, 000$</span>. Each string
+    will only consist of characters from the alphabet <span class="tex2jax_process">$\Sigma $</span>.</p>
+<h2>Output</h2>
+<p>For each string to check, output a line containing either
+    <tt class="ttfamily">accept</tt> or <tt class="ttfamily">reject</tt>, depending on whether the string was
+    accepted or rejected.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 1 1
+ab
+1
+1 2
+1 3
+3 3
+6
+
+a
+aa
+ab
+abba
+aabaababa
+</pre>
+</td>
+<td>
+<pre>accept
+accept
+accept
+reject
+reject
+accept
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 4 1 0
+acgt
+
+1 1 1 1
+3
+
+agaga
+gattaca
+</pre>
+</td>
+<td>
+<pre>reject
+reject
+reject
+</pre>
+</td>
+</tr>
+</table>
+</div>

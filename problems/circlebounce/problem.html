@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>You are standing by the wall in a large, perfectly circular
+    arena and you throw a tennis ball hard against some other part
+    of the arena. After a given number of bounces, where does the
+    tennis ball next strike the wall?</p>
+<p>Map the arena as a unit circle centered at the origin, with
+    you standing at the point <span class="tex2jax_process">$(-1,
+    0)$</span>. You throw the ball with a direction given by a
+    slope in the coordinate plane of a rational fraction
+    <span class="tex2jax_process">$a/b$</span>. Each bounce is
+    perfect, losing no energy and bouncing from the wall with the
+    same angle of reflection as the angle of incidence to a tangent
+    to the wall at the point of impact.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{circle.pdf}" src="/problems/circlebounce/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>After <span class="tex2jax_process">$n$</span> bounces, the
+    ball strikes the circle again at some point <span class="tex2jax_process">$p$</span> which has rational coordinates
+    that can be expressed as <span class="tex2jax_process">$(r/s,
+    t/u)$</span>. Output the fraction <span class="tex2jax_process">$r/s$</span> modulo the prime <span class="tex2jax_process">$M = 1{,}000{,}000{,}007$</span>.</p>
+<p>It can be shown that the <span class="tex2jax_process">$x$</span> coordinate can be expressed as an
+    irreducible fraction <span class="tex2jax_process">$r/s$</span>, where <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$s$</span> are integers and <span class="tex2jax_process">$s \not\equiv 0 \pmod M$</span>. Output the
+    integer equal to <span class="tex2jax_process">$r\cdot s^{-1}
+    \pmod M$</span>. In other words, output an integer <span class="tex2jax_process">$k$</span> such that <span class="tex2jax_process">$0 \le k &lt; M$</span> and <span class="tex2jax_process">$k\cdot s \equiv r \pmod M$</span>.</p>
+<p>For example, if we throw the ball with slope <span class="tex2jax_process">$1/2$</span> and it bounces once, it first
+    strikes the wall at coordinates <span class="tex2jax_process">$(3/5, 4/5)$</span>. After bouncing, it next
+    strikes the wall at coordinates <span class="tex2jax_process">$(7/25, -24/25)$</span>. The modular inverse
+    of <span class="tex2jax_process">$25$</span> with respect to
+    the prime <span class="tex2jax_process">$M$</span> is
+    <span class="tex2jax_process">$280{,}000{,}002$</span>, and the
+    final result is thus <span class="tex2jax_process">$7\cdot
+    280{,}000{,}002 \pmod M = 960{,}000{,}007$</span>.</p>
+<h2>Input</h2>
+<p>The single line of input will contain three integers
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \le a,b \le 10^9, \gcd (a,b)=1$</span>) and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^{12}$</span>), where <span class="tex2jax_process">$a/b$</span> is the slope of your throw, and
+    <span class="tex2jax_process">$n$</span> is the number of
+    bounces. Note that <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> are relatively
+    prime.</p>
+<h2>Output</h2>
+<p>Output a single integer value as described above.</p>
+<p>Note that Sample 2 corresponds to the example in the problem
+    description.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 3
+</pre>
+</td>
+<td>
+<pre>1000000006
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 1
+</pre>
+</td>
+<td>
+<pre>960000007
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>11 63 44
+</pre>
+</td>
+<td>
+<pre>22
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>163 713 980
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

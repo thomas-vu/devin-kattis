@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>Mirko lives in a big enchanted forest where trees are very
+    tall and grow really quickly. That forest can be represented as
+    an <span class="tex2jax_process">$N\cdot N$</span> matrix where
+    each field contains one tree.</p>
+<p>Mirko is very fond of the trees in the enchanted forest. He
+    spent years observing them and for each tree measured how many
+    meters it <em>grew in a year</em>. The trees grow
+    <em>continuously</em>. In other words, if the tree grows
+    <span class="tex2jax_process">$5$</span> meters in a year, it
+    will grow <span class="tex2jax_process">$2.5$</span> meters in
+    half a year.</p>
+<p>Apart from trees, Mirko likes mushrooms from the enchanted
+    forest. Sometimes, he eats suspicious colorful mushrooms and
+    starts thinking about peculiar questions. Yesterday, this
+    unfortunate thing happened and he wondered what would be the
+    size of the <em>largest connected group of trees</em> that are
+    all of <em>equal height</em> if the trees continue to grow at
+    the same speed they’re growing at that moment.</p>
+<p>Mirko quickly measured the current height of all trees in
+    the forest and asked you to answer his question.</p>
+<p>Two trees are <em>adjacent</em> if their fields in the
+    matrix share a common edge.</p>
+<p>Two trees are <em>connected</em> if there is a sequence of
+    adjacent trees that leads from the first to the second.</p>
+<p>A group of trees is <em>connected</em> if every pair of
+    trees in the group is <em>connected</em>.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 700$</span>).</p>
+<p>After the first line, <span class="tex2jax_process">$N$</span> lines follow, each of them
+    containing <span class="tex2jax_process">$N$</span>
+    integers.</p>
+<p>The <span class="tex2jax_process">$i$</span>-th line
+    contains integers <span class="tex2jax_process">$h_{ij}$</span>
+    (<span class="tex2jax_process">$1 \leq h_{ij} \leq
+    10^6$</span>), the initial height of tree in the <span class="tex2jax_process">$i$</span>-th row and <span class="tex2jax_process">$j$</span>-th column, given in meters.</p>
+<p>After that, <span class="tex2jax_process">$N$</span> more
+    lines follow with <span class="tex2jax_process">$N$</span>
+    integers each.</p>
+<p>The <span class="tex2jax_process">$i$</span>-th line
+    contains integers <span class="tex2jax_process">$v_{ij}$</span>
+    (<span class="tex2jax_process">$1 \leq v_{ij} \leq
+    10^6$</span>), the growth speed of the tree in the <span class="tex2jax_process">$i$</span>-th row and <span class="tex2jax_process">$j$</span>-th column, given in meters.</p>
+<p>Warning: Please use faster input methods beacuse the amount
+    of input is very large. For example, either set
+    <tt>ios::sync_with_stdio(false)</tt> or use <tt>scanf</tt>
+    instead of <tt>cin</tt> in C++, and use <tt>BufferedReader</tt>
+    instead of <tt>Scanner</tt> in Java.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the required
+    number from the task.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 2 3
+3 2 2
+5 2 1
+3 2 1
+1 2 1
+1 2 3
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3 1
+3 3
+2 5
+2 5
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

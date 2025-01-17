@@ -1,0 +1,123 @@
+<div class="problembody">
+<p>You are playing the game “Memory Match”.</p>
+<p>This game revolves around a set of <span class="tex2jax_process">$N$</span> picture cards. The cards are
+    organized in pairs: there are <span class="tex2jax_process">$N/2$</span> different pictures, each picture
+    occurring on exactly two cards.</p>
+<p>At the beginning of the game, the cards are shuffled and
+    laid face down on the table. Players then take turns in
+    guessing a pair of cards with the same picture. Each turn
+    consists of picking a face-down card and turning it over to
+    reveal its picture, then picking another face-down card and
+    turning that card over as well. If the pictures on the two
+    turned cards are identical, the cards remain face-up, the
+    player scores a point and may take another turn. If the
+    pictures are different, both cards are turned face-down again
+    and the turn goes to the next player.</p>
+<p>It is now your turn! Given a description of all previous
+    actions in the game, pick as many matching pairs as
+    possible.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{figure.pdf}" src="/problems/memorymatch/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the first example input.
+          Only cards <span class="tex2jax_process">$3$</span> and
+          <span class="tex2jax_process">$6$</span> have been
+          matched correctly, all other cards are face-down. How
+          many pairs can you score?
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line contains an even integer <span class="tex2jax_process">$N$</span>, the number of cards on the table
+    (<span class="tex2jax_process">$2 \leq N \leq
+    1000$</span>).</p>
+<p>The second line contains an integer <span class="tex2jax_process">$K$</span>, the number of turns played thus
+    far in the game (<span class="tex2jax_process">$0 \leq K \leq
+    1000$</span>).</p>
+<p>The following <span class="tex2jax_process">$K$</span> lines
+    each describe a turn. A turn is described by integers
+    <span class="tex2jax_process">$C_1$</span> and <span class="tex2jax_process">$C_2$</span> followed by words <span class="tex2jax_process">$P_1$</span> and <span class="tex2jax_process">$P_2$</span>. The numbers <span class="tex2jax_process">$C_1$</span> and <span class="tex2jax_process">$C_2$</span> refer to card positions on the
+    table (<span class="tex2jax_process">$1 \leq C_1, C_2 \leq
+    N$</span> and <span class="tex2jax_process">$C_1 \neq
+    C_2$</span>). The words describe the pictures on the two
+    selected cards. Each word consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> lowercase letters in range
+    ‘<tt class="ttfamily">a</tt>’ …‘<tt class="ttfamily">z</tt>’.
+    If <span class="tex2jax_process">$P_1 = P_2$</span>, the two
+    cards stay face-up and the corresponding positions <span class="tex2jax_process">$C_1$</span> and <span class="tex2jax_process">$C_2$</span> may not be chosen again.</p>
+<p>The input is such that at least two cards are still in
+    face-down position.</p>
+<h2>Output</h2>
+<p>Output one line with an integer <span class="tex2jax_process">$S$</span>, the number of matching pairs you
+    can score with certainty.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+5
+1 3 earth sun
+2 6 mars sun
+6 3 sun sun
+7 5 earth moon
+2 7 mars earth
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+6
+1 2 moon earth
+9 10 venus sun
+8 7 moon venus
+1 8 moon moon
+4 10 sun sun
+9 6 venus mars
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+2
+1 3 moon earth
+2 6 sun earth
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

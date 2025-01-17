@@ -1,0 +1,48 @@
+<div class="problembody">
+<p>You are given non-negative integers <span class="tex2jax_process">$a, b, c, d$</span>. Let <span class="tex2jax_process">$p = a^2 + b^2$</span> and <span class="tex2jax_process">$q = c^2 + d^2$</span>. You are to use these
+    two formulas to find two ways to write <span class="tex2jax_process">$pq$</span> as a sum of two squares.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains non-negative
+    integers <span class="tex2jax_process">$a, b, c, d \leq
+    10^{18}$</span> separated by a space.</p>
+<h2>Output</h2>
+<p>Print two lines of the form <tt>x^2 + y^2 = pq</tt> where
+    <span class="tex2jax_process">$x, y$</span> are integers and
+    <span class="tex2jax_process">$pq$</span> is the product of
+    <span class="tex2jax_process">$p, q$</span>. If <span class="tex2jax_process">$x$</span> or <span class="tex2jax_process">$y$</span> are negative they need to be
+    wrapped in parentheses, like in the sample input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 5 7 8
+</pre>
+</td>
+<td>
+<pre>30^2 + 115^2 = 14125
+110^2 + 45^2 = 14125
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12 13 10 11
+</pre>
+</td>
+<td>
+<pre>(-23)^2 + 262^2 = 69173
+263^2 + 2^2 = 69173
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,189 @@
+<div class="problembody">
+<p>Professor O’Dagio of the music department at Faber College
+    has come up with a rather interesting way of selecting its
+    department chair. All <span class="tex2jax_process">$n$</span>
+    members of the music faculty line up, then the first one in
+    line calls out an integer <span class="tex2jax_process">$k$</span> corresponding to the opus number
+    of his or her favorite musical composition by Faber College’s
+    most illustrious alumnus, composer I. M. Tondeff. The
+    department members then “count off,” starting with the first in
+    line and cycling back to the beginning of the line if
+    necessary. When the count reaches <span class="tex2jax_process">$k$</span>, that person steps out of the line
+    and is relieved (in more than one sense!) of chairmanship duty
+    for that year.</p>
+<p>The next person in line then calls out his or her favorite
+    opus number (this becomes the new value of <span class="tex2jax_process">$k$</span>) and the count restarts at
+    “<span class="tex2jax_process">$1$</span>,” and continues until
+    the next person is eliminated, and so on. When only one faculty
+    member is left standing, this is the new department chair. To
+    prevent cheating, everyone’s favorite number is announced in
+    advance and no one is allowed to choose Tondeff’s Opus
+    <span class="tex2jax_process">$1$</span> (the famous drinking
+    song <i class="itshape">Rhapsody in Brew</i>).</p>
+<p>For instance, suppose the professors are numbered
+    <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$4$</span> and lined up in that order;
+    suppose their favorite opus numbers are, respectively, opus
+    <span class="tex2jax_process">$8$</span> (<i class="itshape">The Four Sneezings</i>), opus <span class="tex2jax_process">$2$</span> (<i class="itshape">Concerto for
+    Kazoo and Cigar Box Banjo</i>), opus <span class="tex2jax_process">$4$</span> (<i class="itshape">The Taekwondo
+    Rondo</i>), and opus <span class="tex2jax_process">$2$</span>
+    (again). Figure 1 shows the process by which the new chair is
+    selected.</p>
+<div class="figure" id="fig">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$1$</span>)</small></p>
+</td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$2$</span>)</small></p>
+</td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$3$</span>)</small></p>
+</td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$4$</span>)</small></p>
+</td>
+<td style="text-align:center"> </td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:center">
+<div class="minipage" style="width:180.675pt">
+<small class="footnotesize">Professor (<span class="tex2jax_process">$1$</span>) calls out
+                “<span class="tex2jax_process">$8$</span>” and
+                begins counting</small>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$1$</span>)</small></p>
+</td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$2$</span>)</small></p>
+</td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$3$</span>)</small></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center"> </td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<div class="minipage" style="width:180.675pt">
+<small class="footnotesize">Professor (<span class="tex2jax_process">$4$</span>) is eliminated.
+                Professor (<span class="tex2jax_process">$1$</span>) (the next in line)
+                calls out “<span class="tex2jax_process">$8$</span>” and begins
+                counting</small>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$1$</span>)</small></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$3$</span>)</small></p>
+</td>
+<td style="text-align:center"> </td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<div class="minipage" style="width:180.675pt">
+<small class="footnotesize">Professor (<span class="tex2jax_process">$2$</span>) is eliminated.
+                Professor (<span class="tex2jax_process">$3$</span>) (the next in line)
+                calls out “<span class="tex2jax_process">$4$</span>” and begins
+                counting</small>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:center"> </td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><small class="tiny">(<span class="tex2jax_process">$3$</span>)</small></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center"> </td>
+</tr>
+<tr>
+<td style="text-align:center"> </td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:center">
+<div class="minipage" style="width:180.675pt">
+<small class="footnotesize">Professor (<span class="tex2jax_process">$1$</span>) is eliminated.
+                Professor (<span class="tex2jax_process">$3$</span>) is the new department
+                chair</small>
+</div>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Example of Selection Process
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 10^4$</span>), the number of faculty members. The
+    next line contains <span class="tex2jax_process">$n$</span>
+    integers <span class="tex2jax_process">$k_1 \ldots k_ n$</span>
+    (<span class="tex2jax_process">$2 \leq k_ i \leq 10^6$</span>
+    for each <span class="tex2jax_process">$i$</span>), where
+    <span class="tex2jax_process">$k_ i$</span> is the favorite
+    opus number of professor <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of the new department chair.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+8 2 4 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

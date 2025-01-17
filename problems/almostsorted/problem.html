@@ -1,0 +1,61 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/almostsorted/file/statement/en/img-0001.jpg" class="illustration" src="/problems/almostsorted/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>In a modified version of cycle sort, an array is sorted
+    by swapping pairs of elements such that each swap puts at least
+    one element in its correct final position. Specifically, the
+    algorithm sorts the array in increasing order by performing
+    zero or more sorting iterations on each index, starting from
+    index <span class="tex2jax_process">$i=0$</span>, where a
+    sorting iteration consists of swapping the
+    element <span class="tex2jax_process">$x$</span> in
+    index <span class="tex2jax_process">$i$</span> with some
+    other element, such that after the swap, <span class="tex2jax_process">$x$</span> is sorted. (An element is
+    called sorted if completely sorting the array would not change
+    the position of that element.) This places a new array element
+    in index <span class="tex2jax_process">$i$</span>. These
+    sorting iterations on index <span class="tex2jax_process">$i$</span> continue until the element in
+    index <span class="tex2jax_process">$i$</span> is sorted,
+    at which point <span class="tex2jax_process">$i$</span> is
+    incremented, and the whole process repeats. Eventually, when
+    <span class="tex2jax_process">$i$</span> has progressed through
+    all valid array indices, the entire array will be sorted, and
+    the algorithm terminates.
+    <p>In this sorting algorithm, some elements get sorted sooner
+    than others. Given an array, and an element <span class="tex2jax_process">$Q$</span>, it is your task to determine the
+    state of the array when element <span class="tex2jax_process">$Q$</span> is first sorted.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing a single
+    integer <span class="tex2jax_process">$n$</span>, the
+    length of the array <span class="tex2jax_process">$(1\leq n\leq
+    200\, 000)$</span>. The second line contains the initial state
+    of the array — <span class="tex2jax_process">$n$</span> distinct space-separated
+    integers, each less than <span class="tex2jax_process">$2^{31}$</span> in absolute value, beginning
+    with the element in index <span class="tex2jax_process">$i=0$</span>. The last line contains a single
+    integer <span class="tex2jax_process">$Q$</span>, the
+    query. It is guaranteed that <span class="tex2jax_process">$Q$</span> is one of the elements of the
+    array.</p>
+<h2>Output</h2>
+<p>Output a single line containing <span class="tex2jax_process">$n$</span> space-separated values, the state
+    of the array when <span class="tex2jax_process">$Q$</span> is
+    first sorted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>12
+4 3 5 10 12 6 8 7 11 1 9 2
+8
+</pre>
+</td>
+<td>
+<pre>1 2 3 4 5 6 7 8 11 10 9 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

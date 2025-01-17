@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/buttonbashing/file/statement/en/img-0001.png" class="illustration" src="/problems/buttonbashing/file/statement/en/img-0001.png"/>
+<div class="description">
+        source: <a href="http://xkcd.com/1103">http://xkcd.com/1103</a>
+</div>
+</div>
+<p>You recently acquired a new microwave, and noticed that it
+    provides a large number of buttons to be able to quickly
+    specify the time that the microwave should be running for.
+    There are buttons both for adding time, and for subtracting
+    time. You wonder how efficient you can be when entering cooking
+    times: you want to minimize the number of required button
+    presses.</p>
+<p>The microwave can be running for at least 0 seconds, and at
+    most 1 hour. If a button press would result in a cooking time
+    of less than 0 seconds, the microwave will set the cooking time
+    to 0 seconds. If a button press would result in a cooking time
+    of more than 1 hour, the microwave will set the cooking time to
+    1 hour. Initially, the microwave will run for 0 seconds. There
+    will always be a button adding at least 1 second to the cooking
+    time.</p>
+<p>Given the buttons that the microwave provides for entering
+    cooking times, determine the least amount of button presses
+    required to let the microwave run for a certain amount of time.
+    If it is not possible to enter the desired cooking time
+    precisely, determine the smallest achievable cooking time above
+    the target, and the minimum number of button presses required
+    for that cooking time, instead. The microwave does not allow to
+    adjust the cooking time once it has started cooking.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \leq n \leq 16$</span> and
+        <span class="tex2jax_process">$0 \leq t \leq 3\,
+        600$</span>): the number of buttons available to change the
+        cooking time, and the desired cooking time in seconds,
+        respectively.</p>
+</li>
+<li>
+<p>one line with <span class="tex2jax_process">$n$</span>
+        space-separated integers <span class="tex2jax_process">$b_
+        i$</span> (<span class="tex2jax_process">$-3\, 600 \leq b_
+        i \leq 3\, 600$</span>): the number of seconds added to the
+        cooking time when button <span class="tex2jax_process">$i$</span> is pressed.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers: the minimum
+        number of button presses required to reach the required
+        cooking time, and the minimum number of extra seconds that
+        the microwave must be running for, respectively.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3 50
+-10 10 60
+1 50
+20
+</pre>
+</td>
+<td>
+<pre>
+2 0
+3 10
+</pre>
+</td>
+</tr>
+</table>
+</div>

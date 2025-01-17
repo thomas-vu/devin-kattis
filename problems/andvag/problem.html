@@ -1,0 +1,195 @@
+<div class="problembody">
+<p>In the local park, there are <span class="tex2jax_process">$N$</span> ponds, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>, connected by <span class="tex2jax_process">$M$</span> channels. The duck Anita has
+    accidentally ended up in a mud puddle, and now all of her
+    <span class="tex2jax_process">$31$</span> feathers are muddy!
+    Anita is currently in pond <span class="tex2jax_process">$A$</span>, and she wants to get to pond
+    <span class="tex2jax_process">$B$</span>. On the way there, she
+    wants to try to get rid of as much mud as possible. To remove
+    the mud, she can travel through different channels. Each
+    channel has its own filter that will clean specific feathers.
+    This filter is represented by a number which, when translated
+    into base <span class="tex2jax_process">$2$</span>, indicates
+    which feathers are cleaned. For example, a filter with the
+    number <span class="tex2jax_process">$23_{10} =
+    10111_{2}$</span> would clean the first, second, third, and
+    fifth feathers. The first feather corresponds to the digit on
+    the rightmost side of the binary number.</p>
+<p>Initially, all <span class="tex2jax_process">$31$</span>
+    feathers are dirty. Your program will receive <span class="tex2jax_process">$Q$</span> questions, where each question
+    contains two numbers <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span>. You should answer
+    how many feathers Anita managed to clean after she traveled
+    from pond <span class="tex2jax_process">$A$</span> to pond
+    <span class="tex2jax_process">$B$</span>, given that she
+    cleaned as many feathers as possible. On the way between the
+    ponds, Anita can travel as she wishes: she can go through the
+    same channel multiple times, and she can visit every pond
+    multiple times (including pond <span class="tex2jax_process">$B$</span>), before deciding she’s done.</p>
+<p>If it’s impossible to travel from pond <span class="tex2jax_process">$A$</span> to pond <span class="tex2jax_process">$B$</span>, you should instead output
+    <span class="tex2jax_process">$-1$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains the numbers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, and <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1
+    \leq N, Q \leq 10^5$</span>, <span class="tex2jax_process">$1
+    \leq M \leq 2 \cdot 10^5$</span>), the number of ponds, the
+    number of channels, and the number of questions.</p>
+<p>The following <span class="tex2jax_process">$M$</span> lines
+    describe the channels. The <span class="tex2jax_process">$i$</span>:th line contains the three numbers
+    <span class="tex2jax_process">$a_ i, b_ i,$</span> and
+    <span class="tex2jax_process">$f_ i$</span> (<span class="tex2jax_process">$1 \leq a_ i, b_ i \leq N$</span>,
+    <span class="tex2jax_process">$a_ i \neq b_ i$</span>,
+    <span class="tex2jax_process">$0 \leq f_ i \leq
+    2^{31}-1$</span>). This means that there is a channel between
+    pond <span class="tex2jax_process">$a_ i$</span> and pond
+    <span class="tex2jax_process">$b_ i$</span> with a filter value
+    of <span class="tex2jax_process">$f_ i$</span>. It is possible
+    that there are multiple channels between the same pairs of
+    ponds.</p>
+<p>Finally, there are <span class="tex2jax_process">$Q$</span>
+    lines where the <span class="tex2jax_process">$j$</span>:th
+    line contains the numbers <span class="tex2jax_process">$A_
+    j$</span> and <span class="tex2jax_process">$B_ j$</span>
+    (<span class="tex2jax_process">$1 \leq A_ j, B_ J \leq
+    N$</span>), the pond where Anita’s journey starts, respectively
+    ends in question <span class="tex2jax_process">$j$</span>.</p>
+<h2>Output</h2>
+<p>Write <span class="tex2jax_process">$Q$</span> integers,
+    each on their own line: the number of feathers Anita manages to
+    clean after traveling from pond <span class="tex2jax_process">$A_ j$</span> to pond <span class="tex2jax_process">$B_ j$</span>, given that she chooses a path
+    that removes as much mud as possible. If it’s not possible to
+    travel from pond <span class="tex2jax_process">$A_ j$</span> to
+    pond <span class="tex2jax_process">$B_ j$</span>, write
+    <span class="tex2jax_process">$-1$</span> instead.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on different test groups. To
+    receive points for a group, you must pass all test cases in
+    that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>It’s possible to travel from every pond to all other
+          ponds, and <span class="tex2jax_process">$0 \leq f_ i
+          \leq 1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>It’s possible to travel from every pond to all other
+          ponds, and <span class="tex2jax_process">$Q =
+          1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$Q = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>It’s possible to travel from every pond to all other
+          ponds.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1:</h2>
+<p>In question <span class="tex2jax_process">$1$</span>, Anita
+    can visit the following ponds in order: <span class="tex2jax_process">$1,2,3,2$</span>. If she does this, she will
+    clean feathers <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>In question <span class="tex2jax_process">$2$</span>, Anita
+    can visit pond <span class="tex2jax_process">$4$</span> and
+    then pond <span class="tex2jax_process">$5$</span>. Then she
+    will have cleaned feathers <span class="tex2jax_process">$1,2,3$</span> and <span class="tex2jax_process">$4$</span>.</p>
+<p>In question <span class="tex2jax_process">$3$</span>, Anita
+    can’t get from pond <span class="tex2jax_process">$1$</span> to
+    pond <span class="tex2jax_process">$5$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 4 3
+1 2 1
+2 3 2
+4 5 7
+5 4 8
+1 2
+4 5
+1 5
+</pre>
+</td>
+<td>
+<pre>2
+4
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 1
+1 2 1
+3 2 1
+1 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

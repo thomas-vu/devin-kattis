@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Let the set <span class="tex2jax_process">$\Sigma $</span>
+    consist of all words composed of 1–4 lower case letters, such
+    as the words “a”, “b”, “f”, “aa”, “fun” and “kvqf”. Consider
+    expressions according to the grammar with the two
+    rules</p><span class="tex2jax_process">\[ \begin{array}{l}
+    \mathit{E} \to f \\ \mathit{E} \to f(E,E) \\ \end{array}
+    \]</span>
+<p>for every symbol <span class="tex2jax_process">$f \in \Sigma
+    $</span>. Any expression can easily be represented as a tree
+    according to its syntax. For example, the expression
+    <span class="tex2jax_process">$a(b(f(a,a),b(f(a,a),f)),f(b(f(a,a),b(f(a,a),f)),f))$</span>
+    is represented by the tree on the left in the following
+    figure:</p>
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{tree.png}" src="/problems/subexpression/file/statement/en/img-0001.png" style="width:80.00%"/>
+</center>
+<p>Last night you dreamt of a great invention which
+    considerably reduces the size of the representation: use a
+    graph instead of a tree, to share common subexpressions. For
+    example, the expression above can be represented by the graph
+    on the right in the figure. While the tree contains 21 nodes,
+    the graph just contains 7 nodes.</p>
+<p>Since the tree on the left in the figure is also a graph,
+    the representation using graphs is not necessarily unique.
+    Given an expression, find a graph representing the expression
+    with as few nodes as possible!</p>
+<h2>Input</h2>
+<p>The first line of the input contains the number <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \leq c \leq 200$</span>), the number of expressions. Each of
+    the following <span class="tex2jax_process">$c$</span> lines
+    contains an expression according to the given syntax, without
+    any whitespace. Its tree representation contains at most
+    <span class="tex2jax_process">$50\, 000$</span> nodes.</p>
+<h2>Output</h2>
+<p>For each expression, print a single line containing a graph
+    representation with as few nodes as possible.</p>
+<p>The graph representation is written down as a string by
+    replacing the appropriate subexpressions with numbers. Each
+    number points to the root node of the subexpression which
+    should be inserted at that position. Nodes are numbered
+    sequentially, starting with 1; this numbering includes just the
+    nodes of the graph (not those which have been replaced by
+    numbers). Numbers must point to nodes written down before (no
+    forward pointers). For our example, we obtain <span class="tex2jax_process">$a(b(f(a,4),b(3,f)),f(2,6))$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+this(is(a,tiny),tree)
+a(b(f(a,a),b(f(a,a),f)),f(b(f(a,a),b(f(a,a),f)),f))
+z(zz(zzzz(zz,z),zzzz(zz,z)),zzzz(zz(zzzz(zz,z),zzzz(zz,z)),z))
+</pre>
+</td>
+<td>
+<pre>
+this(is(a,tiny),tree)
+a(b(f(a,4),b(3,f)),f(2,6))
+z(zz(zzzz(zz,z),3),zzzz(2,5))
+</pre>
+</td>
+</tr>
+</table>
+</div>

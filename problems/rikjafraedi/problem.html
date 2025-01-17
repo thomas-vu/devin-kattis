@@ -1,0 +1,139 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/rikjafraedi/file/statement/en/img-0001.png" class="illustration" src="/problems/rikjafraedi/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Snake_lemma_complete.svg">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>Jörmunrekur spent his easter vacation reading up on a math
+    subject known as category theory. It uses a lot of arrow
+    diagrams to visualize the material. These diagrams display
+    categories which consist of objects and arrows between objects.
+    An important property of many of these diagrams is that they
+    are commutative. That means that if you start at some object
+    <span class="tex2jax_process">$A$</span> and follow some
+    sequence of arrows to object <span class="tex2jax_process">$B$</span> the result is the same no matter
+    which path you take. Jörmunrekur is taking a look at a
+    particular diagram and wondering whether it is commutative. In
+    this diagram each object is the usual three dimensional space
+    and each arrow is a translation of that space. The arrows are
+    given in the format <span class="tex2jax_process">$(x, y,
+    z)$</span> which means that each point is translated by
+    <span class="tex2jax_process">$x$</span> in the <span class="tex2jax_process">$x$</span>-direction, by <span class="tex2jax_process">$y$</span> in the <span class="tex2jax_process">$y$</span>-direction and by <span class="tex2jax_process">$z$</span> in the <span class="tex2jax_process">$z$</span>-direction.</p>
+<h2>Input</h2>
+<p>The inputs begins with a line with two integers <span class="tex2jax_process">$1 \leq n \leq 10^5$</span> and <span class="tex2jax_process">$1 \leq m \leq 10^5$</span> where
+    <span class="tex2jax_process">$n$</span> is the number of
+    objects and <span class="tex2jax_process">$m$</span> is the
+    number of arrows. The objects are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. Next there are <span class="tex2jax_process">$m$</span> lines, each with <span class="tex2jax_process">$5$</span> integers <span class="tex2jax_process">$1 \leq a, b \leq n$</span>, <span class="tex2jax_process">$-10^9 \leq x, y, z, \leq 10^9$</span>. This
+    denotes that in the diagram there is an arrow from object
+    <span class="tex2jax_process">$a$</span> to object <span class="tex2jax_process">$b$</span> which denotes the translation
+    <span class="tex2jax_process">$(x, y, z)$</span>. Note that
+    since each arrow corresponds to a bijective map there is also
+    implicitly an arrow from <span class="tex2jax_process">$b$</span> to <span class="tex2jax_process">$a$</span> translating by <span class="tex2jax_process">$(-x, -y, -z)$</span>.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">Jebb</tt> if the diagram is
+    commutative, otherwise print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          200$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample Input</h2>
+<p>In the first sample there are two paths from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$4$</span>. No matter which path is followed
+    the total translation is <span class="tex2jax_process">$(1, 1,
+    1)$</span> so the diagram is commutative.<br/></p>
+<div class="figure" id="a0000000014">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{sample1}" src="/problems/rikjafraedi/file/statement/en/img-0002.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample 1
+        </div>
+</center>
+</div>
+<p>In the second sample a new arrow has been added. If we
+    travel backwards along it from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$4$</span> the translation is <span class="tex2jax_process">$(-1,-1,-1)$</span> which is not the same as
+    for the other paths. Thus this diagram is not
+    commutative.<br/></p>
+<div class="figure" id="a0000000015">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{sample2}" src="/problems/rikjafraedi/file/statement/en/img-0003.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Sample 2
+        </div>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2 1 0 0
+2 4 0 1 1
+1 3 1 0 1
+3 4 0 1 0
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+1 2 1 0 0
+2 4 0 1 1
+1 3 1 0 1
+3 4 0 1 0
+4 1 1 1 1
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

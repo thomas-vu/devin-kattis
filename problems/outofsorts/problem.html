@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>Ann Logan is fascinated with finite sequences of integers.
+    She is particularly interested in sequences of the form
+    <span class="tex2jax_process">$x_1, x_2, \ldots , x_ n$</span>
+    where:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x_{i} = (ax_{i-1}+c)\mod
+        m$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$a$</span>, and <span class="tex2jax_process">$c$</span> are positive integer
+        constants,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$x_0$</span> is a
+        non-negative integer constant, and</p>
+</li>
+<li>
+<p>all <span class="tex2jax_process">$n$</span> values are
+        unique.</p>
+</li>
+</ul>
+<p>For example, if <span class="tex2jax_process">$n=5$</span>,
+    <span class="tex2jax_process">$m=8$</span>, <span class="tex2jax_process">$a=1$</span>, <span class="tex2jax_process">$c=3$</span>, and <span class="tex2jax_process">$x_0=3$</span>, the sequence is <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$2$</span> (<span class="tex2jax_process">$x_1 = (1\cdot 3+3)\mod 8 = 6$</span>,
+    <span class="tex2jax_process">$x_2 = (1\cdot 6+3)\mod 8 =
+    1$</span>, and so on). Note that she does not consider the
+    initial value <span class="tex2jax_process">$x_0$</span> to be
+    part of the sequence.</p>
+<p>Ann wants to be able to quickly determine, for any integer
+    value, whether or not it appears within a finite sequence of
+    this form. Given values of <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$c$</span>, and <span class="tex2jax_process">$x_0$</span>, she plans to follow this list
+    of steps:</p>
+<ol class="enumerate">
+<li>
+<p>Generate the sequence <span class="tex2jax_process">$x_1,\cdots , x_ n$</span> and store it
+        in an array.</p>
+</li>
+<li>
+<p>Sort the array.</p>
+</li>
+<li>
+<p>Perform a binary search of the array for each integer of
+        interest to her.</p>
+</li>
+</ol>
+<p>Ann’s search algorithm, while not the most efficient
+    possible, is pretty straightforward and understandable to
+    anyone familiar with binary search: after calculating the
+    midpoint <tt class="ttfamily">mid</tt> at each step of the
+    calculation (using <tt class="ttfamily">mid =
+    (low+high)/2</tt>), she first checks whether or not the value
+    at location <tt class="ttfamily">mid</tt> is equal to the
+    search value <tt class="ttfamily">x</tt>. If not, she then
+    narrows the search according to whether <tt class="ttfamily">x</tt> is strictly less than or strictly greater
+    than the value at location <tt class="ttfamily">mid</tt>.</p>
+<p>Unfortunately, Ann is absent-minded and she lost her list of
+    steps. She managed to remember the first and last step, but
+    …she forgot to sort the array before performing her binary
+    search! Needless to say, this means that many values that are
+    in the (unsorted) array will not be found by a binary search,
+    although surprisingly some can. In the example above, both
+    <span class="tex2jax_process">$4$</span> and <span class="tex2jax_process">$7$</span> can be found with Ann’s binary
+    search. How many values can be found for various sequences?
+    Don’t botch it up!</p>
+<h2>Input</h2>
+<p>Input consists of a line containing five integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$c$</span>, and <span class="tex2jax_process">$x_0$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^6$</span>, <span class="tex2jax_process">$1 \leq m,a,c \leq 2^{31}-1$</span>,
+    <span class="tex2jax_process">$0 \leq x_0 \leq
+    2^{31}-1$</span>), where <span class="tex2jax_process">$n$</span> is the length of the sequence
+    <span class="tex2jax_process">$x_1, \ldots , x_ n$</span> to be
+    generated and <span class="tex2jax_process">$m$</span>,
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$c$</span>, and <span class="tex2jax_process">$x_0$</span> are the constants used for
+    generating the sequence. All values in the generated sequence
+    are guaranteed to be unique.</p>
+<h2>Output</h2>
+<p>Output the number of sequence values that could be found
+    using Ann’s version of binary search, assuming she forgot to
+    sort the sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 8 1 3 3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 10 1234567891 1 1234567890
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

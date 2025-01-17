@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>When playing battleship, players take turns trying to sink
+    the other players navy. Each player may take shots at one
+    coordinate at once. If he hits one of his enemy’s ships and the
+    enemy has any other ships left, he may continue. Else, the
+    other player may take shots. After hitting a ship at one
+    coordinate, shooting at that coordinate again counts as a
+    miss.</p>
+<p>The game is finished when every part of every ship of a navy
+    of one player has been hit. The first player starts, and every
+    player gets the same number of turns. That means, that the
+    second player might get another turn even if all his ships have
+    been sunk.</p>
+<p>The game ends with a draw if both navies are completely
+    sunk, or if there are still ships left after all shots have
+    been fired.<br/></p>
+<p>Tom the little spy watches a game of battleships between two
+    fleet admirals. As he has successfully tapped the communication
+    wires, he can intercept the shot orders. However, he was unable
+    to determine which admiral ordered what shot to be fired.</p>
+<p>After the game, he successfully breaks into the super secret
+    game management facility, and manages to secure the fleet
+    deployment maps. As he wants to determine which fleet admiral
+    is more dangerous, he wants to know which admiral won.</p>
+<p>He transmits the deployment maps and the shot orders, and
+    wants you to determine which admiral won.</p>
+<h2>Input</h2>
+<p>Input starts with one line, containing the number of test
+    cases <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0 &lt; t \le 20$</span>).</p>
+<p>Every test case starts with a line, containing three
+    integers <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le w, h \leq 30; 1 \le n \leq 2000$</span>), describing the
+    width and height of the fleet deployment maps, and the number
+    of shots.</p>
+<p>The next <span class="tex2jax_process">$h$</span> lines
+    contain the deployment map for player one. Each line contains
+    <span class="tex2jax_process">$w$</span> field descriptions,
+    where ’<tt class="tt">_</tt>’ means “water” and ’<tt class="tt">#</tt>’ means “ship”. Then follow <span class="tex2jax_process">$h$</span> lines containing the deployment
+    map for player two.</p>
+<p>The following <span class="tex2jax_process">$n$</span> lines
+    contain the shot orders; each order consists of two integers,
+    the x and y coordinate of the shot. The x coordinate indicates
+    the column of the shot, running from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$w-1$</span>, with <span class="tex2jax_process">$0$</span> meaning the leftmost column. The y
+    coordinate indicates the line of the shot, running from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$h-1$</span>, with <span class="tex2jax_process">$0$</span> meaning the last line, and
+    <span class="tex2jax_process">$h-1$</span> meaning the first
+    line of the respective map.</p>
+<p>Please note that there may be more shot orders than needed
+    to end the game.</p>
+<h2>Output</h2>
+<p>For every test case, print one of “<tt class="tt">player one
+    wins</tt>”, “<tt class="tt">player two wins</tt>” or
+    “<tt class="tt">draw</tt>”, on a line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 4 5
+____
+____
+#___
+____
+#___
+___#
+____
+____
+0 0
+1 1
+0 3
+0 2
+0 1
+2 2 5
+_#
+#_
+#_
+#_
+1 0
+0 0
+0 0
+1 1
+0 1
+</pre>
+</td>
+<td>
+<pre>
+player two wins
+draw
+</pre>
+</td>
+</tr>
+</table>
+</div>

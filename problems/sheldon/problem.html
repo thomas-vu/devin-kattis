@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/sheldon/file/statement/en/img-0001.jpg" class="illustration" src="/problems/sheldon/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>According to Sheldon Cooper, the best number is <span class="tex2jax_process">$73$</span>. In his own words, <i class="itshape">“The best number is <span class="tex2jax_process">$73$</span>. <span class="tex2jax_process">$73$</span> is the <span class="tex2jax_process">$21$</span>st prime number. Its mirror,
+    <span class="tex2jax_process">$37$</span>, is the <span class="tex2jax_process">$12$</span>th, and its mirror, <span class="tex2jax_process">$21$</span>, is the product of multiplying
+    <span class="tex2jax_process">$7$</span> and <span class="tex2jax_process">$3$</span>. In binary, <span class="tex2jax_process">$73$</span> is a palindrome: <span class="tex2jax_process">$1001001$</span>, which backwards is
+    <span class="tex2jax_process">$1001001$</span>. Exactly the
+    same.”</i></p>
+<p>Prime numbers are boring stuff, and so are palindromes. On
+    the other hand, the binary representation of <span class="tex2jax_process">$73$</span> is rather remarkable: it’s
+    <span class="tex2jax_process">$1$</span> one followed by
+    <span class="tex2jax_process">$2$</span> zeroes, followed by
+    <span class="tex2jax_process">$1$</span> one, followed by
+    <span class="tex2jax_process">$2$</span> zeros, followed by
+    <span class="tex2jax_process">$1$</span> one. This is an
+    interesting pattern that we can generalize: <span class="tex2jax_process">$N$</span> ones, followed by <span class="tex2jax_process">$M$</span> zeros, followed by <span class="tex2jax_process">$N$</span> ones, followed by <span class="tex2jax_process">$M$</span> zeros, etc, ending in either
+    <span class="tex2jax_process">$N$</span> ones or <span class="tex2jax_process">$M$</span> zeroes. For <span class="tex2jax_process">$73$</span>, <span class="tex2jax_process">$N$</span> is <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$M$</span> is <span class="tex2jax_process">$2$</span>, and there are <span class="tex2jax_process">$5$</span> runs of equal symbols. With
+    <span class="tex2jax_process">$N = 2$</span>, <span class="tex2jax_process">$M = 1$</span> and <span class="tex2jax_process">$4$</span> runs, we would have the string
+    <span class="tex2jax_process">$110110$</span>, which is the
+    binary representation of <span class="tex2jax_process">$54$</span>.</p>
+<p>Acknowledging Sheldon’s powerful insight, let us introduce
+    the concept of a Sheldon number: a positive integer whose
+    binary representation matches the pattern <span class="tex2jax_process">$ABABAB\ldots ABA$</span> or the pattern
+    <span class="tex2jax_process">$ABABAB\ldots AB$</span>, where
+    all the occurrences of <span class="tex2jax_process">$A$</span>
+    represent a string with <span class="tex2jax_process">$N$</span> occurrences of the bit
+    <span class="tex2jax_process">$1$</span> and where all the
+    occurrences of <span class="tex2jax_process">$B$</span>
+    represent a string with <span class="tex2jax_process">$M$</span> occurrences of the bit
+    <span class="tex2jax_process">$0$</span>, with <span class="tex2jax_process">$N &gt; 0$</span> and <span class="tex2jax_process">$M &gt; 0$</span>. Furthermore, in the
+    representation, there must be at least one occurrence of the
+    string <span class="tex2jax_process">$A$</span> (but the number
+    of occurrences of the string <span class="tex2jax_process">$B$</span> may be zero).</p>
+<p>Many important numbers are Sheldon numbers: <span class="tex2jax_process">$1755$</span>, the year of the great Lisbon
+    earthquake, <span class="tex2jax_process">$1984$</span>, of
+    Orwellian fame, and <span class="tex2jax_process">$2015$</span>, the current year! Also,
+    <span class="tex2jax_process">$21$</span>, which Sheldon
+    mentions, is a Sheldon number, and so is <span class="tex2jax_process">$42$</span>, the answer given by the Deep
+    Thought computer to the Great Question of Life, the Universe
+    and Everything.</p>
+<p>Clearly, there is an infinite number of Sheldon numbers, but
+    are they more dense or less dense than prime numbers?</p>
+<h2>Task</h2>
+<p>Your task is to write a program that, given two positive
+    integers, computes the number of Sheldon numbers that exist in
+    the range defined by the given numbers.</p>
+<h2>Input</h2>
+<p>The input contains one line, with two space separated
+    integer numbers, <span class="tex2jax_process">$X$</span> and
+    <span class="tex2jax_process">$Y$</span>.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$0 \leq X \leq Y &lt;
+          2^{63}$</span></p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>The output contains one line, with one number, representing
+    the number of Sheldon numbers that are greater or equal to
+    <span class="tex2jax_process">$X$</span> and less or equal to
+    <span class="tex2jax_process">$Y$</span>.</p>
+<h2>Sample Output Explanation</h2>
+<p>In the first sample, all numbers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> are Sheldon Numbers. In the
+    second sample, <span class="tex2jax_process">$73$</span> is the
+    only Sheldon number in the given range.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 10
+</pre>
+</td>
+<td>
+<pre>
+10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+70 75
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

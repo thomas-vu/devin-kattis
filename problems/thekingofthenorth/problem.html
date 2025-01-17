@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Winter is coming (or going? who can be sure these days) and
+    a new king rises in the North. The message travels quickly
+    these days... That is why you, the rising king, have not much
+    time left. You need to rally your bannermen behind you. But one
+    question seems harder to answer than you would have first
+    expected. How large of a kingdom can you claim and how many men
+    should you send for? Your advisors have taken a close look at
+    the potential kingdom and have determined how many of your
+    bannermen would be required to fully defend any part of the map
+    against your foes. As you are a loving and caring king, you
+    want to minimize the number of men that have to serve in your
+    army. To give your war council a fair chance of figuring out
+    the best kingdom to defend, you have to determine the size of
+    the army that you will raise as soon as possible.</p>
+<p>Luckily, armies are not that advanced yet. You will only
+    have to defend against armies moving horizontally or vertically
+    (an army cannot pass by your bannermen diagonally). Your
+    kingdom counts as defended, if there is not a single way to
+    reach your castle, starting anywhere outside of the map,
+    without passing to a fully defended area. Squares on the map
+    labeled <span class="tex2jax_process">$0$</span> represent high
+    mountains, or walls, no one would ever be foolish enough to
+    climb. You can assume to be safe from invasion without sending
+    any bannermen to defend them. Since you are uncertain about
+    what lurks behind the wall (or in our case the borders of the
+    map), you have to assume the worst and plan as if you would
+    never be able to hold any position outside of the given
+    map.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{img/defend.pdf}" src="/problems/thekingofthenorth/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the sample input — the
+          kingdom can be defended with a minimal army of
+          <span class="tex2jax_process">$37$</span> bannermen,
+          located at the cross-marked positions. The kingdom itself
+          is illustrated using a tiling pattern. Note that you do
+          not have to find out about the kingdom, or the position
+          of your bannermen. These questions are to be figured out
+          by your war council.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input is given in the form of the (rectangular)
+    strategic map which your advisors came up with. Every square in
+    the map is assigned a number of bannermen which would be
+    required to defend the position against any potential army. The
+    map is formatted as follows: In the first line you are given
+    two integers <span class="tex2jax_process">$R$</span> and
+    <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$3 \leq R,C \leq 300$</span>, specifying the
+    dimensions of the map. This line is followed by <span class="tex2jax_process">$R$</span> lines, each containing
+    <span class="tex2jax_process">$C$</span> integers <span class="tex2jax_process">$0 \leq c_ i \leq 100\, 000$</span>, the
+    number of bannermen necessary to defend each square. Finally,
+    you are given <span class="tex2jax_process">$0 &lt; r &lt;
+    R-1$</span> and <span class="tex2jax_process">$0 &lt; c &lt;
+    C-1$</span>, the position of your own castle on the map.</p>
+<h2>Output</h2>
+<p>Output an integer on a single line, the smallest possible
+    army you would require to defend the kingdom given in the
+    input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 8
+42 42  0  0  0  0  0 16
+42 11 14 42 42 42 10 16
+42  0 42 42 42 42  0 16
+42  0 42 42 42 42  0 42
+42  0 42 42 42 42  0 42
+42 11 42 42 42  5  5 42
+42 42  0  0  0 42 42 42
+3 4
+</pre>
+</td>
+<td>
+<pre>37
+</pre>
+</td>
+</tr>
+</table>
+</div>

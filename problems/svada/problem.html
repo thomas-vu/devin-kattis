@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>The local zoo has acquired a large open garden in which
+    animals may freely move as in their natural habitats and
+    entertain visitors with their usual shenanigans.</p>
+<p>The most popular animals are monkeys. With their climbing
+    and jumping and other skills, they delight old and young
+    visitors alike.</p>
+<p>One species of monkey has specialized in climbing tall trees
+    and picking off coconuts. Another species has specialized in
+    breaking them open.</p>
+<p>There are <span class="tex2jax_process">$N$</span> monkeys
+    of the first type (numbered 1 through <span class="tex2jax_process">$N$</span>) and <span class="tex2jax_process">$M$</span> monkeys of the second type
+    (numbered 1 through <span class="tex2jax_process">$M$</span>).</p>
+<p>Monkey <span class="tex2jax_process">$k$</span> of the first
+    type takes <span class="tex2jax_process">$A_ k$</span> seconds
+    to find a good spot on the tree, after which it picks off its
+    first coconut. After that the monkey produces a new coconut
+    every <span class="tex2jax_process">$B_ k$</span> seconds.</p>
+<p>Monkey <span class="tex2jax_process">$k$</span> of the
+    second type takes <span class="tex2jax_process">$C_ k$</span>
+    seconds to find a good tool for opening the coconuts, after
+    which it opens its first coconut. After that the monkey opens
+    another coconut every <span class="tex2jax_process">$D_
+    k$</span> seconds.</p>
+<p>Unfortunately, the second type of monkey is extremely
+    aggressive so the two types may not be in the garden at the
+    same time. Therefore, zoo keepers will chase away the first
+    type of monkeys as soon as they have picked off all the
+    coconuts. Similarly, if monkeys of the same type stay too long
+    after opening all the coconuts, fights will ensue. Because of
+    that, zoo keepers will send them away as soon as they have
+    opened all the coconuts.</p>
+<p>The zoo keepers first arrive immediately after all coconuts
+    have been picked, and again immediately after the monkeys open
+    them all. The time needed for monkeys to enter or leave the
+    garden is also negligibly small.</p>
+<p>Tomislav especially likes the second type of monkey, but can
+    never guess when to arrive in order to see them. Help him
+    calculate the time when the second type arrives if he knows the
+    total time that monkeys spent in the garden, but does not know
+    the number of coconuts in the garden.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$T$</span> <span class="tex2jax_process">$(1
+    \leq T \leq 1\, 000\, 000\, 000)$</span>, the total time that
+    monkeys spent in the garden, in seconds.</p>
+<p>The next line contains the integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 100)$</span>, the number of monkeys of the first
+    type. Each of the following <span class="tex2jax_process">$N$</span> lines contains two integers
+    <span class="tex2jax_process">$A_ k$</span> and <span class="tex2jax_process">$B_ k$</span> <span class="tex2jax_process">$(1 \leq A_ k, B_ k \leq 1\, 000\, 000\,
+    000)$</span>, how fast monkey <span class="tex2jax_process">$k$</span> of the first type is.</p>
+<p>The next line contains the integer <span class="tex2jax_process">$M$</span> <span class="tex2jax_process">$(1
+    \leq M \leq 100)$</span>, the number of monkeys of the second
+    type. Each of the following <span class="tex2jax_process">$M$</span> lines contains two integers
+    <span class="tex2jax_process">$C_ k$</span> and <span class="tex2jax_process">$D_ k$</span> <span class="tex2jax_process">$(1 \leq C_ k, D_ k \leq 1\, 000\, 000\,
+    000)$</span>, how fast monkey <span class="tex2jax_process">$k$</span> of the second type is.</p>
+<h2>Output</h2>
+<p>Output the number of seconds between the arrival of the
+    first type of monkeys and the arrival of the second type.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+12
+1
+3 1
+1
+5 1
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+20
+2
+3 2
+1 3
+3
+3 1
+4 1
+5 1
+</pre>
+</td>
+<td>
+<pre>
+13
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>Nathaniel collects rare gems and minerals, and has decided
+    he has to protect his valuable collection from thieves. He is
+    installing an electric eye system, in which he shines a laser
+    into the room with his collection, and the laser will hit a
+    sensor as long as no one steps in a spot that the laser
+    crosses. Unfortunately, he spent most of his money on his
+    collection, so he has only one laser and one sensor, and some
+    mirrors. He has installed the mirrors at various locations in
+    the room, at <span class="tex2jax_process">$45$</span> degree
+    angles to the walls. At the point you have been called in to
+    help, he has only one more mirror left to install, and he wants
+    to know if there is any way to place it such that the laser
+    will reach the sensor (as long as no one is in its way).</p>
+<p>We will assume that the room is always square, the laser is
+    always in the northern wall pointing south, and the sensor is
+    mounted on the eastern wall, such that the laser must hit it
+    from the west. We will also assume that the interior of the
+    room can be represented by a grid, and that all mirrors
+    (including the one to be added) are placed at the center of
+    grid cells, at <span class="tex2jax_process">$45$</span>
+    degrees with respect to the grid axis, and that the laser and
+    sensor are at the center of their respective column/row of the
+    grid.</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers:
+    <span class="tex2jax_process">$n$</span>, the size of the room,
+    <span class="tex2jax_process">$c$</span>, the column number of
+    the laser (<span class="tex2jax_process">$1\leq c\leq
+    n$</span>), and <span class="tex2jax_process">$r$</span>, the
+    row number of the sensor (<span class="tex2jax_process">$1\leq
+    r\leq n$</span>). This is followed by <span class="tex2jax_process">$n$</span> lines, each containing
+    <span class="tex2jax_process">$n$</span> characters separated
+    by spaces. The character <tt class="tt">.</tt> represents an
+    empty space, the character <tt class="tt">\</tt> represents a
+    mirror oriented NW/SE and the character <tt class="tt">/</tt>
+    represents a mirror oriented NE/SW. You may assume <span class="tex2jax_process">$1\leq n\leq 2\, 000$</span> and <span class="tex2jax_process">$1\leq r,c\leq n$</span>.</p>
+<h2>Output</h2>
+<p>The output should consist of the string <tt class="tt">YES</tt> if the laser can be made to hit the sensor with
+    the addition of at most one mirror, or the string <tt class="tt">NO</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 3
+. . . . .
+. . . . .
+. . \ . .
+. \ . . .
+. . . . .
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 3
+. . . . .
+/ / . \ .
+. . . \ .
+\ . . . .
+. . . . .
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

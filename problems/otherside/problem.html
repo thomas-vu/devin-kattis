@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/otherside/file/statement/en/img-0001.jpg" class="illustration" src="/problems/otherside/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Indiana Dunes State Park. Image by <a href="https://pixabay.com/en/indiana-dunes-state-park-beach-1848559/">
+        pixabay</a>.
+      </div>
+</div>
+<p>John Doe wants to transport his possessions from one bank of
+    Lake Michigan to the other. His possessions consist of
+    <span class="tex2jax_process">$W$</span> wolves, <span class="tex2jax_process">$S$</span> sheep, and <span class="tex2jax_process">$C$</span> cabbages. The transportation will
+    be carried out using a boat that can hold up to <span class="tex2jax_process">$K$</span> of these items at the same time.
+    During each step, John can take some items from one bank and
+    transfer them to the other bank. Unfortunately, when left
+    unsupervised, wolves will eat sheep and sheep will eat cabbages
+    (but wolves don’t eat cabbages). John doesn’t want to lose his
+    possessions, so he has to devise a scheme such that this
+    doesn’t happen. With John present, any combination of items is
+    allowed (both on the bank and in the boat). This is also true
+    during the loading process. Since John isn’t very good at
+    solving problems like this, he asks you to help him.</p>
+<h2>Input</h2>
+<p>Input contains a single line with four integers:
+    <span class="tex2jax_process">$W$</span>, <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$C$</span>, <span class="tex2jax_process">$K$</span>. The input satisfies the following
+    constraints:</p><span class="tex2jax_process">\[ 0 \leq W, S,
+    C, K \leq 10^6, \]</span><span class="tex2jax_process">\[ 1
+    \leq max(W, S, C). \]</span>
+<h2>Output</h2>
+<p>If it’s possible to perform the transportation without the
+    loss of items, print <tt class="ttfamily">YES</tt>, otherwise
+    print <tt class="ttfamily">NO</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 1 1
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 0 1
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

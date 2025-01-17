@@ -1,0 +1,151 @@
+<div class="problembody">
+<div class="illustration" style="width:28.00%">
+<img alt="/problems/karlcoder/file/statement/en/img-0001.png" class="illustration" src="/problems/karlcoder/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Karl is an aspiring C programmer, and is excited by the
+    risks and rewards of low-level manual memory management. In the
+    program he currently develops, he stores a string containing
+    <span class="tex2jax_process">$N$</span> non-zero bytes into a
+    buffer named “<tt class="ttfamily">buf</tt>”. By mistake he
+    accidentally made the buffer <span class="tex2jax_process">$2
+    N$</span> bytes in size. The last <span class="tex2jax_process">$N$</span> bytes of the buffer consists of
+    only zero-bytes.</p>
+<p>Now Karl needs to know the value <span class="tex2jax_process">$N$</span>, the size of the string, in a
+    separate part of the program. Traditionally you would recover
+    the length of a string using the <tt class="ttfamily">strlen</tt>-function, which reports the position of
+    the first zero-byte in the provided buffer using a linear scan.
+    However, Karl finds that this is much too slow, and that it
+    defeats the advantage of using C in the first place. Can you
+    help Karl efficiently recover <span class="tex2jax_process">$N$</span> without crashing his program?</p>
+<center>
+<p><img alt="\includegraphics[width=.6\textwidth ]{img/buffer.pdf}" src="/problems/karlcoder/file/statement/en/img-0002.png" style="width:60.00%"/></p>
+<p><i class="slshape">The contents of the buffer in sample
+      interaction 3 are shown here.</i></p>
+</center>
+<h2>Interaction</h2>
+<p>This is an interactive problem where interaction proceeds in
+    rounds. In each round your program can attempt to read a byte
+    from the buffer or report the answer (the value of <span class="tex2jax_process">$N$</span>):</p>
+<dl class="description">
+<dt>read:</dt>
+<dd>
+<p>Write a line containing “<tt class="ttfamily">buf[<span class="tex2jax_process">$i$</span>]</tt>” if you want to try to
+        read byte <span class="tex2jax_process">$i$</span> of the
+        buffer. If <span class="tex2jax_process">$0 \leq i &lt;
+        2N$</span>, then you will get the value of the byte stored
+        in the buffer at index <span class="tex2jax_process">$i$</span>. If <span class="tex2jax_process">$i &lt; N$</span> then this will be an
+        integer between <span class="tex2jax_process">$1$</span>
+        and <span class="tex2jax_process">$255$</span>, otherwise
+        it will be <span class="tex2jax_process">$0$</span>. If
+        <span class="tex2jax_process">$i \geq 2 N$</span> or
+        <span class="tex2jax_process">$i &lt; 0$</span>, you will
+        get the response “<tt class="ttfamily">Segmentation fault
+        (core dumped)</tt>” and your program should exit.</p>
+</dd>
+<dt>answer:</dt>
+<dd>
+<p>Write a line containing “<tt class="ttfamily">strlen(buf) = <span class="tex2jax_process">$M$</span></tt>” if you want to report
+        that you think that <span class="tex2jax_process">$N =
+        M$</span>. Afterwards your program should exit. Your
+        submission will be accepted if you answered correctly, if
+        you did not trigger a segmentation fault, and if you did
+        not attempt to read entries from the buffer too many
+        times.</p>
+</dd>
+</dl>
+<p>A maximum of <span class="tex2jax_process">$2 \lceil {\log
+    _2 N\rceil }$</span> reads can be made. If your program
+    attempts to read from the buffer after reaching the limit, it
+    will get the response “<tt class="ttfamily">Too many
+    reads</tt>” and your program should then exit.</p>
+<p>It is guaranteed that <span class="tex2jax_process">$2 \leq
+    N \leq 10^{18}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre> buf[1]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 65</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[2]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> strlen(buf) = 2</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre> buf[1]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 50</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[5]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[7]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> Segmentation fault (core dumped)</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 3</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre> buf[0]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 78</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[1]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 67</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[2]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 80</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[3]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> 67</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> buf[4]</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> Too many reads</pre>
+</div>
+</div>

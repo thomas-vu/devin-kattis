@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/playingtheslots/file/statement/en/img-0001.png" class="illustration" src="/problems/playingtheslots/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The small nation of Erratica prides itself on defying
+    conventions established by the more “boring” countries around
+    the world. One of their more obvious distinctions lies in the
+    design of their coinage. Believing that a person should be
+    easily able to identify the value a coin in a pocket or change
+    purse by touch alone, Erratica designs its coins as polygons.
+    For stability, the coins are convex – there are no notches cut
+    into the coins. But the overall shapes themselves can be quite
+    irregular.</p>
+<p>Erratica Vending, the only manufacturer of vending machines
+    in the nation, has been sent the design for a new coin to be
+    issued. Their machines are designed so that coins enter through
+    a slot into channel shaped as a rectangular prism with the slot
+    being an open face of the prism. The channel is narrow because
+    the coins are thin, but long enough to contain the entire coin.
+    From the outside of the machine, the slot appears as a
+    rectangular hole.</p>
+<p>The company wants to know what would be the smallest slot
+    size they will need so that the new coin can be slipped, after
+    some rotation, into the slot.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing <span class="tex2jax_process">$N$</span>, the number of sides to the
+    polygonal coin, where <span class="tex2jax_process">$3 \leq N
+    \leq 20$</span>.</p>
+<p>This is followed by <span class="tex2jax_process">$N$</span>
+    lines, each containing two real numbers <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, the coordinates of a vertex of
+    the polygon, where <span class="tex2jax_process">$0 \leq x, y
+    \leq 100$</span>. All real numbers have at most <span class="tex2jax_process">$2$</span> digits after the decimal
+    point.</p>
+<p>All <span class="tex2jax_process">$N$</span> vertices will
+    be distinct, and the vertices will be presented in an order
+    proceeding clockwise around the perimeter of the coin.</p>
+<h2>Output</h2>
+<p>Print a single line with a real number denoting the minimum
+    slot size allowing the coin to pass through. Outputs will be
+    accepted that are within <span class="tex2jax_process">$\pm
+    0.01$</span> of the judges’ answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 0
+0.71 3.54
+4.21 4.21
+</pre>
+</td>
+<td>
+<pre>2.00111219
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+10 12.5
+10 17.5
+15 20
+20 17.5
+20 12.5
+15 10
+</pre>
+</td>
+<td>
+<pre>8.94427191
+</pre>
+</td>
+</tr>
+</table>
+</div>

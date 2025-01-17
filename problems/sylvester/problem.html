@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>A Hadamard matrix of order <span class="tex2jax_process">$n$</span> is an <span class="tex2jax_process">$n \times n$</span> matrix containing only
+    <span class="tex2jax_process">$1$</span>s and <span class="tex2jax_process">$-1$</span>s, called <span class="tex2jax_process">$H_{n}$</span>, such that <span class="tex2jax_process">$H_{n} \cdot H_{n}^{\top } = n \cdot
+    I_{n}$</span> where <span class="tex2jax_process">$I_{n}$</span> is the <span class="tex2jax_process">$n \times n$</span> identity matrix. An
+    interesting property of Hadamard matrices is that they have the
+    maximum possible determinant of any <span class="tex2jax_process">$n \times n$</span> matrix with elements in
+    the range <span class="tex2jax_process">$[-1, 1]$</span>.
+    Hadamard matrices have applications in error correcting codes
+    and weighing design problems.</p>
+<p>The Sylvester construction is a way to create a Hadamard
+    matrix of size <span class="tex2jax_process">$2n$</span> given
+    <span class="tex2jax_process">$H_{n}$</span>. <span class="tex2jax_process">$H_{2n}$</span> can be constructed
+    as:</p><span class="tex2jax_process">\begin{align*} H_{2n}
+    &amp; = \left( \begin{array}{ll} H_ n &amp; H_ n \\ H_ n &amp;
+    -H_ n \\ \end{array}\right) \end{align*}</span>
+<p>For example:</p><span class="tex2jax_process">\begin{align*}
+    H_{1} &amp; = \left( \begin{array}{l} 1 \\ \end{array}\right)
+    \\ H_{2} &amp; = \left( \begin{array}{ll} 1 &amp; 1 \\ 1 &amp;
+    -1 \\ \end{array}\right), \end{align*}</span>
+<p>and so on. In this problem you are required to print a part
+    of a Hadamard matrix constructed in the way described
+    above.</p>
+<h2>Input</h2>
+<p>The first number in the input is the number of test cases to
+    follow. For each test case there are five integers:
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span>. <span class="tex2jax_process">$n$</span> will be between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$2^{62}$</span> (inclusive) and will be a
+    power of <span class="tex2jax_process">$2$</span>. <span class="tex2jax_process">$x$</span> is the column and <span class="tex2jax_process">$y$</span> is the row of the upper left
+    corner of the sub matrix to be printed, and <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span> specify the width and height
+    respectively. Coordinates are zero based, so <span class="tex2jax_process">$0 \le x,y &lt; n$</span>. You can assume
+    that the sub matrix will fit entirely inside the whole matrix
+    and that <span class="tex2jax_process">$0 &lt; w,h \le
+    20$</span>. There will be no more than <span class="tex2jax_process">$1000$</span> test cases.</p>
+<h2>Output</h2>
+<p>For each test case print the sub matrix followed by an empty
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 0 0 2 2
+4 1 1 3 3
+268435456 12345 67890 11 12
+</pre>
+</td>
+<td>
+<pre>
+1 1
+1 -1
+
+-1 1 -1
+1 -1 -1
+-1 -1 1
+
+1 -1 -1 1 1 -1 -1 1 1 -1 -1
+-1 -1 1 1 -1 -1 1 1 -1 -1 1
+1 1 1 -1 -1 -1 -1 1 1 1 1
+-1 1 -1 -1 1 -1 1 1 -1 1 -1
+1 -1 -1 -1 -1 1 1 1 1 -1 -1
+-1 -1 1 -1 1 1 -1 1 -1 -1 1
+-1 -1 -1 -1 -1 -1 -1 1 1 1 1
+1 -1 1 -1 1 -1 1 1 -1 1 -1
+-1 1 1 -1 -1 1 1 1 1 -1 -1
+1 1 -1 -1 1 1 -1 1 -1 -1 1
+-1 -1 -1 1 1 1 1 1 1 1 1
+1 -1 1 1 -1 1 -1 1 -1 1 -1
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

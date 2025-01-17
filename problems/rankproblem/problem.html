@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>Coach is fed up with sports rankings – he thinks those who
+    make up these bogus orderings are just nuts. In Coach’s opinion
+    changes in rankings should be evidence-based only. For example,
+    suppose the <span class="tex2jax_process">$4$</span>th place
+    team plays the <span class="tex2jax_process">$1$</span>st place
+    team and loses. Why should the rankings be altered? The “worse”
+    team lost to the “better” team, so nothing should change in the
+    rankings. Put another way, there’s no evidence that the
+    ordering should change so why change it? The only time you
+    change something is if, say, the <span class="tex2jax_process">$4$</span>th place team beats the
+    <span class="tex2jax_process">$1$</span>st place team. NOW you
+    have evidence that the rankings should change! Specifically,
+    the <span class="tex2jax_process">$1$</span>st place team
+    should be put directly below the <span class="tex2jax_process">$4$</span>th place team (we now have evidence
+    that backs this up) and the teams in <span class="tex2jax_process">$2$</span>nd through <span class="tex2jax_process">$4$</span>th place should each move up one.
+    The result is that the former <span class="tex2jax_process">$1$</span>st place team is now in
+    <span class="tex2jax_process">$4$</span>th, one position below
+    the team that beat it, the former <span class="tex2jax_process">$4$</span>th place team now in <span class="tex2jax_process">$3$</span>rd. Note that the relative
+    positions of the teams now in <span class="tex2jax_process">$1$</span>st to <span class="tex2jax_process">$3$</span>rd place do not change – there was
+    no evidence that they should.</p>
+<p>To generalize this process, assume the team in position
+    <span class="tex2jax_process">$n$</span> beats the team in
+    position <span class="tex2jax_process">$m$</span>. If
+    <span class="tex2jax_process">$n &lt; m$</span> then there
+    should be no change in the rankings; if <span class="tex2jax_process">$n &gt; m$</span> then all teams in positions
+    <span class="tex2jax_process">$m+1, m+2, \ldots , n$</span>
+    should move up one position and the former team in position
+    <span class="tex2jax_process">$m$</span> should be moved to
+    position <span class="tex2jax_process">$n$</span>.</p>
+<p>For example, assume there are <span class="tex2jax_process">$5$</span> teams initially ranked in the
+    order T<span class="tex2jax_process">$1$</span> (best),
+    T<span class="tex2jax_process">$2$</span>, T<span class="tex2jax_process">$3$</span>, T<span class="tex2jax_process">$4$</span>, T<span class="tex2jax_process">$5$</span> (worst). Suppose T<span class="tex2jax_process">$4$</span> beats T<span class="tex2jax_process">$1$</span>. Then as described above the new
+    rankings should become T<span class="tex2jax_process">$2$</span>, T<span class="tex2jax_process">$3$</span>, T<span class="tex2jax_process">$4$</span>, T<span class="tex2jax_process">$1$</span>, T<span class="tex2jax_process">$5$</span>. Now in the next game played let’s
+    say T<span class="tex2jax_process">$3$</span> beats
+    T<span class="tex2jax_process">$1$</span>. After this the
+    rankings should not change – the better ranked team beat the
+    worse ranked team. If in the next game T<span class="tex2jax_process">$5$</span> beats T<span class="tex2jax_process">$3$</span> the new rankings would be
+    T<span class="tex2jax_process">$2$</span>, T<span class="tex2jax_process">$4$</span>, T<span class="tex2jax_process">$1$</span>, T<span class="tex2jax_process">$5$</span>, T<span class="tex2jax_process">$3$</span>, and so on.</p>
+<p>Coach was all set to write a program to implement this
+    scheme but then he heard about ties in the English Premier
+    League. The last we saw him he was standing motionless, staring
+    out of his window. We guess it’s up to you to write the
+    program.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing two positive integers
+    <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$n,
+    m \leq 100$</span>) indicating the number of teams and the
+    number of games played. Team names are <span class="tex2jax_process">$\mbox{T}1, \mbox{T}2, \ldots ,
+    \mbox{T}n$</span> and initially each team <span class="tex2jax_process">$\mbox{T}i$</span> is in position
+    <span class="tex2jax_process">$i$</span> in the rankings (i.e.,
+    team <span class="tex2jax_process">$\mbox{T}1$</span> is in
+    <span class="tex2jax_process">$1$</span>st place and team
+    <span class="tex2jax_process">$\mbox{T}n$</span> is in last
+    place). Following the first line are <span class="tex2jax_process">$m$</span> lines detailing a set of games in
+    chronological order. Each of these lines has the form
+    <span class="tex2jax_process">$\mbox{T}i$</span> <span class="tex2jax_process">$\mbox{T}j$</span> (<span class="tex2jax_process">$1 \leq i,j \leq n, i \neq j$</span>)
+    indicating that team <span class="tex2jax_process">$\mbox{T}i$</span> beat team <span class="tex2jax_process">$\mbox{T}j$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line listing the final ranking of the teams.
+    Separate team names with single spaces.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+T4 T1
+T3 T1
+T5 T3
+</pre>
+</td>
+<td>
+<pre>T2 T4 T1 T5 T3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 4
+T4 T1
+T1 T2
+T2 T3
+T3 T4
+</pre>
+</td>
+<td>
+<pre>T1 T2 T3 T4 T5 T6 T7 T8
+</pre>
+</td>
+</tr>
+</table>
+</div>

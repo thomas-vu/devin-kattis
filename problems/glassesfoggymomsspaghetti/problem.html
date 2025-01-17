@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/glassesfoggymomsspaghetti/file/statement/en/img-0001.jpg" class="illustration" src="/problems/glassesfoggymomsspaghetti/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Conway loves being able to see!
+      </div>
+</div>
+<p><i class="itshape">Conway’s glasses are foggy,<br/>
+    Knees weak, arms are heavy.<br/>
+    Palms are sweaty, mom’s spaghetti.<br/>
+    He’s nervous, but on the surface he looks calm and ready<br/>
+    to go home neat and tidy, but the streets are trippy.</i></p>
+<p>In order to go home, Conway needs to follow the street sign
+    that is straight in front of him (not to the left/right).
+    Trying to see the sign, he raises his head by an angle,
+    aligning the center of the lenses to the center of the road
+    sign, where the lens is always perpendicular to the line of
+    sight. Unfortunately, Conway’s glasses are foggy so he needs to
+    wipe his lenses with his trusty microfiber cloth. Conway can
+    only see through the clear areas on the lens, and thus he wants
+    to know the height of his glasses lens so he knows how much he
+    needs to wipe.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{diagram.png}" src="/problems/glassesfoggymomsspaghetti/file/statement/en/img-0002.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An example of the scenario is shown on
+          the left. The dotted line represents the line of sight.
+          The green region on the lens represents the clear region
+          on the lens. The scenario on the left can be abstracted
+          to the diagram on the right.
+        </div>
+</center>
+</div>
+<p>Given the following information, find the height of the
+    smallest area he needs to wipe before he can see the entire
+    sign (the minimum length of the green line segment).</p>
+<ul class="itemize">
+<li>
+<p>Distance from the pupil to the lenses: <span class="tex2jax_process">$d$</span> units.</p>
+</li>
+<li>
+<p>Horizontal distance from the pupil to the road sign:
+        <span class="tex2jax_process">$x$</span> units.</p>
+</li>
+<li>
+<p>Vertical distance from the pupil to the center of the
+        road sign: <span class="tex2jax_process">$y$</span>
+        units.</p>
+</li>
+<li>
+<p>Vertical size of the road sign: <span class="tex2jax_process">$h$</span> units.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The input consists of four space separated integers:
+    <span class="tex2jax_process">$d$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$h$</span>. It’s guaranteed that <span class="tex2jax_process">$0 &lt; d &lt; x &lt; 10\, 000$</span>,
+    <span class="tex2jax_process">$0 \leq y &lt; 10\, 000$</span>,
+    and <span class="tex2jax_process">$0 &lt; h &lt; 10\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Output one number, the minimum required height of the clear
+    area on the lens. Your answer will be considered correct if the
+    absolute or relative error does not exceed <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 40 30 10
+</pre>
+</td>
+<td>
+<pre>0.802890
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 100 0 20
+</pre>
+</td>
+<td>
+<pre>0.200000
+</pre>
+</td>
+</tr>
+</table>
+</div>

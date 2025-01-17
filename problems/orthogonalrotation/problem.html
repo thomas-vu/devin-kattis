@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>You are given two vectors <span class="tex2jax_process">$v_1, v_2$</span> of the same length
+    <span class="tex2jax_process">$n$</span>. You need to make them
+    fit together, which means that they have to be orthogonal to
+    one another. Possibly they fit together from the start, but if
+    not we can amend this. We can rotate <span class="tex2jax_process">$v_2$</span>, meaning that we can take the
+    last value in <span class="tex2jax_process">$v_2$</span> and
+    put it at the front.</p>
+<p>We can do this again and again to get new versions of
+    <span class="tex2jax_process">$v_2$</span>, until we have done
+    it <span class="tex2jax_process">$n$</span> times and are back
+    where we started.</p>
+<p>Note that to check whether <span class="tex2jax_process">$v_1, v_2$</span> are orthogonal we take the
+    dot product of the vectors. If this dot product is zero they
+    are orthogonal. The dot product is the sum of the product of
+    the first values, the product of the second values and so
+    on.</p>
+<p>For what number of rotations do the vectors fit
+    together?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \leq n \leq 2 \cdot 10^5$</span>, the
+    number of coordinates the vectors have. The next two lines give
+    the two vectors. Each vector is given as a series of space
+    separated integers. Each value is from <span class="tex2jax_process">$-100$</span> to <span class="tex2jax_process">$100$</span>.</p>
+<h2>Output</h2>
+<p>Print all numbers of rotations that make the vectors fit
+    together, that is to say if moving the last value to the front
+    <span class="tex2jax_process">$k$</span> times makes them fit
+    together you should print <span class="tex2jax_process">$k$</span> (possibly among other values). We
+    are only considering values of <span class="tex2jax_process">$k
+    \geq 0$</span> which are less than the length of the vectors.
+    Print the values in ascending order, one number per line. If
+    there are no such values, print <span class="tex2jax_process">$-1$</span> instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 0 -1 0
+0 -1 0 1
+</pre>
+</td>
+<td>
+<pre>0
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+1 2 3 4 5
+-3 -2 -1 -5 -4
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 0 0
+0 0 0
+</pre>
+</td>
+<td>
+<pre>0
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

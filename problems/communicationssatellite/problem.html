@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/communicationssatellite/file/statement/en/img-0001.png" class="illustration" src="/problems/communicationssatellite/file/statement/en/img-0001.png"/>
+<div class="description">
+        Illustration of the sample input solution (beams in blue).
+      </div>
+</div>
+<p>The Johnson Space Center has hired you to design NASA’s new
+    communications satellite! The satellite, consisting of a set of
+    dish antennas held together with titanium beams, must meet
+    NASA’s exacting specifications, but a lot of the design is up
+    to you.</p>
+<p>Specifically, the design can be represented by a set of
+    circles of various radii (representing the dish antennas) and
+    line segments (the beams) in the 2D plane. A valid satellite
+    design must meet all of the following criteria:</p>
+<ul class="itemize">
+<li>
+<p>The necessary size and location of each dish on the
+        <span class="tex2jax_process">$xy$</span> plane was
+        computed by NASA, and you are not allowed to reposition any
+        of the dishes.</p>
+</li>
+<li>
+<p>You may add any number of titanium beams to the design,
+        connecting one point on the circumference of one dish
+        antenna to another point on the circumference of a
+        different dish. Treat each beam as a straight line segment
+        (of negligible width).</p>
+</li>
+<li>
+<p>Beams are not allowed to cross each other, or attach to
+        each other. Beams are also not allowed to occlude (cover
+        up) any part of the interior of any dish antenna.</p>
+</li>
+<li>
+<p>Your final design must consist of a single connected
+        structure.</p>
+</li>
+<li>
+<p>Two dishes might exactly touch (in which case they are
+        already connected to each other); but NASA guarantees that
+        no two dish antennas overlap.</p>
+</li>
+</ul>
+<p>Titanium isn’t cheap these days, so you want to compute the
+    cheapest possible compliant design: the one that <em>minimizes
+    the sum</em> of the beam lengths.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$1 \leq N \leq 2\, 000$</span>,
+    the number of dish antennas attached to the satellite.</p>
+<p>Then follow <span class="tex2jax_process">$N$</span> lines,
+    each of which contains three integers <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$R$</span> specifying the location and radius
+    of one dish antenna. These integers satisfy the bounds
+    <span class="tex2jax_process">$-1\, 000 \leq X, Y\leq 1\,
+    000$</span> and <span class="tex2jax_process">$1\leq R \leq
+    100$</span>.</p>
+<h2>Output</h2>
+<p>Compute the satellite design that minimizes the sum of beam
+    lengths, while obeying the above specifications, and print that
+    sum. The answer is considered correct if the absolute or
+    relative error is less than <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+3 4 3
+0 0 2
+4 -2 2
+9 4 1
+</pre>
+</td>
+<td>
+<pre>2.47213595
+</pre>
+</td>
+</tr>
+</table>
+</div>

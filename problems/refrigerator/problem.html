@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>A factory that constructs refrigerator will deliver a
+    shipment of <span class="tex2jax_process">$n$</span>
+    refrigerators to a store. The factory has two cars it can
+    use:</p>
+<ul class="itemize">
+<li>
+<p>Car A costs <span class="tex2jax_process">$p_ a$</span>
+        Swedish kronor per trip, and can load <span class="tex2jax_process">$k_ a$</span> refrigerators per trip.</p>
+</li>
+<li>
+<p>Car B costs <span class="tex2jax_process">$p_ b$</span>
+        Swedish kronor per trip, and can load <span class="tex2jax_process">$k_ b$</span> refrigerators per trip.</p>
+</li>
+</ul>
+<p>When transporting the refrigerators, each of the cars can be
+    used any number of times. Depending on how many trips each car
+    performs, one would get a different <em>total cost of
+    transporting</em> all the refrigerators. Your task is to write
+    a program that takes this data and computes how many trips each
+    car should take in order to minimize this cost.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains five integers
+    separated by spaces:</p>
+<ul class="itemize">
+<li>
+<p>the cost per trip <span class="tex2jax_process">$p_
+        a$</span> (<span class="tex2jax_process">$500 \le p_ a \le
+        2\, 000$</span>) of car A,</p>
+</li>
+<li>
+<p>the capacity per trip <span class="tex2jax_process">$k_
+        a$</span> (<span class="tex2jax_process">$10 \le k_ a \le
+        50$</span>) of car A,</p>
+</li>
+<li>
+<p>the cost per trip <span class="tex2jax_process">$p_
+        b$</span> (<span class="tex2jax_process">$500 \le p_ b \le
+        2\, 000$</span>) of car B,</p>
+</li>
+<li>
+<p>the capacity per trip <span class="tex2jax_process">$k_
+        b$</span> (<span class="tex2jax_process">$10 \le k_ b \le
+        50$</span>) of car B, and</p>
+</li>
+<li>
+<p>the number of refrigerators to transport <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 1\, 000$</span>).</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output a single line with three integers – the number of
+    trips the first car should make, the number of trips the second
+    car should make, and the total cost of transportation. For all
+    given inputs, this answer is unique.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group. Your final
+    score will be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$33$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Only car A should make any trips in the optimal
+          solution.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$67$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>960 13 995 14 150
+</pre>
+</td>
+<td>
+<pre>4 7 10805
+</pre>
+</td>
+</tr>
+</table>
+</div>

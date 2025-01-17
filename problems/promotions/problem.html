@@ -1,0 +1,158 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/promotions/file/statement/en/img-0001.png" class="illustration" src="/problems/promotions/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The Fair Inc. administration decided to promote the
+    best employees and limited the number of promotions to a fixed
+    interval <span class="tex2jax_process">$[A,B]$</span>. The
+    directors compared the employees’ performance and their
+    evaluations resulted in a consistent precedence relation among
+    employees, which has to be respected by promotions. This means
+    that, for every pair of employees <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, if <span class="tex2jax_process">$x$</span> outperformed <span class="tex2jax_process">$y$</span>, then <span class="tex2jax_process">$y$</span> may be promoted only if
+    <span class="tex2jax_process">$x$</span> is promoted.</p>
+<p>In order to understand whether the data collected so far is
+    enough for ensuring fairness, the executive chairman wants to
+    know:</p>
+<ul class="itemize">
+<li>
+<p>How many employees will certainly be promoted in the
+        interval endpoints (i.e., if the number of promotions is
+        <span class="tex2jax_process">$A$</span> and if the number
+        of promotions is <span class="tex2jax_process">$B$</span>).</p>
+</li>
+<li>
+<p>How many employees have no possibility of being promoted
+        (even if the number of promotions is <span class="tex2jax_process">$B$</span>).</p>
+</li>
+</ul>
+<p>Consider the example depicted in the figure. There are seven
+    employees and eight precedence rules. An arrow from an employee
+    <span class="tex2jax_process">$x$</span> to an employee
+    <span class="tex2jax_process">$y$</span> means that
+    <span class="tex2jax_process">$x$</span> outperformed
+    <span class="tex2jax_process">$y$</span>. The number of
+    promotions is limited to the interval <span class="tex2jax_process">$[3,4]$</span>. Therefore:</p>
+<ul class="itemize">
+<li>
+<p>If there are only three promotions, the promoted
+        employees must be:</p>
+<ul class="itemize">
+<li>
+<p>either Anne, Bob and Greg,</p>
+</li>
+<li>
+<p>or Anne, Eve and Greg.</p>
+</li>
+</ul>
+<p>In this case, two employees (Anne and Greg) will
+        certainly be promoted. Notice that, with the current
+        information, Bob and Eve may or may not win a
+        promotion.</p>
+</li>
+<li>
+<p>If there are four promotions, the promoted employees
+        have to be:</p>
+<ul class="itemize">
+<li>
+<p>Anne, Bob, Eve and Greg.</p>
+</li>
+</ul>
+<p>So, with four promotions, four employees (Anne, Bob, Eve
+        and Greg) will certainly be promoted and three employees
+        (Cora, Dan and Fred) have no possibility of being
+        promoted.</p>
+</li>
+</ul>
+<h2>Task</h2>
+<p>Write a program that, given the interval of the number of
+    promotions, the set of employees and the precedence relation
+    among them, computes, for each of the interval endpoints, the
+    number of employees that will certainly be promoted, and the
+    number of employees that have no possibility of being
+    promoted.</p>
+<p>The precedence relation is consistent in the sense that, if
+    an employee <span class="tex2jax_process">$x$</span>
+    outperformed an employee <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$y$</span> did not outperform (directly or
+    indirectly) <span class="tex2jax_process">$x$</span>.</p>
+<h2>Input</h2>
+<p>The first line of the input has four space separated
+    integers: <span class="tex2jax_process">$A$</span>,
+    <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$E$</span>, and <span class="tex2jax_process">$P$</span>. <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are the interval endpoints,
+    <span class="tex2jax_process">$E$</span> is the number of
+    employees and <span class="tex2jax_process">$P$</span> is the
+    number of precedence rules. Employees are identified by
+    integers, ranging from <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$E-1$</span>.</p>
+<p>Each of the following <span class="tex2jax_process">$P$</span> lines contains two distinct space
+    separated integers, <span class="tex2jax_process">$x$</span>
+    and <span class="tex2jax_process">$y$</span>, which indicate
+    that employee <span class="tex2jax_process">$x$</span>
+    outperformed employee <span class="tex2jax_process">$y$</span>.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq A &lt; B &lt;
+          E$</span></p>
+</td>
+<td style="text-align:left">
+<p>Interval endpoints.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$2 \leq E \leq 5\,
+          000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of employees.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq P \leq 20\,
+          000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of precedence rules.</p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>The output consists of three lines. The first line contains
+    the number of employees that will certainly be promoted if
+    there are <span class="tex2jax_process">$A$</span> promotions.
+    The second line contains the number of employees that will
+    certainly be promoted if there are <span class="tex2jax_process">$B$</span> promotions. The third line
+    contains the number of employees that have no possibility of
+    being promoted (even if there are <span class="tex2jax_process">$B$</span> promotions).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4 7 8
+0 4
+1 2
+1 5
+5 2
+6 4
+0 1
+2 3
+4 5
+</pre>
+</td>
+<td>
+<pre>
+2
+4
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/pairedfurnaces/file/statement/en/img-0001.png" class="illustration" src="/problems/pairedfurnaces/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Just outside the entrance to your mine shaft you have a row
+    of <span class="tex2jax_process">$n$</span> furnaces; some of
+    them are on and some are off. Unlike regular furnaces, these
+    furnaces can only be turned on in neighboring pairs. In one
+    move you can either choose two neighboring furnaces which are
+    on and turn both of them off, or choose two neighboring
+    furnaces which are off and turn both of them on.</p>
+<p>You want to turn all of them on as quickly as possible. If
+    it is possible to turn all the furnaces on, output the minimum
+    number of moves to do so. Otherwise, output “impossible”.</p>
+<h2>Input</h2>
+<p>The first line contains one integer <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \leq n \leq 10^6$</span>. The next line contains a binary
+    string <span class="tex2jax_process">$s$</span> of length
+    <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$s_ i=0$</span> means the <span class="tex2jax_process">$i$</span>th furnace in the row is off and
+    <span class="tex2jax_process">$s_ i=1$</span> means the
+    <span class="tex2jax_process">$i$</span>th furnace in the row
+    is on.</p>
+<h2>Output</h2>
+<p>The minimum number of moves to turn all of the furnaces on,
+    or “impossible” if it is not possible to do so.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+0
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0110
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>12
+010101101010
+</pre>
+</td>
+<td>
+<pre>21
+</pre>
+</td>
+</tr>
+</table>
+</div>

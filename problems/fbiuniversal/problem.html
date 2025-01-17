@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>The <b class="bfseries">FBI</b> has recently changed its
+    <em>Universal Control Numbers (UCN)</em> for identifying
+    individuals who are in the FBI’s fingerprint database to an
+    eight digit base <span class="tex2jax_process">$27$</span>
+    value with a ninth check digit. The digits used are:</p>
+<center>
+<pre>
+0123456789ACDEFHJKLMNPRTVWX
+</pre>
+</center>
+<p>Some letters are not used because of possible confusion with
+    other digits:</p>
+<center>
+<pre>
+B-&gt;8, G-&gt;C, I-&gt;1, O-&gt;0, Q-&gt;0, S-&gt;5, U-&gt;V, Y-&gt;V, Z-&gt;2
+</pre>
+</center>
+<p>The check digit is computed as:</p>
+<center>
+<pre>
+(2*D1 + 4*D2 + 5*D3 + 7*D4 + 8*D5 + 10*D6 + 11*D7 + 13*D8) mod 27
+</pre>
+</center>
+<p>Where <tt class="ttfamily">Dn</tt> is the <span class="tex2jax_process">$n^{\text {th}}$</span> digit from the
+    left.</p>
+<p>This choice of <em>check</em> digit detects any single digit
+    error and any error transposing an adjacent pair of the
+    original eight digits.</p>
+<p>For this problem, you will write a program to parse a
+    <em>UCN</em> input by a user. Your program should accept
+    decimal digits and <em>any</em> capital letter as digits. If
+    any of the <em>confusing</em> letters appear in the input, you
+    should replace them with the corresponding valid digit as
+    listed above. Your program should compute the correct
+    <em>check</em> digit and compare it to the entered check digit.
+    The input is rejected if they do not match otherwise the
+    decimal (base <span class="tex2jax_process">$10$</span>) value
+    corresponding to the first eight digits is returned.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single decimal integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 10\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently. Each data set consists
+    of a single line of input. It contains the data set number,
+    <span class="tex2jax_process">$K$</span>, followed by a single
+    space, followed by <span class="tex2jax_process">$9$</span>
+    decimal digits or capital (alphabetic) characters.</p>
+<h2>Output</h2>
+<p>For each data set there is one line of output. The single
+    output line consists of the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space
+    followed by the string “<tt class="ttfamily">Invalid</tt>”
+    (without the quotes) or the decimal value corresponding to the
+    first eight digits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 12345678A
+2 12435678A
+3 12355678A
+</pre>
+</td>
+<td>
+<pre>
+1 11280469652
+2 Invalid
+3 Invalid
+</pre>
+</td>
+</tr>
+</table>
+</div>

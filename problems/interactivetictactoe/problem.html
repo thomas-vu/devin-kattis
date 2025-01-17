@@ -1,0 +1,159 @@
+<div class="problembody">
+<p>Mårten is extremely good at tic-tac-toe. He’s so good you’ve
+    never managed to beat him. Write a program that plays
+    tic-tac-toe for you, and you might have a chance.</p>
+<p>If you don’t know the rules of the game, you can read them
+    <a href="https://en.wikipedia.org/wiki/Tic_tac_toe">on
+    Wikipedia</a>.</p>
+<h2>Interactivity</h2>
+<p>This problem is interactive. First, you should read one line
+    containing either <tt class="ttfamily">first</tt> or <tt class="ttfamily">second</tt>, depending on whether you move first or
+    not.</p>
+<p>Then, you should repeatedly read in a tic-tac-toe grid
+    containing the current game state (blank if you’re making the
+    first move, otherwise containing Mårten’s last move). After
+    reading the grid, you should output a grid with the move you
+    performed.</p>
+<p>If you output a grid where you win or play a draw your
+    program should terminate. If you read a grid where Mårten won
+    or drew your program should terminate.</p>
+<p>A grid is output and read as a 3 lines with 3 characters
+    each – <tt class="ttfamily">.</tt> for an empty square,
+    <tt class="ttfamily">o</tt> for Mårten’s pieces, or <tt class="ttfamily">x</tt> for your pieces (note lower-case
+    letters).</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on several groups of test
+    cases. To get points for a group you need to pass all the tests
+    of that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>You must play a valid game.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>You must never lose a game.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>You must always win a game if possible.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>You must never lose a game and you must always win a
+          game if possible.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre> first
+ ...
+ ...
+ ...</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> ...
+ .x.
+ ...</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> .o.
+ .x.
+ ...</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> xo.
+ .x.
+ ...</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> xo.
+ .x.
+ ..o</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> xo.
+ .x.
+ x.o</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> xo.
+ ox.
+ x.o</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> xox
+ ox.
+ x.o</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre> second
+ xo.
+ xoo
+ o.x</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre> xo.
+ xoo
+ oxx</pre>
+</div>
+<div class="sampleinteractionread">
+<pre> xox
+ xoo
+ oxx</pre>
+</div>
+</div>

@@ -1,0 +1,51 @@
+<div class="problembody">
+<p>Åke has heard that there may be some suspicious 5G radiation
+    in his city. To test this, he uses the antenna on his roof to
+    measure the 5G level each day. However, he does not know how he
+    should analyze the data.</p>
+<p>We are given the measurements for <span class="tex2jax_process">$n$</span> consecutive days as a list of
+    numbers <span class="tex2jax_process">$x_1, \ldots , x_
+    n$</span> (where <span class="tex2jax_process">$x_ i$</span>
+    denotes the measurement for day <span class="tex2jax_process">$i$</span>) and a constant <span class="tex2jax_process">$c$</span> that measures how much Åke expects
+    the radiation to vary from day to day. We want to find, for
+    each day <span class="tex2jax_process">$i$</span>, the most
+    significant difference between the measurement on day
+    <span class="tex2jax_process">$i$</span> and any earlier day,
+    after the expected variations are taken into account. More
+    precisely, the goal is to find the maximum value
+    of</p><span class="tex2jax_process">\[ |x_ i-x_ j| - c \cdot
+    |i-j| \]</span>
+<p>where <span class="tex2jax_process">$j \le i$</span>. I.e.,
+    we want to find a large difference in 5G level that has
+    happened recently.</p>
+<h2>Input</h2>
+<p>The first line of input contains the two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le n \le 4 \cdot 10^5$</span>, <span class="tex2jax_process">$1 \le c \le 10^6$</span>), the number of
+    measurements and expected day-to-day variation. The second
+    input line contains the <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$x_1,x_2,\dots ,x_ n$</span> (<span class="tex2jax_process">$1 \le x_ i \le 10^6$</span> for <span class="tex2jax_process">$i=1,2,\dots ,n$</span>), giving the
+    measurements of the <span class="tex2jax_process">$n$</span>
+    days.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$y_1, \ldots , y_ n$</span>,
+    where <span class="tex2jax_process">$y_ i$</span> is the most
+    significant difference on day <span class="tex2jax_process">$i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+2 7 1 5 4
+</pre>
+</td>
+<td>
+<pre>0 4 5 3 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

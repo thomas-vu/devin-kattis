@@ -1,0 +1,167 @@
+<div class="problembody">
+<p>We’ve come up with a new encryption method we call Leapfrog
+    Encryption. It is a key-based encryption scheme where an
+    alphabetic key specifies how letters in the <i class="itshape">plaintext</i> (the text to be encrypted) are placed
+    in the <i class="itshape">ciphertext</i> (the resulting
+    encrypted string). Here’s how Leapfrog Encryption works:</p>
+<ol class="enumerate">
+<li>
+<p>Remove all non-alphabetic characters from the plaintext
+        and convert all remaining letters to lowercase.</p>
+</li>
+<li>
+<p>Convert the letters of the key to their location in the
+        alphabet <span class="tex2jax_process">$+ 1$</span> (so
+        that ‘<tt class="ttfamily">a</tt>’ converts to <span class="tex2jax_process">$2$</span>, ‘<tt class="ttfamily">b</tt>’
+        converts to <span class="tex2jax_process">$3$</span> and so
+        on). This gives us a sequence of numbers <span class="tex2jax_process">$d_1, d_2, \ldots , d_n$</span> where
+        <span class="tex2jax_process">$n$</span> is the length of
+        the key.</p>
+</li>
+<li>
+<p>Going left-to-right, place the first letters in the
+        plaintext in every <span class="tex2jax_process">$d_1$</span>-th location of the
+        ciphertext until you run out of positions in the ciphertext
+        (where the length of the ciphertext is equal to the number
+        of letters in the plaintext). So for example, if
+        <span class="tex2jax_process">$d_1=5$</span> the first
+        letter in the plaintext goes in position <span class="tex2jax_process">$5$</span> of the ciphertext (numbering
+        the first location in the ciphertext as position
+        <span class="tex2jax_process">$1$</span>), the second
+        letter in the plaintext goes in position <span class="tex2jax_process">$10$</span> in the ciphertext, and so
+        on.</p>
+</li>
+<li>
+<p>Repeat this with <span class="tex2jax_process">$d_2$</span> but this time going
+        right-to-left through the ciphertext, only counting the
+        empty positions (leapfrogging over the letters already in
+        the ciphertext).</p>
+</li>
+<li>
+<p>Continue with <span class="tex2jax_process">$d_3$</span>, <span class="tex2jax_process">$d_4$</span>, etc., alternating the
+        direction you go through the ciphertext each time.</p>
+</li>
+<li>
+<p>If there are still letters left in the plaintext after
+        using <span class="tex2jax_process">$d_n$</span>, fill in
+        the remaining empty locations in the ciphertext with these
+        remaining letters, again going in the opposite direction of
+        the previous pass (this is equivalent to having
+        <span class="tex2jax_process">$d_{n+1} = 1$</span>).</p>
+</li>
+</ol>
+<p>For example, if our plaintext is “Send more monkeys!” and
+    our key is “bea”, the encryption proceeds as follows:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:right">
+<p>b <span class="tex2jax_process">$\rightarrow
+            $</span> 3, left-to-right:</p>
+</td>
+<td style="text-align:left">
+<p><tt>_ _ s _ _ e _ _ n _ _ d _ _ m</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p>e <span class="tex2jax_process">$\rightarrow
+            $</span> 6, right-to-left:</p>
+</td>
+<td style="text-align:left">
+<p><tt>_ _ s _ _ e o _ n _ _ d _ _ m</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p>a <span class="tex2jax_process">$\rightarrow
+            $</span> 2, left-to-right:</p>
+</td>
+<td style="text-align:left">
+<p><tt>_ r s _ e e o _ n m _ d o _ m</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:right">
+<p>last pass, right-to-left:</p>
+</td>
+<td style="text-align:left">
+<p><tt>s r s y e e o e n m k d o n m</tt></p>
+</td>
+</tr>
+</table>
+</center>
+<p>Decryption is done by <span class="tex2jax_process">$\ldots
+    $</span> hey, you know what? We’re going to let you figure that
+    out.</p>
+<h2>Input</h2>
+<p>The first line of input contains two strings <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$k$</span> where <span class="tex2jax_process">$t$</span> is either <tt class="ttfamily">E</tt> or <tt class="ttfamily">D</tt> indicating
+    whether to perform encryption or decryption and <span class="tex2jax_process">$k$</span> is the lowercase alphabetic key.
+    The length of <span class="tex2jax_process">$k$</span> will be
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$100$</span>, inclusive. The
+    second and final line of input contains the plaintext to
+    encrypt (if <span class="tex2jax_process">$t$</span> is
+    <tt class="ttfamily">E</tt>) or the ciphertext to decrypt (if
+    <span class="tex2jax_process">$t$</span> is <tt class="ttfamily">D</tt>). This string is non-empty and has a maximum
+    length of <span class="tex2jax_process">$2\, 000$</span>. A
+    ciphertext string consists of lowercase letters only, while a
+    plaintext string may contain uppercase letters, numbers,
+    punctuation and spaces as well (all counted as part of the
+    length of the string) and is guaranteed to contain at least one
+    letter.</p>
+<h2>Output</h2>
+<p>Output the encrypted or decrypted text. Your output should
+    only contain lowercase letters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>E bea
+Send more monkeys!
+</pre>
+</td>
+<td>
+<pre>srsyeeoenmkdonm
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>D bea
+srsyeeoenmkdonm
+</pre>
+</td>
+<td>
+<pre>sendmoremonkeys
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>D zyxwvutsrqponmlkjihgfedcba
+lafogrpe
+</pre>
+</td>
+<td>
+<pre>leapfrog
+</pre>
+</td>
+</tr>
+</table>
+</div>

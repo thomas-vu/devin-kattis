@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/jackthelumberjack/file/statement/en/img-0001.jpg" class="illustration" src="/problems/jackthelumberjack/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/photos/conifer-evergreen-forest-green-1850902/">
+        Conifer Forest by Pexels</a>
+</div>
+</div>
+<p>Jack the Lumberjack used to love chopping down trees. Jack
+    is getting older and is becoming tired of this activity he used
+    to love. He thinks of an idea, ‘The Big One’, and fantasizes
+    about going out into the forest one last time to harvest as
+    many trees as possible.</p>
+<p>Jack calls the forest administrator for his local evergreen
+    forest. The forest administrator tells him about how the
+    population changes for each species of tree. For each species
+    <span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$S_ k$</span> trees are planted in year
+    <span class="tex2jax_process">$B_ k$</span>. For the next
+    <span class="tex2jax_process">$Y_ k$</span> years, the
+    population increases by <span class="tex2jax_process">$I_
+    k$</span> per year. After <span class="tex2jax_process">$Y_
+    k$</span> years, it will decrease by the same amount
+    <span class="tex2jax_process">$I_ k$</span> per year, until
+    possibly dying out.</p>
+<p>Armed with this information, Jack wants to figure out the
+    maximum amount of trees that could be harvested at once from
+    now until the future. If he is no longer around to do it, his
+    descendants will be!</p>
+<p>Assume all populations change instantly and at the same
+    time, once per year. Jack would assess each population’s size
+    after the yearly change occurred.</p>
+<h2>Input</h2>
+<p>The input contains a single test case. The first line
+    contains an integer <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$1 \le N \le 1\, 000$</span>)
+    representing the number of tree species in the forest.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines represents a single tree
+    species population. Each of these population lines contains
+    <span class="tex2jax_process">$4$</span> integer numbers
+    <tt class="ttfamily">Y I S B</tt> (<span class="tex2jax_process">$0 \le Y \le 1\, 000\, 000$</span>,
+    <span class="tex2jax_process">$0 \le I \le 1\, 000$</span>,
+    <span class="tex2jax_process">$0 \le S \le 1\, 000\,
+    000$</span>, <span class="tex2jax_process">$0 \le B \le 1\,
+    000\, 000$</span>). where <span class="tex2jax_process">$S$</span> is the starting population size,
+    <span class="tex2jax_process">$B$</span> the year in which the
+    population is planted, <span class="tex2jax_process">$Y$</span>
+    the number of years during which the population increases each
+    year by <span class="tex2jax_process">$I$</span> before it
+    decreases by <span class="tex2jax_process">$I$</span> until it
+    (possibly) dies out.</p>
+<h2>Output</h2>
+<p>Print the maximum amount of trees that can be harvested in
+    any single year.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+10 10 0 5
+</pre>
+</td>
+<td>
+<pre>100
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+5 10 0 4
+10 10 10 1
+5 5 0 0
+</pre>
+</td>
+<td>
+<pre>145
+</pre>
+</td>
+</tr>
+</table>
+</div>

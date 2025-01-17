@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/jazzitup/file/statement/en/img-0001.png" class="illustration" src="/problems/jazzitup/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Along with some friends you formed the Band of Atonal
+    Percussionists and Cellists. You have been playing for some
+    years together, but you feel unsatisfied with the current level
+    of play. Doing research into some interesting new styles, you
+    are gripped by the intricate details of the world of jazz.</p>
+<p>While of course you cannot apply all the new things you have
+    learned immediately, you want to start with improvising some
+    nice new rhythmic figures in the music your band plays. You
+    will play a rhythm where every bar has <span class="tex2jax_process">$n$</span> beats in it, but then you split up
+    every beat into <span class="tex2jax_process">$m$</span> notes.
+    In total, you will have <span class="tex2jax_process">$nm$</span> notes per bar.</p>
+<p>Everyone in the band knows that there is <em>no room for
+    squares</em> in jazz. So the number of notes in a bar should be
+    squarefree. That is, there is no number <span class="tex2jax_process">$k &gt; 1$</span> such that <span class="tex2jax_process">$k^2$</span> divides the number of notes in a
+    bar.</p>
+<p>The percussionist has already suggested a number of beats
+    per bar <span class="tex2jax_process">$n$</span>; now it is up
+    to you to find a number of notes per beat that does not leave
+    any room for squares.</p>
+<p>In the second sample we have <span class="tex2jax_process">$n=30$</span> and <span class="tex2jax_process">$m=7$</span>. This works because <span class="tex2jax_process">$2\leq m &lt; n$</span> and <span class="tex2jax_process">$m\cdot n = 210$</span> has no divisor
+    <span class="tex2jax_process">$k^2$</span> for any <span class="tex2jax_process">$k&gt;1$</span>.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The input is a single squarefree integer <span class="tex2jax_process">$3\leq n\leq 10^5$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Output an integer <span class="tex2jax_process">$2 \leq
+        m &lt; n$</span> such that <span class="tex2jax_process">$m
+        \cdot n$</span> is still squarefree.</p>
+</li>
+</ul>
+<p>If there are multiple possible solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>30
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>13
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

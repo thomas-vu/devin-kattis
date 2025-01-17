@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Latkas Coolacek doesn’t really like doing his mathematics
+    homework, he prefers partying with his algorithm buddies and
+    finding shortest paths in the city. Unfortunately, his teachers
+    aren’t as happy with Latkas ignoring school. Thus, they have
+    given him the worst assignment there is; boring, mindless
+    geometry calculations!</p>
+<p>The task given to Latkas is:</p>
+<p>Consider a point <span class="tex2jax_process">$P$</span> in
+    the 2D-plane such that the distance between <span class="tex2jax_process">$(0, 0)$</span> and <span class="tex2jax_process">$P$</span> is greater than 1. The unit circle
+    (the circle with radius 1 and centre in <span class="tex2jax_process">$(0, 0)$</span>) has exactly two tangent
+    lines (lines touching the circle at a single point, and is
+    perpendicular to the radius to that point) which pass through
+    <span class="tex2jax_process">$P$</span>. We then define the
+    <em>tangential coordinates</em> of <span class="tex2jax_process">$P$</span>. Write the two lines on the form
+    <span class="tex2jax_process">$a_ ix + b_ iy = c_ i$</span> for
+    <span class="tex2jax_process">$i = 1, 2$</span>. The tangential
+    coordinates of <span class="tex2jax_process">$P$</span> is then
+    the 6-tuple <span class="tex2jax_process">$(a_1, b_1, c_1, a_2,
+    b_2, c_2)$</span> (or some non-zero scaling thereof). Given
+    <span class="tex2jax_process">$N$</span> points in the plane,
+    calculate the tangential coordinates of them all.</p>
+<div class="figure" id="a0000000816">
+<p><img alt="\includegraphics[width=360px]{sample.png}" src="/problems/goofy/file/statement/en/img-0001.png" style="width:360px"/></p>
+<div class="caption">
+<b>Figure 1</b>: Illustration of sample 1
+      </div>
+</div>
+<p>Since nobody should have to suffer through an assignment
+    this sadistic, you offered to write a program which makes
+    Latkas’ homework automatically. In exchange, since Latkas is
+    such a good friend, he will make you 20% cooler.</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$1 \le N \le 1\, 000$</span>, the
+    number of points.</p>
+<p>Then follow <span class="tex2jax_process">$N$</span> lines
+    of two real numbers <span class="tex2jax_process">$|X_ i| \le
+    10^4, |Y_ i| \le 10^4$</span>. These are the coordinates of the
+    <span class="tex2jax_process">$N$</span> points.</p>
+<h2>Output</h2>
+<p>Output should consist of <span class="tex2jax_process">$N$</span> lines - the tangential coordinates
+    of every point, in the order given by the input.</p>
+<p>The coordinates must be formatted “(<span class="tex2jax_process">$a_1$</span>,<span class="tex2jax_process">$b_1$</span>,<span class="tex2jax_process">$c_1$</span>,<span class="tex2jax_process">$a_2$</span>,<span class="tex2jax_process">$b_2$</span>,<span class="tex2jax_process">$c_2$</span>)”, where <span class="tex2jax_process">$a_1, b_1, c_1, a_2, b_2, c_2$</span> are
+    real numbers, without any spaces.</p>
+<p>Output will be considered correct if all the coordinates are
+    within a relative or absolute error of <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+4 3
+-4 3
+4 -3
+-4 -3
+</pre>
+</td>
+<td>
+<pre>
+(-2.096163282,4.427877538,4.898979486,-3.663836718,3.252122462,-4.898979486)
+(-3.663836718,-3.252122462,4.898979486,-2.096163282,-4.427877538,-4.898979486)
+(3.663836718,3.252122462,4.898979486,2.096163282,4.427877538,-4.898979486)
+(2.096163282,-4.427877538,4.898979486,3.663836718,-3.252122462,-4.898979486)
+</pre>
+</td>
+</tr>
+</table>
+</div>

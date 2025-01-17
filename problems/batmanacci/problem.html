@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>The Fibonacci sequence can be defined as
+    follows:</p><span class="tex2jax_process">\begin{align*}
+    \mathrm{fib}_1 &amp; = 1 \\ \mathrm{fib}_2 &amp; = 1 \\
+    \mathrm{fib}_ n &amp; = \mathrm{fib}_{n-2} + \mathrm{fib}_{n-1}
+    \end{align*}</span>
+<p>We get the sequence <span class="tex2jax_process">$1, 1, 2,
+    3, 5, 8, 13, 21, \ldots $</span>. But there are many
+    generalizations of the Fibonacci sequence. One of them is to
+    start with other numbers, like:</p><span class="tex2jax_process">\begin{align*} f_1 &amp; = 5 \\ f_2 &amp; = 4
+    \\ f_ n &amp; = f_{n-2} + f_{n-1} \end{align*}</span>
+<p>And we get the sequence <span class="tex2jax_process">$5, 4,
+    9, 13, 22, 35, 57, \ldots $</span>. But what if we start with
+    something other than numbers? Let us define the
+    <em>Batmanacci</em> sequence in the following
+    manner:</p><span class="tex2jax_process">\begin{align*} s_1
+    &amp; = \texttt{N} \\ s_2 &amp; = \texttt{A} \\ s_ n &amp; =
+    s_{n-2} + s_{n-1} \end{align*}</span>
+<p>where <span class="tex2jax_process">$+$</span> is string
+    concatenation. Now we get the sequence <tt class="ttfamily">N</tt>, <tt class="ttfamily">A</tt>, <tt class="ttfamily">NA</tt>, <tt class="ttfamily">ANA</tt>, <tt class="ttfamily">NAANA</tt>, ….</p>
+<p>Given <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$K$</span>, what is the
+    <span class="tex2jax_process">$K$</span>-th letter in the
+    <span class="tex2jax_process">$N$</span>-th string in the
+    Batmanacci sequence?</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing two integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 10^5$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq 10^{18}$</span>). It is guaranteed that
+    <span class="tex2jax_process">$K$</span> is at most the length
+    of the <span class="tex2jax_process">$N$</span>-th string in
+    the Batmanacci sequence.</p>
+<h2>Output</h2>
+<p>Output the <span class="tex2jax_process">$K$</span>-th
+    letter in the <span class="tex2jax_process">$N$</span>-th
+    string in the Batmanacci sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 7
+</pre>
+</td>
+<td>
+<pre>
+N
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+777 777
+</pre>
+</td>
+<td>
+<pre>
+A
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,154 @@
+<div class="problembody">
+<p>Pichuu has just finished his catching spree in the safari
+    zone and decided to spend the day organising his messy PC,
+    where his Pokemon are stored. A PC has multiple boxes in a row
+    and each box can store an unlimited amount of Pokemon. For
+    simplicity, you can assume that the Pokemon in a box are also
+    arranged in a row. Thus, we can define an ordering on Pokemon
+    in the PC, where Pokemon <span class="tex2jax_process">$A$</span> is before <span class="tex2jax_process">$B$</span> if and only if <span class="tex2jax_process">$A$</span> is in a box that is to the left of
+    the box <span class="tex2jax_process">$B$</span> is in, or
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> are in the same box and
+    <span class="tex2jax_process">$A$</span> is to the left of
+    <span class="tex2jax_process">$B$</span>. Currently all of
+    Pichuu’s Pokemon are in a single PC box.<br/></p>
+<p>He wishes to arrange them in a very specific order, namely
+    he wishes the arrange them such that the the current
+    <span class="tex2jax_process">$i^{th}$</span> Pokemon in the PC
+    becomes the <span class="tex2jax_process">$A_{i}^{th}$</span>
+    Pokemon in the PC. Following the ordering as mentioned
+    above.<br/></p>
+<p>This PC is a new gen PC that the Pokemon Center recently
+    upgraded, with only one available function, AutoSort. Where he
+    can instantly arrange the Pokemon anywhere he wants as long as
+    they remain in the same box. For example, if the Pokemon in 3
+    boxes are <span class="tex2jax_process">$[5, 2, 6], [1, 3], [7,
+    4]$</span>, he can use AutoSort to instantly arrange the
+    Pokemon as such <span class="tex2jax_process">$[2, 5, 6], [1,
+    3], [4, 7]$</span>.<br/>
+<b class="bfseries">Note that each Pokemon must remain in the
+    same box</b>.<br/></p>
+<p>Team Galactic have discovered this and plan on using this
+    opportunity to annoy their enemy. They have hacked the PC and
+    is able to manipulate where Pichuu’s Pokemon are. However, they
+    are limited to only being able to separate the Pokemon into
+    <span class="tex2jax_process">$K \leq N$</span> contiguous
+    segments and distributing the segments into separate boxes
+    while maintaining the relative ordering.<br/>
+    For example, <span class="tex2jax_process">$[5, 2, 6, 1, 3, 7,
+    4]$</span> in box 1, can be separated into <span class="tex2jax_process">$[5, 2, 6]$</span> in box 1, <span class="tex2jax_process">$[1, 3]$</span> in box 2 and <span class="tex2jax_process">$[7, 4]$</span> in box 3.<br/></p>
+<p>They wish to do this optimally such that the number of boxes
+    the Pokemon are in is as large as possible. (Making Pichuu have
+    to navigate through different boxes) However, note that they
+    must ensure Pichuu’s can still sort his Pokemon using the
+    AutoSort function. Since if Pichuu is unable to sort his
+    Pokemon, he will be so angry that he goes to Galactic HQ and
+    destroy their HQ.<br/></p>
+<p>For example, if Team Galactic splits <span class="tex2jax_process">$[3, 1, 2, 5, 4, 6]$</span> into 3 boxes as
+    such: <span class="tex2jax_process">$[3, 1, 2], [5, 4],
+    [6]$</span>, Pichuu can still sort his Pokemon using the
+    AutoSort function: <span class="tex2jax_process">$[1, 2, 3],
+    [4, 5], [6]$</span>.<br/>
+    However, if Team Galactic splits <span class="tex2jax_process">$[3, 1, 2, 5, 4, 6]$</span> into 2 boxes as
+    such: <span class="tex2jax_process">$[3, 1], [2, 5, 4,
+    6]$</span>, Pichuu is not able to sort his Pokemon and will
+    destroy Team Galactic.<br/></p>
+<p>Furthermore, Pichuu is very fickle and can change his
+    opinion on his Pokemon, swapping the preferred ordering of two
+    Pokemon. Namely, he can choose two Pokemon currently at
+    position <span class="tex2jax_process">$i$</span> and
+    <span class="tex2jax_process">$j$</span> and swap <span class="tex2jax_process">$A_ i$</span> and <span class="tex2jax_process">$A_ j$</span>.<br/></p>
+<p>Team Galactic wants to know the maximum number of boxes they
+    can separate the Pokemon into such that Pichuu can still sort
+    his Pokemon after each swap. As an aspiring new grunt for Team
+    Galactic, help them figure this out!</p>
+<h2>Constraints</h2>
+<p><span class="tex2jax_process">$1 \leq N, M \leq 5 \times
+    10^5$</span><br/>
+<span class="tex2jax_process">$1 \leq A_ i \leq N$</span><br/>
+<span class="tex2jax_process">$A_1, \dots , A_ N$</span> is a
+    permutation.<br/>
+<span class="tex2jax_process">$1\leq U_ i, V_ i \leq
+    N$</span></p>
+<h2>Input</h2>
+<p>The first line contains a two space-seaprated integers,
+    <span class="tex2jax_process">$N$</span>, the number of Pokemon
+    and <span class="tex2jax_process">$M$</span> the number of
+    swaps<br/>
+    The second line contains <span class="tex2jax_process">$N$</span> space-separated integers,
+    <span class="tex2jax_process">$A_1, A_2, \dots , A_ N$</span>,
+    where <span class="tex2jax_process">$A_ i$</span> represents
+    the position Pichuu wants the Pokemon to be at.<br/>
+<span class="tex2jax_process">$M$</span> lines follows, the
+    <span class="tex2jax_process">$i^{th}$</span> line contains 2
+    space-separated integers, <span class="tex2jax_process">$U_ i,
+    V_ i$</span> which means that Pichuu swaps the position
+    currently at position <span class="tex2jax_process">$U_
+    i$</span> and <span class="tex2jax_process">$V_ i$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$M + 1$</span> lines,
+    each containing a single integer.</p>
+<p>The first integer represents the answer prior to any swaps,
+    and for <span class="tex2jax_process">$2 \leq i \leq M +
+    1$</span>, the <span class="tex2jax_process">$i^{th}$</span>
+    integer represents the answer after the <span class="tex2jax_process">$(i-1)^{th}$</span> swap.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 5
+3 1 2 5 4 6 
+2 3
+1 3
+3 5
+1 2
+3 6
+</pre>
+</td>
+<td>
+<pre>3
+3
+5
+4
+3
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 8
+1 4 3 2 5 6 7 10 9 8 
+8 10
+4 2
+6 7
+6 7
+2 4
+9 10
+4 2
+8 9
+</pre>
+</td>
+<td>
+<pre>6
+8
+10
+9
+10
+8
+7
+9
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

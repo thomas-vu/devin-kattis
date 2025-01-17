@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Playing the popularity game is all about getting yourself
+    into the right groups. If you are on the football team and the
+    honor roll, this might impress some people. If you are in the
+    AV club, chess club, and academic probation, perhaps not so
+    much. For this problem, develop a program that computes the set
+    of people inside or outside various groups.</p>
+<h2>Input</h2>
+<p>Input begins with the description of a collection of up to
+    100 groups. Each group starts with a line of the form “group
+    <span class="tex2jax_process">$X$</span> <span class="tex2jax_process">$n$</span>” where <span class="tex2jax_process">$X$</span> is the name of the group and
+    <span class="tex2jax_process">$1 \le n \le 100$</span> is the
+    number of people in the group. This is followed by <span class="tex2jax_process">$n$</span> individual names. Group names and
+    individual names are sequences of upper and lower-case letters
+    (a-z) of length up to 10. The group descriptions will be
+    followed up to 100 selection expressions, one per line. A
+    selection expression is a Polish notation syntax for
+    identifying a set of individuals and may take one of the
+    following forms:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$G$</span><br/>
+        Where <span class="tex2jax_process">$G$</span> is the name
+        of a group, selects the set of individuals in group
+        <span class="tex2jax_process">$G$</span>.</p>
+</li>
+<li>
+<p>union <span class="tex2jax_process">$S_1$</span>
+<span class="tex2jax_process">$S_2$</span><br/>
+        Where <span class="tex2jax_process">$S_1$</span> and
+        <span class="tex2jax_process">$S_2$</span> are selection
+        expressions, selects the set of individuals in (selected
+        by) either <span class="tex2jax_process">$S_1$</span> or
+        <span class="tex2jax_process">$S_2$</span></p>
+</li>
+<li>
+<p>intersection <span class="tex2jax_process">$S_1$</span>
+<span class="tex2jax_process">$S_2$</span><br/>
+        Where <span class="tex2jax_process">$S_1$</span> and
+        <span class="tex2jax_process">$S_2$</span> are selection
+        expressions, selects the set of individuals in both
+        <span class="tex2jax_process">$S_1$</span> and <span class="tex2jax_process">$S_2$</span></p>
+</li>
+<li>
+<p>difference <span class="tex2jax_process">$S_1$</span>
+<span class="tex2jax_process">$S_2$</span><br/>
+        Where <span class="tex2jax_process">$S_1$</span> and
+        <span class="tex2jax_process">$S_2$</span> are selection
+        expressions, selects the set of individuals in <span class="tex2jax_process">$S_1$</span> but not in <span class="tex2jax_process">$S_2$</span></p>
+</li>
+</ul>
+<p>Each selection expression contains up to 100 group names and
+    set operations.</p>
+<p>The sequence of select statements ends at the end of file.
+    No group will have the name <tt class="ttfamily">group</tt>,
+    <tt class="ttfamily">union</tt>, <tt class="ttfamily">intersection</tt> or <tt class="ttfamily">difference</tt>. Different people will have
+    different names; different groups will have different
+    names.</p>
+<h2>Output</h2>
+<p>For each selection expression, print out a single line
+    giving the set of individuals selected. Names on each output
+    line should be space separated and printed in lexicographic
+    order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+group geeks 3 Trevor Chet Kari
+group jocks 3 Chet Mary Bert
+group popular 4 Kari Selma Aaron Mary
+group Trevor 1 Trevor
+union geeks jocks
+intersection geeks union jocks popular
+union geeks union difference jocks popular Trevor
+</pre>
+</td>
+<td>
+<pre>
+Bert Chet Kari Mary Trevor
+Chet Kari
+Bert Chet Kari Trevor
+</pre>
+</td>
+</tr>
+</table>
+</div>

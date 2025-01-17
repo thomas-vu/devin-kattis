@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>You are teaching discrete math. You have done your best to
+    teach your students about axioms and inference rules, proofs
+    and theorems. Sometimes the students write beautiful proofs
+    that Fermat would be proud of but sometimes, also like Fermat,
+    their proofs are not quite right. You are getting a little
+    tired of hunting through some of these so-called “proofs” for
+    the magic tricks that let them prove <span class="tex2jax_process">$1 = 2$</span> and had the great idea to
+    write a computer program to speed things up!</p>
+<p>Because this is the first class in proof-based mathematics,
+    you have started your students off with a simple proof system.
+    All proof lines consist of a list of assumptions, an arrow, and
+    a conclusion. If there are no assumptions, the conclusion is an
+    axiom. A line of the proof is valid if and only if all
+    assumptions were conclusions of previous lines. Sometimes the
+    students derive a conclusion more than once just to be extra
+    sure it is true, and that is perfectly all right!</p>
+<h2>Input</h2>
+<p>The first line of input consists of an integer <span class="tex2jax_process">$1 \le n \le 400\, 000$</span>, the number of
+    lines in the “proof”. Then follow the <span class="tex2jax_process">$n$</span> lines of the “proof”. Each line
+    has <span class="tex2jax_process">$0 \le a \le 5$</span>
+    assumptions, followed by an arrow (the string “<tt class="ttfamily">-&gt;</tt>”), followed by one conclusion. All
+    assumptions and conclusions consist of <span class="tex2jax_process">$1 \le c \le 5$</span> uppercase alphabetic
+    characters. The assumptions, arrow, and conclusion are all
+    separated by single spaces.</p>
+<h2>Output</h2>
+<p>If every line is correct output “<tt class="ttfamily">correct</tt>”. Otherwise, output the number of the
+    first line with an error (line numbers start at <span class="tex2jax_process">$1$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+-&gt; ALICE
+-&gt; BOB
+ALICE BOB -&gt; CARL
+</pre>
+</td>
+<td>
+<pre>correct
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+A -&gt; B
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

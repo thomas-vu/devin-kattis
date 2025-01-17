@@ -1,0 +1,74 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/goombastacks/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/goombastacks/file/statement/en/img-0001.jpeg"/>
+<div class="description"></div>
+</div>
+<p>While exploring a cave, Mario finds that the entrance behind
+    has been closed, leaving him no escape except going forward.
+    Luckily, he has Cappy to help him escape. In front of Mario are
+    a series of <span class="tex2jax_process">$N$</span> rooms,
+    which he must traverse in order. In the <span class="tex2jax_process">$i$</span>-th room, Mario will find
+    <span class="tex2jax_process">$g_ i$</span> Goombas, which
+    Mario can control using his trusty hat, Cappy. Each room also
+    has a button, marked with <span class="tex2jax_process">$b_
+    i$</span>, which indicates the number of Goombas needed to
+    traverse from the <span class="tex2jax_process">$i$</span>-th
+    room to the <span class="tex2jax_process">$i+1$</span>-th room.
+    Using Cappy, Mario can stack goombas in order to reach the
+    threshold of Goombas needed for the button. Additionally, he
+    can bring any previous Goombas to subsequent rooms. Mario can
+    escape the cave if he escapes the <span class="tex2jax_process">$N$</span>-th room. Can you determine if
+    Mario can escape?</p>
+<h2>Input</h2>
+<p>The first line of input is a integer <span class="tex2jax_process">$1 \leq N \leq 100\, 000$</span>. The
+    following <span class="tex2jax_process">$N$</span> lines
+    consist <span class="tex2jax_process">$2$</span>
+    space-separated integers, <span class="tex2jax_process">$g_
+    i$</span> <span class="tex2jax_process">$(1 \leq g_ i \leq 1\,
+    000)$</span> and <span class="tex2jax_process">$b_ i$</span>
+<span class="tex2jax_process">$(1 \leq b_ i \leq 100\, 000\,
+    000)$</span>, representing the number of goombas in the
+    <span class="tex2jax_process">$i$</span>-th room and the number
+    of goombas needed to escape the <span class="tex2jax_process">$i$</span>-th room respectively.</p>
+<h2>Output</h2>
+<p>If Mario can escape, print “possible”. If Mario cannot
+    escape, print “impossible”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4 3
+2 5
+1 7
+</pre>
+</td>
+<td>
+<pre>possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4 3
+2 5
+1 8
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

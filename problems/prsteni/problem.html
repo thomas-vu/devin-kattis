@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>After an exhausting morning, Mirko fell asleep. His brother
+    Stanko, however, just awoke and, like his brother, is all about
+    excitement. Stanko found N rings of varying radii in the
+    garage. He arranged them on the floor so that each ring (except
+    the first and last) touches the ones before and after it.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{rings.pdf}" src="/problems/prsteni/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+</div>
+<p>He started turning the first ring and noticed that the other
+    rings turned as well; some faster, some slower!</p>
+<p>Thrilled with his discovery, he decided to count how many
+    times the other rings turn while the first ring turns once. He
+    gave up after noticing that this number is not always an
+    integer and not knowing what to do.</p>
+<p>Write a program that determines how many times each ring
+    turns while the first turns once.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N (3 \leq N\leq 100)$</span>, the number of
+    rings.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1000$</span>, the radii of Stanko’s rings,
+    in the order they are laid out on the floor.</p>
+<h2>Output</h2>
+<p>The output must contain <span class="tex2jax_process">$N-1$</span> lines. For every ring other than
+    the first, in the order they are given in the input, output a
+    fraction <span class="tex2jax_process">$A/B$</span>, meaning
+    that the respective ring turns <span class="tex2jax_process">$A/B$</span> times while the first ring turns
+    once. The fractions must be in reduced form (the numerator and
+    denominator must not have a common divisor larger than
+    <span class="tex2jax_process">$1$</span>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+8 4 2
+</pre>
+</td>
+<td>
+<pre>2/1
+4/1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+12 3 8 4
+</pre>
+</td>
+<td>
+<pre>4/1
+3/2
+3/1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+300 1 1 300
+</pre>
+</td>
+<td>
+<pre>300/1
+300/1
+1/1
+</pre>
+</td>
+</tr>
+</table>
+</div>

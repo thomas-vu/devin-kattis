@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>Given a permutation <span class="tex2jax_process">$A = (a_1,
+    a_2, \dots , a_ N)$</span> of the integers <span class="tex2jax_process">$1, 2, \dots , N$</span>, we define the
+    <em>greedily increasing subsequence</em> (GIS) in the following
+    way.</p>
+<p>Let <span class="tex2jax_process">$g_1 = a_1$</span>. For
+    every <span class="tex2jax_process">$i &gt; 1$</span>, let
+    <span class="tex2jax_process">$g_ i$</span> be the leftmost
+    integer in <span class="tex2jax_process">$A$</span> that is
+    strictly larger than <span class="tex2jax_process">$g_{i-1}$</span>. If for a given <span class="tex2jax_process">$i$</span> there is no such integer, we say
+    that the GIS of the sequence is the sequence <span class="tex2jax_process">$(g_1, g_2, ..., g_{i - 1})$</span>.</p>
+<p>For example, consider the permutation <span class="tex2jax_process">$(2, 3, 1, 5, 4, 7, 6)$</span>. First, we
+    have <span class="tex2jax_process">$g_1 = 2$</span>. The
+    leftmost integer larger than <span class="tex2jax_process">$2$</span> is <span class="tex2jax_process">$3$</span>, so <span class="tex2jax_process">$g_2 = 3$</span>. The leftmost integer larger
+    than <span class="tex2jax_process">$3$</span> is <span class="tex2jax_process">$5$</span> (<span class="tex2jax_process">$1$</span> is too small), so <span class="tex2jax_process">$g_3 = 5$</span>. Finally, <span class="tex2jax_process">$g_4 = 7$</span>. Thus, the GIS of
+    <span class="tex2jax_process">$(2, 3, 1, 5, 4, 7, 6)$</span> is
+    <span class="tex2jax_process">$(2, 3, 5, 7)$</span>.</p>
+<p>Given a sequence <span class="tex2jax_process">$G = (g_1,
+    g_2, \dots , g_ L)$</span>, how many permutations <span class="tex2jax_process">$A$</span> of the integers <span class="tex2jax_process">$1, 2, \dots , N$</span> have <span class="tex2jax_process">$G$</span> as its GIS?</p>
+<h2>Input</h2>
+<p>The first line of input contains the integers <span class="tex2jax_process">$1 \le N \le 10^6$</span>, the number of
+    elements of the permutation <span class="tex2jax_process">$A$</span>, and <span class="tex2jax_process">$1 \le L \le 10^6$</span>, the length of the
+    sequence <span class="tex2jax_process">$G$</span>.</p>
+<p>The next line contains <span class="tex2jax_process">$L$</span> positive integers between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span>, the elements <span class="tex2jax_process">$g_1, \dots , g_ L$</span> of the sequence
+    <span class="tex2jax_process">$G$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer: the number of <span class="tex2jax_process">$N$</span>-element permutations having the
+    given sequence as its GIS. Since this number may be large,
+    output it modulo the prime number <span class="tex2jax_process">$10^9 + 7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 1
+1
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 1
+5
+</pre>
+</td>
+<td>
+<pre>
+24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+2 4 5
+</pre>
+</td>
+<td>
+<pre>
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 4
+1 4 5 7
+</pre>
+</td>
+<td>
+<pre>
+20
+</pre>
+</td>
+</tr>
+</table>
+</div>

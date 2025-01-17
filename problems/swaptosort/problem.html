@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>You are given an array <span class="tex2jax_process">$A[1...N]$</span> with integers in decreasing
+    order and a list of pairs <span class="tex2jax_process">$(a_1,
+    b_1)$</span>, <span class="tex2jax_process">$(a_2,
+    b_2),$</span> <span class="tex2jax_process">$\ldots $</span>,
+    <span class="tex2jax_process">$(a_ K, b_ K)$</span>. You wish
+    to sort the array <span class="tex2jax_process">$A$</span> in
+    increasing order, each turn you choose an <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$i$</span> can be chosen multiple times) and
+    swap <span class="tex2jax_process">$A[a_ i]$</span> with
+    <span class="tex2jax_process">$A[b_ i]$</span>. Determine
+    whether this is possible.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, representing
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> respectively (<span class="tex2jax_process">$1 \leq N, K \leq 10^6$</span>). The
+    following <span class="tex2jax_process">$K$</span> lines each
+    contains two integers, representing <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$b_ i$</span> respectively (<span class="tex2jax_process">$1 \leq a_ i &lt; b_ i \leq N$</span>).</p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">Yes</tt>” if it is possible to
+    sort the array in increasing order, “<tt class="ttfamily">No</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+1 5
+2 4
+</pre>
+</td>
+<td>
+<pre>Yes
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+1 4
+2 3
+4 5
+1 5
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

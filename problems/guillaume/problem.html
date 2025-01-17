@@ -1,0 +1,167 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/guillaume/file/statement/en/img-0001.jpg" class="illustration" src="/problems/guillaume/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo from <a href="https://www.flickr.com/photos/williac/222560820">flickr.com</a>
+</div>
+</div>
+<p>Guillaume has a unique ability to forget events before a
+    certain point in time, only to look better in his memory.
+    Guillaume and Arnar play pool quite often and you have a log of
+    results from their matches. Guillaume only counts the last
+    <span class="tex2jax_process">$k$</span> matches such that his
+    win percentage is maximized, and ignores all matches before
+    those. Guillaume cannot ignore the entire match history since
+    Arnar will always remember the result of their last match. Win
+    percentage is defined as the ratio between number of victories
+    and number of valid matches. If multiple values of <span class="tex2jax_process">$k$</span> are possible then <span class="tex2jax_process">$k$</span> should be chosen such that it is
+    minimized, because that is easier for Guillaume to
+    remember.</p>
+<p>A draw occurs in pool if both players decide the match is
+    invalid and want to restart the match. If a match ends in a
+    draw, then the match has no winner.</p>
+<p>What’s the score according to Guillaume?</p>
+<h2>Input</h2>
+<p>Input consists of two lines. The former line has one integer
+    <span class="tex2jax_process">$n$</span>, the number of matches
+    logged. The latter line has a sequence of characters which
+    represent the results of the matches that Arnar and Guillaume
+    have played. The <span class="tex2jax_process">$i$</span>-th
+    symbol represents the result of the <span class="tex2jax_process">$i$</span>-th match and is <tt class="ttfamily">A</tt> if Arnar won, <tt class="ttfamily">G</tt> if
+    Guillaume won or <tt class="ttfamily">D</tt> in case of a
+    draw.</p>
+<h2>Output</h2>
+<p>Output a single line in the format <tt class="ttfamily">g-a</tt> where <span class="tex2jax_process">$g$</span> is an integer representing the
+    number of matches won by Guillaume and <span class="tex2jax_process">$a$</span> is the number of matches won by
+    Arnar, according to Guillaume.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Score</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 3 \cdot
+          10^5$</span>, total amount of the symbols <tt class="ttfamily">A</tt> and <tt class="ttfamily">G</tt> is at
+          most <span class="tex2jax_process">$1\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq 3 \cdot
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+G
+</pre>
+</td>
+<td>
+<pre>1-0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>29
+AAAGAGAGAAGAAAGADGAAAGGGGGGGA
+</pre>
+</td>
+<td>
+<pre>7-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>12
+AGAGDDDDGAGA
+</pre>
+</td>
+<td>
+<pre>3-2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>55
+GGAAAAAGAAGGAAGGGGAAGGGDDAGGGGGGGGAAGAAAGGGGGGGGGAGGGAA
+</pre>
+</td>
+<td>
+<pre>12-3
+</pre>
+</td>
+</tr>
+</table>
+</div>

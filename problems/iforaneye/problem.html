@@ -1,0 +1,169 @@
+<div class="problembody">
+<p>Ken has been having trouble lately staying under the word
+    limit in Twitter, so he’s decided to write a little front-end
+    program which will take in text and shorten it using a fixed
+    set of abbreviations for commonly used letter sequences. Those
+    abbreviations are shown in the table below:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>The character ...</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>... substitutes for</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+           </td>
+<td style="text-align:center; border-right:1px solid black">
+<p>the letter sequence</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">@</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>at</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt>&amp;</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>and</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">1</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>one, won</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">2</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>to, too, two</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">4</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>for, four</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">b</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>bea, be, bee</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">c</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>sea, see</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">i</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>eye</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">o</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>oh, owe</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">r</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>are</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><tt class="tt">u</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>you</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p><tt class="tt">y</tt></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>why</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Ken is about to start writing this program when he realizes
+    that the extent of his computer knowledge is ... well ... using
+    Twitter. He’s looking for someone to help him – <tt class="tt">r u th@ some1</tt>?</p>
+<h2>Input</h2>
+<p>Input starts with a single integer <span class="tex2jax_process">$n$</span> indicating the number of lines of
+    text to process. Following this are <span class="tex2jax_process">$n$</span> lines of text. Each line will
+    contain only alphanumeric characters and spaces, and each line
+    will have at least one non-space character. Each line has at
+    most <span class="tex2jax_process">$200$</span> characters.</p>
+<h2>Output</h2>
+<p>Display each line with the appropriate substitutions made.
+    Substitutions should also be made inside words, e.g., the word
+    <tt class="tt">that</tt> should be changed to <tt class="tt">th@</tt>. If two letter sequences overlap (like <tt class="tt">at</tt> and <tt class="tt">to</tt> in the word <tt class="tt">baton</tt>) just replace the first one (in this case
+    resulting in <tt class="tt">b@on</tt>). If two letter sequences
+    start at the same location (like <tt class="tt">be</tt> and
+    <tt class="tt">bee</tt> in <tt class="tt">been</tt>) replace
+    the longer one (in this case resulting in <tt class="tt">bn</tt>). If the letter sequence starts with an upper-case
+    letter, then the abbreviation should also be in upper-case (if
+    appropriate). Finally, no substituted letter should later be
+    part of another substitution. For example, if the input is
+    <tt class="tt">oweh</tt>, you would first replace the
+    <tt class="tt">owe</tt> with an <tt class="tt">o</tt> to get
+    <tt class="tt">oh</tt>. At this point you do NOT replace the
+    <tt class="tt">oh</tt> with an <tt class="tt">o</tt> since the
+    <tt class="tt">oh</tt> contains a substituted letter.</p>
+<p><br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Oh say can you see
+I do not understand why you are so cranky just because Karel won
+Formation
+</pre>
+</td>
+<td>
+<pre>O say can u c
+I do not underst&amp; y u r so cranky just bcause Krl 1
+4m@ion
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>The level of corruption in some countries is really high. It
+    is hard to imagine that these unethical manners have already
+    hit the academic field. Some rumors are spreading that some
+    students tried to bribe their lecturers to get better grades.
+    Would you believe it?</p>
+<p>But the real situation may be even much worse. ACM has a
+    very strong suspicion that somebody has bribed mathematicians
+    in the Academy of Sciences in order to forge some of their
+    results. In particular, it is suspected that a very influential
+    person wants to prefer some prime numbers over others.</p>
+<p>It is said that many mathematicians have already completely
+    stopped using some primes and they create only those numbers
+    that can be “assembled” without those primes. Your task is to
+    verify this hypothesis.</p>
+<p>Given a set of prime numbers, your program should output all
+    integer numbers that can be created solely by multiplying these
+    primes, without using any other primes.</p>
+<h2>Input Specification</h2>
+<p>The input will consist of several test scenarios. Each
+    scenario starts by a line with a single positive integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1\leq N\leq 10$</span>) – the number of
+    primes in the set.</p>
+<p>On the second line of a scenario, there are <span class="tex2jax_process">$N$</span> integer numbers <span class="tex2jax_process">$2\leq P_1 &lt; P_2 &lt; P_3 &lt; \dots &lt;
+    P_ N &lt; 10000$</span>, separated by a space. You are
+    guaranteed that all these numbers are prime.</p>
+<p>On the third line of each scenario, there are 2 integers
+    <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> (<span class="tex2jax_process">$1\leq X\leq Y &lt;2^{31}$</span>), separated
+    by a space.</p>
+<p>The last scenario is followed by a line containing a single
+    zero.</p>
+<h2>Output Specification</h2>
+<p>Your task is to print all positive integer numbers in the
+    closed interval <span class="tex2jax_process">$[X,Y]$</span>
+    that have no other prime factors than those given in the input
+    (<span class="tex2jax_process">$P_ i$</span>). Print all such
+    numbers in the increasing order, with no duplicates and
+    separated by a single comma character (“<tt>,</tt>”). If there
+    are no such numbers, print the word “<tt>none</tt>”
+    instead.</p>
+<p>Note that the number 1 does not need any primes to be
+    constructed and is therefore always allowed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+3
+1 12
+2
+2 3
+10 20
+3
+2 3 5
+20 30
+1
+17
+20 30
+0
+</pre>
+</td>
+<td>
+<pre>
+1,3,9
+12,16,18
+20,24,25,27,30
+none
+</pre>
+</td>
+</tr>
+</table>
+</div>

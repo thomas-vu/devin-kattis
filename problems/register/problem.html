@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/register/file/statement/en/img-0001.jpg" class="illustration" src="/problems/register/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture in public domain via Wikimedia Commons
+      </div>
+</div>We’re working on a new super-computer, built to unleash
+    the hidden computing powers of all eight dimensions of reality.
+    The secret to utilizing more dimensions turns out to be to use
+    counting registers of different sizes. In particular, we have
+    eight registers, counting cyclically modulo the different
+    primes <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$11$</span>, <span class="tex2jax_process">$13$</span>, <span class="tex2jax_process">$17$</span>, <span class="tex2jax_process">$19$</span>. A size <span class="tex2jax_process">$p$</span> register stores a value between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$p-1$</span> (inclusive).
+
+    <p>The only operation available is an “increment” operation.
+    When it is performed, the size <span class="tex2jax_process">$2$</span> register is increased by
+    <span class="tex2jax_process">$1$</span>. If this increment
+    causes overflow (i.e., if the old value was <span class="tex2jax_process">$1$</span>) the value is reset to
+    <span class="tex2jax_process">$0$</span>, and the size
+    <span class="tex2jax_process">$3$</span> is incremented. If
+    this causes overflow the size <span class="tex2jax_process">$3$</span> register is reset to <span class="tex2jax_process">$0$</span> and the size <span class="tex2jax_process">$5$</span> register is incremented, and so
+    on. If this goes all the way to the last register and the size
+    <span class="tex2jax_process">$19$</span> register overflows,
+    the computer blows up.</p>
+<p>In order not to destroy the computer in testing, we need to
+    build a program to check the safety of doing increment
+    operations before we perform them. Given the current state of
+    the registers, you need to compute how many more operations can
+    safely be performed before the computer blows up.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing eight
+    integers <span class="tex2jax_process">$v_2$</span>,
+    <span class="tex2jax_process">$v_3$</span>, <span class="tex2jax_process">$v_5$</span>, <span class="tex2jax_process">$v_7$</span>, <span class="tex2jax_process">$v_{11}$</span>, <span class="tex2jax_process">$v_{13}$</span>, <span class="tex2jax_process">$v_{17}$</span>, <span class="tex2jax_process">$v_{19}$</span> indicating the current values
+    of the registers. The value of the size <span class="tex2jax_process">$p$</span> register is always between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$p-1$</span> (inclusive).</p>
+<h2>Output</h2>
+<p>Ouput a single line containing an integer <span class="tex2jax_process">$N$</span>, the number of additional
+    operations that can be performed without the computer blowing
+    up.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 0 4 6 10 12 16 18
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 2 4 6 10 12 16 18
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 0 0 0 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+9699689
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,48 @@
+<div class="problembody">
+<p>A common method for determining your own heart rate is to
+    place your index and third finger on your neck to the side of
+    your windpipe. You then count how many beats you feel in a span
+    of <span class="tex2jax_process">$15$</span> seconds, multiply
+    that number by four and that gives you a measure of your heart
+    rate in beats per minute (BPM). This method gives a good
+    estimate, but is not quite accurate. In general, if you measure
+    <span class="tex2jax_process">$b$</span> beats in <span class="tex2jax_process">$p$</span> seconds the BPM is calculated as
+    <span class="tex2jax_process">$\frac{60b}{p}$</span>.</p>
+<p>For this problem, we assume that all heart rates are
+    constant and do not change. If <span class="tex2jax_process">$t$</span> is the amount of time (in seconds)
+    between each beat of your heart, we define your Actual Beats
+    Per Minute (ABPM) as <span class="tex2jax_process">$\frac{60}{t}$</span>.</p>
+<h2>Input</h2>
+<p>The input starts with an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 1000$</span>) indicating the number of cases to
+    follow. Each of the next <span class="tex2jax_process">$N$</span> lines specify one case, consisting
+    of the integer <span class="tex2jax_process">$b$</span>
+    (<span class="tex2jax_process">$2 \leq b \leq 1000$</span>) as
+    well as <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$0 &lt; p &lt; 1000$</span>) as described
+    above. The value of <span class="tex2jax_process">$p$</span> is
+    a real number specified to 4 decimal places.</p>
+<h2>Output</h2>
+<p>For each case, print on a single line the minimum possible
+    ABPM, the calculated BPM, and the maximum possible ABPM,
+    separated by a space. Your answer will be considered correct if
+    its absolute or relative error does not exceed <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+6 5.0000
+2 3.1222
+</pre>
+</td>
+<td>
+<pre>60.0000 72.0000 84.0000
+19.2172 38.4344 57.6517
+</pre>
+</td>
+</tr>
+</table>
+</div>

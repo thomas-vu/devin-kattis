@@ -1,0 +1,117 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/coconut/file/statement/en/img-0001.jpg" class="illustration" src="/problems/coconut/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://commons.wikimedia.org/wiki/File:Coconut_Clipart_Cartoon.png">
+        WikiMedia</a>
+</div>
+</div>
+<p>Coconut Splat is one of Theta’s favorite counting-out games.
+    It goes like this: initially, all players stand in a circle
+    with their hands folded together (like an intact coconut). In
+    clockwise order, one player touches the hands of the other
+    players and says the rhyme: “Co-co-nut, Co-co-nut, Co-co-nut,
+    Splat!” At each syllable, the player touches a hand, and the
+    player whose hand or hands is touched last takes one of the
+    following actions:</p>
+<ul class="itemize">
+<li>
+<p>If the player’s hands are still folded, they are split
+        into two fists (the coconut is cracked in two halves). The
+        next round starts with the fist that is the first half of
+        the coconut, then the second half, then going to the next
+        player.</p>
+</li>
+<li>
+<p>If a fist is touched last, the hand is turned palm down
+        (the milk spills out). The next round starts with the next
+        hand in clockwise order, which could be the other hand of
+        the same player, or it could be the hand or folded hands
+        belonging to the next player.</p>
+</li>
+<li>
+<p>If a hand that is already turned palm down is touched
+        last, the player to whom it belongs puts the hand behind
+        their back and this hand won’t be counted in the following
+        rounds. The next round starts with the next hand in
+        clockwise order as in the previous case.</p>
+</li>
+<li>
+<p>If a player has put both of their hands behind their
+        back, that player is out of the game. The game ends when
+        there is only one player left.</p>
+</li>
+</ul>
+<p>The hand or hands of the player doing the counting are taken
+    into account (for instance, the counting player touches their
+    thigh when it would be her turn to be touched).</p>
+<p>There are variations of this game, for instance, some kids
+    say “Coconut, coconut, crack your nut!” instead, which has only
+    <span class="tex2jax_process">$9$</span> instead of
+    <span class="tex2jax_process">$10$</span> syllables as in the
+    “Co-co-nut, Co-co-nut, Co-co-nut, Splat!” rhyme.</p>
+<p>There are <span class="tex2jax_process">$n$</span> players,
+    and counting always starts with the folded hands of player
+    <span class="tex2jax_process">$1$</span>. For instance, in the
+    first round, if the rhyme has <span class="tex2jax_process">$3$</span> syllables, player <span class="tex2jax_process">$3$</span> would be the one to first crack
+    their coconut into two fists.</p>
+<p>Write a program that determines the winner of the
+    counting-out game based on the number of players and based on
+    the number of syllables in the rhyme that is used!</p>
+<h2>Input</h2>
+<p>The input consists of a single test case with two numbers
+    <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$0 &lt; s \le 100$</span>) and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \le n \le 100$</span>) denoting the number of syllables in the
+    rhyme and the number of players, respectively.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \le p \le n$</span>), the number of the player who is left.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 10
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>Your favorite uncle has passed away, leaving you a large
+    estate. Bank account numbers, locations of safe deposit boxes,
+    and GPS coordinates to buried treasures are all locked in an
+    electronic safe in your uncle’s office behind a picture of dogs
+    playing poker. One day he showed you the safe with its
+    <span class="tex2jax_process">$9$</span> digit keypad (digits
+    <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$9$</span>). He told you he wasn’t worried
+    about anyone breaking into his safe because it’s equipped with
+    a self-destruct mechanism that will destroy the contents if
+    anyone attempts a forced entry.</p>
+<p>The combination is a sequence of six decimal digits. If an
+    incorrect combination is entered the safe enforces a
+    thirty-second delay before accepting another combination. So a
+    brute-force effort to try all six-digit combinations could take
+    months.</p>
+<p>Your uncle had planned to give you, his sole heir, the
+    combination one day, but due to an unfortunate hang-gliding
+    accident in Kansas, you now must rely on your deductive and
+    programming skills to access the key to your inheritance.</p>
+<p>Here’s what you know:</p>
+<ul class="itemize">
+<li>
+<p>The combination <span class="tex2jax_process">$c$</span>
+        is a sequence of six non-zero decimal digits.</p>
+</li>
+<li>
+<p>Your mother recalls that she heard your uncle mention
+        that all the digits are different.</p>
+</li>
+<li>
+<p>You remember that your uncle once said that the six
+        digit number was divisible by each of its individual
+        digits.</p>
+</li>
+</ul>
+<p>An example satisfying these conditions is <span class="tex2jax_process">$123864$</span>: all six digits differ, and
+    you can check that <span class="tex2jax_process">$123864$</span> is divisible by each of
+    <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$8$</span>, <span class="tex2jax_process">$6$</span> and <span class="tex2jax_process">$4$</span>.</p>
+<p>Even with the helpful data, it could take a while to get to
+    open the safe, so the task is likely to be split into several
+    sessions with separate ranges being tested. How many
+    combinations are there to try in the range given?</p>
+<h2>Input</h2>
+<p>The input is a line with two space-separated integers
+    <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$H$</span>, where <span class="tex2jax_process">$123\, 456 \leq L &lt; H \leq 987\,
+    654$</span></p>
+<h2>Output</h2>
+<p>Print one integer, the total number of possible combinations
+    to the safe, where each combination <span class="tex2jax_process">$c$</span> must satisfy the three constraints
+    above, and lie in the range <span class="tex2jax_process">$L
+    \leq c \leq H$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>123864 123865
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>198765 198769
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>200000 300000
+</pre>
+</td>
+<td>
+<pre>31
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/conteststruggles/file/statement/en/img-0001.jpg" class="illustration" src="/problems/conteststruggles/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/images/id-1869790/">Balloons</a> by
+        Pexels, Pixabay
+      </div>
+</div>Lotte is competing in a programming contest. Her team has
+    already solved <span class="tex2jax_process">$k$</span> out of
+    the <span class="tex2jax_process">$n$</span> problems in the
+    problem set, but as the problems become harder, she begins to
+    lose focus and her mind starts to wander.
+    <p>She recalls hearing the judges talk about the difficulty of
+    the problems, which they rate on an integer scale from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$100$</span>, inclusive. In fact, one of the
+    judges said that “<i class="itshape">the problem set has never
+    been so tough, the average difficulty of the problems in the
+    problem set is <span class="tex2jax_process">$d$</span>!</i>”</p>
+<p>She starts thinking about the problems her team has solved
+    so far, and comes up with an estimate <span class="tex2jax_process">$s$</span> for their average difficulty. In
+    hope of gaining some motivation, Lotte wonders if she can use
+    this information to determine the average difficulty of the
+    remaining problems.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$2\leq n\leq 10^6$</span>, <span class="tex2jax_process">$0 &lt; k &lt; n$</span>), the total
+        number of problems and the number of problems Lotte’s team
+        has solved so far.</p>
+</li>
+<li>
+<p>One line with two integers <span class="tex2jax_process">$d$</span> and <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$0\leq d,s \leq 100$</span>), the average
+        difficulty of all the problems and Lotte’s estimate of the
+        average difficulty of the problems her team has solved.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Assuming Lotte’s estimate is correct, output the average
+    difficulty of the unsolved problems, or “<tt class="ttfamily">impossible</tt>” if the average difficulty does not
+    exist. Your answer should have an absolute or relative error of
+    at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+70 50
+</pre>
+</td>
+<td>
+<pre>90.00
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 3
+80 90
+</pre>
+</td>
+<td>
+<pre>75.7142857
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+100 10
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

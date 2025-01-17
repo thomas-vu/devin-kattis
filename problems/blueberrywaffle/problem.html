@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>You are using a waffle maker machine to make a delicious
+    blueberry waffle. One side of your waffle is covered in
+    blueberries, while the other side is plain. Initially, the
+    cooking pan of the waffle maker lies horizontally, and the
+    blueberries are on the top side of the waffle. Once started,
+    the cooking pan will rotate at a constant speed for a fixed
+    duration, then stop. The cooking time is set so that when the
+    waffle maker stops, the cooking pan will not be in a vertical
+    position.</p>
+<p>If the cooking pan is not horizontal after this time, the
+    waffle maker will return to a horizontal position via the
+    smallest rotation possible. Therefore, the waffle maker will
+    rotate less than <span class="tex2jax_process">$90$</span>
+    degrees, either forward or backward, until the cooking pan is
+    horizontal again.</p>
+<p>The pan rotates at a rate of 180 degrees every <span class="tex2jax_process">$r$</span> seconds, and stops after
+    <span class="tex2jax_process">$f$</span> seconds. You don’t
+    want to take out your waffle with its blueberry side down.
+    Therefore you’d like to figure out whether the blueberry side
+    of the waffle is up or down after the cooking pan returns to a
+    horizontal position.</p>
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{blueberry.png}" src="/problems/blueberrywaffle/file/statement/en/img-0001.png" style="width:35.00%"/>
+</center>
+<h2>Input</h2>
+<p>The single line of input contains two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$f$</span> (<span class="tex2jax_process">$1
+    \leq r, f \leq 10^4$</span>). The pan rotates at a rate of
+    <span class="tex2jax_process">$180$</span> degrees every
+    <span class="tex2jax_process">$r$</span> seconds, and stops
+    after <span class="tex2jax_process">$f$</span> seconds. It is
+    guaranteed that after <span class="tex2jax_process">$f$</span>
+    seconds the cooking pan is not at a vertical position.</p>
+<h2>Output</h2>
+<p>Output a single line with a single string, which is
+    <tt class="tt">up</tt> if the blueberry side of the waffle is
+    up, or <tt class="tt">down</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 20
+</pre>
+</td>
+<td>
+<pre>up
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 34
+</pre>
+</td>
+<td>
+<pre>down
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 47
+</pre>
+</td>
+<td>
+<pre>down
+</pre>
+</td>
+</tr>
+</table>
+</div>

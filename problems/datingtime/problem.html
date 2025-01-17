@@ -1,0 +1,121 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/datingtime/file/statement/en/img-0001.png" class="illustration" src="/problems/datingtime/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/Clock_face#/media/File:Braun_ABW41_(silber).jpg">
+        Photo</a> by Phrontis, via Wikipedia.
+      </div>
+</div>
+<p>Our two lovebirds, Banmuon and Henho want to go on a date.
+    However, they are afraid that their friends or families may
+    find out. Thus, they have decided to setup their dating time
+    using the following secret methods:</p>
+<ul class="itemize">
+<li>
+<p>Banmuon will send Henho a string with format <tt class="ttfamily">h1:m1 h2:m2 alpha</tt> where <tt class="ttfamily">h1:m1</tt> and <tt class="ttfamily">h2:m2</tt>
+        represent some time in <span class="tex2jax_process">$24$</span>-hour format. <span class="tex2jax_process">$alpha$</span> is an integer between
+        <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$180$</span> and <b class="bfseries">is
+        divisible by <span class="tex2jax_process">$90$</span></b>.</p>
+</li>
+<li>
+<p>Their dating time will be some time between <tt class="ttfamily">h1:m1</tt> and <tt class="ttfamily">h2:m2</tt>,
+        where the two clock hands, hour and minute, forms an angle
+        equals to <span class="tex2jax_process">$alpha$</span>
+        degree.</p>
+</li>
+</ul>
+<p>However, there is a problem: their dating time may not be
+    unique! Please help Banmuon and Henho figure out how many
+    possible valid dating times there are.</p>
+<h2>Note</h2>
+<p>In this problem, we use a normal analog clock:</p>
+<ul class="itemize">
+<li>
+<p>The minute hand rotates continuously. It takes
+        <span class="tex2jax_process">$60$</span> minutes to make
+        one complete rotation (from <span class="tex2jax_process">$12$</span> to <span class="tex2jax_process">$12$</span>).</p>
+</li>
+<li>
+<p>The hour hand rotates continuously. It takes
+        <span class="tex2jax_process">$12$</span> hours to make one
+        complete rotation (from <span class="tex2jax_process">$12$</span> to <span class="tex2jax_process">$12$</span>).</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$(1 \le t \le 100)$</span> — the number
+    of test cases.</p>
+<p><span class="tex2jax_process">$t$</span> lines follow, each
+    line has format: <tt class="ttfamily">h1:m1 h2:m2 alpha</tt>
+<span class="tex2jax_process">$(0 \le h_1, h_2 \le 23, 0 \le
+    m_1, m_2 \le 59, 0 \le alpha \le 180)$</span>. <span class="tex2jax_process">$h_1$</span>, <span class="tex2jax_process">$m_1$</span>, <span class="tex2jax_process">$h_2$</span> and <span class="tex2jax_process">$m_2$</span> will have exactly two digits,
+    with leading zero if they are less than <span class="tex2jax_process">$10$</span>.</p>
+<p>It is guaranteed that <tt class="ttfamily">h1:m1</tt> is
+    less than or equal to <tt class="ttfamily">h2:m2</tt> and
+    <span class="tex2jax_process">$alpha$</span> <b class="bfseries">is divisible by</b> <span class="tex2jax_process">$90$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print the number of instants when the
+    two clock hands form an angle equals to <span class="tex2jax_process">$alpha$</span> degrees, between <tt class="ttfamily">h1:m1</tt> and <tt class="ttfamily">h2:m2</tt>,
+    inclusive.</p>
+<h2>Explanation of Sample input</h2>
+<p>In the first test case, there are <span class="tex2jax_process">$22$</span> instants when the two clock hands
+    form a <span class="tex2jax_process">$0$</span>-degree angle.
+    Below are the first <span class="tex2jax_process">$11$</span>
+    instants.</p>
+<ol class="enumerate">
+<li>
+<p><tt class="ttfamily">00:00</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">01:05</tt> and <span class="tex2jax_process">$\frac{5}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">02:10</tt> and <span class="tex2jax_process">$\frac{10}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">03:16</tt> and <span class="tex2jax_process">$\frac{4}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">04:21</tt> and <span class="tex2jax_process">$\frac{9}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">05:27</tt> and <span class="tex2jax_process">$\frac{3}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">06:32</tt> and <span class="tex2jax_process">$\frac{8}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">07:38</tt> and <span class="tex2jax_process">$\frac{2}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">08:43</tt> and <span class="tex2jax_process">$\frac{7}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">09:49</tt> and <span class="tex2jax_process">$\frac{1}{11}$</span> minute.</p>
+</li>
+<li>
+<p><tt class="ttfamily">10:54</tt> and <span class="tex2jax_process">$\frac{6}{11}$</span> minute.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+00:00 23:59 0
+00:00 23:59 90
+18:00 18:01 180
+</pre>
+</td>
+<td>
+<pre>22
+44
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

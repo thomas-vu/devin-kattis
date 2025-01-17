@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>Arithmetic coding is a method to represent a message as a
+    real number <span class="tex2jax_process">$x$</span> such that
+    <span class="tex2jax_process">$0 \leq x &lt; 1$</span>. We will
+    assume that the message consists only of uppercase ‘A’s and
+    ‘B’s. The two letters have associated probabilities
+    <span class="tex2jax_process">$p_ A$</span> and <span class="tex2jax_process">$p_ B = 1 - p_ A$</span> such that
+    <span class="tex2jax_process">$0 &lt; p_ A &lt; 1$</span>.</p>
+<p>The current interval <span class="tex2jax_process">$[a,b)$</span> is initially set to
+    <span class="tex2jax_process">$[0,1)$</span> and we will update
+    this interval one letter at a time. To encode a letter, the
+    current interval is divided into two subintervals as follows.
+    Let <span class="tex2jax_process">$c = a + p_ A(b-a)$</span>.
+    If the next letter is ‘A’, <span class="tex2jax_process">$[a,c)$</span> becomes the current interval.
+    Otherwise, the current interval is now <span class="tex2jax_process">$[c,b)$</span>. This process is repeated for
+    each letter in the message. If <span class="tex2jax_process">$[k,\ell )$</span> is the final interval, the
+    encoded message is chosen to be <span class="tex2jax_process">$k$</span>.</p>
+<p>For example, if the original message is “ABAB” and
+    <span class="tex2jax_process">$p_ A = p_ B = 0.5$</span>, the
+    sequence of intervals encountered in the algorithm
+    is</p><span class="tex2jax_process">\[ [0,1) \xrightarrow {A}
+    [0, 0.5) \xrightarrow {B} [0.25, 0.5) \xrightarrow {A} [0.25,
+    0.375) \xrightarrow {B} [0.3125, 0.375). \]</span>
+<p>The encoded message is therefore 0.3125, or 0.0101 in
+    binary.</p>
+<p>Given the length of the message, the probabilities, and the
+    encoded message, determine the original message.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 15$</span>), which is the length of the original
+    message. The second line contains the integer <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$1
+    \leq D \leq 7$</span>), which indicates that <span class="tex2jax_process">$p_ A = \frac{D}{8}$</span>. The third line
+    contains the binary representation of the encoded message. It
+    is guaranteed that the binary representation of the encoded
+    message starts with “0.” and contains at most <span class="tex2jax_process">$3N+2$</span> characters.</p>
+<p>It is guaranteed that the encoded message came from an
+    initial message of length <span class="tex2jax_process">$N$</span> consisting only of ‘A’ and ‘B’
+    using this value of <span class="tex2jax_process">$p_
+    A$</span>.</p>
+<h2>Output</h2>
+<p>Display the original message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+4
+0.0101
+</pre>
+</td>
+<td>
+<pre>ABAB
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+5
+0.100100100100101
+</pre>
+</td>
+<td>
+<pre>ABBABA
+</pre>
+</td>
+</tr>
+</table>
+</div>

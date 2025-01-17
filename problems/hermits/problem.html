@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>In this modern world, people are moving into more and more
+    tightly packed cities. This is a development that the hermits
+    of the world love – if people concentrate in cities, that
+    leaves much more space for hermits! Well, a development that
+    almost all hermits love. Hermiticism is a calling that can
+    develop in anyone, even those who like getting their morning
+    gourmet coffee from urban luxury cafés. This restricts the
+    urban hermit to locations in cities where not <em>too</em> many
+    people live.</p>
+<p>One of those hermits, Urban, is planning a move to
+    Stockholm. He has already identified what city district he
+    wants to move to. The district consists of <span class="tex2jax_process">$N$</span> different streets.</p>
+<p>After buying his morning coffee, Urban likes taking solitary
+    morning walks up and down the street he lives on. This means
+    that he wants to pick a street that not too many people live
+    on, but also one that not too many busy streets cross. More
+    formally, each street <span class="tex2jax_process">$i$</span>
+    has a number <span class="tex2jax_process">$a_ i$</span> of
+    people that live on it. Urban wants to live on a street where
+    the total number of people who live on the street and all
+    streets that cross it is minimal, which he thinks is the
+    quietest street. Can you help him find which one it is?</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \le N \le 1\, 000$</span>), the number of streets in the
+    district. The next line contains the <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$a_1, \dots , a_ N$</span> (<span class="tex2jax_process">$1 \le a_ i \le 10^6$</span>), the number of
+    people who lives on the streets.</p>
+<p>The next line contains the number of pairs of streets that
+    cross <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \le M \le \frac{N(N - 1)}{2}$</span>). The
+    following <span class="tex2jax_process">$M$</span> lines each
+    contain the one-based indices of two streets that cross each
+    other. The streets are numbered in the same order as the
+    <span class="tex2jax_process">$a_ i$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer – the number of the quietest street.
+    If there are several quietest streets, he prefers the one with
+    the lowest index.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 3
+1
+2 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 3
+1
+3 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

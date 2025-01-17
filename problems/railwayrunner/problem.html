@@ -1,0 +1,121 @@
+<div class="problembody">
+<p>Mario decided to outsmart the coolest game of all time
+    “Railway Runner”. But as always he needs your help. Given a
+    railway pattern, he wants to figure out if it is possible to
+    get from one end to the other. Input is given in <span class="tex2jax_process">$N$</span> horizontal lines, each of which
+    contains three characters denoting the three railways. Each
+    cell can be “*” - part of a train, “.” - rails, and “/” -
+    ladder to the roof of the train. You start on the ground on the
+    first row of cells and your goal is to reach the end of the
+    track, which consists of the cells in the <span class="tex2jax_process">$N$</span>-th row. Here are the rules of the
+    game:</p>
+<ul class="itemize">
+<li>
+<p>You can move left and right between two trains (“*”) or
+        two rails (“.”) that are adjacent to each other, but you
+        cannot go backward (up). No diagonal moves are allowed.</p>
+</li>
+<li>
+<p>You can only get on a train from an adjacent train or
+        via a ladder (“/”).</p>
+</li>
+<li>
+<p>You can jump down on the rails from a train rooftop
+        without hurting yourself. You cannot jump off the train to
+        an adjacent line.</p>
+</li>
+<li>
+<p>Assume the input is valid (i.e. each ladder is followed
+        by a train and preceded by a rail).</p>
+</li>
+<li>
+<p>You can start on any column in the first row as long as
+        it’s a rail (“.”). You can finish on any column in the last
+        row without further restrictions.</p>
+</li>
+<li>
+<p>While on a ladder, you must move forward to the
+        corresponding train roof and climb the ladder.</p>
+</li>
+</ul>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{railway.jpeg}" src="/problems/railwayrunner/file/statement/en/img-0001.jpeg" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: First Sample Case Illustration
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 100 \, 000$</span>),
+    representing the length of the railway that you are running
+    across.<br/>
+    Then follows <span class="tex2jax_process">$N$</span> lines of
+    input denoting a row of cells. Each line is a sequence of 3
+    characters chosen from <span class="tex2jax_process">$[* \; .
+    \; /]$</span>, representing a train, rail, or ladder
+    respectively.</p>
+<h2>Output</h2>
+<p>Output one line containing either string “YES” or “NO”,
+    depending on if you can reach the other side of the
+    railway.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+*.*
+*..
+**/
+..*
+.**
+.**
+/**
+***
+*..
+.**
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>16
+...
+///
+***
+...
+*.*
+./.
+.*.
+.*.
+.*.
+.*.
+.*.
+/./
+***
+***
+***
+...
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

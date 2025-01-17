@@ -1,0 +1,75 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/gcpc/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gcpc/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/en/planets-sun-earth-galaxy-sky-1068198/">
+        Picture</a> by GuillaumePreat on Pixabay, cc0
+      </div>
+</div>One hundred years from now, in <span class="tex2jax_process">$2117$</span>, the International Collegiate
+    Programming Contest (of which the NCPC is a part) has expanded
+    significantly and it is now the Galactic Collegiate Programming
+    Contest (GCPC).
+
+    <p>This year there are <span class="tex2jax_process">$n$</span>
+    teams in the contest. The teams are numbered <span class="tex2jax_process">$1,2,\ldots ,n$</span>, and your favorite
+    team has number <span class="tex2jax_process">$1$</span>.</p>
+<p>Like today, the score of a team is a pair of integers
+    <span class="tex2jax_process">$(a,b)$</span> where <span class="tex2jax_process">$a$</span> is the number of solved problems
+    and <span class="tex2jax_process">$b$</span> is the total
+    penalty of that team. When a team solves a problem there is
+    some associated penalty (not necessarily calculated in the same
+    way as in the NCPC – the precise details are not important in
+    this problem). The total penalty of a team is the sum of the
+    penalties for the solved problems of the team.</p>
+<p>Consider two teams <span class="tex2jax_process">$t_1$</span> and <span class="tex2jax_process">$t_2$</span> whose scores are <span class="tex2jax_process">$(a_1,b_1)$</span> and <span class="tex2jax_process">$(a_2,b_2)$</span>. The score of team
+    <span class="tex2jax_process">$t_1$</span> is better than that
+    of <span class="tex2jax_process">$t_2$</span> if either
+    <span class="tex2jax_process">$a_1&gt;a_2$</span>, or if
+    <span class="tex2jax_process">$a_1=a_2$</span> and <span class="tex2jax_process">$b_1&lt;b_2$</span>. The rank of a team is
+    <span class="tex2jax_process">$k+1$</span> where <span class="tex2jax_process">$k$</span> is the number of teams whose score
+    is better.</p>
+<p>You would like to follow the performance of your favorite
+    team. Unfortunately, the organizers of GCPC do not provide a
+    scoreboard. Instead, they send a message immediately whenever a
+    team solves a problem.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, where <span class="tex2jax_process">$1 \le n \le 10^5$</span> is the number of
+    teams, and <span class="tex2jax_process">$1 \le m \le
+    10^5$</span> is the number of events.</p>
+<p>Then follow <span class="tex2jax_process">$m$</span> lines
+    that describe the events. Each line contains two integers
+    <span class="tex2jax_process">$t$</span> and <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \le t \le n$</span> and <span class="tex2jax_process">$1 \le p
+    \le 1000$</span>), meaning that team <span class="tex2jax_process">$t$</span> has solved a problem with penalty
+    <span class="tex2jax_process">$p$</span>. The events are
+    ordered by the time when they happen.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$m$</span> lines. On
+    the <span class="tex2jax_process">$i$</span>’th line, output
+    the rank of your favorite team after the first <span class="tex2jax_process">$i$</span> events have happened.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4
+2 7
+3 5
+1 6
+1 9
+</pre>
+</td>
+<td>
+<pre>
+2
+3
+2
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Open-pit mining is a surface mining technique of extracting
+    rock or minerals from the earth by their removal from an open
+    pit or borrow. Open-pit mines are used when deposits of
+    commercially useful minerals or rocks are found near the
+    surface. Automatic Computer Mining (ACM) is a company that
+    would like to maximize its profits by open-pit mining. ACM has
+    hired you to write a program that will determine the maximum
+    profit it can achieve given the description of a piece of
+    land.</p>
+<p>Each piece of land is modelled as a set of blocks of
+    material. Block <span class="tex2jax_process">$i$</span> has an
+    associated value (<span class="tex2jax_process">$v_ i$</span>),
+    as well as a cost (<span class="tex2jax_process">$c_
+    i$</span>), to dig that block from the land. Some blocks
+    obstruct or bury other blocks. So for example if block
+    <span class="tex2jax_process">$i$</span> is obstructed by
+    blocks <span class="tex2jax_process">$j$</span> and
+    <span class="tex2jax_process">$k$</span>, then one must first
+    dig up blocks <span class="tex2jax_process">$j$</span> and
+    <span class="tex2jax_process">$k$</span> before block
+    <span class="tex2jax_process">$i$</span> can be dug up. A block
+    can be dug up when it has no other blocks obstructing it.</p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 200$</span>) which is the number of blocks. These
+    blocks are numbered <span class="tex2jax_process">$1$</span>
+    through <span class="tex2jax_process">$N$</span>.</p>
+<p>Then follow <span class="tex2jax_process">$N$</span> lines
+    describing these blocks. The <span class="tex2jax_process">$i$</span>th such line describes block
+    <span class="tex2jax_process">$i$</span> and starts with two
+    integers <span class="tex2jax_process">$v_ i$</span>,
+    <span class="tex2jax_process">$c_ i$</span> denoting the value
+    and cost of the <span class="tex2jax_process">$i$</span>th
+    block (<span class="tex2jax_process">$0 \leq v_ i, c_ i \leq
+    200$</span>).</p>
+<p>Then a third integer <span class="tex2jax_process">$0 \leq
+    m_ i \leq N-1$</span> on this line describes the number of
+    blocks that block <span class="tex2jax_process">$i$</span>
+    obstructs. Following that are <span class="tex2jax_process">$m_
+    i$</span> distinct space separated integers between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span> (but excluding <span class="tex2jax_process">$i$</span>) denoting the label(s) of the
+    blocks that block <span class="tex2jax_process">$i$</span>
+    obstructs.</p>
+<p>You may assume that it is possible to dig up every block for
+    some digging order. The sum of values <span class="tex2jax_process">$m_ i$</span> over all blocks <span class="tex2jax_process">$i$</span> will be at most <span class="tex2jax_process">$500$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer giving the maximum profit that ACM
+    can achieve from the given piece of land.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+0 3 2 2 3
+1 3 2 4 5
+4 8 1 4
+5 3 0
+9 2 0
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

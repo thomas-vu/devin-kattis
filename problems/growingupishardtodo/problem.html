@@ -1,0 +1,98 @@
+<div class="problembody">
+<p>Apple Bloom, Sweetie Belle and Scootaloo were magically
+    transformed into adults, and while they’re a little concerned,
+    they’re also really excited. They’ll finally be able to do all
+    the fun grown-up things they’ve always wanted to do: stay up
+    late, eat all the snacks they want, travel the world,
+    gamble...</p>
+<div class="figure" id="a0000000005">
+<center>
+<img alt="\includegraphics[width=0.44\textwidth ]{TBO_Crusaders.png}" src="/problems/growingupishardtodo/file/statement/en/img-0001.png" style="width:44.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1274781294992527361/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>Next on their list: the Appleloosa County Fair!</p>
+<p>The Appleloosa County Fair spans multiple days. There are
+    <span class="tex2jax_process">$N$</span> activities at the
+    fair, which are the same for each day; these activities have
+    different opening times (but are also the same for each day),
+    so for simplicity we can order the activities, and assume that
+    if one wants to do two different activities on any given day,
+    say the <span class="tex2jax_process">$i^\text {th}$</span> and
+    the <span class="tex2jax_process">$j^\text {th}$</span>
+    activities, then if <span class="tex2jax_process">$i &lt;
+    j$</span> then the <span class="tex2jax_process">$i^\text
+    {th}$</span> activity must be done before the <span class="tex2jax_process">$j^\text {th}$</span> activity and
+    vice-versa.</p>
+<p>Each day they visit the fair, they want to choose a subset
+    of the activities to do. Being grown-ups now, of course,
+    they’ve developed a more... <i class="itshape">nuanced</i>
+    taste for entertainment. In particular, for every day they
+    visit the fair:</p>
+<ol class="enumerate">
+<li>
+<p>Apple Bloom wants the activities to be progressively
+        more exciting; they cannot do an activity if its level of
+        excitement is lower than or equal to any activity they have
+        done before on that day.</p>
+</li>
+<li>
+<p>Subject to the above rule, Sweetie Belle wants to do the
+        maximum possible number of activities on each day.</p>
+</li>
+<li>
+<p>Subject to the above two rules, Scootaloo wants to make
+        sure that each visit to the fair is fresh and unique. If
+        today is the <span class="tex2jax_process">$d^\text
+        {th}$</span> day they visited the fair, and we denote by
+        <span class="tex2jax_process">$s_ i$</span> the set of the
+        levels of excitement of the activities done on the
+        <span class="tex2jax_process">$i^\text {th}$</span> day,
+        then <span class="tex2jax_process">$s_ d \neq s_ i$</span>
+        for all <span class="tex2jax_process">$i &lt;
+        d$</span>.</p>
+</li>
+</ol>
+<div class="figure" id="a0000000006">
+<center>
+<img alt="\includegraphics[width=0.42\textwidth ]{explain1.png}" src="/problems/growingupishardtodo/file/statement/en/img-0002.png" style="width:42.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Illustration of Sample Input 1.
+        </div>
+</center>
+</div>
+<p>What is the maximum number of days they can visit the fair
+    if they follow the above three requirements?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 300\, 000$</span>), the number
+    of activities in the Appleloosa County Fair.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$A_1, A_2, \dots , A_ N$</span> (<span class="tex2jax_process">$1 \leq A_ i \leq 10^9$</span>), denoting the
+    levels of excitement of the activities in order.</p>
+<h2>Output</h2>
+<p>Output the a single integer on a line by itself, the maximum
+    number of days they can visit the fair if they follow the
+    requirements.</p>
+<p>Since this number can be quite large, you should output only
+    the remainder after dividing this number by <span class="tex2jax_process">$10^9+7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+3 2 2 4 5 8 7
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

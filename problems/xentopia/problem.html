@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/xentopia/file/statement/en/img-0001.jpg" class="illustration" src="/problems/xentopia/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://pixabay.com/en/locomotive-diesel-russia-train-60539/">
+        WikiImages</a>.
+      </div>
+</div>
+<p>The city of Xentopia has a well-connected railway network.
+    The city has <span class="tex2jax_process">$N$</span> junctions
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$N$</span>. There are
+    <span class="tex2jax_process">$M$</span> pairs of railway
+    tracks that exist between the junctions. Trains can travel in
+    both directions on each track. Each railway track is labelled
+    either red, blue, or white in colour.</p>
+<p>Tima, a tourist in the city, wants to travel from junction
+    <span class="tex2jax_process">$S$</span> to junction
+    <span class="tex2jax_process">$T$</span> in the minimum
+    possible time. She has a map of the railway network that she
+    can use to achieve this goal.</p>
+<p>Tima, being rather eccentric, has an interesting constraint
+    for her travel: She wants to travel via exactly <span class="tex2jax_process">$k_1$</span> red tracks, exactly <span class="tex2jax_process">$k_2$</span> blue tracks, and any number of
+    white tracks, in any order. She is fine with using a railway
+    track more than once.</p>
+<p>Can you tell the minimum time Tima will take to go from
+    <span class="tex2jax_process">$S$</span> to <span class="tex2jax_process">$T$</span>, ensuring that her constraint is
+    not violated?</p>
+<h2>Input</h2>
+<p>The first line contains four space-separated integers:
+    <span class="tex2jax_process">$N$</span>, (<span class="tex2jax_process">$1 \leq N \leq 450$</span>); <span class="tex2jax_process">$M$</span>, (<span class="tex2jax_process">$1
+    \leq M \leq 1\, 100$</span>); <span class="tex2jax_process">$k_1$</span>; and <span class="tex2jax_process">$k_2$</span>, (<span class="tex2jax_process">$0 \leq k_1, k_2 \leq 800$</span>,
+    <span class="tex2jax_process">$k_1 \cdot k_2 \leq 800$</span>).
+    Following are <span class="tex2jax_process">$M$</span> lines.
+    Each line contains four space-separated integers: <span class="tex2jax_process">$U~ V~ X~ C$</span>, denoting that a track
+    exists between junction <span class="tex2jax_process">$U$</span> and junction <span class="tex2jax_process">$V$</span>, (<span class="tex2jax_process">$1
+    \leq U, V \leq N$</span>, <span class="tex2jax_process">$U \neq
+    V$</span>); the train covers this track in <span class="tex2jax_process">$X$</span> seconds, (<span class="tex2jax_process">$0 \leq X \leq 10^9$</span>); and the track
+    is labelled colour <span class="tex2jax_process">$C$</span>,
+    (<span class="tex2jax_process">$0 \leq C \leq 2$</span>). A
+    white track is denoted by <span class="tex2jax_process">$C=0$</span>, a red track is denoted by
+    <span class="tex2jax_process">$C=1$</span>, and a blue track is
+    denoted by <span class="tex2jax_process">$C=2$</span>.</p>
+<p>The last line contains two space-separated integers
+    <span class="tex2jax_process">$S$</span>, (<span class="tex2jax_process">$1 \leq S \leq N$</span>), and <span class="tex2jax_process">$T$</span>, (<span class="tex2jax_process">$1
+    \leq T \leq N$</span>), the source and destination of Tima’s
+    journey, respectively. Note: <span class="tex2jax_process">$S$</span> may be equal to <span class="tex2jax_process">$T$</span>.</p>
+<h2>Output</h2>
+<p>Print a single integer denoting the total time Tima would
+    take. If it is not possible for Tima to reach her destination
+    using exactly <span class="tex2jax_process">$k_1$</span> red
+    tracks, <span class="tex2jax_process">$k_2$</span> blue tracks,
+    and any number of white tracks, output <tt class="ttfamily">-1</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 1 1
+1 2 1 2
+1 3 1 0
+2 4 1 1
+3 4 1 0
+1 4
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 200 1
+1 2 1 1
+2 3 1 0
+2 4 1 2
+1 3
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>You are planning a clever attack against a new encryption
+    algorithm. To succeed, you need to find the key, which is a
+    pair of integers <span class="tex2jax_process">$(p, q)$</span>.
+    We can think of the key as a point on a two-dimensional integer
+    lattice whose location is unknown. However, you know that
+    <span class="tex2jax_process">$(p, q)$</span> lies in the
+    square spanned by the lattice points <span class="tex2jax_process">$(0, 0)$</span> and <span class="tex2jax_process">$(n, n)$</span> for a given <span class="tex2jax_process">$n$</span>, i.e. <span class="tex2jax_process">$0\leq p,q\leq n$</span>.</p>
+<p>Your attack has three stages:</p>
+<ol class="enumerate">
+<li>
+<p>Identify safe points and their bounds.</p>
+</li>
+<li>
+<p>Eliminate as key candidates those points that lie in the
+        “umbra” of any safe point.</p>
+</li>
+<li>
+<p>Test the remaining points to see which one is the
+        key.</p>
+</li>
+</ol>
+<p>Stage 1 has already been performed and you are given several
+    safe points of the form <span class="tex2jax_process">$(x, y,
+    b)$</span> as input.</p>
+<p>In Stage 2 you eliminate a point <span class="tex2jax_process">$(p, q)$</span> if it lies in the umbra of
+    any safe point. Point <span class="tex2jax_process">$(p,
+    q)$</span> is in the umbra of safe point <span class="tex2jax_process">$(x, y, b)$</span> if and only
+    if</p><span class="tex2jax_process">\[ |x-p|^3 + |y-q|^3 \leq
+    b. \]</span>
+<p>Your task in this problem is to count how many points will
+    be left for testing in Stage 3 so that we have an estimate of
+    the amount of work left to complete the attack.</p>
+<div class="figure" id="fig:umbral">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{sample1b.png}" src="/problems/umbraldecoding/file/statement/en/img-0001.png" style="width:30.00%"/> <img alt="\includegraphics[width=0.3\textwidth ]{sample1a.png}" src="/problems/umbraldecoding/file/statement/en/img-0002.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample input safe points and umbra (red)
+          and remaining points (blue).
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input begins with two integers <span class="tex2jax_process">$n, k$</span> on a single line, separated by
+    a space, with <span class="tex2jax_process">$2 \leq n \leq
+    100\, 000\, 000$</span>, and <span class="tex2jax_process">$0
+    \leq k \leq 100$</span>. Following that are <span class="tex2jax_process">$k$</span> lines each containing three
+    integers <span class="tex2jax_process">$x, y, b$</span>
+    separated by spaces, representing the safe points. The values
+    of <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> are both in the range <span class="tex2jax_process">$[0,n]$</span>. The bound <span class="tex2jax_process">$b$</span> lies in the range <span class="tex2jax_process">$[0, n]$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of points <span class="tex2jax_process">$(p, q)$</span>, with <span class="tex2jax_process">$0 \leq p,q \leq n$</span>, that do not lie
+    in the umbra of any safe point.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 1
+2 2 2
+</pre>
+</td>
+<td>
+<pre>
+16
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+30 2
+20 20 30
+25 22 30
+</pre>
+</td>
+<td>
+<pre>
+891
+</pre>
+</td>
+</tr>
+</table>
+</div>

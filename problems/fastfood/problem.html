@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Around regional contest time, the Canadian branch of a
+    popular fast food restaurant usually runs a game to promote its
+    business. Certain food items provide stickers, and certain
+    collection of different stickers can be converted to cash
+    prizes. If a prize requires sticker types <span class="tex2jax_process">$T_1, T_2, \ldots , T_ k$</span>, then you
+    can claim the prize if you have 1 sticker of each type
+    <span class="tex2jax_process">$T_1, T_2, \ldots , T_ k$</span>.
+    Each sticker can only be used to claim one prize. However, you
+    may claim a prize multiple times if you have multiple stickers
+    of the same type. No two prizes will require the same type of
+    stickers. There may be some stickers that cannot be used to
+    claim a cash prize (e.g. a sticker for a free milkshake).</p>
+<p>On your road trip to the regional contest, your coach forced
+    you to eat at this restaurant and collected all the stickers
+    together. How much cash can your coach claim?</p>
+<h2>Input</h2>
+<p>The input consists of multiple test cases. The first line of
+    input is a single integer, not more than <span class="tex2jax_process">$1\, 000$</span>, indicating the number of
+    test cases to follow. Each case starts with a line containing
+    two integers <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \leq n \leq 10$</span>) and
+    <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq m \leq 30$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of
+    different types of prizes, and <span class="tex2jax_process">$m$</span> is the number of different types
+    of stickers (the types are labelled <span class="tex2jax_process">$1, 2, \ldots , m$</span>). The next
+    <span class="tex2jax_process">$n$</span> lines specify the
+    prizes. Each of these lines starts with an integer <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k \leq m$</span>) specifying the number of sticker types
+    required to claim the prize. This is followed by <span class="tex2jax_process">$k$</span> integers specifying the types of
+    the stickers required. The final integer on each line is the
+    (positive) cash value of the prize (at most <span class="tex2jax_process">$1\, 000\, 000$</span>). The last line of
+    each case gives <span class="tex2jax_process">$m$</span>
+    nonnegative integers, with the <span class="tex2jax_process">$i$</span>th integer giving the number of
+    stickers of type <span class="tex2jax_process">$i$</span> your
+    coach has collected. There are no more than <span class="tex2jax_process">$100$</span> stickers of each type.</p>
+<h2>Output</h2>
+<p>For each case, display on a single line the total value of
+    the cash prizes that can be claimed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 10
+3 1 2 3 100
+4 4 5 6 7 200
+2 3 1 4 5 2 2 1 3 4
+3 6
+2 1 2 100
+3 3 4 5 200
+1 6 300
+1 2 3 4 5 6
+3 6
+2 1 2 100
+3 3 4 5 200
+1 6 300
+1 2 0 4 5 6
+</pre>
+</td>
+<td>
+<pre>
+500
+2500
+1900
+</pre>
+</td>
+</tr>
+</table>
+</div>

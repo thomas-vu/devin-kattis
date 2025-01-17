@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>You’d like to figure out whether a car was speeding while it
+    was driving down a straight road. Unfortunately, you don’t have
+    any radar guns or related instruments for measuring speed
+    directly; all you have are photographs taken of the car at
+    various checkpoints on the road at various times. Given when
+    and where these photographs were taken, what is the fastest
+    speed that you can prove the car must have been going at some
+    point along the road?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \le n \le 100$</span>), which is the number of photographs
+    taken.</p>
+<p>Each of the following <span class="tex2jax_process">$n$</span> lines contains two space-separated
+    integers <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0 \le t \le 10^4$</span>) and<br/>
+<span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$0 \le d \le 10^6$</span>), where
+    <span class="tex2jax_process">$t$</span> is the time of the
+    photograph in hours, and <span class="tex2jax_process">$d$</span> is the distance along the road in
+    miles. The first photograph is always taken at time
+    <span class="tex2jax_process">$0$</span> with distance
+    <span class="tex2jax_process">$0$</span>, and both the times
+    and distances strictly increase.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the greatest integral
+    speed that you can be certain the car was going at some point
+    in miles per hour.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 0
+7 42
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 0
+5 24
+10 98
+15 222
+20 396
+</pre>
+</td>
+<td>
+<pre>34
+</pre>
+</td>
+</tr>
+</table>
+</div>

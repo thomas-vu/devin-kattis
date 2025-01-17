@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>You have arrived in The Big City but your journey is not yet
+    complete. You must still navigate the subway and get to your
+    final destination. The information booth in the subway station
+    is unattended and fresh out of maps of the subway system. On
+    the floor you notice fragments of a map. Can you piece together
+    enough of the map to figure out how to get to your final
+    destination?</p>
+<p>Each fragment of the map happens to perfectly contain a
+    single subway station while also identifying all of the other
+    stations that it connects to. Each connection between stations
+    is bi-directional such that it can be travelled going either
+    direction. Using all of the available fragments, your task is
+    to determine the sequence of stations you must pass through in
+    order to reach your final destination or state that there is no
+    route if you don’t have enough information to complete your
+    journey.</p>
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{subwayMap.png}" src="/problems/torn2pieces/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+<h2>Input</h2>
+<p>The first line of input has an integer, <span class="tex2jax_process">$2 \leq N \leq 32$</span>, that identifies
+    the number of pieces of the map that were found.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    each describe a station depicted on one of those pieces. Each
+    of these lines starts with the name of the station they
+    describe and is followed by a space-separated list of all of
+    the station names that are directly connected to that station
+    (there may be as many as <span class="tex2jax_process">$N-1$</span>).</p>
+<p>The final line identifies a starting station and a
+    destination station. The destination station is guaranteed to
+    be different than the starting station.</p>
+<p>Each station name is a string of up to <span class="tex2jax_process">$20$</span> characters using only letters a–z
+    and A–Z. It is guaranteed that there is at most one simple
+    route (without revisiting stations) from the starting station
+    to the destination station.</p>
+<h2>Output</h2>
+<p>Give the sequence of stations that leads from the starting
+    station to the destination station. Separate station names with
+    spaces. If there are not enough pieces of the map to find a
+    route from the starting station to the destination station then
+    output “<tt class="ttfamily">no route found</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+Uptown Midtown
+Midtown Uptown Downtown
+Downtown Midtown
+Uptown Downtown
+</pre>
+</td>
+<td>
+<pre>
+Uptown Midtown Downtown
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+A B
+B A D
+C D
+E D F G
+F E
+G E
+F A
+</pre>
+</td>
+<td>
+<pre>
+F E D B A
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+FirstStop SecondStop
+SecondStop FirstStop ThirdStop
+FifthStop FourthStop SixthStop
+SixthStop FifthStop
+FirstStop FifthStop
+</pre>
+</td>
+<td>
+<pre>
+no route found
+</pre>
+</td>
+</tr>
+</table>
+</div>

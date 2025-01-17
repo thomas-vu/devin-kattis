@@ -1,0 +1,154 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/appallingarchitecture/file/statement/en/img-0001.jpg" class="illustration" src="/problems/appallingarchitecture/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo from <a href="https://www.flickr.com/photos/carloszgz/25296555875/">Carlos
+        ZGZ</a>.
+      </div>
+</div>
+<p>You have recently been hired as an architect for the BAPC
+    (Bureau of Architecture and Promising Constructions),
+    responsible for top-quality buildings such as the Tower of
+    Pisa. However, in the past couple of weeks, some of the
+    structures that the BAPC have made have collapsed! It is up to
+    you to figure out whether any other structures are in
+    danger.</p>
+<p>After some research it seems like the <span class="tex2jax_process">$x$</span>-coordinate of the centers of
+    gravity of some of the structures are off: if the center of
+    gravity is too much to the left or to the right, the structure
+    will fall over. Hence, you decide to check all the blueprints
+    and see whether the structures are stable or not.</p>
+<p>Given is a grid of up to size <span class="tex2jax_process">$100$</span> by <span class="tex2jax_process">$100$</span>, using characters in <tt class="ttfamily">.#/\_|-</tt>. The <span class="tex2jax_process">$\texttt{.}$</span> characters denote empty
+    space, while each other character represents a completely
+    filled <span class="tex2jax_process">$1\times 1$</span> box
+    (any difference in symbols used is due to the artistic freedom
+    of the other architects), whose center of mass is at the center
+    of the box.</p>
+<p>Every structure forms a single connected component that
+    touches the ground, i.e. the bottom layer of the grid.</p>
+<p>The structure falls to the left if the <span class="tex2jax_process">$x$</span>-coordinate of the center of
+    gravity is less than the <span class="tex2jax_process">$x$</span>-coordinate of the leftmost point
+    of the structure that touches the ground, and it falls to the
+    right if the <span class="tex2jax_process">$x$</span>-coordinate of the center of
+    gravity is larger than the <span class="tex2jax_process">$x$</span>-coordinate of the rightmost point
+    of the structure that touches the ground. It is guaranteed that
+    the center of gravity is never exactly above the leftmost or
+    rightmost point where the building touches the ground.</p>
+<p>Given a blueprint, is the structure balanced, does it fall
+    to the left, or does it fall to the right?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line has <span class="tex2jax_process">$1\leq
+        h \leq 100$</span> and <span class="tex2jax_process">$1\leq
+        w\leq 100$</span>, the height and width of the grid.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$h$</span>
+        lines with <span class="tex2jax_process">$w$</span>
+        characters each. Each character is either <tt class="ttfamily">.</tt>, indicating empty space, or one of
+        <tt class="ttfamily">#/\_|-</tt>, indicating a filled
+        <span class="tex2jax_process">$1\times 1$</span> box .</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Print a single line containing <tt class="ttfamily">left</tt>, <tt class="ttfamily">balanced</tt>,
+        or <tt class="ttfamily">right</tt>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+/-\
+|.|
+#.#
+</pre>
+</td>
+<td>
+<pre>balanced
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+...
+___
+..|
+</pre>
+</td>
+<td>
+<pre>left
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+./\
+.\/
+.|.
+</pre>
+</td>
+<td>
+<pre>balanced
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>20 19
+...................
+.........-____---..
+........._/\\////-.
+.......--//#\#\/_..
+......._/\///////_.
+......-/#######\/-.
+......////\/#\#/_..
+....../\#\#/////_..
+....._/#####\#\/...
+....._/\////////-..
+...../########/-...
+...._///\/#\#\/....
+...._/#/#/\/\/_....
+..._/\#######/-....
+..._/\////////-....
+.../\#\#\#\#/-.....
+.._///\\\\#\/-.....
+.._//////////-.....
+..////##////-......
+.-____##____.......
+</pre>
+</td>
+<td>
+<pre>balanced
+</pre>
+</td>
+</tr>
+</table>
+</div>

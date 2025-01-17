@@ -1,0 +1,131 @@
+<div class="problembody">
+<p>After watching the novel “Around the World in Eighty Days”,
+    Alice becomes enthusiastic in travelling abroad. However, due
+    to the lack of flights during the COVID-19 pandemic, Alice
+    decides to travel around the world on foot!</p>
+<p>However, Alice is suffering from decidophobia, so she is
+    unable to decide how to travel around the world. Hence, she
+    develops an innovative method for generating her path: she
+    randomly generates a grid with size <span class="tex2jax_process">$n \times m$</span>, with each cell
+    containing an arrow pointing one of the four directions (north,
+    east, south or west). Then, she packs the grid infinitely many
+    times on the map <b class="bfseries">without rotation</b>. The
+    following figure shows what the map looks like after packing
+    the grid:</p>
+<div class="figure" id="a0000000007">
+<center>
+<img alt="\includegraphics[width=20cm]{packing.png}" src="/problems/journeyoftherepetitor/file/statement/en/img-0001.png" style="width:20cm"/>
+<div class="caption">
+<b>Figure 1</b>: Demonstration of how Alice packs the
+          grid on the map
+        </div>
+</center>
+</div>
+<p>It is known that the initial position of Alice matches the
+    top-left corner of the grid. After packing the grids on the
+    map, she starts moving on the map according to the direction of
+    the arrows. Once she reaches another cell, she will continue
+    moving according to the arrow on that new cell. She never stops
+    moving.</p>
+<p>When Alice draws her journey on the map, she discovers that
+    some grids may lead to a <i class="itshape">infinite</i> path:
+    none of the cells she visits will be visited infinitely many
+    times. She doesn’t like infinite paths as these paths will
+    often lead to a lonely and boring experience. She likes
+    <i class="itshape">repetitive</i> paths instead: some of the
+    cells she visits will be visited infinitely many times. The
+    figures below shows an example of a repetitive path and an
+    infinite path:</p>
+<div class="figure" id="a0000000008">
+<center>
+<img alt="\includegraphics[width=12cm]{repetitive.png}" src="/problems/journeyoftherepetitor/file/statement/en/img-0002.png" style="width:12cm"/>
+<div class="caption">
+<b>Figure 2</b>: An example of a repetitive path
+        </div>
+</center>
+</div>
+<div class="figure" id="a0000000009">
+<center>
+<img alt="\includegraphics[width=12cm]{infinite.png}" src="/problems/journeyoftherepetitor/file/statement/en/img-0003.png" style="width:12cm"/>
+<div class="caption">
+<b>Figure 3</b>: An example of an infinite path
+        </div>
+</center>
+</div>
+<p>Alice plans to change some of the cells in her grid so that
+    the path will become repetitive. Once she changes a cell in the
+    grid, all occurrences of the cell in the map will be changed.
+    For example, the infinite path in the figure above can be made
+    repetitive by changing the cell at <span class="tex2jax_process">$(3, 3)$</span> to ‘S’. The new map is shown
+    below:</p>
+<div class="figure" id="a0000000010">
+<center>
+<img alt="\includegraphics[width=12cm]{sample2.png}" src="/problems/journeyoftherepetitor/file/statement/en/img-0004.png" style="width:12cm"/>
+<div class="caption">
+<b>Figure 4</b>: The repetitive path after changing the
+          cell at <span class="tex2jax_process">$(3, 3)$</span> to
+          ‘S’
+        </div>
+</center>
+</div>
+<p>Can you help Alice to determine the <b class="bfseries">minimum number of cells</b> she needs to change in
+    order to make the path repetitive?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \leq n, m \leq 3000$</span>).</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines of
+    input each contains <span class="tex2jax_process">$m$</span>
+    characters, the cells on the grid (‘N’ for north, ‘E’ for east,
+    ‘S’ for south, ‘W’ for west).</p>
+<h2>Output</h2>
+<p>Output the minimum number of changes made to the grid,
+    <span class="tex2jax_process">$k$</span>, on the first
+    line.</p>
+<p>The next <span class="tex2jax_process">$k$</span> lines
+    should each contain a change, denoted by 2 integers
+    representing the position (row &amp; column) followed by a
+    character (the edited direction of that cell, either ‘N’, ‘E’,
+    ‘S’ or ‘W’). You may output the cells in any order.</p>
+<p>The row and column numbers are 1-indexed.</p>
+<p>If there are multiple solutions, you may output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+WWNW
+SWWE
+ESEN
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+SNWS
+EENE
+WEEN
+</pre>
+</td>
+<td>
+<pre>1
+3 3 S
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>Marcy is attending Pride Fest and has signed up to
+    participate in the Rainbow Road Race. On each street, there are
+    volunteers who have colored chalk powder. As contestants walk
+    along a street, volunteers throw chalk onto the contestants.
+    The chalk thrown on each street is one of the seven colors of
+    the rainbow (Red, Orange, Yellow, Green, Blue, Indigo, Violet).
+    Once a person starts walking along a street, they must walk to
+    the end of that street.</p>
+<p>The race starts at the <i class="itshape">Festival Tent</i>.
+    The goal of the race is to get covered by chalk of every color
+    and come back to the tent. Help Marcy determine the shortest
+    distance she has to travel to get every color and make it back
+    to the tent.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{rrr.pdf}" src="/problems/rainbowroadrace/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The left picture illustrates Sample
+          Input 1 and the right picture illustrates Sample Input 2.
+          The triangle is the Festival Tent.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$7 \leq n \leq 7^3$</span>), which is the
+    number of fun locations at the festival, and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$7 \leq m \leq 7^4$</span>), which is the
+    number of streets connecting the fun locations. The fun
+    locations are numbered <span class="tex2jax_process">$1, \dots
+    , n$</span> and the Festival Tent is location <span class="tex2jax_process">$1$</span>.</p>
+<p>The next <span class="tex2jax_process">$m$</span> lines
+    describe the streets. Each of these lines contains three
+    integers <span class="tex2jax_process">$\ell _1$</span>,
+    <span class="tex2jax_process">$\ell
+    _2$</span> (<span class="tex2jax_process">$1 \leq \ell _1
+    &lt; \ell _2 \leq n$</span>) and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1 \leq d \leq 7^5$</span>), followed by a
+    single character <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$c$</span> is one of <tt class="ttfamily">R</tt>, <tt class="ttfamily">O</tt>, <tt class="ttfamily">Y</tt>, <tt class="ttfamily">G</tt>, <tt class="ttfamily">B</tt>, <tt class="ttfamily">I</tt>, <tt class="ttfamily">V</tt>). This specifies that this street connects
+    locations <span class="tex2jax_process">$\ell _1$</span> and
+    <span class="tex2jax_process">$\ell _2$</span>, is <span class="tex2jax_process">$d$</span> meters long and the chalk thrown
+    is color <span class="tex2jax_process">$c$</span>.</p>
+<p>It is always possible to travel between any pair of fun
+    locations. There is at most one street between any two pairs of
+    locations and each color appears at least once.</p>
+<h2>Output</h2>
+<p>Display the shortest distance Marcy has to travel to get
+    every color and make it back to the Festival Tent.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 7
+1 2 1 R
+2 3 1 O
+3 4 1 Y
+4 5 1 G
+5 6 1 B
+6 7 1 I
+1 7 1 V
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 7
+1 2 1 R
+1 3 1 O
+1 4 1 Y
+1 5 1 G
+1 6 1 B
+1 7 1 I
+1 8 1 V
+</pre>
+</td>
+<td>
+<pre>14
+</pre>
+</td>
+</tr>
+</table>
+</div>

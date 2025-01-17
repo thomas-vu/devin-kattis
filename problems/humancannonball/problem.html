@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>You are a world-famous circus performer, a human cannonball.
+    This means that you climb into a big, fake cannon and launch
+    yourself great distances to delight young and old alike. Today,
+    you’re not alone. You are at the international human cannonball
+    conference and exposition, where hundreds of similar circus
+    performers have gathered together to share their experiences
+    and practice their craft. While you normally have just one
+    cannon to work with, at the conference there are usually lots
+    of cannons to examine and try out.</p>
+<p>The availability of several cannons creates some interesting
+    opportunities for navigating the conference. If you want to
+    travel quickly from point <span class="tex2jax_process">$a$</span> to point <span class="tex2jax_process">$b$</span>, you could just run straight from
+    <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$b$</span>, or, you could run to a nearby
+    cannon and launch yourself somewhere else. From there, you can
+    continue to run toward your destination or you can continue to
+    use cannons in an effort to get to your destination more
+    quickly. With cannons positioned like Figure 1, you could
+    follow a path like the one in Figure 2 to get from <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$b$</span>. The arrows show places where you
+    launched yourself out of a cannon, and the lines show where you
+    ran to the next cannon or to your destination.</p>
+<div class="figure">
+<center>
+<div class="minipage" style="width:270.0pt">
+<img alt="\includegraphics[width=\textwidth ]{cannons1}" src="/problems/humancannonball/file/statement/en/img-0001.png" style="width:"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the sample input.
+          </div>
+</div>  
+
+        <div class="minipage" style="width:270.0pt">
+<img alt="\includegraphics[width=\textwidth ]{cannons2}" src="/problems/humancannonball/file/statement/en/img-0002.png" style="width:"/>
+<div class="caption">
+<b>Figure 2</b>: A suboptimal solution.
+          </div>
+</div>
+</center>
+</div>
+<p>You run at a rate of 5 meters per second. All cannons launch
+    you a distance of 50 meters, in any direction you’d like.
+    Climbing into a cannon, launching yourself and landing takes a
+    total of 2 seconds. Cannons are not obstacles; if a cannon is
+    in your way, you can jump over or run around it without it
+    slowing you down. Given your current location, a desired
+    destination and the positions of available cannons, you want to
+    plan how to get to the destination as quickly as possible.</p>
+<h2>Input</h2>
+<p>The input describes a single navigation problem. The first
+    line gives a pair of real numbers, the <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> coordinates where you’re currently
+    located. The next line give the real-valued <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> coordinates of the location you’d
+    like to reach. This is followed by a line with an integer,
+    <span class="tex2jax_process">$n$</span>, the number of cannons
+    available. The remaining <span class="tex2jax_process">$n$</span> input lines each contain a pair of
+    real values giving the <span class="tex2jax_process">$X$</span>
+    and <span class="tex2jax_process">$Y$</span> coordinates for a
+    cannon. All coordinates are measured in meters, and the value
+    of <span class="tex2jax_process">$n$</span> will be between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Print a single line of output, the total number of seconds
+    required to reach your destination as quickly as possible. Your
+    answer must be accurate to within 0.001 seconds.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+25.0 100.0
+190.0 57.5
+4
+125.0 67.5
+75.0 125.0
+45.0 72.5
+185.0 102.5
+</pre>
+</td>
+<td>
+<pre>
+19.984901
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,104 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le N \le 40$</span>, the degree of the
+    recurrence. The next line of input contains <span class="tex2jax_process">$N+1$</span> integers <span class="tex2jax_process">$a_0, a_1, \ldots , a_ N$</span> indicating
+    that the linear recurrence is <span class="tex2jax_process">$x_{t} = a_0 + \sum _{i=1}^ N a_ i
+    x_{t-i}$</span>. The next line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$x_0, \ldots , x_{N-1}$</span> giving the
+    initial values for the recursion. All the coefficients
+    <span class="tex2jax_process">$a_0, \ldots , a_ N$</span> and
+    initial values <span class="tex2jax_process">$x_0, \ldots ,
+    x_{N-1}$</span> are integers between <span class="tex2jax_process">$-10^9$</span> and <span class="tex2jax_process">$10^9$</span> (inclusive).</p>
+<p>The next line contains an integer <span class="tex2jax_process">$1 \le Q \le 10$</span>, the number of
+    queries. Then follow <span class="tex2jax_process">$Q$</span>
+    lines of queries. Each query consists of two integers
+    <span class="tex2jax_process">$T$</span>, <span class="tex2jax_process">$M$</span> where <span class="tex2jax_process">$0 \le T \le 10^{18}$</span> gives the index
+    and <span class="tex2jax_process">$1 \le M \le 10^{9}$</span>
+    is a moduli.</p>
+<h2>Output</h2>
+<p>For each query <span class="tex2jax_process">$T$</span>,
+    <span class="tex2jax_process">$M$</span>, output a line
+    containing <span class="tex2jax_process">$x_ T \bmod
+    M$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 1 1
+0 1
+6
+1 100000
+2 100000
+3 100000
+4 100000
+5 100000
+6 100000
+</pre>
+</td>
+<td>
+<pre>
+1
+1
+2
+3
+5
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+5 7 9
+36713 5637282
+4
+1 10000
+1375 1
+3781 23
+34683447233 1571385
+</pre>
+</td>
+<td>
+<pre>
+7282
+0
+16
+299255
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 2 3 4
+0 0 0
+1
+42424242424242 1000000
+</pre>
+</td>
+<td>
+<pre>
+552200
+</pre>
+</td>
+</tr>
+</table>
+</div>

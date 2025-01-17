@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>The artist Jackson Pollock used to create works of art by,
+    among other things, dripping paint onto the canvas. He died in
+    1956, but, if he were alive today, he would probably appreciate
+    some computational help in planning out his masterpieces.</p>
+<p>We start with a large, white canvas. We let drops of paint
+    fall onto the canvas one after another, letting each one dry
+    before the next. Thus, successive drops paint over the color
+    left by previous drops. When a drop of paint hits the canvas at
+    point <span class="tex2jax_process">$p$</span>, it spreads out
+    to form a circle of uniform thickness centered at <span class="tex2jax_process">$p$</span>. A drop of volume <span class="tex2jax_process">$v$</span> will spread out to a circle of
+    radius <span class="tex2jax_process">$r$</span> where
+    <span class="tex2jax_process">$v = \pi r^2$</span>. Since
+    underlying paint is already dry, all points a distance of
+    <span class="tex2jax_process">$r$</span> or less from
+    <span class="tex2jax_process">$p$</span> will be colored with
+    the new drop’s color. Your job is to determine the final color
+    of various points on the painting.</p>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$1 \le c \le 100$</span> indicating the
+    number of painting descriptions which follow. Each painting
+    description starts with an integer <span class="tex2jax_process">$1 \le n \le 100$</span> giving the number of
+    paint drops that will be applied to the painting. This is
+    followed by <span class="tex2jax_process">$n$</span> lines,
+    each starting with three real numbers <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>, and <span class="tex2jax_process">$V$</span> and a color. The location
+    <span class="tex2jax_process">$(X, Y)$</span> is the location
+    of the drop, and <span class="tex2jax_process">$V$</span> is
+    its paint volume. The color is given as a string with
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span> characters (a–z, either case).
+    Each painting description is followed by a series of queries.
+    The query list starts with an integer <span class="tex2jax_process">$1 \le m \le 100$</span>, giving the number
+    of queries. This is followed by <span class="tex2jax_process">$m$</span> lines, each containing a the
+    <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> coordinates of the query. All real
+    values are in the range <span class="tex2jax_process">$[0, 1\,
+    000]$</span> with at most <span class="tex2jax_process">$3$</span> digits after the decimal point.
+    All queries fall somewhere on the canvas.</p>
+<h2>Output</h2>
+<p>For each query, output the color of the paint at that point
+    on the canvas.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+3
+0 0 4 blue
+2 3 8 red
+4 3 10 green
+3
+1 0
+2 2
+6 6
+</pre>
+</td>
+<td>
+<pre>
+blue
+red
+white
+</pre>
+</td>
+</tr>
+</table>
+</div>

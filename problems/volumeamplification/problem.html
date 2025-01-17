@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/volumeamplification/file/statement/en/img-0001.jpg" class="illustration" src="/problems/volumeamplification/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.flickr.com/photos/audiophilia/294937747/">audiophilia</a>.
+      </div>
+</div>
+<p>You have a bunch of audio amplifiers which you have been
+    given by your uncle, who has too much stuff lying around. An
+    amplifier takes an audio signal as input and produces the same
+    signal frequencies as output, but with a possibly different
+    volume level. It multiplies the input signal by some constant
+    factor to produce its output. You want to string them together
+    in sequence to produce a desired volume level for your
+    speakers. Using each amplifier at most once, how close can you
+    get, without going over your desired volume?</p>
+<p>For example, suppose that your music player is producing a
+    volume level of <span class="tex2jax_process">$1$</span>, and
+    you want to amplify this signal to a volume level of
+    <span class="tex2jax_process">$80$</span>. You have three
+    amplifiers that multiply the volume input to them by factors of
+    <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$10$</span>, or <span class="tex2jax_process">$8$</span>, respectively. If you use the
+    latter two amplifiers in sequence, it will produce the desired
+    volume level. However, if your desired volume level was
+    <span class="tex2jax_process">$35$</span>, then the closest you
+    can get is <span class="tex2jax_process">$30$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$0 \le n \le 10$</span> indicating the number
+    of test cases that follow. Each test case has two lines. The
+    first line contains two integers <span class="tex2jax_process">$1 \le a \le 100$</span> and <span class="tex2jax_process">$1 \le y \le 10\, 000\, 000$</span>,
+    indicating the number of amplifiers and the target
+    amplification, respectively. The second line contains
+    <span class="tex2jax_process">$a$</span> amplifier
+    descriptions, given as space-separated integers. Each amplifier
+    description is an integer in the range <span class="tex2jax_process">$[1,100]$</span>, indicating the amplifier’s
+    multiplication factor.</p>
+<h2>Output</h2>
+<p>Assume that the output from your music player is at volume
+    level <span class="tex2jax_process">$1$</span>. For each test
+    case with goal amplification <span class="tex2jax_process">$y$</span>, give the closest output level you
+    can achieve that is <span class="tex2jax_process">$\le
+    y$</span> using a series of <span class="tex2jax_process">$0$</span> or more amplifiers.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3 80
+3 10 8
+3 35
+3 10 8
+</pre>
+</td>
+<td>
+<pre>80
+30
+</pre>
+</td>
+</tr>
+</table>
+</div>

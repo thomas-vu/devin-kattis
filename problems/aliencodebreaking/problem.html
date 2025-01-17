@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>You’ve intercepted encrypted communications between Martian
+    diplomats. Since Martian diplomats are often spies, you decide
+    to decrypt the messages. While the Martians have skilled rocket
+    tech, they lag behind in number theory considerably, which
+    compromises their encryption protocol.</p>
+<p>Fortunately for you, spies friendly to you have reverse
+    engineered the Martian protocol. It turns out that the Martians
+    are using a shift-based cipher combined with a very long
+    one-time pad. More specifically, the decryption procedure works
+    as follows:</p>
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/aliencodebreaking/file/statement/en/img-0001.png" class="illustration" src="/problems/aliencodebreaking/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Step 1: Define the function <span class="tex2jax_process">$f(x) = (33x + 1) \mod
+    2^{20}$</span>.<br/></p>
+<p>Further define <span class="tex2jax_process">$f^1(x) =
+    f(x)$</span>,  <span class="tex2jax_process">$f^2(x) =
+    f(f(x))$</span>,  <span class="tex2jax_process">$f^3(x) =
+    f(f(f(x)))$</span>, and so on.</p>
+<p>Step 2: Create a <span class="tex2jax_process">$X$</span> by
+    <span class="tex2jax_process">$X$</span> size grid, fill the
+    upper left corner with <span class="tex2jax_process">$f^1(0)$</span>, the next cell to the right
+    with <span class="tex2jax_process">$f^2(0)$</span>,
+    <span class="tex2jax_process">$f^3(0)$</span> etc. Once the top
+    row is filled, continue to the cell below the upper left cell,
+    and fill with <span class="tex2jax_process">$f^{X+1}(0)$</span>. Continue this process
+    until all rows are filled.</p>
+<p>Step 3: Sum all the values in every column, and take those
+    values mod <span class="tex2jax_process">$2^{20}$</span>.</p>
+<p>Step 4: Concatenate the base-10 representations of the
+    column sums together, to get a very long base-10 number. For
+    instance, if you had column sums of <tt class="ttfamily">10</tt> and <tt class="ttfamily">12</tt> for the
+    first and second column, the leftmost four digits of the
+    resulting value would be <tt class="ttfamily">1012</tt>.</p>
+<p>Step 5: Convert the result of step 4 from base <span class="tex2jax_process">$10$</span> to base <span class="tex2jax_process">$27$</span>. This will yield the one-time pad
+    the Martians used.</p>
+<p>Step 6: For each letter <span class="tex2jax_process">$l$</span> of the intercepted message, shift
+    the letter by the amount given by the corresponding digit of
+    step 5, base <span class="tex2jax_process">$27$</span>.
+    “Shifting” means to add the digit at the corresponding position
+    of the pad to the value of the letter in the encrypted message
+    and then to compute its remainder modulo <span class="tex2jax_process">$27$</span>. You may assume that both the
+    encrypted and the decrypted message consist of only uppercase
+    English characters ‘<tt class="ttfamily">A</tt>’ through
+    ‘<tt class="ttfamily">Z</tt>’ and spaces, which are assigned
+    values <span class="tex2jax_process">$0 \ldots 26$</span>
+    (<tt class="ttfamily">A = 0</tt>, <tt class="ttfamily">B =
+    1</tt>, ... <tt class="ttfamily">Z = 25</tt>, <tt class="ttfamily">SPACE = 26</tt>). Thus, if the encrypted message has
+    letter ‘<tt class="ttfamily">D</tt>’ in position <span class="tex2jax_process">$3$</span>, and the <span class="tex2jax_process">$3^{\text {rd}}$</span> base-<span class="tex2jax_process">$27$</span> digit of the pad is <span class="tex2jax_process">$25$</span>, then the decrypted letter after
+    shifting would be <span class="tex2jax_process">$3 + 25 = 1
+    \mod 27$</span> which is ‘<tt class="ttfamily">B</tt>’.</p>
+<p>Step 7: Output the decrypted message.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two positive integers,
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 10^6$</span>), and <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$1
+    \le X \le 2.5 \cdot 10^5$</span>). It is guaranteed that the
+    base <span class="tex2jax_process">$27$</span> result of step 5
+    will be longer or equal to the length of the intercepted
+    message. The second line of the input contains a string
+    consisting of uppercase letters and spaces of length
+    <span class="tex2jax_process">$N$</span>, the encrypted
+    text.</p>
+<h2>Output</h2>
+<p>Output the decrypted text.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>14 4
+JQ IRKEYFG EXQ
+</pre>
+</td>
+<td>
+<pre>THIS IS A TEST
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>43 100000
+BLNAMOTPRRNIXRNMPIWHXDZTRQJXRKIAIEEIIPJLGZP
+</pre>
+</td>
+<td>
+<pre>FRIENDS ROMANS COUNTRYMEN LEND ME YOUR EARS
+</pre>
+</td>
+</tr>
+</table>
+</div>

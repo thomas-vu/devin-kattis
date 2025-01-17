@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/foodmixing/file/statement/en/img-0001.jpg" class="illustration" src="/problems/foodmixing/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A Volbonan cooking stew.
+      </div>
+</div>
+<p>The Volbonans of the Luncheon Kingdom are cooking their
+    famous Stupendous Stew! For the Volbonans, Stupendous Stew is
+    simply any soup that has saltiness level <span class="tex2jax_process">$x$</span> and sweetness level <span class="tex2jax_process">$y$</span>.</p>
+<p>However, Bowser has stolen all of their ingredients! All
+    they have left are existing soups: <span class="tex2jax_process">$n$</span> soups of varying salt levels
+    <span class="tex2jax_process">$a_1,a_2,\dots ,a_ n$</span> and
+    sweetness levels <span class="tex2jax_process">$b_1,b_2,\dots
+    ,b_ n$</span>. The Volbonans are attempting to salvage the
+    situation by mixing their soups into a Stupendous Stew.</p>
+<p>The saltiness and the sweetness of a mixture of soups is
+    given by the weighted sum of the soups used to make it. For
+    example if a mixture consisted of <span class="tex2jax_process">$75\% $</span> of a soup of <span class="tex2jax_process">$3$</span> saltiness and <span class="tex2jax_process">$25\% $</span> of a soup of <span class="tex2jax_process">$5$</span> saltiness, it would have a
+    saltiness of <span class="tex2jax_process">$3.5$</span>.</p>
+<p>More formally, for each soup <span class="tex2jax_process">$i = 1, \ldots , n$</span>, let <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$0 \leq p_ i \leq 1$</span>) denote the
+    proportion of soup <span class="tex2jax_process">$i$</span>
+    used in a mixture. Then, the saltiness of the mixture is given
+    by <span class="tex2jax_process">$\sum _{i=1}^ n p_ ia_
+    i$</span> and the sweetness is <span class="tex2jax_process">$\sum _{i=1}^ n p_ ib_ i$</span>. The sum of
+    all <span class="tex2jax_process">$p_ i$</span> must be
+    <span class="tex2jax_process">$1$</span>.</p>
+<p>Tell the Volbonans if they can make Stupendous Stew. If they
+    can, tell them how to make it.</p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$1 \leq n \leq 100\, 000$</span>,
+    representing the number of existing soups. The following line
+    contains <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$a_1,a_2,\ldots ,a_ n$</span>
+    (<span class="tex2jax_process">$0\leq a_ i\leq 1\,
+    000$</span>), the saltiness levels of the <span class="tex2jax_process">$n$</span> soups. The following line contains
+    <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$b_1,b_2,\ldots ,b_ n$</span> (<span class="tex2jax_process">$0\leq b_ i\leq 1\, 000$</span>), the
+    sweetness levels of the <span class="tex2jax_process">$n$</span> soups. The last line contains
+    integers <span class="tex2jax_process">$x$</span> and
+    <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$0\leq x,y \leq 1\, 000$</span>), the target
+    saltiness and sweetness levels.</p>
+<h2>Output</h2>
+<p>If it is possible to make the Stupendous Stew, on the first
+    line print “Yes” followed by a second line with proportions of
+    each soup used in the mixture <span class="tex2jax_process">$p_1, p_2, \dots , p_ n$</span>. Otherwise,
+    print “No”.</p>
+<p>If it is possible to make the Stupendous Stew, your answer
+    will be accepted if both the sweetness of your mixture and the
+    saltiness do not exceed an absolute or relative error of
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 4 5
+1 1 1 3
+3 2
+</pre>
+</td>
+<td>
+<pre>Yes
+0.5 0.0 0.0 0.5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 4 5
+1 1 1 4
+3 2
+</pre>
+</td>
+<td>
+<pre>Yes
+0.4444444 0.0000000 0.2222222 0.3333333 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+7 8 7
+8 7 7
+8 8
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

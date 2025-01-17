@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>You have a busy schedule to keep up with. Every time you
+    make a new appointment, you scribble the starting time down on
+    a little note pad. At the start of every day (12:00 a.m.), you
+    sort the appointments for that day from earliest to latest and
+    then go to sleep. Instead of having to be up at midnight every
+    night to sort your appointments, you decide this would be a
+    good job for your computer.</p>
+<h2>Input</h2>
+<p>Input contains at most <span class="tex2jax_process">$100$</span> test cases. Each test case
+    describes the appointments for a single day, starting with a
+    line containing the number of appointments <span class="tex2jax_process">$1 \leq n \leq 100$</span>. Following this
+    are <span class="tex2jax_process">$n$</span> lines, each
+    containing one appointment time. Each appointment time has the
+    format <tt class="tt">H:M Z</tt> where <tt class="tt">H</tt> is
+    an integer in the range <span class="tex2jax_process">$[1,
+    12]$</span> representing the hour, <tt class="tt">M</tt> is a
+    zero-padded two-digit integer in the range <span class="tex2jax_process">$[00, 59]$</span> representing the minute,
+    and and <tt class="tt">Z</tt> is either ‘<tt class="tt">a.m.</tt>’ or ‘<tt class="tt">p.m.</tt>’ representing
+    times before or after mid-day, respectively. The sequence of
+    test cases ends with a value of zero for <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output the sequence of event starting
+    times sorted from earliest to latest in the day, one per line.
+    Format times in the same way as the input. Separate adjacent
+    test case outputs with a blank line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+3:00 a.m.
+3:00 p.m.
+12:00 a.m.
+11:59 a.m.
+12:00 p.m.
+3
+3:30 p.m.
+9:30 a.m.
+3:30 p.m.
+0
+</pre>
+</td>
+<td>
+<pre>
+12:00 a.m.
+3:00 a.m.
+11:59 a.m.
+12:00 p.m.
+3:00 p.m.
+
+9:30 a.m.
+3:30 p.m.
+3:30 p.m.
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,132 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/handybeer/file/statement/en/img-0001.jpg" class="illustration" src="/problems/handybeer/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Karl is an blazingly fast typist and always wins the anual
+    speed typing competition at ScrollBar by a wide margin.</p>
+<p>This year, he wants to show off even more than usual: he
+    plans to win while holding a beer. Of course, holding a beer
+    will slow him down quite a bit, as he can only type with the
+    free hand. Karl can reach all the keys preferred by the given
+    hand in normal QWERTY touch typing at his normal (blazingly
+    fast) speed. But when reaching over to the other hand’s domain,
+    his speed deteriorates to one keystroke per second. The space
+    bar can be reached (blazingly fast) with either hand.</p>
+<center>
+<img alt="\includegraphics[width=.5\textwidth ]{img/qwerty.pdf}" src="/problems/handybeer/file/statement/en/img-0002.png" style="width:50.00%"/><br/>
+</center>
+<p>At any point in time, Karl can swap the beer over to his
+    other hand, but that will take a little bit of time. Karl can
+    choose which hand the beer starts in.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, <span class="tex2jax_process">$t$</span> and <span class="tex2jax_process">$s$</span>, with <span class="tex2jax_process">$0&lt;t&lt;1000$</span> and <span class="tex2jax_process">$500\leq s \leq 5000$</span>. The (blazingly
+    fast) typing speed <span class="tex2jax_process">$t$</span> is
+    how many milliseconds it takes Karl to type one character with
+    the preferred hand. The swapping speed <span class="tex2jax_process">$s$</span> is how many milliseconds it takes
+    to swap the beer between hands.</p>
+<p>The second line contains the text that Karl must type. The
+    text consists of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$1000$</span> characters, all lower case
+    letters a–z as well as space, comma, and period. The newline
+    character at the end is not part of the text.</p>
+<h2>Output</h2>
+<p>A single integer: the shortest possible time for Karl to
+    finish typing the given text, in milliseconds.</p>
+<h2>Sample 1 explanation</h2>
+<p>There are two optimal ways for Karl to type “<tt class="tt">ready room</tt>” within <span class="tex2jax_process">$3450$</span> ms.</p>
+<p>First way: touch type “<tt class="tt">read</tt>”, swap the
+    beer over, touch type “<tt class="tt">y </tt>”, reach over
+    and slow type “<tt class="tt">r</tt>”, and touch type
+    “<tt class="tt">oom</tt>”. Total time: <span class="tex2jax_process">$50 + 50 + 50 + 50 + 2000 + 50 + 50 + 1000 +
+    50 + 50 + 50 = 3450$</span>.</p>
+<p>Second way: touch type “<tt class="tt">read</tt>”, reach
+    over and slow type “<tt class="tt">y</tt>”, touch type
+    “<tt class="tt"> r</tt>”, swap the beer over, and touch
+    type “<tt class="tt">oom</tt>”. Total time: <span class="tex2jax_process">$50 + 50 + 50 + 50 + 1000 + 50 + 50 + 2000 +
+    50 + 50 + 50 = 3450$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>50 2000
+ready room
+</pre>
+</td>
+<td>
+<pre>3450
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>50 1000
+a yummy test.
+</pre>
+</td>
+<td>
+<pre>3550
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>100 800
+hej, verden.
+</pre>
+</td>
+<td>
+<pre>3700
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>50 1000
+le
+</pre>
+</td>
+<td>
+<pre>1050
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>50 500
+le
+</pre>
+</td>
+<td>
+<pre>600
+</pre>
+</td>
+</tr>
+</table>
+</div>

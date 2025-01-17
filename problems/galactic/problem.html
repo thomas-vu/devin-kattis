@@ -1,0 +1,88 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/galactic/file/statement/en/img-0001.jpg" class="illustration" src="/problems/galactic/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Phto by <a href="http://www.spacetelescope.org/images/heic1214a">NASA, ESA,
+        G. Illingworth, D. Magee, and P. Oesch (University of
+        California, Santa Cruz), R. Bouwens (Leiden University),
+        and the HUDF09 Team</a>.
+      </div>
+</div>
+<p>Will the galaxy see peace at last? All the warlords have
+    gathered to divide all of space between themselves. The
+    negotiations have come quite far and the warlords have finally
+    agreed on a peaceful way of deciding who gets what. The
+    <span class="tex2jax_process">$2$</span>-dimensional galactic
+    map must first be divided into sectors by splitting it along a
+    set of infinite lines. The warlord with the largest battle
+    fleet will choose one sector, then the warlord with the second
+    largest fleet will choose some other sector and so on, until
+    everyone has gotten a sector. This is then repeated until there
+    are no sectors left.</p>
+<p>Different sets of lines have been suggested, and it is up to
+    you to present these alternatives to the meeting. To make sure
+    that there will be peace, you are ready to modify the
+    suggestions slightly. You have some experience with warlords
+    and know that no warlord will settle for less space than anyone
+    else, so for there to be peace, all of them must get the exact
+    same area on the map. Since space is infinite, so is the map.
+    Some sectors therefore have infinite area, so that is the
+    amount of space everyone wants. How many extra lines do you
+    have to add to make sure each warlord can get at least one
+    sector with infinite area?</p>
+<h2>Input</h2>
+<p>The first line of input contains two positive integers
+    <span class="tex2jax_process">$W$</span> and <span class="tex2jax_process">$N$</span>, (<span class="tex2jax_process">$1
+    \leq W,N \leq 100$</span>) denoting the number of warlords and
+    the number of lines in the suggested division of space. This is
+    followed by <span class="tex2jax_process">$N$</span> lines each
+    containing four integers <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span> and <span class="tex2jax_process">$y_2$</span>, each with an absolute value no
+    higher than <span class="tex2jax_process">$10\, 000$</span>.
+    This means that one line is intersecting the two points
+    <span class="tex2jax_process">$(x_1,y_1)$</span> and
+    <span class="tex2jax_process">$(x_2,y_2)$</span> on the
+    galactic map. These two points are not be the same.</p>
+<h2>Output</h2>
+<p>Output the number of lines you have to add to this
+    suggestion to satisfy all warlords.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1
+1 1 -2 0
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+0 5 5 5
+0 0 1 1
+2 2 3 3
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

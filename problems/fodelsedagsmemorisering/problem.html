@@ -1,0 +1,132 @@
+<div class="problembody">
+<p>Krarkl wants to learn the birthdays of all his <span class="tex2jax_process">$N$</span> friends, so he knows whom to
+    congratulate each day. Unfortunately collisions sometimes
+    arise, meaning several friends may have the same birthday. This
+    may confuse Krarkl, so he decided to only remember the birthday
+    of the friend he likes the most in case of a collision. Given a
+    list of birthdays for each of his friends and how much Krarkl
+    likes each friend, print what friends Krarkl will remember the
+    birthday for.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 2\, 000$</span>), the number of friends.</p>
+<p>Then <span class="tex2jax_process">$N$</span> lines follow,
+    one for each friend. The <span class="tex2jax_process">$i$</span>’th of these lines contains a
+    string with the <span class="tex2jax_process">$i$</span>’th
+    friend’s first name <span class="tex2jax_process">$S_ i$</span>
+    (<span class="tex2jax_process">$S_ i$</span> will be between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> letters long), an integer
+    <span class="tex2jax_process">$C_ i$</span> (<span class="tex2jax_process">$0 \leq C_ i \leq 100\, 000$</span>) denoting
+    how much Krarkl likes the friend, and their birthday given in
+    the format <tt class="ttfamily">DD/MM</tt> (where <tt class="ttfamily">DD</tt> is a day between <tt class="ttfamily">01</tt> and <tt class="ttfamily">31</tt>, and
+    <tt class="ttfamily">MM</tt> is a month between <tt class="ttfamily">01</tt> and <tt class="ttfamily">12</tt>). A higher
+    value of <span class="tex2jax_process">$C_ i$</span> means that
+    Krarkl likes that friend more.</p>
+<p>The birthdays will be real dates during 2020 (a leap year),
+    for example <tt class="ttfamily">28/02</tt> for February 28.
+    All names will consist only of small English letters
+    (<tt class="ttfamily">a-z</tt>) with a capital first letter
+    (<tt class="ttfamily">A-Z</tt>). All <span class="tex2jax_process">$C_ i$</span> will be distinct.</p>
+<h2>Output</h2>
+<p>On the first line, print an integer <span class="tex2jax_process">$K$</span> – the number of friends whose
+    birthdays Krarkl will remember.</p>
+<p>This should be followed by <span class="tex2jax_process">$K$</span> lines containing a single word
+    each, the first names of the chosen friends, <b class="bfseries">in lexicographical order</b>.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a number of test case
+    groups. To get the points for a group, you need to pass all
+    test cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$70$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of samples</h2>
+<p>In the first sample, Sanna and Simon have the same birthday.
+    Since Krarkl likes Sanna less than Simon (<span class="tex2jax_process">$1 &lt; 2$</span>), Krarkl will only remember
+    Simon’s and Saga’s birthdays.</p>
+<p>In the second sample, Krarkl has really bad luck and will
+    miss half of his friends’ birthdays.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Sanna 1 16/03
+Simon 2 16/03
+Saga 3 14/10
+</pre>
+</td>
+<td>
+<pre>2
+Saga
+Simon
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+Oden 78 03/12
+Tor 132 14/05
+Freja 10000 14/05
+Loke 512 12/10
+Hel 14 04/05
+Fjorgynn 532 13/05
+Hildegun 500 13/05
+Vindsval 17 03/12
+Snotra 20 04/05
+Kvaser 420 03/12
+</pre>
+</td>
+<td>
+<pre>5
+Fjorgynn
+Freja
+Kvaser
+Loke
+Snotra
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,145 @@
+<div class="problembody">
+<p>The Department of Defense has been designing autonomous
+    robots that can infiltrate war zones and other hostile places
+    in order to carry out missions. Now they want to test their
+    latest design, the Penetrator1700, and they’ve hired you to
+    help design the test environment.</p>
+<p>The test environment is a rectangular field with some
+    sensors placed within the field. Each sensor has a certain
+    radius defining the region within which it can detect a robot.
+    You want to design the field to have as many sensors as
+    possible while still permitting a route across the field that
+    avoids detection.</p>
+<p>The field is a region of the coordinate plane defined by
+    <span class="tex2jax_process">$0\leq x \leq 200$</span> and
+    <span class="tex2jax_process">$0 \leq y \leq 300$</span>. The
+    robot can be modeled by a point that must remain on the field
+    at all times. It starts at the bottom of the field
+    (<span class="tex2jax_process">$y = 0$</span>) and must end at
+    the top of the field (<span class="tex2jax_process">$y =
+    300$</span>), and must not pass within range of any sensor.
+    There are <span class="tex2jax_process">$N$</span> sensor
+    locations given by triples <span class="tex2jax_process">$(x,
+    y, r)$</span> of integers, where each <span class="tex2jax_process">$(x, y)$</span> is a point on the field, and
+    <span class="tex2jax_process">$r$</span> is its radius of
+    detection. The implied sensor circles may overlap, but will
+    never be tangent with each other nor with the boundary of the
+    field. All sensors are initially inactive. You must find the
+    largest value of <span class="tex2jax_process">$k$</span> such
+    that if sensors <span class="tex2jax_process">$1, 2, 3, \ldots
+    , k$</span> are activated there is a path for the robot across
+    the field, but no path if the (<span class="tex2jax_process">$k$</span>+1)st sensor is also activated. It
+    is guaranteed that there is no path if all <span class="tex2jax_process">$N$</span> sensors are activated.</p>
+<div class="figure" id="a0000002158">
+<center>
+<img alt="\includegraphics[width=0.25\textwidth ]{field3}" src="/problems/undetected/file/statement/en/img-0001.png" style="width:25.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sensor circles corresponding to the
+          first three sample inputs.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input begins with a positive integer <span class="tex2jax_process">$N \leq 200$</span>. Each of the next
+    <span class="tex2jax_process">$N$</span> lines has three
+    space-separated integers, representing <span class="tex2jax_process">$x, y, r$</span> for a sensor, where
+    <span class="tex2jax_process">$r \leq 300$</span>. All sensors
+    lie at different <span class="tex2jax_process">$(x,y)$</span>
+    positions. The first three sample inputs below correspond to
+    the figure shown.</p>
+<h2>Output</h2>
+<p>Output a single integer (which may be <span class="tex2jax_process">$0$</span>) giving the largest <span class="tex2jax_process">$k$</span> as described above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+36 228 58
+164 224 58
+88 170 42
+93 105 42
+167 85 58
+28 44 58
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+36 228 58
+28 44 58
+164 224 58
+88 170 42
+93 105 42
+167 85 58
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+28 44 58
+36 228 58
+88 170 42
+93 105 42
+164 224 58
+167 85 58
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+100 150 101
+30 30 10
+170 30 100
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,81 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/roberthood/file/statement/en/img-0001.png" class="illustration" src="/problems/roberthood/file/statement/en/img-0001.png"/>
+<div class="description">
+        Illustration by Alberto Barbati, released under CC BY-SA.
+      </div>
+</div>
+<p>Robert Hood, a less famous sibling of the Robin Hood, is fed
+    up. Despite him being a young, talented archer he never seems
+    to reach quite the same level as his legendary brother, and so
+    he decided to come up with rules for a new archery contest, in
+    which he will stand a better chance of winning.</p>
+<p>The rules for the new kind of archery contest are quite
+    simple: the winner is no longer the one who can score the most
+    points, but instead the one who can achieve the longest
+    distance between any pair of arrows hitting the target. Your
+    task is to write the code to calculate that distance.</p>
+<p>Each contestant is allowed a number of arrow shots, and the
+    coordinates of the arrows successfully hitting the target are
+    given as a list of pairs. The coordinate system is Cartesian
+    with the origin in the centre of the archery butt. If a
+    contestant does not hit the target with at least two arrows he
+    or she is disqualified and removed from the input data.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing a single positive
+    integer <span class="tex2jax_process">$C, 2 \le C \le 100\,
+    000$</span>, representing the number of shots for this
+    particular contestant. Each following line contains a pair of
+    integer coordinates separated by a space, representing the
+    <span class="tex2jax_process">$x$</span>- and <span class="tex2jax_process">$y$</span>-coordinates of a successful shot.
+    The absolute value of any coordinate does not exceed
+    <span class="tex2jax_process">$1\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Print the longest distance between any pair of arrows as a
+    floating point number on a single line. The answer is
+    considered correct if it has a relative or absolute error of
+    less than <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+2 2
+-1 -2
+</pre>
+</td>
+<td>
+<pre>
+5.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+-4 1
+-100 0
+0 4
+2 -3
+2 300
+</pre>
+</td>
+<td>
+<pre>
+316.86590223
+</pre>
+</td>
+</tr>
+</table>
+</div>

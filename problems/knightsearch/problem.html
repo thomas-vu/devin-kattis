@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>Alice is a chess knight living in Chessland (an <span class="tex2jax_process">$N \times N$</span> board). The cells in
+    Chessland are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N^2$</span> in row major order. Each cell
+    has an UPPERCASE alphabet character assigned to it. The
+    Chessland is described by a string <span class="tex2jax_process">$S$</span> of length <span class="tex2jax_process">$N^2$</span> (in row major order). For
+    example for <span class="tex2jax_process">$N = 5$</span> and
+    <span class="tex2jax_process">$S$</span> =
+    “IXIXXXXCXAXSXXPXXCSXAGXXX”, the Chessland that Alice lives in
+    looks like this:</p>
+<pre>
+  12345
+  -----
+1|IXIXX
+2|XXCXA
+3|XSXXP
+4|XXCSX
+5|AGXXX
+</pre>
+<p>As Alice is a chess knight, she can only move from cell
+    <span class="tex2jax_process">$(a, b)$</span> to cell
+    <span class="tex2jax_process">$(c, d)$</span> in Chessland if
+    and only if <span class="tex2jax_process">$(a-c)^2 + (b-d)^2 =
+    5$</span>. Alice wonder if she can find her favorite string
+    “<tt class="ttfamily">ICPCASIASG</tt>” in Chessland by starting
+    from a cell with character ‘<tt class="ttfamily">I</tt>’ and
+    finds the other <span class="tex2jax_process">$9$</span>
+    characters by jumping around in Chessland using chess knight
+    movements. Alice can visit the same cell more than once.</p>
+<p>You are of course Bob the computing bee and your job is to
+    help her decide the answer.</p>
+<h2>Input</h2>
+<p>The first line of input consists of 1 integer: <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 100$</span>). The second line contains a string
+    <span class="tex2jax_process">$S$</span> of <span class="tex2jax_process">$N^2$</span> UPPERCASE characters
+    [‘<tt class="ttfamily">A</tt>’..‘<tt class="ttfamily">Z</tt>’]
+    that describe Chessland.</p>
+<h2>Output</h2>
+<p>Print “<tt class="ttfamily">YES</tt>” if Alice can find
+    string “<tt class="ttfamily">ICPCASIASG</tt>” in Chessland or
+    print “<tt class="ttfamily">NO</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+IXIXXXXCXAXSXXPXXCSXAGXXX
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+THEQUICKBROWNFOXJUMPSOVER
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

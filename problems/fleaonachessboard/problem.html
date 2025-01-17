@@ -1,0 +1,59 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/fleaonachessboard/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fleaonachessboard/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>An infinite chessboard is obtained by extending a finite
+    chessboard to the right and up infinitely. Each square of the
+    chessboard is either black or white with the side length of
+    <span class="tex2jax_process">$S$</span> millimeters. The
+    leftmost bottom square of the chessboard is black. A flea is
+    positioned on the chessboard at the point <span class="tex2jax_process">$(x, y)$</span> (given in millimeters) and
+    makes jumps by jumping <span class="tex2jax_process">$dx$</span> millimeters to the right and
+    <span class="tex2jax_process">$dy$</span> millimeters up. That
+    is, a flea at position <span class="tex2jax_process">$(x,
+    y)$</span> after one jump lands at position <span class="tex2jax_process">$(x+dx, y+dy)$</span>.</p>
+<p>Given the starting position of the flea on the board your
+    task is to find out after how many jumps the flea will reach a
+    white square. If the flea lands on a boundary between two
+    squares then it does not count as landing on the white square.
+    Note that it is possible that the flea never reaches a white
+    square.</p>
+<h2>Input</h2>
+<p>Input consists of multiple test cases, at most <span class="tex2jax_process">$1024$</span>. Each test case consists of one
+    line of input containing five integers <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$dx$</span>, and <span class="tex2jax_process">$dy$</span> (<span class="tex2jax_process">$1
+    \le S \le 1000$</span>, <span class="tex2jax_process">$0 \le x,
+    y \le 10^6$</span>, <span class="tex2jax_process">$1 \le dx, dy
+    \le 10^6$</span>). An input line containing five zeroes follows
+    the last test case.</p>
+<h2>Output</h2>
+<p>For each test case print one line of output in the format
+    shown in the sample.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 2 3 3 2
+100 49 73 214 38
+25 0 0 5 25
+407 1270 1323 1 1
+18 72 6 18 6
+407 1270 1170 100 114
+0 0 0 0 0
+</pre>
+</td>
+<td>
+<pre>After 3 jumps the flea lands at (11, 9).
+After 1 jumps the flea lands at (263, 111).
+The flea cannot escape from black squares.
+After 306 jumps the flea lands at (1576, 1629).
+The flea cannot escape from black squares.
+After 0 jumps the flea lands at (1270, 1170).
+</pre>
+</td>
+</tr>
+</table>
+</div>

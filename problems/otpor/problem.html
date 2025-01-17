@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>Mirko has been a very good boy, so he got exactly what he
+    wanted for his birthday, a “Young physicist” kit! In the kit,
+    there are <span class="tex2jax_process">$N$</span> types of
+    resistors, connecting wires and an ohmmeter. If a resistor is
+    of type <span class="tex2jax_process">$i$</span>, it provides a
+    resistance of precisely <span class="tex2jax_process">$R_
+    i$</span> ohms.</p>
+<p>As we all know, resistors can be connected in two different
+    ways, in series and parallel. Also, we know that the complete
+    circuit of resistors can be replaced with one resistor of the
+    resistance equal to the equivalent resistance of the circuit.
+    When the circuit is series, it is written as <tt class="ttfamily">(R1-R2-R3-</tt>…<tt class="ttfamily">-RK)</tt> and
+    the following formula holds:</p><span class="tex2jax_process">\begin{equation*} R_{\mathrm{eq}} = R_1 + R_2
+    + R_3 + \cdots + R_ K \quad . \end{equation*}</span>
+<p>When the circuit is parallel, it is written as <tt class="ttfamily">(R1|R2|R3|</tt>…<tt class="ttfamily">|RK)</tt> and
+    the following formula holds:</p><span class="tex2jax_process">\begin{equation*} R_{\mathrm{eq}} =
+    \frac{1}{1/R_1 + 1/R_2 + 1/R_3 + \cdots + 1/R_ K} \quad .
+    \end{equation*}</span>
+<p>Mirko was excited to bring his new toy to school, where he
+    showed it to all his friends. Unfortunately for him, the
+    teacher also noticed the toy. She quickly connected a circuit
+    and is now asking Mirko to tell her the equivalent resistance
+    of the circuit. Help Mirko and answer the teacher’s
+    question!</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq $</span>N<span class="tex2jax_process">$ \leq 9$</span>)
+    from the task. The following line contains <span class="tex2jax_process">$N$</span> real numbers <span class="tex2jax_process">$R_ i$</span> (<span class="tex2jax_process">$0 &lt; R_ i &lt; 100$</span>) from the task.
+    The last line contains the circuit <span class="tex2jax_process">$S$</span>, that will not be longer than
+    <span class="tex2jax_process">$100\, 000$</span> characters.
+    <span class="tex2jax_process">$S$</span> will only consist of
+    the following characters: ‘<tt class="ttfamily">R</tt>’,
+    ‘<tt class="ttfamily">1</tt>’–‘<tt class="ttfamily">9</tt>’,
+    ‘<tt class="ttfamily">(</tt>’, ‘<tt class="ttfamily">)</tt>’,
+    ‘<tt class="ttfamily">-</tt>’ and ‘<tt class="ttfamily">|</tt>’. The number of pairs of brackets will be
+    minimal, and the brackets will be paired properly. Inside of a
+    pair of brackets, there will not be the character ‘<tt class="ttfamily">-</tt>’ and the character ‘<tt class="ttfamily">|</tt>’ at the same time. The circuit will only
+    consist of the resistors from the kit and it is possible that
+    not all types of resistors are used, or that one type of
+    resistor is used several times.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the number
+    from the task. An absolute error up to <span class="tex2jax_process">$10^{-5}$</span> will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 3 6
+(R1-R2-R3)
+</pre>
+</td>
+<td>
+<pre>
+11.00000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 3 6
+(R1|R2|R3)
+</pre>
+</td>
+<td>
+<pre>
+1.00000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+5 5 5 5 5
+((R1-(R2|R3)-(R4|R5))|(R1-(R2|R3)-(R4|R5)))
+</pre>
+</td>
+<td>
+<pre>
+5.00000
+</pre>
+</td>
+</tr>
+</table>
+</div>

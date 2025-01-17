@@ -1,0 +1,228 @@
+<div class="problembody">
+<p>Danish citizens have a unique personal identification number
+    in the Danish Central Person Register, called the <em>CPR
+    number</em>.</p>
+<p>Each CPR number consists of ten digits. The first six digits
+    represent the person’s day of birth. The following four digits
+    are a sequence number.</p>
+<p>Until <span class="tex2jax_process">$2007$</span>, all
+    Danish CPR numbers had to follow the <em>modulo 11 rule</em>:
+    The CPR number <span class="tex2jax_process">$c_1$</span>,
+    <span class="tex2jax_process">$c_2$</span>, <span class="tex2jax_process">$c_3$</span>, <span class="tex2jax_process">$c_4$</span>, <span class="tex2jax_process">$c_5$</span>, <span class="tex2jax_process">$c_6$</span>, <span class="tex2jax_process">$c_7$</span>, <span class="tex2jax_process">$c_8$</span>, <span class="tex2jax_process">$c_9$</span>, <span class="tex2jax_process">$c_{10}$</span> must satisfy
+    that</p><span class="tex2jax_process">\[ 4\cdot c_1 + 3\cdot
+    c_2 + 2\cdot c_3 + 7\cdot c_4 + 6\cdot c_5 + 5\cdot c_6 +
+    4\cdot c_7 + 3\cdot c_8 + 2\cdot c_9 + 1\cdot c_{10} \]</span>
+<p>is divisible by <span class="tex2jax_process">$11$</span>
+    without remainder.</p>
+<p>A publication from the government agency CPR-Kontoret from
+    1 July 2008 explains the method using the CPR number
+    <tt class="ttfamily">070761-4285</tt> as an example.</p>
+<blockquote class="quotation">
+<p><b class="bfseries">Validating a number with check
+      digit</b></p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>The 10 integers</p>
+</td>
+<td style="text-align:right">
+<p>0</p>
+</td>
+<td style="text-align:right">
+<p>7</p>
+</td>
+<td style="text-align:right">
+<p>0</p>
+</td>
+<td style="text-align:right">
+<p>7</p>
+</td>
+<td style="text-align:right">
+<p>6</p>
+</td>
+<td style="text-align:right">
+<p>1</p>
+</td>
+<td style="text-align:right">
+<p>4</p>
+</td>
+<td style="text-align:right">
+<p>2</p>
+</td>
+<td style="text-align:right">
+<p>8</p>
+</td>
+<td style="text-align:right">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>multiplied by</p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$\times $</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>their corresponding values</p>
+</td>
+<td style="text-align:right">
+<p>4</p>
+</td>
+<td style="text-align:right">
+<p>3</p>
+</td>
+<td style="text-align:right">
+<p>2</p>
+</td>
+<td style="text-align:right">
+<p>7</p>
+</td>
+<td style="text-align:right">
+<p>6</p>
+</td>
+<td style="text-align:right">
+<p>5</p>
+</td>
+<td style="text-align:right">
+<p>4</p>
+</td>
+<td style="text-align:right">
+<p>3</p>
+</td>
+<td style="text-align:right">
+<p>2</p>
+</td>
+<td style="text-align:right">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>yield</p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+21$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+0$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+49$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+36$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+5$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+16$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+6$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+16$</span></p>
+</td>
+<td style="text-align:right">
+<p><span class="tex2jax_process">$+5$</span></p>
+</td>
+</tr>
+</table>
+<p>which sums to <span class="tex2jax_process">$154$</span>.
+      Dividing <span class="tex2jax_process">$154$</span> by
+      <span class="tex2jax_process">$11$</span> yields <span class="tex2jax_process">$14$</span> with no remainder.</p>
+<p>Since <span class="tex2jax_process">$11$</span> divides
+      <span class="tex2jax_process">$154$</span> without remainder,
+      the test is passed. Otherwise the combination of 10 digits is
+      wrong, or the CPR number does not have a check digit.</p>
+</blockquote>
+<h2>Input</h2>
+<p>A CPR number in the format <tt class="ttfamily">ddmmyy-kkkk</tt>, i.e, <span class="tex2jax_process">$10$</span> digits separated by a single
+    hyphen. It is guaranteed that <tt class="ttfamily">ddmmyy</tt>
+    is a valid date.</p>
+<h2>Output</h2>
+<p>“1” if the CPR Number is valid accoring to the modulo
+    <span class="tex2jax_process">$11$</span> test, else “0”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>070761-4285
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>051002-4321
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>310111-0469
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

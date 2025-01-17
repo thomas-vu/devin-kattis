@@ -1,0 +1,162 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/desiigner/file/statement/en/img-0001.jpg" class="illustration" src="/problems/desiigner/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Mynd eftir <a href="https://www.flickr.com/photos/benchun/8171429927/">Ben
+        Chun</a>
+</div>
+</div>
+<p>Arnar recently went to a concert hosting several rappers.
+    There he discovered his new favourite rapper, Desiigner. But he
+    struggled to make out the words he was saying, his rapping was
+    very fast and unclear. But he heard him say a particular word
+    quite frequently, one starting with ’b’. Then there were
+    several occurrences of the letter ’r’ and finally there was a
+    vowel. He isn’t sure but it could have been “brra” or “brrrru”,
+    but clearly not “krrru”, “ba”, “bra”, nor “brrrt”. Furthermore
+    Arnar was sure that none of the other rappers said words like
+    this.</p>
+<p>Now Arnar wants to listen to the songs again and luckily
+    Unnar, his friend, had a recording device at the concert. The
+    recording is quite blurry but at least the audio is quite
+    clear.</p>
+<p>Now Arnar is listening to one of the sonds, and he heard
+    something that could be a word like the ones Desiigner said.
+    Could this be Desiigner? Help Arnar discover his love of
+    Desiigner by telling him if this word is a Desiigner word or
+    not.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains a string
+    containing only English lower case letters and has length
+    <span class="tex2jax_process">$n$</span>, at most <span class="tex2jax_process">$1\, 000$</span>.</p>
+<h2>Output</h2>
+<p>If the string is a Desiigner string, print “Jebb”, otherwise
+    print “Neibb”. A string is a Desiigner string if it starts with
+    the letter ‘b’, followed by two or more occurrences of the
+    letter ‘r’ before ending in a single vowel. Vowels are the
+    letters ‘a’, ‘e’, ‘i’, ‘o’, ‘u’ and ‘y’.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample the answer is “Neibb” because the number
+    of ‘r’s is less than 2. In the second sample the answer is
+    “Neibb” because there is more than one vowel. In the third
+    sample the answer is “Jebb” becuase it satisfies all the
+    criteria.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Scoring</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$4 \leq n \leq 1\,
+          000$</span>, The string will always end with an
+          <tt class="ttfamily">a</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$4 \leq n \leq 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>bra
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>brrrrrrrrrrrrrrrrraaaaa
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrra
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>krrrrrrrra
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

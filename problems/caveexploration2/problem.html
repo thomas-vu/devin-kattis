@@ -1,0 +1,85 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/caveexploration2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/caveexploration2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/photos/damsel-fish-profile-cave-sea-life-329562/">
+        Photo by macg on pixabay</a>
+</div>
+</div>
+<p>It is monsoon season, and your goldfish Orange is stuck at
+    the bottom of a cave system in Thailand. Every hour, the water
+    rises by <span class="tex2jax_process">$1$</span> meter.
+    Thankfully, Orange has the ability to swim instantaneously from
+    one location to another. However, he can’t hop over the sharp
+    rocks in the way.</p>
+<p>You trust that Orange is smart and will find the way out of
+    the cave as soon as possible. To prepare Orange’s meal, you
+    want to write a program to find out how long it will take for
+    Orange to come back home.</p>
+<p>You are given the cave system as an <span class="tex2jax_process">$N \times N$</span> grid where each location
+    <span class="tex2jax_process">$(i, j)$</span> contains a
+    nonnegative integer, <span class="tex2jax_process">$h_{i,
+    j}$</span>, representing the height of the rocks in meters at
+    that location. Orange can only swim left, right, up, or down
+    from one submerged location to another submerged location (but
+    not diagonally).</p>
+<p>A location <span class="tex2jax_process">$(i, j)$</span> is
+    submerged if the water level is at least <span class="tex2jax_process">$1$</span> meter higher than <span class="tex2jax_process">$h_{i, j}$</span>. Orange’s starting location
+    will always be at <span class="tex2jax_process">$(0,
+    0)$</span>, with <span class="tex2jax_process">$h_{0, 0} =
+    0$</span>. The initial water level is <span class="tex2jax_process">$1$</span> meter so that Orange’s start
+    location is submerged. The only exit in the cave is at location
+    <span class="tex2jax_process">$(N - 1, N - 1)$</span>. After
+    how many hours can Orange find his way to the exit?</p>
+<h2>Input</h2>
+<p>The input consists of one integer, <span class="tex2jax_process">$N$</span>, on the first line such that
+    <span class="tex2jax_process">$2 \leq N \leq 100$</span>,
+    followed by <span class="tex2jax_process">$N$</span> lines with
+    <span class="tex2jax_process">$N$</span> integers each,
+    separated by spaces, such that each integer represents the
+    height <span class="tex2jax_process">$h_{i, j}$</span>
+    (<span class="tex2jax_process">$0 \le h_{i, j} \le
+    10^8$</span>) of the rocks at location <span class="tex2jax_process">$(i, j)$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    hours that must pass before Orange can reach the exit.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+0 3
+2 4
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 2 3 10 4
+10 23 2 21 12
+11 10 12 12 16
+12 12 18 10 10
+10 10 10 11 10
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+</div>

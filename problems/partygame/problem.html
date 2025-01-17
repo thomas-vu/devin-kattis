@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/partygame/file/statement/en/img-0001.jpg" class="illustration" src="/problems/partygame/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://commons.wikimedia.org/w/index.php?curid=652808">Bain
+        News Service (Wikimedia Commons)</a>, Public Domain
+      </div>
+</div>
+<p>Lord Kevin (purportedly a distant relative of Lord Kelvin)
+    is holding a party to celebrate his recent entrance into the
+    British nobility. The exact process whereby Kevin acquired his
+    title is a matter of some dispute, and there are even whispered
+    rumours of identity theft, but fortunately we need not concern
+    ourselves with such unpleasantries here. All the invitees to
+    Kevin’s party are British Lords with whom he hopes to
+    ingratiate himself, and since Kevin has detected that these
+    nobles are a rather reserved lot, he has invented a party game
+    to facilitate interactions among his guests. As the Lords
+    arrive at Kevin’s manor, they are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. Each Lord is given a lapel pin on
+    which is written his unique identifying number, and he is asked
+    to wear this pin throughout the evening. (Kevin, who is
+    organizing the game but not participating in it, does not have
+    an assigned number.) Once all the guests have assembled in the
+    ballroom, Kevin takes a set of <span class="tex2jax_process">$n$</span> cards on which are written the
+    numbers <span class="tex2jax_process">$1$</span> through
+    <span class="tex2jax_process">$n$</span> (one number per card),
+    places them in his top hat, and then draws them out at
+    random and distributes them to his guests, one per Lord. Now
+    the party game is ready to begin.</p>
+<p>The game consists of a sequence of rounds, each of which has
+    three stages. In Stage <span class="tex2jax_process">$1$</span>, Kevin calls out “Match!”, at
+    which point each Lord checks to see if the number on the card
+    in his hand matches the number on his lapel pin. If so, the
+    Lord is freed from the game and can move into the dining room
+    to partake of the fine food (and drink) waiting there. In
+    Stage <span class="tex2jax_process">$2$</span>, Kevin
+    calls out “Hat!”, at which point each remaining Lord memorizes
+    the number on the card in his hand, and then places the card in
+    the brim of his top hat. In Stage <span class="tex2jax_process">$3$</span>, Kevin calls out “Snatch!”, at
+    which point each Lord finds the other guest in the room whose
+    lapel pin contains the number he has just memorized, and then
+    snatches (or, more politely, gently takes) the card from that
+    Lord’s hat. (Since British nobles are also called
+    <em>peers</em>, Stage <span class="tex2jax_process">$3$</span> is an example of a
+    <em>peer-to-peer protocol</em>.) At the end of Stage 3,
+    each Lord once again has a numbered card in his hand, ready for
+    the next round to begin. Note that at the end of
+    Stage <span class="tex2jax_process">$1$</span>, if all
+    Lords have been freed from the game, the game is over, so
+    obviously Kevin will skip the final Stages <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span>.</p>
+<p>Kevin thinks that this game he has invented will be very fun
+    for his guests, but he is a little worried that some of the
+    Lords might stay trapped in the game forever, eventually dying
+    of starvation. Given the initial distribution of numbered cards
+    to guests, help Kevin determine whether or not the game will
+    have such a dire outcome.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$T$</span> <span class="tex2jax_process">$(1 \leq T \leq 10)$</span>, the number of
+    test cases that follow. Each test case occupies two lines. The
+    first line contains an integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1
+    \leq n \leq 1\, 200)$</span>, the number of guests at the
+    party. The second line contains <span class="tex2jax_process">$n$</span> distinct space-separated integers
+    <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>,
+    where <span class="tex2jax_process">$a_ i$</span> <span class="tex2jax_process">$(1 \leq i \leq n)$</span> is the number on
+    the card initially given to the Lord whose lapel pin contains
+    the number <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>The output consists of <span class="tex2jax_process">$T$</span> lines, one per case. For each test
+    case, output “<tt class="ttfamily">All can eat.</tt>” if the
+    game eventually ends, or “<tt class="ttfamily">Some
+    starve.</tt>” if the game never ends.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+3
+1 2 3
+4
+3 4 2 1
+5
+5 4 1 2 3
+</pre>
+</td>
+<td>
+<pre>All can eat.
+All can eat.
+Some starve.
+</pre>
+</td>
+</tr>
+</table>
+</div>

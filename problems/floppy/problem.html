@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/floppy/file/statement/en/img-0001.jpg" class="illustration" src="/problems/floppy/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Antoine Taveneaux, cc-by-sa
+      </div>
+</div>
+<p>Your friend’s newest hobby is to play movie theme songs on
+    her freshly acquired floppy drive organ. This organ is a
+    collection of good old floppy drives, where each drive has been
+    tampered with to produce sound of a unique frequency. The sound
+    is produced by a step motor that moves the read/write head of
+    the floppy drive along the radial axis of the drive’s spin
+    disk. The radial axis starts in the center of the spin disk and
+    ends at the outer edge of the spin disk.</p>
+<p>The sound from one drive will play continuously as long as
+    the read/write head keeps moving in one direction; when the
+    head changes direction, there is a brief pause of <span class="tex2jax_process">$1$</span>fs—one floppysecond, or about
+    <span class="tex2jax_process">$100$</span> microseconds. The
+    read/write head must change direction when it reaches either
+    the inner or the outer end point of the radial axis, but it can
+    also change direction at any other point along this axis, as
+    determined by your friend. You can make the head stay still at
+    any time and for as long as you wish. The starting position of
+    the read-write head can be chosen freely.</p>
+<p>Your friend is a nutcase perfectionist, and will not accept
+    any pauses where there are not supposed to be any; nor will she
+    accept sound when there is meant to be silence. To figure out
+    whether a given piece of music can be played—perfectly—on her
+    organ, she has asked for your help.</p>
+<p>For each frequency, you are given a list of intervals, each
+    describing when that particular frequency should play, and you
+    must decide if all of the frequencies can be played as
+    intended. You can assume your friend has enough drives to cover
+    all the required frequencies.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$f, 1 \leq f \leq 10$</span>, denoting the
+    number of frequencies used. Then follow <span class="tex2jax_process">$f$</span> blocks, on the format:</p>
+<ul class="itemize">
+<li>
+<p>A single line with two integers <span class="tex2jax_process">$t_ i, 1\leq t_ i \leq 10\ 000$</span>
+        and <span class="tex2jax_process">$n_ i, 1\leq n_ i \leq
+        100$</span>; the number of floppyseconds it takes for the
+        read/write head of frequency <span class="tex2jax_process">$i$</span> to move between the end points
+        of its radial axis, and the number of intervals for which
+        frequency <span class="tex2jax_process">$i$</span>
+        should play.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n_ i$</span> lines, where
+        the <span class="tex2jax_process">$j$</span>-th line
+        has two integers <span class="tex2jax_process">$t_{i,2j}, t_{i,2j+1}$</span>, where
+        <span class="tex2jax_process">$0\leq t_{i,2j},t_{i,2j+1}
+        \leq 1\ 000\ 000$</span>, indicating that
+        the <span class="tex2jax_process">$i$</span>-th
+        frequency should start playing at time <span class="tex2jax_process">$t_{i,2j}$</span> and stop playing at
+        time <span class="tex2jax_process">$t_{i,2j+1}$</span>. You
+        can assume that these numbers are in stricly ascending
+        order, i.e. <span class="tex2jax_process">$t_{i,1} &lt;
+        t_{i,2} &lt; \dots &lt; t_{i, 2n_ i}$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If it is possible to play all the <span class="tex2jax_process">$f$</span> frequencies as intended, output
+    “<tt class="ttfamily">possible</tt>”. Otherwise output
+    “<tt class="ttfamily">impossible</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+6 2
+0 4
+6 12
+</pre>
+</td>
+<td>
+<pre>
+possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+6 3
+0 5
+6 8
+9 14
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

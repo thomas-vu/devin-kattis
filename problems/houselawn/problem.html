@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/houselawn/file/statement/en/img-0001.jpg" class="illustration" src="/problems/houselawn/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.geograph.org.uk/photo/5790848">Picture</a> by
+        David Hawgood, CC BY-SA
+      </div>
+</div>You have just bought a new house, and it has a huge,
+    beautiful lawn. A lawn that needs cutting. Several times. Every
+    week. The whole summer.
+    <p>After pushing the lawnmower around the lawn during the
+    hottest Saturday afternoon in history, you decided that there
+    must be a better way. And then you saw the ads for the new
+    robotic lawnmovers. But which one should you buy? They all have
+    different cutting speeds, cutting times and recharge times, not
+    to mention different prices!</p>
+<p>According to the advertisement, a robotic lawnmover will
+    spend all its time either cutting the lawn or recharging its
+    battery. Starting from a full battery, it will cut the lawn at
+    a given rate of <span class="tex2jax_process">$c$</span> square
+    meters per minute for a cutting time of <span class="tex2jax_process">$t$</span> minutes, after which it has run
+    out of battery. Once out of battery, it will immediately start
+    recharging. After recharging for <span class="tex2jax_process">$r$</span> minutes the battery is full again
+    and it immediately starts cutting.</p>
+<p>You decide that in order for your lawn to look sufficiently
+    prim and proper, the lawnmower that you buy must be powerful
+    enough to cut your whole lawn at least once a week <em>on
+    average</em>. Formally, if we start the mower fully charged at
+    the beginning of the week and run it for exactly <span class="tex2jax_process">$T$</span> weeks, it needs to cut the whole
+    lawn at least <span class="tex2jax_process">$T$</span> times,
+    for all positive integers <span class="tex2jax_process">$T$</span>. But apart from this, you have no
+    specific requirements, so among the ones that satisfy this
+    requirement, you will simply go for the cheapest option. For
+    the purposes of cutting your lawn, you may make the simplifying
+    assumption that a week is always exactly <span class="tex2jax_process">$10\, 080$</span> minutes long.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$\ell $</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le \ell \le 10^6$</span>, <span class="tex2jax_process">$1 \le
+    m \le 100$</span>), the size of your lawn in square meters, and
+    the number of lawnmowers to consider, respectively.</p>
+<p>Then follow <span class="tex2jax_process">$m$</span> lines,
+    each containing a string <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$4$</span> integers <span class="tex2jax_process">$p$</span>, <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$t$</span>, and <span class="tex2jax_process">$r$</span>, separated by commas, describing a
+    lawnmower as follows:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$n$</span> is the name of
+        the lawnmower, a string of at most <span class="tex2jax_process">$60$</span> printable characters (ASCII
+        <span class="tex2jax_process">$32$</span> to <span class="tex2jax_process">$126$</span>) excluding ‘<tt class="ttfamily">,</tt>’, neither starting nor ending with a
+        space,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq p \leq 100\,
+        000$</span> is the price of the lawnmover,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq c \leq 100$</span>
+        is the cutting rate in square meters per minute,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq t \leq 10\,
+        080$</span> is the cutting time in minutes, and</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \leq r \leq 10\,
+        080$</span> is the recharge time in minutes.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the name of the cheapest lawnmower capable of cutting
+    your whole yard at least once a week on average. If several
+    lawnmovers share the same lowest price, output all of their
+    names, in the same order they were given in the input. If there
+    is no such mower, output “<tt class="ttfamily">no such
+    mower</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7000 4
+Grass Slayer 2000,9999,10,120,120
+Slow-Mowe,999,1,120,240
+Eco-cut X2,5499,2,25,35
+Mowepower,5499,3,25,35
+</pre>
+</td>
+<td>
+<pre>Eco-cut X2
+Mowepower
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>100000 4
+Grass Slayer 2000,9999,10,120,120
+Slow-Mowe,999,1,120,240
+Eco-cut X2,5499,2,25,35
+Mowepower,5499,3,25,35
+</pre>
+</td>
+<td>
+<pre>no such mower
+</pre>
+</td>
+</tr>
+</table>
+</div>

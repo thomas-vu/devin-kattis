@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>Flood-It is a popular one player game on many smart phones.
+    The player is given an <span class="tex2jax_process">$n \times
+    n$</span> board of tiles where each tile is given one of
+    <span class="tex2jax_process">$6$</span> colours (numbered
+    <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$6$</span>). Each tile is connected to up to
+    <span class="tex2jax_process">$4$</span> adjacent tiles in the
+    North, South, East, and West directions. A tile is connected to
+    the origin (the tile in the upper left corner) if it has the
+    same colour as the origin and there is a path to the origin
+    consisting only of tiles of this colour.</p>
+<p>A player makes a move by choosing one of the <span class="tex2jax_process">$6$</span> colours. After the choice is made,
+    all tiles that are connected to the origin are changed to the
+    chosen colour. The game proceeds until all tiles have the same
+    colour. The goal of the game is to change all the tiles to the
+    same colour, preferably with the fewest number of moves
+    possible.</p>
+<p>It has been proven that finding the optimal moves is a very
+    hard problem. For this problem, you will simulate a very simple
+    greedy strategy to see how well it works:</p>
+<ol class="enumerate">
+<li>
+<p>for each move, choose the colour that will result in the
+        largest number of tiles connected to the origin;</p>
+</li>
+<li>
+<p>if there is a tie, break ties by choosing the lowest
+        numbered colour.</p>
+</li>
+</ol>
+<p>To illustrate this, we look at the first test case in the
+    sample input, the original board is:</p>
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{fig1.pdf}" src="/problems/floodit/file/statement/en/img-0001.png" style="width:20.00%"/>
+</center>
+<p>If we choose colour <span class="tex2jax_process">$3$</span>
+    for the first move, the result will be:</p>
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{fig2.pdf}" src="/problems/floodit/file/statement/en/img-0002.png" style="width:20.00%"/>
+</center>
+<p>where the tiles connected to the origin are shaded. In the
+    next move, we choose colour <span class="tex2jax_process">$4$</span> because we can increase the number
+    of tiles connected to the origin by <span class="tex2jax_process">$5$</span> tiles:</p>
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{fig3.pdf}" src="/problems/floodit/file/statement/en/img-0003.png" style="width:20.00%"/>
+</center>
+<h2>Input</h2>
+<p>The input consists of multiple test cases. The first line of
+    input is a single integer, not more than <span class="tex2jax_process">$20$</span>, indicating the number of test
+    cases to follow. Each case starts with a line containing the
+    integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 20$</span>). The next
+    <span class="tex2jax_process">$n$</span> lines each contains
+    <span class="tex2jax_process">$n$</span> characters, giving the
+    initial colours of the <span class="tex2jax_process">$n \times
+    n$</span> board of tiles. Each colour is specified by a digit
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$6$</span>.</p>
+<h2>Output</h2>
+<p>For each case, display two lines of output. The first line
+    specifies the number of moves needed to change all the tiles to
+    the same colour. The second line specifies <span class="tex2jax_process">$6$</span> integers separated by a single
+    space. The <span class="tex2jax_process">$i$</span>-th integer
+    gives the number of times colour <span class="tex2jax_process">$i$</span> is chosen as a move in the
+    game.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+6
+123423
+334521
+433123
+543621
+324343
+234156
+5
+12121
+21212
+12121
+21212
+12121
+5
+12345
+12345
+12345
+12345
+12345
+5
+11131
+12211
+31311
+21111
+11111
+</pre>
+</td>
+<td>
+<pre>
+12
+2 2 4 2 1 1
+8
+4 4 0 0 0 0
+4
+0 1 1 1 1 0
+4
+1 2 1 0 0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,111 @@
+<div class="problembody">
+<p>We say that a sequence of <span class="tex2jax_process">$2K$</span> elements is interesting if
+    neither the sum of the first <span class="tex2jax_process">$K$</span> elements, nor the sum of the last
+    <span class="tex2jax_process">$K$</span> elements, is greater
+    than <span class="tex2jax_process">$S$</span>. A sequence
+    <span class="tex2jax_process">$A$</span> of length <span class="tex2jax_process">$N$</span> is given. For every element,
+    output the length of the longest interesting subsequence
+    starting with that element.</p>
+<h2>Input</h2>
+<p>The first line contains integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 100\, 000$</span>, <span class="tex2jax_process">$1
+    \leq S \leq 2 \cdot 10^9$</span> ).</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    contain the sequence <span class="tex2jax_process">$A$</span>,
+    one integer per line. The integers are non-negative and their
+    sum does not exceed <span class="tex2jax_process">$2\cdot
+    10^9$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span> lines. The
+    <span class="tex2jax_process">$i$</span>-th line must contain
+    one integer, the length of the longest interesting subsequence
+    starting with the i-th element. If an interesting subsequence
+    at that position doesn’t exist, output 0 (zero).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 10000
+1
+1
+1
+1
+1
+</pre>
+</td>
+<td>
+<pre>
+4
+4
+2
+2
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 9
+1
+1
+10
+1
+9
+</pre>
+</td>
+<td>
+<pre>
+2
+0
+0
+2
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 3
+1
+1
+1
+1
+1
+1
+1
+1
+</pre>
+</td>
+<td>
+<pre>
+6
+6
+6
+4
+4
+2
+2
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

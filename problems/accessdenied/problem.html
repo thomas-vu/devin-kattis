@@ -1,0 +1,123 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/accessdenied/file/statement/en/img-0001.jpg" class="illustration" src="/problems/accessdenied/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/IBM_7090#/media/File:IBM_7090_console.nasa.jpg">
+        IBM 7090 console</a> (Public Domain)
+      </div>
+</div>Computer passwords have been around for a long time. In
+    fact, 60 years ago <a href="https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System">CTSS</a>
+    was one of the first computers with a password. The
+    implementation of this was very simple. In CTSS the password
+    was stored in plain text in a file on disk. When logging in,
+    the user would enter a password. The computer would then
+    compare the password to the password on disk. If the comparison
+    failed, it would deny access, if it succeeded, access would be
+    allowed. Researchers at MIT were quick to discover several
+    security flaws in this password system. We will explore one of
+    them, the timing attack.
+    <p>In a timing attack, we exploit that we can deduce a
+    computation path from the time it takes to do the computation.
+    In CTSS the password check was done using a simple string
+    matching algorithm, similar to this:</p>
+<pre>
+bool CheckPassword(string pwd1, string pwd2) {
+    if (pwd1.Length != pwd2.Length) {
+        return false;
+    }
+    for (int i = 0; i &lt; pwd1.Length; i++) {
+        if (pwd1[i] != pwd2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+</pre>
+<p>For the purpose of this problem, we will use a (very)
+    simplified timing model and the above algorithm. The timing
+    model looks as follows:</p>
+<ul class="itemize">
+<li>
+<p>A branching statement (if or for) takes <span class="tex2jax_process">$1$</span> ms.</p>
+</li>
+<li>
+<p>An assignment, or update of a memory address takes
+        <span class="tex2jax_process">$1$</span> ms.</p>
+</li>
+<li>
+<p>A comparison between two memory addresses takes
+        <span class="tex2jax_process">$3$</span> ms.</p>
+</li>
+<li>
+<p>A return statement takes <span class="tex2jax_process">$1$</span> ms.</p>
+</li>
+</ul>
+<p>The password consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> English letters, upper or lower
+    case, and digits.</p>
+<h2>Interaction</h2>
+<p>This is an interactive problem. Your submission will be run
+    against an <em>interactor</em>, which reads the standard output
+    of your submission and writes to the standard input of your
+    submission. This interaction needs to follow a specific
+    protocol:</p>
+<ul class="itemize">
+<li>
+<p>Your program first sends a password string, consisting
+        of between <span class="tex2jax_process">$1$</span> and
+        <span class="tex2jax_process">$20$</span> English letters,
+        upper or lower case, and digits.</p>
+</li>
+<li>
+<p>Depending on if the password is correct, the interactor
+        then responds with either:</p>
+<ul class="itemize">
+<li>
+<p>If the password is correct; “<tt class="ttfamily">ACCESS GRANTED</tt>”. Your program should
+            then exit cleanly.</p>
+</li>
+<li>
+<p>If the password is incorrect; “<tt class="ttfamily">ACCESS DENIED (<span class="tex2jax_process">$t$</span> ms)</tt>”, where
+            <span class="tex2jax_process">$t$</span> is the time it
+            took to verify the password in ms. Your program can
+            then make another guess.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Make sure you flush the buffer after each write. You can
+    guess at most <span class="tex2jax_process">$2\, 500$</span>
+    times. A testing tool is provided to help you develop your
+    solution.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionwrite">
+<pre>A</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>ACCESS DENIED (5 ms)</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>HunFhun</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>ACCESS DENIED (41 ms)</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>Hunter1</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>ACCESS DENIED (68 ms)</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>Hunter2</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>ACCESS GRANTED</pre>
+</div>
+</div>

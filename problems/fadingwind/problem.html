@@ -1,0 +1,134 @@
+<div class="problembody">
+<p>You’re competing in an outdoor paper airplane flying
+    contest, and you want to predict how far your paper airplane
+    will fly. Your design has a fixed factor <span class="tex2jax_process">$k$</span>, such that if the airplane’s
+    velocity is at least <span class="tex2jax_process">$k$</span>,
+    it will rise. If its velocity is less than <span class="tex2jax_process">$k$</span> it will descend.</p>
+<p>Here is how your paper airplane will fly:</p>
+<ul class="itemize">
+<li>
+<p>You start by throwing your paper airplane with a
+        horizontal velocity of <span class="tex2jax_process">$v$</span> at a height of <span class="tex2jax_process">$h$</span>. There is an external wind
+        blowing with a strength of <span class="tex2jax_process">$s$</span>.</p>
+</li>
+<li>
+<p>While <span class="tex2jax_process">$h &gt; 0$</span>,
+        repeat the following sequence:</p>
+<ul class="itemize">
+<li>
+<p>Increase <span class="tex2jax_process">$v$</span> by
+            <span class="tex2jax_process">$s$</span>. Then,
+            decrease <span class="tex2jax_process">$v$</span> by
+            <span class="tex2jax_process">$\max (1, \left\lfloor
+            \frac{v}{10} \right\rfloor )$</span>. Note that
+            <span class="tex2jax_process">$\left\lfloor
+            \frac{v}{10} \right\rfloor $</span> is the value of
+            <span class="tex2jax_process">$\frac{v}{10}$</span>,
+            rounded down to the nearest integer if it is not an
+            integer.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$v \ge k$</span>,
+            increase <span class="tex2jax_process">$h$</span> by
+            one.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$0 &lt; v &lt;
+            k$</span>, decrease <span class="tex2jax_process">$h$</span> by one. If <span class="tex2jax_process">$h$</span> is zero after the
+            decrease, set <span class="tex2jax_process">$v$</span>
+            to zero.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$v \le 0$</span>,
+            set <span class="tex2jax_process">$h$</span> to zero
+            and <span class="tex2jax_process">$v$</span> to
+            zero.</p>
+</li>
+<li>
+<p>Your airplane now travels horizontally by
+            <span class="tex2jax_process">$v$</span> units.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$s &gt; 0$</span>,
+            decrease it by <span class="tex2jax_process">$1$</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Compute how far the paper airplane travels horizontally.</p>
+<h2>Input</h2>
+<p>The single line of input contains four integers <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$v$</span>, and <span class="tex2jax_process">$s$</span> <span class="tex2jax_process">$(1
+    \le h, k, v, s \le 10^3)$</span>, where <span class="tex2jax_process">$h$</span> is your starting height,
+    <span class="tex2jax_process">$k$</span> is your fixed factor,
+    <span class="tex2jax_process">$v$</span> is your starting
+    velocity, and <span class="tex2jax_process">$s$</span> is the
+    strength of the wind.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the distance your airplane
+    travels horizontally. It can be shown that this distance is
+    always an integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1 1 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 2 2
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2 3 4
+</pre>
+</td>
+<td>
+<pre>68
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>314 159 265 358
+</pre>
+</td>
+<td>
+<pre>581062
+</pre>
+</td>
+</tr>
+</table>
+</div>

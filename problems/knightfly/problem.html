@@ -1,0 +1,180 @@
+<div class="problembody">
+<p>You are given a <span class="tex2jax_process">$2\, 000\,
+    000\, 000$</span> by <span class="tex2jax_process">$2\, 000\,
+    000\, 000$</span> chessboard. The bottom-left most cell has
+    coordinates (<span class="tex2jax_process">$1$</span>,
+    <span class="tex2jax_process">$1$</span>). The board is full of
+    blocked cells, and no chess piece may be placed on those cells.
+    Because there are so many blocked cells on the chessboard,
+    instead of being told which cells are blocked, you will be told
+    which cells are clear (not blocked). A knight piece is
+    initially at cell (<span class="tex2jax_process">$X_ s$</span>,
+    <span class="tex2jax_process">$Y_ s$</span>), and your goal is
+    to move the knight piece to cell (<span class="tex2jax_process">$X_ t$</span>, <span class="tex2jax_process">$Y_ t$</span>) with as few knight fly(s) as
+    possible. Both of those cells are guaranteed to be clear.</p>
+<p>A knight fly is defined as a sequence of <span class="tex2jax_process">$3$</span> flying-steps given below. There
+    are <span class="tex2jax_process">$8$</span> types of knight
+    fly(s):</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        up, then <span class="tex2jax_process">$1$</span>
+        flying-step left</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        up, then <span class="tex2jax_process">$1$</span>
+        flying-step right</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        right, then <span class="tex2jax_process">$1$</span>
+        flying-step up</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        right, then <span class="tex2jax_process">$1$</span>
+        flying-step down</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        down, then <span class="tex2jax_process">$1$</span>
+        flying-step right</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        down, then <span class="tex2jax_process">$1$</span>
+        flying-step left</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        left, then <span class="tex2jax_process">$1$</span>
+        flying-step down</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span> flying-steps
+        left, then <span class="tex2jax_process">$1$</span>
+        flying-step up</p>
+</li>
+</ul>
+<p>A flying-step is defined as a continuous movement in that
+    direction until the next clear cell is reached. A knight piece
+    at cell (<span class="tex2jax_process">$X_ a$</span>,
+    <span class="tex2jax_process">$Y_ a$</span>) can move to
+    (<span class="tex2jax_process">$X_ b$</span>, <span class="tex2jax_process">$Y_ b$</span>) if he can do so using any of
+    the knight fly(s) above.</p>
+<p>The upwards direction is defined as the positive Y
+    direction, and the rightwards direction is defined as the
+    positive X direction.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of an integer
+    <span class="tex2jax_process">$1 \leq N \leq 200\, 000$</span>
+    the number of clear cells. The second line of the input
+    contains <span class="tex2jax_process">$4$</span> integers
+    <span class="tex2jax_process">$X_ s$</span>, <span class="tex2jax_process">$Y_ s$</span>, <span class="tex2jax_process">$X_ t$</span> and <span class="tex2jax_process">$Y_ t$</span>. The following <span class="tex2jax_process">$N$</span> lines contains <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span>, the coordinates of a clear cell.
+    All cell coordinates are within the board, and all <span class="tex2jax_process">$N$</span> cells are unique.</p>
+<h2>Output</h2>
+<p>Output a single integer- the minimum number of knight fly(s)
+    required. If there is no way for the knight to get from cell
+    (<span class="tex2jax_process">$X_ s$</span>, <span class="tex2jax_process">$Y_ s$</span>) to cell (<span class="tex2jax_process">$X_ t$</span>, <span class="tex2jax_process">$Y_ t$</span>) using knight fly(s), output
+    <span class="tex2jax_process">$-1$</span> instead.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$3$</span> Points)</b>: Sample.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$7$</span> Points)</b>: There are
+        <span class="tex2jax_process">$N = 10$</span> clear cells,
+        all with coordinate values <span class="tex2jax_process">$X
+        \in [1..10]$</span> and <span class="tex2jax_process">$Y =
+        1$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$20$</span> Points)</b>: There are
+        <span class="tex2jax_process">$N = 100$</span> clear cells,
+        all with coordinate values <span class="tex2jax_process">$X, Y \in [1..10]$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$30$</span> Points)</b>: All <span class="tex2jax_process">$N$</span> clear cells will have
+        coordinate values <span class="tex2jax_process">$X, Y \leq
+        100$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$20$</span> Points)</b>: There are at
+        most <span class="tex2jax_process">$100$</span> columns and
+        <span class="tex2jax_process">$100$</span> rows containing
+        clear cells.</p>
+</li>
+<li>
+<p><b class="bfseries">(<span class="tex2jax_process">$20$</span> Points)</b>: No additional
+        constraint.</p>
+</li>
+</ol>
+<h2>Warning</h2>
+<p><b class="bfseries">The I/O files are large. Please use fast
+    I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 1 3 3
+1 1
+2 1
+3 1
+3 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 1 10 3
+1 1
+2 1
+10 1
+10 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 1 4 1
+1 1
+2 1
+3 1
+4 1
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/cheese/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cheese/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by Jon Sullivan via Wikimedia Commons
+      </div>
+</div>Of course you have all heard of the International Cheese
+    Processing Company. Their machine for cutting a piece of cheese
+    into slices of exactly the same thickness is a classic.
+    Recently they produced a machine able to cut a spherical cheese
+    (such as Edam) into slices – no, not all of the same thickness,
+    but all of the same weight! But new challenges lie ahead:
+    cutting Swiss cheese.
+
+    <p>Swiss cheese such as Emmentaler has holes in it, and the
+    holes may have different sizes. A slice with holes contains
+    less cheese and has a lower weight than a slice without holes.
+    So here is the challenge: cut a cheese with holes in it into
+    slices of equal weight.</p>
+<p>By smart sonar techniques (the same techniques used to scan
+    unborn babies and oil fields), it is possible to locate the
+    holes in the cheese up to micrometer precision. For the present
+    problem you may assume that the holes are perfect spheres.</p>
+<p>Each uncut block has size <span class="tex2jax_process">$100
+    \times 100 \times 100$</span> where each dimension is measured
+    in millimeters. Your task is to cut it into <span class="tex2jax_process">$s$</span> slices of equal weight. The slices
+    will be <span class="tex2jax_process">$100$</span> mm wide
+    and <span class="tex2jax_process">$100$</span> mm high,
+    and your job is to determine the thickness of each slice.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$s$</span>, where <span class="tex2jax_process">$0 \leq n \leq 10\, 000$</span> is the number
+    of holes in the cheese, and <span class="tex2jax_process">$1
+    \le s \le 100$</span> is the number of slices to cut. The next
+    <span class="tex2jax_process">$n$</span> lines each contain
+    four positive integers <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$z$</span> that describe a hole, where
+    <span class="tex2jax_process">$r$</span> is the radius and
+    <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span>, and <span class="tex2jax_process">$z$</span> are the coordinates of the center,
+    all in micrometers.</p>
+<p>The cheese block occupies the points <span class="tex2jax_process">$(x,y,z)$</span> where <span class="tex2jax_process">$0 \le x,y,z \le 100\, 000$</span>, except
+    for the points that are part of some hole. The cuts are made
+    perpendicular to the <span class="tex2jax_process">$z$</span>
+    axis.</p>
+<p>You may assume that holes do not overlap but may touch, and
+    that the holes are fully contained in the cheese but may touch
+    its boundary.</p>
+<h2>Output</h2>
+<p>Display the <span class="tex2jax_process">$s$</span> slice
+    thicknesses in millimeters, starting from the end of the cheese
+    with <span class="tex2jax_process">$z=0$</span>. Your output
+    should have an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 4
+</pre>
+</td>
+<td>
+<pre>
+25.000000000
+25.000000000
+25.000000000
+25.000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5
+10000 10000 20000 20000
+40000 40000 50000 60000
+</pre>
+</td>
+<td>
+<pre>
+14.611103142
+16.269801734
+24.092457788
+27.002992272
+18.023645064
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,131 @@
+<div class="problembody">
+<p>A <em>Feistel network</em>, named after IBM researcher Horst
+    Feistel (1915–1990), is an important structure often used in
+    the design of symmetric-key ciphers known as <em>block
+    ciphers</em>. A block cipher encrypts binary data in
+    (relatively large) fixed-length chunks called <em>blocks</em>.
+    For a block cipher based on the Feistel network structure, the
+    block size must be <em>even</em>, i.e., equal to <span class="tex2jax_process">$2n$</span>, where <span class="tex2jax_process">$n$</span> is a positive integer.</p>
+<p>As is the case for many block ciphers, a Feistel network
+    block cipher encrypts its input block (the <em>plaintext</em>)
+    to produce an output block (the <em>ciphertext</em>) by
+    repeatedly applying a simpler encryption step called a
+    <em>round</em>. (The number of round iterations is chosen by
+    the cipher designer(s) to balance various criteria such as
+    security and speed.) A single round takes in a block and
+    outputs a block, i.e., it maps <span class="tex2jax_process">$\{ 0,1\} ^{2n}$</span> to <span class="tex2jax_process">$\{ 0,1\} ^{2n}$</span>, where <span class="tex2jax_process">$\{ 0,1\} ^ b$</span> denotes the set of all
+    <span class="mbox" style="width:"><span class="tex2jax_process">$b$</span>-bit</span> vectors. Internally, a
+    round makes use of a <em>round function</em>, <span class="tex2jax_process">$f$</span>, that maps <span class="tex2jax_process">$\{ 0,1\} ^{n}$</span> to <span class="tex2jax_process">$\{ 0,1\} ^{n}$</span>, i.e., <span class="tex2jax_process">$f$</span> operates on <em>half blocks</em>.
+    Here is what happens in a single round:</p>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$f$</span> is applied to
+        the right half of the input block</p>
+</li>
+<li>
+<p>the resulting output of <span class="tex2jax_process">$f$</span> is combined with the left half
+        of the input block via bitwise XOR (<span class="tex2jax_process">$\oplus $</span>)</p>
+</li>
+<li>
+<p>the right half of the output block is the the
+        <span class="tex2jax_process">$n$</span>-bit vector
+        produced by this XOR operation</p>
+</li>
+<li>
+<p>the left half of the output block is a copy of the right
+        half of the input block</p>
+</li>
+</ol>
+<p>Symbolically, if the <span class="mbox" style="width:"><span class="tex2jax_process">$2n$</span>-bit</span>
+    round input is denoted <span class="mbox" style="width:"><span class="tex2jax_process">$(x,y)$</span></span>,
+    where <span class="tex2jax_process">$x$</span> is the left half
+    and <span class="tex2jax_process">$y$</span> is the right half,
+    then the round output is <span class="mbox" style="width:"><span class="tex2jax_process">$(y, x \oplus
+    f(y))$</span></span>.</p>
+<p>The properties of a Feistel network block cipher depend
+    critically on the choice of the round function, <span class="tex2jax_process">$f$</span>, for which there are many options,
+    but we will make a simplifying assumption: the round function
+    is just multiplication of its <span class="mbox" style="width:"><span class="tex2jax_process">$n$</span>-bit</span>
+    input with a fixed <span class="tex2jax_process">$n \times
+    n$</span> binary matrix, <span class="tex2jax_process">$M$</span>.<a class="footnote" href="#a0000000006"><sup class="footnotemark">1</sup></a> Note that all
+    values are restricted to <span class="tex2jax_process">$\{
+    0,1\} $</span>, so any intermediate integer produced during
+    vector-matrix multiplication (or matrix-matrix multiplication)
+    must be reduced <span class="tex2jax_process">$(\mathrm{mod}~
+    2)$</span>. For example,</p><span class="tex2jax_process">\[ (1
+    \, \ 0 \, \ 1 \, \ 1) \begin{pmatrix} 0 &amp; 1 &amp; 1 &amp; 0
+    \\ 1 &amp; 0 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 0 &amp; 1 \\ 1
+    &amp; 1 &amp; 1 &amp; 0 \end{pmatrix} \ = \ (1 \, \ 1\, \ 0\, \
+    1) \]</span>
+<p>The <em>order</em> of an <span class="tex2jax_process">$n
+    \times n$</span> matrix <span class="tex2jax_process">$M$</span> is the smallest positive integer
+    <span class="tex2jax_process">$m$</span> such that <span class="tex2jax_process">$M^ m = I_ n$</span>, where <span class="tex2jax_process">$I_ n$</span> is the <span class="tex2jax_process">$n \times n$</span> identity matrix, and
+    <span class="tex2jax_process">$M^ m$</span> denotes
+    <span class="tex2jax_process">$M$</span> multiplied by itself
+    <span class="tex2jax_process">$m$</span> times.</p>
+<p>All of this leads to a very interesting question. Given the
+    order <span class="tex2jax_process">$m \geq 1$</span> of the
+    matrix <span class="tex2jax_process">$M$</span> used in the
+    round function, will the cipher become the identity mapping
+    after a finite number of rounds, and, if so, what is the
+    minimum number of rounds required to make this happen? A cipher
+    is the identity mapping if every plaintext encrypts to itself.
+    For example, if <span class="tex2jax_process">$m=2$</span>,
+    Figure <span class="tex2jax_process">$1$</span> shows that
+    the Feistel network cipher we have described becomes the
+    identity mapping after <span class="tex2jax_process">$6$</span>
+    rounds (since the plaintext, <span class="tex2jax_process">$(x,y)$</span>, is always equal to the
+    ciphertext).</p>
+<div class="figure" id="a0000000007">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{6rounds}" src="/problems/feistelfun/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: When <span class="tex2jax_process">$m=2$</span>, the cipher becomes the
+          identity mapping after <span class="tex2jax_process">$6$</span> rounds
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single positive integer,
+    <span class="tex2jax_process">$m$</span> <span class="mbox" style="width:"><span class="tex2jax_process">$(m \leq
+    40)$</span></span>, the order of the matrix <span class="tex2jax_process">$M$</span> used in the round function of the
+    Feistel network block cipher described above.<a class="footnote" href="#a0000000008"><sup class="footnotemark">2</sup></a></p>
+<h2>Output</h2>
+<p>Output a single positive integer, the minimum number of
+    rounds required for the cipher to become the identity mapping.
+    For the values of <span class="tex2jax_process">$m$</span>
+    under consideration, this is guaranteed to happen after a
+    finite number of rounds.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,102 @@
+<div class="problembody">
+<p>Frank N. Stein is a very conservative high-school teacher.
+    He wants to take some of his students on an excursion, but he
+    is afraid that some of them might become couples. While you can
+    never exclude this possibility, he has made some rules that he
+    thinks indicates a low probability two persons will become a
+    couple:</p>
+<ul class="itemize">
+<li>
+<p>Their height differs by more than <span class="tex2jax_process">$40$</span> cm.</p>
+</li>
+<li>
+<p>They are of the same sex.</p>
+</li>
+<li>
+<p>Their preferred music style is different.</p>
+</li>
+<li>
+<p>Their favourite sport is the same (they are likely to be
+        fans of different teams and that would result in
+        fighting).</p>
+</li>
+</ul>
+<p>So, for <em>any two</em> persons that he brings on the
+    excursion, they must satisfy <em>at least one</em> of the
+    requirements above. Help him find the maximum number of persons
+    he can take, given their vital information.</p>
+<h2>Input</h2>
+<p>The first line of input consists of an integer <span class="tex2jax_process">$1 \le N \le 1000$</span> giving the number
+    of pupils. Next there will be one line for each pupil
+    consisting of four space-separated data items:</p>
+<ul class="itemize">
+<li>
+<p>an integer <span class="tex2jax_process">$h$</span>
+        (<span class="tex2jax_process">$0 \le h \le 3\,
+        000$</span>) giving the height in cm;</p>
+</li>
+<li>
+<p>a character ‘<tt class="ttfamily">F</tt>’ for female or
+        ‘<tt class="ttfamily">M</tt>’ for male;</p>
+</li>
+<li>
+<p>a string describing the preferred music style;</p>
+</li>
+<li>
+<p>a string with the name of the favourite sport.</p>
+</li>
+</ul>
+<p>The strings in the input are of length at at least
+    <span class="tex2jax_process">$1$</span> and at most
+    <span class="tex2jax_process">$20$</span> characters, and
+    contain only upper and lower case letters, digits, and
+    dashes.</p>
+<h2>Output</h2>
+<p>For each test case in the input there should be one line
+    with an integer giving the maximum number of eligible
+    pupils.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+35 M classicism programming
+0 M baroque skiing
+43 M baroque chess
+30 F baroque soccer
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+27 M romance programming
+194 F baroque programming
+67 M baroque ping-pong
+51 M classicism programming
+80 M classicism Paintball
+35 M baroque ping-pong
+39 F romance ping-pong
+110 M romance Paintball
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

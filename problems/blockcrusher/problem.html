@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>You are responsible for testing the compressive strength of
+    various composite materials. You take a rectangular block,
+    crush it from the sides and see where it beaks. This is hard
+    work, and it’s dirty, so you decide to write a simulator to get
+    yourself some help.</p>
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{block1.png}" src="/problems/blockcrusher/file/statement/en/img-0001.png" style="width:35.00%"/> <img alt="\includegraphics[width=0.35\textwidth ]{block2.png}" src="/problems/blockcrusher/file/statement/en/img-0002.png" style="width:35.00%"/>
+</center>
+<p>Computationally, you model a block as being composed of a
+    grid square regions of materials of various strengths. You
+    model the strength of a square as an integer between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span>. When sufficient force is applied
+    from the sides, the block will shatter along a <i class="itshape">fracture line</i>. The fracture line is a path
+    through the squares that starts in a square along the top edge
+    of the block and ends in a square along the bottom edge. Among
+    all such paths, the fracture line is the one that minimizes the
+    total strength (<i class="itshape">i.e.</i>, the sum of the
+    strength values) of all the squares on the path. The fracture
+    line can travel from square to square up, down, left, right or
+    diagonally as it goes from the top edge to the bottom edge.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$200$</span> block descriptions. Each block
+    description starts with a line containing two integers,
+    <span class="tex2jax_process">$1 \le h \le 20$</span> and
+    <span class="tex2jax_process">$1 \le w \le 60$</span>, giving
+    the height and width of the block. This is followed by
+    <span class="tex2jax_process">$h$</span> lines of <span class="tex2jax_process">$w$</span> digits each, where each digit is
+    in the range <span class="tex2jax_process">$1 \ldots 9$</span>.
+    The end of all block descriptions is marked by values of zero
+    for <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span>.</p>
+<h2>Output</h2>
+<p>For each block, print a copy of the block with the digits
+    along its fracture line replaced by spaces. There will only be
+    one fracture line that has the minimum strength. Print a blank
+    line after each block.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+2281431
+2329463
+7183839
+7 6
+517135
+935519
+731353
+375951
+575195
+579573
+359739
+0 0
+</pre>
+</td>
+<td>
+<pre>228 431
+23 9463
+7 83839
+
+517 35
+9355 9
+73135 
+37595 
+57519 
+57957 
+3597 9
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

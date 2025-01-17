@@ -1,0 +1,115 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/mylla2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/mylla2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Tic-tac-toe_mural_in_Gy%C3%B6r.jpg">
+        wikimedia.org</a>
+</div>
+</div>
+<p>Hjalti’s favourite game is tic tac toe. The game is played
+    by two players who take turns placing marks inside the cells of
+    a <span class="tex2jax_process">$3 \times 3$</span> grid, but
+    they can’t place marks in cells that already have marks. The
+    starting player uses the mark <tt class="ttfamily">X</tt> and
+    the other uses the mark <tt class="ttfamily">O</tt>. A player
+    wins if they place three instances of their mark in a straight
+    line, whether that be horizontally, vertically or diagonally.
+    The game ends when a player wins or ends in a tie if there are
+    no empty cells left.</p>
+<p>Hjalti is a very competitive person and loves nothing more
+    than beating Guðjón at tic tac toe. Hjalti claims he’s far
+    better at the game than Guðjón so he allows Guðjón to make the
+    first move in every game. Since there is a bit of rivalry
+    between them they don’t trust each other to verify the results
+    of the games. Thus they ask you, a third party, to verify the
+    results. Hjalti doesn’t care whether Guðjón won or not, just
+    whether he himself won or not.</p>
+<h2>Input</h2>
+<p>The input consists of three lines, each line being a row of
+    the game board. Each row can contain the letters <tt class="ttfamily">X</tt>, <tt class="ttfamily">O</tt> or <tt class="ttfamily">_</tt>, where <tt class="ttfamily">X</tt> are cells
+    marked by Guðjón, <tt class="ttfamily">O</tt> are cells marked
+    by Hjalti and <tt class="ttfamily">_</tt> are the empty cells.
+    The input is always a valid end state of the game.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">Jebb</tt> if Hjalti won,
+    otherwise print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>OOO
+XX_
+_X_
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>XOX
+XOO
+X__
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>OXO
+XXO
+XOX
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

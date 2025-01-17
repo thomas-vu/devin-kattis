@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>You are playing hide-and-go-seek in a forest with Belle. The
+    forest has one tree at each of the positive integer lattice
+    points. That is, there is a tree at every point <span class="tex2jax_process">$(x,y)$</span> where <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> are both positive integers. You
+    may consider each tree as a point. A logging company has cut
+    down all of the trees in some axis-aligned rectangle, including
+    those on the boundary of the rectangle.</p>
+<p>You are standing at <span class="tex2jax_process">$(0,0)$</span> and Belle is standing at
+    <span class="tex2jax_process">$(x_ b,y_ b)$</span>. You can see
+    Belle if and only if there is no tree blocking your line of
+    sight to Belle. If there is a tree at <span class="tex2jax_process">$(x_ b,y_ b)$</span>, Belle will make it
+    easier for you to find her by standing on the side of the tree
+    facing your location.</p>
+<p>For example, suppose that Belle is standing at <span class="tex2jax_process">$(2,6)$</span>. If the trees in the rectangle
+    with corners at <span class="tex2jax_process">$(1,1)$</span>
+    and <span class="tex2jax_process">$(5,4)$</span> are cut down
+    (blue rectangle in figure), then you can see Belle. However, if
+    the rectangle was at <span class="tex2jax_process">$(3,5)$</span> and <span class="tex2jax_process">$(5,7)$</span> (red rectangle in figure),
+    then the tree at <span class="tex2jax_process">$(1,3)$</span>
+    would be in the way.</p>
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{trees.pdf}" src="/problems/forestforthetrees/file/statement/en/img-0001.png" style="width:45.00%"/>
+</center>
+<p>Given the rectangle and Belle’s location, can you see
+    her?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integer <span class="tex2jax_process">$x_ b$</span> and <span class="tex2jax_process">$y_ b$</span> (<span class="tex2jax_process">$1 \leq x_ b,y_ b \leq 10^{12}$</span>),
+    which are the coordinates that Belle is standing on.</p>
+<p>The second line of input contains four integers <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span> and <span class="tex2jax_process">$y_2$</span> (<span class="tex2jax_process">$1 \leq x_1 \leq x_2 \leq 10^{12}$</span> and
+    <span class="tex2jax_process">$1 \leq y_1 \leq y_2 \leq
+    10^{12}$</span>), which specify two opposite corners of the
+    rectangle at <span class="tex2jax_process">$(x_1, y_1)$</span>
+    and <span class="tex2jax_process">$(x_2, y_2)$</span>.</p>
+<h2>Output</h2>
+<p>If you can see Belle, display <tt class="ttfamily">Yes</tt>.</p>
+<p>Otherwise, display <tt class="ttfamily">No</tt> and the
+    coordinates of the closest tree that is blocking your view.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 6
+1 1 5 4
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 6
+3 5 5 7
+</pre>
+</td>
+<td>
+<pre>No
+1 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>830844890448 39710592053
+821266 42860 402207107926 423171345006
+</pre>
+</td>
+<td>
+<pre>No
+402207964848 19223704203
+</pre>
+</td>
+</tr>
+</table>
+</div>

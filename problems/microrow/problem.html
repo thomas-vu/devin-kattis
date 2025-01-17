@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>You are studying <span class="tex2jax_process">$N$</span>
+    microbes. The <span class="tex2jax_process">$i^\text
+    {th}$</span> microbe has initial x-coordinate <span class="tex2jax_process">$P_ i$</span> nanometers and will travel
+    <span class="tex2jax_process">$S_ i$</span> nanometers in the
+    positive x-direction each second.</p>
+<p>All these x-coordinates are initially distinct. You know
+    that these microbes are incredibly amorphous, so that if one of
+    them touches another one (that is, they occupy the exact same
+    x-coordinate at the same time) they will merge together,
+    ruining the whole study. To this end, you want to separate the
+    microbes into <i class="itshape">rows</i> (where each row has a
+    distinct y-coordinate) before the study begins, such that no
+    two microbes will ever touch each other, no matter how long you
+    observe them.</p>
+<p>It is hard to keep track of too many rows, so you want to
+    minimize the total number of rows you have to separate the
+    microbes into. How should you separate these microbes such that
+    the minimum number of rows is needed?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 200\, 000$</span>), the number
+    of microbes.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines of
+    input contain the descriptions of the microbes. In particular,
+    the <span class="tex2jax_process">$i^\text {th}$</span> of
+    these lines contains two integers <span class="tex2jax_process">$P_ i$</span> (<span class="tex2jax_process">$1\leq P_ i \leq 10^9$</span>; <span class="tex2jax_process">$P_ i \neq P_ j$</span> for <span class="tex2jax_process">$i \neq j$</span>) and <span class="tex2jax_process">$S_ i$</span> (<span class="tex2jax_process">$1 \leq S_ i \leq 10^9$</span>), denoting
+    that the <span class="tex2jax_process">$i^\text {th}$</span>
+    microbe has initial x-coordinate <span class="tex2jax_process">$P_ i$</span> nanometers and will travel
+    <span class="tex2jax_process">$S_ i$</span> nanometers in the
+    positive x-direction each second.</p>
+<h2>Output</h2>
+<p>Output a single line containing <span class="tex2jax_process">$N$</span> distinct integers <span class="tex2jax_process">$r_1, r_2, \dots , r_ N$</span> (<span class="tex2jax_process">$1 \leq r_ i \leq N$</span>), the rows the
+    microbes should be located. There must be at least one microbe
+    on each row; that is, <span class="tex2jax_process">$r_ i =
+    k$</span> for some <span class="tex2jax_process">$k$</span>
+    implies, for all positive integer <span class="tex2jax_process">$k’ &lt; k$</span>, the existence of some
+    <span class="tex2jax_process">$j$</span> such that <span class="tex2jax_process">$r_ j = k’$</span>. The configuration you
+    provide should not allow any two microbes to touch each other
+    at any point, and, among all such configurations satisfying
+    that criteria, use the minimum possible number of rows.</p>
+<p>If there are multiple correct answers, you can output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+6 1
+1 3
+3 4
+5 6
+12 8
+</pre>
+</td>
+<td>
+<pre>1 2 2 2 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

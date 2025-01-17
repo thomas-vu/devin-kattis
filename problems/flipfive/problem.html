@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>This is a logic puzzle in which you have a square grid of
+    3<span class="tex2jax_process">$\times $</span>3 cells. Each
+    cell is initially either white or black. When you click on a
+    square it flips, or toggles, the color of that square and the
+    colors of its four immediate north, south, east and west
+    neighbors that exist (they don’t exist if they would be outside
+    the grid).</p>
+<p>The problem is to find the minimum number of cell clicks to
+    transform a grid of all white cells into the input grid (which
+    is always possible). You cannot rotate the grid.</p>
+<div class="figure" id="a0000000704">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{flip4}" src="/problems/flipfive/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The two sample problems
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first value in the input file is an integer <span class="tex2jax_process">$P \; (0&lt;P\leq 50)$</span> on a line by
+    itself giving the number of problems to solve.</p>
+<p>For each of the <span class="tex2jax_process">$P$</span>
+    problems, 3 lines of 3 characters describe the input grid. The
+    characters in the grid descriptions are ‘*’ (for black) and ‘.’
+    (for white).</p>
+<h2>Output</h2>
+<p>For each problem output a single integer giving the minimum
+    number of clicks necessary to transform a grid of all white
+    cells into the pattern given in the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+*..
+**.
+*..
+***
+*..
+..*
+</pre>
+</td>
+<td>
+<pre>
+1
+3
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

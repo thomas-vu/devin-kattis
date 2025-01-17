@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>Today, Gandalf woke up from an awful dream that told him
+    that the hobbit needs to be mentally prepared for the journey
+    ahead. So, Gandalf decided to create a spell where it would
+    replace every unique word in a sentence with a unique
+    character. However, Gandalf is cheeky so he decided to test the
+    hobbit by seeing whether he can check if this one-to-one
+    mapping from word to character was satisfied given a string of
+    characters and a sentence string. Your job is to put yourself
+    in the position of the hobbit, and write the code so that it
+    displays “<tt class="ttfamily">True</tt>” if every character in
+    the string maps to words in the sentence in the same order,
+    with every unique character consistently mapping to the same
+    unique word and every unique word consistently mapping to the
+    same unique character. Otherwise, display “<tt class="ttfamily">False</tt>”. Do you think you got what it takes to
+    be the next Hobbit?</p>
+<h2>Input</h2>
+<p>Input consists of two strings. The first line will contain
+    the string of alphanumeric characters which will have from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span> characters. Then, the second
+    line will contain the sentence string, where every word in the
+    sentence will be space-separated, and the words can only
+    contain alphanumeric characters. The sentence will have from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span> words and from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$500$</span> total characters.</p>
+<h2>Output</h2>
+<p>Display “<tt class="ttfamily">True</tt>” if each character
+    from the string of characters maps one-to-one to a unique word
+    in the sentence string, and that this mapping is in the same
+    order. Otherwise, display “<tt class="ttfamily">False</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>erf
+why they they
+</pre>
+</td>
+<td>
+<pre>False
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>abcdabcd
+CCPC is the best CCPC is the best
+</pre>
+</td>
+<td>
+<pre>True
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>a
+The quick brown fox jumps over the lazy dog
+</pre>
+</td>
+<td>
+<pre>False
+</pre>
+</td>
+</tr>
+</table>
+</div>

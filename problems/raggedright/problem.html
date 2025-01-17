@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Word wrapping is the task of deciding how to break a
+    paragraph of text into lines. For aesthetic reasons, we’d like
+    all the lines except the last one to be about the same length.
+    For example, we would say the text on the left looks less
+    ragged than the text on the right:</p>
+<pre>
+            This is a                 This
+            paragraph                 is a paragraph
+            of text.                  of text.
+</pre>
+<p>Your job is to compute a raggedness value for an arbitrary
+    paragraph of text. We’ll measure raggedness in a way similar to
+    the T<sub style="text-transform:uppercase; margin-left:-0.2em">e</sub>X 
+    typesetting system. Let <span class="tex2jax_process">$n$</span> be the length, measured in
+    characters, of the longest line of the paragraph. If some other
+    line contains only <span class="tex2jax_process">$m$</span>
+    characters, then we’ll charge a penalty score of <span class="tex2jax_process">$( n - m )^2$</span> for that line. The
+    raggedness will be the sum of the penalty scores for every line
+    except the last one.</p>
+<h2>Input</h2>
+<p>Input consists of a single paragraph of text containing at
+    most 100 lines. Each line of the paragraph contains a sequence
+    of between 1 and 80 characters (letters, punctuation
+    characters, decimal digits and spaces). No line starts or ends
+    with spaces. The paragraph ends at end of file.</p>
+<h2>Output</h2>
+<p>Print out a single integer, the raggedness score for
+    paragraph.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+some blocks
+of text line up
+well on the right,
+but
+some don't.
+</pre>
+</td>
+<td>
+<pre>
+283
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+this line is short
+this one is a bit longer
+and this is the longest of all.
+</pre>
+</td>
+<td>
+<pre>
+218
+</pre>
+</td>
+</tr>
+</table>
+</div>

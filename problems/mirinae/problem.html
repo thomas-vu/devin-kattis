@@ -1,0 +1,40 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$N$</span> planets
+    in Vita’s galaxy. In order to improve the security of the
+    planets, Vita assigned each planet to guard exactly one other
+    planet. In particular, the <span class="tex2jax_process">$i$</span>-th planet guards the <span class="tex2jax_process">$A_ i$</span>-th planet for every
+    <span class="tex2jax_process">$1 \le i \le N$</span>.</p>
+<p>Vita wants to construct a protective barrier surrounding
+    multiple planets. Let the set of planets to be protected by the
+    barrier be <span class="tex2jax_process">$S$</span>, then each
+    planet in <span class="tex2jax_process">$S$</span> must be
+    guarding a planet not in <span class="tex2jax_process">$S$</span>.</p>
+<p>Help Vita determine the maximum number of planets to be
+    protected by the barrier.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 10^6$</span>), the number of planets.</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> integers. For every <span class="tex2jax_process">$1 \le i \le N$</span>, <span class="tex2jax_process">$i$</span>-th integer represents <span class="tex2jax_process">$A_ i$</span> (<span class="tex2jax_process">$1 \le A_ i \le N$</span>, <span class="tex2jax_process">$A_ i \ne i$</span>), which means the
+    <span class="tex2jax_process">$i$</span>-th planet guards the
+    <span class="tex2jax_process">$A_ i$</span>-th planet.</p>
+<h2>Output</h2>
+<p>Output a single integer, the maximum number of planets in
+    the protective barrier.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+3 6 2 5 4 3
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

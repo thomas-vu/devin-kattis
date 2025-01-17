@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/10kindsofpeople/file/statement/en/img-0001.jpg" class="illustration" src="/problems/10kindsofpeople/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.flickr.com/photos/132889348@N07/20445410520">Christiaan
+        Colen</a>
+</div>
+</div>
+<p>The world is made up of <span class="tex2jax_process">$10$</span> kinds of people, those who
+    understand binary and those who do not. These different kinds
+    of people do not always get along so well. Bob might ask for a
+    <span class="tex2jax_process">$10000$</span> ounce coffee
+    (meaning binary) and Alice might make misinterpret his request
+    as being in decimal and give him a <span class="tex2jax_process">$10011100010000$</span> ounce coffee
+    (binary). After Sue explains that this much coffee costs
+    <span class="tex2jax_process">$100$</span> dollars (decimal),
+    Bob might assume he only has to pay <span class="tex2jax_process">$4$</span> dollars (interpreting the price as
+    being in binary). In response to these differences that are
+    difficult to resolve, these two groups have divided the world
+    into two regions, the binary-friendly zones and the
+    decimal-friendly zones. They have even published a map like the
+    following to help people keep up with where the areas are (they
+    have used ones and zeros so nobody would have trouble reading
+    it).</p>
+<center>
+<tt>1111100000</tt><br/>
+<tt>1111000000</tt><br/>
+<tt>1110000011</tt><br/>
+<tt>0111100111</tt><br/>
+<tt>0011111111</tt>
+</center>
+<p>Users of binary have to stay in the zones marked with a
+    zero. Users of decimal have to stay in the zones marked with a
+    one. You have to figure out if it is possible for either type
+    of person to get between various locations of interest. People
+    can move north, south, east or west, but cannot move
+    diagonally.</p>
+<h2>Input</h2>
+<p>Input starts with a line containing two positive integers,
+    <span class="tex2jax_process">$1 \le r \le 1\, 000$</span> and
+    <span class="tex2jax_process">$1 \le c \le 1\, 000$</span>. The
+    next <span class="tex2jax_process">$r$</span> input lines give
+    the contents of the map, each line containing exactly
+    <span class="tex2jax_process">$c$</span> characters (which are
+    all chosen from <span class="tex2jax_process">$0$</span> or
+    <span class="tex2jax_process">$1$</span>).</p>
+<p>The next line has an integer <span class="tex2jax_process">$0 \le n \le 1\, 000$</span>. The following
+    <span class="tex2jax_process">$n$</span> lines each contain one
+    query, given as four integers: <span class="tex2jax_process">$r_1,c_1$</span> and <span class="tex2jax_process">$r_2,c_2$</span>. These two pairs indicate
+    two locations on the map, and their limits are <span class="tex2jax_process">$1 \le r_1, r_2 \le r$</span> and
+    <span class="tex2jax_process">$1 \le c_1, c_2 \le
+    c$</span>.</p>
+<h2>Output</h2>
+<p>For each query, output <tt class="ttfamily">binary</tt> if a
+    binary user can start from location <span class="tex2jax_process">$r_1, c_1$</span> and move to location
+    <span class="tex2jax_process">$r_2, c_2$</span>. Output
+    <tt class="ttfamily">decimal</tt> if a decimal user can move
+    between the two locations. Otherwise, output <tt class="ttfamily">neither</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 4
+1100
+2
+1 1 1 4
+1 1 1 1
+</pre>
+</td>
+<td>
+<pre>
+neither
+decimal
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 20
+11111111111111111111
+11000000000000000101
+11111111111111110000
+11111111111111110000
+11000000000000000111
+00011111111111111111
+00111111111111111111
+10000000000000001111
+11111111111111111111
+11111111111111111111
+3
+2 3 8 16
+8 1 7 3
+1 1 10 20
+</pre>
+</td>
+<td>
+<pre>
+binary
+decimal
+neither
+</pre>
+</td>
+</tr>
+</table>
+</div>

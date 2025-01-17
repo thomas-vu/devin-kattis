@@ -1,0 +1,377 @@
+<div class="problembody">
+<p>On the Internet, there are many bad guys who always try to
+    hack the computers of others. They steal cat pictures, bank
+    logins and membership lists on programming dating sites. One of
+    the first countermeasures against network-based attacks is the
+    <em>firewall</em>. A firewall filters some network trafik based
+    on different criteria, to shut out unauthorized access. In this
+    problem, we are going to code the part of the firewall that
+    determines of a certain message sent to a server over a network
+    should be dropped or accepted.</p>
+<p>A firewall consists of a number of <em>rules</em> in a long
+    list. A rule is on the form “if [list of conditions] are true,
+    perform an action”. These conditions are one of</p>
+<dl class="description">
+<dt><tt class="ttfamily">port=XYZ</tt></dt>
+<dd>
+<p>- if the message was sent to port <tt class="ttfamily">XYZ</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">ip=XYZ</tt></dt>
+<dd>
+<p>- if the message was sent from the IP-address <tt class="ttfamily">XYZ</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">limit=XYZ</tt></dt>
+<dd>
+<p>- if at least <tt class="ttfamily">XYZ</tt> of the last
+        1000 messages (including the one just received) was sent
+        from this IP-address.</p>
+</dd>
+</dl>
+<p>and the actions are one of</p>
+<dl class="description">
+<dt><tt class="ttfamily">accept</tt></dt>
+<dd>
+<p>- let the package through the firewall. Print <tt class="ttfamily">accept packet-ID</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">log</tt></dt>
+<dd>
+<p>- print <tt class="ttfamily">log packet-ID</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">drop</tt></dt>
+<dd>
+<p>- block the packet. Print <tt class="ttfamily">drop
+        packet-ID</tt>.</p>
+</dd>
+</dl>
+<p>Some examples of rules with explanations:</p>
+<dl class="description">
+<dt><tt class="ttfamily">accept</tt></dt>
+<dd>
+<p>- always accept the packet.</p>
+</dd>
+<dt><tt class="ttfamily">accept ip=127.0.0.1</tt></dt>
+<dd>
+<p>- accept the packet if it comes from the IP-address
+        <tt class="ttfamily">127.0.0.1</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">drop port=22
+      ip=192.168.1.1</tt></dt>
+<dd>
+<p>- drop the packet if its from the IP-address <tt class="ttfamily">192.168.1.1</tt> and sent to port <tt class="ttfamily">22</tt>.</p>
+</dd>
+<dt><tt class="ttfamily">log port=80 limit=500</tt></dt>
+<dd>
+<p>- log the packet if it was sent to port <tt class="ttfamily">80</tt>, and at least half of the last 1000
+        messenges was sent from this IP-address.</p>
+</dd>
+</dl>
+<p>When a packet enters the firewall, it looks at every rule in
+    the list, top to bottom, until it reaches a rule that matches
+    the packet. The given firewall will always be constructed such
+    that a packet will be accepted or dropped before the end of the
+    list.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le N \le 100$</span>, the number of rules
+    in the firewall.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines
+    contains the rules in the list, one rule on each line.</p>
+<p>The next row contains an integer <span class="tex2jax_process">$P \le 10\, 000$</span>, the number of
+    packets arriving to the firewall. They are given in the order
+    of arrival. A packet is on the form <tt class="ttfamily">IP:port</tt>, for example <tt class="ttfamily">127.0.0.1:123</tt>. The packet ID is just the
+    position of the packet in this list. The first packet has id
+    <span class="tex2jax_process">$1$</span> and the last ID
+    <span class="tex2jax_process">$P$</span>.</p>
+<p>A port is an integer <span class="tex2jax_process">$1 \le p
+    \le 65535$</span>.</p>
+<h2>Output</h2>
+<p>For each packet, you are to run it through the firewall
+    until it is accepted or dropped. Each action that is taken
+    describes what to print. Note that since the action <tt class="ttfamily">log</tt> doesn’t stop the packet in the firewall,
+    each packet could result in multiple lines of output.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a number of test case
+    groups. To get points for a group you have to solve all the
+    test cases in that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$P \le 10\, 000$</span>.
+          There are only <tt class="ttfamily">accept</tt>
+          actions.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$P \le 10\, 000$</span>.
+          No rule has a condition.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>29</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$P \le 10\, 000$</span>.
+          There are no <tt class="ttfamily">limit</tt>
+          conditions.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$P \le 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$P \le 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$P \le 10\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+accept ip=127.0.0.1
+drop port=22
+accept limit=5
+accept port=80
+accept port=10 port=11
+drop
+16
+127.0.0.1:80
+127.0.0.1:22
+192.168.0.1:80
+192.168.0.1:11
+192.168.0.1:12
+192.168.0.1:13
+192.168.0.1:14
+192.168.0.1:15
+192.168.0.1:16
+192.168.0.1:22
+192.168.0.1:80
+154.135.0.5:22
+154.135.0.5:80
+127.0.0.1:8080
+215.215.5.8:5919
+215.215.5.9:5919
+</pre>
+</td>
+<td>
+<pre>accept 1
+accept 2
+accept 3
+drop 4
+drop 5
+drop 6
+accept 7
+accept 8
+accept 9
+drop 10
+accept 11
+drop 12
+accept 13
+accept 14
+drop 15
+drop 16
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+accept ip=192.168.0.1
+log port=22
+accept
+drop
+16
+127.0.0.1:80
+127.0.0.1:22
+192.168.0.1:80
+192.168.0.1:11
+192.168.0.1:12
+192.168.0.1:13
+192.168.0.1:14
+192.168.0.1:15
+192.168.0.1:16
+192.168.0.1:22
+192.168.0.1:80
+154.135.0.5:22
+154.135.0.5:80
+127.0.0.1:8080
+215.215.5.8:5919
+215.215.5.9:5919
+</pre>
+</td>
+<td>
+<pre>accept 1
+log 2
+accept 2
+accept 3
+accept 4
+accept 5
+accept 6
+accept 7
+accept 8
+accept 9
+accept 10
+accept 11
+log 12
+accept 12
+accept 13
+accept 14
+accept 15
+accept 16
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+log limit=1
+log limit=2
+log limit=3
+drop limit=1
+accept
+16
+127.0.0.1:80
+127.0.0.1:22
+192.168.0.1:80
+192.168.0.1:11
+192.168.0.1:12
+192.168.0.1:13
+192.168.0.1:14
+192.168.0.1:15
+192.168.0.1:16
+192.168.0.1:22
+192.168.0.1:80
+154.135.0.5:22
+154.135.0.5:80
+127.0.0.1:8080
+215.215.5.8:5919
+215.215.5.9:5919
+</pre>
+</td>
+<td>
+<pre>log 1
+drop 1
+log 2
+log 2
+drop 2
+log 3
+drop 3
+log 4
+log 4
+drop 4
+log 5
+log 5
+log 5
+drop 5
+log 6
+log 6
+log 6
+drop 6
+log 7
+log 7
+log 7
+drop 7
+log 8
+log 8
+log 8
+drop 8
+log 9
+log 9
+log 9
+drop 9
+log 10
+log 10
+log 10
+drop 10
+log 11
+log 11
+log 11
+drop 11
+log 12
+drop 12
+log 13
+log 13
+drop 13
+log 14
+log 14
+log 14
+drop 14
+log 15
+drop 15
+log 16
+drop 16
+</pre>
+</td>
+</tr>
+</table>
+</div>

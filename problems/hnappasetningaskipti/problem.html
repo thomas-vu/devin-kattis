@@ -1,0 +1,767 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/hnappasetningaskipti/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hnappasetningaskipti/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Typewriter-12_hg.jpg">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>A while back Arnar, Bjarki and Unnar competed together in
+    competitive programming. At the university level, contestants
+    also compete in three person teams, but each team only gets one
+    computer. Therefore it is very important to use the time at the
+    computer well, while the other two contestants try to solve
+    other problems, and prepare to program their solutions quickly
+    and correctly when it is their turn.</p>
+<p>To make the most of his time, Bjarki decided to learn the
+    <em>dvorak</em> keyboard layout, because he believes it allows
+    him to type faster. Arnar thought this was a good idea and thus
+    made his own keyboard layout which he called <em>bjarki</em>
+    and moved onto using it. Unnar has decided to just stick to
+    <em>qwerty</em> however, he does not think this is worth the
+    effort. But this is now causing problems! When the three swap
+    turns being at the computer, they sometimes start typing a
+    whole bunch of things without realising the computer has the
+    wrong keyboard layout active! Thus, they need a program that
+    can take what has already been written and change it to what
+    they intended to write.</p>
+<p>A table follows that shows which keys correspond to one
+    another in different keyboard layouts. Spaces are the same in
+    all keyboard layouts. The table can also be found in the TSV
+    format in the attachments.</p>
+<div class="minipage" style="width:270.0pt">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><em>qwerty</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><em>dvorak</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><em>bjarki</em></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>~</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt>~</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt>0</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>1</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>1</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>2</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>2</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>2</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>4</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>3</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>8</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>4</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>4</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>6</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>5</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>5</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>1</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>6</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>6</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>3</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>7</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>7</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>5</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>8</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>8</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>7</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>9</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>9</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>9</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>0</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>0</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>=</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>-</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>[</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>-</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>=</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>]</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>/</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>q</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>'</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>b</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>w</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>,</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>j</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>e</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>.</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>a</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>r</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>p</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>r</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>t</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>y</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>k</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>y</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>f</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>i</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>u</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>g</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>g</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>i</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>c</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>u</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>o</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>r</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>s</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>p</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>l</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>t</tt></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="minipage" style="width:270.0pt">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><em>qwerty</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><em>dvorak</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><em>bjarki</em></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>[</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt>/</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><tt>.</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>]</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>=</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>,</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>a</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>a</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>l</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>s</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>o</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>o</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>d</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>e</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>e</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>f</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>u</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>m</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>g</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>i</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>p</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>h</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>d</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>d</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>j</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>h</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>c</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>k</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>t</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>n</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>l</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>n</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>v</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>;</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>s</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>q</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>'</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>-</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>;</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>z</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>;</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>[</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>x</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>q</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>]</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>c</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>j</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>y</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>v</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>k</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>z</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>b</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>x</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>h</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>n</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>b</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>w</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>m</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>m</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>f</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>,</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>w</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>x</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt>.</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>v</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt>'</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>/</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>z</tt></p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt>~</tt></p>
+</td>
+</tr>
+</table>
+</div>
+<h2>Input</h2>
+<p>The first line is of the form <tt class="ttfamily">type1 on
+    type2</tt> where <tt class="ttfamily">type1</tt> and <tt class="ttfamily">type2</tt> are qwerty, dvorak or bjarki. <tt class="ttfamily">type2</tt> is the keyboard layout currently active
+    and <tt class="ttfamily">type1</tt> is the layout that the
+    person at the computer is used to. Next there is a single line,
+    the text that the person at the computer wrote. This text is
+    always a single line but can contain all of the characters in
+    the table above. This line will contain at most <span class="tex2jax_process">$1\, 000$</span> letters and at least one
+    letter that is not whitespace.</p>
+<h2>Output</h2>
+<p>Print what the person at the computer intended to write. The
+    output will be considered correct even if the whitespace is not
+    an exact match, as long as the words match. For example a
+    single space and two consecutive spaces will be considered
+    equivalent.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input is the sample input.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">qwerty on
+          qwerty</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">dvorak on
+          dvorak</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">bjarki on
+          bjarki</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">dvorak on
+          qwerty</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">bjarki on
+          qwerty</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">qwerty on
+          dvorak</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>8</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">bjarki on
+          dvorak</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>9</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The input starts with <tt class="ttfamily">qwerty on
+          bjarki</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>The input starts with <tt class="ttfamily">dvorak on
+          bjarki</tt>.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>qwerty on qwerty
+thetta helst obreytt
+</pre>
+</td>
+<td>
+<pre>thetta helst obreytt
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>dvorak on qwerty
+o.yqtxmal ekrpat
+</pre>
+</td>
+<td>
+<pre>setxkbmap dvorak
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>bjarki on dvorak
+c'ls qnpttp eg l wylszp
+</pre>
+</td>
+<td>
+<pre>hvar stilli eg a bjarki
+</pre>
+</td>
+</tr>
+</table>
+</div>

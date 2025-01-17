@@ -1,0 +1,180 @@
+<div class="problembody">
+<p>Emma loved playing Yatzy when she was younger and recently
+    decided to try playing it again for the first time in many
+    years. However, she quickly realized that it was a bit boring
+    with just five dice, so she changed the rules to include
+    <span class="tex2jax_process">$N$</span> dice and called the
+    new game Superyatzy. Unsurprisingly, it turned out that it is
+    very difficult to get Yatzy when playing Superyatzy! To fix the
+    problem, Emma started cheating and turning some of the dice to
+    show the value she wanted. However, Emma is a bit paranoid and
+    is scared that someone will notice. Therefore, she decides to
+    only change the value of at most <span class="tex2jax_process">$M$</span> dice. Is it possible for Emma to
+    get Yatzy if she cheats in this way?</p>
+<p>Emma is using normal 6 sided dice, and wants all dice to
+    show the same value - then she has gotten ”Yatzy” and wins the
+    game.</p>
+<h2>Input</h2>
+<p>First, a line containing the numbers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10^5$</span>) and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$0
+    \leq M \leq N$</span>) is given, where <span class="tex2jax_process">$N$</span> is the number of dice Emma has,
+    and <span class="tex2jax_process">$M$</span> is the number of
+    dice Emma can cheat with and turn over. Then follow
+    <span class="tex2jax_process">$N$</span> lines where the
+    <span class="tex2jax_process">$i$</span>-th line contains a
+    number <span class="tex2jax_process">$t_ i$</span>, where
+    <span class="tex2jax_process">$t_ i$</span> represents the
+    value of the <span class="tex2jax_process">$i$</span>-th
+    die.</p>
+<h2>Output</h2>
+<p>Output ”Ja” if Emma can get Yatzy and ”Nej” otherwise.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on different test groups. To
+    score points for a group, you must pass all the test cases in
+    that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 5, M =
+          0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>At least half the dice show <span class="tex2jax_process">$6$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All dice show either <span class="tex2jax_process">$5$</span> or <span class="tex2jax_process">$6$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1:</h2>
+<p>We receive five dice and can cheat zero times. All dice must
+    be the same for us to achieve Yatzy, but they are not.</p>
+<h2>Explanation of sample 2:</h2>
+<p>We receive five dice and can cheat three times. This can be
+    done by changing the second, third, and fourth dice to
+    <span class="tex2jax_process">$2$</span>s. Alternatively, we
+    can change the first, fourth, and fifth dice to <span class="tex2jax_process">$4$</span>s and achieve Yatzy in fours.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 0
+1
+1
+1
+2
+1
+</pre>
+</td>
+<td>
+<pre>Nej
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+2
+4
+4
+3
+2
+</pre>
+</td>
+<td>
+<pre>Ja
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 5
+1
+6
+1
+3
+2
+6
+6
+3
+6
+4
+</pre>
+</td>
+<td>
+<pre>Nej
+</pre>
+</td>
+</tr>
+</table>
+</div>

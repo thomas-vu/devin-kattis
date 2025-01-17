@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Mastermind is a two-person code breaking game which works as
+    follows. The first person (the <em>code maker</em>) creates a
+    sequence of <span class="tex2jax_process">$n$</span> colored
+    pegs (with duplicate colors allowed) and hides it from view.
+    This sequence of pegs is the <em>code</em>.</p>
+<p>The second person (the <em>code breaker</em>) has the job of
+    trying to determine the code maker’s code and she does so by
+    making a series of guesses. Each guess also consists of
+    <span class="tex2jax_process">$n$</span> colored pegs. After
+    each guess, the code maker gives the code breaker feedback
+    about how close she is. This feedback consists of two number
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$s$</span>, where</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$r =$</span> the number of
+        pegs that are identical in both color and position in the
+        code and the guess, and</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$s =$</span> the number of
+        remaining pegs that are identical in color but not in the
+        same position.</p>
+</li>
+</ul>
+<p>For example, if the code is BACC (where we use different
+    letters to represent colors) and the guess is CABB, then
+    <span class="tex2jax_process">$r=1$</span> (the A in the second
+    position of both the code and the guess) and <span class="tex2jax_process">$s=2$</span> (a B and C in the remaining
+    three characters). Note that only one of the B’s in the guess
+    will “match” with the single B in the code: once pegs in the
+    code and the guess have been “matched” with each other, they
+    can’t be matched with any other pegs.</p>
+<p>Your job in this problem is to determine <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$s$</span> given a code and a guess.</p>
+<h2>Input</h2>
+<p>The input is a single line containing a positive integer
+    <span class="tex2jax_process">$n \leq 50$</span> (the length of
+    the code) followed by two strings of length <span class="tex2jax_process">$n$</span> — the first of these is the code
+    and the second is the guess. Both code and guess are made up of
+    upper-case alphabetic characters.</p>
+<h2>Output</h2>
+<p>Output the values of <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$s$</span> for the given input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 BACC CABB
+</pre>
+</td>
+<td>
+<pre>
+1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+13 ABCDEFGHIJKLM NOPQRSTUVWXYZ
+</pre>
+</td>
+<td>
+<pre>
+0 0
+</pre>
+</td>
+</tr>
+</table>
+</div>

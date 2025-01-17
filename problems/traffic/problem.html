@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/traffic/file/statement/en/img-0001.jpg" class="illustration" src="/problems/traffic/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/mckaysavage/">Photo</a> by
+        mckay savage cc by-sa 2.0
+      </div>
+</div>It’s the slow crawl of rush hour. At any point of time,
+    each vehicle is either stopped or is moving at the extremely
+    slow speed of <span class="tex2jax_process">$1$</span> meter
+    per second. Lately, vehicles come equipped with a simple “black
+    box” that record all changes in a vehicle’s speed. In this
+    problem, speeds change instantaneously.
+
+    <p>The road is modelled as the real line (units in meters). So
+    a car is identified with its position on the line. Also, cars
+    are <span class="tex2jax_process">$4.4$</span> meters long.</p>
+<p>Given initial positions of two cars that are driving along
+    the real line in the positive direction and a transcript of
+    their speed changes, did these cars ever collide? While such a
+    collision would be very slow speed (a “bumper tap”), any
+    collision could result in erroneous readings from the black box
+    in the future so the portions of the transcripts after a
+    collision might not make sense.</p>
+<h2>Input</h2>
+<p>There is only one test case. The first line contains two
+    integers <span class="tex2jax_process">$0 \leq X_1, X_2 \leq
+    10^6$</span> indicating the initial positions of the rears of
+    the two vehicles in meters. You are guaranteed either
+    <span class="tex2jax_process">$X_1 + 5 \leq X_2$</span> or
+    <span class="tex2jax_process">$X_2 + 5 \leq X_1$</span>.
+    Initially (at time <span class="tex2jax_process">$0$</span>),
+    the two cars are stopped.</p>
+<p>The second line begins with a number <span class="tex2jax_process">$0 \leq N_1 \leq 10^5$</span> indicating the
+    number of times the speed of the first car changed. The rest of
+    the line contains <span class="tex2jax_process">$N_1$</span>
+    integers <span class="tex2jax_process">$0 &lt; T_1 &lt; T_2
+    &lt; \ldots &lt; T_{n_1} \leq 10^6$</span> indicating the times
+    (in seconds) the first vehicle changed speeds. So at time
+    <span class="tex2jax_process">$T_1$</span> it begins driving at
+    <span class="tex2jax_process">$1$</span> m/s, at time
+    <span class="tex2jax_process">$T_2$</span> it stops, at time
+    <span class="tex2jax_process">$T_3$</span> it begins driving at
+    <span class="tex2jax_process">$1$</span> m/s, and so on.</p>
+<p>The last line begins with a number <span class="tex2jax_process">$0 \leq N_2 \leq 10^5$</span> and is followed
+    by <span class="tex2jax_process">$N_2$</span> integers
+    <span class="tex2jax_process">$0 &lt; T’_1 &lt; T’_2 &lt;
+    \ldots &lt; T’_{n_2} \leq 10^6$</span> that describe the times
+    the second vehicle starts and stops.</p>
+<h2>Output</h2>
+<p>If the vehicles collide, output the message <tt class="ttfamily">bumper tap at time</tt> <span class="tex2jax_process">$S$</span> on a single line where
+    <span class="tex2jax_process">$S$</span> is the number of
+    seconds from time <span class="tex2jax_process">$0$</span> that
+    the vehicles first collide, rounded up to the nearest second.
+    If the vehicles do not collide, output the message <tt class="ttfamily">safe and sound</tt> on a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 5
+3 1 4 5
+3 1 4 6
+</pre>
+</td>
+<td>
+<pre>
+bumper tap at time 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 0
+2 1 2
+1 1
+</pre>
+</td>
+<td>
+<pre>
+bumper tap at time 8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 13
+1 1
+3 4 7 10
+</pre>
+</td>
+<td>
+<pre>
+safe and sound
+</pre>
+</td>
+</tr>
+</table>
+</div>

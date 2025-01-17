@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>An ultra-marathon is a race that takes place over an
+    uncomfortably long distance and time, typically lasting for
+    five hours or more. You are part of a group of three
+    ultra-marathon runners looking to place in this year’s Great
+    South-to-North run from Plymouth to Aberdeen.</p>
+<p>You have a set number of days until the next race to train.
+    You will all train together, as training alone can be
+    dangerous. As everyone has their own schedule in mind for how
+    many kilometres to run per day, this will not be easy, you will
+    have to compromise.</p>
+<p>The fairest option is to look at each day individually,
+    examine the three options for how far to run, and to take the
+    median one. That is to say, the option taken for each day
+    should be one that is not be greater or lesser than both of the
+    other possibilities at the same time.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>A line with the integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n\leq 1000$</span>), the number of
+        days of training.</p>
+</li>
+<li>
+<p>A line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$k_{1,\ldots
+        ,n}$</span> (<span class="tex2jax_process">$0\leq k \leq
+        10^6$</span>), your ideal daily distances.</p>
+</li>
+<li>
+<p>A line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$a_{1,\ldots
+        ,n}$</span> (<span class="tex2jax_process">$0\leq a \leq
+        10^6$</span>), your first colleague’s ideal daily
+        distances.</p>
+</li>
+<li>
+<p>A line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$b_{1,\ldots
+        ,n}$</span> (<span class="tex2jax_process">$0\leq b \leq
+        10^6$</span>), your second colleague’s ideal daily
+        distances.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output a plan for the <span class="tex2jax_process">$n$</span> days as <span class="tex2jax_process">$n$</span> integers, where the distance for
+    every day corresponds to the median of choices for that
+    day.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 3 4
+4 3 2 1
+2 2 2 2
+</pre>
+</td>
+<td>
+<pre>2 2 2 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+3 1 4 1 5 9
+2 7 1 8 2 8
+1 6 1 8 0 3
+</pre>
+</td>
+<td>
+<pre>2 6 1 8 2 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

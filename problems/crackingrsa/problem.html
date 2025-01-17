@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:24.00%">
+<img alt="/problems/crackingrsa/file/statement/en/img-0001.png" class="illustration" src="/problems/crackingrsa/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by Sean MacEntee (<a href="https://flic.kr/p/qi1eYu">Flickr</a>) [<a href="http://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>]
+      </div>
+</div>
+<p>RSA is a widely used public-key cryptosystem that allows two
+    parties (such as people or computers) to exchange secret
+    messages without revealing information to anyone else listening
+    on the conversation. Many websites use RSA when visited over a
+    secure <tt class="ttfamily">https</tt> connection. In RSA, each
+    party has two different keys: a <em>public</em> key that is
+    published and a <em>private</em> key that is kept secret. To
+    encrypt a message intended for a specific recipient, the sender
+    will use the recipient’s public key to encrypt the message. The
+    recipient will use their private key to decrypt the
+    message.</p>
+<p>An RSA public key <span class="tex2jax_process">$(n,
+    e)$</span> consists of two numbers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$e$</span>. The number <span class="tex2jax_process">$n$</span> is a product of two distinct prime
+    numbers, <span class="tex2jax_process">$p$</span> and
+    <span class="tex2jax_process">$q$</span>. In real applications,
+    <span class="tex2jax_process">$n$</span> would be hundreds of
+    decimal digits long for security.</p>
+<p>Let <span class="tex2jax_process">$\varphi (n)$</span> be
+    Euler’s <em>totient</em> function, which in this case is equal
+    to <span class="tex2jax_process">$(p-1) (q-1)$</span>. The
+    private key consists of <span class="tex2jax_process">$(n,
+    d)$</span>, where <span class="tex2jax_process">$n$</span> is
+    the same as in the public key and <span class="tex2jax_process">$d$</span> is the solution to the
+    congruence</p><span class="tex2jax_process">\[ de \equiv 1
+    \bmod \varphi (n) \]</span>
+<p>Formally, a congruence</p><span class="tex2jax_process">\[ a
+    \equiv b \bmod c \]</span>
+<p>holds for three integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span>, if there exists an integer
+    <span class="tex2jax_process">$k$</span> such that <span class="tex2jax_process">$a - b = k c$</span>.</p>
+<p>The sender will encrypt a message <span class="tex2jax_process">$M$</span> (which, for simplicity, is assumed
+    to be an integer smaller than both <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span>) by computing <span class="tex2jax_process">$M^ e \bmod n$</span> and sending it to the
+    receiver. The recipient will calculate <span class="tex2jax_process">$(M^ e)^ d \equiv M^{e d} \equiv M^{k \varphi
+    (n) + 1} \equiv M^{\varphi (n) k} M \equiv M \bmod n$</span>
+    since by Euler’s theorem <span class="tex2jax_process">$M^{\varphi (n)} \equiv 1 \bmod n$</span>.
+    This will reconstruct the original message. Without the private
+    key, no practical way has been found for a potential attacker
+    to recover <span class="tex2jax_process">$M$</span> from the
+    knowledge of <span class="tex2jax_process">$M^ e \bmod
+    n$</span> and <span class="tex2jax_process">$(n,
+    e)$</span>.</p>
+<p>Your task is to crack RSA by finding the private key related
+    to a specific public key.</p>
+<h2>Input</h2>
+<p>The first line of input has the number of test cases
+    <span class="tex2jax_process">$T$</span>, (<span class="tex2jax_process">$1 \le T \le 50$</span>). Each test case has
+    one line that contains the two numbers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$e$</span>. You may assume that <span class="tex2jax_process">$n$</span> is the product of two primes
+    <span class="tex2jax_process">$p, q$</span> such that
+    <span class="tex2jax_process">$2 \le p,q &lt; 1000$</span>.
+    Also, <span class="tex2jax_process">$e$</span> will be chosen
+    so that <span class="tex2jax_process">$d$</span> exists and is
+    unique, and <span class="tex2jax_process">$1 &lt; d, e &lt;
+    \varphi (n)$</span>. Note that the product <span class="tex2jax_process">$d e$</span> may not fit into a 32-bit
+    integer (e.g. Java’s <tt class="ttfamily">int</tt> type).</p>
+<h2>Output</h2>
+<p>For each test case, output the single number <span class="tex2jax_process">$d$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+33 3
+65 11
+</pre>
+</td>
+<td>
+<pre>
+7
+35
+</pre>
+</td>
+</tr>
+</table>
+</div>

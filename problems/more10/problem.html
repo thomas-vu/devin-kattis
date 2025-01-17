@@ -1,0 +1,134 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/more10/file/statement/en/img-0001.jpg" class="illustration" src="/problems/more10/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by <a href="http://www.flickr.com/photos/yannickgar/5929424417/">YannGar
+        Photo</a> of a car and a bar. Which is the same thing.
+      </div>
+</div>
+<p>According to <a href="http://alefwiki.se/index.php?title=M%C3%A5rtens_sats">Mårten’s
+    Theorem</a>, everything which rhymes is the same thing. For
+    example, Sheep is the same thing as Heap, Dictionary Attack is
+    the same thing as Stack, and Tree is the same thing as the
+    Mediterranean Sea.</p>
+<p>Strangely, some people have objected to Mårten’s Theorem,
+    despite being rigorously proved by <a href="http://alefwiki.se/index.php?title=Johans_lemman">Johan’s
+    infinitely many self-referencing recursive lemmas</a>. You have
+    been given the task of deciding if a number of statements are
+    consistent under Mårten’s Theorem.</p>
+<p>You will be given a number of statements of the form
+    <tt class="ttfamily">"<span class="tex2jax_process">$X$</span>
+    is <span class="tex2jax_process">$Y$</span>"</tt> or <tt class="ttfamily">"<span class="tex2jax_process">$X$</span> not
+    <span class="tex2jax_process">$Y$</span>"</tt>, where
+    <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> are words consisting solely of the
+    characters ’a’-’z’, with a length of 1-20 characters, denoting
+    that <span class="tex2jax_process">$X$</span> is or isn’t
+    equivalent to <span class="tex2jax_process">$Y$</span>. You
+    must decide whether the statements given are consistent with
+    each other. For example, the two statements <tt class="ttfamily">ulf is lukas</tt> and <tt class="ttfamily">ulf not
+    lukas</tt> contradict each other, and are not consistent with
+    each other.</p>
+<p>However, you must also take Mårten’s theorem into account.
+    For the sake of simplicity, we say that two words rhyme if the
+    last <span class="tex2jax_process">$\min (3, |X|, |Y|)$</span>
+    characters are the same in two words. So if this condition
+    holds for two words <span class="tex2jax_process">$X$</span>
+    and <span class="tex2jax_process">$Y$</span> <em>that are in
+    the list of statements</em>, it is equivalent to having a
+    statement <tt class="ttfamily">"<span class="tex2jax_process">$X$</span> is <span class="tex2jax_process">$Y$</span>"</tt>.</p>
+<p>Note that words which do not appear in any statement do not
+    exist, and should not be considered rhyming with anything. That
+    is, the two words <tt class="ttfamily">foo</tt> and <tt class="ttfamily">moo</tt> do <em>not</em> rhyme with each other,
+    unless the word <tt class="ttfamily">oo</tt> or <tt class="ttfamily">o</tt> exists in the input.</p>
+<h2>Input</h2>
+<p>The first line consists of an integer <span class="tex2jax_process">$0 \le N \le 100\, 000$</span>, the number of
+    statements. The next <span class="tex2jax_process">$N$</span>
+    lines consists of statements of the two given forms.</p>
+<h2>Output</h2>
+<p>Output should consist of the string <tt class="ttfamily">"yes"</tt>, if the statements are consistent with
+    each other, i.e. everything which is stated to be the same
+    either explicitly or by Mårten’s Theorem, really is the same.
+    If you can find contradiction, output the string <tt class="ttfamily">"wait what?"</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+herp is derp
+derp is herp
+herp is herp
+derp is derp
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+oskar not lukas
+oskar is poptart
+lukas is smart
+</pre>
+</td>
+<td>
+<pre>
+wait what?
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+moo not foo
+</pre>
+</td>
+<td>
+<pre>
+yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+moo not foo
+oo is blah
+</pre>
+</td>
+<td>
+<pre>
+wait what?
+</pre>
+</td>
+</tr>
+</table>
+</div>

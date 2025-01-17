@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/taxtherich/file/statement/en/img-0001.jpg" class="illustration" src="/problems/taxtherich/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-vector/hand-grabbing-money-bag-200465807">
+        Dooder (Shutterstock)</a>; Used under license
+      </div>
+</div>
+<p>Your city is deciding whether to raise taxes or lower them
+    for the richest residents. Rich people are defined as those
+    earning an income equal to or above the mean income, while poor
+    people are defined as those earning an income below the mean
+    income (mean = average). The city has decided to have an
+    in-person public vote to determine which direction taxes on
+    rich people will go (either up or down).</p>
+<p>The city will raise taxes on rich people if more than half
+    of all the people attending the meeting are poor (because there
+    are a lot of low income earners to support). But the city will
+    lower taxes on the rich if at least half of the people at the
+    meeting are rich (since there are lots of rich people, they can
+    each pay a little bit less to support the poor
+    individuals).</p>
+<p>As each person arrives at the meeting, they announce their
+    income. If at that instant in time the majority of the people
+    (more than <span class="tex2jax_process">$1/2$</span> of the
+    people) in the room are poor, then a spontaneous round of
+    applause will occur (the rich people, who are in the minority,
+    are going to pay more — YAY!). However, if at the instant
+    when the person arriving announces their income at least half
+    of the people in the room are rich, then there is silence in
+    the room.</p>
+<p>Your task is to determine how many times the room erupts in
+    applause.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer, <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 500\, 000)$</span>, the number of people who will
+    attend the meeting. This is followed by a single line
+    containing <span class="tex2jax_process">$N$</span>
+    space-separated integer values, <span class="tex2jax_process">$a_1, a_2, \ldots , a_ N$</span>,
+    representing the incomes of the meeting attendees in the order
+    they arrive <span class="tex2jax_process">$(1 \leq a_ i \leq
+    10\, 000)$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the total number of times that the
+    room erupts in applause.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 5 12
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 11 6
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

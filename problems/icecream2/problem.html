@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/icecream2/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/icecream2/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+<a href="https://www.yokota.af.mil/News/Photos/igphoto/2002083858/mediaid/3167207/">
+        Public Domain, U.S. Air Force photo by Machiko Arita</a>
+</div>
+</div>
+<p>The Better Get Obese (BGO) ice cream factory is gearing up
+    for the holiday season, and after several years with mediocre
+    sales, they have decided to focus only on their most popular
+    product, ice cream with flavour of chocolate and vanilla.</p>
+<p>In order to make a perfect such ice cream, it is important
+    that the mixing machine receives equal amounts of vanilla and
+    chocolate ice cream.</p>
+<p>There are two separate creaming machines in the factory
+    which produce respectively chocolate and vanilla ice cream, and
+    the resulting creamy goodness is stored in two separate tanks.
+    From there, it can be transported to the mixing machine through
+    pipes, however the dimension of a pipe gives an upper bound for
+    how much ice cream can pass through it each minute. These pipes
+    meet in welding points, where streams of ice cream go from one
+    pipe to another. Streams can also merge or split into other
+    streams at such points, if more than two pipes meet here. It is
+    not important to keep the flavors separate during the
+    transportation, since they will eventually be mixed
+    anyways.</p>
+<p>Given a map of the pipe system, can you decide how many
+    liters of ice cream the factory can produce each minute?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3
+    \leq n \leq 200$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \leq m \leq 1\, 000$</span>), respectively the number of
+    welding points, and the number of pipes. The second line
+    contains three distinct integers <span class="tex2jax_process">$f$</span>, <span class="tex2jax_process">$c$</span> and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1
+    \leq f, c, v \leq n$</span>), the welding points where
+    respectively the mixing machine, the chocolate tank and the
+    vanilla tank is connected to the pipe system.</p>
+<p>Finally follows <span class="tex2jax_process">$m$</span>
+    lines, the <span class="tex2jax_process">$i^{\text
+    {th}}$</span> of which contains three non-negative integers
+    <span class="tex2jax_process">$u_ i$</span>, <span class="tex2jax_process">$v_ i$</span> and <span class="tex2jax_process">$x_ i$</span> (<span class="tex2jax_process">$1 \leq u_ i, v_ i \leq n$</span>,
+    <span class="tex2jax_process">$1 \leq x_ i \leq 1\,
+    000$</span>). These indicate that there is a pipe between
+    welding points <span class="tex2jax_process">$u_ i$</span> and
+    <span class="tex2jax_process">$v_ i$</span> with a capacity for
+    transporting <span class="tex2jax_process">$x_ i$</span> liters
+    of ice cream per minute. Note that several pipes can go in
+    parallel between the same welding points.</p>
+<h2>Output</h2>
+<p>A single integer, the maximum amount of ice cream the BGO
+    factory can produce each minute (in liters).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+2 1 3
+1 2 2
+3 2 3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

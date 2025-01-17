@@ -1,0 +1,50 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/allsquaresums/file/statement/en/img-0001.jpg" class="illustration" src="/problems/allsquaresums/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image owned by FUNimation, Toei Animation, Fuji TV and
+        Akira Toriyama. Edit made by TeamFourStar
+      </div>
+</div>
+<p>You are given a non-negative integer <span class="tex2jax_process">$n$</span> and should print all ways to write
+    <span class="tex2jax_process">$n$</span> as the sum of two
+    integer squares.</p>
+<h2>Input</h2>
+<p>The first and only line of input contain a non-negative
+    integer <span class="tex2jax_process">$n \leq
+    10^{18}$</span>.</p>
+<h2>Output</h2>
+<p>First print the number of ways <span class="tex2jax_process">$n$</span> can be written as the sum of two
+    integer squares on its own line, call this number <span class="tex2jax_process">$k$</span>. Then print <span class="tex2jax_process">$k$</span> lines, each containing one way to
+    write <span class="tex2jax_process">$n$</span> as the sum of
+    two integer squares. If <span class="tex2jax_process">$x^2 +
+    y^2 = n$</span> is one such way, print <tt>x^2 + y^2 = n</tt>
+    on its own line. If <span class="tex2jax_process">$x$</span> or
+    <span class="tex2jax_process">$y$</span> is negative it needs
+    to be put in parentheses, see the sample input. The internal
+    order of these lines does not matter.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>52706
+</pre>
+</td>
+<td>
+<pre>8
+(-95)^2 + (-209)^2 = 52706
+(-209)^2 + 95^2 = 52706
+95^2 + 209^2 = 52706
+209^2 + (-95)^2 = 52706
+(-209)^2 + (-95)^2 = 52706
+(-95)^2 + 209^2 = 52706
+209^2 + 95^2 = 52706
+95^2 + (-209)^2 = 52706
+</pre>
+</td>
+</tr>
+</table>
+</div>

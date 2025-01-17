@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>As a waiter, your favourite question from an indecisive
+    punter is “I’m not sure, what would you recommend?” — so much
+    so, in fact, that you decided to automate away the answer to
+    avoid having to spend any brain cycles on this question ever
+    again.</p>
+<p>You have the list of all set menus for today and you are
+    going to simply pick one at random. As long as your
+    recommendation corresponds to a list of items on a set menu,
+    everything will be fine.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing a single integer <span class="tex2jax_process">$1\leq n\leq 100$</span>, the number of
+        set menus.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, one for
+        each menu. Each of these lines contains a single integer
+        <span class="tex2jax_process">$1\leq d\leq 42$</span>,
+        followed by a list of <span class="tex2jax_process">$d$</span> dishes that the meal consists
+        of.</p>
+</li>
+</ul>
+<p>Each dish is described using at most <span class="tex2jax_process">$20$</span> lowercase Latin characters.</p>
+<h2>Output</h2>
+<p>Output one line containing <span class="tex2jax_process">$m$</span>, the number of dishes that you
+    recommend, followed by <span class="tex2jax_process">$m$</span>
+    lines containing the dishes you recommend.</p>
+<p>If there are multiple possible solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2 bigburger fries
+2 pizza garlicbread
+2 macaroni cheese
+</pre>
+</td>
+<td>
+<pre>2
+garlicbread
+pizza
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2 pasta pizza
+3 icecream sweets pasta
+1 megapizza
+2 icecream pizza
+</pre>
+</td>
+<td>
+<pre>3
+pasta
+icecream
+sweets
+</pre>
+</td>
+</tr>
+</table>
+</div>

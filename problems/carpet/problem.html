@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>The Algebraist Carpet Manufacturing (ACM) group likes to
+    produce area carpets based upon various geometric figures. The
+    2014 ACM carpets are all equilateral triangles. Unfortunately,
+    due to a manufacturing defect, some of the carpets are not as
+    stain-resistant as intended. The ACM group is offering to
+    replace each defective carpet that contains a stain.</p>
+<center>
+<img alt="\includegraphics[height=2in]{carpet.png}" src="/problems/carpet/file/statement/en/img-0001.png" style="height:2in"/>
+</center>
+<p>The web form used to report the stained carpet requests the
+    three distances that the stain is away from the corners of the
+    rug. Based upon these three numbers, you need to compute the
+    area of the rug that is to be sent to the customer, or indicate
+    that the customer’s carpet doesn’t come from ACM.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs.
+    Each test case will consist of a single line with three
+    floating point numbers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    &lt; a,b,c \le 100$</span>, at most <span class="tex2jax_process">$10$</span> digits after the decimal point)
+    representing the distances from the stain to each of the three
+    corners of the carpet. There will be a single space between
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span>, and between <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$c$</span>.</p>
+<h2>Output</h2>
+<p>Output a single line with a single floating point number. If
+    there is a carpet that satisfies the constraints, output the
+    area of this carpet. If not, output <tt class="ttfamily">-1</tt>. The output should have an absolute error of
+    at most <span class="tex2jax_process">$10^{-3}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 1 1.732050
+</pre>
+</td>
+<td>
+<pre>
+1.732050808
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 1 3.0
+</pre>
+</td>
+<td>
+<pre>
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.732051 1.732051 1.732051
+</pre>
+</td>
+<td>
+<pre>
+3.897115183
+</pre>
+</td>
+</tr>
+</table>
+</div>

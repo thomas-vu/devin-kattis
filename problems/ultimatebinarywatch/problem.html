@@ -1,0 +1,95 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/ultimatebinarywatch/file/statement/en/img-0001.png" class="illustration" src="/problems/ultimatebinarywatch/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The Ultimate Binary Watch is a maker project that uses small
+    LEDs to display time on a watch face. The display uses four
+    columns of four LEDs each, with each column representing one
+    digit of the current time in hours and minutes. Time is
+    displayed in <span class="tex2jax_process">$24$</span>-hour
+    format, with the <span class="tex2jax_process">$1$</span>st
+    (left-most) column displaying the tens position for hours, the
+    <span class="tex2jax_process">$2$</span>nd column displaying
+    the ones position for hours, the <span class="tex2jax_process">$3$</span>rd column displaying the tens
+    position for minutes, and the last (right-most) column
+    displaying the ones position for minutes. The bottom LED of
+    each column shows the lowest-order bit of its represented
+    digit, with the bit positions increasing moving up the column.
+    For example, the time <span class="tex2jax_process">$1615$</span> would be displayed as shown in
+    the figure.</p>
+<p>Write a program that will take a <span class="tex2jax_process">$24$</span>-hour time and print the
+    corresponding watch face.</p>
+<h2>Input</h2>
+<p>The input has a single line with <span class="tex2jax_process">$4$</span> digits describing a valid
+    <span class="tex2jax_process">$24$</span>-hour time between
+    <span class="tex2jax_process">$0000$</span> and <span class="tex2jax_process">$2359$</span>.</p>
+<h2>Output</h2>
+<p>Output four lines with a representation of the watch face
+    displaying the given time. The tens of hours shall be in the
+    <span class="tex2jax_process">$1$</span>st column, the single
+    hours in the <span class="tex2jax_process">$3$</span>rd, the
+    tens of minutes in the <span class="tex2jax_process">$7$</span>th, and the single minutes in the
+    <span class="tex2jax_process">$9$</span>th. Use asterisks to
+    represent bits that are set and periods to represent bits that
+    are clear. Columns not used are to be filled with spaces. No
+    extra whitespace are to appear at the beginning or end of any
+    output line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1615
+</pre>
+</td>
+<td>
+<pre>. .   . .
+. *   . *
+. *   . .
+* .   * *
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1900
+</pre>
+</td>
+<td>
+<pre>. *   . .
+. .   . .
+. .   . .
+* *   . .
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0830
+</pre>
+</td>
+<td>
+<pre>. *   . .
+. .   . .
+. .   * .
+. .   * .
+</pre>
+</td>
+</tr>
+</table>
+</div>

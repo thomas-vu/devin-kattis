@@ -1,0 +1,195 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/pusluspil/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pusluspil/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/jagpmg">flickr.com</a>
+</div>
+</div>
+<p>Davíð really enjoys jigsaw puzzles, so much so that he
+    recently bought one from Baldi’s Puzzle Shop. He eagerly goes
+    home and starts working on the puzzle. When he’s almost done,
+    Davíð realises that there are some puzzle pieces missing in the
+    almost completed puzzle, but the box is empty! Clearly, some
+    puzzle pieces are missing from the puzzle box. He goes to Baldi
+    and explains what happened, and Baldi feels so bad about it
+    that he gives Davíð another puzzle of the same kind, but allows
+    him to keep the faulty box. Davíð goes home to finish the
+    puzzle image and realises that there are also some missing
+    pieces in the new box. However, it turns out that these were
+    different puzzle pieces missing from the first box.</p>
+<p>Now Davíð turns to you to determine if he can even finish
+    the puzzle.</p>
+<p>Davíð has had to go to Baldi <span class="tex2jax_process">$n$</span> times to get a puzzle box, thus he
+    has <span class="tex2jax_process">$n$</span> boxes he can use.
+    A completed puzzle has <span class="tex2jax_process">$m$</span>
+    puzzle pieces, and box number <span class="tex2jax_process">$i$</span> has <span class="tex2jax_process">$k_ i$</span> puzzle pieces.</p>
+<p>Puzzle pieces are numbered with numbers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span>. Puzzle piece <span class="tex2jax_process">$p$</span> in box <span class="tex2jax_process">$a$</span> is the same puzzle piece as
+    <span class="tex2jax_process">$p$</span> in box <span class="tex2jax_process">$b$</span>, where <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> are puzzle boxes.</p>
+<p>A puzzle is considered completed when all puzzle pieces,
+    <span class="tex2jax_process">$1, 2, \ldots , m$</span>, come
+    together to form the puzzle image.</p>
+<p>Note that the puzzles are not necessarily in sorted order
+    unless otherwise stated.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, separated by a space.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines
+    describe each puzzle box. A description of a puzzle box starts
+    with an integer <span class="tex2jax_process">$k_ i$</span>,
+    the number of puzzles in box <span class="tex2jax_process">$i$</span>, where <span class="tex2jax_process">$0 \leq k_ i \leq m$</span>. Next follow
+    <span class="tex2jax_process">$k_ i$</span> integers
+    <span class="tex2jax_process">$p_1, p_2, \ldots , p_{k_
+    i}$</span>, representing the puzzle pieces in box <span class="tex2jax_process">$i$</span>, where <span class="tex2jax_process">$1 \leq p_ i \leq m$</span>. The numbers are
+    separated by spaces.</p>
+<p>It is always guaranteed that <span class="tex2jax_process">$0 \leq n \cdot m \leq 500\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">"Jebb"</tt> if Davíð can
+    complete the puzzle, or <tt class="ttfamily">"Neibb"</tt> if he
+    cannot.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1, 1 \leq m \leq
+          100$</span>, pieces are given in ascending order, the
+          first piece is <span class="tex2jax_process">$1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n \leq 100, m =
+          0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 0, 0 \leq m \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq
+          500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n, m \leq 500\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+3 2 1 4
+3 2 4 1
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+3 1 6 3
+6 1 2 3 4 5 6
+2 5 1
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0 4
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 0
+0
+0
+0
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$n$</span> crates
+    waiting to be loaded onto a ship. The crates are numbered
+    <span class="tex2jax_process">$1, 2, \ldots , n$</span>, the
+    numbers determining the order of loading. Unfortunately,
+    someone messed up the transit and the crates are standing in a
+    row in an arbitrary order. As there is only limited space in
+    the dock area, you must sort the crates by swapping some of
+    them.</p>
+<p>You are given a crane that works in the following way: you
+    select a connected interval of crates of even length. The crane
+    then exchanges the first half of the interval with the second
+    half. The order inside both halves remains unchanged. Determine
+    the sequence of crane moves that reorders the crates
+    properly.</p>
+<p>The crane’s software has a bug: the move counter is a
+    <span class="tex2jax_process">$9$</span>-based (not
+    <span class="tex2jax_process">$10$</span>-based, as you might
+    think) integer with at most <span class="tex2jax_process">$6$</span> digits. Therefore, the crane stops
+    working (and has to be serviced) after <span class="tex2jax_process">$9^6 = 531441$</span> moves. Your solution
+    must fit within this limit.</p>
+<h2>Input</h2>
+<p>The first line of input contains the number of test cases
+    <span class="tex2jax_process">$T$</span>, <span class="tex2jax_process">$1 \leq T \leq 8$</span>. The descriptions of
+    the test cases follow:</p>
+<p>Each test case starts with an integer <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \leq n \leq 10\, 000$</span>, denoting the number of crates. In
+    the next line a permutation of numbers <span class="tex2jax_process">$\{ 1, 2, \ldots , n\} $</span> follows.</p>
+<h2>Output</h2>
+<p>For each test case print a single line containing
+    <span class="tex2jax_process">$m$</span> – the number of swaps
+    – followed by <span class="tex2jax_process">$m$</span> lines
+    describing the swaps in the order in which they should be
+    performed. A single swap is described by two numbers – the
+    indices of the first and the last element in the interval to be
+    exchanged. Do not follow the crane’s strange software design –
+    use standard decimal numeral system.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+6
+5 4 6 3 2 1
+5
+1 2 3 4 5
+</pre>
+</td>
+<td>
+<pre>
+5
+1 2
+4 5
+5 6
+4 5
+1 6
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>Fred works as an IT consultant in an insurance company. As
+    they always had a large amount of customers waiting and arguing
+    at the front desk, management decided to deploy a ticket
+    machine. Each customer would get a ticket with a number and
+    there will be fancy LCD display over each desk showing the
+    number of the next person. Fred was appointed to get this new
+    enhancement working.</p>
+<p>Because Fred is lazy when it comes to manual labor and as an
+    IT consultant he wouldn’t lower himself to the level of some
+    hardware technician (except when upgrading his own computer),
+    he asked few technicians to install the displays and prepared
+    himself just to plug in the ticket machine and try it out.
+    Unfortunately (for Fred) the technicians, either inspired by
+    Mr.Bean or because of their carelessness, installed the display
+    upside-down.</p>
+<p>Being a software guy, Fred decided that the hardware should
+    not be tampered with after it is installed (except for the case
+    if he would be able to get back the technicians to repair it,
+    but they were already angry at him for his nagging). Then he
+    noted that from time to time the display shows a correct number
+    even when it is upside-down. And hey, the ticket machine is an
+    embedded device and contains a small processor! It would be
+    just a sin for an IT guy not to try to meddle with it and try
+    running an own version of Linux. Now we just need to figure out
+    which readable numbers will the display show.</p>
+<h2>Task</h2>
+<p>In the beginning the display shows the number 1 on its
+    display. Each second the number shown is increased by 1. We see
+    the display upside-down and thus not everything we see will
+    make sense. Your task is to compute the <span class="tex2jax_process">$K$</span>-th valid number we will see on the
+    display. The digits the display uses are shown on the images
+    below. An upside-down 1 still count as 1. The number we see may
+    have leading zeroes – e.g. turning the number 600 upside
+    down leads to a valid number.</p>
+<center>
+<img alt="\includegraphics[width=1cm]{i0.png}" src="/problems/ignore/file/statement/en/img-0001.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i1.png}" src="/problems/ignore/file/statement/en/img-0002.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i2.png}" src="/problems/ignore/file/statement/en/img-0003.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i3.png}" src="/problems/ignore/file/statement/en/img-0004.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i4.png}" src="/problems/ignore/file/statement/en/img-0005.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i5.png}" src="/problems/ignore/file/statement/en/img-0006.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i6.png}" src="/problems/ignore/file/statement/en/img-0007.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i7.png}" src="/problems/ignore/file/statement/en/img-0008.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i8.png}" src="/problems/ignore/file/statement/en/img-0009.png" style="width:1cm"/>
+<img alt="\includegraphics[width=1cm]{i9.png}" src="/problems/ignore/file/statement/en/img-0010.png" style="width:1cm"/>
+</center>
+<h2>Input</h2>
+<p>Input file will consist of several integers <span class="tex2jax_process">$K_ i$</span>, one per line. There will be at
+    most 1100 lines in the input.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$K_ i$</span> from
+    the input file, output the <span class="tex2jax_process">$K_
+    i$</span>-th number shown on the display (including the leading
+    zeroes, if there are some).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+2
+3
+4
+5
+6
+8
+98
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+5
+9
+8
+6
+11
+002
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,91 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/skyislands/file/statement/en/img-0001.png" class="illustration" src="/problems/skyislands/file/statement/en/img-0001.png"/>
+<div class="description">
+        a single skyisland
+      </div>
+</div>
+<p>Alex wants to build a sky base consisting of <span class="tex2jax_process">$N$</span> sky islands, numbered <span class="tex2jax_process">$1, \ldots , N$</span>. There are a total of
+    <span class="tex2jax_process">$M$</span> bridges, directly
+    connecting certain islands to others. Because she does not have
+    an elytra (wings that enable players to fly) and cannot fly,
+    she needs to make sure that there exists a way for her to
+    travel from one island to any other island. It is fine if she
+    needs to travel through other islands to get to the
+    destination. We call her islands connected if it exhibits such
+    property. Note: a single island is always connected.<br/></p>
+<p>Given the number of islands <span class="tex2jax_process">$N$</span> and all the bridges <span class="tex2jax_process">$b_1, \cdots , b_ M$</span>, would you be
+    able to determine whether Alex’s islands are connected?</p>
+<h2>Input</h2>
+<p>The first line of input consists of two space-separated
+    integers, <span class="tex2jax_process">$1 \leq N \leq
+    900$</span> and <span class="tex2jax_process">$0 \leq M \leq
+    10^6$</span>, representing the number of islands and the number
+    of bridges respectively. The following <span class="tex2jax_process">$M$</span> lines each consist of two
+    space-separated integers <span class="tex2jax_process">$1 \leq
+    a, b \leq N$</span>, representing a bridge between island
+    <span class="tex2jax_process">$a$</span> and island
+    <span class="tex2jax_process">$b$</span>.</p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">YES</tt>” if all of Alex’s
+    islands are connected. Output “<tt class="ttfamily">NO</tt>”
+    otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+1 2
+2 3
+3 4
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 2
+2 3
+3 4
+4 1
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+1 2
+2 1
+3 4
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,213 @@
+<div class="problembody">
+<p>You are going to play a Majority<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> Card
+    game. In this game, there will be a deck of cards, initially
+    empty. Each card is labelled with a number between <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$2~ 000~ 000~ 000$</span> (or just between
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$20$</span> on some occasions.) You will play
+    the game in <span class="tex2jax_process">$N$</span> rounds,
+    consecutively. For each round, one of these four possible
+    scenarios can happen:</p>
+<ol class="enumerate">
+<li>
+<p>“<tt class="ttfamily">PUT_TOP</tt> <span class="tex2jax_process">$X$</span> <span class="tex2jax_process">$Y$</span>”: You put <span class="tex2jax_process">$X$</span> many cards labelled
+        <span class="tex2jax_process">$Y$</span> at the top of the
+        deck.</p>
+</li>
+<li>
+<p>“<tt class="ttfamily">PUT_BOTTOM</tt> <span class="tex2jax_process">$X$</span> <span class="tex2jax_process">$Y$</span>”: You put <span class="tex2jax_process">$X$</span> many cards labelled
+        <span class="tex2jax_process">$Y$</span> at the bottom of
+        the deck.</p>
+</li>
+<li>
+<p>“<tt class="ttfamily">REMOVE_TOP</tt> <span class="tex2jax_process">$Z$</span>”: You remove the <span class="tex2jax_process">$Z$</span> top-most cards.</p>
+</li>
+<li>
+<p>“<tt class="ttfamily">REMOVE_BOTTOM</tt> <span class="tex2jax_process">$Z$</span>”: You remove the <span class="tex2jax_process">$Z$</span> bottom-most cards.</p>
+</li>
+</ol>
+<p>After each round, you have to answer this question: “What is
+    the majority card in the deck?” A majority card is a card label
+    that <b class="bfseries">appears the most</b> in the deck and
+    if tied, pick the smallest one. Can you help yourself by
+    writing a program to play the Majority Card?</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$N (1 \le N \le 200~ 000)$</span>. The next
+    <span class="tex2jax_process">$N$</span> lines contain the
+    rounds, each on one line. Each round is given in one of four
+    forms mentioned in above description where:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \le X \le 10~
+        000$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le Y \le 2~ 000~ 000~
+        000$</span>, and</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \le Z \le C-1$</span>
+        where <span class="tex2jax_process">$C$</span> is the
+        number of cards in the current deck (i.e. there will still
+        be <b class="bfseries">at least one card in the deck</b>
+        after each removal scenarios.)</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each round, print the smallest majority card, separated
+    by a newline.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$18$</span> Points</b>): <span class="tex2jax_process">$N \le 2~ 000$</span>, <span class="tex2jax_process">$X = 1$</span>, <span class="tex2jax_process">$Y \le 20$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$15$</span> Points</b>): <span class="tex2jax_process">$X = 1$</span>, <span class="tex2jax_process">$Y \le 20$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$29$</span> Points</b>): <span class="tex2jax_process">$Y \le 20$</span>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$6$</span> Points</b>): The rounds are
+        only <tt class="ttfamily">PUT_TOP</tt> and <tt class="ttfamily">PUT_BOTTOM</tt>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$20$</span> Points</b>): The rounds are
+        only <tt class="ttfamily">PUT_TOP</tt> and <tt class="ttfamily">REMOVE_TOP</tt>.</p>
+</li>
+<li>
+<p>(<b class="bfseries"><span class="tex2jax_process">$12$</span> Points</b>): No additional
+        constraint.</p>
+</li>
+</ol>
+<h2>Warning</h2>
+<p>The I/O files are large. Please use fast I/O methods.</p>
+<h2>Explanation of Sample 1</h2>
+<div class="figure">
+<center>
+<img alt="\includegraphics[height=0.4\textwidth ]{sample-1}" src="/problems/majoritycard/file/statement/en/img-0001.png" style="height:0.4"/>
+</center>
+</div>
+<ol class="enumerate">
+<li>
+<p>After the <span class="tex2jax_process">$1$</span>-st
+        round, the smallest majority card is <span class="tex2jax_process">$20$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$2$</span>-nd
+        round, the smallest majority card is <span class="tex2jax_process">$17$</span> (tied with <span class="tex2jax_process">$20$</span>.)</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$3$</span>-rd
+        round, the smallest majority card is <span class="tex2jax_process">$8$</span> (tied with <span class="tex2jax_process">$17$</span> and <span class="tex2jax_process">$20$</span>.)</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$4$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$17$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$5$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$17$</span> (tied with <span class="tex2jax_process">$20$</span>.)</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$6$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$20$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$7$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$17$</span> (tied with <span class="tex2jax_process">$20$</span>.)</p>
+</li>
+</ol>
+<h2>Explanation of Sample 2</h2>
+<div class="figure">
+<center>
+<img alt="\includegraphics[height=0.65\textwidth ]{sample-2}" src="/problems/majoritycard/file/statement/en/img-0002.png" style="height:0.65"/>
+</center>
+</div>
+<ol class="enumerate">
+<li>
+<p>After the <span class="tex2jax_process">$1$</span>-st
+        round, the smallest majority card is <span class="tex2jax_process">$2$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$2$</span>-nd
+        round, the smallest majority card is <span class="tex2jax_process">$7$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$3$</span>-rd
+        round, the smallest majority card is <span class="tex2jax_process">$7$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$4$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$13$</span>.</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$5$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$7$</span> (tied with <span class="tex2jax_process">$13$</span>.)</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$6$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$2$</span> (tied with <span class="tex2jax_process">$13$</span>.)</p>
+</li>
+<li>
+<p>After the <span class="tex2jax_process">$7$</span>-th
+        round, the smallest majority card is <span class="tex2jax_process">$13$</span>.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+PUT_TOP 1 20
+PUT_TOP 1 17
+PUT_TOP 1 8
+PUT_BOTTOM 1 17
+PUT_BOTTOM 1 20
+REMOVE_TOP 2
+REMOVE_BOTTOM 1
+</pre>
+</td>
+<td>
+<pre>20
+17
+8
+17
+17
+20
+17
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7
+PUT_TOP 2 2
+PUT_BOTTOM 4 7
+PUT_TOP 3 13
+PUT_BOTTOM 2 13
+REMOVE_TOP 1
+REMOVE_BOTTOM 5
+REMOVE_BOTTOM 2
+</pre>
+</td>
+<td>
+<pre>2
+7
+7
+13
+7
+2
+13
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>Nicolaus Copernicus, born in Toruń in the Kingdom of Poland
+    in 1473, was the first to develop a view of the universe which
+    placed the Sun, rather than the Earth, at the center of the
+    orbiting planets. Copernicus viewed each planet as revolving in
+    a circular orbit with the Sun as the common center of each
+    circle. This new model, which was later improved by many other
+    astronomers, made it much simpler to understand and predict the
+    motions of the planets. Pictured below is his rendering of the
+    planetary orbits.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{copernican_system}" src="/problems/heliocentric/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>Consider two of the planets in Copernicus’ orbital system:
+    Earth and Mars. Assume the Earth orbits the Sun in exactly
+    <span class="tex2jax_process">$365$</span> Earth days, and Mars
+    orbits the Sun in exactly <span class="tex2jax_process">$687$</span> Earth days. Thus the Earth’s
+    orbit starts at day <span class="tex2jax_process">$0$</span>
+    and continues to day <span class="tex2jax_process">$364$</span>, and then starts over at day
+    <span class="tex2jax_process">$0$</span>. Mars orbits
+    similarly, but on a <span class="tex2jax_process">$687$</span>
+    day time scale. We would like to find out how long it will take
+    until both planets are on day <span class="tex2jax_process">$0$</span> of their orbits simultanously.
+    Write a program that can determine this.</p>
+<h2>Input</h2>
+<p>Input consists of multiple test cases, at most <span class="tex2jax_process">$10$</span>. Each test case is described by a
+    single line containing two integers <span class="tex2jax_process">$0 \leq e &lt; 365$</span> and <span class="tex2jax_process">$0 \leq m &lt; 687$</span>. These indicate
+    which days Earth and Mars are at their respective orbits.</p>
+<h2>Output</h2>
+<p>For each case, display the case number (starting at
+    <span class="tex2jax_process">$1$</span> and incrementing for
+    each case) followed by the smallest number of days until the
+    two planets will both be on day <span class="tex2jax_process">$0$</span> of their orbits. Follow the format
+    of the sample output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0 0
+364 686
+360 682
+0 1
+1 0
+</pre>
+</td>
+<td>
+<pre>Case 1: 0
+Case 2: 1
+Case 3: 5
+Case 4: 239075
+Case 5: 11679
+</pre>
+</td>
+</tr>
+</table>
+</div>

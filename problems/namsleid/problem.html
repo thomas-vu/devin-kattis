@@ -1,0 +1,220 @@
+<div class="problembody">
+<p>The semester is coming to an end so it is time to plan your
+    studies and choose courses for the next semester. Oh no! This
+    list is so confusing! Each course has so many prerequisites!
+    With such a chaotic layout, is it even possible to sign up for
+    and complete all the courses in any number of semesters?</p>
+<p>You may take as many courses as you wish each semester and
+    you may finish your studies in as many semesters as you wish,
+    but you should try to minimize the number of semesters. You may
+    only sign up for courses for which you have finished all
+    prerequisites. Since you are a stellar student, you pass all
+    courses for which you sign up.</p>
+<h2>Input</h2>
+<p>The first line of input consists of one integer <span class="tex2jax_process">$n$</span>, the number of courses. Then
+    <span class="tex2jax_process">$n$</span> lines follow, the
+    <span class="tex2jax_process">$i$</span>-th of which describes
+    the prerequisites of the <span class="tex2jax_process">$i$</span>-th course. Each of the lines
+    starts with a non-negative integer <span class="tex2jax_process">$m_ i$</span> which is followed by a space
+    and a sequence of <span class="tex2jax_process">$m_ i$</span>
+    distinct space separated integers <span class="tex2jax_process">$d_{i,1}, \dotsc , d_{i,m_ i}$</span>, each
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$n$</span>, denoting the courses
+    which are prerequisites for course <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>If it is impossible to finish all the courses, simply output
+    one line with the text <tt class="ttfamily">Omogulegt!</tt>.
+    Otherwise, output a line with the text <tt class="ttfamily">Mogulegt!</tt> followed by a line containing a
+    positive integer <span class="tex2jax_process">$k$</span>, the
+    minimum number of semesters you need to finish the courses.
+    Then output <span class="tex2jax_process">$k$</span> lines,
+    each of which starting with a positive integer denoting the
+    number of courses taken that semester, followed by the space
+    separated list of integers denoting the courses themselves.
+    Each course should be listed exactly once.</p>
+<p>If there are multiple solutions, you may output any of
+    them.</p>
+<h2>Scoring</h2>
+<p>In the table below, let</p><span class="tex2jax_process">\[
+    m = \sum _{i=1}^{n} m_ i \]</span>
+<p>.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          50$</span>, suffices to determine whether an ordering
+          exists</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          50$</span>, suffices to provide an ordering only when one
+          exists, minimal ordering is not necessarry</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq 200\,
+          000$</span>, suffices to determine whether an ordering
+          exists</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n, m \leq 200\,
+          000$</span>, suffices to provide an ordering when one
+          exists, minimal ordering is not necessary</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n, m \leq 200\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1 1
+</pre>
+</td>
+<td>
+<pre>Omogulegt!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0
+0
+2 1 2
+</pre>
+</td>
+<td>
+<pre>Mogulegt!
+2
+2 1 2
+1 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 3
+1 1
+1 2
+</pre>
+</td>
+<td>
+<pre>Omogulegt!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>12
+0
+0
+0
+0
+1 1
+1 3
+1 1
+1 1
+0
+0
+1 5
+2 1 4
+</pre>
+</td>
+<td>
+<pre>Mogulegt!
+3
+4 3 4 1 2 
+4 8 7 6 5
+4 9 10 11 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

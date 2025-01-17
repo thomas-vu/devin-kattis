@@ -1,0 +1,88 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/thendaysofchristmas/file/statement/en/img-0001.jpg" class="illustration" src="/problems/thendaysofchristmas/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-illustration/all-twelve-days-christmas-tree-349330703">
+        HelloSSTK (Shutterstock)</a>; Used under license
+      </div>
+</div>
+<p>Consider the first three verses of the classic Christmas
+    carol, <em>The Twelve Days of Christmas:</em></p>
+<blockquote class="verse">
+<p>On the first day of Christmas my true love gave to me<br/>
+      A partridge in a pear tree.</p>
+<p>On the second day of Christmas my true love gave to me<br/>
+      Two turtle doves,<br/>
+      And a partridge in a pear tree.</p>
+<p>On the third day of Christmas my true love gave to me<br/>
+      Three French hens,<br/>
+      Two turtle doves,<br/>
+      And a partridge in a pear tree.</p>
+</blockquote>
+<p>The carol continues this pattern for a total of <span class="tex2jax_process">$12$</span> days. On the <span class="tex2jax_process">$d^\textrm {th}$</span> day, you receive
+    <span class="tex2jax_process">$d$</span> copies of a new kind
+    of gift, along with <span class="tex2jax_process">$(d-1)$</span> copies of the gift introduced
+    on the previous day, <span class="tex2jax_process">$(d-2)$</span> copies of the gift introduced
+    the day before that, and so on. This raises some interesting
+    questions:</p>
+<ul class="itemize">
+<li>
+<p>How many gifts do you receive on the <span class="tex2jax_process">$12^{\textrm{th}}$</span> day?</p>
+</li>
+<li>
+<p>What is the total number of gifts you have received by
+        the end of the <span class="tex2jax_process">$12^{\textrm{th}}$</span> day?</p>
+</li>
+</ul>
+<p>But why should the Christmas season be limited to
+    <span class="tex2jax_process">$12$</span> days? If your goal is
+    to get as many gifts as possible (clearly a noble aspiration),
+    then it is advantageous to generalize <span class="tex2jax_process">$12$</span> to an integer <span class="tex2jax_process">$N,$</span> where <span class="tex2jax_process">$N$</span> can be as large as the number of
+    days in a year <span class="tex2jax_process">$(366$</span> for
+    a leap year).</p>
+<p>Given <span class="tex2jax_process">$N$</span>, what are the
+    answers to the generalized versions of the two questions
+    above?</p>
+<h2>Input</h2>
+<p>The input consists of a single integer, <span class="tex2jax_process">$N$</span>, the number of days of Christmas
+    <span class="tex2jax_process">$(1 \leq N \leq 366).$</span></p>
+<h2>Output</h2>
+<p>Output two lines, the first of which contains the number of
+    gifts you receive on the <span class="tex2jax_process">$N^{\textrm{th}}$</span> day, and the second
+    of which contains the total number of gifts you have received
+    by the end of the <span class="tex2jax_process">$N^{\textrm{th}}$</span> day.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>3
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12
+</pre>
+</td>
+<td>
+<pre>78
+364
+</pre>
+</td>
+</tr>
+</table>
+</div>

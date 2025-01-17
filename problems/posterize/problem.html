@@ -1,0 +1,110 @@
+<div class="problembody">
+<center>
+<img alt="\includegraphics[width=0.95\textwidth ]{RushmoreOpt2}" src="/problems/posterize/file/statement/en/img-0001.jpg" style="width:95.00%"/>
+</center>
+<p>Pixels in a digital picture can be represented with three
+    integers in the range <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$255$</span> that indicate the
+    intensity of the red, green, and blue colors. To compress an
+    image or to create an artistic effect, many photo-editing tools
+    include a “posterize” operation which works as follows. Each
+    color channel is examined separately; this problem focuses only
+    on the red channel. Rather than allow all integers from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$255$</span> for the red channel, a
+    posterized image allows at most <span class="tex2jax_process">$k$</span> integers from this range. Each
+    pixel’s original red intensity is replaced with the nearest of
+    the allowed integers. The photo-editing tool selects a set of
+    <span class="tex2jax_process">$k$</span> integers that
+    minimizes the <em>sum of the squared errors</em> introduced
+    across all pixels in the original image. If there are
+    <span class="tex2jax_process">$n$</span> pixels that have
+    original red values <span class="tex2jax_process">$r_1, \ldots
+    , r_ n$</span>, and <span class="tex2jax_process">$k$</span>
+    allowed integers <span class="tex2jax_process">$v_1, \ldots ,
+    v_ k$</span>, the sum of squared errors is defined
+    as</p><span class="tex2jax_process">\[ \sum _{i=1}^ n \min _{1
+    \leq j \leq k} (r_ i - v_ j)^2. \]</span>
+<p>Your task is to compute the minimum achievable sum of
+    squared errors, given parameter <span class="tex2jax_process">$k$</span> and a description of the red
+    intensities of an image’s pixels.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1 \leq d \leq 256$</span>), the number of
+    distinct red values that occur in the original image, and
+    <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq d$</span>), the number of
+    distinct red values allowed in the posterized image. The
+    remaining <span class="tex2jax_process">$d$</span> lines
+    indicate the number of pixels of the image having various red
+    values. Each such line contains two integers <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$0
+    \leq r \leq 255$</span>) and <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1
+    \leq p \leq 2^{26}$</span>), where <span class="tex2jax_process">$r$</span> is a red intensity value and
+    <span class="tex2jax_process">$p$</span> is the number of
+    pixels having red intensity <span class="tex2jax_process">$r$</span>. Those <span class="tex2jax_process">$d$</span> lines are given in increasing
+    order of red value.</p>
+<h2>Output</h2>
+<p>Display the sum of the squared errors for an optimally
+    chosen set of <span class="tex2jax_process">$k$</span> allowed
+    integer values.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1
+50 20000
+150 10000
+</pre>
+</td>
+<td>
+<pre>
+66670000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+50 20000
+150 10000
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 2
+0 30000
+25 30000
+50 30000
+255 30000
+</pre>
+</td>
+<td>
+<pre>
+37500000
+</pre>
+</td>
+</tr>
+</table>
+</div>

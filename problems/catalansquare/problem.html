@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/catalansquare/file/statement/en/img-0001.jpg" class="illustration" src="/problems/catalansquare/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by Wikimedia Commons user Rauenstein
+      </div>
+</div>
+<p>Last weekend you and your friends went to visit the local
+    farmer’s market at the town square. As you were standing around
+    in a circle talking, you couldn’t help overhearing two of your
+    friends musing over what sounded like an interesting problem:
+    They were considering the number of ways in which you could all
+    shake hands, such that everyone in the circle simultaneously
+    shaked hands with one other person, but where no arms crossed
+    each other.</p>
+<p>After a few seconds’ thought you decided to join your two
+    friends, to share (with them) the solution to their problem.
+    “If we are <span class="tex2jax_process">$2n$</span> persons”,
+    you said, “pick any particular person, and let that person
+    shake hands with somebody. That person will have to leave an
+    even number of people on each side of the person with whom
+    he/she shakes hands. Of the remaining <span class="tex2jax_process">$n-1$</span> pairs of people, he/she can
+    leave zero on the right and <span class="tex2jax_process">$n-1$</span> pairs on the left, <span class="tex2jax_process">$1$</span> on the right and <span class="tex2jax_process">$n-2$</span> pairs on the left, and so on.
+    The pairs remaining on the right and left can independently
+    choose any of the possible non-crossing handshake patterns, so
+    the count <span class="tex2jax_process">$C_ n$</span> for
+    <span class="tex2jax_process">$n$</span> pairs of people is
+    given by:</p><span class="tex2jax_process">\[ C_ n = C_{n-1}C_0
+    + C_{n-2}C_1 + \ldots + C_1C_{n-2} + C_0C_{n-1}, \]</span>
+<p>which, together with the fact that <span class="tex2jax_process">$C_0=C_1=1$</span>, is just the definition of
+    the Catalan numbers.” By consulting your handy combinatorics
+    book, you find out that there is a much more efficient formula
+    for calculating <span class="tex2jax_process">$C_ n$</span>,
+    namely:</p><span class="tex2jax_process">\[ C_ n = \frac{\binom
+    {2n}{n}}{n+1}. \]</span>
+<p>After a collective groan from the group, your particularly
+    cheeky friend Val called out “Well, since we are at the town
+    square, why don’t you try to square your Catalan numbers!”.
+    This was met with much rejoicing, while you started to think
+    about how to square the <em>Catalan sequence</em>…</p>
+<h2>Task</h2>
+<p>Let <span class="tex2jax_process">$C_ n$</span> be the
+    <span class="tex2jax_process">$n$</span>th Catalan number as
+    defined above. By regarding the sequence <span class="tex2jax_process">$(C_ n)_{n\geq 0}$</span> of Catalan numbers,
+    we can define a sequence <span class="tex2jax_process">$(S_
+    n)_{n\geq 0}$</span>, corresponding to “squaring the Catalan
+    sequence”, by considering the Cauchy product, or discrete
+    convolution, of <span class="tex2jax_process">$(C_ n)_{n\geq
+    0}$</span> with itself, i.e.,</p><span class="tex2jax_process">\[ S_ n = \sum _{k=0}^{n}C_ kC_{n-k}.
+    \]</span>
+<p>Your task is to write a program for calculating the number
+    <span class="tex2jax_process">$S_ n$</span>.<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a></p>
+<h2>Input</h2>
+<p>The input contains one line containing one non-negative
+    integer: <span class="tex2jax_process">$n$</span>, with
+    <span class="tex2jax_process">$0 \leq n \leq 5\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Output a line containing <span class="tex2jax_process">$S_
+    n$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+59
+</pre>
+</td>
+<td>
+<pre>
+1583850964596120042686772779038896
+</pre>
+</td>
+</tr>
+</table>
+</div>

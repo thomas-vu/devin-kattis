@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>What would a programming contest be without a problem
+    featuring an ASCII-maze? Do not despair: one of the judges has
+    designed such a problem.</p>
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/juryjeopardy/file/statement/en/img-0001.png" class="illustration" src="/problems/juryjeopardy/file/statement/en/img-0001.png"/>
+<div class="description">
+        source: xkcd.com/246
+      </div>
+</div>
+<p>The problem is about a maze that has exactly one
+    entrance/exit, contains no cycles and has no empty space that
+    is completely enclosed by walls. A robot is sent in to explore
+    the entire maze. The robot always faces the direction it
+    travels in. At every step, the robot will try to turn right. If
+    there is a wall there, it will attempt to go forward instead.
+    If that is not possible, it will try to turn left. If all three
+    directions are unavailable, it will turn back.</p>
+<p>The challenge for the contestants is to write a program that
+    describes the path of the robot, starting from the
+    entrance/exit square until it finally comes back to it. The
+    movements are described by a single letter: ‘<tt>F</tt>’ means
+    forward, ‘<tt>L</tt>’ is left, ‘<tt>R</tt>’ is right and
+    ‘<tt>B</tt>’ stands for backward. Each of ‘<tt>L</tt>’,
+    ‘<tt>R</tt>’ and ‘<tt>B</tt>’ does not only describe the change
+    in orientation of the robot, but also the advancement of one
+    square in that direction. The robot’s initial direction is
+    East. In addition, the path of the robot always ends at the
+    entrance/exit square.</p>
+<p>The judge responsible for the problem had completed all the
+    samples and testdata, when disaster struck: the input file got
+    deleted and there is no way to recover it! Fortunately the
+    output and the samples are still there. Can you reconstruct the
+    input from the output? For your convenience, he has manually
+    added the number of test cases to both the sample output and
+    the testdata output.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single string: the movements of the
+        robot through the maze.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$3 \leq h,w \leq 100$</span>): the height
+        and width of the maze, respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$h$</span> lines, each
+        with <span class="tex2jax_process">$w$</span> characters,
+        describing the maze: a ‘<tt>#</tt>’ indicates a wall and a
+        ‘<tt>.</tt>’ represents an empty square.</p>
+</li>
+</ul>
+<p>The entire contour of the maze consists of walls, with the
+    exception of one square on the left: this is the entrance. The
+    maze contains no cycles (i.e. paths that would lead the
+    robot back to a square it had left in another direction) and no
+    empty squares that cannot be reached from the entrance. Every
+    row or column – with the exception of the top row, bottom row
+    and right column – contains at least one empty square.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+FFRBLF
+FFRFRBRFBFRBRFLF
+FRLFFFLBRFFFRFFFRFRFBRFLBRFRLFLFFR
+</pre>
+</td>
+<td>
+<pre>
+3
+4 4
+####
+...#
+##.#
+####
+7 5
+#####
+...##
+##.##
+#...#
+##.##
+##.##
+#####
+7 7
+#######
+#...#.#
+#.#...#
+#.#.###
+..###.#
+#.....#
+#######
+</pre>
+</td>
+</tr>
+</table>
+</div>

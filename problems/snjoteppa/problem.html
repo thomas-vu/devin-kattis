@@ -1,0 +1,181 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/snjoteppa/file/statement/en/img-0001.jpg" class="illustration" src="/problems/snjoteppa/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/mTmGAr">flickr.com</a>
+</div>
+</div>
+<p>One day Nesi was going to drive to Reykjavík University, but
+    it had snowed quite a bit. Some cars have gotten stuck in both
+    lanes of his street and he’s unsure if he can make it out of
+    the street, even using both lanes and driving against traffic.
+    Even worse is the fact that cars are coming and going, so he
+    has no idea when he can leave.</p>
+<p>His street can be modeled as a grid with two rows and
+    <span class="tex2jax_process">$n$</span> columns, but each cell
+    <span class="tex2jax_process">$(x, y)$</span> can either be
+    empty or be occupied by a car that’s stuck.</p>
+<p>Nesi tells you the initial state of the street and each time
+    a change occurs, like a car getting stuck or unstuck, he lets
+    you know. In between he asks you whether he can make it out of
+    the street at that point in time.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$2\leq n, k \leq 2\cdot 10^5$</span>), the
+    length of the street and the number of queries. The next two
+    lines each contain <span class="tex2jax_process">$n$</span>
+    letters, denoting the initial state of the street, ‘<tt class="ttfamily">o</tt>’ denoting a stuck car and ‘<tt class="ttfamily">.</tt>’ denoting an empty cell. Then there are
+    <span class="tex2jax_process">$k$</span> lines, each containing
+    a query which is of one of two forms:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">U <span class="tex2jax_process">$x$</span> <span class="tex2jax_process">$y$</span></tt>: Update cell <span class="tex2jax_process">$(x, y)$</span>; if a car was stuck there
+        it has become unstuck, if there was no car there before
+        then a car got stuck there (<span class="tex2jax_process">$1\leq x\leq 2$</span>, <span class="tex2jax_process">$1\leq y \leq n$</span>).</p>
+</li>
+<li>
+<p><tt class="ttfamily">Q</tt>: Nesi wants to know if he
+        can make it out of the street as is.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Each time Nesi asks whether he can make it out of the
+    street, print a single line containing <tt class="ttfamily">Jebb</tt> if he can start somewhere in the leftmost
+    column, drive his car to the right, left, up and down through
+    the cells (not diagonally) and end up in the rightmost column
+    without hitting another car. If he can’t print <tt class="ttfamily">Neibb</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n,k \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$k = 1$</span> and the
+          query will be of the type <tt class="ttfamily">Q</tt>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All cells in the lower row will contain a stuck car
+          and they will never become unstuck (<span class="tex2jax_process">$x=1$</span> in all queries).</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+...o.
+.....
+U 2 3
+Q
+U 1 3
+U 2 3
+Q
+</pre>
+</td>
+<td>
+<pre>Neibb
+Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 7
+ooooo
+.....
+Q
+U 1 1
+U 1 2
+Q
+U 1 2
+U 1 1
+Q
+</pre>
+</td>
+<td>
+<pre>Jebb
+Jebb
+Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+...
+...
+U 1 1
+U 1 2
+U 1 3
+Q
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+</div>

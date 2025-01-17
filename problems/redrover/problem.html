@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>One of our older Mars Rovers has nearly completed its tour
+    of duty and is awaiting instructions for one last mission to
+    explore the Martian surface. The survey team has picked a route
+    and has entrusted you with the job of transmitting the final
+    set of instructions to the rover. This route is simply a
+    sequence of moves in the cardinal directions: North, South,
+    East, and West. These instructions can be sent using a string
+    of corresponding characters: <tt class="tt">N, S, E</tt>, and
+    <tt class="tt">W</tt>. However, receiving the signal drains the
+    rover’s power supply, which is already dangerously low.
+    Fortunately, the rover’s creators built in the ability for you
+    to optionally define a single “macro” that can be used if the
+    route has a lot of repetition. More concretely, to send a
+    message with a macro, two strings are sent. The first is over
+    the characters {<tt class="tt">N,S,E,W,M</tt>} and the second
+    is over {<tt class="tt">N,S,E,W</tt>}. The first string
+    represents a sequence of moves and calls to a macro (<tt class="tt">M</tt>), while the second string determines what the macro
+    expands out to. For example:</p>
+<blockquote class="quote">
+<tt class="tt">WNMWMME<br/>
+      EEN</tt>
+</blockquote>
+<p>is an encoding of</p>
+<blockquote class="quote">
+<tt class="tt">WNEENWEENEENE</tt>
+</blockquote>
+<p>Notice that the version with macros requires only
+    <span class="tex2jax_process">$10$</span> characters, whereas
+    the original requires <span class="tex2jax_process">$13$</span>.</p>
+<p>Given a route, determine the minimum number of characters
+    needed to transmit it to the rover.</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing a non-empty
+    string made up of the letters <tt class="tt">N, S, E</tt>, and
+    <tt class="tt">W</tt> representing the route to transmit to the
+    rover. The maximum length of the string is <span class="tex2jax_process">$100$</span>.</p>
+<h2>Output</h2>
+<p>Display the minimum number of characters needed to encode
+    the route.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>WNEENWEENEENE
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>NSEW
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>EEEEEEEEE
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

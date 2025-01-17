@@ -1,0 +1,145 @@
+<div class="problembody">
+<p>Benni was browsing the web and accidentally got himself a
+    keylogger. Luckily Benni has antivirus software that let him
+    know about it, but the antivirus didn’t remove the virus
+    itself. When Benni writes his passwords to log into various
+    sites he tries to hide it so the keylogger won’t nab his
+    passwords. Benni uses the arrow keys to move the cursor around
+    and then erases letters to confuse the keylogger. Given the
+    keys Benni used to write his password, can you find out what
+    his password is?</p>
+<h2>Input</h2>
+<p>A single line containing a string of length <span class="tex2jax_process">$n$</span>. Benni only writes lower case
+    letters and digits, but when he presses the left arrow key,
+    right arrow key or backspace it is denoted by <tt class="ttfamily">L</tt>, <tt class="ttfamily">R</tt>, <tt class="ttfamily">B</tt>, in that order. Neither <tt class="ttfamily">B</tt> nor <tt class="ttfamily">L</tt> will appear
+    in the string if the cursor is in front of the first letter and
+    <tt class="ttfamily">R</tt> won’t appear if the cursor is
+    behind the last letter.</p>
+<h2>Output</h2>
+<p>One line containing Benni’s password.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000000$</span>, no <tt class="ttfamily">L</tt>,
+          <tt class="ttfamily">R</tt> or <tt class="ttfamily">B</tt> appear in the string</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>17</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000000$</span>, no <tt class="ttfamily">L</tt> or
+          <tt class="ttfamily">R</tt> appear in the string</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000000$</span>, no <tt class="ttfamily">B</tt> appear in
+          the string</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>36</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>iLnLnLeLb
+</pre>
+</td>
+<td>
+<pre>benni
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>arnarLLLBBun
+</pre>
+</td>
+<td>
+<pre>unnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>password123
+</pre>
+</td>
+<td>
+<pre>password123
+</pre>
+</td>
+</tr>
+</table>
+</div>

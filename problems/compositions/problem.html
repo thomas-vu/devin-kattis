@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>A <i class="itshape">composition</i> of an integer
+    <span class="tex2jax_process">$n$</span> is an ordered set of
+    integers which sum to <span class="tex2jax_process">$n$</span>.
+    Two <i class="itshape">compositions</i> with the same elements
+    but in different orders are considered different (this
+    distinguishes <i class="itshape">compositions</i> from
+    partitions). For example, all the <i class="itshape">compositions</i> of the first few integers are:</p>
+<pre>
+1: {1}
+2: {1+1, 2}
+3: {1+1+1, 1+2, 2+1, 3}
+4: {1+1+1+1, 1+1+2, 1+2+1, 1+3, 2+1+1, 2+2, 3+1, 4}
+</pre>
+<p>Note that <tt class="ttfamily">1+2</tt> and <tt class="ttfamily">2+1</tt> each count as distinct <i class="itshape">compositions</i> of <tt class="ttfamily">3</tt>. As
+    you may have suspected, there are <span class="tex2jax_process">$2^{(n-1)}$</span> <i class="itshape">compositions</i> of <span class="tex2jax_process">$n$</span>.</p>
+<p>In this problem, we set conditions on the elements of the
+    <i class="itshape">compositions</i> of <span class="tex2jax_process">$n$</span>. A <i class="itshape">composition</i> misses a set <span class="tex2jax_process">$S$</span> if no element of the <i class="itshape">composition</i> is in the set <span class="tex2jax_process">$S$</span>. For example, the <i class="itshape">compositions</i> of the first few integers which miss
+    the set of even integers are:</p>
+<pre>
+1: {1}
+2: {1+1}
+3: {1+1+1, 3}
+4: {1+1+1+1, 1+3, 3+1}
+</pre>
+<p>No odd integer can have a <i class="itshape">composition</i>
+    missing the set of odd integers and any <i class="itshape">composition</i> of an even integer consisting of only
+    even integers must be <span class="tex2jax_process">$2$</span>
+    times a <i class="itshape">composition</i> of <span class="tex2jax_process">$n/2$</span>.</p>
+<p>For this problem you will write a program to compute the
+    number of <i class="itshape">compositions</i> of an input
+    integer <span class="tex2jax_process">$n$</span> which miss the
+    elements of the arithmetic sequence <span class="tex2jax_process">$\{ m + i \cdot k \ | \ i = 0,1,\ldots \}
+    $</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single decimal integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 60$</span>), which is the number
+    of data sets that follow. Each data set should be processed
+    identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by the three space
+    separated integers <span class="tex2jax_process">$n$</span>,
+    <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$k$</span> with <span class="tex2jax_process">$1 \le n \le 30$</span> and <span class="tex2jax_process">$0 \le m &lt; k &lt; 30$</span>.</p>
+<h2>Output</h2>
+<p>For each data set there is one line of output. The single
+    output line consists of the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space
+    followed by the number of <i class="itshape">compositions</i>
+    of <span class="tex2jax_process">$n$</span> which miss the
+    specified sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 10 0 2
+2 15 1 4
+3 28 3 7
+</pre>
+</td>
+<td>
+<pre>
+1 55
+2 235
+3 18848806
+</pre>
+</td>
+</tr>
+</table>
+</div>

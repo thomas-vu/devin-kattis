@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/musicaltrees/file/statement/en/img-0001.jpg" class="illustration" src="/problems/musicaltrees/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/photos/christmas-tree-lights-christmas-1081981/">
+        Pixabay</a>
+</div>
+</div>
+<p>It’s Christmas time and JW’s <span class="tex2jax_process">$1$</span>-dimensional shop is selling
+    Christmas trees. However, the demand for trees is much higher
+    than the number of trees available. Hence, JW has come up with
+    a special strategy to help decide who gets what tree: a game of
+    Musical Trees!</p>
+<p>Musical Trees is much like the game Musical Chairs. There’s
+    a set of trees lined up in a straight (<span class="tex2jax_process">$1$</span>-dimensional) line. At first,
+    everyone starts by wandering around the store while the music
+    is playing. When the music stops, everyone runs to the nearest
+    tree (the tree the smallest distance away) and whoever reaches
+    a tree first gets to the claim that tree. Since people are
+    lazy, they will only ever try to run to the closest tree to
+    them, and hence multiple people may try to get the same tree.
+    Note this means some trees may be unclaimed if they are closest
+    to no one. Also, like in Musical Chairs, no tree can be claimed
+    by more than one person.</p>
+<p>The music has just stopped in Musical Trees and as everyone
+    is running to the closest tree, you want to figure out the
+    number of people who won’t get any tree.</p>
+<h2>Input</h2>
+<p>The first line consists the number of people <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\le n\le 100$</span>) and the number of
+    trees <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le m \le 100$</span>). The next line
+    contains <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$p_1,p_2,\ldots ,p_ n$</span>,
+    the positions of all the people when the music stops
+    (<span class="tex2jax_process">$1 \le p_ i \le 1\,
+    000$</span>). The last line contains <span class="tex2jax_process">$m$</span> integers <span class="tex2jax_process">$t_1,t_2,\ldots ,t_ m$</span>, the positions
+    of all the trees (<span class="tex2jax_process">$1 \le t_ i \le
+    1\, 000$</span>). No two people or two trees will have the same
+    position. Some people may try to cheat though, and will already
+    be at the same position as a tree when the music stops. Note
+    that if a person has more than one closest tree to them, they
+    will always go for the one with the smallest <span class="tex2jax_process">$t_ i$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of people who won’t get a tree.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+1 4
+2 4 5
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 5 10
+4 6
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+3 1
+2 5 4
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

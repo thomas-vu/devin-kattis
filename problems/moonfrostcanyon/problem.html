@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>Karin has three favourite things in life – fine dining, cats
+    and a video game called <em>Moonfrost Canyon</em>. In the game,
+    you play as a farmer who got tired of city life to move out to
+    a farm together with your cat. At the farm, you then grow crops
+    that you can cook fancy meals out of.</p>
+<p>When growing crops, you plant seeds at various locations in
+    the <span class="tex2jax_process">$R \times C$</span> grid that
+    your farm consists of. In total, you have an infinite amount of
+    seeds for four different kinds of plants.</p>
+<p>Karin has tilled some squares on her farm, on which seeds
+    can be planted. When planting seeds, you take 9 seeds for the
+    same kind of plant and place them in a tilled <span class="tex2jax_process">$3 \times 3$</span> grid that does not
+    already contain any seeds.</p>
+<p>Finally, to avoid potential crop disease from spreading, no
+    two patches of seeds in the grid that shares an edge may have a
+    seed of the same crop placed in it. Otherwise, this could allow
+    a disease affecting one <span class="tex2jax_process">$3 \times
+    3$</span> patch of crops to spread to the patch it shares an
+    edge with.</p>
+<p>Given the size of Karin’s in-game farm and what squares are
+    tilled, can you help her determine what seeds to place where in
+    order to plant a seed <em>on every tilled square</em> subject
+    to these constraints?</p>
+<h2>Input</h2>
+<p>The first line of input contains the two integers
+    <span class="tex2jax_process">$1 \le R, C \le 1\, 000$</span>,
+    the height and width of Karin’s farm.</p>
+<p>The next <span class="tex2jax_process">$R$</span> lines each
+    contains <span class="tex2jax_process">$C$</span> characters
+    describing Karin’s farm. Each character is either a <tt class="ttfamily">.</tt> which denotes a tilled square, or a
+    <tt class="ttfamily">*</tt> which denotes a non-tilled
+    square.</p>
+<p>The input will always be such that it is possible to
+    construct a seed plan as described.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$R$</span> lines, each
+    containing <span class="tex2jax_process">$C$</span> characters
+    describing how Karin should plant her crops. If a square was
+    non-tilled, output a <tt class="ttfamily">*</tt>. Otherwise,
+    output a digit <tt class="ttfamily">1-4</tt> depending on which
+    of the four kinds of seeds was planted on the square.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group. Your final
+    score will be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All squares are tilled.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R = 6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+*****
+*...*
+*...*
+*...*
+*****
+</pre>
+</td>
+<td>
+<pre>*****
+*111*
+*111*
+*111*
+*****
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 7
+...*...
+...*...
+...*...
+**...**
+**...**
+**...**
+</pre>
+</td>
+<td>
+<pre>111*111
+111*111
+111*111
+**222**
+**222**
+**222**
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,137 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/competitivearcadebasketball/file/statement/en/img-0001.jpg" class="illustration" src="/problems/competitivearcadebasketball/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Source: <a href="https://pixabay.com/en/basketball-net-score-rim-hoop-2099656/">
+        pixabay</a>
+</div>
+</div>
+<p>You’re attending a arcade basketball competition, where the
+    objective is to score as many points as possible until the time
+    runs out. The announcer has informed the crowd that their
+    scoreboard is broken, so they don’t have a way to keep track of
+    all the scores. As a seasoned programmer, you feel you can whip
+    up a program that can keep track of the names of the players
+    and the amount of points they’ve scored, announcing the
+    winner(s) at the end of the contest.</p>
+<h2>Input</h2>
+<p>The first line contains three integers: the number of
+    participants <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \le n \le 100\, 000$</span>);
+    the minimum number <span class="tex2jax_process">$p$</span> of
+    points required to win the contest (<span class="tex2jax_process">$1 \le p \le 10\, 001$</span>); and
+    <span class="tex2jax_process">$m$</span>, the number of lines
+    with player names and points (<span class="tex2jax_process">$1
+    \le m \le 200\, 000$</span>). The next <span class="tex2jax_process">$n$</span> lines contain the names of the
+    participants, each mentioned exactly once. Each name consist of
+    no more than <span class="tex2jax_process">$20$</span>
+    alphanumerical characters. The remaining <span class="tex2jax_process">$m$</span> lines each contain the name of a
+    participant, followed by how many points they scored
+    (<span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, or <span class="tex2jax_process">$3$</span>).</p>
+<h2>Output</h2>
+<p>Output the names of those participants who reached the
+    minimum required score, one per line! Output “<tt class="ttfamily">&lt;Winner&gt; wins!</tt>” for each winner. Output
+    the winners in the order in which they’ve reached the required
+    score. If no one reaches the minimum required score, output
+    “<tt class="ttfamily">No winner!</tt>” (including the
+    exclamation mark!).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10 13
+John
+Kelly
+George
+Kelly 1
+George 2
+Kelly 1
+John 2
+George 1
+John 3
+Kelly 3
+Kelly 1
+George 3
+George 1
+John 3
+George 3
+Kelly 1
+</pre>
+</td>
+<td>
+<pre>George wins!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 10 13
+Bob
+Nina
+Jess
+Tim
+Nina 2
+Bob 2
+Nina 1
+Jess 3
+Bob 2
+Jess 2
+Nina 1
+Jess 2
+Nina 3
+Bob 1
+Nina 3
+Jess 3
+Bob 2
+</pre>
+</td>
+<td>
+<pre>Nina wins!
+Jess wins!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 15 13
+Bob
+Nina
+Jess
+Tim
+Nina 2
+Bob 2
+Nina 1
+Jess 3
+Bob 2
+Jess 2
+Nina 1
+Jess 2
+Nina 3
+Bob 1
+Nina 3
+Jess 3
+Bob 2
+</pre>
+</td>
+<td>
+<pre>No winner!
+</pre>
+</td>
+</tr>
+</table>
+</div>

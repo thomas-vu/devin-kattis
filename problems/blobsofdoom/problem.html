@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/blobsofdoom/file/statement/en/img-0001.jpg" class="illustration" src="/problems/blobsofdoom/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photograph by <a href="https://australianmuseum.net.au/learn/animals/fishes/fathead-psychrolutes-aka-mr-blobby/">
+        Kerryn Parkinson</a>, ©NORFANZ Founding Parties
+      </div>
+</div>
+<p>The Mischievous Troublemakers’ Association (MTA) has hatched
+    a sinister plot for world domination! All through the night,
+    the Troublemakers work tirelessly, arranging rocks in the shape
+    of hideous, misshapen blobs on the lawns of the unsuspecting
+    residents of Quackville. For the sake of efficiency, the MTA
+    splits up into several factions, each of which covers a
+    particular neighbourhood. The faction in charge of spreading
+    doom to a given neighbourhood never visits the same lawn twice.
+    While there is no consistency whatsoever as to the shapes of
+    the evil rock blobs, the MTA is very specific about the number
+    of rocks each blob should contain. In order to generate this
+    number easily, the <span class="tex2jax_process">$k^{\mathrm{th}}$</span> faction
+    (<span class="tex2jax_process">$k \geq 1$</span>) has devised a
+    sequence, <span class="tex2jax_process">$F_ k(n)$</span>, whose
+    <span class="tex2jax_process">$n^{\mathrm{th}}$</span> term
+    (<span class="tex2jax_process">$n \geq 1$</span>) is the number
+    of rocks its members will use to make their blob on the
+    <span class="tex2jax_process">$n^{\mathrm{th}}$</span> lawn
+    they visit. This sequence can be defined recursively
+    by</p><span class="tex2jax_process">\begin{align*} F_ k(1)
+    &amp; = 42\\ F_ k(2) &amp; = 11k + 77\\ F_ k(n) &amp; = 2F_ k(n
+    - 1) - F_ k(n - 2) + 10k \, , \ \textrm{ for } n &gt; 2
+    \end{align*}</span>
+<p>So, for example, the members of the first faction
+    (<span class="tex2jax_process">$k = 1$</span>) place
+    <span class="tex2jax_process">$42$</span> rocks on the first
+    lawn they visit, <span class="tex2jax_process">$88$</span>
+    rocks on the second lawn they visit, then <span class="tex2jax_process">$144$</span>, <span class="tex2jax_process">$210$</span>, <span class="tex2jax_process">$286$</span>, and so on, on subsequent
+    lawns.</p>
+<p>While others stare confusedly at the amorphous piles of
+    rocks, wondering what any of this has to do with world
+    domination, Rex Tangleton leaps into action! Despite a complete
+    lack of evidence, he is convinced that Quackvillians can only
+    be saved if someone turns these ghastly blobs of doom into
+    wonderful rectangles. According to Rex, a <span class="tex2jax_process">$p$</span> by <span class="tex2jax_process">$q$</span> rectangle of rocks is wonderful if
+    <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span> are prime. Note that he does not
+    care whether or not <span class="tex2jax_process">$p$</span>
+    and <span class="tex2jax_process">$q$</span> are equal. For
+    each lawn that he visits, he will rearrange all of the rocks in
+    the blob into a wonderful rectangle if this is possible.
+    Otherwise, he will simply stare at the rocks and grunt, but not
+    move any of them.</p>
+<p>Originally, Rex had been planning to check as many lawns as
+    possible. However, he has been informed that his grunting
+    frightens people, and he will therefore not be paid for his
+    work. Saving your community is no fun if you do not get
+    remunerated, so Rex decides to pick random positive integers
+    <span class="tex2jax_process">$k$</span> and <span class="tex2jax_process">$n$</span>, and then check only the first
+    <span class="tex2jax_process">$n$</span> lawns that the
+    <span class="tex2jax_process">$k^{\mathrm{th}}$</span> faction
+    has visited. Rex wants to know how much work lies ahead of him,
+    so he has asked you to write a program that, given <span class="tex2jax_process">$k$</span> and <span class="tex2jax_process">$n$</span>, will determine on how many lawns
+    he will rearrange rocks.</p>
+<h2>Input</h2>
+<p>The input consists of one line with two space-separated
+    positive integers, <span class="tex2jax_process">$k$</span> and
+    <span class="tex2jax_process">$n$</span>. It is guaranteed that
+    <span class="tex2jax_process">$k \leq 100$</span> and
+    <span class="tex2jax_process">$n \leq 1\, 000\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Output a single non-negative integer giving the number of
+    lawns that Rex will visit on which he will rearrange rocks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 5
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 12
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

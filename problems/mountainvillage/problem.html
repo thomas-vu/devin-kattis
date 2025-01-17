@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>After a long summer’s march through the rough terrain of
+    northern America, the indian tribe had found a place where they
+    hopefully would be left alone. The chief proclaimed that this
+    would be the new place for their village, despite the rocky
+    nature of the landscape. They set a temporary camp for the
+    night, content with the piece of land they had discovered. The
+    very next day however, it stood clear that some effort planning
+    the locations of the Teepee tents had to be made. It was simply
+    too great a difference in altitude between the tents, making
+    the walk along some paths extremely tiresome. Therefore, the
+    chief ordered his witty son, Fast Thought, to find a connected
+    area in their vicinity, large enough to host all tents of the
+    tribe, having as small difference between the highest and
+    lowest point as possible.</p>
+<p>The task called for some altitude measurements of their
+    whereabouts, which caused no problem for Fast Thought, since he
+    was wise in the ways of trigonometry. He divided the land into
+    squares big enough to host a tent each and estimated the
+    altitude of each square. Now the problem was reduced to finding
+    a connected region containing at least as many squares as there
+    were tents, having the smallest difference between the highest
+    and lowest altitude. He drew a rectangular matrix <span class="tex2jax_process">$A$</span>, representing the area, where the
+    entry <span class="tex2jax_process">$a_{i,j}$</span> at row
+    <span class="tex2jax_process">$i$</span> and column
+    <span class="tex2jax_process">$j$</span>, was the altitude of
+    the square with coordinates <span class="tex2jax_process">$(i,
+    j)$</span>. He considered an entry <span class="tex2jax_process">$a_{i,j}$</span> adjacent to the entries
+    <span class="tex2jax_process">$a_{i,j +1}$</span>, <span class="tex2jax_process">$a_{i +1,j}$</span>, <span class="tex2jax_process">$a_{i,j-1}$</span> and <span class="tex2jax_process">$a_{i-1,j}$</span>, and called a set of
+    entries <em>connected</em> if for every pair of entries in the
+    set, there was a connecting path of adjacent entries in it.
+    Since the size of the tribe altered with time, Fast Thought
+    decided to solve the problem for a general number of tents.
+    Thus the problem left to solve for him was to find a set of at
+    least <span class="tex2jax_process">$k$</span> connected
+    entries <span class="tex2jax_process">$a_{i,j}$</span> in the
+    matrix <span class="tex2jax_process">$A$</span>, such that the
+    difference between the largest and the smallest entry in the
+    set was minimized.</p>
+<h2>Input</h2>
+<p>On the first line of input there are two positive integers,
+    <span class="tex2jax_process">$r, c \le 50$</span>, giving the
+    dimensions of the matrix <span class="tex2jax_process">$A$</span>. The following <span class="tex2jax_process">$r$</span> lines, each containing
+    <span class="tex2jax_process">$c$</span> integers between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$99$</span>, are the entries <span class="tex2jax_process">$a_{i,j}$</span> of the matrix. The next line
+    contains a single integer <span class="tex2jax_process">$n \le
+    100$</span>, and is followed by <span class="tex2jax_process">$n$</span> lines each holding a single
+    positive integer <span class="tex2jax_process">$k_ i \le r
+    \cdot c$</span>.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$k_ i$</span> ,
+    output one line containing the minimum difference between the
+    largest and the smallest entry for any connected set of at
+    least <span class="tex2jax_process">$k_ i$</span> entries.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 10
+0 0 3 46 0 46 0 0 12 12
+0 0 13 50 49 46 11 10 10 11
+0 51 51 49 99 99 89 0 0 10
+0 0 48 82 70 99 0 52 13 14
+51 50 50 51 70 35 70 10 14 11
+6
+1
+5
+10
+12
+47
+50
+</pre>
+</td>
+<td>
+<pre>
+0
+0
+3
+4
+89
+99
+</pre>
+</td>
+</tr>
+</table>
+</div>

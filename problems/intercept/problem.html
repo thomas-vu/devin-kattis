@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/intercept/file/statement/en/img-0001.jpg" class="illustration" src="/problems/intercept/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/patrikneckman/6101273694/">Patrik
+        Neckman</a>
+</div>
+</div>
+<p>Fatima commutes from KTH to home by subway every day. Today
+    Robert decided to surprise Fatima by baking cookies and
+    bringing them to an intermediate station. Fatima does not
+    always take the same route home, because she loves to admire
+    the artwork inside different stations in Stockholm. However,
+    she always optimizes her travel by taking the shortest route.
+    Can you tell Robert which station he should go to in order to
+    surely intercept Fatima?</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$1
+    \leq N,M \leq 100\, 000$</span>, where <span class="tex2jax_process">$N$</span> is the number of subway stations
+    and <span class="tex2jax_process">$M$</span> is the number of
+    subway links. <span class="tex2jax_process">$M$</span> lines
+    follow, each with three integers <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$v$</span>, <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$0
+    \leq u,v &lt; N$</span>, <span class="tex2jax_process">$0 &lt;
+    w \leq 1\, 000\, 000\, 000$</span>, meaning that there is a
+    one-way link from <span class="tex2jax_process">$u$</span> to
+    <span class="tex2jax_process">$v$</span> that takes
+    <span class="tex2jax_process">$w$</span> seconds to complete.
+    Note that different subway lines may serve the same route.</p>
+<p>The last line contains two integers <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$t$</span>, <span class="tex2jax_process">$0
+    \leq s,t &lt; N$</span> the number of the station closest to
+    KTH and closest to home, respectively. It is possible to reach
+    <span class="tex2jax_process">$t$</span> from <span class="tex2jax_process">$s$</span>.</p>
+<h2>Output</h2>
+<p>A space separated list of all the station numbers
+    <span class="tex2jax_process">$u$</span> such that all shortest
+    paths from <span class="tex2jax_process">$s$</span> to
+    <span class="tex2jax_process">$t$</span> pass through
+    <span class="tex2jax_process">$u$</span>, in increasing
+    order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 4
+0 1 100
+0 2 100
+1 3 100
+2 3 100
+0 3
+</pre>
+</td>
+<td>
+<pre>
+0 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 8
+0 1 100
+0 2 100
+1 3 100
+2 3 100
+3 4 100
+3 5 100
+4 6 100
+5 6 100
+0 6
+</pre>
+</td>
+<td>
+<pre>
+0 3 6
+</pre>
+</td>
+</tr>
+</table>
+</div>

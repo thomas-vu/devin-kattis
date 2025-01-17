@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>Mirko and Slavko are filming a movie adaptation of the
+    popular SF novel “Chicks in space 13”. The script requires them
+    to present a lot of different worlds so they decided to film
+    the entire movie in front of a green screen and add CGI
+    backgrounds later. Mirko heard that the best way to generate
+    artificial terrain is to use midpoint displacement
+    algorithm.</p>
+<p>To start the algorithm, Mirko selects <span class="tex2jax_process">$4$</span> points forming a perfect square.
+    He then performs the following steps:</p>
+<ol class="enumerate">
+<li>
+<p>On each side of the square, he adds a new point in the
+        exact middle of the side. The height of this new point is
+        the average height of the two points on that side.</p>
+</li>
+<li>
+<p>In the exact center of the square he adds a new point
+        whose height is the average height of all <span class="tex2jax_process">$4$</span> square vertices, plus a small
+        random value.</p>
+</li>
+</ol>
+<p>After those two steps are performed, he now has <span class="tex2jax_process">$4$</span> new squares. He performs the same
+    steps on the newly created squares again and again until he is
+    pleased with the results.</p>
+<div class="figure" id="fig:algo">
+<center>
+<img alt="\includegraphics[width=1.0\textwidth ]{pic.pdf}" src="/problems/planina/file/statement/en/img-0001.png" style="width:100.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Two iterations of the algorithm
+        </div>
+</center>
+</div>
+<p>Mirko noticed that some of the points belong to more than
+    one square. In order to decrease memory consumption, he
+    calculates and stores such points only once. He now wonders how
+    many points in total will he need to store in memory after
+    <span class="tex2jax_process">$N$</span> iterations.</p>
+<h2>Input</h2>
+<p>The first and only line of input contains one integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 15$</span>), the number of
+    iterations.</p>
+<h2>Output</h2>
+<p>The first and only line of output should contain one number,
+    the number of points stored after <span class="tex2jax_process">$N$</span> iterations.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+</pre>
+</td>
+<td>
+<pre>
+9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+</pre>
+</td>
+<td>
+<pre>
+25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+</pre>
+</td>
+<td>
+<pre>
+1089
+</pre>
+</td>
+</tr>
+</table>
+</div>

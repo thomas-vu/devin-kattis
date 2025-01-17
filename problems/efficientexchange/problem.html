@@ -1,0 +1,127 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/efficientexchange/file/statement/en/img-0001.jpg" class="illustration" src="/problems/efficientexchange/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You have recently acquired a new job at the Bank for
+    Acquiring Peculiar Currencies. Here people can make payments,
+    and deposit or withdraw money in all kinds of strange
+    currencies. At your first day on the job you help a customer
+    from Nijmegia, a small insignificant country famous for its
+    enormous coins with values equal to powers of <span class="tex2jax_process">$10$</span>, that is, <span class="tex2jax_process">$1, 10, 100, 1000$</span>, etc. This customer
+    wants to make a rather large payment, and you are not looking
+    forward to the prospect of carrying all those coins to and from
+    the vault.</p>
+<p>You therefore decide to think things over first. You have an
+    enormous supply of Nijmegian coins in reserve, as does the
+    customer (most citizens from Nijmegia are extremely strong).
+    You now want to minimize the total number of coins that are
+    exchanged, in either direction, to make the exact payment the
+    customer has to make.</p>
+<p>For example, if the customer wants to pay <span class="tex2jax_process">$83$</span> coins there are many ways to make
+    the exchange. Here are three possibilities:</p>
+<dl class="description">
+<dt>Option 1.</dt>
+<dd>
+<p>The customer pays <span class="tex2jax_process">$8$</span> coins of value <span class="tex2jax_process">$10$</span>, and <span class="tex2jax_process">$3$</span> coins of value <span class="tex2jax_process">$1$</span>. This requires exchanging
+        <span class="tex2jax_process">$8 + 3 = 11$</span>
+        coins.</p>
+</dd>
+<dt>Option 2.</dt>
+<dd>
+<p>The customer pays a coin of value <span class="tex2jax_process">$100$</span>, and you return a coin of
+        value <span class="tex2jax_process">$10$</span>, and
+        <span class="tex2jax_process">$7$</span> coins of value
+        <span class="tex2jax_process">$1$</span>. This requires
+        exchanging <span class="tex2jax_process">$1 + 1 + 7 =
+        9$</span> coins.</p>
+</dd>
+<dt>Option 3.</dt>
+<dd>
+<p>The customer pays a coin of value <span class="tex2jax_process">$100$</span>, and <span class="tex2jax_process">$3$</span> coins of value <span class="tex2jax_process">$1$</span>. You return <span class="tex2jax_process">$2$</span> coins of value <span class="tex2jax_process">$10$</span>. This requires exchanging
+        <span class="tex2jax_process">$1 + 3 + 2 = 6$</span>
+        coins.</p>
+</dd>
+</dl>
+<p>It turns out the last way of doing it requires the least
+    coins possible.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>A single integer <span class="tex2jax_process">$0\leq n
+        &lt; 10^{1000}$</span>, the amount the customer from
+        Nijmegia has to pay.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Output the minimum number of coins that have to be
+        exchanged to make the required payment.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>83
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>13
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>12345678987654321
+</pre>
+</td>
+<td>
+<pre>42
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,79 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/onaveragetheyrepurple/file/statement/en/img-0001.png" class="illustration" src="/problems/onaveragetheyrepurple/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Alice and Bob are playing a game on a simple connected graph
+    with <span class="tex2jax_process">$N$</span> nodes and
+    <span class="tex2jax_process">$M$</span> edges.</p>
+<p>Alice colors each edge in the graph red or blue.</p>
+<p>A path is a sequence of edges where each pair of consecutive
+    edges have a node in common. If the first edge in the pair is
+    of a different color than the second edge, then that is a
+    “color change.”</p>
+<p>After Alice colors the graph, Bob chooses a path that begins
+    at node <span class="tex2jax_process">$1$</span> and ends at
+    node <span class="tex2jax_process">$N$</span>. He can choose
+    any path on the graph, but he wants to minimize the number of
+    color changes in the path. Alice wants to choose an edge
+    coloring to maximize the number of color changes Bob must make.
+    What is the maximum number of color changes she can force Bob
+    to make, regardless of which path he chooses?</p>
+<h2>Input</h2>
+<p>The first line contains two integer values <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> with <span class="tex2jax_process">$2 \le N \le 100\, 000$</span> and
+    <span class="tex2jax_process">$1 \le M \le 100\, 000$</span>.
+    The next <span class="tex2jax_process">$M$</span> lines contain
+    two integers <span class="tex2jax_process">$a_ i$</span> and
+    <span class="tex2jax_process">$b_ i$</span> indicating an
+    undirected edge between nodes <span class="tex2jax_process">$a_
+    i$</span> and <span class="tex2jax_process">$b_ i$</span>
+    (<span class="tex2jax_process">$1 \le a_ i, b_ i \le N$</span>,
+    <span class="tex2jax_process">$a_ i \not= b_ i$</span>).</p>
+<p>All edges in the graph are unique.</p>
+<h2>Output</h2>
+<p>Output the maximum number of color changes Alice can force
+    Bob to make on his route from node <span class="tex2jax_process">$1$</span> to node <span class="tex2jax_process">$N$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+1 3
+1 2
+2 3
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 8
+1 2
+1 3
+2 4
+3 4
+4 5
+4 6
+5 7
+6 7
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

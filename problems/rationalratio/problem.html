@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>Every (positive) rational number can be expressed as a ratio
+    of two (positive) integers. However, in decimal form, rational
+    numbers often have an infinitely repeating pattern, e.g.,
+    <span class="tex2jax_process">$1/7 =
+    0.142857142857142857$</span>... A convenient way of writing
+    this repeating pattern is to put a bar over the first
+    occurrence of the repeating part, so <span class="tex2jax_process">$1/7$</span> would be
+    written:</p><span class="tex2jax_process">\[
+    0.\overline{142857}. \]</span>
+<p>Given a rational number consisting of a series of digits,
+    followed by a decimal point, followed by more digits, and then
+    a number indicating how many of the rightmost digits repeat
+    (i.e., the number of digits under the bar), your task is to
+    find the ratio of two integers, in the most reduced form, that
+    represent the same rational number. For example, for the input
+    “<span class="tex2jax_process">$0.142857$</span> <span class="tex2jax_process">$6$</span>” you should find <span class="tex2jax_process">$1/7$</span>.</p>
+<h2>Input</h2>
+<p>The input will be a single line with two numbers separated
+    by one space. The first number will consist of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$3$</span> digits (<span class="tex2jax_process">$0$</span>–<span class="tex2jax_process">$9$</span>), followed by a decimal point,
+    followed by <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$11$</span> digits (<span class="tex2jax_process">$0$</span>–<span class="tex2jax_process">$9$</span>), representing the decimal form of
+    the number, possibly with leading zeros. The second number will
+    be a positive integer indicating how many of the rightmost
+    digits of the preceding number repeat. The first number will
+    always be greater than <span class="tex2jax_process">$0$</span>. The second number will never be
+    less than <span class="tex2jax_process">$1$</span> nor larger
+    than the number of digits to the right of the decimal
+    point.</p>
+<h2>Output</h2>
+<p>Print the corresponding fraction in its most reduced form,
+    that is, the fraction with the smallest possible integer values
+    in the numerator and denominator.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0.142857 6
+</pre>
+</td>
+<td>
+<pre>1/7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1.6 1
+</pre>
+</td>
+<td>
+<pre>5/3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>123.456 2
+</pre>
+</td>
+<td>
+<pre>61111/495
+</pre>
+</td>
+</tr>
+</table>
+</div>

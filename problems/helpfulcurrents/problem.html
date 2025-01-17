@@ -1,0 +1,140 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/helpfulcurrents/file/statement/en/img-0001.jpg" class="illustration" src="/problems/helpfulcurrents/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://unsplash.com/photos/Onwv_01gZAE">Payton Ferris</a>
+</div>
+</div>
+<p>Lysias loves his full-rigged ship and takes it out to his
+    island castle as often as possible. On his way back to the
+    castle one day, the engines capable of turning the sails
+    failed. As it is a full-rigged ship, he and his crew are now
+    unable to turn the sails in any direction.</p>
+<p>But, as luck would have it, there is a south wind which is
+    blowing them in the right direction…at least approximately.
+    Since they may not get to the castle by wind only, Lysias
+    believes he can use the ocean’s currents to move the ship
+    either east or west temporarily by retracting and lowering the
+    ship’s sails. In that way, the ship can move in two potential
+    directions:</p>
+<ul class="itemize">
+<li>
+<p>Move north by lowering the sails</p>
+</li>
+<li>
+<p>Retract the sails and move in the direction of the
+        current they’re on top of (east/west)</p>
+</li>
+</ul>
+<p>Lysias has dug up an old map of all the currents in this
+    part of the ocean. As he is fond of mathematics, not only does
+    Lysias wonder if it’s possible to get home without fixing the
+    sails; he also wonders how many different routes they can take
+    to get home. Can you help him?</p>
+<h2>Input</h2>
+<p>The first line has three integers: <span class="tex2jax_process">$Y$</span> and <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$x_{init}$</span>, representing the number of
+    rows and columns of the map, and which column the ship is
+    currently placed at. The ship always starts on the bottom
+    row.</p>
+<p>Then follow <span class="tex2jax_process">$Y$</span> rows,
+    each with <span class="tex2jax_process">$X$</span> characters
+    each. All characters <span class="tex2jax_process">$C_{x,y}$</span> is one of ‘<tt>~</tt>’,
+    ‘<tt>#</tt>’, ‘<tt>@</tt>’, ‘<tt>&gt;</tt>’ and
+    ‘<tt>&lt;</tt>’. ’<tt>~</tt>’ represents open sea without any
+    currents, ‘<tt>#</tt>’ is impassable shallow waters, and
+    ‘<tt>&gt;</tt>’ and ‘<tt>&lt;</tt>’ are currents moving the
+    boat to the right and left respectively. ‘<tt>@</tt>’
+    represents Lysias’ castle.</p>
+<h2>Output</h2>
+<p>Output all the different distinct paths the ship could take
+    to get back to the castle. Since there may be very many
+    different ways to get back, output the answer modulo
+    <span class="tex2jax_process">$1\, 000\, 003$</span>.</p>
+<p>If there are no ways to get to the castle, output
+    “<tt class="ttfamily">begin repairs</tt>”.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0 &lt; Y \leq
+        300$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq x_{init} &lt; X
+        \leq 50\, 000$</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$C_{x,y} = \text
+        {‘&gt;’}$</span>, then <span class="tex2jax_process">$x+1
+        &lt; X$</span> and <span class="tex2jax_process">$C_{x+1,y}
+        \notin \{ \text {‘&lt;’}, \verb|`#'|\} $</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$C_{x,y} = \text
+        {‘&lt;’}$</span>, then <span class="tex2jax_process">$0
+        \leq x-1$</span> and <span class="tex2jax_process">$C_{x-1,y} \notin \{ \text {‘&gt;’},
+        \verb|`#'|\} $</span></p>
+</li>
+<li>
+<p>There is exactly one ‘<tt>@</tt>’ tile on the map</p>
+</li>
+<li>
+<p>The boat will not start on a <tt>`#'</tt> tile</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 0
+&gt;@
+&gt;~
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 5 1
+&gt;&gt;@&lt;&lt;
+&gt;~#~&lt;
+&gt;&gt;&gt;&gt;~
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 0
+&gt;~@~
+~&lt;#~
+&gt;&gt;&gt;~
+</pre>
+</td>
+<td>
+<pre>begin repairs
+</pre>
+</td>
+</tr>
+</table>
+</div>

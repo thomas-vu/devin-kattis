@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:38.00%">
+<img alt="/problems/bannord/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bannord/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://unsplash.com/photos/fTdnRCpRTdE">Text</a>
+        by Michael Dziedzic, Unsplash
+      </div>
+</div>The office life is a blast, constant excitement and never
+    a frown in sight. But this lasseiz-faire attitude leads to
+    carelessness. A recent example of this is when you asked your
+    receptionist to write a memo but, in a bout of enjoyment, he
+    forgot the only (and therefore most important) rule in the
+    office: No memo should include <em>forbidden letters</em>. The
+    forbidden letters are decided each week by the management, and
+    a word that contains a forbidden letter is a <em>forbidden
+    word</em>. Worst of all, it is <span class="tex2jax_process">$3.59$</span>pm on a Friday. Is there any way
+    to quickly black out the forbidden words?
+    <h2>Input</h2>
+<p>The first line of the input contains a non-empty string
+    <span class="tex2jax_process">$S$</span>. The string
+    <span class="tex2jax_process">$S$</span> contains lower case
+    letters of the English alphabet and none of which is repeated.
+    The next line of the input contains the string <span class="tex2jax_process">$M$</span>. The string <span class="tex2jax_process">$M$</span> contains only lower case letters
+    and spaces and is not longer than <span class="tex2jax_process">$10^5$</span> characters. There are no
+    adjacent spaces in <span class="tex2jax_process">$M$</span>.
+    The string <span class="tex2jax_process">$S$</span> corresponds
+    to this weeks forbidden letters and the string <span class="tex2jax_process">$M$</span> corresponds to the memo.</p>
+<h2>Output</h2>
+<p>The only line of the output should contain the memo, but
+    every letter in every forbidden word should be replaced by
+    ,,<tt class="ttfamily">*</tt>”.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The string <span class="tex2jax_process">$S$</span>
+          contains only one character.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>e
+we need to improve synergy through team building exercises
+</pre>
+</td>
+<td>
+<pre>** **** to ******* ******* through **** building ********* 
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>kmzy
+krummi svaf i klettagja kaldri vetrar nottu a verdur margt ad meini verdur margt ad meini
+</pre>
+</td>
+<td>
+<pre>****** svaf i ********* ****** vetrar nottu a verdur ***** ad ***** verdur ***** ad ***** 
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,79 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/intervalscheduling/file/statement/en/img-0001.png" class="illustration" src="/problems/intervalscheduling/file/statement/en/img-0001.png"/>
+<div class="description">
+        A set of <span class="tex2jax_process">$8$</span> intervals
+        corresponding to sample input 2. The maximum number of
+        nonoverlapping intervals is <span class="tex2jax_process">$3$</span>, achieved by the highlighted
+        intervals.
+      </div>
+</div>
+<p>Consider a set of <span class="tex2jax_process">$n$</span>
+    intervals <span class="tex2jax_process">$I_1,\ldots , I_
+    n$</span>, each given as an integer tuple <span class="tex2jax_process">$(s_ i, f_ i)$</span> with <span class="tex2jax_process">$s_ i&lt;f_ i$</span>, such that the
+    <span class="tex2jax_process">$i$</span>th interval starts at
+    <span class="tex2jax_process">$s_ i$</span> and ends at
+    <span class="tex2jax_process">$f_ i$</span>. We want to
+    determine the maximum number of nonoverlapping intervals. More
+    formally, we want to determine the size of a largest subset
+    <span class="tex2jax_process">$S\subseteq \{ 1,\ldots ,n\}
+    $</span> such that for <span class="tex2jax_process">$i, j\in
+    S$</span> with <span class="tex2jax_process">$i\neq j$</span>
+    we have <span class="tex2jax_process">$f_ j \leq s_ i$</span>
+    or <span class="tex2jax_process">$f_ i\leq s_ j$</span>. Note
+    that the intervals <span class="tex2jax_process">$[1,2]$</span>
+    and <span class="tex2jax_process">$[2,3]$</span> are not
+    considered to be overlapping.</p>
+<h2>Input</h2>
+<p>The first line of input consists of an integer <span class="tex2jax_process">$n\in \{ 1,\ldots , 10^5\} $</span>, the
+    number of intervals. Each of the following <span class="tex2jax_process">$n$</span> lines consists of two
+    space-separated integers <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$f$</span>, indicating an interval starting
+    at <span class="tex2jax_process">$s$</span> and ending at
+    <span class="tex2jax_process">$f$</span>, with <span class="tex2jax_process">$0\leq s&lt;f\leq 10^9$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the largest number of
+    nonoverlapping intervals.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 4
+2 8
+5 9
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+0 6
+1 4
+3 5
+3 8
+4 7
+5 9
+6 10
+8 11
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

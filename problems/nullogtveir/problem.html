@@ -1,0 +1,153 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/nullogtveir/file/statement/en/img-0001.jpg" class="illustration" src="/problems/nullogtveir/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/2g2cBg2">flickr.com</a>
+</div>
+</div>
+<p>Arnar and Arnar are looking at numbers together. Arnar only
+    likes the digit <span class="tex2jax_process">$0$</span> while
+    Arnar only likes the digit <span class="tex2jax_process">$2$</span>. Since Arnar and Arnar are
+    friends, they like numbers that have each others’ favorite
+    digits. The numbers are however not allowed to contain any
+    other digits.</p>
+<p>The numbers <span class="tex2jax_process">$20$</span>,
+    <span class="tex2jax_process">$2\, 002$</span>, <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2$</span> are thus liked by both but
+    <span class="tex2jax_process">$54$</span>, <span class="tex2jax_process">$173$</span> and <span class="tex2jax_process">$120\, 120$</span> aren’t.</p>
+<p>Now Arnar and Arnar have gathered all numbers from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n$</span>, the highest number they know.
+    They want to know how many numbers in their collection are
+    liked by both of them, but they don’t know how to count. Can
+    you help them with the counting?</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^{50}$</span>), the highest number Arnar and
+    Arnar know.</p>
+<h2>Output</h2>
+<p>Print how many numbers in the collection are liked by Arnar
+    and Arnar.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq
+          10^{3}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq
+          10^{6}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq
+          10^{18}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 10^{k}$</span>,
+          where <span class="tex2jax_process">$0 \leq k \leq
+          50$</span> (<span class="tex2jax_process">$n$</span> is
+          of the form <span class="tex2jax_process">$100\dots
+          $</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>221
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>123456
+</pre>
+</td>
+<td>
+<pre>32
+</pre>
+</td>
+</tr>
+</table>
+</div>

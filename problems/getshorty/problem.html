@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>Nils and Mikael are intergalaxial fighters as well as lethal
+    enemies. Now Nils has managed to capture the poor Mikael in his
+    dark dungeons, and it is up to you to help Mikael escape with
+    as much of his pride intact as possible.</p>
+<p>The dungeons can be viewed as a set of corridors and
+    intersections. Each corridor joins two intersections. There are
+    no guards, traps, or locked doors in Nils’ dungeon. However,
+    there is one obstacle which makes escaping from the dungeon a
+    perilious project: in each corridor there is a sentry, armed
+    with a factor weapon. (As is commonly known, a factor weapon
+    with factor <span class="tex2jax_process">$f$</span> reduces
+    the size of its target to a factor <span class="tex2jax_process">$f$</span> of its original size, e.g. if
+    Mikael is <span class="tex2jax_process">$8$</span> gobs large
+    and is hit by a factor weapon with factor <span class="tex2jax_process">$f = 0.25$</span> his size will be reduced to
+    <span class="tex2jax_process">$2$</span> gobs.)</p>
+<p>Mikael will not be able to pass through a corridor without
+    being hit by the factor weapon (but luckily enough, reloading
+    the factor weapon takes enough time that the sentry will only
+    have time to shoot him once as he passes through). It seems
+    inevitable that Mikael will come out of this adventure a
+    smaller man, but since the sentries have different factors in
+    their factor weapons, his final size depends very much on the
+    route he takes to the exit of the dungeons. Naturally, he would
+    like to lose as little size as possible, and has asked you to
+    help him accomplish that.</p>
+<h2>Input</h2>
+<p>Input consists of a series of test cases (at most
+    <span class="tex2jax_process">$20$</span>). Each test case
+    begins with a line consisting of two integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span> separated by a single space, where
+    <span class="tex2jax_process">$2 \le n \le 10\, 000$</span> is
+    the number of intersections and <span class="tex2jax_process">$1 \le m \le 15\, 000$</span> is the number
+    of corridors in Nils’ dungeon. Then follow <span class="tex2jax_process">$m$</span> lines, each containing two
+    integers <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> and a real number <span class="tex2jax_process">$f$</span> (with at most four decimals),
+    indicating that there is a corridor between intersections
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, and that the factor weapon of the
+    sentry in that corridor has factor <span class="tex2jax_process">$0 \le f \le 1$</span>. Intersections are
+    numbered from <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$n-1$</span>. Mikael always
+    starts in intersection <span class="tex2jax_process">$0$</span>, and the exit is located in
+    intersection <span class="tex2jax_process">$n-1$</span>.</p>
+<p>The last case will be followed by a case where <span class="tex2jax_process">$n = m = 0$</span>, which should not be
+    processed.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing a real
+    number (with exactly four decimals) indicating how big a
+    fraction of Mikael will be left when he reaches the exit,
+    assuming he chooses the best possible route through the
+    dungeon. You may assume that it is always possible for Mikael
+    to reach the exit.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+0 1 0.9
+1 2 0.9
+0 2 0.8
+2 1
+1 0 1
+0 0
+</pre>
+</td>
+<td>
+<pre>
+0.8100
+1.0000
+</pre>
+</td>
+</tr>
+</table>
+</div>

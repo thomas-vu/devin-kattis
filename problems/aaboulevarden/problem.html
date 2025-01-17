@@ -1,0 +1,137 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/aaboulevarden/file/statement/en/img-0001.jpg" class="illustration" src="/problems/aaboulevarden/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Bars along Aarhus River. Source: Kenny Arne Lang Antonsen,
+        CC BY-SA 4.0
+      </div>
+</div>
+<p>Your study group is planning a pub crawl in the bars along
+    one side of the Aarhus River.</p>
+<p>All the bars are nice and inviting, but each serves only one
+    kind of beer. The members of your group have different,
+    varying, and even conflicting preferences in beverages, so you
+    switch bars often.</p>
+<p>You have a map of the <span class="tex2jax_process">$N$</span> bars located along the river, and
+    want to construct a navigation system for the night out. The
+    portion of the river along which bars are located crosses
+    through the inner part of town in a relatively straight
+    fashion, and every bar takes up about the same amount of space,
+    so you model the positions of the bars as evenly spaced points
+    on a straight line.</p>
+<p>When the system is finished, it should take as input your
+    group’s current location (i.e., the current bar) and the name
+    of a beer, and return directions to a nearest bar serving that
+    beer. This way, you will have a foolproof way to continue the
+    crawl even when your natural navigation skills inevitably fall
+    short.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$1 \leq N \leq 150\, 000$</span>, the number
+    of bars along the river. Then follow <span class="tex2jax_process">$N$</span> lines, one for each bar. The
+    <span class="tex2jax_process">$i$</span>th line contains the
+    name of the beer served at the <span class="tex2jax_process">$i$</span>th bar. Each beer name consists of
+    upper- or lowercase letters from the English alphabet, digits,
+    and/or hyphens.</p>
+<p>The next line contains an integer <span class="tex2jax_process">$1 \leq Q \leq 50\, 000$</span>, the number
+    of navigation queries. Then follow <span class="tex2jax_process">$Q$</span> navigation queries, each on a
+    separate line. Each query consists on an
+    integer <span class="tex2jax_process">$X$</span> with
+    <span class="tex2jax_process">$0 \leq X &lt; N$</span>,
+    specifying a bar, and a beer name <span class="tex2jax_process">$S$</span>. There is at least one bar serving
+    <span class="tex2jax_process">$S$</span>. (This may be include
+    bar <span class="tex2jax_process">$X$</span>.)</p>
+<p>You can assume that the input file is no larger than 10
+    MiB.</p>
+<h2>Output</h2>
+<p>For each navigation query <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$S$</span>, output a line with an integer
+    <span class="tex2jax_process">$D$</span> representing the
+    navigation result.</p>
+<p>There should be a bar at location <span class="tex2jax_process">$X + D$</span> serving beer <span class="tex2jax_process">$S$</span>. Additionally, among such valid
+    <span class="tex2jax_process">$D$</span>, you should output a
+    result that requires you to pass the fewest number of bars
+    (i.e., the absolute value <span class="tex2jax_process">$|D|$</span> should be minimised). If there
+    are still multiple options any one will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+Limfjordsporter
+Hof
+X-mas
+Hof
+1664
+3
+1 Limfjordsporter
+0 Hof
+1 1664
+</pre>
+</td>
+<td>
+<pre>-1
+1
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Top
+Gulddame
+Limfjordsporter
+3
+1 Gulddame
+0 Gulddame
+2 Gulddame
+</pre>
+</td>
+<td>
+<pre>0
+1
+-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+Juleren
+Giraf
+Elephant
+NightingAle
+Juleren
+Elephant
+Giraf
+4
+0 Elephant
+3 Juleren
+4 Giraf
+6 NightingAle
+</pre>
+</td>
+<td>
+<pre>2
+1
+2
+-3
+</pre>
+</td>
+</tr>
+</table>
+</div>

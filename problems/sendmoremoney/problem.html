@@ -1,0 +1,141 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/sendmoremoney/file/statement/en/img-0001.jpg" class="illustration" src="/problems/sendmoremoney/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-photo/women-hands-hold-money-bags-dropping-676071160?src=IO48G5KJlbV49FiilqF3ZA-1-5">
+        Watchara Ritjan (Shutterstock)</a>, Used under license
+      </div>
+</div>
+<p>You may have seen puzzles, sometimes called
+    <em>cryptarithmetic puzzles</em>, or simply
+    <em>cryptarithms</em>, that look like this:</p>
+<center>
+<tt class="ttfamily">SEND+MORE=MONEY</tt>
+</center>
+<p>The goal of this kind of puzzle is to replace each letter
+    with a (<span class="mbox" style="width:">base-<span class="tex2jax_process">$10$</span></span>) digit so that the
+    resulting arithmetic equality holds. Here are the rules:</p>
+<ul class="itemize">
+<li>
+<p>A given letter must always be replaced by the same
+        digit.</p>
+</li>
+<li>
+<p>Different letters must be replaced by different
+        digits.</p>
+</li>
+<li>
+<p>The leading (leftmost) letter of any word cannot be
+        replaced by <tt class="ttfamily">0</tt>.</p>
+</li>
+</ul>
+<p>For example, if we try to solve the above puzzle, we find
+    that the following replacements work:</p>
+<center>
+<span class="mbox" style="width:"><tt class="ttfamily">S</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">9</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">E</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">5</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">N</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">6</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">D</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">7</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">M</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">1</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">O</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">0</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">R</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">8</tt></span>,
+        <span class="mbox" style="width:"><tt class="ttfamily">Y</tt><span class="tex2jax_process">$\rightarrow
+      $</span><tt class="ttfamily">2</tt></span>
+</center>
+<p>This gives us a correct equality:</p>
+<center>
+<tt class="ttfamily">9567+1085=10652</tt>
+</center>
+<p>Your task is to write a program to solve such puzzles. Note
+    that some cryptarithmetic puzzles are impossible to solve. An
+    example is:</p>
+<center>
+<tt class="ttfamily">A+A=A</tt>
+</center>
+<p>Here the only way to make the equality hold is to replace
+    <tt class="ttfamily">A</tt> with <tt class="ttfamily">0</tt>, but this violates the rule that the first
+    (and in this case only) letter of any word cannot be replaced
+    by <tt class="ttfamily">0</tt>.</p>
+<p>Also note that some puzzles may have multiple solutions. In
+    this situation, find the solution in which the alphabetically
+    lowest letter is replaced by lowest possible digit, then the
+    second lowest letter is replaced by the lowest possible unused
+    digit, then the third lowest letter is replaced by the lowest
+    possible unused digit, etc. An example is:</p>
+<center>
+<tt class="ttfamily">C+B=A</tt>
+</center>
+<p>Clearly this has more than one solution, but the minimal
+    solution, as described above, is:</p>
+<center>
+<tt class="ttfamily">2+1=3</tt>
+</center>
+<h2>Input</h2>
+<p>The input consists of a line containing a single puzzle. A
+    puzzle is a string of characters of the form <span class="mbox" style="width:"><span class="tex2jax_process">$w_1$</span><tt class="ttfamily">+</tt><span class="tex2jax_process">$w_2$</span><tt class="ttfamily">=</tt><span class="tex2jax_process">$w_3$</span></span>, where <span class="tex2jax_process">$w1$</span>, <span class="tex2jax_process">$w_2$</span>, <span class="tex2jax_process">$w_3$</span> are words, and ‘<tt class="ttfamily">+</tt>’ and ‘<tt class="ttfamily">=</tt>’ are the
+    usual “plus” and ”equals” characters (ASCII values <span class="tex2jax_process">$43$</span> and <span class="tex2jax_process">$61$</span>, respectively). A word is a
+    nonempty string of uppercase letters (<tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>). The maximum
+    length of any puzzle is <span class="tex2jax_process">$100$</span>.</p>
+<h2>Output</h2>
+<p>For each puzzle, output a single line containing the minimal
+    solution if the puzzle is solvable, or “<tt class="ttfamily">impossible</tt>” if the puzzle is not solvable. Note
+    that a solution must contain exactly the same number of
+    characters as the corresponding puzzle, with ‘<tt class="ttfamily">+</tt>’ and ‘<tt class="ttfamily">=</tt>’ characters
+    in the same positions as in the puzzle, and all letters
+    replaced by digits (<tt class="ttfamily">0</tt>–<tt class="ttfamily">9</tt>).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>SEND+MORE=MONEY
+</pre>
+</td>
+<td>
+<pre>9567+1085=10652
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>A+A=A
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>C+B=A
+</pre>
+</td>
+<td>
+<pre>2+1=3
+</pre>
+</td>
+</tr>
+</table>
+</div>

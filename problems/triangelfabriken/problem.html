@@ -1,0 +1,138 @@
+<div class="problembody">
+<p>Tristian works at a triangle factory. His job is to classify
+    different types of triangles produced in the factory. Tristian
+    now asks you to write a program that can replace him.</p>
+<p>Tristian will give you three positive integers, <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span>. These are the three angles of a
+    triangle, given in degrees.</p>
+<p>Your program should do the following:</p>
+<ul class="itemize">
+<li>
+<p>If the triangle is obtuse, the program should print
+        “Trubbig Triangel”.</p>
+</li>
+<li>
+<p>If the triangle is acute, the program should print
+        “Spetsig Triangel”.</p>
+</li>
+<li>
+<p>If the triangle is right-angled, the program should
+        print “Ratvinklig Triangel”.</p>
+</li>
+</ul>
+<p>To remind you of the definitions of obtuse, acute, and
+    right-angled triangles:</p>
+<ul class="itemize">
+<li>
+<p>A triangle is obtuse if any of its angles are greater
+        than <span class="tex2jax_process">$90$</span> degrees.</p>
+</li>
+<li>
+<p>A triangle is acute if all its angles are less than
+        <span class="tex2jax_process">$90$</span> degrees.</p>
+</li>
+<li>
+<p>A triangle is right-angled if one of its angles is
+        exactly <span class="tex2jax_process">$90$</span>
+        degrees.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$a$</span> <span class="tex2jax_process">$(1
+    \leq a &lt; 180)$</span>, the first angle of the triangle. The
+    second line of input contains the integer <span class="tex2jax_process">$b$</span> <span class="tex2jax_process">$(1
+    \leq b &lt; 180)$</span>, the second angle of the triangle. The
+    third line of input contains the integer <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(1
+    \leq c &lt; 180)$</span>, the third angle of the triangle.</p>
+<p>It is guaranteed that <span class="tex2jax_process">$(1 \leq
+    a, b, c &lt; 180)$</span> holds. It is also guaranteed that the
+    input forms a valid triangle, meaning <span class="tex2jax_process">$a + b + c = 180$</span>.</p>
+<h2>Output</h2>
+<p>The program should then print whether the triangle formed by
+    the angles <span class="tex2jax_process">$a$</span>,
+    <span class="tex2jax_process">$b$</span>, and <span class="tex2jax_process">$c$</span> is acute, obtuse, or right-angled.
+    The answer must be one of the following: “Trubbig Triangel”,
+    “Spetsig Triangel”, or “Ratvinklig Triangel”.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$100$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>100
+40
+40
+</pre>
+</td>
+<td>
+<pre>Trubbig Triangel
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>60
+40
+80
+</pre>
+</td>
+<td>
+<pre>Spetsig Triangel
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>30
+60
+90
+</pre>
+</td>
+<td>
+<pre>Ratvinklig Triangel
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>A Split Decisions puzzle is a type of crossword in which
+    each across and down answer is a pair of words instead of a
+    single word (as in standard crossword puzzles). Each pair of
+    words are identical except in exactly two adjacent positions
+    for which letters have been provided in the puzzle – these sets
+    of letters serve as the clue for the pair of words. In the left
+    half of Figure 1, the letter pairs “IN” and “CR” are given, and
+    the words “SINEW” and “SCREW” can be used to solve that clue.
+    The right half of the figure shows a typical Split Decisions
+    puzzle.</p>
+<div class="figure" id="fig:split-dec">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{split-dec}" src="/problems/splitdecisions/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: A small Split Decisions puzzle, with an
+          example solved clue.
+        </div>
+</center>
+</div>
+<p>While we could ask you to solve a given Split Decisions
+    puzzle, we’ve decided on a slightly different task for you.
+    Given a list of words, we want you to find pairs of words which
+    could be used in a Split Decisions puzzle. Specifically, each
+    pair must differ in <b class="bfseries">exactly</b> two
+    consecutive letters AND be the only possible pair of words that
+    work for those sets of letters (i.e., no other pair of words in
+    the list of words solve that clue).</p>
+<p>For example, if your list of words contained the words CELL,
+    GULL, GUSH, HALL, and HASH, you could make two clues:
+    <tt>[CE/GU]_ _</tt> (for the answer pair CELL/GULL) and
+    <tt>[CE/HA]_ _</tt> (for the answer pair CELL/HALL). Note that
+    the clue <tt>[GU/HA]_ _</tt> has two possible solutions
+    (GULL/HALL and GUSH/HASH) so it should not be considered.</p>
+<h2>Input</h2>
+<p>The first line contains a positive integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 1\, 500$</span>) indicating the number of words in
+    the word list. This is followed by <span class="tex2jax_process">$n$</span> lines each containing one word.
+    Each word consists of uppercase letters and no word has less
+    than <span class="tex2jax_process">$3$</span> or more than
+    <span class="tex2jax_process">$20$</span> letters.</p>
+<h2>Output</h2>
+<p>The number of unique pairs of words in the input for which a
+    valid Split Decisions clue exists.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+CELL
+GULL
+GUSH
+HALL
+HASH
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

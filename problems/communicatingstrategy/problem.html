@@ -1,0 +1,259 @@
+<div class="problembody">
+<p><b class="bfseries">This is an interactive problem.</b></p>
+<p>During a Pokenom battle, a Pokenom trainer must come up with
+    a strategy and communicate the strategy to his Pokenom in a
+    very efficient way.</p>
+<p>To become the best Pokenom trainer, Bash is practicing how
+    to communicate the strategy to his Pokenom, Chikapu.</p>
+<p>More formally, Bash’s strategy is a sequence of integers of
+    length <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1 \le n \le 100)$</span>. Bash needs to
+    communicate this strategy to Chikapu. Let’s denote this
+    sequence as <span class="tex2jax_process">$A_{1}, A_{2}, \ldots
+    , A_{n}$</span> <span class="tex2jax_process">$(1 \le A_{i} \le
+    10^9)$</span>.</p>
+<p>First, Bash gives Chikapu the integer <span class="tex2jax_process">$n$</span>. Then Chikapu can ask Bash
+    multiple questions about the sequence. Bash answers each
+    question immediately, before Chikapu asks another question. For
+    each question Chikapu gives Bash <span class="tex2jax_process">$2$</span> indices <span class="tex2jax_process">$l$</span> and <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$(1
+    \leq l \leq r \leq n)$</span>. Bash then selects an arbitrary
+    integer <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$(1 \leq k \leq r - l + 1)$</span>, and
+    considers all subsets of size <span class="tex2jax_process">$k$</span> of the sequence <span class="tex2jax_process">$a_{l}, a_{l+1}, \ldots , a_{r}$</span>
+    (there are <span class="tex2jax_process">${r-l+1}\choose
+    {k}$</span> such subsets). For each subset, Bash calculates the
+    product of all elements. Finally, Bash gives Chikapu the number
+    <span class="tex2jax_process">$S\bmod (10^9 + 7)$</span>, where
+    <span class="tex2jax_process">$S$</span> is the sum of all
+    products; as well as the number <span class="tex2jax_process">$k$</span> he has chosen.</p>
+<p>Note that Bash can select any values of <span class="tex2jax_process">$k$</span> that he wants, Chikapu only knows
+    which numbers he chooses, Chikapu does not know how and why he
+    chooses them.</p>
+<p>Because the communication has to be as efficient as
+    possible, Bash considers the weight of a <span class="tex2jax_process">$(l, r)$</span> query to be <span class="tex2jax_process">$\frac{1}{(r-l+1)^2}$</span>. Chikapu must
+    find the sequence after asking queries with total weight of at
+    most <span class="tex2jax_process">$\frac{5}{3}$</span>.</p>
+<p>Chikapu can run fast and shoot thunderbolts, but Chikapu is
+    not good with numbers. Please help Chikapu!</p>
+<h2>Interaction</h2>
+<p>First, your program reads the integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1
+    \leq n \leq 100)$</span> from the standard input. Then the
+    following process repeats:</p>
+<ul class="itemize">
+<li>
+<p>Your program writes to the standard output in either
+        format:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1$</span>
+<span class="tex2jax_process">$l$</span> <span class="tex2jax_process">$r$</span>, meaning that you want to
+            ask a query with two indices <span class="tex2jax_process">$l$</span> and <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$(1 \leq l \leq r \leq
+            n)$</span>.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2$</span>
+<span class="tex2jax_process">$A_{1} A_{2} \ldots
+            A_{n}$</span>, meaning that you want to guess the
+            sequence <span class="tex2jax_process">$(1 \le A_ i \le
+            10^9)$</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If your program asks a query, two integers <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$S$</span> will be available in the
+        standard input. Your program then reads them.</p>
+</li>
+<li>
+<p>If your program guesses the sequence, your answer will
+        be checked. <b class="bfseries">Your program should
+        terminate immediately after this.</b></p>
+</li>
+</ul>
+<p>The input guarantees that <span class="tex2jax_process">$S$</span> is not a multiple of <span class="tex2jax_process">$10^9 + 7$</span> for all possible
+    <span class="tex2jax_process">$k, l, r$</span>.</p>
+<h2>Communication example</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Your output</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>(standard output)</p>
+</td>
+</tr>
+</table>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Kattis’ answer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>(standard input)</p>
+</td>
+</tr>
+</table>
+</td>
+<td style="text-align:left">
+<p>Interpretation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>The array has <span class="tex2jax_process">$3$</span>
+          elements</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span> <span class="tex2jax_process">$2$</span> <span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Your program asks for information about
+                sequence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>[<span class="tex2jax_process">$A_2$</span>,
+                <span class="tex2jax_process">$A_3$</span>].</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span> <span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Kattis gives you information of subsets of size
+                <span class="tex2jax_process">$2$</span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>There is one subset of size <span class="tex2jax_process">$2$</span>: {<span class="tex2jax_process">$A_2$</span>, <span class="tex2jax_process">$A_3$</span>}.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>The product of its elements and <span class="tex2jax_process">$10$</span> are congruent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>modulo <span class="tex2jax_process">$10^{9}+7$</span>.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span> <span class="tex2jax_process">$1$</span> <span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Your program asks for information about
+                sequence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>[<span class="tex2jax_process">$A_1$</span>,
+                <span class="tex2jax_process">$A_2$</span>].</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span> <span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>Kattis gives you information of subsets of size
+                <span class="tex2jax_process">$2$</span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>There is one subset of size <span class="tex2jax_process">$2$</span>: {<span class="tex2jax_process">$A_1$</span>, <span class="tex2jax_process">$A_2$</span>}.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>The product of its elements and <span class="tex2jax_process">$15$</span> are congruent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>modulo <span class="tex2jax_process">$10^{9}+7$</span>.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span> <span class="tex2jax_process">$3$</span> <span class="tex2jax_process">$5$</span> <span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<table cellspacing="0" class="tabular">
+<tr>
+<td>
+<p>You guess the sequence is [<span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$2$</span>].</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h2>Note</h2>
+<p>When you write the solution for the interactive problem it
+    is important to keep in mind that if you output some data it is
+    possible that this data is first placed to some internal buffer
+    and may be not directly transferred to the interactor. In order
+    to avoid such situation <b class="bfseries">you have to use
+    special ‘flush’ operation each time you output some data</b>.
+    There are these ‘flush’ operations in standard libraries of
+    almost all languages. For example, in C++ you may use
+    ‘fflush(stdout)’ or ‘cout &lt;&lt; flush’ (it depends on what
+    do you use for output data — ‘scanf/printf’ or ‘cout’). In Java
+    you can use method ‘flush’ for output stream, for example,
+    ‘System.out.flush()’. In Python you can use
+    ‘stdout.flush()’.</p>
+</div>

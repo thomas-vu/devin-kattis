@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/multiplyingdigits/file/statement/en/img-0001.jpg" class="illustration" src="/problems/multiplyingdigits/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by Mees de Vries
+      </div>
+</div>
+<p>For every positive integer we may obtain a non-negative
+    integer by multiplying its digits. This defines a function
+    <span class="tex2jax_process">$f$</span>,
+    e.g. <span class="tex2jax_process">$f(38) =
+    24$</span>.</p>
+<p>This function gets more interesting if we allow for other
+    bases. In base <span class="tex2jax_process">$3$</span>, the
+    number <span class="tex2jax_process">$80$</span> is written as
+    <span class="tex2jax_process">$2222$</span>, so: <span class="tex2jax_process">$f_3(80) = 16$</span>.</p>
+<p>We want you to solve the reverse problem: given a base
+    <span class="tex2jax_process">$B$</span> and a number
+    <span class="tex2jax_process">$N$</span>, what is the smallest
+    positive integer <span class="tex2jax_process">$X$</span> such
+    that <span class="tex2jax_process">$f_ B(X) = N$</span>?</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing two integers
+    <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$N$</span>, satisfying <span class="tex2jax_process">$2 &lt; B \leq 10\, 000$</span> and
+    <span class="tex2jax_process">$0 &lt; N &lt;
+    2^{63}$</span>.</p>
+<h2>Output</h2>
+<p>Output the smallest positive integer solution <span class="tex2jax_process">$X$</span> of the equation <span class="tex2jax_process">$f_ B(X) = N$</span>. If no such <span class="tex2jax_process">$X$</span> exists, output the word
+    “<tt class="ttfamily">impossible</tt>”. The input is carefully
+    chosen such that <span class="tex2jax_process">$X &lt;
+    2^{63}$</span> holds (if <span class="tex2jax_process">$X$</span> exists).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 24
+</pre>
+</td>
+<td>
+<pre>
+38
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 11
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 216
+</pre>
+</td>
+<td>
+<pre>
+546
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+10000 5810859769934419200
+</pre>
+</td>
+<td>
+<pre>
+5989840988999909996
+</pre>
+</td>
+</tr>
+</table>
+</div>

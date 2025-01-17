@@ -1,0 +1,170 @@
+<div class="problembody">
+<p>The four ninja turtles: Leonardo, Donatello, Michelangelo,
+    and Raphael are seeking a new home in Manhattan, New York City.
+    The turtles don’t like sudden dead-ends in their home.
+    Fortunately, the government recently installed a new sewage
+    system where pipes can be rotated! The turtles needs your help
+    finding a suitable home, so they’re willing to provide you a
+    grid of the current layout of the sewage system.<br/></p>
+<p>The grid consists of <span class="tex2jax_process">$N$</span> rows and <span class="tex2jax_process">$M$</span> columns. The cell <span class="tex2jax_process">$G_{i,j}$</span> will consist of one of four
+    pipes, encoded as a letter between “<tt class="ttfamily">A</tt>" and “<tt class="ttfamily">D</tt>". These
+    pipes can be rotated by any multiple of <span class="tex2jax_process">$90$</span> degrees:<br/></p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><img alt="\includegraphics[width=0.5\textwidth ]{pipe_rotation_1.png}" src="/problems/piperotation/file/statement/en/img-0001.png" style="width:50.00%"/></p>
+</td>
+<td style="text-align:left">
+<ul class="itemize">
+<li>
+<p>(<tt class="ttfamily">A</tt>) Nothing</p>
+</li>
+<li>
+<p>(<tt class="ttfamily">B</tt>) Straight pipe (pipes
+              leaving through two opposite edges)</p>
+</li>
+<li>
+<p>(<tt class="ttfamily">C</tt>) Elbow-shaped pipe
+              (pipes leaving through two adjacent edges)</p>
+</li>
+<li>
+<p>(<tt class="ttfamily">D</tt>) Four-way pipe (pipes
+              leaving through all four edges)</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>Determine whether it’s possible to rotate the cells such
+    that the pipes all line up with one another. In particular, for
+    each edge shared by a pair of adjacent cells, there must either
+    be a pipe on both sides of that edge, or on neither side. And
+    for each of the <span class="tex2jax_process">$2 \cdot (N +
+    M)$</span> outer edges of the grid, there must be no pipe
+    leaving through that edge. Below are examples:</p>
+<div class="figure">
+<center>
+<div class="minipage" style="width:180.0pt">
+<center>
+<img alt="\includegraphics[width=0.28\textwidth ]{pipe_rotation_2}" src="/problems/piperotation/file/statement/en/img-0002.png" style="width:28.00%"/> Fig 1. Invalid example, two
+            sudden dead-ends.
+          </center>
+</div>
+<div class="minipage" style="width:180.0pt">
+<center>
+<img alt="\includegraphics[width=0.28\textwidth ]{pipe_rotation_3}" src="/problems/piperotation/file/statement/en/img-0003.png" style="width:28.00%"/> Fig 2. Valid example, no sudden
+            dead-ends.
+          </center>
+</div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input consists of two space-separated
+    integers, <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \leq N, M \leq 100$</span>).<br/>
+<span class="tex2jax_process">$N$</span> lines follow, the
+    <span class="tex2jax_process">$i$</span>th of which consists of
+    <span class="tex2jax_process">$M$</span> characters
+    <span class="tex2jax_process">$G_{i,1}, G_{i,2}, G_{i,j}, \dots
+    , G_{i,M}$</span> and <span class="tex2jax_process">$G_{i,j}
+    \in \{ A,B,C,D\} $</span> (for <span class="tex2jax_process">$i
+    = 1..N$</span>).</p>
+<h2>Output</h2>
+<p>Print, on a single line, a single string, either “<tt class="ttfamily">Possible</tt>" if it’s possible to produce a valid
+    configuration of pipes, or “<tt class="ttfamily">Impossible</tt>" otherwise.<br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+CC
+CC
+</pre>
+</td>
+<td>
+<pre>Possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+CC
+CB
+</pre>
+</td>
+<td>
+<pre>Impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+CCC
+CCC
+CCC
+</pre>
+</td>
+<td>
+<pre>Impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+CBCA
+BCDC
+CCCC
+</pre>
+</td>
+<td>
+<pre>Possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+CC
+CC
+AA
+CC
+CC
+</pre>
+</td>
+<td>
+<pre>Possible
+</pre>
+</td>
+</tr>
+</table>
+</div>

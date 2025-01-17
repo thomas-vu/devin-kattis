@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>In a nearby village, the postman, milkman and garbage man
+    face the same problem morning after morning: house 18. House 18
+    is guarded by two dogs that often cause problems. What they
+    don’t know is that the dogs’ behaviour is completely
+    predictable.</p>
+<p>When the day starts, one dog is aggressive for <span class="tex2jax_process">$A$</span> minutes and is then calm for
+    <span class="tex2jax_process">$B$</span> minutes. Similarly,
+    the other dog is aggressive for <span class="tex2jax_process">$C$</span> minutes, then calm for
+    <span class="tex2jax_process">$D$</span> minutes. Both dogs
+    repeat their behaviours indefinitely, starting a new aggressive
+    period after the calm period, then another calm period etc.</p>
+<p>Given the arrival times of the postman, milkman and garbage
+    man, determine how many dogs (none, one or both) attack each of
+    them.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integers <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$D$</span>.</p>
+<p>The second line contains the integer <span class="tex2jax_process">$P$</span>, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$G$</span>, the minute in the day during
+    which the postman, milkman and garbage man arrive at house 18.
+    For example, if <span class="tex2jax_process">$P$</span> is 3,
+    it should be interpreted as "the postman arrived sometime
+    during the third minute in the day".</p>
+<p>All numbers in the input will be between 1 and 999.</p>
+<h2>Output</h2>
+<p>Output should consist of three lines; each containing
+    ’both’, ’one’ or ’none’, depending on how many dogs attack each
+    of our heroes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2 3 3
+1 3 4
+</pre>
+</td>
+<td>
+<pre>
+both
+one
+none
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3 4 5
+4 9 5
+</pre>
+</td>
+<td>
+<pre>
+one
+none
+none
+</pre>
+</td>
+</tr>
+</table>
+</div>

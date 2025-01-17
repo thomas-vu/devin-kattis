@@ -1,0 +1,102 @@
+<div class="problembody">
+<p>Legends often tell of great treasures. But you rarely get
+    the chance to actually stumble upon those treasures. Most of
+    them are lost in the sea, or hidden below mountains. But as you
+    learned from one of your biggest idols, treasures do belong
+    into a museum. And now you have the chance to make that
+    happen.<br/></p>
+<p>On an expedition you found a large cave network. A native
+    shaman has spoken about incredible values his ancestors have
+    hidden in the caves. He even gave you an ancient map, depicting
+    the cave network and the location of the treasures within.
+    Sadly, the cave network is completely flooded. Since the trip
+    out here takes forever, you decided to do a short dive and
+    scout out the cave network. But on your arrival back at the
+    entrance to the cave network you get the news<span class="tex2jax_process">$\ldots $</span> a volcano just erupted
+    nearby. It is next to guaranteed that the lava will cover the
+    entries to the cave network and the treasures will be lost
+    forever.<br/></p>
+<p>That puts you on the spot. You only have a short time left,
+    and only one lousy tank of air. So it is all on you. You only
+    have time for a single dive. But how could you possible decide
+    which route to take? The cave network is huge, and you should
+    definitely try and rescue as much of the treasures as possible.
+    You think back to your times as a computer scientist at the
+    university<span class="tex2jax_process">$\ldots $</span> And
+    then it hits you. You still have your laptop with you. You
+    could write a program to help you figure out the best you can
+    do in rescuing the treasures.</p>
+<p>You may assume that neither locating or picking up a
+    treasure within a cave nor the traversal of a cave consumes any
+    air.</p>
+<h2>Input</h2>
+<p>Each test set consists of multiple test cases. The file
+    starts with a single number <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0
+    &lt; t \le 2000$</span>) on a single line, denoting the number
+    of testcases in the file. Each test case starts with two
+    integers <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$m$</span> on a single line,
+    where <span class="tex2jax_process">$n$</span> the number of
+    caves and <span class="tex2jax_process">$m$</span> the number
+    of the connecting tunnels in the network (<span class="tex2jax_process">$1 \leq n \leq 10\, 000$</span>; <span class="tex2jax_process">$0 \leq m \leq 50\, 000$</span>). This line
+    is followed by <span class="tex2jax_process">$m$</span> lines,
+    giving a description of the tunnels of the cave as three
+    integers <span class="tex2jax_process">$a$</span> <span class="tex2jax_process">$b$</span> and <span class="tex2jax_process">$l$</span> with <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span> denoting caves and <span class="tex2jax_process">$l$</span> giving the amount of air necessary
+    for diving through the tunnel (<span class="tex2jax_process">$0
+    \le a, b &lt; n; 0 \le l \le 500$</span>). After the tunnels
+    follows an integer <span class="tex2jax_process">$i$</span> on
+    a single line, giving the number of idols in the cave system
+    (<span class="tex2jax_process">$0 \leq i \leq 8$</span>). This
+    line is followed by a single line containing <span class="tex2jax_process">$i$</span> integers <span class="tex2jax_process">$p_1, \ldots , p_ i$</span> giving the caves
+    withing the network conaining an idol (<span class="tex2jax_process">$0 \le p_1,\ldots ,p_ i &lt; n$</span>). The
+    input is concluded by a single number, giving the liters of air
+    <span class="tex2jax_process">$a$</span> you have available
+    (<span class="tex2jax_process">$0 \le a \le 1\, 000\,
+    000$</span>). You will always start (and end) at the node with
+    the label <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>For each test case print a number <span class="tex2jax_process">$X$</span> on a single line, where X is
+    replaced by the maximal number of idols the diver can
+    recover.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+5 3
+0 1 10
+0 2 20
+0 3 30
+4
+1 2 3 4
+30
+5 3
+0 1 10
+0 2 20
+0 3 30
+4
+1 2 3 4
+60
+5 3
+0 1 10
+0 2 20
+0 3 30
+4
+1 2 3 4
+10000
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

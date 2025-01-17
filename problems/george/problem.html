@@ -1,0 +1,123 @@
+<div class="problembody">
+<p>Last week Mister George visited Croatia. Since Mister George
+    is a very important person, while he was in a street, the
+    police <b class="bfseries">disallowed entry</b> to that street,
+    but vehicles that entered the street before Mister George could
+    continue driving.</p>
+<p>While Mister George was visiting, Luka drove his truck
+    around town. But because of some of the streets being closed
+    off, he couldn’t make his delivery in time and almost lost his
+    job. Although it is late now, he is wondering how he could have
+    planned his delivery better, i.e., what would have been the
+    least time needed to make his delivery while Mister George was
+    visiting. He knows the route mister George took.</p>
+<p>The city is modeled with intersections and two-way streets
+    connecting them. For each street, Luka knows how much time he
+    needs to traverse it (mister George needs the same amount of
+    time).</p>
+<p>For example, if Mister George starts traversing a street
+    during minute 10 and needs 5 minutes to exit it, this street
+    will be blocked during minutes 10, 11, 12, 13 and 14. Luka can
+    enter the street during minutes 9 and earlier, or 15 and later.
+    If Luka arrives during minutes 10-14, he has can wait at the
+    intersection until minute 15 and then enter the street.</p>
+<p>Write a program that calculates the least amount of time
+    Luka needs to make his delivery, if he starts driving
+    <span class="tex2jax_process">$K$</span> minutes after the
+    arrival of Mister George.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$2
+    \le N \le 1\, 000$</span>, <span class="tex2jax_process">$2 \le
+    M \le 10\, 000$</span>), the number of intersections and the
+    number of streets. The intersections are numbered <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>.</p>
+<p>The second line contains four integers <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$K$</span> and <span class="tex2jax_process">$G$</span> (<span class="tex2jax_process">$1
+    \le A, B \le N$</span>, <span class="tex2jax_process">$0 \le K
+    \le 2000$</span>, <span class="tex2jax_process">$0 \le G \le
+    1000$</span>). These are, in order:</p>
+<ul class="itemize">
+<li>
+<p>The intersection where Luka starts;</p>
+</li>
+<li>
+<p>The intersection Luka must get to;</p>
+</li>
+<li>
+<p>The difference in starting times between mister George
+        and Luka (Luka starts at intersection <span class="tex2jax_process">$A$</span> exactly <span class="tex2jax_process">$K$</span> minutes after mister George
+        starts his route);</p>
+</li>
+<li>
+<p>The number of intersections on Mister George’s
+        route.</p>
+</li>
+</ul>
+<p>The third line contains <span class="tex2jax_process">$G$</span> integers, the labels of
+    intersections mister George will visit. Every pair of adjacent
+    integers denotes a street he will traverse. That street will
+    exist and Mister George will traverse every street at most
+    once.</p>
+<p>Each of the following <span class="tex2jax_process">$M$</span> lines contains three integers
+    <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$L$</span>, meaning that there is a street
+    between intersection <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span>, and it takes
+    <span class="tex2jax_process">$L$</span> minutes to traverse.
+    <span class="tex2jax_process">$L$</span> will be between 1 and
+    1000.</p>
+<h2>Output</h2>
+<p>Output the least amount of time (in minutes) Luka needs to
+    make his delivery.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 5
+1 6 20 4
+5 3 2 4
+1 2 2
+2 3 8
+2 4 3
+3 6 10
+3 5 15
+</pre>
+</td>
+<td>
+<pre>
+21
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 9
+1 5 5 5
+1 2 3 4 5
+1 2 8
+2 7 4
+2 3 10
+6 7 40
+3 6 5
+6 8 3
+4 8 4
+4 5 5
+3 4 23
+</pre>
+</td>
+<td>
+<pre>
+40
+</pre>
+</td>
+</tr>
+</table>
+</div>

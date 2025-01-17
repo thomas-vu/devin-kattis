@@ -1,0 +1,170 @@
+<div class="problembody">
+<p>You are soon going to sell your house, but first, you need
+    to figure out the size of the floor area. It might sound easy,
+    but you have an unused storage room for which you’ve lost the
+    key, and you have no idea how big the storage room is. The only
+    thing in the storage room is a robot vacuum cleaner. If you
+    start the vacuum cleaner and see where it ends up, maybe you
+    can figure out how big the storage room is?</p>
+<p>The storage room consists of an <span class="tex2jax_process">$N \times M$</span> grid, where <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> are unknown positive integers. The
+    rows are numbered from <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$N-1$</span> from top to
+    bottom, and the columns are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$M-1$</span> from left to right. The robot
+    has a list of instructions <span class="tex2jax_process">$s$</span>. The instructions are described by
+    a string consisting of the characters <tt>&lt;</tt>,
+    <tt>&gt;</tt>, <tt>^</tt>, and <tt>v</tt>. When the robot is
+    started, it reads these instructions, and for each one, it
+    moves one step in the corresponding direction. If the robot
+    tries to move outside the grid, then it hits a wall and nothing
+    happens. The robot starts in the upper-left corner, i.e., at
+    row <span class="tex2jax_process">$0$</span> and column
+    <span class="tex2jax_process">$0$</span>.</p>
+<p>You are given the string <span class="tex2jax_process">$s$</span> and the row and column where the
+    robot ended up after following the instructions. Calculate the
+    smallest possible value of <span class="tex2jax_process">$N
+    \cdot M$</span> that is consistent with this information.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq 3 \cdot 10^5$</span>), the length of the string
+    <span class="tex2jax_process">$s$</span>.</p>
+<p>The second line contains the string <span class="tex2jax_process">$s$</span>.</p>
+<p>The third line contains two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    \leq r,c &lt; 3 \cdot 10^5$</span>), where <span class="tex2jax_process">$r$</span> is the row where the robot ended
+    up, and <span class="tex2jax_process">$c$</span> is the column
+    where it ended up.</p>
+<h2>Output</h2>
+<p>Print an integer, the smallest possible value of
+    <span class="tex2jax_process">$N \cdot M$</span>. If there is
+    no choice of <span class="tex2jax_process">$N$</span> and
+    <span class="tex2jax_process">$M$</span> consistent with the
+    information in the test data, then print <span class="tex2jax_process">$-1$</span> instead.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$15$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The robot only moves down and to the right.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K \leq 5000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$35$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample case</h2>
+<center>
+<div class="figure" id="fig:enter-label">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{golvyta.PNG}" src="/problems/golvyta/file/statement/en/img-0001.PNG" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The picture shows the smallest
+            possible grid in sample case 1. The robot travels
+            according to the black curve. The dark square is the
+            robot’s final position.
+          </div>
+</center>
+</div>
+</center>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>14
+&gt;v&lt;v&gt;v&gt;^^^&gt;&gt;v&lt;
+1 2
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+&gt;
+100000 100000
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+&gt;&gt;&lt;&lt;
+0 0
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>The teacher has sent an e-mail to her students with the
+    following task: “Write a program that will determine and output
+    the value of <span class="tex2jax_process">$X$</span> if given
+    the statement:</p><span class="tex2jax_process">\[ X =
+    \mathit{number}_1^{\mathit{pow}_1} +
+    \mathit{number}_2^{\mathit{pow}_2} + \ldots + \mathit{number}_
+    N^{\mathit{pow}_ N} \]</span>
+<p>and it holds that <span class="tex2jax_process">$\mathit{number}_1$</span>, <span class="tex2jax_process">$\mathit{number}_2$</span> to <span class="tex2jax_process">$\mathit{number}_ N$</span> are integers, and
+    <span class="tex2jax_process">$\mathit{pow}_1$</span>,
+    <span class="tex2jax_process">$\mathit{pow_2}$</span> to
+    <span class="tex2jax_process">$\mathit{pow}_ N$</span> are
+    one-digit integers.” Unfortunately, when the teacher downloaded
+    the task to her computer, the text formatting was lost so the
+    task transformed into a sum of <span class="tex2jax_process">$N$</span> integers:</p><span class="tex2jax_process">\[ X = P_1 + P_2 + \ldots + P_ N \]</span>
+<p>For example, without text formatting, the original task in
+    the form of <span class="tex2jax_process">$X = 21^2 +
+    125^3$</span> became a task in the form of <span class="tex2jax_process">$X = 212 + 1253$</span>. Help the teacher by
+    writing a program that will, for given <span class="tex2jax_process">$N$</span> integers from <span class="tex2jax_process">$P_1$</span> to <span class="tex2jax_process">$P_ N$</span> determine and output the value
+    of <span class="tex2jax_process">$X$</span> from the original
+    task.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10$</span>), the number of the addends from the
+    task. Each of the following <span class="tex2jax_process">$N$</span> lines contains the integer
+    <span class="tex2jax_process">$P_ i$</span> (<span class="tex2jax_process">$10 \leq P_ i \leq 9999$</span>, <span class="tex2jax_process">$i = 1, \ldots , N$</span>) from the
+    task.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the value of
+    <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$X \leq 1\, 000\, 000\, 000$</span>) from the
+    original task.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+212
+1253
+</pre>
+</td>
+<td>
+<pre>
+1953566
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+23
+17
+43
+52
+22
+</pre>
+</td>
+<td>
+<pre>
+102
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+213
+102
+45
+</pre>
+</td>
+<td>
+<pre>
+10385
+</pre>
+</td>
+</tr>
+</table>
+</div>

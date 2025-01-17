@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>A clash of galaxies is coming!</p>
+<p>A galaxy ruled by the mysterious MdI is trying to annex our
+    milky way, but the galactical government has plans to turn
+    things round.</p>
+<p>Our intelligence agency has infiltrated the enemy’s
+    headquarter and gained surprising intelligence. The enemy is
+    moving its units around according to a fixed scheme: for each
+    fort a fraction of the units is moved to other forts in each
+    time unit (the time of the flight is negligible).</p>
+<p>Now the government has fixed a time when to attack. Your
+    order is to compute the weak points. But as the enemy’s galaxy
+    is far, far away it takes one time unit to fly there.
+    Furthermore, we are also certain that the MdI will recognize
+    our target and immediately start all ships which can reach our
+    attacking point (via one link, regardless of its direction).
+    The spy informed you that these strengths are only statistical
+    values, i.e. some sort of indicator as float.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the number of test
+    cases (<span class="tex2jax_process">$1\leq T\leq 10$</span>).
+    Each test case starts with one line containing three integers
+    stating the number of enemy forts <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1\leq N \leq 100$</span>), the number of
+    links <span class="tex2jax_process">$l$</span> (<span class="tex2jax_process">$0 \leq l\leq (N-1)^2$</span>) and the time
+    from now when to attack <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0\leq t\leq 5000$</span>). The second line
+    contains <span class="tex2jax_process">$N$</span> doubles
+    <span class="tex2jax_process">$u_ i$</span> (<span class="tex2jax_process">$0\leq u_ i\leq 1000$</span>) specifying the
+    strength of the stationed troops at each fort followed by
+    <span class="tex2jax_process">$l$</span> lines containing the
+    links. Each link is described by two integers <span class="tex2jax_process">$s_ j$</span> (<span class="tex2jax_process">$0\leq s_ j &lt;N$</span>), <span class="tex2jax_process">$t_ j$</span> (<span class="tex2jax_process">$0\leq t_ j &lt; N$</span>) describing the
+    source and the target of the link and one double <span class="tex2jax_process">$p_ j$</span> (<span class="tex2jax_process">$0&lt; p_ j \leq 1$</span>), the fraction of
+    units transferred from <span class="tex2jax_process">$s_
+    j$</span> to <span class="tex2jax_process">$t_ j$</span> in
+    each time unit.</p>
+<h2>Output</h2>
+<p>Print the lowest indicator of the enemy galaxy with an
+    absolute or relative error less than <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<div class="figure" id="a0000000005">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{tikz01}" src="/problems/timing/file/statement/en/img-0001.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The statistical strengths of the first
+          sample before and after the first time step.
+        </div>
+</center>
+</div>
+<div class="figure" id="a0000000006">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{tikz02}" src="/problems/timing/file/statement/en/img-0002.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Strength of the forces to face at each
+          fort. Note that links are used in both directions.
+        </div>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+4 3 1
+100 200 10 305
+0 1 0.25
+1 2 0.1
+2 0 0.75
+4 3 1
+100 200 10 312
+0 1 0.25
+1 2 0.1
+2 0 0.75
+4 4 5
+100 200 300 400
+0 1 0.2
+1 2 0.2
+2 3 0.3
+3 0 0.2
+</pre>
+</td>
+<td>
+<pre>
+305.000000000
+310.000000000
+659.879000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

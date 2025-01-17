@@ -1,0 +1,127 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/ferskastajarmid/file/statement/en/img-0001.png" class="illustration" src="/problems/ferskastajarmid/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image taken from <a href="https://www.deviantart.com/adiyah/art/Learning-English-Slang-With-Aruran-Papa-865652411">
+        deviantart.com</a>
+</div>
+</div>
+<p>Bjarki worries a lot about his social media performance. He
+    cares deeply about being hip and cool in the eyes of the
+    current youth. After much research and extensive measurements,
+    he has determined two main factors deciding how much attention
+    a given meme will get on social media. Controversiality, how
+    controversial the meme is, decides how many seconds the meme
+    will stay in circulation on the users’ procedurally generated
+    custom feeds. Coolness, how cool the meme is, will determine
+    how much attention the meme gets per second. In total, this
+    determines how fresh the meme is, that is to say how much
+    attention it receives in total before being banished to the
+    dark depths of the world wide web.</p>
+<p>He has collected a shortlist of prospective memes he could
+    put on his social media. Can you determine which of them is
+    freshest so he chooses the correct meme?</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$1 \leq n \leq 100$</span>, the
+    number of memes Bjarki put on the shortlist. The next
+    <span class="tex2jax_process">$n$</span> lines contain one meme
+    each. Each line contains the name of the meme, the
+    controversiality and the coolness. The controversiality and
+    coolness are integers from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$100$</span>, both ends being inclusive. The
+    name contains only English upper and lower case characters
+    along with dots, underscores and digits. The names are of
+    length at most <span class="tex2jax_process">$50$</span>. No
+    name will appear more than once.</p>
+<h2>Output</h2>
+<p>Print the name of the freshest meme. If many memes are
+    equally fresh, print the one that comes first by alphabetical
+    order.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>No memes are equally fresh.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+leeroy_jenkins.avi 5 70
+leek_spin.gif 60 40
+chocolate_rain.mp3 30 45
+caramelldansen.mp3 20 50
+slender_man.exe 10 5
+wojak.png 60 20
+chuck_testa.mp4 10 55
+gangnam_style.mp3 20 80
+ayy_lmao.wav 0 10
+fnaf.exe 30 35
+</pre>
+</td>
+<td>
+<pre>leek_spin.gif
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>9
+what_are_those.mp4 10 30
+harambe.png 50 10
+can_you_feel_my_heart.mp3 15 50
+big_chungus.jpg 30 40
+me_and_the_boys.jpeg 20 45
+astronomia.flac 30 40
+amogus.png 15 15
+morbin_time.webp 40 30
+skibidi_toilet.mkv 15 60
+</pre>
+</td>
+<td>
+<pre>astronomia.flac
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,92 @@
+<div class="problembody">
+<div class="illustration" style="width:23.00%">
+<img alt="/problems/mosquito/file/statement/en/img-0001.png" class="illustration" src="/problems/mosquito/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Have you ever wondered why there are so many mosquitoes
+    in wet environments? One of the reasons is that adult female
+    mosquitos can lay as many as hundreds of eggs. Even if most of
+    them do not (fortunately!) survive, it is said that
+    a single pair of mosquitoes can generate a population
+    of thousands in just a couple of weeks. Let us have
+    a closer look at these numbers.
+
+    <p>The mosquito life cycle includes four stages: egg, larva,
+    pupa, and adult. For simplicity, we will make several
+    assumptions that are not quite true in the nature: The egg
+    stage lasts less than one day, and all the other stages are one
+    week long. Each mosquito lives as a larva for the first
+    week, the second week “hibernates” in the form of a pupa,
+    and finally, the third week lives as an adult mosquito. At
+    the end of its three-week life, each mosquito lays eggs and
+    dies.</p>
+<p>To simplify things even further, we will assume that the
+    transformation from one life stage into another always happens
+    on Sunday. Each Sunday, the following things happen:</p>
+<ul class="itemize">
+<li>
+<p>An adult mosquito lays <span class="tex2jax_process">$E$</span> eggs and dies. Within
+        a day, one larva hatches from each egg.</p>
+</li>
+<li>
+<p>Some of the larvae hatched from egg the last Sunday were
+        not strong enough and died or got eaten. Only every
+        <span class="tex2jax_process">$R$</span>-th larva will
+        transform into a pupa on Sunday.</p>
+</li>
+<li>
+<p>An adult mosquito emerges from every <span class="tex2jax_process">$S$</span>-th pupa, all other pupae
+        dry.</p>
+</li>
+</ul>
+<p>For example, if there are 5 pupae and every 3-rd of them
+    survives, there will be 1 mosquito left. Out of 6 pupae, two
+    adult mosquitoes emerge.</p>
+<p>In the first week, there are <span class="tex2jax_process">$M$</span> mosquitoes, <span class="tex2jax_process">$P$</span> pupae and <span class="tex2jax_process">$L$</span> larvae. Calculate how many
+    mosquitoes will there be after <span class="tex2jax_process">$N$</span> Sunday transformations. Of course,
+    we are counting only living <em>adult</em> mosquitos, not the
+    dry dead bodies.</p>
+<h2>Input</h2>
+<p>The input consists of several instances, each instance per
+    one line. Each line contains seven integers <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$P$</span>, <span class="tex2jax_process">$L$</span>, <span class="tex2jax_process">$E$</span>, <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$S$</span>, <span class="tex2jax_process">$N$</span> separated by space. <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$P$</span> and <span class="tex2jax_process">$L$</span> are the numbers of mosquitoes,
+    pupae, and larvae, respectively, in the first week. You may
+    assume that <span class="tex2jax_process">$0 \le M, P, L \le
+    100\, 000$</span>, <span class="tex2jax_process">$0\le E \le
+    100$</span>, <span class="tex2jax_process">$1 \le R, S \le
+    10$</span>, and <span class="tex2jax_process">$1\le N\le 1\,
+    000$</span>. <span class="tex2jax_process">$E$</span> is the
+    number of eggs laid by one mosquito, <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$S$</span> specify the survival rates of
+    larvae and pupae, and <span class="tex2jax_process">$N$</span>
+    is the number of weeks.</p>
+<h2>Output</h2>
+<p>For each input instance, output a single line containing an
+    integer number <span class="tex2jax_process">$C$</span>, giving
+    the count of mosquitoes after the <span class="tex2jax_process">$N$</span>-th Sunday.</p>
+<p>You may assume that the number of mosquitoes during each of
+    the first <span class="tex2jax_process">$N$</span> weeks will
+    not exceed <span class="tex2jax_process">$1\, 000\,
+    000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 20 40 4 2 2 10
+144 55 8 0 1 9 4
+10 10 10 2 3 2 6
+10 20 40 86 9 9 999
+</pre>
+</td>
+<td>
+<pre>
+10
+0
+1
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>Given an undirected, unweighted, connected graph, where each
+    edge is colored either blue or red, determine whether a
+    spanning tree with exactly <span class="tex2jax_process">$k$</span> blue edges exists.</p>
+<h2>Input</h2>
+<p>There will be a single test case in the input. Each test
+    case will begin with a line with three integers:</p>
+<p><span class="tex2jax_process">$n \ m \ k$</span></p>
+<p>Where <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \le n \le 1\, 000$</span>) is the number
+    of nodes in the graph, <span class="tex2jax_process">$m$</span>
+    (limited by the structure of the graph) is the number of edges
+    in the graph, and <span class="tex2jax_process">$k$</span>
+    (<span class="tex2jax_process">$0 \le k &lt; n$</span>) is the
+    number of blue edges desired in the spanning tree. Each of the
+    next <span class="tex2jax_process">$m$</span> lines will
+    contain three elements, describing the edges:</p>
+<p><span class="tex2jax_process">$c \ f \ t$</span></p>
+<p>Where <span class="tex2jax_process">$c$</span> is a
+    character, either capital <tt class="ttfamily">R</tt> or
+    capital <tt class="ttfamily">B</tt>, indicating the color of
+    the edge, and <span class="tex2jax_process">$f$</span> and
+    <span class="tex2jax_process">$t$</span> are integers
+    (<span class="tex2jax_process">$1 \le f, t \le n, t \ne
+    f$</span>) indicating the nodes that edge goes from and to. The
+    graph is guaranteed to be connected, and there is guaranteed to
+    be at most one edge between any pair of nodes.</p>
+<h2>Output</h2>
+<p>Output a single line, containing <span class="tex2jax_process">$1$</span> if it is possible to build a
+    spanning tree with exactly <span class="tex2jax_process">$k$</span> blue edges, and <span class="tex2jax_process">$0$</span> if it is not possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3 2
+B 1 2
+B 2 3
+R 3 1
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1 1
+R 1 2
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

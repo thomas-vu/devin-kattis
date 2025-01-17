@@ -1,0 +1,181 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/upprodun/file/statement/en/img-0001.jpg" class="illustration" src="/problems/upprodun/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A classroom at the University of Reykjavíkk
+      </div>
+</div>
+<p>One thing the planning committee has to do is decide what
+    team should sit in what classroom. There are <span class="tex2jax_process">$N$</span> classrooms and <span class="tex2jax_process">$M$</span> contestants. The classrooms are
+    roughly the same size, so it is best if the teams are assigned
+    to the rooms in as equal numbers as possible. For example if
+    there are <span class="tex2jax_process">$N = 3$</span>
+    classrooms and <span class="tex2jax_process">$M = 8$</span>
+    contestants it’s best to put <span class="tex2jax_process">$3$</span> contestants in one room,
+    <span class="tex2jax_process">$3$</span> in another and
+    <span class="tex2jax_process">$2$</span> in the last one.</p>
+<h2>Input</h2>
+<p>The input consists of two lines. On the first line is the
+    integer <span class="tex2jax_process">$N$</span> and on the
+    second is the integer <span class="tex2jax_process">$M$</span>.</p>
+<h2>Output</h2>
+<p>The output should consist of <span class="tex2jax_process">$N$</span> lines, one for each classroom. If
+    there should be <span class="tex2jax_process">$k$</span>
+    contestants in classroom <span class="tex2jax_process">$i$</span>, then line number <span class="tex2jax_process">$i$</span> should contain <span class="tex2jax_process">$k$</span> instances of the symbol <tt class="ttfamily">*</tt>.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample there is <span class="tex2jax_process">$N = 1$</span> classroom and <span class="tex2jax_process">$M = 5$</span> contestants. As there is only
+    one classroom, all contestants must be there.</p>
+<p>The second sample is the same as the one explained
+    above.</p>
+<p>The third sample has <span class="tex2jax_process">$N =
+    5$</span> classroomes, but has <span class="tex2jax_process">$M
+    = 33$</span> contestants. In this case it is best to put
+    <span class="tex2jax_process">$6$</span> contestants into two
+    of the classrooms, but <span class="tex2jax_process">$7$</span>
+    into the other three. We can see that the order does not
+    matter.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 1$</span>,
+          <span class="tex2jax_process">$M \leq 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 2$</span>,
+          <span class="tex2jax_process">$M \leq 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 10$</span>,
+          <span class="tex2jax_process">$M \leq 500$</span>, there
+          will be equally many contestants in every classroom</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq 10$</span>,
+          <span class="tex2jax_process">$M \leq 500$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+5
+</pre>
+</td>
+<td>
+<pre>*****
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+8
+</pre>
+</td>
+<td>
+<pre>***
+***
+**
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+33
+</pre>
+</td>
+<td>
+<pre>*******
+*******
+******
+*******
+******
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4
+8
+</pre>
+</td>
+<td>
+<pre>**
+**
+**
+**
+</pre>
+</td>
+</tr>
+</table>
+</div>

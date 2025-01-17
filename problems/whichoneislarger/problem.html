@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>A question that often confuses a chat bot is:</p>
+<blockquote class="quote">
+<span class="tex2jax_process">$9.9$</span> or <span class="tex2jax_process">$9.11$</span>, which one is larger?
+    </blockquote>
+<p>Some chat bot would incorrectly state that <span class="tex2jax_process">$9.11$</span> is larger than <span class="tex2jax_process">$9.9$</span>. Though we are not exactly sure
+    what reasoning is behind that wrong answer, one hypothesis is
+    that the chat bot might have compared the decimal numbers as
+    integer tuples and thought that <span class="tex2jax_process">$(9, 11) &gt; (9, 9)$</span>. Integer tuples
+    <span class="tex2jax_process">$(x_1, y_1)$</span> and
+    <span class="tex2jax_process">$(x_2, y_2)$</span> are compared
+    by first comparing <span class="tex2jax_process">$x_1$</span>
+    against <span class="tex2jax_process">$x_2$</span>, and if they
+    are equal, then comparing <span class="tex2jax_process">$y_1$</span> against <span class="tex2jax_process">$y_2$</span>.</p>
+<p>Your task is to determine given two decimal numbers whether
+    their comparison would confuse a chat bot that may use integer
+    tuple comparison. That is, you want to check if the comparison
+    result would be the same under integer tuple comparison and
+    regular decimal comparison.</p>
+<h2>Input</h2>
+<p>Input has two lines. Each line has one positive decimal
+    number with <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$5$</span> digits before the
+    decimal point, and <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$5$</span> digits after the
+    decimal point. There are no leading or trailing zeros (a single
+    zero before or after the decimal point is possible). The two
+    decimal numbers are not equal.</p>
+<p>You may assume that the chat bot discards any leading zeros
+    when converting the digits after the decimal point to an
+    integer in a tuple, e.g. <span class="tex2jax_process">$4.01$</span> converts to <span class="tex2jax_process">$(4, 1)$</span>. Note that it is possible
+    that the two numbers are equal by integer tuple comparison, in
+    which case it is considered to be a different result than the
+    result of a regular decimal comparison.</p>
+<h2>Output</h2>
+<p>Output the decimal number that is larger if the comparison
+    would be the same under integer tuple comparison and regular
+    decimal comparison. Otherwise, output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9.9
+9.11
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12.34
+5.6789
+</pre>
+</td>
+<td>
+<pre>12.34
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0.01
+0.009
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4.1
+4.01
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

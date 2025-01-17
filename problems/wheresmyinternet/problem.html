@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/wheresmyinternet/file/statement/en/img-0001.jpg" class="illustration" src="/problems/wheresmyinternet/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://flic.kr/p/6AGaj">Jerry John</a>
+        from Flickr
+      </div>
+</div>
+<p>A new town is being built far out in the country, and
+    currently there are <span class="tex2jax_process">$N$</span>
+    houses. People have already started moving in. However, some of
+    the houses aren’t connected to the internet yet, and naturally
+    residents are outraged.</p>
+<p>The houses are numbered <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>. House number <span class="tex2jax_process">$1$</span> has already been connected to the
+    internet via a long network cable to a neighboring town. The
+    plan is to provide internet to other houses by connecting pairs
+    of houses with separate network cables. A house is connected to
+    the internet if it has a network cable to another house that’s
+    already connected to the internet.</p>
+<p>Given a list of which pairs of houses are already connected
+    by a network cable, determine which houses are not yet
+    connected to the internet.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$1 \leq N,M \leq 200\, 000$</span>, where
+    <span class="tex2jax_process">$N$</span> is the number of
+    houses and <span class="tex2jax_process">$M$</span> is the
+    number of network cables already deployed. Then follow
+    <span class="tex2jax_process">$M$</span> lines, each containing
+    a pair of distinct house numbers <span class="tex2jax_process">$1 \leq a, b \leq N$</span> meaning that
+    house number <span class="tex2jax_process">$a$</span> and house
+    number <span class="tex2jax_process">$b$</span> are already
+    connected by a network cable. Each house pair is listed at most
+    once in the input.</p>
+<h2>Output</h2>
+<p>If all the houses are already connected to the internet,
+    output one line containing the string <tt class="ttfamily">Connected</tt>. Otherwise, output a list of house
+    numbers in increasing order, one per line, representing the
+    houses that are not yet connected to the internet.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 4
+1 2
+2 3
+3 4
+5 6
+</pre>
+</td>
+<td>
+<pre>5
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+2 1
+</pre>
+</td>
+<td>
+<pre>Connected
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+2 3
+4 2
+3 4
+</pre>
+</td>
+<td>
+<pre>2
+3
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

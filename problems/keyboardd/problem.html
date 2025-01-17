@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/keyboardd/file/statement/en/img-0001.jpg" class="illustration" src="/problems/keyboardd/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="http://www.thekeyboardwaffleiron.com/">Waffle
+        keyboard</a> by The Keyboard Waffle Iron
+      </div>
+</div>Oh no! Joanna just spilled some syrup on her keyboard and
+    now some of the keys are sticky. This causes her considerable
+    frustration, as every time she presses one of the sticky keys,
+    the corresponding character gets entered twice on her computer.
+    <p>This could not have happened at a more inconvenient time; it
+    is the start of the contest and she was just about to type in
+    the solution to the first problem! Joanna does not have time to
+    remove and clean every key on her keyboard, so she wonders if
+    there is a way to quickly identify the sticky keys. Starting to
+    panic, she quickly types some text on her keyboard and stares
+    at the resulting text displayed on her screen.</p>
+<p>Given the line of text that Joanna typed on her keyboard and
+    the resulting text displayed on her screen, help her determine
+    which keys must be sticky.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line containing a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1 \leq \mathrm{length}(s) \leq 1\,
+        000$</span>), the text that Joanna typed on her
+        keyboard.</p>
+</li>
+<li>
+<p>One line containing a string <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \leq \mathrm{length}(t) \leq 1\,
+        000$</span>), the text displayed on Joanna’s screen as a
+        result.</p>
+</li>
+</ul>
+<p>Both <span class="tex2jax_process">$s$</span> and
+    <span class="tex2jax_process">$t$</span> consist only of
+    lower-case letters (‘<tt class="ttfamily">a</tt>’–‘<tt class="ttfamily">z</tt>’) and spaces (‘ ’), and start and end with a
+    letter.</p>
+<p>It is guaranteed that <span class="tex2jax_process">$t$</span> is the result of doubling each
+    character in <span class="tex2jax_process">$s$</span> that
+    corresponds to a sticky key. At least one character in
+    <span class="tex2jax_process">$s$</span> corresponds to a
+    sticky key (i.e. <span class="tex2jax_process">$s \neq
+    t$</span>).</p>
+<h2>Output</h2>
+<p>Output all characters (letters and space) corresponding to
+    keys that must be sticky, in any order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>this is very annoying
+thiss iss veery annoying
+</pre>
+</td>
+<td>
+<pre>se
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>so sticky
+ssoo  ssttiicckkyy
+</pre>
+</td>
+<td>
+<pre>its yock
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/blackfriday/file/statement/en/img-0001.jpg" class="illustration" src="/problems/blackfriday/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Black friday by <a href="https://commons.wikimedia.org/wiki/File:Black_Friday_by_Powhusku.jpg">
+        Powhusku</a>
+</div>
+</div>
+<p>Black Friday is the Friday following Thanksgiving Day in the
+    United States (the fourth Thursday of November). Since the
+    early 2000s, it has been regarded as the beginning of the
+    Christmas shopping season in the US, and most major retailers
+    open very early and offer promotional sales. (Source:
+    Wikipedia)</p>
+<p>You work in the IT support division of an electronics store.
+    This year, in an attempt to prevent overcrowding, the
+    management has decided to limit the number of people entering
+    the store. They divide the people at the entrance into groups
+    of size <span class="tex2jax_process">$n$</span> and process
+    them as follows: all <span class="tex2jax_process">$n$</span>
+    participants roll a die, and report the outcomes <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>. To prevent
+    cheating, instead of selecting the one with the highest
+    outcome, the rule is to select the participant with the highest
+    unique outcome. Everybody not selected has to move to the back
+    of the queue. If there is no winner, the experiment is
+    repeated.</p>
+<p>For example, if there are three players and the outcomes are
+    6, 6 and 5, then the third player wins, because the first and
+    second player lose even though their outcomes are higher, since
+    they both have the same outcome. If instead the third player
+    also rolls 6, then nobody wins.</p>
+<p>They asked you to write a program for selecting the
+    winner.</p>
+<h2>Input</h2>
+<p>The first line of the input contains one integer
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1 \leq n \leq 100$</span>, the group size.
+    The second line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>
+    (<span class="tex2jax_process">$1 \leq a_ i \leq 6$</span> for
+    all <span class="tex2jax_process">$1 \leq i \leq n$</span>):
+    the outcome of each participant’s die roll.</p>
+<h2>Output</h2>
+<p>Output the index of the participant that has the highest
+    unique outcome, or “<tt class="ttfamily">none</tt>” (without
+    the quotes) if nobody has a unique outcome.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+1 1 1 5 3 4 6 6
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+4 4 4
+</pre>
+</td>
+<td>
+<pre>
+none
+</pre>
+</td>
+</tr>
+</table>
+</div>

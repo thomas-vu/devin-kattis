@@ -1,0 +1,128 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/stikl/file/statement/en/img-0001.jpg" class="illustration" src="/problems/stikl/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://pixabay.com/images/id-937881/">Number
+        tiles</a> by geralt, Pixabay
+      </div>
+</div>You really like playing games with your friend. A current
+    favorite of yours is the game <em>Stikl</em>. During the setup
+    of the game <span class="tex2jax_process">$n$</span> numbered
+    tiles are shuffled and placed in a line. The rules of the game
+    are simple. Both players start on a random tile. They then take
+    turns rollling dice and make the corresponding number of moves.
+    One move consists of a player moving from their initial tile to
+    the first tile on their right that does <em>not</em> have a
+    lower number than the initial tile. If no such tile exists, the
+    player wins. The only difficult part of the game is figuring
+    out where a player’s piece piece ends after a certain number of
+    moves.
+    <h2>Input</h2>
+<p>The first line of the input consists of two integers
+    <span class="tex2jax_process">$n$</span>, the number of tiles,
+    where <span class="tex2jax_process">$1 \leq n \leq
+    10^5$</span>, and <span class="tex2jax_process">$q$</span>, the
+    number of queries, where <span class="tex2jax_process">$1 \leq
+    q \leq 10^5$</span>. The second line of the input consists of
+    <span class="tex2jax_process">$n$</span> space separated
+    integers, corresponding to the numbers on the tiles. Then
+    follow <span class="tex2jax_process">$q$</span> queries, one on
+    each lines. The <span class="tex2jax_process">$j$</span>-th
+    query contains two integers <span class="tex2jax_process">$s_
+    j$</span>, the number of the tile on which the player starts,
+    where <span class="tex2jax_process">$1 \leq s_ j \leq
+    n$</span>, and <span class="tex2jax_process">$d_ j$</span>, the
+    number of steps the player takes, where <span class="tex2jax_process">$1 \leq d_ j \leq 10^5$</span>.</p>
+<h2>Output</h2>
+<p>For each query, print a single line containing the index of
+    the tile the player ends on if they start at the <span class="tex2jax_process">$s_ j$</span>-th tile and make <span class="tex2jax_process">$d_ j$</span> moves. If preforming the
+    prescribed number of moves would cause the player to win, then
+    print “<tt class="ttfamily">leik lokid</tt>”.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>42</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n, q \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>26</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$s$</span> is always
+          <span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>32</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>16 11
+1 9 5 13 3 11 7 15 2 10 6 14 4 12 8 16
+1 1
+1 2
+1 3
+1 4
+1 5
+3 1
+3 4
+5 1
+9 3
+11 3
+16 1
+</pre>
+</td>
+<td>
+<pre>2
+4
+8
+16
+leik lokid
+4
+leik lokid
+6
+16
+leik lokid
+leik lokid
+</pre>
+</td>
+</tr>
+</table>
+</div>

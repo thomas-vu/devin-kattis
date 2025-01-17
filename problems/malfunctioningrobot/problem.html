@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>Arthur is participating in the Vietnamese Robotic Olympiad
+    <span class="tex2jax_process">$2\, 020$</span>. In the first
+    round, candidates must build a path-finding robot. More
+    precisely, the organizers have prepared an infinite,
+    obstacle-free grid. One candidate’s robot is placed at a
+    starting position <span class="tex2jax_process">$(x_1,
+    y_1)$</span> and must find a path to a target position
+    <span class="tex2jax_process">$(x_2, y_2)$</span>.</p>
+<p>Arthur’s robot is quite simple: it can only move in four
+    directions: up, down, left and right, i.e. from <span class="tex2jax_process">$(x, y)$</span>, it can moves to <span class="tex2jax_process">$(x, y+1)$</span>, <span class="tex2jax_process">$(x, y-1)$</span>, <span class="tex2jax_process">$(x-1, y)$</span> and <span class="tex2jax_process">$(x+1, y)$</span>.</p>
+<p>The first round is starting soon. However, Arthur just
+    realized that some of the robot’s components are broken, and
+    thus the robot cannot move in the same direction in two
+    consecutive moves (i.e. it always changes direction after each
+    move). For example, if the robot needs to go from <span class="tex2jax_process">$(1, 1)$</span> to <span class="tex2jax_process">$(3, 3)$</span>, the robot can use the path
+    shown on the right, but not the path shown on the left.</p>
+<center>
+<center>
+<img alt="\includegraphics[width=.9\textwidth ]{M.png}" src="/problems/malfunctioningrobot/file/statement/en/img-0001.png" style="width:90.00%"/>
+</center>
+</center>
+<p>Please help Arthur find the minimum number of moves for his
+    robot to get from some starting position to some ending
+    one.</p>
+<h2>Input</h2>
+<p>The input starts with <span class="tex2jax_process">$T$</span> - the number of test cases
+    (<span class="tex2jax_process">$1 \leq T \leq 1\, 000$</span>),
+    then <span class="tex2jax_process">$T$</span> test cases
+    follow. Each test case is presented in a single line with
+    <span class="tex2jax_process">$4$</span> integers <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span> and <span class="tex2jax_process">$y_2$</span> which denote the starting and
+    target position of the robot.</p>
+<p>The absolute value of all integers in the input do not
+    exceed <span class="tex2jax_process">$10^9$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print the minimum number of moves for
+    Arthur’s robot to get from <span class="tex2jax_process">$(x_1,y_1)$</span> to <span class="tex2jax_process">$(x_2,y_2)$</span></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1 1 3 3
+0 1 1 1
+</pre>
+</td>
+<td>
+<pre>4
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

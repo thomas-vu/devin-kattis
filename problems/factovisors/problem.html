@@ -1,0 +1,42 @@
+<div class="problembody">
+<p>The factorial function, <span class="tex2jax_process">$n!$</span> is defined thus for <span class="tex2jax_process">$n$</span> a non-negative
+    integer:</p><span class="tex2jax_process">\[ n! = \begin{cases}
+    1 &amp; \text {if $n = 0$} \\ n \cdot (n-1)! &amp; \text {if $n
+    &gt; 0$} \end{cases} \]</span>
+<p>We say that <span class="tex2jax_process">$a$</span> divides
+    <span class="tex2jax_process">$b$</span> if there exists an
+    integer <span class="tex2jax_process">$k$</span> such that
+    <span class="tex2jax_process">$k \cdot a = b$</span>.</p>
+<h2>Input</h2>
+<p>The input to your program consists of several lines, each
+    containing two non-negative integers, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, both less than <span class="tex2jax_process">$2^{31}$</span>.</p>
+<h2>Output</h2>
+<p>For each input line, output a line stating whether or not
+    <span class="tex2jax_process">$m$</span> divides <span class="tex2jax_process">$n!$</span>, in the format shown below.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 9
+6 27
+20 10000
+20 100000
+1000 1009
+</pre>
+</td>
+<td>
+<pre>
+9 divides 6!
+27 does not divide 6!
+10000 divides 20!
+100000 does not divide 20!
+1009 does not divide 1000!
+</pre>
+</td>
+</tr>
+</table>
+</div>

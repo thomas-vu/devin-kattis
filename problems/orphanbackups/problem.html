@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/orphanbackups/file/statement/en/img-0001.png" class="illustration" src="/problems/orphanbackups/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>GigantoCorp has a problem. They have removed all tape drives
+    from their data center and are doing all of their backups to
+    disk storage. However, they seem to have used more disk space
+    than their backup software indicates should be in use. They
+    think that there are files on the backup storage that are not
+    in the backup software index. They would like your team to
+    write a program to determine if there are“orphan” files on the
+    backup storage that are not in the index or “orphan” index
+    entries that have no corresponding files on the backup
+    storage.</p>
+<p>Your program will be provided with two lists – an index of
+    valid backup image names, followed by a list of backup file
+    names.</p>
+<p>Your program is to compare the two lists and determine if
+    there are either backup images in the index that have with no
+    files or files that are not associated with any backup image in
+    the index.</p>
+<h2>Input</h2>
+<p>Input is structured in two blocks.</p>
+<p>The first is a list of backup images, one per line. Each
+    backup image name consists of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$32$</span> printable ASCII characters (no
+    spaces). There may be up to <span class="tex2jax_process">$100\, 000$</span> images. Each image name is
+    unique, and they may occur in any order.</p>
+<p>The end of this block is signaled by an empty line.</p>
+<p>The second block contains a list of backup file names, one
+    per line, left justified. A backup file name has the format</p>
+<p><i class="itshape">imageName</i>_<i class="itshape">integer</i>_<i class="itshape">type</i></p>
+<p>where <i class="itshape">imageName</i> is a backup image
+    name in the format described above, <i class="itshape">integer</i> is an integer in the range <span class="tex2jax_process">$0\ldots 2\, 000\, 000\, 000$</span> denoting
+    the time in seconds since January 1, 1970 at 00:00 GMT (the
+    “UNIX epoch”), and <i class="itshape">type</i> is an uppercase
+    English alphabetic character string of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$6$</span> characters. There may be up to
+    <span class="tex2jax_process">$300\, 000$</span> backup file
+    names. File names are unique, and they may occur in any
+    order.</p>
+<p>The end of the second block is signaled by the end of
+    file.</p>
+<h2>Output</h2>
+<p>First, print the list of files with no index entries, one
+    per line, by printing the character “F”, a single space, and
+    then the file name.</p>
+<p>After all the orphan files are printed, print the orphan
+    index entries one per line by printing the character “I”, a
+    single space, and then the backup image name.</p>
+<p>Entries in each list are to be printed in ASCII
+    lexicographic order.</p>
+<p>If every file has an index entry and every index entry has
+    one or more files, print only a line containing the string “No
+    mismatches.”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>payroll.xls
+projects.doc
+employees.dat
+products.txt
+
+payroll.xls_1539199053_INCR
+employees.dat_1539199053_INCR
+payroll.xls_1539112653_INCR
+employees.dat_1539112653_INCR
+payroll.xls_1539026253_FULL
+employees.dat_1539026253_FULL
+customers.dat_1539026253_FULL
+</pre>
+</td>
+<td>
+<pre>F customers.dat_1539026253_FULL
+I products.txt
+I projects.doc
+</pre>
+</td>
+</tr>
+</table>
+</div>

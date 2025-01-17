@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>There is a robot in a 2D grid. The grid consists of empty
+    cells and obstacles, and there is exactly one cell that is the
+    exit. The robot will exit the grid if it ever reaches the exit
+    cell. Empty cells are denoted as ‘<tt class="ttfamily">.</tt>’,
+    the robot’s initial position is denoted as ‘<tt class="ttfamily">R</tt>’, obstacles are denoted as ‘<tt class="ttfamily">#</tt>’, and the exit is denoted as ‘<tt class="ttfamily">E</tt>’.</p>
+<p>You can program the robot by sending it a series of
+    commands. The series of commands is a string consisting of
+    characters: ‘<tt class="ttfamily">L</tt>’ (move one square
+    left), ‘<tt class="ttfamily">U</tt>’ (move one square up),
+    ‘<tt class="ttfamily">R</tt>’ (move one square right), or
+    ‘<tt class="ttfamily">D</tt>’ (move one square down). If the
+    robot would run into an obstacle or off the edge of the grid,
+    it will ignore the command (but it will continue on to future
+    commands, if there are any).</p>
+<p>Your friend sent a series of commands to the robot, but
+    unfortunately, the commands do not necessarily take the robot
+    to the exit.</p>
+<p>You would like to fix the string so that the robot will
+    reach the exit square (note once the robot reaches the exit, it
+    stops, even if there are more commands in the string). You can
+    fix the string with a sequence of operations. There are two
+    operations: inserting a command anywhere in the string, or
+    deleting a command anywhere in the string. What is the minimum
+    number of operations you would need to fix the program?</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains two integers, <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$2
+    \le r, c \le 50$</span>) which are the number of rows and
+    number of columns of the grid. The next <span class="tex2jax_process">$r$</span> lines will each contain a string
+    with exactly <span class="tex2jax_process">$c$</span>
+    characters. Each character is one of ‘<tt class="ttfamily">.</tt>’ (Empty), ‘<tt class="ttfamily">R</tt>’ (the
+    Robot), ‘<tt class="ttfamily">#</tt>’ (an Obstacle), or
+    ‘<tt class="ttfamily">E</tt>’ (the Exit). This is the grid.
+    There will be exactly one ‘<tt class="ttfamily">R</tt>’ and one
+    ‘<tt class="ttfamily">E</tt>’ in the grid, and it will always
+    be possible to navigate the robot to the exit. The last line of
+    input will contain a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \le |s| \le 50$</span>) of commands. The string <span class="tex2jax_process">$s$</span> will consist only of characters
+    ‘<tt class="ttfamily">L</tt>’ (left), ‘<tt class="ttfamily">R</tt>’ (right), ‘<tt class="ttfamily">U</tt>’ (up)
+    or ‘<tt class="ttfamily">D</tt>’ (down).</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the minimum number of
+    operations necessary to fix the command string so that the
+    robot makes it to the exit.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+R..
+.#.
+..E
+LRDD
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+R.#.
+#..E
+RRUUDDRRUUUU
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

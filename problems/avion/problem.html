@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>Mirko and Slavko are USKOK agents tracking the movements of
+    an unnamed corrupt government official. Anonymous sources have
+    tipped them about his upcoming escape attempt. They now know he
+    plans to use his diplomatic liaisons to try and hitch a ride on
+    a CIA blimp leaving from Severin na Kupi blimp port.</p>
+<p>It is common knowledge that all CIA blimps have the string
+    “FBI” somewhere in their registration codes. They obtained a
+    list of all blimps scheduled for the designated day. There are
+    exactly 5 blimps on the list. Write a program that will point
+    out all CIA blimps.</p>
+<h2>Input</h2>
+<p>There are exactly <span class="tex2jax_process">$5$</span>
+    rows of input, each row representing one blimp registration
+    code from the list. A registration code is a sequence of at
+    most <span class="tex2jax_process">$11$</span> uppercase
+    letters of the English alphabet, digits ‘<tt class="ttfamily">0</tt>’ to ‘<tt class="ttfamily">9</tt>’, or dashes
+    ‘<tt class="ttfamily">-</tt>’.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain a space
+    separated list of integers, sorted in increasing order,
+    indicating the corresponding input rows containing
+    registrations of CIA blimps.</p>
+<p>If there are no CIA blimps, output the string “<tt class="ttfamily">HE GOT AWAY!</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>N-FBI1
+9A-USKOK
+I-NTERPOL
+G-MI6
+RF-KGB1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>N321-CIA
+F3-B12I
+F-BI-12
+OVO-JE-CIA
+KRIJUMCAR1
+</pre>
+</td>
+<td>
+<pre>HE GOT AWAY!
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>47-FBI
+BOND-007
+RF-FBI18
+MARICA-13
+13A-FBILL
+</pre>
+</td>
+<td>
+<pre>1 3 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

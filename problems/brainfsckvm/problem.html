@@ -1,0 +1,167 @@
+<div class="problembody">
+<p>Given a brainfsck program, determine whether it terminates
+    or enters an endless loop.<br/></p>
+<p>A brainfsck interpreter has a data array (consisting of
+    unsigned 8-bit integers) with an index, the so called “<em>data
+    index</em>”; the entry of the array pointed to by the data
+    index is the so called “<em>current entry</em>”. A brainfsck
+    program consists of a sequence of the following eight
+    instructions:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>-</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>decrease <em>current entry</em> by <span class="tex2jax_process">$1$</span> (modulo <span class="tex2jax_process">$2^8$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>+</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>increase <em>current entry</em> by <span class="tex2jax_process">$1$</span> (modulo <span class="tex2jax_process">$2^8$</span>)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>&lt;</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>decrease <em>data index</em> by <span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>&gt;</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>increase <em>data index</em> by <span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>[</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>jump behind the matching <tt>]</tt>, if the
+          <em>current entry</em> is equal to 0</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>]</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>jump behind the matching <tt>[</tt> if the <em>current
+          entry</em> is <em>not</em> equal to <span class="tex2jax_process">$0$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p><tt>.</tt></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>print the <em>current entry</em> as character</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:left">
+<p><tt>,</tt></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+<p>read a character and save it into the <em>current
+          entry</em>. On end of input save <span class="tex2jax_process">$255$</span>.</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Interpretation of a brainfsck program starts at the first
+    instruction, and terminates if the instruction pointer leaves
+    the end of the program. After an instruction is executed, the
+    instruction pointer advances to the instruction to the right
+    (except, of course, if the loop instructions <tt>[</tt> or
+    <tt>]</tt> cause a jump).<br/></p>
+<p>In addition to the program, you will be given the size of
+    the data array. The entries of the data array shall be unsigned
+    8-bit integers, with usual over- or underflow behaviour. At the
+    start of the program, the data array entries and the data index
+    shall be initialized to zero.<br/></p>
+<p>Incrementing or decrementing the data index beyond the
+    boundaries of the data array shall make it re-enter the data
+    array at the other boundary; e.g. decrementing the data
+    index when it is zero shall set it to the size of the data
+    array minus one.<br/></p>
+<p>The <tt>[</tt> and <tt>]</tt> instructions define loops and
+    are allowed to nest. Every given program will be well-formed,
+    i.e. when traversing the program from left to right, the number
+    of <tt>[</tt> instructions minus the number of <tt>]</tt>
+    instructions will always be greater or equal zero, and at the
+    end of the program it will be equal to zero.<br/></p>
+<p>For the purposes of the problem, discard the output of the
+    interpreted program. <a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a></p>
+<h2>Input</h2>
+<p>The input starts with a line containing the number of test
+    cases <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0 &lt; t \le 20$</span>). Each test case
+    consists of three lines. The first line contains three integers
+    <span class="tex2jax_process">$s_ m, s_ c, s_ i$</span>,
+    describing the size of the memory, the size of the program code
+    and the size of the input (<span class="tex2jax_process">$0
+    &lt; s_ m \le 100\, 000; 0 &lt; s_ c, s_ i &lt; 4\,
+    096$</span>).</p>
+<p>The second line contains the brainfsck program code to be
+    executed; it consists of <span class="tex2jax_process">$s_
+    c$</span> characters.</p>
+<p>The third line contains the input of the program, as text
+    (only printable, non-whitespace characters). Once the program
+    has consumed all available input, the input instruction shall
+    set the current cell to <span class="tex2jax_process">$255$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print one line, containing either
+    “<tt class="tt">Terminates</tt>” or “<tt class="tt">Loops</tt>”, depending on whether the program either
+    terminates after a finite number of steps, or enters an endless
+    loop. If the program loops, also print the indices
+    (<span class="tex2jax_process">$0$</span>-based) of the two
+    <tt>[</tt> and the <tt>]</tt> symbols in the code array that
+    correspond to the endless loop. You may safely assume that
+    after <span class="tex2jax_process">$50\, 000\, 000$</span>
+    instructions, a program either terminated or hangs in an
+    endless loop, which then was executed at least once. During
+    each iteration of the endless loop at most <span class="tex2jax_process">$50\, 000\, 000$</span> instructions are
+    executed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+10 4 3
++-.,
+qwe
+1000 5 1
++[+-]
+a
+100 74 4
++++++[-&gt;++&lt;]&gt;[-&lt;+++++++&gt;]&lt;[-&gt;+&gt;+&gt;+&gt;+&lt;&lt;&lt;&lt;]&gt;+++&gt;---&gt;++++++++++&gt;---&lt;&lt;&lt;.&gt;.&gt;.&gt;.
+xxyz
+9999 52 14
++++++[&gt;+++++++++&lt;-],+[-[&gt;--.++&gt;+&lt;&lt;-]&gt;+.-&gt;[&lt;.&gt;-]&lt;&lt;,+]
+this_is_a_test
+</pre>
+</td>
+<td>
+<pre>
+Terminates
+Loops 1 4
+Terminates
+Terminates
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,77 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/restaurantopening/file/statement/en/img-0001.png" class="illustration" src="/problems/restaurantopening/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://www.freepik.com/free-photo/vertical-shot-orange-blue-neon-sign-that-says-open-bar_17247073.htm#page=10query=restaurant%20grand%20openingposition=3from_view=searchtrack=ais">
+        wirestock on Freepik</a>
+</div>
+</div>
+<p>It is said that the three most important factors for
+    determining whether or not a business will be successful are
+    location, location, and location. The Incredible Cooks
+    Preparing Cuisine are opening a new restaurant in the
+    International City Promoting Cooking, and they have hired you
+    to find the optimal location for their restaurant.</p>
+<p>You decide to model the city as a grid, with each grid
+    square having a specified number of people living in it. The
+    distance between two grid squares <span class="tex2jax_process">$(r_1,c_1)$</span> and <span class="tex2jax_process">$(r_2,c_2)$</span> is <span class="tex2jax_process">$|r_1-r_2|+|c_1-c_2|.$</span> In order to
+    visit the restaurant, each potential customer would incur a
+    cost equal to the minimum distance from the grid square in
+    which they live to the grid square containing the proposed
+    location of the restaurant. The total cost for a given
+    restaurant location is defined as the sum of the costs of
+    everyone living in the city to visit the restaurant.</p>
+<p>Given the current city layout, compute the minimum total
+    cost if the Incredible Cooks Preparing Cuisine select their
+    next restaurant location optimally.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    &lt; n,m \le 50$</span>), where <span class="tex2jax_process">$n$</span> is the number of rows in the city
+    grid and <span class="tex2jax_process">$m$</span> is the number
+    of columns.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains <span class="tex2jax_process">$m$</span>
+    integers <span class="tex2jax_process">$g_{ij}$</span>
+    (<span class="tex2jax_process">$0\le g_{ij}\le 50$</span>),
+    which specifies the number of people living in the grid square
+    at row <span class="tex2jax_process">$i$</span>, column
+    <span class="tex2jax_process">$j$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the total cost if the
+    restaurant is selected optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+1 2
+3 4
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 10
+3 49 4 31 10 31 50 24 10 42
+</pre>
+</td>
+<td>
+<pre>591
+</pre>
+</td>
+</tr>
+</table>
+</div>

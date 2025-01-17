@@ -1,0 +1,103 @@
+<div class="problembody">
+<p><em>Note that this is a harder version of the problem
+    pikemaneasy.</em></p>
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/pikemanhard/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pikemanhard/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by <a href="http://www.flickr.com/photos/riot/98202145/sizes/m/in/photostream/">
+        rogiro</a>
+</div>
+</div>Programming is an ancient art. Archeologists have made
+    findings which indicate that already in the Middle Ages,
+    infantry were practicing for programming contests while not in
+    battle. Although it is not known how the programming contests
+    were carried out (there were no computers), the archeologists
+    have come up with a good theory (according to them). It states
+    that infantry submitted pseudocode carved into stone, and then
+    by the end of the contest, a genius priest named Kátisse ran
+    all the programs in her head for correction. How they know her
+    name? They won’t say.
+
+    <p>One of the reasons for this somewhat peculiar theory was the
+    finding of ancient pike, a combat spear. Scientists have found
+    many of these throughout the years. They come with a special
+    symbol carved into them, usually the symbol of the tribe. This
+    one didn’t have a symbol carved into it, it had pseudo code for
+    Fenwick trees, as well as a config file for some kind of
+    editor. Scientists are unsure which editor it might have been,
+    but they believe it was some version of the closed Emacs
+    beta.</p>
+<p>Instead of looking for more evidence, the archeologists
+    started speculating what strategy the pikemen used in these
+    programming contests. They must have been well prepared, since
+    this guy had algorithms carved into his spear. The contest
+    rules were probably as follows: When submiting a solution to
+    the judge, the time in minutes from contest start was added to
+    a penalty counter. So in order to plan his problem solving, a
+    pikeman must have been good at approximating the number of
+    minutes required to solve each problem.</p>
+<p>You are given a number of problems which were designed for a
+    contest in which the pikeman participated. For each problem,
+    you are given the estimated time in minutes for solving the
+    problem. Calculate the maximum number of problems a pikeman can
+    solve in the contest, and the minimum penalty he can get, under
+    the assumptions that these estimations are correct. You may
+    assume that the pikemen are very efficient: submissions are
+    always correct, and after submitting a problem they start
+    solving the next problem immediately.</p>
+<h2>Input</h2>
+<p>Input starts with two integers on a single line <span class="tex2jax_process">$1 \le N \le 10^9$</span> and <span class="tex2jax_process">$ 1 \le T \le 10^{18}$</span>, the number of
+    problems in the ancient contest and the total length of the
+    contest in minutes. Then follows a line with four integers
+    <span class="tex2jax_process">$1 \le A, B, C, t_0 \le
+    10^6$</span>, where <span class="tex2jax_process">$t_0$</span>
+<span class="tex2jax_process">$(t_0\leq C)$</span> specifies
+    the time in minutes required for solving the first problem, and
+    the rest of the times <span class="tex2jax_process">$t_1, \dots
+    , t_{N-1}$</span> are given by:</p><span class="tex2jax_process">\begin{equation*} t_ i = ((At_{i-1}+B) \text
+    {mod } C) + 1, i \in [1,N-1] \end{equation*}</span>
+<h2>Output</h2>
+<p>Output should consist of two integers: the maximum number of
+    problems a pikeman can solve within the time limit, and the
+    total penalty he will get for solving them. As the penalty
+    might be huge, print it modulo <span class="tex2jax_process">$1\, 000\, 000\, 007$</span>. Print them on
+    the same line, separated by a single space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 3
+2 2 2 1
+</pre>
+</td>
+<td>
+<pre>
+1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 10
+2 2 2 2
+</pre>
+</td>
+<td>
+<pre>
+2 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

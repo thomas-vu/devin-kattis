@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Each year, your employer hosts a company picnic. This event
+    features a three-legged race, a race where two runners work as
+    a team, running side-by-side with the legs between them tied
+    together. It is more difficult to run like that, so teams run
+    at a speed that is the minimum of the running speed of the two
+    team members. For example, if Mildred can run <span class="tex2jax_process">$4.4$</span> meters per second and Ken can
+    run <span class="tex2jax_process">$4.0$</span> meters per
+    second, then, as a team, they will run <span class="tex2jax_process">$4.0$</span> meters per second.</p>
+<p>To improve company morale, all teams are chosen so they
+    include an employee and the supervisor they report directly to.
+    In the organization chart below, Mildred could be on a team
+    with Ken (running at <span class="tex2jax_process">$4.0$</span>
+    meters per second) or with Zack (running at <span class="tex2jax_process">$4.2$</span> meters per second), but Mildred
+    could not be on a team with Barbara.</p>
+<div class="figure" id="fig:chart">
+<center>
+<img alt="\includegraphics[width=.4\textwidth ]{chart}" src="/problems/companypicnic/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Organization chart illustrating the
+          sample input below.
+        </div>
+</center>
+</div>
+<p>Given a description of the company organizational chart,
+    your job is to create as many teams as possible for the
+    upcoming race, provided each employee can only be on one team.
+    To make the race exciting, you want to choose the fastest teams
+    possible, so, while forming as many teams as you can, you must
+    pair up team members so that the average team running speed is
+    maximized. For example, in the chart above, you could form four
+    teams by pairing Mildred with Ken, Zack with Tina, Wilbur with
+    Virgil and Rose with Seth. However, a better solution would
+    pair Rose with Barbara instead of Seth. This would still give
+    you four teams, but it would give you a greater average speed
+    for the teams.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 1\, 000$</span>) giving the total number of
+    employees in the company. This is followed by <span class="tex2jax_process">$n$</span> lines, each describing an
+    employee. Each of these lines contains three space-separated
+    values, first the name of the employee, then a real number
+    giving their running speed in meters per second, and, finally,
+    the name of their immediate supervisor in the organization
+    chart. The organization chart is guaranteed to form a tree,
+    with the CEO at the root. Since the CEO does not report to
+    anyone, the input just gives “CEO” as their supervisor (no
+    one’s name is CEO). For all other employees, the supervisor is
+    the name of another employee listed elsewhere in the input.
+    Employee names are all unique and consist of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$12$</span> upper- and lower-case letters
+    (a–z), and running speeds are all in the plausible range from
+    <span class="tex2jax_process">$2.2$</span> meters per second up
+    to <span class="tex2jax_process">$5.3$</span> meters per
+    second. Running speeds have at most <span class="tex2jax_process">$3$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>Print the largest number of three-legged-race teams that can
+    be formed, followed by the maximum possible average running
+    speed for that number of teams. The speed should be accurate to
+    within <span class="tex2jax_process">$0.001$</span> meters per
+    second.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+9
+Barbara 3.5 CEO
+Rose 5.1 Barbara
+Seth 2.9 Rose
+Virgil 3.8 Wilbur
+Mildred 4.4 Zack
+Wilbur 2.7 Barbara
+Tina 3.7 Zack
+Ken 4.0 Mildred
+Zack 4.2 Barbara
+</pre>
+</td>
+<td>
+<pre>
+4 3.47500000
+</pre>
+</td>
+</tr>
+</table>
+</div>

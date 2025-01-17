@@ -1,0 +1,218 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/imperfectgps/file/statement/en/img-0001.jpg" class="illustration" src="/problems/imperfectgps/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/aaronpk/4786725513/">Aaron
+        Parecki</a>
+</div>
+</div>
+<p>Lots of runners use personal Global Positioning System (GPS)
+    receivers to track how many miles they run. No GPS is perfect,
+    though: it only records its position periodically rather than
+    continuously, so it can miss parts of the true running path.
+    For this problem we’ll consider a GPS that works in the
+    following way when tracking a run:</p>
+<ul class="itemize">
+<li>
+<p>At the beginning of the run, the GPS first records the
+        runner’s starting position at time <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>It then records the position every <span class="tex2jax_process">$t$</span> units of time.</p>
+</li>
+<li>
+<p>It always records the position at the end of the run,
+        even if the total running time is not a multiple of
+        <span class="tex2jax_process">$t$</span>.</p>
+</li>
+</ul>
+<p>The GPS assumes that the runner goes in a straight line
+    between each consecutive pair of recorded positions. Because of
+    this, a GPS can underestimate the total distance run.</p>
+<p>For example, suppose someone runs in straight lines and at
+    constant speed between the positions on the left side of Table
+    1. The time they reach each position is shown next to the
+    position. They stopped running at time <span class="tex2jax_process">$11$</span>. If the GPS records a position
+    every <span class="tex2jax_process">$2$</span> units of time,
+    its readings would be the records on the right side of Table
+    1.</p>
+<div class="table" id="table:imperfectgps">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>Time</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>Position</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>Time</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>Position</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$(0,0)$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$(0,0)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$(0,3)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(0,2)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$(-2,5)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(-1,4)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$(0,7)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(-1,6)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$(2,5)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(1,6)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+<td style="text-align:center; border-right:1px solid black">
+<p><span class="tex2jax_process">$(0,3)$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$(1,4)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+             </td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+             </td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+<p><span class="tex2jax_process">$11$</span></p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+<p><span class="tex2jax_process">$(0,3)$</span></p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Table 1</b>: Actual Running Path on the left, GPS
+          readings on the right.
+        </div>
+</center>
+</div>
+<p>The total distance run is approximately <span class="tex2jax_process">$14.313708$</span> units, while the GPS
+    measures the distance as approximately <span class="tex2jax_process">$11.650281$</span> units. The difference
+    between the actual and GPS distance is approximately
+    <span class="tex2jax_process">$2.663427$</span> units, or
+    approximately <span class="tex2jax_process">$18.607525 \%
+    $</span> of the total run distance.</p>
+<p>Given a sequence of positions and times for a running path,
+    as well as the GPS recording time interval <span class="tex2jax_process">$t$</span>, calculate the percentage of the
+    total run distance that is lost by the GPS. Your computations
+    should assume that the runner goes at a constant speed in a
+    straight line between consecutive positions.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    contains two integers <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$2 \le n \le 100$</span>) and
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1 \le t \le 100$</span>), where <span class="tex2jax_process">$n$</span> is the total number of positions
+    on the running path, and <span class="tex2jax_process">$t$</span> is the recording time interval of
+    the GPS (in seconds).</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines
+    contain three integers per line. The <span class="tex2jax_process">$i$</span>-th line has three integers
+    <span class="tex2jax_process">$x_ i$</span>, <span class="tex2jax_process">$y_ i$</span> (<span class="tex2jax_process">$-10^6 \le x_ i, y_ i \le 10^6$</span>), and
+    <span class="tex2jax_process">$t_ i$</span> (<span class="tex2jax_process">$0 \le t_ i \le 10^6$</span>), giving the
+    coordinates of the <span class="tex2jax_process">$i$</span>-th
+    position on the running path and the time (in seconds) that
+    position is reached. The values of <span class="tex2jax_process">$t_ i$</span>’s are strictly increasing. The
+    first and last positions are the start and end of the run.
+    Thus, <span class="tex2jax_process">$t_1$</span> is always
+    zero.</p>
+<p>It is guaranteed that the total run distance is greater than
+    zero.</p>
+<h2>Output</h2>
+<p>Output the percentage of the actual run distance that is
+    lost by the GPS. The answer is considered correct if it is
+    within <span class="tex2jax_process">$10^{-5}$</span> of the
+    correct answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 2
+0 0 0
+0 3 3
+-2 5 5
+0 7 7
+2 5 9
+0 3 11
+</pre>
+</td>
+<td>
+<pre>
+18.60752550117103
+</pre>
+</td>
+</tr>
+</table>
+</div>

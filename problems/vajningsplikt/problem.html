@@ -1,0 +1,78 @@
+<div class="problembody">
+<div class="illustration" style="width:42.00%">
+<img alt="/problems/vajningsplikt/file/statement/en/img-0001.png" class="illustration" src="/problems/vajningsplikt/file/statement/en/img-0001.png"/>
+<div class="description">
+        The situation in Sample <span class="tex2jax_process">$1$</span>
+</div>
+</div>
+<p>A startup company tries to develop software for self-driving
+    cars. One of the surprisingly difficult problems turns out to
+    be right-of-way at an intersection. The local traffic
+    regulations prescribe that your vehicle must yield the
+    right-of-way if one of the following two conditions is
+    satisfied:</p>
+<ol class="enumerate">
+<li>
+<p>You want to pass straight through the intersection;
+        another vehicle is approaching from your right.</p>
+</li>
+<li>
+<p>You want to turn left at the intersection; another
+        vehicle is approaching from the opposite direction or from
+        your right.</p>
+</li>
+</ol>
+<p>Note that it is not important in which direction the other
+    vehicle wants to <em>leave</em> the intersection.</p>
+<p>Write a program that decides if your car should yield the
+    right-of-way to the other vehicle.</p>
+<h2>Input</h2>
+<p>Three strings <span class="tex2jax_process">$a,b,c \in \{
+    \text {North},\text {South},\text {East},\text {West}\}
+    $</span>, corresponding to the direction from which you arrive,
+    the direction in which you want to leave, and the direction
+    from which the other vehicle approaches. You can assume
+    <span class="tex2jax_process">$a \neq b$</span> and
+    <span class="tex2jax_process">$a \neq c$</span>.</p>
+<h2>Output</h2>
+<p>A single line with the string “Yes” or “No” as explained
+    above.</p>
+<h2>Explanation of Sample <span class="tex2jax_process">$1$</span></h2>
+<p>In this example, you arrive from South and want to turn left
+    to leave towards West. The other vehicle comes from East, which
+    corresponds to your right. Consequently, you have to yield the
+    right-of-way to the other vehicle because of condition
+    <span class="tex2jax_process">$2$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>South West East
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>South North North
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

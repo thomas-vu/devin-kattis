@@ -1,0 +1,126 @@
+<div class="problembody">
+<p>Having recently read about Pythagoras, Doris has become
+    convinced that there are no irrational numbers! She claims that
+    every number can be written as the quotient of two whole
+    numbers <span class="tex2jax_process">$A$</span> and
+    <span class="tex2jax_process">$B$</span>. As an exercise, she
+    has decided to find these ratios for some positive physical
+    constants. Because every constant has some error <span class="tex2jax_process">$F$</span>, she only wants a ratio with a
+    quotient between <span class="tex2jax_process">$C-F$</span> and
+    <span class="tex2jax_process">$C+F$</span>. Furthermore, since
+    she dislikes long numbers, she wants to find the pair
+    <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, whose quotient lies within the
+    interval and has the smallest <span class="tex2jax_process">$A$</span>. If there are many such
+    <span class="tex2jax_process">$A$</span>, she chooses the pair
+    <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span> with smaller <span class="tex2jax_process">$B$</span>. Can you help her accomplish this
+    goal?</p>
+<h2>Input</h2>
+<p>The first contains two positive real numbers <span class="tex2jax_process">$C, F$</span>, (<span class="tex2jax_process">$0 &lt; C \leq 10$</span>), (<span class="tex2jax_process">$10^{-8} \leq F \leq 0.1$</span>), the
+    desired quotient and the margin for error, both in decimal form
+    with at most 6 significant digits.</p>
+<h2>Output</h2>
+<p>Print two lines with one positive integer each, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. It is guaranteed that these are
+    less than <span class="tex2jax_process">$10^6$</span>.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Restrictions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$B = 1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$A, B \leq
+          10^{3}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0.01 0.001
+</pre>
+</td>
+<td>
+<pre>1
+91
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4.71344 0.0000091295
+</pre>
+</td>
+<td>
+<pre>1579
+335
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0.333 0.00000001
+</pre>
+</td>
+<td>
+<pre>333
+1000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>A level is being designed for a new platform game. The
+    locations of the platforms have been chosen. Contrary to
+    popular opinion, platforms can’t float in the air, but need
+    pillars for support. More precisely, each of the two ends of
+    the platform needs to be supported by a <b class="bfseries">pillar standing on the floor or on a different
+    platform</b>.</p>
+<p>You will be given the locations of the platforms in a
+    coordinate system as in the left image below. Each platform’s
+    location is determined by its altitude (vertical distance from
+    the ground) and the start and end coordinates in the horizontal
+    direction. Each support pillar is placed <b class="bfseries">half a unit</b> from the end of a platform, as in
+    the right image.</p>
+<p>Determine the total length of pillars needed to support all
+    the platforms.</p>
+<div class="figure">
+<center>
+<div class="minipage" style="width:294.0pt">
+<img alt="\includegraphics[width=\textwidth ]{platforme.png}" src="/problems/platforme/file/statement/en/img-0001.png" style="width:"/>
+<div class="caption">
+<b>Figure 1</b>: Example level with three platforms.
+            The lowest platform is at altitude <span class="tex2jax_process">$1$</span>, the second lowest at
+            altitude <span class="tex2jax_process">$3$</span> and
+            the third at altitude <span class="tex2jax_process">$5$</span>.
+          </div>
+</div>
+<div class="minipage" style="width:294.0pt">
+<img alt="\includegraphics[width=\textwidth ]{pillars.png}" src="/problems/platforme/file/statement/en/img-0002.png" style="width:"/>
+<div class="caption">
+<b>Figure 2</b>: The total length of pillars needed to
+            support all platforms is <span class="tex2jax_process">$14$</span>.
+          </div>
+</div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$1
+    \le N \le 100$</span>, the number of platforms.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains the position of one
+    platform, three coordinates <span class="tex2jax_process">$Y$</span>, <span class="tex2jax_process">$X_1$</span> and <span class="tex2jax_process">$X_2$</span>. The first number is the
+    altitude, the other two the horizontal coordinates. All
+    coordinates will be positive integers less than <span class="tex2jax_process">$10\, 000$</span> satisfying <span class="tex2jax_process">$X_2 &gt; X_1 + 1$</span> (i.e., the length
+    of each platform will be at least <span class="tex2jax_process">$2$</span>).</p>
+<p>The input will be such that no two platforms overlap.</p>
+<h2>Output</h2>
+<p>Output the total length of pillars needed to support all the
+    platforms.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 5 10
+3 1 5
+5 3 7
+</pre>
+</td>
+<td>
+<pre>
+14
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+50 50 90
+40 40 80
+30 30 70
+20 20 60
+10 10 50
+</pre>
+</td>
+<td>
+<pre>
+200
+</pre>
+</td>
+</tr>
+</table>
+</div>

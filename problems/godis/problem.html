@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>It is Saturday and Ann Britt-Caroline is going to buy candy.
+    She has identified several different bags of candy she is
+    considering buying.</p>
+<p>Each bag contains a number of pieces of candy of different
+    types. There are <span class="tex2jax_process">$10$</span>
+    types of normal candy (these are numbered <span class="tex2jax_process">$1, \ldots , 10$</span>), and <span class="tex2jax_process">$10$</span> types of anti-candy (numbered
+    <span class="tex2jax_process">$-1, \ldots , -10$</span>). It
+    just so happens that candy of type <span class="tex2jax_process">$n$</span> and type <span class="tex2jax_process">$-n$</span> do not go well together – they
+    are annihilated if they come in contact with each other. Other
+    than that anti-candy tastes just the same as normal candy.</p>
+<p>When Ann Britt-Caroline has bought the bags of candy she
+    mixes them in a big bowl such that all pairs of
+    candy/anti-candy are annihilated (she mixes thoroughly). How
+    many pieces of candy can Ann Britt-Caroline have left (after
+    all pairs of candy/anti-candy are annihilated), if she selects
+    her bags of candy optimally? Note that she can only buy one bag
+    of each type. Ignore any money-related issues – her parents
+    will pay.</p>
+<h2>Input</h2>
+<p>The first line in the input consist of an integer
+    <span class="tex2jax_process">$1 \le N \le 1000$</span> - the
+    number of bags of candy.</p>
+<p>The following <span class="tex2jax_process">$n$</span> lines
+    describe each bag of candy. Each line starts with an integer
+    <span class="tex2jax_process">$1 \le k \le 10$</span>,
+    specifying the number of different types of candy in the bag.
+    Then follow <span class="tex2jax_process">$k$</span> pairs of
+    integers <span class="tex2jax_process">$s$</span> <span class="tex2jax_process">$n$</span>, which means that there are
+    <span class="tex2jax_process">$n$</span> pieces of candy type
+    <span class="tex2jax_process">$s$</span>. Each type of candy is
+    mentioned at most once per bag, and types <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$-s$</span> can not be in the same bag.</p>
+<p>For all <span class="tex2jax_process">$n$</span>,
+    <span class="tex2jax_process">$1 \le n \le 1000$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer: the largest amount of candy Ann
+    Britt-Caroline can have in the end.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on several groups of test
+    cases. To get points for a group you need to pass all the tests
+    of that group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 15$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$25$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 1000$</span>.
+          Each bag will contain only one type of candy.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \le 1000$</span></p>
+</td>
+</tr>
+</table>
+<h2>Explanation of the sample</h2>
+<p>Ann Britt-Caroline gets the largest amount if she buys the
+    first two bags. Then a candy of type <span class="tex2jax_process">$1$</span> and one of type <span class="tex2jax_process">$-1$</span> are eliminated, and two candies
+    of type <span class="tex2jax_process">$1$</span> remain, and
+    five of type <span class="tex2jax_process">$-2$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1 3
+2 -1 1 -2 5
+2 2 2 -3 1
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

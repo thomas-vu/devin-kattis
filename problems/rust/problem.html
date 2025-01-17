@@ -1,0 +1,151 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/rust/file/statement/en/img-0001.png" class="illustration" src="/problems/rust/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Rust_logo.png">commons.wikimedia.org</a>
+</div>
+</div>
+<p>Benni has just started playing the game Rust. This is an
+    extremely exciting game full of action. But in Rust you can
+    also build. Benni has been collecting rocks all day so he can
+    build his own home. He has decided to build a square wall with
+    dimensions <span class="tex2jax_process">$K \times
+    K$</span>.</p>
+<p>Benni never realized how hard it would be to pick a spot for
+    his home. Benni has a map with dimensions <span class="tex2jax_process">$N \times N$</span>. There are static rocks
+    which are unbreakable marked on the map with <tt class="ttfamily">#</tt>. Additionally, there are valuables marked on
+    the map with the digits <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$9$</span>. Benni cannot build a wall on
+    rocks or valuables. However, the hollow area within the wall
+    can include rocks and valuables. If Benni builds a wall
+    surrounding some amount of valuables then he gains possession
+    of those valuables.</p>
+<p>Benni has no idea where he should build his wall. He asks if
+    you can tell him where to build his wall to maximize the total
+    worth of valuables he can possess.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$5 \leq N \leq 1\, 000$</span>), the
+    dimensions of the map, and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$3
+    \leq K \leq N$</span>), the dimensions of the wall.</p>
+<p>Then <span class="tex2jax_process">$N$</span> lines follow,
+    each with <span class="tex2jax_process">$N$</span> symbols,
+    representing the map. It includes <tt class="ttfamily">#</tt>,
+    representing unbreakable rocks, <tt class="ttfamily">.</tt>,
+    representing empty tiles and digits between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$9$</span> which represent valuables, in
+    particular, their value.</p>
+<h2>Output</h2>
+<p>Output a single integers, the maximum total value of the
+    valuables Benni can gain possession of, assuming he builds his
+    wall in the optimal spot. If there is no spot for Benni to
+    build his home then output <span class="tex2jax_process">$0$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$K = 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>27</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+.....
+.5.7.
+...#.
+.9...
+2....
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+.....
+.333.
+.333.
+.333.
+.....
+</pre>
+</td>
+<td>
+<pre>27
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+....#
+.333.
+.333.
+.333.
+.....
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

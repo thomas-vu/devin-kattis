@@ -1,0 +1,73 @@
+<div class="problembody">
+<p><em>Remark:</em> We were originally planning to give you
+    this in the real contest, but since we have too many awesome
+    problems for you for tomorrow and this one is just way too
+    easy, we decided to move it to the dress rehearsal as a sneak
+    preview.</p>
+<p>In this problem we will be exploring the concept of sorting
+    numbers. Most of you have likely written a sorting algorithm
+    before, but just in case, here is a tutorial: You reorder the
+    numbers to put the smaller ones in front and larger ones in the
+    back.</p>
+<p>Having dealt with the theory, we come to practice. You will
+    be given some integers. Please output the same integers in
+    sorted order. Where is the trick, you ask? Well, you might have
+    to deal with equality cases. If two numbers are equal, the one
+    that was the first in the input should also be the first on the
+    output. Other than that, there are no tricks, no complications.
+    Just sort the numbers from lowest to highest. Simple!</p>
+<p>Oh, one more thing. When we say <i class="it">some</i>
+    integers, we mean they might be somewhat large integers. To
+    make life easier for you, we will express them in a simple
+    “tower of powers” form. Each integer will be in the
+    format</p><span class="tex2jax_process">\[ a_1^{a_2^{\ldots
+    ^{a_ n}}}, \]</span>
+<p>where <span class="tex2jax_process">$1 \leq a_1, a_2, \ldots
+    , a_ n \leq 100$</span>, and <span class="tex2jax_process">$1
+    \leq n \leq 100$</span>. Note that evaluation is from top to
+    bottom, thus</p><span class="tex2jax_process">\[
+    a_1^{a_2^{a_3}} = a_1^{\left(a_2^{a_3}\right)}. \]</span>
+<p>Are you done yet? No? Better start working!</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line of
+    each test case contains the number <span class="tex2jax_process">$M$</span> of integers in this test case,
+    <span class="tex2jax_process">$1 \leq M \leq 100$</span>. Each
+    of the next <span class="tex2jax_process">$M$</span> lines
+    describes one of the <span class="tex2jax_process">$M$</span>
+    integers. The integer is written as described above, using the
+    caret (<tt>^</tt>) to represent power, with no whitespace.
+    There will be between <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$100$</span> numbers in the
+    representation of each integer, and each of these numbers will
+    be an integer between <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$100$</span>.</p>
+<h2>Output</h2>
+<p>Display the case number (<span class="tex2jax_process">$1$</span>) followed by the sorted list of
+    integers, one per line, in the original form.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2^2^2
+3^4
+15
+9^2
+</pre>
+</td>
+<td>
+<pre>
+Case 1:
+15
+2^2^2
+3^4
+9^2
+</pre>
+</td>
+</tr>
+</table>
+</div>

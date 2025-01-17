@@ -1,0 +1,117 @@
+<div class="problembody">
+<p>The ICPC World Finals are here and they are packed full of
+    activities you want to attend — speeches, presentations, fun
+    events, not to mention the contest itself. There is only one
+    problem: when are you going to sleep?</p>
+<p>When you fall asleep, you always set a timer because
+    otherwise you would be able to sleep forever. Using the timer,
+    you can choose to sleep for any positive integer amount of
+    minutes. After sleeping for <span class="tex2jax_process">$k$</span> minutes, you will be rested for
+    another <span class="tex2jax_process">$k$</span> minutes (and
+    so you will not be able to fall asleep again); and then you
+    will be able to function for a third <span class="tex2jax_process">$k$</span> minutes (so you can stay awake,
+    but you can also go to sleep if you want to).</p>
+<p>You know the times of all the activities at the Finals; you
+    should plan your sleep schedule to not miss any part of any
+    event. Just before the Finals start (at minute <span class="tex2jax_process">$0$</span>), you will arrive in your hotel
+    room after a long journey and you will need to sleep
+    immediately.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq n \leq 200\, 000$</span>), the number
+    of activities planned for the Finals.</p>
+<p>The <span class="tex2jax_process">$i^{\text {th}}$</span> of
+    the remaining <span class="tex2jax_process">$n$</span> lines
+    contains two positive integers <span class="tex2jax_process">$b_ i$</span> and <span class="tex2jax_process">$e_ i$</span> (<span class="tex2jax_process">$b_ i &lt; e_ i$</span>, <span class="tex2jax_process">$e_ i \le b_{i+1}$</span>, <span class="tex2jax_process">$0 \le b_1$</span>, <span class="tex2jax_process">$e_ n \leq 10^{10}$</span>), the beginning
+    and end time of the activity, counted in minutes from the
+    beginning of the Finals.</p>
+<h2>Output</h2>
+<p>If it is possible to find a sleep schedule that allows you
+    to participate in all planned activities in their entirety,
+    then output such a schedule in the format described below.
+    Otherwise, output <tt class="ttfamily">impossible</tt>.</p>
+<p>A sleep schedule is specified by a line containing the
+    number <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$1 \le p \le 10^6$</span>) of sleep periods,
+    followed by <span class="tex2jax_process">$p$</span> lines. The
+    <span class="tex2jax_process">$i^{\text {th}}$</span> of these
+    lines contains two integers <span class="tex2jax_process">$s_
+    i$</span> and <span class="tex2jax_process">$t_ i$</span> — the
+    beginning and end time of the <span class="tex2jax_process">$i^{\text {th}}$</span> sleep period, counted
+    in minutes from the beginning of the Finals. Note that you
+    should not output any sleep period after the last activity.</p>
+<p>The sleep periods must satisfy <span class="tex2jax_process">$0 = s_1 &lt; t_1 &lt; s_2 &lt; t_2 &lt;
+    \ldots &lt; t_ p \leq b_ n$</span> as well as the condition
+    described in the statement that does not allow you to fall
+    asleep for some time after a sleep period. You may fall asleep
+    immediately after an activity (so it may be that <span class="tex2jax_process">$s_ i=e_ j$</span>) and you may wake up just
+    before an activity (so it may be that <span class="tex2jax_process">$t_ i=b_ j$</span>).</p>
+<p>If there are multiple valid sleep schedules, any one will be
+    accepted. It can be shown that if there is a valid sleep
+    schedule, then there is also one with at most <span class="tex2jax_process">$10^6$</span> sleep periods.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+30 45
+60 90
+120 180
+</pre>
+</td>
+<td>
+<pre>2
+0 30
+90 120
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+0 60
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+31 32
+35 41
+48 55
+69 91
+1000 2022
+2022 2023
+2994 4096
+</pre>
+</td>
+<td>
+<pre>5
+0 5
+10 28
+56 68
+92 900
+2025 2900
+</pre>
+</td>
+</tr>
+</table>
+</div>

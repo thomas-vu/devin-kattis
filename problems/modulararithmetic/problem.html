@@ -1,0 +1,53 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>There are several test cases. Each test case begins with a
+    line containing two integers <span class="tex2jax_process">$n,
+    t$</span>, where <span class="tex2jax_process">$1 \leq n \leq
+    10^{18}$</span>, and <span class="tex2jax_process">$0 \leq t
+    \leq 100$</span>.</p>
+<p>Then follow <span class="tex2jax_process">$t$</span>
+    operations to perform, each of the form <span class="tex2jax_process">$x\ \mbox{op}\ y$</span>. Here, <span class="tex2jax_process">$0 \leq x, y &lt; n$</span> are integers, and
+    op is one of ’<span class="tex2jax_process">$+$</span>’,
+    ’<span class="tex2jax_process">$-$</span>’, ’<span class="tex2jax_process">$*$</span>’, ’<span class="tex2jax_process">$/$</span>’, indicating an operation to
+    perform. Division, <span class="tex2jax_process">$x / y$</span>
+    is defined to be <span class="tex2jax_process">$xy^{-1}$</span>.</p>
+<p>Input is terminated by a case where <span class="tex2jax_process">$n = 0$</span> and <span class="tex2jax_process">$t = 0$</span>, which should not be
+    processed.</p>
+<h2>Output</h2>
+<p>For each operation in each test case, output the result of
+    performing the indicated operation modulo <span class="tex2jax_process">$n$</span>. If the operations is not possible
+    (e.g. because of division by zero), output <span class="tex2jax_process">$-1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1000 3
+1 / 999
+1 / 998
+578 * 178
+13 4
+7 / 9
+9 * 3
+0 - 9
+10 + 10
+0 0
+</pre>
+</td>
+<td>
+<pre>
+999
+-1
+884
+8
+1
+4
+7
+</pre>
+</td>
+</tr>
+</table>
+</div>

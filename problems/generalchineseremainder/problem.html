@@ -1,0 +1,34 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The first line of input consists of an integers <span class="tex2jax_process">$T$</span> where <span class="tex2jax_process">$1 \leq T \leq 1000$</span>, the number of
+    test cases. Then follow <span class="tex2jax_process">$T$</span> lines, each containing four
+    integers <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$m$</span> satisfying <span class="tex2jax_process">$1 \leq n, m \leq 10^9$</span>, <span class="tex2jax_process">$0 \leq a &lt; n$</span>, <span class="tex2jax_process">$0 \leq b &lt; m$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output two integers <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$K$</span>, where <span class="tex2jax_process">$K = \mbox{lcm}(n,m)$</span> and <span class="tex2jax_process">$0 \leq x &lt; K$</span>, giving the solution
+    <span class="tex2jax_process">$x \pmod K$</span> to the
+    equations <span class="tex2jax_process">$x = a \pmod n, x = b
+    \pmod m$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+10000 23000 9000 23000
+10000 23000 10000 23000
+1234 2000 746 2002
+</pre>
+</td>
+<td>
+<pre>
+no solution
+10000 23000
+489234 2002000
+</pre>
+</td>
+</tr>
+</table>
+</div>

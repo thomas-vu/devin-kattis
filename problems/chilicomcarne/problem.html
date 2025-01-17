@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/chilicomcarne/file/statement/en/img-0001.png" class="illustration" src="/problems/chilicomcarne/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by Randall Munroe, <a href="https://xkcd.com/1205/">xkcd.com</a>
+</div>
+</div>
+<p>Programmers all know COM, which is of course an abbreviation
+    for Cost Of Maintenance and has no other interpretations. Often
+    such costs can be lowered by automating certain tasks, but many
+    programmers are overzealous in this regard and end up spending
+    more time programming an automatic solution than it would have
+    taken them to do the task by hand for the rest of their
+    lives.</p>
+<p>To rectify this a program has to be made that can
+    automatically determine whether it is worth it to write a
+    program to automate things. As this program does not yet exist
+    we can’t say whether it’s worth it to write this program, so
+    that’ll just have to be revealed in due time.</p>
+<p>We measure time using a few different units, with the
+    largest one being a year. A single year has <span class="tex2jax_process">$52$</span> weeks. Each week has <span class="tex2jax_process">$5$</span> work days and each work day has
+    <span class="tex2jax_process">$8$</span> work hours. Finally
+    there are of course <span class="tex2jax_process">$60$</span>
+    minutes to an hour and <span class="tex2jax_process">$60$</span> seconds to a minute.</p>
+<p>Given how often the task has to be done, how long it takes
+    to do it, and how long it would take to automate it, make a
+    program that can tell how much time it would save to automate
+    the task over the course of the next five years. The saved time
+    is measured starting from the program being finished.</p>
+<h2>Input</h2>
+<p>The first line gives how often the task needs to be
+    performed, given as <tt class="ttfamily">n sinnum daglega</tt>
+    where <span class="tex2jax_process">$n$</span> is an integer
+    and <tt class="ttfamily">daglega</tt> means daily. If
+    <span class="tex2jax_process">$n$</span> is one the second word
+    is replaced with <tt class="ttfamily">sinni</tt>. The third
+    word can also be <tt class="ttfamily">vikulega</tt> which means
+    weekly or <tt class="ttfamily">arlega</tt> which means yearly.
+    The next line gives how long it takes to perform the task each
+    time, given as <tt class="ttfamily">n sekundur</tt> where
+    <span class="tex2jax_process">$n$</span> is an integer and
+    <tt class="ttfamily">sekundur</tt> means seconds. Instead of
+    <tt class="ttfamily">sekundur</tt> the second word can also be
+    <tt class="ttfamily">minutur</tt> (minutes), <tt class="ttfamily">klukkustundir</tt> (hours), <tt class="ttfamily">dagar</tt> (days), <tt class="ttfamily">vikur</tt>
+    (weeks), <tt class="ttfamily">ar</tt> (years). If <span class="tex2jax_process">$n = 1$</span> the input contains the
+    singular form of the word instead, i.e. one of <tt class="ttfamily">sekunda</tt>, <tt class="ttfamily">minuta</tt>,
+    <tt class="ttfamily">klukkustund</tt>, <tt class="ttfamily">dagur</tt>, <tt class="ttfamily">vika</tt> or
+    <tt class="ttfamily">ar</tt>, given in the same order as above.
+    Finally the third and last line gives how much time it would
+    take to automate the task, given in the same format as the line
+    before. <span class="tex2jax_process">$n$</span> is always a
+    positive integer with value at most <span class="tex2jax_process">$10$</span>. Note that since the task might
+    be taken care of by more than a single person it is possible
+    that it takes more than five years to perform the task over the
+    next five years in total.</p>
+<h2>Output</h2>
+<p>Print the number of seconds the program would save over
+    <span class="tex2jax_process">$5$</span> years. If automating
+    the task takes strictly more time than doing the task manually
+    over the next <span class="tex2jax_process">$5$</span> years,
+    instead print <tt class="ttfamily">Borgar sig ekki!</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 sinni vikulega
+1 minuta
+1 klukkustund
+</pre>
+</td>
+<td>
+<pre>12000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 sinnum daglega
+10 sekundur
+2 vikur
+</pre>
+</td>
+<td>
+<pre>Borgar sig ekki!
+</pre>
+</td>
+</tr>
+</table>
+</div>

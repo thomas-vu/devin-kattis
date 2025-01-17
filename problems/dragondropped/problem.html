@@ -1,0 +1,451 @@
+<div class="problembody">
+<p>Rarity and Spike are best friends who often spend a lot of
+    time together. Recently, however, Spike’s griffon pen pal Gabby
+    from Griffonstone has come to town to work mail delivery, and
+    he has decided to accompany her in her daily shifts, leaving
+    little time for Rarity.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{TBO_GabSpike.png}" src="/problems/dragondropped/file/statement/en/img-0001.png" style="width:45.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1273329566443024386/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>Without Spike’s company, Rarity has begun to feel lonely.
+    She decides that it would be a good idea to meet Gabby and
+    Spike right where they end their shift so that she can invite
+    both of them to hang out.</p>
+<p>The only issue is that Rarity does not know where their
+    shift ends. She knows that Gabby has an extremely regular
+    shift:</p>
+<ol class="enumerate">
+<li>
+<p>The shift always begins at the Ponyville post
+        office.</p>
+</li>
+<li>
+<p>The shift never returns to the Ponyville post
+        office.</p>
+</li>
+<li>
+<p>Excluding the Ponyville post office, the shift involves
+        at most <span class="tex2jax_process">$6\, 000$</span>
+        distinct locations.<br/>
+        That is, if one runs the entire shift, one would have
+        encountered at most <span class="tex2jax_process">$6\,
+        000$</span> distinct locations.</p>
+</li>
+<li>
+<p>The shift ends after visiting exactly <span class="tex2jax_process">$N$</span>, not necessarily distinct,
+        locations. Note that the beginning at the Ponyville post
+        office does not count as a visit.</p>
+</li>
+<li>
+<p>The next location on the shift, if it exists, is always
+        distinct from the current location.</p>
+</li>
+<li>
+<p>The next location on the shift, if it exists, depends
+        <i class="itshape">only</i> on the current location.<br/>
+        That is, if the <span class="tex2jax_process">$x^\text
+        {th}$</span> and <span class="tex2jax_process">$y^\text
+        {th}$</span> location on the shift are the same, then the
+        <span class="tex2jax_process">$(x+1)^\text {th}$</span> and
+        <span class="tex2jax_process">$(y+1)^\text {th}$</span>
+        location on the shift, if they exist, are also the
+        same.</p>
+</li>
+</ol>
+<p>This information is not enough to know where their shift
+    ends, so today, Rarity decided to meet Gabby and Spike at the
+    Ponyville post office at dawn, a few hours before their shift
+    starts, to request them to show her around. Genteel to a fault,
+    she does not want to be too forward and just ask them directly
+    where their shift ends—that would be rude—instead, she needs to
+    at least pretend to be interested in their work. In one
+    request, Rarity can either:</p>
+<ol class="enumerate">
+<li>
+<p>Ask Gabby to visit the next location on the shift. If
+        there are no more locations on the shift, Gabby will inform
+        Rarity of that and stay where she is;</p>
+</li>
+<li>
+<p>Ask Spike to visit the next location on the shift. If
+        there are no more locations on the shift, Spike will inform
+        Rarity of that and stay where he is;</p>
+</li>
+<li>
+<p>Ask Gabby to return to the Ponyville post office,
+        restarting the shift;</p>
+</li>
+<li>
+<p>Ask Spike to return to the Ponyville post office,
+        restarting the shift.</p>
+</li>
+</ol>
+<p>Recall that Spike typically accompanies Gabby and therefore
+    they are both knowledgeable of and follow the same shift.</p>
+<p>After each request, Rarity will take note of whether Gabby
+    and Spike are at the same location, but otherwise unfortunately
+    is not familiar enough with the locations to know exactly where
+    they are. Thus, <i class="itshape">either</i> Gabby or Spike
+    needs to be at the ending location once she ascertains which
+    one it is; she will then ask for a few details about this place
+    before letting her or him return to call the other and get
+    ready for work.</p>
+<p>She only has time to make <span class="tex2jax_process">$30\, 000$</span> requests before Gabby and
+    Spike have to begin their shift. Help her determine where their
+    shift ends!</p>
+<h2>Interaction</h2>
+<p>First, your program should read a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 10^9$</span>), the number of
+    locations after which the shift ends on a single line from
+    standard input.</p>
+<p>Then, we repeat the following process:</p>
+<ul class="itemize">
+<li>
+<p>Your program writes a single line to the standard output
+        containing either:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">NEXT GABBY</tt>, meaning that
+            Rarity should ask Gabby to visit the next location on
+            the shift.</p>
+</li>
+<li>
+<p><tt class="ttfamily">NEXT SPIKE</tt>, meaning that
+            Rarity should ask Spike to visit the next location on
+            the shift.</p>
+</li>
+<li>
+<p><tt class="ttfamily">RETURN GABBY</tt>, meaning that
+            Rarity should ask Gabby to return to the Ponyville post
+            office, restarting the shift.</p>
+</li>
+<li>
+<p><tt class="ttfamily">RETURN SPIKE</tt>, meaning that
+            Rarity should ask Spike to return to the Ponyville post
+            office, restarting the shift.<br/>
+            The above four requests can be done a total of at most
+            <span class="tex2jax_process">$30\, 000$</span>
+            times.</p>
+</li>
+<li>
+<p><tt class="ttfamily">ASK GABBY</tt>, meaning that
+            you are sure that the location Gabby is at now is
+            precisely where they will end their shift, and Rarity
+            should ask her for a few details about this place
+            before letting her return to call Spike and get ready
+            for work.</p>
+</li>
+<li>
+<p><tt class="ttfamily">ASK SPIKE</tt>, meaning that
+            you are sure that the location Spike is at now is
+            precisely where they will end their shift, and Rarity
+            should ask him for a few details about this place
+            before letting him return to call Gabby and get ready
+            for work.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If your program makes a request, your program should
+        read two integers <span class="tex2jax_process">$s$</span>
+        and <span class="tex2jax_process">$e$</span> (<span class="tex2jax_process">$0 \leq s, e \leq 1$</span>) from
+        standard input. If <span class="tex2jax_process">$s =
+        0$</span>, it means that you asked either Gabby or Spike to
+        visit the next location on the shift but there were no more
+        locations on the shift; in all other cases <span class="tex2jax_process">$s = 1$</span>. If <span class="tex2jax_process">$e = 0$</span>, it means that after your
+        request, Gabby and Spike are at different locations; if
+        <span class="tex2jax_process">$e = 1$</span>, it means that
+        after your request, Gabby and Spike are at the same
+        location.</p>
+</li>
+<li>
+<p>If your program guesses the answer, your answer will be
+        checked. <b class="bfseries">Your program should terminate
+        immediately after this.</b></p>
+</li>
+</ul>
+<p>After making a request or declaring the ending location, do
+    not forget to output end of line and <b class="bfseries">flush</b> the output. To do this, use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> or <tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python;</p>
+</li>
+<li>
+<p>see documentation for other languages.</p>
+</li>
+</ul>
+<p>The input will be such that there is always a way to
+    determine the ending location within <span class="tex2jax_process">$30\, 000$</span> requests.</p>
+<h2>Sample interaction</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p>Your output (standard output)</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Kattis’ answer (standard input)</p>
+</td>
+<td style="text-align:left">
+<p>Interpretation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{4}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby and Spike start at the Ponyville post office.
+          The shift ends after visiting <span class="tex2jax_process">$4$</span> locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          GABBY}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Gabby to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby moves to the next location on the shift; Gabby
+          and Spike are at different locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          SPIKE}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Spike to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          1}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Spike moves to the next location on the shift; Gabby
+          and Spike are at the same location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          GABBY}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Gabby to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby moves to the next location on the shift; Gabby
+          and Spike are at different locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          GABBY}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Gabby to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          1}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby moves to the next location on the shift; Gabby
+          and Spike are at the same location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          GABBY}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Gabby to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby moves to the next location on the shift; Gabby
+          and Spike are at different locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          GABBY}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Gabby to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{0
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are no more locations on the shift so Gabby
+          stays where she is; Gabby and Spike are at different
+          locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{RETURN
+          SPIKE}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Spike to return to the Ponyville
+          post office.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Spike returns to the Ponyville post office; Gabby and
+          Spike are at different locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          SPIKE}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Spike to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Spike moves to the next location on the shift; Gabby
+          and Spike are at different locations.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{NEXT
+          SPIKE}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Rarity should ask Spike to move to the next
+          location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          1}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Spike moves to the next location on the shift; Gabby
+          and Spike are at the same location.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{ASK
+          SPIKE}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Gabby had already reached the location at the end of
+          her shift, and Spike is at the same location as her;
+          hence we can be sure that the location he is at now is
+          precisely where they will end their shift. Note that we
+          could also have just asked Gabby as soon as she reached
+          the end of her shift; these last few requests serve
+          simply to further illustrate the process.</p>
+</td>
+</tr>
+</table>
+</div>

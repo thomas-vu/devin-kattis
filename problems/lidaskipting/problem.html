@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>In recent years contestants have had the option of grouping
+    up into teams to compete in Forritunarkepni Framhaldsskólanna,
+    but as you know teams can contain up to three people. This
+    hasn’t always gone too well since some people end up being left
+    out. The planning committee have thus decided to take care of
+    team planning themselves, making sure no one is left behind.
+    But they realize that it’s not possible to divide people into
+    three person teams without anyone being left out.</p>
+<p>Next year <span class="tex2jax_process">$N$</span> people
+    intend to compete in Forritunarkeppni Framhaldsskólanna. Can
+    you help the committee check whether it will be possible to
+    divide the <span class="tex2jax_process">$N$</span> contestants
+    into three person teams without anyone being left out?</p>
+<h2>Input</h2>
+<p>One line with the positive integer <span class="tex2jax_process">$N$</span> denoting the number of people who
+    intend to compete.</p>
+<h2>Output</h2>
+<p>A single line containing <tt class="ttfamily">Jebb</tt> if
+    the <span class="tex2jax_process">$N$</span> contestants can be
+    divided into three person teams without anyone being left out,
+    or <tt class="ttfamily">Neibb</tt> if it is not possible.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample <span class="tex2jax_process">$N =
+    3$</span> people intend to compete. The answer is <tt class="ttfamily">Jebb</tt> since it’s possible to create one team,
+    leaving no one behind.</p>
+<p>In the second sample <span class="tex2jax_process">$N =
+    14$</span> people intend to compete. There aren’t enough people
+    to make five teams, but if four teams are made then two people
+    are left behind. Thus it is not possible to divide <span class="tex2jax_process">$14$</span> people into three person teams,
+    so the answer is <tt class="ttfamily">Neibb</tt>.</p>
+<p>In the last sample <span class="tex2jax_process">$N = 300\,
+    000\, 000\, 000$</span> people intend to compete. Here we can
+    make <span class="tex2jax_process">$100\, 000\, 000\,
+    000$</span> three person teams leaving no one behind. Thus the
+    answer is <tt class="ttfamily">Jebb</tt>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 30$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 30\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq
+          10^{12}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq
+          10^{100}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>300000000000
+</pre>
+</td>
+<td>
+<pre>Jebb
+</pre>
+</td>
+</tr>
+</table>
+</div>

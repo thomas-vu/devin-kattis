@@ -1,0 +1,104 @@
+<div class="problembody">
+<p>At the Department for Bills and Coins, an extension of
+    today’s monetary system has newly been proposed, in order to
+    make it fit the new economy better. A number of new so called
+    e-coins will be produced, which, in addition to having a value
+    in the normal sense of today, also have an InfoTechnological
+    value. The goal of this reform is, of course, to make justice
+    to the economy of numerous dotcom companies which, despite the
+    fact that they are low on money surely have a lot of IT inside.
+    All money of the old kind will keep its conventional value and
+    get zero InfoTechnological value.</p>
+<p>To successfully make value comparisions in the new system,
+    something called the e-modulus is introduced. This is
+    calculated as <span class="tex2jax_process">$\sqrt {X^2 +
+    Y^2}$</span>, where <span class="tex2jax_process">$X$</span>
+    and <span class="tex2jax_process">$Y$</span> hold the sums of
+    the conventional and InfoTechnological values respectively. For
+    instance, money with a conventional value of $3 altogether and
+    an InfoTechnological value of $4 will get an e-modulus of $5.
+    Bear in mind that you have to calculate the sums of the
+    conventional and InfoTechnological values separately before you
+    calculate the e-modulus of the money.</p>
+<p>To simplify the move to e-currency, you are assigned to
+    write a program that, given the e-modulus that shall be reached
+    and a list of the different types of e-coins that are
+    available, calculates the smallest amount of e-coins that are
+    needed to exactly match the e-modulus. There is no limit on how
+    many e-coins of each type that may be used to match the given
+    e-modulus.</p>
+<div class="figure" id="fig:ecoins">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{ecoins}" src="/problems/ecoins/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The illustration exemplifies adding 8
+          coins of conventional value 2 and InfoTechnological value
+          1, and 2 coins with pure InfoTechnological value 2. The
+          e-modulus is of course 20 since <span class="tex2jax_process">$\sqrt {(8 \cdot 2+ 2 \cdot 0)^2+(8
+          \cdot 1+2 \cdot 2)^2}= \sqrt {16^2+12^2}=20$</span>
+</div>
+</center>
+</div>
+<h2>Input</h2>
+<p>A line with the number of problems <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0&lt;n\le 100$</span>), followed by
+    <span class="tex2jax_process">$n$</span> times:</p>
+<ul class="itemize">
+<li>
+<p>A line with the integers <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0&lt;m\le 40$</span>) and <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$0&lt; S \le 300$</span>), where
+        <span class="tex2jax_process">$m$</span> indicates the
+        number of different e-coin types that exist in the problem,
+        and <span class="tex2jax_process">$S$</span> states the
+        value of the e-modulus that shall be matched exactly.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines, each
+        consisting of one pair of non-negative integers describing
+        the value of an e-coin. The first number in the pair states
+        the conventional value, and the second number holds the
+        InfoTechnological value of the coin. Both values are
+        between <span class="tex2jax_process">$0$</span> and
+        <span class="tex2jax_process">$S$</span> (inclusive).</p>
+</li>
+</ul>
+<p>When more than one number are present on a line, they will
+    be separated by a space. Between each problem, there will be
+    one blank line.</p>
+<h2>Output</h2>
+<p>The output consists of <span class="tex2jax_process">$n$</span> lines. Each line contains either a
+    single integer holding the number of coins necessary to reach
+    the specified e-modulus <span class="tex2jax_process">$S$</span> or, if <span class="tex2jax_process">$S$</span> cannot be reached, the string
+    “<tt class="ttfamily">not possible</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 5
+0 2
+2 0
+
+3 20
+0 2
+2 0
+2 1
+
+3 5
+3 0
+0 4
+5 5
+</pre>
+</td>
+<td>
+<pre>
+not possible
+10
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>For this problem we will consider a type of binary tree that
+    we will call a boolean tree. In this tree, every row is
+    completely filled, except possibly the last (deepest) row, and
+    the nodes in the last row are as far to the left as possible.
+    Additionally, every node in the tree will either have 0 or 2
+    children.</p>
+<p>What makes a boolean tree special is that each node has a
+    boolean value associated with it, 1 or 0. In addition, each
+    interior node has either an "AND" or an "OR" gate associated
+    with it. The value of an "AND" gate node is given by the
+    logical AND of its two children’s values. The value of an "OR"
+    gate likewise is given by the logical OR of its two children’s
+    values. The value of all of the leaf nodes will be given as
+    input so that the value of all nodes can be calculated up the
+    tree.</p>
+<p>The root of the tree is of particular interest to us. We
+    would really like for the root to have the value <span class="tex2jax_process">$V$</span>, either 1 or 0. Unfortunately,
+    this may not be the value the root actually has. Luckily for
+    us, we can cheat and change the type of gate for some of the
+    nodes; we can change an AND gate to an OR gate or an OR gate to
+    an AND gate.</p>
+<p>Given a description of a boolean tree and what gates can be
+    changed, find the minimum number of gates that need to be
+    changed to make the value of the root node V. If this is
+    impossible, output "IMPOSSIBLE" (quotes for clarity).</p>
+<h2>Input</h2>
+<p>The first line of the input file contains the number of
+    cases, <span class="tex2jax_process">$1&lt; N \leq 20$</span>.
+    <span class="tex2jax_process">$N$</span> test cases follow.</p>
+<p>Each case begins with <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$V$</span>. <span class="tex2jax_process">$M$</span> represents the number of nodes in
+    the tree, <span class="tex2jax_process">$2 &lt; M &lt; 10\,
+    000$</span> and <span class="tex2jax_process">$M$</span> will
+    be odd to ensure all nodes have 0 or 2 children. <span class="tex2jax_process">$V$</span> is the desired value for the root
+    node, 0 or 1.</p>
+<p><span class="tex2jax_process">$M$</span> lines follow
+    describing each of the tree’s nodes. The <span class="tex2jax_process">$X$</span>th line will describe node
+    <span class="tex2jax_process">$X$</span>, starting with node 1
+    on the first line.</p>
+<p>The first <span class="tex2jax_process">$(M-1)/2$</span>
+    lines describe the interior nodes. Each line contains
+    <span class="tex2jax_process">$G$</span> and <span class="tex2jax_process">$C$</span>, each being either 0 or 1. If
+    <span class="tex2jax_process">$G$</span> is 1 then the gate for
+    this node is an AND gate, otherwise it is an OR gate. If
+    <span class="tex2jax_process">$C$</span> is 1 then the gate for
+    this node is changeable, otherwise it is not. Interior node
+    <span class="tex2jax_process">$X$</span> has nodes <span class="tex2jax_process">$2X$</span> and <span class="tex2jax_process">$2X+1$</span> as children.</p>
+<p>The next <span class="tex2jax_process">$(M+1)/2$</span>
+    lines describe the leaf nodes. Each line contains one value
+    <span class="tex2jax_process">$I$</span>, 0 or 1, the value of
+    the leaf node.</p>
+<div class="figure" id="a0000000312">
+<center>
+<img alt="\includegraphics{tree.png}" src="/problems/cheatingbooleantree/file/statement/en/img-0001.png" style="width:; height:"/>
+<div class="caption">
+<b>Figure 1</b>: Picture of the tree in the first sample
+          input
+        </div>
+</center>
+</div>
+<h2>Output</h2>
+<p>For each test case, you should output:</p>
+<pre>
+Case #X: Y
+</pre>
+<p>where <span class="tex2jax_process">$X$</span> is the number
+    of the test case and <span class="tex2jax_process">$Y$</span>
+    is the minimum number of gates that must be changed to make the
+    output of the root node <span class="tex2jax_process">$V$</span>, or "IMPOSSIBLE" (quotes for
+    clarity) if this is impossible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+9 1
+1 0
+1 1
+1 1
+0 0
+1
+0
+1
+0
+1
+5 0
+1 1
+0 0
+1
+1
+0
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 1
+Case #2: IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

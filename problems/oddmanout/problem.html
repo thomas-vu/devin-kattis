@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>You are hosting a party with <span class="tex2jax_process">$G$</span> guests and notice that there is an
+    odd number of guests! When planning the party you deliberately
+    invited only couples and gave each couple a unique number
+    <span class="tex2jax_process">$C$</span> on their invitation.
+    You would like to single out whoever came alone by asking all
+    of the guests for their invitation numbers.</p>
+<h2>Input</h2>
+<p>The first line of input gives the number of cases,
+    <span class="tex2jax_process">$N$</span>. <span class="tex2jax_process">$N$</span> test cases follow. For each test
+    case there will be:</p>
+<ul class="itemize">
+<li>
+<p>One line containing the value <span class="tex2jax_process">$G$</span> the number of guests.</p>
+</li>
+<li>
+<p>One line containing a space-separated list of
+        <span class="tex2jax_process">$G$</span> integers. Each
+        integer <span class="tex2jax_process">$C$</span> indicates
+        the invitation code of a guest.</p>
+</li>
+</ul>
+<p>You may assume that <span class="tex2jax_process">$1 \leq N
+    \leq 50, 0 &lt; C &lt; 2^{31}, 3 \leq G &lt; 1\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing “Case
+    #<span class="tex2jax_process">$x$</span>: ” followed by the
+    number <span class="tex2jax_process">$C$</span> of the guest
+    who is alone.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3
+1 2147483647 2147483647
+5
+3 4 7 4 3
+5
+2 10 2 10 5
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 1
+Case #2: 7
+Case #3: 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>As a level designer for Super Mawio Bros, you have been
+    creating maps for Mawio to play on, each with some combination
+    of blank spaces, bricks, and item boxes for Mawio to navigate
+    on his way to save Princess Pweach. You want to make some of
+    the maps more interesting, so you decide to add some waterfalls
+    to them. These waterfalls naturally cascade around the bricks
+    and item boxes that you have already placed as they flow down
+    from the top of the screen.</p>
+<p>Currently, the map contains nothing but bricks, item boxes,
+    and blank spaces. Waterfalls will be placed at certain column
+    numbers at the top of the screen. Given this information,
+    output an updated map with the waterfalls displayed. Water
+    flows straight down unless it is obstructed by a brick or item
+    box. When water is obstructed by an obstacle, it will flow to
+    both the right and the left of each obstacle, unless those
+    locations are also obstructed. When water flows to the bottom
+    of the map, it stops flowing at the spot it hits the bottom
+    at.</p>
+<p>In the current representation of the map, blank spaces are
+    represented by the character ‘O’, bricks by the character ‘#’,
+    and item boxes by the character ‘?’. In the updated
+    representation, water should be represented by the character
+    ‘<span class="tex2jax_process">$\sim $</span>’. There will be
+    no bricks nor item blocks on the top layer of a level.</p>
+<h2>Input</h2>
+<p>The first line containing three space separated integers
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq n,m \leq 1\, 000$</span>, <span class="tex2jax_process">$1
+    \leq k \leq m$</span>). <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> represent the number of rows and
+    columns in the map respectively. <span class="tex2jax_process">$k$</span> represents the number of
+    waterfalls that are to be added.<br/>
+    The second line contains <span class="tex2jax_process">$k$</span> space-separated integers with each
+    integer representing the column position <span class="tex2jax_process">$p_ k$</span> (<span class="tex2jax_process">$0 \leq p_ k &lt; m$</span>) of a waterfall
+    that needs to be added at the top of the map.<br/>
+    The next <span class="tex2jax_process">$n$</span> lines each
+    contain <span class="tex2jax_process">$m$</span> characters.
+    These <span class="tex2jax_process">$n$</span> lines represent
+    the <span class="tex2jax_process">$n \times m$</span> map of
+    the level. Blank spaces are represented by the character ‘O’,
+    bricks by the character ‘#’, and item boxes by the character
+    ‘?’.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines with
+    each line containing <span class="tex2jax_process">$m$</span>
+    characters. These lines should represent a map that is updated
+    to show the paths of the waterfalls, where water is represented
+    by the character ‘<span class="tex2jax_process">$\sim
+    $</span>’.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 20 3
+2 9 15
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOO?OOOOO
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOO###OOOO
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOO##O?#O#?O##
+OOOOOOOOOOOOOOOOOOOO
+####################
+</pre>
+</td>
+<td>
+<pre>OO~OOOOOO~OOOOO~OOOO
+OO~OOOOOO~OOOO?~OOOO
+OO~OOOOOO~OO~~~~~OOO
+OO~OOOOOO~OO~###~OOO
+OO~OOOOO~~~~~~~~~~OO
+OO~OOOOO~##~?#~#?~##
+~~~~~~~~~~~~~~~~~~~~
+####################
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 20 1
+14
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOO?OOOOO
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOO###OOOO
+OOOOOOOOOOOOOOOOOOOO
+OOOOOOOOO##??#O#?O##
+O########OOOOOOOOOOO
+#OOOOOOOOOOOOOOOO###
+</pre>
+</td>
+<td>
+<pre>OOOOOOOOOOOOO~~~OOOO
+OOOOOOOOOOOOO~?~OOOO
+OOOOOOOOOOOO~~~~~OOO
+OOOOOOOOOOOO~###~OOO
+OOOOOOOO~~~~~~~~~~OO
+~~~~~~~~~##??#~#?~##
+~########OOOOO~O~~~~
+#OOOOOOOOOOOOO~O~###
+</pre>
+</td>
+</tr>
+</table>
+</div>

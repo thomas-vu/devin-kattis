@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/numbertree/file/statement/en/img-0001.jpg" class="illustration" src="/problems/numbertree/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://www.flickr.com/photos/kikisdad/97188193/">Chris
+        Darling</a>
+</div>
+</div>
+<p>Lovisa is at KTH listening to Stefan Nilsson lecturing about
+    perfect binary trees. “A perfect binary tree has a
+    distinguished node called the <em>root</em> which is usually
+    drawn at the top. Each node has two children except the nodes
+    in the lowest layer, which we call <em>leaves</em>.” Lovisa
+    knows all this already, so she is a bit bored. Noticing this,
+    Stefan comes up with a new challenge for Lovisa.</p>
+<p>First, we label the nodes of a perfect binary tree with
+    numbers as follows. We start at the bottom right leaf which
+    gets number 1 and then label nodes on the same level in
+    increasing order from right to left. After finishing a level,
+    we move to the rightmost node in the level above and label all
+    the nodes on that level from right to left. We proceed in this
+    fashion until we reach the root.</p>
+<p>When we want to describe a node in the tree, we can do it by
+    describing a path starting at the root and going down toward
+    the leaves. At each non-leaf node we can either go left
+    (<tt class="tt">‘L’</tt>) or right (<tt class="tt">‘R’</tt>).</p>
+<div class="figure" id="a0000001432">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{tree}" src="/problems/numbertree/file/statement/en/img-0002.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Labeled binary tree of height 3 with two
+          marked paths from the root. Path <tt class="tt">LR</tt>
+          leads to label 11 while path <tt class="tt">RRL</tt>
+          leads to 2. The root has number 15.
+        </div>
+</center>
+</div>
+<h2>Task</h2>
+<p>Lovisa’s task is to calculate the label of a node, given the
+    height of the tree <span class="tex2jax_process">$H$</span> and
+    the description of the path from the root.</p>
+<h2>Input</h2>
+<p>The only line of input contains the height of the tree
+    <span class="tex2jax_process">$H$</span>, <span class="tex2jax_process">$1\le H\le 30$</span> and a string consisting
+    of the letters <tt class="tt">‘L’</tt> and <tt class="tt">‘R’</tt>, denoting a path in the tree starting in the
+    root. The letter <tt class="tt">‘L’</tt> denotes choosing the
+    left child, and the letter <tt class="tt">‘R’</tt> choosing the
+    right child. The description of the path may be empty and is at
+    most <span class="tex2jax_process">$H$</span> letters.</p>
+<h2>Output</h2>
+<p>Output one line containing the label of the node given by
+    the path.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 LR
+</pre>
+</td>
+<td>
+<pre>
+11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 RRL
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+</div>

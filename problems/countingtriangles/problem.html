@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>The following figure contains a lot of triangles,
+    <span class="tex2jax_process">$88$</span> in fact. Two of them
+    are highlighted. The figure is made up of 15 line segments. You
+    have a triangle if you can start at an intersection of line
+    segments <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span>, follow <span class="tex2jax_process">$b$</span> until it intersects with some line
+    segment <span class="tex2jax_process">$c$</span> and then
+    follow <span class="tex2jax_process">$c$</span> until it
+    intersects with <span class="tex2jax_process">$a$</span>.</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{triangles}" src="/problems/countingtriangles/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>Counting triangles by hand can be a bit tedious, so you
+    decide to write a simple program to help out.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$250$</span> test cases. Each test case
+    starts with an integer <span class="tex2jax_process">$1 \le n
+    \le 50$</span>. This is followed by <span class="tex2jax_process">$n$</span> lines, each containing four
+    space-separated real values, <span class="tex2jax_process">$x_1~ y_1~ x_2~ y_2$</span> which defines a
+    line segment from from point <span class="tex2jax_process">$(x_1,y_1)$</span> to <span class="tex2jax_process">$(x_2,y_2)$</span>. Within a test case, line
+    segments may be parallel, but two segments never intersect at
+    more than a single point. Also, no more than two line segments
+    intersect at a single point. All real values are in the range
+    <span class="tex2jax_process">$[0,100]$</span> and have at most
+    <span class="tex2jax_process">$6$</span> digits after the
+    decimal point. The end of all test cases is marked with a value
+    of zero for <span class="tex2jax_process">$n$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output the number of triangles defined
+    by the given line segments.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+1.350 1.890 3.825 3.330
+3.915 1.575 2.385 3.690
+1.350 2.295 4.545 1.845
+2.250 1.710 4.140 3.060
+2.250 3.150 3.465 1.755
+9
+4.050 2.115 6.660 3.825
+6.705 3.330 4.455 5.760
+5.355 5.940 2.205 4.320
+2.475 5.355 3.375 2.205
+2.070 2.970 5.985 2.205
+4.905 1.710 5.760 5.670
+6.300 2.790 3.150 5.670
+2.250 3.510 6.705 4.545
+2.430 4.140 6.345 2.970
+0
+</pre>
+</td>
+<td>
+<pre>
+4
+11
+</pre>
+</td>
+</tr>
+</table>
+</div>

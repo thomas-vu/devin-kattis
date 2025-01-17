@@ -1,0 +1,45 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/randomdigitalexponentiation/file/statement/en/img-0001.png" class="illustration" src="/problems/randomdigitalexponentiation/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>In a random digital exponentiation (RDE) cipher, each
+    digit of a number <span class="tex2jax_process">$a$</span> is
+    raised to a certain power which is determined by a randomly
+    chosen encryption key. The encrypted number is the number that
+    results when each digit is replaced with its power at the
+    corresponding place value.
+    <p>For instance, for <span class="tex2jax_process">$a =
+    243$</span> and an encryption key of <tt class="ttfamily">7 4
+    3</tt>, the encrypted value <span class="tex2jax_process">$b$</span> would be <span class="tex2jax_process">$b = 2^7 \cdot 10^2 + 4^4 \cdot 10 + 3^3 =
+    15\, 387$</span>.</p>
+<p>Given a plaintext value <span class="tex2jax_process">$a$</span> and an encrypted value
+    <span class="tex2jax_process">$b$</span>, find the encryption
+    key that was used!</p>
+<h2>Input</h2>
+<p><span class="mbox" style="width:">The input will contain a
+    single test case containing two numbers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$0
+    \le a \le b \le 2\, 147\, 483\, 647$</span>).</span></p>
+<h2>Output</h2>
+<p>Print the encryption key, which is the list of exponents to
+    which each digit in <span class="tex2jax_process">$a$</span>
+    was raised, separated by spaces, starting from the leftmost
+    digit’s exponent. Each exponent should be a natural number. You
+    are guaranteed that the encryption key exists and is
+    unique.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>243 15387
+</pre>
+</td>
+<td>
+<pre>7 4 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

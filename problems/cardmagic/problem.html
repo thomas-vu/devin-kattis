@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Johanna knows mind reading magic, or so she says. Her new
+    trick consists of lining up <span class="tex2jax_process">$N$</span> decks of cards, each deck having
+    <span class="tex2jax_process">$K$</span> cards numbered from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$K$</span>. She asks you to think of a number
+    <span class="tex2jax_process">$T$</span> between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N \cdot K$</span> and to focus your thoughts
+    on it. Then, by scanning the energy profiles emitted from your
+    brain activity, she carefully picks one card from each of the
+    <span class="tex2jax_process">$N$</span> decks. Magically, the
+    sum of the numbers on the <span class="tex2jax_process">$N$</span> picked cards is exactly the number
+    that you were thinking of! After staring at her in disbelief
+    for quite a while, you suspect it might be a trick she pulls on
+    many people, and that she just picks the cards at random and
+    happened to get it right with you just by chance.</p>
+<p>You start wondering just how large that chance was. You
+    could easily compute the number of ways to pick one card from
+    each deck, but how many of these ways have the correct sum?</p>
+<h2>Input</h2>
+<p>The first line contains three space-separated integers
+    <span class="tex2jax_process">$1 \le N \le 100$</span>,
+    <span class="tex2jax_process">$1 \le K \le 50$</span>,
+    <span class="tex2jax_process">$1 \le T \le N \cdot K$</span> –
+    the number of decks, the number of cards in each deck, and the
+    number you were thinking of, respectively.</p>
+<h2>Output</h2>
+<p>Output a single integer – the number of ways Johanna could
+    have picked a card from each deck, such that the picked cards
+    sum up to <span class="tex2jax_process">$T$</span>. Since this
+    number can be very large, output it modulo <span class="tex2jax_process">$1\, 000\, 000\, 009$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 2 6
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5 25
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4 12
+</pre>
+</td>
+<td>
+<pre>
+155
+</pre>
+</td>
+</tr>
+</table>
+</div>

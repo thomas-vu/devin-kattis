@@ -1,0 +1,123 @@
+<div class="problembody">
+<div class="illustration" style="width:32.00%">
+<img alt="/problems/arranginghat/file/statement/en/img-0001.jpg" class="illustration" src="/problems/arranginghat/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        The Arranging Hat. Image by Lisa Abose
+      </div>
+</div><em>Arranging Hat</em> is a cushy job indeed; high impact
+    work, absolute authority, and 364 days of holiday every year.
+    However, the hat has decided that it can do even better—it
+    would like very much to become a tenured professor.
+
+    <p>Recently the hat has been reading computer science papers in
+    its ample spare time, and of course, being an arranging hat, it
+    is particularly interested in learning more about sorting
+    algorithms.</p>
+<p>The hat’s new contribution is to a class of algorithms known
+    as <em>lossy</em> sorting algorithms. These usually work by
+    removing some of the input elements in order to make it easier
+    to sort the input (e.g., the Dropsort algorithm), instead of
+    sorting all the input.</p>
+<p>The hat is going to go one better—it is going to invent a
+    lossy sorting algorithm for numbers that does not remove any
+    input numbers and even keeps them in their original place, but
+    instead changes some of the digits in the numbers to make the
+    list sorted.</p>
+<p>The lossiness of the sorting operation depends on how many
+    digits are changed. What is the smallest number of digits that
+    need to be changed in one such list of numbers, to ensure that
+    it is sorted?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line containing the integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \le n \le 40$</span>, <span class="tex2jax_process">$1 \le m \le 400$</span>), the number of
+        numbers and the number of digits in each number,
+        respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines each
+        containing an integer <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0 \le v &lt; 10^{m}$</span>). The
+        numbers are zero-padded to exactly <span class="tex2jax_process">$m$</span> digits.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Write a sorted version of the array, after making a minimum
+    number of digit changes to make the numbers sorted (the numbers
+    must remain zero-padded to <span class="tex2jax_process">$m$</span> digits). If there are multiple
+    optimal solutions, you may give any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+111
+001
+000
+111
+000
+</pre>
+</td>
+<td>
+<pre>
+001
+001
+001
+111
+200
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+15 3
+999
+888
+777
+666
+555
+444
+333
+222
+111
+222
+333
+444
+555
+666
+999
+</pre>
+</td>
+<td>
+<pre>
+199
+288
+377
+466
+555
+644
+733
+822
+911
+922
+933
+944
+955
+966
+999
+</pre>
+</td>
+</tr>
+</table>
+</div>

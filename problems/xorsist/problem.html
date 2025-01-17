@@ -1,0 +1,315 @@
+<div class="problembody">
+<p>Gunnar the priest received a mysterious message by post
+    yesterday that said that one of his parishioners might be
+    possessed. On the back it said ,,You are our only hope
+    XORsist!". Gunnar was in fact a sorcerer and had great
+    experience in repelling spirits and demons.</p>
+<p>He decided to write down the names of everyone at his sermon
+    and ended up with names numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>. Later he realized that he took
+    the XOR of all the numbers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> that would give him information on
+    who’s possessed; if the number is <span class="tex2jax_process">$0$</span> no one is possessed and if it’s
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$N$</span> then it would be the
+    person on the list corresponding to that number. If it’s larger
+    than <span class="tex2jax_process">$N$</span> it must be Gunnar
+    himself that’s possessed and then we’re all in trouble!</p>
+<h2>Explanation of XOR</h2>
+<p>XOR, usually denoted by <span class="tex2jax_process">$~
+    \hat{}~ $</span> in programming languages, is an operation that
+    takes two numbers and returns a new number. The operation is
+    performed on the two numbers in binary , bit by bit. The
+    following table shows how a new bit is calculated from the
+    corresponding bits in the input numbers.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>A</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>B</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>A XOR B</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Let us take an example. The number <span class="tex2jax_process">$1337$</span> in binary is 10100111001 and
+    the number <span class="tex2jax_process">$1993$</span> in
+    binary is 11111001001.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>1337</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>1993</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1337 XOR 1993</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>0</p>
+</td>
+</tr>
+</table>
+</center>
+<p>The result is 01011110000 which is the number <span class="tex2jax_process">$752$</span>.</p>
+<h2>Input</h2>
+<p>The first and only line of the input contains an integer
+    <span class="tex2jax_process">$N$</span>, how many parishioners
+    are at Gunnar’s sermon.</p>
+<h2>Output</h2>
+<p>Print the number of the parishioner that’s possessed,
+    <tt class="ttfamily">Enginn</tt> if the value is <span class="tex2jax_process">$0$</span> and <tt class="ttfamily">Gunnar</tt> if the value is greater than
+    <span class="tex2jax_process">$N$</span>.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample <span class="tex2jax_process">$N =
+    3$</span>. If we calculate the XOR of all values from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> we get <span class="tex2jax_process">$(1\textrm{ XOR }2)\textrm{ XOR }3 =
+    0$</span>. Thus no one is possessed so the answer is <tt class="ttfamily">Enginn</tt>.</p>
+<p>In the second input <span class="tex2jax_process">$N =
+    6$</span>. If we calculate the XOR of all numbers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> the result is <span class="tex2jax_process">$7$</span>. Gunnar is thus possessed and the
+    answer is <tt class="ttfamily">Gunnar</tt>.</p>
+<p>In the third sample <span class="tex2jax_process">$N =
+    5$</span>. If we calculate the XOR of all numbers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> the result is <span class="tex2jax_process">$1$</span>. Thus the first person on the list
+    is possessed, so the answer is <tt class="ttfamily">1</tt>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$ 1 \le N \le
+          10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+</pre>
+</td>
+<td>
+<pre>Enginn
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+</pre>
+</td>
+<td>
+<pre>Gunnar
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

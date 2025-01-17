@@ -1,0 +1,104 @@
+<div class="problembody">
+<p>Central City is best known for its famous Statue Park. The
+    park is laid out as a grid, with each grid square housing
+    either a statue or some park water feature (see Figure 1a). The
+    statues come in all shapes and sizes and therein lies the
+    problem, as some of the statues are so large that they obscure
+    the view of others from the main paths surrounding the park —
+    roads N, E, S and W. The Park Statue Keeper is Milo D. Venus
+    and he wants to move some of the statues so that visitors on
+    two of these paths can see all of the statues. He realizes that
+    one way to do this is to pick a corner of the park and then
+    start placing the statues along the diagonals of the grid in
+    order of the diagonals’ distance from the selected corner,
+    skipping over any water feature squares. The smallest statue
+    would be placed in the first diagonal (assuming there is no
+    water feature there). The next smallest statues will be placed
+    in the second diagonal (this could be <span class="tex2jax_process">$0$</span>, <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> statues depending on the number of
+    water feature squares in the diagonal). The next smallest
+    statues are placed in the third diagonal, and so on. With this
+    scheme though there are a lot of choices to make. For example,
+    if you wanted the best viewing to be along roads N and W, you
+    would use the diagonals in Figure 1b placing the smallest
+    statue in diagonal <span class="tex2jax_process">$a$</span>,
+    the next smallest in diagonal <span class="tex2jax_process">$b$</span>, the next three smallest in
+    diagonal <span class="tex2jax_process">$c$</span>, the next two
+    smallest in diagonal <span class="tex2jax_process">$d$</span>,
+    and so on. If you wanted the best viewing to be along roads W
+    and S you would use the diagonals in Figure 1c placing the
+    smallest statue in diagonal <span class="tex2jax_process">$a$</span>, the next two smallest in diagonal
+    <span class="tex2jax_process">$b$</span>, the next three
+    smallest in diagonal <span class="tex2jax_process">$c$</span>,
+    the next smallest in diagonal <span class="tex2jax_process">$d$</span>, and so on. Within any diagonal
+    which can fit more than two statues the placement of those
+    statues can be in any order, leading to even more choices.</p>
+<div class="figure" id="fig:park">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{fig1}" src="/problems/statues/file/statement/en/img-0001.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Statue Park. Figures (b) and (c) show
+          two possible placements of the diagonals
+        </div>
+</center>
+</div>
+<p>Given all this flexibility it seems natural to pick the
+    scheme that minimizes the number of statues that need to be
+    moved, but which scheme is best is not immediately clear. Now
+    Milo is a very competent administrator and very charming (he’s
+    downright disarming) but he’s not all that great in solving
+    problems like this. Can you carve out some time to help
+    him?</p>
+<h2>Input</h2>
+<p>Input begins with two positive integers <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$n,m \leq 50$</span>) specifying the number
+    of rows and columns in the park grid. After this are
+    <span class="tex2jax_process">$n$</span> rows each containing
+    <span class="tex2jax_process">$m$</span> integers. The
+    <span class="tex2jax_process">$j^{\text {th}}$</span> value in
+    the <span class="tex2jax_process">$i^{\text {th}}$</span> row
+    indicates what is located in row <span class="tex2jax_process">$i$</span>, column <span class="tex2jax_process">$j$</span> in the park grid. If this value is
+    positive it indicates a statue of that height; if it is
+    <span class="tex2jax_process">$-1$</span> it indicates a water
+    feature. No two statues will have the same height.</p>
+<h2>Output</h2>
+<p>Output the minimum number of statues that need to be moved
+    among all the various ways they can be placed with the scheme
+    described above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+2 -1 9 6
+10 8 -1 4
+1 3 5 7
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+30 -1 24 18
+28 22 -1 16
+26 20 14 12
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

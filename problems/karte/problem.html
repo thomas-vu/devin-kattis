@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>Recently, Pero has been into robotics, so he decided to make
+    a robot that checks whether a deck of poker cards is
+    complete.</p>
+<p>He’s already done a fair share of work—he wrote a programme
+    that recognizes the suits of the cards. For simplicity’s sake,
+    we can assume that all cards have a suit and a number.</p>
+<p>The suit of the card is one of the characters P, K, H, T,
+    and the number of the card is an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$13$</span>. The robot labels each card in
+    the format <span class="tex2jax_process">$TXY$</span> where
+    <span class="tex2jax_process">$T$</span> is the suit and
+    <span class="tex2jax_process">$XY$</span> is the number. If the
+    card’s number consists of one digit, then <span class="tex2jax_process">$X = 0$</span>. For example, the card of suit
+    P and number <span class="tex2jax_process">$9$</span> is
+    labelled <tt class="ttfamily">P09</tt>.</p>
+<p>A complete deck has <span class="tex2jax_process">$52$</span> cards in total—for each of the
+    four suits there is exactly one card with a number between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$13$</span>.</p>
+<p>The robot has read the labels of all the cards in the deck
+    and combined them into the string <span class="tex2jax_process">$S$</span>. Help Pero finish the robot by
+    writing a programme that reads the string made out of card
+    labels and outputs how many cards are missing for each suit. If
+    there are two exact same cards in the deck, output <tt class="ttfamily">GRESKA</tt> (Croatian for ERROR).</p>
+<h2>Input</h2>
+<p>The first and only line of input contains the string
+    <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$1 \leq \left|S\right| \leq 1\ 000$</span>),
+    containing all the card labels.</p>
+<h2>Output</h2>
+<p>If there are two exact same cards in the deck, output
+    “<tt class="ttfamily">GRESKA</tt>”. Otherwise, the first and
+    only line of output must consist of 4 space-separated numbers:
+    how many cards of the suit P, K, H, T are missing,
+    respectively.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+P01K02H03H04
+</pre>
+</td>
+<td>
+<pre>
+12 12 11 13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+H02H10P11H02
+</pre>
+</td>
+<td>
+<pre>
+GRESKA
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+P10K10H10T01
+</pre>
+</td>
+<td>
+<pre>
+12 12 12 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

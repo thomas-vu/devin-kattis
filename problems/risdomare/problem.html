@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>Sir Dorian loves to eat rice. He always eats lunch at the
+    rice palace, where every day there are <span class="tex2jax_process">$N$</span> portions of rice. He has eaten
+    rice for solng that he can determine the amount of rice grains
+    in a portion, in addition to the size of the rice grains in
+    nanometers simply by looking at the portion.</p>
+<p>To truly enjoy the rice, he has decided that he will only
+    eat one portion of rice per day. After years of rice tasting,
+    Dorian has started preferring larger rice grains. In fact, when
+    selecting a portion, it’s just as important to him that the
+    portion is big and that the grains of rice are large.
+    Therefore, he wants to eat the portion of rice with the largest
+    sum of number of grains of rice and size of the grains. If
+    there are multiple portions with the same sum of number of
+    grains and size of grains, he has a bit of trouble deciding.
+    Depending on what he prefers that day, he either chooses the
+    portion more grains of rice or larger grains of rice out of all
+    portions with maximum possible sum. Dorian has created a list
+    containing the number of grains of rice and the size of the
+    grains for each of the <span class="tex2jax_process">$N$</span>
+    portions, but is too tired to decide which one he should
+    choose. Therefore, he wants you to write a program that decides
+    which portion he should pick, given his list and preference
+    that day.</p>
+<h2>Input</h2>
+<p>The first line contains the integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 10^5)$</span>, the number of portions.</p>
+<p>Then there will line containing a string that is either
+    “<tt class="ttfamily">antal</tt>” or “<tt class="ttfamily">storlek</tt>” - whether Sir Dorian preferes a larger
+    portion or larger grains today.</p>
+<p>After that <span class="tex2jax_process">$N$</span> lines
+    follow, where the <span class="tex2jax_process">$i$</span>:th
+    line contains the integers <span class="tex2jax_process">$A_
+    i$</span> and <span class="tex2jax_process">$S_ i$</span>
+<span class="tex2jax_process">$(0 \leq A_ i, S_ i \leq
+    10^9)$</span>, the number of grains of rice and the size of the
+    grains of rice measured in nanometers in the <span class="tex2jax_process">$i$</span>:th portion. It is guaranteed that
+    there are no two portions with excactly the same number of
+    grains of rice and the same size of grains. This guarantees
+    that the solution will be unique.</p>
+<h2>Output</h2>
+<p>Print an integer, the index of the portion that Sir Dorian
+    will like the most.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    correctly solve every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Restrictions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All sums of number of grains and size of grains will
+          be the same</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Dorian prefers larger portions today</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+antal
+2 5
+4 4
+5 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+antal
+2 5
+3 4
+4 3
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

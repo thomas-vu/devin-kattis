@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>Let <span class="tex2jax_process">$p$</span> be a prime and
+    <span class="tex2jax_process">$a,b\in \mathbb {F}_p$</span>
+    such that <span class="tex2jax_process">$4a^3 + 27b^2
+    \not\equiv 0 \pmod{p}$</span>. Let <span class="tex2jax_process">$n \geq 0$</span> be an integer and
+    <span class="tex2jax_process">$P=(x,y)$</span> be a point on
+    the elliptic curve <span class="tex2jax_process">$E : y^2 =
+    x^3+ax+b$</span>. Calcuate <span class="tex2jax_process">$nP$</span> given <span class="tex2jax_process">$p, a, b, x$</span> and <span class="tex2jax_process">$y$</span>.</p>
+<h2>Input</h2>
+<p>Input is three lines. First line consists of three integers,
+    <span class="tex2jax_process">$0 &lt; p &lt; 2^{31}-1$</span>,
+    <span class="tex2jax_process">$0 \leq a &lt; p$</span> and
+    <span class="tex2jax_process">$0 \leq b &lt; p$</span>, where
+    <span class="tex2jax_process">$p$</span> is a prime. Second
+    line consist of one integer <span class="tex2jax_process">$0
+    \leq n \leq 2^{63}-1$</span>. Third line consists of two
+    integers <span class="tex2jax_process">$-1 \leq x_2, y_2 &lt;
+    2^{31}-1$</span> where <span class="tex2jax_process">$(x_2,y_2)=(-1,-1)$</span> is the point at
+    infinity.</p>
+<h2>Output</h2>
+<p>Output one line with the coordinates of <span class="tex2jax_process">$nP$</span> seperated by space. Both
+    coordinates should be <span class="tex2jax_process">$-1$</span>
+    if the result is the point at infinity.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 1 1
+4
+0 4
+</pre>
+</td>
+<td>
+<pre>3 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 1 1
+9
+0 4
+</pre>
+</td>
+<td>
+<pre>-1 -1
+</pre>
+</td>
+</tr>
+</table>
+</div>

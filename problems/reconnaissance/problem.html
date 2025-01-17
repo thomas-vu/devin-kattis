@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>You have located a major supply line that the enemy has been
+    using. With satellite imaging, you’ve been able to determine
+    the current location and velocity of every vehicle along the
+    supply line, which is for all practical purposes an infinitely
+    long straight line. Furthermore, you know that each vehicle
+    moves at constant velocity, and that they can pass by each
+    other without incident along this supply line. What you need to
+    do now is deploy an air drone with special sensors that can
+    give you readings of the contents of the vehicles. The sensor
+    is capable of reading everything in its range instantaneously,
+    but power limitations allow it to do so only once. In order to
+    minimize the required range, you want to deploy it when the
+    vehicles are as close to each other as possible. Given
+    knowledge of the current location and velocity of all the
+    vehicles, what is the closest that the vehicles will get to
+    each other?</p>
+<h2>Input</h2>
+<p>There will be a single test case in the input. This test
+    case will begin with a line with a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 100\, 000$</span>) representing the number of
+    vehicles. Each of the next <span class="tex2jax_process">$n$</span> lines will have two integers,
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$-100\, 000 \le x,v \le 100\, 000$</span>),
+    indicating the position (<span class="tex2jax_process">$x$</span>, in meters) and velocity
+    (<span class="tex2jax_process">$v$</span>, in meters/hour) of
+    that vehicle. The sign of velocity indicates direction.</p>
+<h2>Output</h2>
+<p>Output a single number equal to the minimum distance that
+    will cover all of the vehicles at some time, in meters. Your
+    result should have an absolute or relative error of less than
+    <span class="tex2jax_process">$10^{-3}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+-100 1
+100 -1
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+-100 1
+100 -1
+101 -1
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+-100 -1
+0 0
+100 1
+</pre>
+</td>
+<td>
+<pre>
+200
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,178 @@
+<div class="problembody">
+<p>Joshua’s New Year’s resolution for 2024 was to solve half of
+    all problems on the Kattis platform before the year ends. As
+    the year draws to a close, he realizes he’ll need to use every
+    strategy he knows to reach his goal. So far, he has only solved
+    others’ problems on Kattis. However, he can also create his own
+    problem, upload it, and solve it. While this might involve less
+    work than solving someone else’s problem, it also increases the
+    total number of problems.</p>
+<p>Currently, there are <span class="tex2jax_process">$P$</span> problems on Kattis, and Joshua has
+    solved <span class="tex2jax_process">$S$</span> of them. He can
+    take the following actions:</p>
+<ul class="itemize">
+<li>
+<p>Solve a problem. This takes <span class="tex2jax_process">$A$</span> seconds and increases
+        <span class="tex2jax_process">$S$</span> by 1.</p>
+</li>
+<li>
+<p>Write a new problem. This takes <span class="tex2jax_process">$B$</span> seconds and increases both
+        <span class="tex2jax_process">$P$</span> and <span class="tex2jax_process">$S$</span> by 1.</p>
+</li>
+</ul>
+<p>If Joshua uses his time optimally, how many seconds will it
+    take for him to increase <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$P$</span> such that <span class="tex2jax_process">$\frac{S}{P} &gt; 0.5$</span>?</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$S$</span> (<span class="tex2jax_process">$0
+    \leq S \leq 10^5$</span>), the number of problems Joshua has
+    solved so far.</p>
+<p>The second line contains the integer <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1
+    \leq P \leq 10^5$</span>), the total number of problems
+    currently on Kattis. It is guaranteed that <span class="tex2jax_process">$S &lt; \frac{P}{2}$</span>.</p>
+<p>The third line contains the integer <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$1
+    \leq A \leq 10^5$</span>), the time it takes to solve a
+    problem.</p>
+<p>The fourth line contains the integer <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1
+    \leq B \leq 10^5$</span>), the time it takes to create a new
+    problem.</p>
+<p>Note that in some test cases, <span class="tex2jax_process">$A$</span> may be much larger than
+    <span class="tex2jax_process">$B$</span>, while in others
+    <span class="tex2jax_process">$B$</span> may be much larger
+    than <span class="tex2jax_process">$A$</span>.</p>
+<h2>Output</h2>
+<p>Print an integer: the minimum number of seconds it will take
+    for Joshua to solve strictly more than half of all problems on
+    Kattis.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$12$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$A=1, B=10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$18$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$B=1, A=10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$S, P \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$50$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Samples</h2>
+<p>In sample 1, solving problems is very fast, while creating
+    new problems takes a very long time. The optimal strategy is to
+    only solve problems. To solve more than half, he needs to solve
+    <span class="tex2jax_process">$51$</span> problems. Since
+    <span class="tex2jax_process">$A=1$</span>, the answer is
+    <span class="tex2jax_process">$51$</span>.</p>
+<p>In sample 2, Joshua needs to solve 2 problems to solve more
+    than half.</p>
+<p>In sample 3, the optimal strategy is to solve 11 problems
+    and create 1 problem. This takes a total of <span class="tex2jax_process">$11 \cdot 7 + 1 \cdot 6 = 83$</span> seconds.
+    No other strategy is faster.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0
+100
+1
+100000
+</pre>
+</td>
+<td>
+<pre>51
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0
+3
+1
+100000
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+30
+7
+6
+</pre>
+</td>
+<td>
+<pre>83
+</pre>
+</td>
+</tr>
+</table>
+</div>

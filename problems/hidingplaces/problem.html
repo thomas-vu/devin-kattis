@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>In chess, the knight is one of the more interesting pieces.
+    As illustrated below, it moves by jumping two spaces up or down
+    and one to the left or right. Alternatively, it can jump two
+    spaces to the left or right and one space up or down. This lets
+    the knight cover a lot of chess board in just a few moves. No
+    matter where the knight starts out, it can eventually reach any
+    other space.</p>
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{board}" src="/problems/hidingplaces/file/statement/en/img-0001.png" style="width:70.00%"/>
+</center>
+<p>Given a chess board with just one knight on it, you want to
+    find the hiding places, the spaces that it would take the
+    knight the most jumps to reach from its initial location. For
+    example, it would take the knight at least two jumps to reach
+    space a8 in the board above. However, it would take at least
+    three jumps for it to reach c1. Since there are other spaces
+    that it would take the knight even more jumps to reach, neither
+    a8 nor c1 are among the hiding places for this initial position
+    of the knight.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing an integer <span class="tex2jax_process">$1 \le n \le 64$</span> indicating the number
+    of test cases. The following <span class="tex2jax_process">$n$</span> lines each contain an initial
+    location for the knight. Knight locations will be given using
+    the common chess notation of a lowercase letter (a-h) for the
+    file (column) followed by a number (1-8) for the rank (row).
+    The layout of the board and rank and file labels are
+    illustrated in the figures above.</p>
+<h2>Output</h2>
+<p>For each test case, report the number of jumps to the hiding
+    places for the given initial location of the knight. Also
+    report the list of hiding places using the same chess file and
+    rank notation used in the input. If there are multiple hiding
+    places, sort them from top to bottom and sort those in the same
+    rank from left to right.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+d5
+a1
+</pre>
+</td>
+<td>
+<pre>
+4 b7 f7 b3 f3 h1
+6 h8
+</pre>
+</td>
+</tr>
+</table>
+</div>

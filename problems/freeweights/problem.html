@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/freeweights/file/statement/en/img-0001.jpg" class="illustration" src="/problems/freeweights/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A well-organised rack of weights.
+      </div>
+</div>
+<p>The city of Bath is a noted olympic training ground—bringing
+    local, national, and even international teams to practice.
+    However, even the finest gymnasium falls victim to the cardinal
+    sin…Weights put back in the wrong spots.</p>
+<p>All of the pairs of dumbbells sit in no particular order on
+    the two racks, possibly even with some of them split between
+    rows. Initially each row has an equal number of dumbbells,
+    however, this being a well-funded professional gym, there is
+    infinite space at either end of each to hold any additional
+    weights.</p>
+<p>To move a dumbbell, you may either roll it to a free
+    neighbouring space on the same row with almost no effort, or
+    you may pick up and lift it to another free spot; this takes
+    strength proportional to its weight. For each pair of
+    dumbbells, both have the same unique weight.</p>
+<p>What is the heaviest of the weights that you need to be able
+    to lift in order to put identical weights next to each other?
+    Note that you may end up with different numbers of weights on
+    each row after rearranging; this is fine.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line containing the integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 10^6$</span>), the number of
+        pairs;</p>
+</li>
+<li>
+<p>two lines, each containing <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$w_1 \ldots w_ n$</span> (<span class="tex2jax_process">$1 \le w_ i \le 10^9$</span> for each
+        <span class="tex2jax_process">$i$</span>), where
+        <span class="tex2jax_process">$w_ i$</span> is the mass of
+        the weight <span class="tex2jax_process">$i$</span>-th from
+        the left along this row.</p>
+</li>
+</ul>
+<p>Every weight in the input appears exactly twice.</p>
+<h2>Output</h2>
+<p>Output the weight of the heaviest dumbbell that must be
+    moved, in order that all items can be paired up while lifting
+    the smallest possible maximum weight.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+2 1 8 2 8
+9 9 4 1 4
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+7 7 15 15 2 2 4 4
+5 5 3 3 9 9 1 1
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,98 @@
+<div class="problembody">
+<p>You are a member of the Senate of an ancient empire governed
+    by a mighty dictator. You have joined a bipartisan secret
+    committee of the Senate that is plotting to overthrow the
+    dictator.</p>
+<p>In order for the plot to succeed, it is crucial that all the
+    states in the empire ultimately support the plan–and to
+    accomplish this, the governors of all the states need to be
+    members of the same Party.</p>
+<p>Right now, each state governor is a member of either the
+    Orange Party or the Purple Party. Since you are confident that
+    you can get either party to back the plot, it does not matter
+    which party ultimately prevails.</p>
+<p>The secret committee has studied the political situation and
+    determined that two governors will influence each other if they
+    are friends with each other and members of the same Party. To
+    get all the state governors on board, each month a lobbyist
+    will do whatever it takes to get one governor to switch
+    parties. When this happens, all the friends of the governor who
+    are members of the same Party will also switch affiliation, as
+    will the friends of the friends within the party, and so on. To
+    avoid suspicion, the secret committee will alternate
+    Orange/Purple lobbyists each month. They may start the ball
+    rolling with either party in the first month.</p>
+<p>The secret committee also knows which governors are friends
+    with each other, that each governor is friends with at least
+    one other governor, and that there are no isolated groups that
+    are only friends with each other.</p>
+<p>Your task is to determine the minimum number of months
+    required for all the state governors to be members of the same
+    party. Once this occurs, the next steps in the plot can take
+    place.</p>
+<h2>Input</h2>
+<p>There will be a single test case in the input. This test
+    case will begin with a line with two integers, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 100$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$n-1 \le m \le n(n-1)/2$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of
+    governors, and <span class="tex2jax_process">$m$</span> is the
+    number of known friendships. On the next line will be
+    <span class="tex2jax_process">$n$</span> integers, either
+    <span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$1$</span>, indicating the current party
+    affiliation of the governors, in order (<span class="tex2jax_process">$0=\text {ORANGE}, 1=\text {PURPLE}$</span>).
+    On each of the following <span class="tex2jax_process">$m$</span> lines will be two integers,
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1
+    \le a &lt; b \le n$</span>) indicating that governor
+    <span class="tex2jax_process">$a$</span> and governor
+    <span class="tex2jax_process">$b$</span> are friends. As in
+    life, friendships go both ways: if <span class="tex2jax_process">$a$</span> is a friend of <span class="tex2jax_process">$b$</span>, then <span class="tex2jax_process">$b$</span> is also a friend of <span class="tex2jax_process">$a$</span>. All <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(a,b)$</span> pairs will be unique.</p>
+<h2>Output</h2>
+<p>Output a single integer, indicating the minimum number of
+    months necessary for every governor to belong to the same
+    party.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3
+0 1 0 0
+1 2
+2 3
+2 4
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4
+0 1 1 0 1
+1 2
+2 3
+3 4
+4 5
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

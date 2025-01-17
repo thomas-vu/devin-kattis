@@ -1,0 +1,92 @@
+<div class="problembody">
+<p><em>Morse Code</em> is an assignment of sequences of dots
+    and dashes to alphabet characters. You are to create a
+    Morse-like code that yields the shortest total length to a
+    given message, and return that total length.</p>
+<p>A dot symbol has length <span class="tex2jax_process">$1$</span>. A dash symbol has length
+    <span class="tex2jax_process">$3$</span>. The gap between
+    symbols within a character encoding has length <span class="tex2jax_process">$1$</span>. The gap between character
+    encodings has length <span class="tex2jax_process">$3$</span>.
+    Spaces, punctuation, and alphabetic case are ignored, so the
+    text:</p>
+<center>
+<tt class="tt"><b class="bfseries">The quick brown dog jumps
+      over the lazy fox.</b></tt>
+</center>
+<p>is encoded as though it were just</p>
+<center>
+<tt class="tt"><b class="bfseries">THEQUICKBROWNDOGJUMPSOVERTHELAZYFOX</b></tt>
+</center>
+<p>For example, with input <tt class="tt"><b class="bfseries">ICPC</b></tt>, the answer is <span class="tex2jax_process">$17$</span>: Encode the <tt class="tt"><b class="bfseries">C</b></tt>’s with a single dot, the
+    <tt class="tt"><b class="bfseries">I</b></tt> with a dash, and
+    the <tt class="tt"><b class="bfseries">P</b></tt> with two
+    dots, for an encoding of</p>
+<center>
+<big class="large">— <span class="normalsize"><span class="tex2jax_process">$\bullet $</span> <span class="tex2jax_process">$\bullet \bullet $</span> <span class="tex2jax_process">$\bullet $</span></span></big>
+</center>
+<p>which has length</p>
+<center>
+<span class="tex2jax_process">$(3)+3+(1)+3+(1+1+1)+3+(1) =
+      17$</span>.
+    </center>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{remorse.jpg}" src="/problems/remorse/file/statement/en/img-0001.jpg" style="width:50.00%"/>
+</center>
+<h2>Input</h2>
+<p>The single line of input contains a string <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \le |s| \le 32\, 000$</span>) of upper-case or lower-case
+    letters, spaces, commas, periods, exclamation points, and/or
+    question marks. Everything but the letters should be ignored.
+    The line will contain at least one letter.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is the length of <span class="tex2jax_process">$s$</span> when encoded with an optimal
+    reassignment of the sequences of Morse Code.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ICPC
+</pre>
+</td>
+<td>
+<pre>17
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>A
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>The quick brown dog jumps over the lazy fox.
+</pre>
+</td>
+<td>
+<pre>335
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>The construction worker previously known as Lars has many
+    bricks of height <span class="tex2jax_process">$1$</span> and
+    different lengths, and he is now trying to build a wall of
+    width <span class="tex2jax_process">$w$</span> and height
+    <span class="tex2jax_process">$h$</span>. Since the
+    construction worker previously known as Lars knows that the
+    subset sum problem is <span class="tex2jax_process">$\mathsf{NP}$</span>-hard, he does not try to
+    optimize the placement but he just lays the bricks in the order
+    they are in his pile and hopes for the best. First he places
+    the bricks in the first layer, left to right; after the first
+    layer is complete he moves to the second layer and completes
+    it, and so on. He only lays bricks horizontally, without
+    rotating them. If at some point he cannot place a brick and has
+    to leave a layer incomplete, then he gets annoyed and leaves.
+    It does not matter if he has bricks left over after he
+    finishes.</p>
+<p>Yesterday the construction worker previously known as Lars
+    got really annoyed when he realized that he could not complete
+    the wall only at the last layer, so he tore it down and asked
+    you for help. Can you tell whether the construction worker
+    previously known as Lars will complete the wall with the new
+    pile of bricks he has today?</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$h$</span>, <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq h \leq 100$</span>, <span class="tex2jax_process">$1 \leq
+    w \leq 100$</span>, <span class="tex2jax_process">$1 \leq n
+    \leq 10\, 000$</span>), the height of the wall, the width of
+    the wall, and the number of bricks respectively. The second
+    line contains <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$x_ i$</span> (<span class="tex2jax_process">$1 \leq x_ i \leq 10$</span>), the length of
+    each brick.</p>
+<h2>Output</h2>
+<p>Output <tt class="ttfamily">YES</tt> if the construction
+    worker previously known as Lars will complete the wall, and
+    <tt class="ttfamily">NO</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 10 7
+5 5 5 5 5 5 5
+</pre>
+</td>
+<td>
+<pre>
+YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 10 7
+5 5 5 3 5 2 2
+</pre>
+</td>
+<td>
+<pre>
+NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

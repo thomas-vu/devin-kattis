@@ -1,0 +1,163 @@
+<div class="problembody">
+<p>The BASIC computer programming language has been popular for
+    many years, and there have been dozens of ‘dialects’ of the
+    language. It’s considered a high-level language and is
+    typically interpreted (rather than compiled). For this problem,
+    write an interpreter for a restricted dialect of BASIC. Here is
+    a description of the language.</p>
+<p>Each input line contains one statement. Each statement
+    begins with a non-negative integer, which we will call its
+    label. Following the label is a single space and one of the
+    following commands (with explanations following):</p>
+<ul class="itemize">
+<li>
+<p><tt>LET X = &lt;ARITHMETIC_STATEMENT&gt;</tt><br/>
+        Assign the result of the arithmetic statement to variable
+        <tt>X</tt>.</p>
+</li>
+<li>
+<p><tt>IF &lt;CONDITION&gt; THEN GOTO L</tt><br/>
+        If the boolean given is true, then go to the statement
+        labeled <tt>L</tt>, where <tt>L</tt> is a valid label. (If
+        the condition is not true, continue execution to the
+        statement with the next lowest label.)</p>
+</li>
+<li>
+<p><tt>PRINT &lt;PRINT_STATEMENT&gt;</tt><br/>
+        Produce output, without an appended newline.</p>
+</li>
+<li>
+<p><tt>PRINTLN &lt;PRINT_STATEMENT&gt;</tt><br/>
+        Produce output, with an appended newline.</p>
+</li>
+</ul>
+<p>Here are details on types, variables, and the terms
+    <tt>&lt;ARITHMETIC_STATEMENT&gt;</tt>,
+    <tt>&lt;CONDITION&gt;</tt>, and
+    <tt>&lt;PRINT_STATEMENT&gt;</tt> used above.</p>
+<ul class="itemize">
+<li>
+<p>All numeric values (in the input and for the variable
+        representation) are signed 32-bit integers.</p>
+</li>
+<li>
+<p>All variables are single uppercase characters
+        (<tt>A</tt> through <tt>Z</tt>). They are all global in
+        scope, and are all initialized to zero before program
+        execution begins.</p>
+</li>
+<li>
+<p><tt>&lt;ARITHMETIC_STATEMENT&gt;</tt> is one of the
+        following: <tt>X</tt>, <tt>X + Y</tt>, <tt>X - Y</tt>,
+        <tt>X * Y</tt>, or <tt>X / Y</tt>. Here, <tt>X</tt> and
+        <tt>Y</tt> each indicate either a variable or an
+        integer.</p>
+</li>
+<li>
+<p><tt>&lt;CONDITION&gt;</tt> is one of the following:
+        <tt>X = Y</tt>, <tt>X &gt; Y</tt>, <tt>X &lt; Y</tt>, <tt>X
+        &lt;&gt; Y</tt>, <tt>X &lt;= Y</tt>, or <tt>X &gt;= Y</tt>.
+        Again, <tt>X</tt> and <tt>Y</tt> each indicate either a
+        variable or an integer. Here, <tt>&lt;&gt;</tt> indicates
+        inequality.</p>
+</li>
+<li>
+<p><tt>&lt;PRINT_STATEMENT&gt;</tt> is either a variable
+        name or a literal string delimited by double quotes. Inside
+        the quotes, the string contains only alphanumeric
+        characters (a-z, A-Z, 0-9) and spaces.</p>
+</li>
+</ul>
+<p>In the signed 32-bit arithmetic, the usual rules of
+    truncation towards zero (for division) and overflow (for
+    addition and multiplication) and underflow (for subtraction)
+    apply. The following examples illustrate these conditions:</p>
+<pre>
+5 / 2           = 2                  65536 * 32768   = -2147483648
+-1 / 2          = 0                  -65536 * 32768  = -2147483648
+2147483647 + 1  = -2147483648        -2147483648 * 2 = 0
+-2147483648 - 1 = 2147483647         2147483647 * 2  = -2
+</pre>
+<p>Further, division by zero will not occur.</p>
+<p>Program execution begins with the statement having the
+    smallest label, and proceeds with the statement having the next
+    smallest label. (Unless a <tt>GOTO</tt> executes, in which case
+    execution proceeds at the designated label.) The program halts
+    after it has completed the statement with the largest label
+    (which is guaranteed not to contain a <tt>GOTO</tt>).</p>
+<h2>Input</h2>
+<p>Input consists of a single program. Each line contains a
+    single valid statement. Each pair of adjacent tokens in the
+    input is separated by a single space. Integers in the input
+    will all be in the range <span class="tex2jax_process">$-2^{31}$</span> to <span class="tex2jax_process">$2^{31}-1$</span>. Input ends at end of
+    file.</p>
+<h2>Output</h2>
+<p>Give the output (<tt>PRINT</tt> and <tt>PRINTLN</tt>
+    statements) of the input program when it is executed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 LET A = 1
+20 PRINT "HELLO THERE "
+30 PRINTLN A
+40 LET A = A + 1
+50 IF A &lt;= 5 THEN GOTO 20
+60 PRINTLN "DONE"
+</pre>
+</td>
+<td>
+<pre>
+HELLO THERE 1
+HELLO THERE 2
+HELLO THERE 3
+HELLO THERE 4
+HELLO THERE 5
+DONE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+40 PRINT P
+180 PRINTLN "DONE"
+130 PRINTLN " IS PRIME"
+60 LET X = D * D
+80 LET R = P / D
+100 LET R = P - R
+20 LET D = 1
+140 IF 1 = 1 THEN GOTO 180
+30 LET P = 111
+150 PRINTLN " IS NOT PRIME"
+170 PRINTLN " IS A DIVISOR"
+50 LET D = D + 1
+70 IF P &lt; X THEN GOTO 130
+120 IF 1 = 1 THEN GOTO 50
+90 LET R = R * D
+110 IF R = 0 THEN GOTO 150
+10 PRINTLN "PRIME TESTER"
+160 PRINT D
+</pre>
+</td>
+<td>
+<pre>
+PRIME TESTER
+111 IS NOT PRIME
+3 IS A DIVISOR
+DONE
+</pre>
+</td>
+</tr>
+</table>
+</div>

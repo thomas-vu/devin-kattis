@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>One way to estimate the area of a circle is to draw a square
+    that just encompasses the circle and mark points randomly (with
+    uniform probability) with a marker. Then, when you get tired of
+    marking points, count up the number of points that you marked
+    that landed in the circle and divide it by the total number of
+    points that you marked. That gives you an idea of how large the
+    circle is relative to the square. Your job is to judge how
+    accurate this is for given circles and experiment outcomes.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.30\textwidth ]{circle}" src="/problems/estimatingtheareaofacircle/file/statement/en/img-0001.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: An illustration of the random marking
+          process.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>Input contains up to <span class="tex2jax_process">$1\,
+    000$</span> test cases, one test case per line. Each line has
+    three space-separated numbers: <span class="tex2jax_process">$r\ m\ c$</span>, where <span class="tex2jax_process">$0 &lt; r \le 1\, 000$</span> is a real
+    number with at most <span class="tex2jax_process">$5$</span>
+    digits past the decimal indicating the true radius of the
+    circle, <span class="tex2jax_process">$1 \le m \le 100\,
+    000$</span> is an integer indicating the total number of marked
+    points, and <span class="tex2jax_process">$0 \le c \le
+    m$</span> is an integer indicating the number of marked points
+    that fall in the circle. Input ends with a line containing
+    three zeros, which should not be processed.</p>
+<h2>Output</h2>
+<p>For each test case, print a line containing two numbers: the
+    true area of the circle and the estimate according to the
+    experiment. Both numbers may have a relative error of at most
+    <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.0 100 75
+10.0 5000 4023
+3.0 21 17
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+3.141592654 3
+314.1592654 321.84
+28.27433388 29.14285714
+</pre>
+</td>
+</tr>
+</table>
+</div>

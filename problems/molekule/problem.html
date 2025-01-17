@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Scientists in a chemical lab in Croatia have been studying
+    the chemical bonds between different molecules. They have a
+    special interest in a group of molecules of the chemical
+    compound nitro hydrogen laminate. The compound consists of
+    <span class="tex2jax_process">$N$</span> molecules bound
+    together by <span class="tex2jax_process">$N - 1$</span>
+    covalent bonds and all the molecules are directly or indirectly
+    tied together with bonds in a single structure.</p>
+<p>The scientists want to modify the compound in a way that all
+    the covalent bonds are transformed into directed covalent
+    bonds. Because of the instability of the newly created
+    compound, each molecule will have a large number of impulses
+    coming out of it and travelling to other molecules using the
+    directed bonds. An impulse can travel using the directed
+    covalent bond only in the direction of the bond itself.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=.7\textwidth ]{picture.pdf}" src="/problems/molekule/file/statement/en/img-0001.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample output
+        </div>
+</center>
+</div>
+<p>The instability of the compound is defined as the largest
+    possible number of bonds a single impulse can use to travel.
+    The scientists want to direct the compound’s covalent bonds in
+    a way that the newly created compound is as stable as possible.
+    In other words, their goal is to create a compound with the
+    minimal longest path an impulse can take during its travel.</p>
+<p>Help the scientists determine the direction of each covalent
+    bond in the compound.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 100\, 000$</span>). Each of the <span class="tex2jax_process">$N - 1$</span> lines contains the integers
+    <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$b_ i$</span> (<span class="tex2jax_process">$1 \leq a_ i, b_ i \leq N$</span>) that
+    denote that molecules <span class="tex2jax_process">$a_
+    i$</span> and <span class="tex2jax_process">$b_ i$</span> are
+    connected with a covalent bond.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N - 1$</span> lines,
+    where each line must contain <tt class="ttfamily">1</tt> if the
+    covalent bond is going to be directed from <span class="tex2jax_process">$a_ i$</span> to <span class="tex2jax_process">$b_ i$</span>, otherwise it contains
+    <tt class="ttfamily">0</tt>. If there are multiple possible
+    solutions, output any.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 2
+2 3
+</pre>
+</td>
+<td>
+<pre>
+0
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+2 1
+1 3
+4 1
+</pre>
+</td>
+<td>
+<pre>
+1
+0
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

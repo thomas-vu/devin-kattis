@@ -1,0 +1,189 @@
+<div class="problembody">
+<p>It is common for cats to have puncture wounds with different
+    severity of infections. To help her local neighbourhood, Doctor
+    Kattis decided to open a clinic! However, there are too many
+    injured cats that come so she needs to prioritise her
+    patients.</p>
+<p>Given the names of <span class="tex2jax_process">$\textbf{N}$</span> injured cats, their level
+    of severity, and subsequent updates of their infection level,
+    determine which cat Doctor Kattis needs to give her most
+    attention to.</p>
+<p>A cat with higher infection level has higher priority. If
+    there are more than one cat with the same infection level,
+    Doctor Kattis will give priority to the cat who arrived at the
+    clinic first.<br/></p>
+<p>There will be <span class="tex2jax_process">$4$</span> types
+    of commands:</p>
+<ol class="enumerate">
+<li>
+<p>ArriveAtClinic(<i class="itshape">catName</i>, <i class="itshape">infectionLevel</i>): This will be indicated by a
+        starting integer <span class="tex2jax_process">$0$</span>
+        followed by <i class="itshape">catName</i> and <i class="itshape">infectionLevel</i>, e.g. <span class="tex2jax_process">$0$</span> LUNA <span class="tex2jax_process">$31$</span>. <i class="itshape">catName</i> is a String that is all UPPERCASE
+        with length <span class="tex2jax_process">$1$</span> to
+        <span class="tex2jax_process">$15$</span> characters. The
+        cat names are all unique. <i class="itshape">infectionLevel</i> is an integer <span class="tex2jax_process">$(30 \le $</span> <i class="itshape">infectionLevel</i> <span class="tex2jax_process">$ \le 100)$</span>.</p>
+</li>
+<li>
+<p>UpdateInfectionLevel(<i class="itshape">catName</i>,
+        <i class="itshape">increaseInfection</i>): This will be
+        indicated by a starting integer <span class="tex2jax_process">$1$</span> followed by <i class="itshape">catName</i> and <i class="itshape">increaseInfection</i>, e.g. <span class="tex2jax_process">$1$</span> LUNA <span class="tex2jax_process">$24$</span>. <i class="itshape">catName</i> is guaranteed to have already arrived
+        at clinic. <i class="itshape">increaseInfection</i> is an
+        integer <span class="tex2jax_process">$(0 \le $</span>
+<i class="itshape">increaseInfection</i> <span class="tex2jax_process">$\le 70)$</span>. The infection level has
+        a maximum value of <span class="tex2jax_process">$100$</span> and the update infection
+        commands are given in such a way that the overall infection
+        level of any cat will not exceed <span class="tex2jax_process">$100$</span>.</p>
+</li>
+<li>
+<p>Treated(<i class="itshape">catName</i>): This will be
+        indicated by a starting integer <span class="tex2jax_process">$2$</span> followed by <i class="itshape">catName</i>, e.g. <span class="tex2jax_process">$2$</span> KITTY. <i class="itshape">catName</i> is guaranteed to have already arrived
+        at the clinic. <i class="itshape">catName</i> leaves the
+        clinic after being treated.</p>
+</li>
+<li>
+<p>Query(): This will be indicated by a single integer
+        <span class="tex2jax_process">$3$</span>. Your job is to
+        print the <i class="itshape">catName</i> with the highest
+        infection level or “The clinic is empty” if there are no
+        more cats.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span>, denoting the number of commands
+    <span class="tex2jax_process">$(1 \le N \le 1\, 000\,
+    000)$</span>. There will be up to <span class="tex2jax_process">$200\, 000$</span> cats. This will be
+    followed by <span class="tex2jax_process">$N$</span> commands
+    as described above.</p>
+<h2>Output</h2>
+<p>Each time the Query() command is encountered, the <i class="itshape">catName</i> with highest infection level or “The
+    clinic is empty” is to be printed in one line.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 100$</span>, there will be up to <span class="tex2jax_process">$15$</span> cats</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 1\, 000\, 000$</span>, there will be up to <span class="tex2jax_process">$200\, 000$</span> cats. However, there
+        is no call to UpdateInfectionLevel command and the cat with
+        the highest infection level is always the first to be be
+        treated, i.e. you can see this as Treated(Query())</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(40
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 1\, 000\, 000$</span>, there will be up to <span class="tex2jax_process">$200\, 000$</span> cats. However, there
+        will be frequent UpdateInfectionLevel commands and the cat
+        with the highest infection level is not always the first to
+        be treated</p>
+</li>
+</ol>
+<h2>Explanation</h2>
+<p>In the sample test case, we have <span class="tex2jax_process">$N = 15$</span> commands:</p>
+<ol class="enumerate">
+<li>
+<p>ArriveAtClinic(“LUNA”, <span class="tex2jax_process">$31$</span>)</p>
+</li>
+<li>
+<p>ArriveAtClinic(“NALA”, <span class="tex2jax_process">$55$</span>)</p>
+</li>
+<li>
+<p>ArriveAtClinic(“BELLA”, <span class="tex2jax_process">$42$</span>)</p>
+</li>
+<li>
+<p>Query(). You have to print out “NALA”, as she is
+        currently the one with the highest infection level. To be
+        precise, at the moment the order is: (NALA, <span class="tex2jax_process">$55$</span>), (BELLA, <span class="tex2jax_process">$42$</span>), (LUNA, <span class="tex2jax_process">$31$</span>).</p>
+</li>
+<li>
+<p>ArriveAtClinic(“KITTY”, <span class="tex2jax_process">$77$</span>)</p>
+</li>
+<li>
+<p>Query(). Now you have to print out “KITTY”. The current
+        order is: (KITTY, <span class="tex2jax_process">$77$</span>), (NALA, <span class="tex2jax_process">$55$</span>), (BELLA, <span class="tex2jax_process">$42$</span>), (LUNA, <span class="tex2jax_process">$31$</span>).</p>
+</li>
+<li>
+<p>UpdateInfectionLevel(“LUNA”, <span class="tex2jax_process">$24$</span>). After this event, the one
+        with the highest infection level is still KITTY with
+        <i class="itshape">infectionLevel</i> = <span class="tex2jax_process">$77$</span>. “LUNA” now has infection
+        level = <span class="tex2jax_process">$31+24$</span> =
+        <span class="tex2jax_process">$55$</span>, but this is
+        still <span class="tex2jax_process">$22$</span> smaller
+        than “KITTY”. Note that “NALA” also has infection level =
+        <span class="tex2jax_process">$55$</span> but “LUNA” is in
+        front of “NALA” because “LUNA” arrived at the clinic
+        earlier. The current order is: (KITTY, <span class="tex2jax_process">$77$</span>), (LUNA, <span class="tex2jax_process">$55$</span>), (NALA, <span class="tex2jax_process">$55$</span>), (BELLA, <span class="tex2jax_process">$42$</span>).</p>
+</li>
+<li>
+<p>Treated(“KITTY”). “KITTY” now has been treated
+        ‘instantly’, and “KITTY” leaves Doctor Kattis’s clinic.</p>
+</li>
+<li>
+<p>Query(). Now you have to print out “LUNA”, as the
+        current order is: (LUNA, <span class="tex2jax_process">$55$</span>), (NALA, <span class="tex2jax_process">$55$</span>), (BELLA, <span class="tex2jax_process">$42$</span>).</p>
+</li>
+<li>
+<p>Treated(“BELLA”). “BELLA” leaves Doctor Kattis’s
+        clinic.</p>
+</li>
+<li>
+<p>Query(). The answer is still: “LUNA”. The current order
+        is: (LUNA, <span class="tex2jax_process">$55$</span>),
+        (NALA, <span class="tex2jax_process">$55$</span>).</p>
+</li>
+<li>
+<p>Treated(“LUNA”). “LUNA” leaves Doctor Kattis’s
+        clinic.</p>
+</li>
+<li>
+<p>Query(). You have to answer: “NALA”. The current order
+        is: (NALA, <span class="tex2jax_process">$55$</span>).</p>
+</li>
+<li>
+<p>Treated(“NALA”). “NALA” leaves Doctor Kattis’s
+        clinic.</p>
+</li>
+<li>
+<p>Query(). You have to answer: “The clinic is empty”.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>15
+0 LUNA 31
+0 NALA 55
+0 BELLA 42
+3
+0 KITTY 77
+3
+1 LUNA 24
+2 KITTY
+3
+2 BELLA
+3
+2 LUNA
+3
+2 NALA
+3
+</pre>
+</td>
+<td>
+<pre>NALA
+KITTY
+LUNA
+LUNA
+NALA
+The clinic is empty
+</pre>
+</td>
+</tr>
+</table>
+</div>

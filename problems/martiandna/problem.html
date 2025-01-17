@@ -1,0 +1,175 @@
+<div class="problembody">
+<p>As you are probably aware, human DNA can be represented as a
+    long string over an alphabet of size four (A, C, G, T), where
+    each symbol represents a distinct nucleobase (respectively;
+    adenine, cytosine, guanine, and thymine).</p>
+<p>For martians, however, things are a bit different; research
+    conducted on the latest martian captured by NASA revealed that
+    martian DNA consists of a whopping <span class="tex2jax_process">$K$</span> distinct nucleobases! Martian DNA
+    may thus be represented as a string over an alphabet of size
+    <span class="tex2jax_process">$K$</span>.</p>
+<p>Now, a certain research group interested in exploiting
+    martian DNA in artificial intelligence applications has
+    requested to get a single consecutive piece of a martian DNA
+    string. For <span class="tex2jax_process">$R$</span> of the
+    nucleobases, they have specified a minimum quantity of how many
+    they need of that particular nucleobase to be present in their
+    sample.</p>
+<p>You are interested in finding the shortest substring of the
+    DNA which satisfies their requirements.</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$K$</span>, and <span class="tex2jax_process">$R$</span>, denoting the total length of the
+    martian DNA, the alphabet size, and the number of nucleobases
+    for which the researchers have a minimum quantity requirement,
+    respectively. They obey <span class="tex2jax_process">$1 \le R
+    \le K \le N$</span>.</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> space-separated integers: the
+    complete martian DNA string. The <span class="tex2jax_process">$i$</span>-th of these integers, <span class="tex2jax_process">$D_ i$</span>, indicates what nucleobase is
+    in the <span class="tex2jax_process">$i$</span>-th position of
+    the DNA string. Nucleobases are <span class="tex2jax_process">$0$</span>-indexed, i.e. <span class="tex2jax_process">$0 \leq D_ i &lt; K$</span>. Each nucleobase
+    will occur at least once in the DNA string.</p>
+<p>Each of the following <span class="tex2jax_process">$R$</span> lines contains two integers
+    <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$Q$</span> representing a nucleobase and its
+    mimimum required quantity, respectively (<span class="tex2jax_process">$0 \le B &lt; K, 1 \le Q \le N$</span>). No
+    nucleobase will be listed more than once in these <span class="tex2jax_process">$R$</span> lines.</p>
+<h2>Output</h2>
+<p>Output a single integer, the length of the shortest
+    consecutive substring of the DNA that satisfies the
+    researchers’ requirements. If no such substring exists, output
+    “<tt class="ttfamily">impossible</tt>”.</p>
+<h2>Constraints</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group. Your final score will
+    be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>16</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 100, R \le
+          10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 4\, 000, R
+          \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>28</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N \le 200\, 000,
+          R \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>32</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \le N \le 200\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Samples</h2>
+<p>In the first sample, there are three substrings of length
+    <span class="tex2jax_process">$2$</span> that contain one each
+    of nucleobases 0 and 1 (namely “<tt class="ttfamily">0 1</tt>”,
+    “<tt class="ttfamily">1 0</tt>” and “<tt class="ttfamily">0
+    1</tt>”), but no substrings of length <span class="tex2jax_process">$1$</span>. Thus the shortest length is
+    <span class="tex2jax_process">$2$</span>.</p>
+<p>In the second sample, the (unique) optimal substring is
+    “<tt class="ttfamily">1 3 2 0 1 2 0</tt>”.</p>
+<p>In the third sample, there aren’t enough nucleobases of type
+    0.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 2
+0 1 1 0 1
+0 1
+1 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>13 4 3
+1 1 3 2 0 1 2 0 0 0 0 3 1
+0 2
+2 1
+1 2
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 1
+1 2 0 1 2
+0 2
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

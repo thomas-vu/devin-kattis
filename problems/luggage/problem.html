@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/luggage/file/statement/en/img-0001.jpg" class="illustration" src="/problems/luggage/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://commons.wikimedia.org/wiki/File:Palermo-Airport-bjs2007-03.jpg">
+        Bernhard J. Scheuvens</a>
+</div>
+</div>
+<p>Johan has a really boring job at the airport. It is his duty
+    to make sure no bags collide when sliding onto the circular
+    conveyor belt in the luggage pick-up zone. All pieces of
+    luggage are loaded onto a straight conveyer belt which ends
+    above the circular conveyor belt. Johan is then manually
+    varying the speed of the straight conveyor so that no
+    collisions occur. He would rather set a constant speed so that
+    he can go to the fika room. There is a sensor at the start of
+    the long conveyor belt so that he can get the positions of all
+    pieces of luggage into his computer. Now all he needs is a
+    program giving him the maximum speed that will avoid all
+    collisions.</p>
+<p>The circular conveyor belt moves at a constant speed of
+    <span class="tex2jax_process">$1$</span> m/s. If a piece
+    of luggage is dropped on the circular belt within one meter of
+    the position of another piece of luggage they may collide, so
+    this should be avoided. Some bags might be picked up on the
+    first round, but you can not know in advance which will be
+    left. The straight conveyor can be set to any speed between
+    <span class="tex2jax_process">$0.1$</span> m/s and
+    <span class="tex2jax_process">$10$</span> m/s.</p>
+<h2>Input</h2>
+<p>The first line of input contains two positive integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1
+    \leq N \leq L \leq 1\, 000$</span>), where <span class="tex2jax_process">$N$</span> is the number of pieces of luggage
+    and <span class="tex2jax_process">$L$</span> is the length of
+    the circular conveyor belt in meters. The second line contains
+    <span class="tex2jax_process">$N$</span> unique space-separated
+    numbers <span class="tex2jax_process">$x_ i$</span>
+    (<span class="tex2jax_process">$0 \leq x_ i \leq 1\,
+    000$</span>) with two digits after the decimal point, denoting
+    luggage positions in meters.</p>
+<h2>Output</h2>
+<p>Output the maximum speed <span class="tex2jax_process">$v$</span> in m/s (<span class="tex2jax_process">$0.1 \leq v \leq 10$</span>) that makes sure
+    no collisions will occur, or “<tt>no fika</tt>” if there is no
+    such speed. The answer is considered correct if it has an
+    absolute error of at most <span class="tex2jax_process">$10^{-9}$</span>.</p>
+<p>You may assume that when an optimal <span class="tex2jax_process">$v$</span> exists, each speed in the interval
+    <span class="tex2jax_process">$[v - 10^{-9}, v]$</span> will
+    also be a valid speed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3
+0.00 2.00
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 4
+0.05 1.00 3.50
+</pre>
+</td>
+<td>
+<pre>
+0.5
+</pre>
+</td>
+</tr>
+</table>
+</div>

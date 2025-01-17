@@ -1,0 +1,147 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/hljodstilling/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hljodstilling/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/martin_thomas/3323193088/">flickr.com</a>
+</div>
+</div>Sara often listens to music when driving with friends.
+    Here follows a transcript of one such car ride.
+    <blockquote class="quote">
+<b class="bfseries">SARA:</b> “Music right?”<br/>
+<b class="bfseries">HANNES:</b> “Yeeea!”<br/>
+<b class="bfseries">ARNAR:</b> “Hey Google! Play
+      Despacito!”<br/>
+<i class="itshape">Hannes corrects the volume
+      quickly.</i><br/>
+<b class="bfseries">SARA:</b> “HOW DARE YOU SET THE VOLUME TO
+      ELEVEN?!?!?! 11 IS NOT DIVISIBLE BY ANY OF MY FAVOURITE
+      NUMBERS!!!”<br/>
+</blockquote>
+<p>Sara despises it when the volume is set to a number not
+    divisible by at least one of her favourite numbers. For example
+    if her favourite numbers were <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$5$</span> it’d be fine to set the volume to
+    <span class="tex2jax_process">$15$</span>, <span class="tex2jax_process">$18$</span> or <span class="tex2jax_process">$20$</span> but <span class="tex2jax_process">$11$</span>, <span class="tex2jax_process">$17$</span> or <span class="tex2jax_process">$21$</span> would not be okay. To simplify
+    the life of everyone involved, Sara’s favourite numbers are
+    always prime.</p>
+<p>It depends on the radio model what range of volumes are
+    offered, but all volume settings are always integers. Given the
+    interval that the radio supports and Sara’s favourite numbers,
+    can you say how many volume settings are possible that she’d be
+    alright with?</p>
+<h2>Input</h2>
+<p>Integers <span class="tex2jax_process">$L$</span> and
+    <span class="tex2jax_process">$R$</span> where <span class="tex2jax_process">$1 \leq L \leq R \leq 10^{14}$</span>, the
+    interval that the radio supports, and in integer <span class="tex2jax_process">$k$</span> where <span class="tex2jax_process">$1 \leq k \leq 20$</span>. Finally a single
+    line with <span class="tex2jax_process">$k$</span> integers
+    <span class="tex2jax_process">$a_1, a_2, \dotsc , a_k$</span>,
+    Sara’s favourite numbers. It will hold for all <span class="tex2jax_process">$i$</span> that <span class="tex2jax_process">$2 \leq a_i \leq 7\, 919$</span> and
+    <span class="tex2jax_process">$a_i$</span> is prime.</p>
+<h2>Output</h2>
+<p>A single integer <span class="tex2jax_process">$n$</span>,
+    the number of volume settings that Sara is alright with on this
+    radio.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$R-L \leq 10\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$k = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$k \leq 2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$k \leq 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 30 2
+2 5
+</pre>
+</td>
+<td>
+<pre>18
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>17 100 1
+7
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+</div>

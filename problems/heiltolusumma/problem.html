@@ -1,0 +1,156 @@
+<div class="problembody">
+<p>Have you heard of the mathematician Carl Friedrich Gauss?
+    There is a fun story about him from when he was in primary
+    school. One day his teacher was tired of the children’s antics,
+    so he assigned them a hard mathematics problem to keep them
+    busy. The assignment was to add all the numbers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span>. The teacher was quite surprised
+    when Gauss came to the teacher’s desk, only a few moments
+    later, and said he was done. The teacher didn’t believe him of
+    course and asked him to tell him his answer. The teacher hadn’t
+    solved it himself yet, since he didn’t expect anyone to do it
+    this quickly, so he needed a few minutes to verify the answer.
+    And it turned out it was right!</p>
+<p>Luckily we have computers these days to do this kind of work
+    for us. Gauss found a way to add the numbers quickly without
+    doing a lot of work, but we aren’t all as smart as him. In this
+    problem we nevertheless want to ask you to solve the same
+    problem: Given an integer <span class="tex2jax_process">$N$</span>, what is the sum of all integers
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>?</p>
+<h2>Input</h2>
+<p>A single line containing the integer <span class="tex2jax_process">$N$</span>.</p>
+<h2>Output</h2>
+<p>A single line containing the sum of all integers from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In the first sample <span class="tex2jax_process">$N =
+    4$</span>. The integers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$4$</span> are <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span> and their sum is <span class="tex2jax_process">$1+2+3+4=10$</span>.</p>
+<p>In the second sample <span class="tex2jax_process">$N =
+    -1$</span>. The integers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$-1$</span> are <span class="tex2jax_process">$-1$</span>, <span class="tex2jax_process">$0$</span>, and <span class="tex2jax_process">$1$</span> and their sum is <span class="tex2jax_process">$(-1)+0+1=0$</span>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1\leq N\leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1\leq N\leq
+          10^5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1\leq N\leq
+          10^9$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$-100\leq N\leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$-10^9\leq N\leq
+          10^9$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>-1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>100
+</pre>
+</td>
+<td>
+<pre>5050
+</pre>
+</td>
+</tr>
+</table>
+</div>

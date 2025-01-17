@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/progressivescramble/file/statement/en/img-0001.jpg" class="illustration" src="/problems/progressivescramble/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/drbillydude/13902515516/">Chilanga
+        Cement</a>
+</div>
+</div>
+<p>You are a member of a naive spy agency. For secure
+    communication, members of the agency use a very simple
+    encryption algorithm – which changes each symbol in the message
+    ‘progressively’, i.e., based on the symbols preceding it. The
+    allowed symbols are space and the <span class="tex2jax_process">$26$</span> lowercase English letters. For
+    encryption purposes we assign them the values <span class="tex2jax_process">$0$</span> (for space) and <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$26$</span> (for a–z). We’ll let <span class="tex2jax_process">$v(s)$</span> represent the numeric value of
+    symbol <span class="tex2jax_process">$s$</span>.</p>
+<p>Consider a message with symbols <span class="tex2jax_process">$s_1, s_2, \ldots , s_n$</span>. The
+    encryption algorithm starts by converting the first symbol
+    <span class="tex2jax_process">$s_1$</span> into its associated
+    value <span class="tex2jax_process">$u_1 = v(s_1)$</span>. Then
+    for each subsequent symbol <span class="tex2jax_process">$s_i$</span> in the message, the computed
+    value is <span class="tex2jax_process">$u_i = v(s_i) +
+    u_{i-1}$</span> — the sum of its associated value and the
+    computed value for the previous symbol. (Note that when there
+    is a space in the input message, the previous scrambled letter
+    is repeated.) This process continues until all the <span class="tex2jax_process">$u_i$</span> are computed.</p>
+<p>At this point, the message is a sequence of numeric values.
+    We need to convert it back to symbols to print it out. We do
+    this by taking the value <span class="tex2jax_process">$u_i$</span> modulo <span class="tex2jax_process">$27$</span> (since there are <span class="tex2jax_process">$27$</span> valid symbols), and replacing
+    that value with its corresponding symbol. For example, if
+    <span class="tex2jax_process">$u_i=32$</span>, then
+    <span class="tex2jax_process">$32 \bmod 27 = 5$</span>, which
+    is the symbol ‘e’ (since <span class="tex2jax_process">$v(e) =
+    5$</span>).</p>
+<p>Let’s look at an example. Suppose we want to encrypt the
+    string “my pie”.</p>
+<ol class="enumerate">
+<li>
+<p>First, convert each symbol <span class="tex2jax_process">$s_i$</span> into <span class="tex2jax_process">$v(s_i)$</span>: <span class="tex2jax_process">$[13, 25, 0, 16, 9, 5]$</span>.</p>
+</li>
+<li>
+<p>Next, compute each <span class="tex2jax_process">$u_i$</span>: <span class="tex2jax_process">$[13, 38, 38, 54, 63, 68]$</span>.</p>
+</li>
+<li>
+<p>Then, use modulus on the <span class="tex2jax_process">$u_i$</span>: <span class="tex2jax_process">$[13, 11, 11, 0, 9, 14]$</span>.</p>
+</li>
+<li>
+<p>Finally, convert these back to symbols:
+        “mkk in”.</p>
+</li>
+</ol>
+<p>Create a program that takes text and encrypts it using this
+    algorithm, and also decrypts text that has been encrypted with
+    this algorithm.</p>
+<h2>Input</h2>
+<p>The input to your program consists of a single integer
+    <span class="tex2jax_process">$1 \le n \le 100$</span> on its
+    own line. This number is followed by <span class="tex2jax_process">$n$</span> lines, each containing the letter
+    ‘e’ or ‘d’, a single space, and then a message made up of
+    lowercase letters (a–z) and spaces, continuing to the end of
+    the line. Each message is between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$80$</span> characters long. The letters ‘d’
+    and ‘e’ indicate that your program decrypts or encrypts the
+    subsequent string, respectively.</p>
+<h2>Output</h2>
+<p>Output the result of encrypting or decrypting each message
+    from the input on its own separate line. Note that differences
+    in whitespace are significant in this problem. Therefore your
+    output must match the correct output character-for-character,
+    including spaces.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+e testing multiple letters rrrrrrrrrrrrr
+e this particularly long  sentence can test encryption
+d tajbbrsjcloiuvmywwhwjqqqinauzmpuuxyllejbvv nqhfvoxlz
+e my pie
+d mkk in
+e the quick brown fox jumps over the lazy dog
+d taffwqzbmmofuqddjyvvezlatthchzzs eeqrqoosgn
+</pre>
+</td>
+<td>
+<pre>tyqjsfmmzteygwhmmycwpulddvmdvmdvmdvmdv
+tajbbrsjcloiuvmywwhwjqqqinauzmpuuxyllejbvv nqhfvoxlz
+this particularly long  sentence can test encryption
+mkk in
+my pie
+taffwqzbmmofuqddjyvvezlatthchzzs eeqrqoosgn
+the quick brown fox jumps over the lazy dog
+</pre>
+</td>
+</tr>
+</table>
+</div>

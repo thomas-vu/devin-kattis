@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>Given a square <span class="tex2jax_process">$n\times
+    n$</span> matrix <span class="tex2jax_process">$A$</span>, the
+    definition of its inverse <span class="tex2jax_process">$B=A^{-1}$</span> is the matrix that fulfills
+    the equality:</p><span class="tex2jax_process">\[ AB = I
+    \]</span>
+<p>where <span class="tex2jax_process">$B$</span> and
+    <span class="tex2jax_process">$I$</span> are <span class="tex2jax_process">$n\times n$</span> matrices, and <span class="tex2jax_process">$I$</span> is the identity matrix with ones
+    along the diagonal, and zeros everywhere else:</p><span class="tex2jax_process">\[ I = \left[ \begin{matrix} 1 &amp; 0 &amp;
+    \ldots &amp; 0 \\ 0 &amp; 1 &amp; \ldots &amp; 0 \\ \vdots
+    &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp;
+    \ldots &amp; 1 \end{matrix} \right] \]</span>
+<p>For this problem, you should implement a matrix inverse
+    solver for <span class="tex2jax_process">$2\times 2$</span>
+    matrices.</p>
+<h2>Input</h2>
+<p>Each test case is described by two lines of input. Each line
+    has two integers with absolute value at most <span class="tex2jax_process">$100$</span>, and the integers given in order
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$d$</span> represent the values of the matrix
+    to invert:</p><span class="tex2jax_process">\[ A = \left[
+    \begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right]
+    \]</span>
+<p>A blank line follows each test case, and the input is
+    terminated by end-of-file. There are at most <span class="tex2jax_process">$5$</span> test cases.</p>
+<h2>Output</h2>
+<p>For each case, display the case number followed by two lines
+    containing the inverse of the given matrix. Each test case is
+    guaranteed to have an inverse (i.e. no matrix is singular), and
+    that inverse is integer-valued. Follow the format of the sample
+    output.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 0
+0 1
+
+30 29
+1 1
+
+-7 -16
+4 9
+
+</pre>
+</td>
+<td>
+<pre>Case 1:
+1 0
+0 1
+Case 2:
+1 -29
+-1 30
+Case 3:
+9 16
+-4 -7
+</pre>
+</td>
+</tr>
+</table>
+</div>

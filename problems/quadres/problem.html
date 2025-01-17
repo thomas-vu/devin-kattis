@@ -1,0 +1,86 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/quadres/file/statement/en/img-0001.jpg" class="illustration" src="/problems/quadres/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>The great German mathematician C. F. Gauss studied
+    the criteria for the equation</p><span class="tex2jax_process">\[ x^2\equiv a \pmod{p} \]</span>
+<p>to have an integer solution <span class="tex2jax_process">$x$</span> for a prime <span class="tex2jax_process">$p$</span>. For some tuples <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$p$</span> there are several solutions,
+    whereas others have none. For instance, <span class="tex2jax_process">$x^2\equiv 2 \pmod{7}$</span> has the
+    solutions <span class="tex2jax_process">$3+7k$</span> and
+    <span class="tex2jax_process">$4+7k$</span> for all integers
+    <span class="tex2jax_process">$k$</span>, but there are no
+    solutions to <span class="tex2jax_process">$x^2\equiv 3
+    \pmod{7}$</span>. The terminology “<span class="tex2jax_process">$a$</span> is a quadratic residue modulo
+    <span class="tex2jax_process">$p$</span>” is used to describe
+    the case when there are solutions to the tuple <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$p$</span>. Identities for quadratic residues
+    are often elegantly put in terms of the Legendre
+    symbol</p><span class="tex2jax_process">\[
+    {\left(\frac{a}{p}\right)}=\left\{ \begin{array}{rl} 0 &amp;
+    \mbox{If $p$ divides $a$.} \\ 1 &amp; \mbox{If $p$ does not
+    divide $a$ and $x^2\equiv a \pmod{p}$ has a solution.} \\ -1
+    &amp; \mbox{Otherwise.}\end{array}\right. \]</span>
+<p>For positive integers <span class="tex2jax_process">$a,b$</span> and prime <span class="tex2jax_process">$p$</span>, the following simple identity is
+    known to hold</p><span class="tex2jax_process">\[
+    {\left(\frac{a}{p}\right)}{\left(\frac{b}{p}\right)}={\left(\frac{ab}{p}\right)}
+    \]</span>
+<p>Far more obscure is the identity proved by Gauss in 1801,
+    expressed as a conjecture by Euler in 1783, and succeeding two
+    erroneous proofs by Legendre (even mathematicians make mistakes
+    at times), called <em>the law of quadratic reciprocity</em>. It
+    says, that for distinct odd primes <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span>,</p><span class="tex2jax_process">\[
+    {\left(\frac{p}{q}\right)}{\left(\frac{q}{p}\right)}=(-1)^{(p-1)(q-1)/4}
+    \]</span>
+<p>Expressions like the one above support the old mathematical
+    pun “the only odd prime is two”, since it is not generally true
+    when one of the primes is two. It turns out though, that there
+    is another simple relationship accounting for the case
+    <span class="tex2jax_process">$a=2$</span>. Let <span class="tex2jax_process">$p$</span> be an odd prime (No, <em>not</em>
+    two!), then</p><span class="tex2jax_process">\[
+    {\left(\frac{2}{p}\right)}=(-1)^{(p^2-1)/8} \]</span>
+<p>Armed with these identities, you shouldn’t have any trouble
+    answering whether a given quadratic equation has a solution or
+    not, should you?</p>
+<h2>Input</h2>
+<p>On the first line of input is a single positive integer
+    <span class="tex2jax_process">$n$</span>, telling the number of
+    test scenarios to follow. Each test scenario is described as
+    two positive integers <span class="tex2jax_process">$a$</span>
+    and a prime <span class="tex2jax_process">$p$</span>, both less
+    than <span class="tex2jax_process">$2^{32}$</span> on a line of
+    their own.</p>
+<h2>Output</h2>
+<p>For each test scenario, output “yes” if there is at least
+    one integer solution <span class="tex2jax_process">$x$</span>
+    to <span class="tex2jax_process">$x^2\equiv a \pmod{p}$</span>
+    for the given numbers <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$p$</span>, or “no” if there
+    aren’t any.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+3 7
+144 3
+5 7
+9 7
+7 7
+</pre>
+</td>
+<td>
+<pre>
+no
+yes
+no
+yes
+yes
+</pre>
+</td>
+</tr>
+</table>
+</div>

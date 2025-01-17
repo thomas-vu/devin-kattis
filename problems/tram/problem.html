@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/tram/file/statement/en/img-0001.jpg" class="illustration" src="/problems/tram/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        A tram with a very low unusefulness. Maybe Lund’s tram line
+        will be as appreciated as Istanbul’s, one day.
+        Photographer: Maj Stenmark
+      </div>
+</div>It is 1815 and the politicians in Lund have just decided
+    to build a tram line in Lund. Oh, sorry. That was wrong, let’s
+    start over. It is 2015 and the politicians in Lund have just
+    decided to build a tram line in Lund.<br/>
+<br/>
+    The politicians have already decided that the tram line should
+    run from south-east to north-west. In order not to cause too
+    many complaints from the citizens, they want to make the line
+    as useful as possible. Therefore they want to minimize the
+    total unusefulness of the tram.<br/>
+<br/>
+    The <em>unusefulness</em> for citizen <span class="tex2jax_process">$i$</span> is equal to the square of the
+    closest distance from the citizen’s home to the tram line. The
+    total unusefulness of the tram is the sum of all citizens’
+    unusefulnesses.<br/>
+<br/>
+    Given the coordinates of each citizen’s home, determine the
+    value <span class="tex2jax_process">$a$</span> minimizing the
+    total unusefulnes, where the equation of the tram line is given
+    by <span class="tex2jax_process">$y=x+a$</span>.
+    <h2>Input</h2>
+<p>The first line of input consists of an integer, <span class="tex2jax_process">$1\leq N\leq 10^5$</span>, the number of
+    citizens in Lund. Then follow <span class="tex2jax_process">$N$</span> lines, with two space-separated
+    integers <span class="tex2jax_process">$x_ i,y_ i$</span>
+    (<span class="tex2jax_process">$|x_ i|,|y_ i|\leq
+    10^6$</span>), the coordinates of citizen <span class="tex2jax_process">$i$</span>’s home.</p>
+<h2>Output</h2>
+<p>The output consists of a single number, <span class="tex2jax_process">$a$</span>, minimizing the total
+    unusefulness. An answer will be accepted if it is within an
+    absolute or relative error of <span class="tex2jax_process">$10^{-3}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1
+2 2
+3 3
+</pre>
+</td>
+<td>
+<pre>0.000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 1
+1 0
+1 1
+</pre>
+</td>
+<td>
+<pre>0.000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 2
+1 1
+1 0
+</pre>
+</td>
+<td>
+<pre>0.333333
+</pre>
+</td>
+</tr>
+</table>
+</div>

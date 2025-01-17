@@ -1,0 +1,91 @@
+<div class="problembody">
+<p>In machine learning, the Support Vector Machine (SVM) is a
+    popular classifier. Given an <span class="tex2jax_process">$n$</span>-dimensional vector <span class="tex2jax_process">$x \in \mathbb {R}^ n$</span>, an SVM
+    produces a label <span class="tex2jax_process">$h(x) \in \{
+    -1,+1\} $</span> depending on where <span class="tex2jax_process">$x$</span> lies relative to an <span class="tex2jax_process">$n$</span>-dimensional hyperplane.</p>
+<p>An example application is email spam classification. We
+    could convert the text of an email into a vector <span class="tex2jax_process">$x$</span> of counts of word occurrences in
+    the email. Each vector element would represent the count for
+    one dictionary word. Then a trained SVM could classify the
+    email as ‘spam’ (<span class="tex2jax_process">$h(x)=+1$</span>) or ‘non-spam’ (<span class="tex2jax_process">$h(x)=-1$</span>).</p>
+<p>Recall that for vectors <span class="tex2jax_process">$x, y
+    \in \mathbb {R}^ n$</span>,</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x_ i$</span> represents
+        the <span class="tex2jax_process">$i$</span>th element of
+        <span class="tex2jax_process">$x$</span>,</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$x^ T y = \sum _{i=1}^ n
+        x_ i y_ i$</span> is the vector inner product of
+        <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, and</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$||x|| = \sqrt {x^
+        Tx}$</span> is the length of vector <span class="tex2jax_process">$x$</span>.</p>
+</li>
+</ul>
+<p>The parameters that define the SVM are <span class="tex2jax_process">$w \in \mathbb {R}^ n$</span> and
+    <span class="tex2jax_process">$b \in \mathbb {R}$</span>. The
+    distance from a point <span class="tex2jax_process">$x$</span>
+    to the hyperplane defined by <span class="tex2jax_process">$(w,b)$</span> is</p><span class="tex2jax_process">\[ d(x) = (w^ Tx + b) / ||w|| \]</span>
+<p>so that the hyperplane is the set <span class="tex2jax_process">$H=\{ \, x\, |\, d(x) = 0\, \} $</span> and
+    is <span class="tex2jax_process">$b / ||w||$</span> units from
+    the origin at its closest. Note also that <span class="tex2jax_process">$w$</span> is orthogonal to the hyperplane.
+    The SVM classifier is formally defined as</p><span class="tex2jax_process">\[ h(x) = \left\{ \begin{aligned} &amp; +1,
+    \mbox{ if } d(x) \geq 0 \\ &amp; -1, \mbox{ otherwise}
+    \end{aligned} \right. \]</span>
+<p>For this problem you are given SVM parameters and a list of
+    query points. For each query <span class="tex2jax_process">$x$</span>, identify <span class="tex2jax_process">$d(x)$</span>.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{example}" src="/problems/svm/file/statement/en/img-0001.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Rendering of the hyperplane (thick
+          dashed line) and query points (circles) for the sample
+          input. Other dashed lines connected each query point to
+          its closest point on the hyperplane.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input contains one test case. The first line contains an
+    integer <span class="tex2jax_process">$1\leq n\leq 1\,
+    000$</span>. The second line contains <span class="tex2jax_process">$n+1$</span> floating-point values which are
+    the values of <span class="tex2jax_process">$w_1, w_2, \ldots ,
+    w_ n$</span> and <span class="tex2jax_process">$b$</span>. Each
+    remaining line (up to the end of file) is a query vector
+    <span class="tex2jax_process">$x$</span>, given as <span class="tex2jax_process">$n$</span> floating point values (in the same
+    order as the elements of <span class="tex2jax_process">$w$</span>). There are at most <span class="tex2jax_process">$1\, 000$</span> queries. All floating point
+    values in the input are in the range <span class="tex2jax_process">$[-1\, 000,1\, 000]$</span> with at most
+    <span class="tex2jax_process">$5$</span> digits past the
+    decimal point. At least one element of <span class="tex2jax_process">$w$</span> will be non-zero.</p>
+<h2>Output</h2>
+<p>For each query <span class="tex2jax_process">$x$</span>,
+    print the value of <span class="tex2jax_process">$d(x)$</span>.
+    The answer should be accurate to within <span class="tex2jax_process">$10^{-4}$</span> relative or absolute
+    error.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+-1 2 3
+-3 1
+8.71 -2.35
+</pre>
+</td>
+<td>
+<pre>
+3.57771
+-4.65549
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Kivotos is in deep trouble. Familiar yet different monsters
+    had made their appearance all over Kivotos, guarding what seems
+    to be False Sanctums. The students plan to destroy these
+    sanctums as fast as possible to stop the monster raid.</p>
+<p>The hacker group of the Millenium Science School, Veritas,
+    is trying to hack through the fifth False Sanctum’s defenses.
+    The fifth False Sanctum is guarded by Hod, a large robot which
+    was originally the communications unit AI of the Millennium,
+    but was hacked by an unidentified AI and now claims itself to
+    be the eighth prophet of the Decagrammaton.</p>
+<p>The documentation states that Hod has a weak spot in its
+    security system, which is represented by a 1-indexed string
+    <span class="tex2jax_process">$S$</span> of length <span class="tex2jax_process">$N$</span>. The document states that it is
+    possible to project the <i class="itshape">density</i> of a
+    continuous substring <span class="tex2jax_process">$S[l,
+    r]$</span> in the following way:</p>
+<ul class="itemize">
+<li>
+<p>Partition the substring <span class="tex2jax_process">$S[l, r]$</span> to multiple substrings
+        such that each of the smaller substrings have the same
+        characters. For example, the string <tt class="ttfamily">maakkkki</tt> is partitioned to <span class="tex2jax_process">$4$</span> smaller substrings, which are
+        <tt class="ttfamily">m</tt>, <tt class="ttfamily">aa</tt>,
+        <tt class="ttfamily">kkkk</tt>, and <tt class="ttfamily">i</tt>.</p>
+</li>
+<li>
+<p>The <i class="itshape">density</i> is estimated to be
+        the sum of squares of the lengths of these partitioned
+        substrings. Following the previous example, the estimated
+        <i class="itshape">density</i> would be <span class="tex2jax_process">$1^2+2^2+4^2+1^2=22$</span>.</p>
+</li>
+</ul>
+<p>As the beloved Sensei of Kivotos students, you decide to
+    help Veritas to do operations on the string <span class="tex2jax_process">$S$</span>. Given the initial state of
+    <span class="tex2jax_process">$S$</span>, you have to process
+    <span class="tex2jax_process">$Q$</span> queries in either of
+    the following form:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">1 i c</tt>: Change the <span class="tex2jax_process">$i^{th}$</span> character of <span class="tex2jax_process">$S$</span> to <span class="tex2jax_process">$c$</span>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">2 l r</tt>: Report the projected
+        <i class="itshape">density</i> of <span class="tex2jax_process">$S[l, r]$</span>.</p>
+</li>
+</ul>
+<h2>Constraints</h2>
+<p><span class="tex2jax_process">$1 \leq N, Q \leq 2 \times
+    10^5$</span><br/>
+<span class="tex2jax_process">$S$</span> is a string consisting
+    of lowercase alphabets at all times<br/>
+<span class="tex2jax_process">$1 \le l \le r \le N$</span><br/>
+<span class="tex2jax_process">$1 \le i \le N$</span></p>
+<h2>Input</h2>
+<p>The first line contains a two space-separated integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$Q$</span>, representing the length of the
+    string <span class="tex2jax_process">$S$</span> and the number
+    of queries respectively<br/>
+    The second line contains a string of <span class="tex2jax_process">$N$</span> characters representing
+    <span class="tex2jax_process">$S$</span><br/>
+<span class="tex2jax_process">$Q$</span> lines follows, the
+    <span class="tex2jax_process">$i^{th}$</span> line contains 3
+    space-separated integers which represents the query type to be
+    processed.</p>
+<h2>Output</h2>
+<p>For every query of the second type, print a single integer
+    representing the projected <i class="itshape">density</i> of
+    the queried substring.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9 3
+aabcccacc
+2 1 9
+1 7 c
+2 2 8
+</pre>
+</td>
+<td>
+<pre>19
+27
+</pre>
+</td>
+</tr>
+</table>
+</div>

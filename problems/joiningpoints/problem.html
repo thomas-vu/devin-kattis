@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>You have <span class="tex2jax_process">$N$</span> points on
+    a Cartesian coordinate plane. The <span class="tex2jax_process">$i$</span>-th point is located at
+    <span class="tex2jax_process">$(X_ i, Y_ i)$</span>, where
+    <span class="tex2jax_process">$X_ i$</span> and <span class="tex2jax_process">$Y_ i$</span> are integers.</p>
+<p>As a competitive programmer, you hate non-rectilinear
+    geometrical objects. Therefore, you wish to connect all the
+    points such that the resulting shape is a square, whose sides
+    are either horizontal or vertical. All of the points must lie
+    <b class="bfseries">on the border</b> of the square (inclusive
+    of its vertices). Degenerate squares (i.e. squares with zero
+    area) <b class="bfseries">are</b> allowed.</p>
+<p>Can you find <b class="bfseries">any</b> such square, or
+    report if it is impossible to do so?</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 10^5)$</span>, the number of points.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    contains two integers <span class="tex2jax_process">$X_
+    i$</span> and <span class="tex2jax_process">$Y_ i$</span>
+<span class="tex2jax_process">$(-10^8 \leq X_ i, Y_ i \leq
+    10^8)$</span>, the coordinates of the <span class="tex2jax_process">$i$</span>-th point.</p>
+<h2>Output</h2>
+<p>If it is impossible to connect all the points such that the
+    resulting shape is a square, output <tt class="ttfamily">Impossible</tt>.</p>
+<p>Otherwise, output four integers <span class="tex2jax_process">$X_1$</span>, <span class="tex2jax_process">$X_2$</span>, <span class="tex2jax_process">$Y_1$</span>, and <span class="tex2jax_process">$Y_2$</span>, the coordinates of two opposite
+    corners of the square. The four integers must satisfy
+    <span class="tex2jax_process">$-10^9 \leq X_1 \leq X_2 \leq
+    10^9$</span> and <span class="tex2jax_process">$-10^9 \leq Y_1
+    \leq Y_2 \leq 10^9$</span>.</p>
+<p>If there are multiple valid answers, you may output any of
+    them. It can be proven that if a solution exists, there will be
+    at least one solution that satisfies the constraints.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+7 6
+2 4
+4 0
+</pre>
+</td>
+<td>
+<pre>2 8 0 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2 6
+8 8
+10 2
+3 3
+</pre>
+</td>
+<td>
+<pre>Impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

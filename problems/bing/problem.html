@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bing/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bing/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/lindsay_bremner/8130059291">Lindsay
+        Bremner</a>.
+      </div>
+</div>
+<p>Bing wants to showcase its clear superiority over Alphabet’s
+    lesser known search engine in the great bing-it challenge of
+    2016. In order to do this, they have pulled out all the stops
+    and decided to hire the very best of the best of Norwegian
+    engineers to do the work for them. Bing knows that performance
+    is the name of the game when it comes to the world wide web,
+    and because of this they want to make their typeahead is as
+    performant as possible. Your task is to analyze the stream of
+    searches coming in, and let everyone know how many of these
+    searches began with the letters currently in the search
+    bar.</p>
+<h2>Input</h2>
+<p>Each test case begins with a line with a single integer
+    <span class="tex2jax_process">$N$</span>. The following
+    <span class="tex2jax_process">$N$</span> lines each contain one
+    word using only the characters a–z.</p>
+<h2>Output</h2>
+<p>For each word, output an integer representing how many of
+    the <i class="itshape">previous</i> words began with or were
+    equal to that word.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq N \leq 100\,
+        000$</span></p>
+</li>
+<li>
+<p>Each word has between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$32$</span> characters.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+histories
+adventure
+history
+his
+ad
+hi
+advent
+mouse
+cat
+his
+</pre>
+</td>
+<td>
+<pre>
+0
+0
+0
+2
+1
+3
+1
+0
+0
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

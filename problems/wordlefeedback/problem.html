@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/wordlefeedback/file/statement/en/img-0001.png" class="illustration" src="/problems/wordlefeedback/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image generated using <a href="https://wordlegame.org/wordle-generator">https://wordlegame.org/wordle-generator</a>
+</div>
+</div>
+<p><em>Wordle</em> is a single-player word-guessing computer
+    game developed by Josh Wardle, and later purchased by <em>The
+    New York Times</em>. In each Wordle game instance, the player
+    is given six attempts to guess a secret <span class="tex2jax_process">$5\textrm{-letter}$</span> word. On each
+    attempt, the player simply enters a <span class="tex2jax_process">$5\textrm{-letter}$</span> guess (which must
+    be a real <span class="tex2jax_process">$5\textrm{-letter}$</span> word), and then
+    the game gives feedback about the correctness of the guess by
+    assigning a colour to each letter in the guess as follows:</p>
+<ul class="itemize">
+<li>
+<p>if the letter appears in the secret word in the same
+        position, it is assigned green</p>
+</li>
+<li>
+<p>if the letter appears in the secret word, but not in the
+        same position, it is assigned yellow</p>
+</li>
+<li>
+<p>if the letter does not appear in the secret word, it is
+        assigned gray</p>
+</li>
+</ul>
+<p>There is one situation that requires a refinement of the
+    above feedback rule. Suppose a letter appears <span class="tex2jax_process">$x$</span> times in the secret word, and
+    <span class="tex2jax_process">$y$</span> times in the guess,
+    with <span class="tex2jax_process">$1 \leq x &lt; y$</span>.
+    And suppose <span class="tex2jax_process">$g$</span> of the
+    occurrences of the letter in the guess are assigned green
+    <span class="tex2jax_process">$(\textrm{clearly }g &lt;
+    y)$</span>. Then there are <span class="tex2jax_process">$y-g$</span> remaining occurrences of the
+    letter in the guess, but only <span class="tex2jax_process">$x-g$</span> remaining occurrences of the
+    letter in the secret word. Wordle will colour the
+    <em>leftmost</em> <span class="tex2jax_process">$x-g$</span> of
+    these <span class="tex2jax_process">$y-g$</span> occurrences in
+    the guess yellow, and the rest gray. For an example of this
+    situation, see Sample Input/Output 3.</p>
+<p>Given a secret word and a guess, determine the resulting
+    Wordle feedback.</p>
+<h2>Input</h2>
+<p>The input consists of two lines, the first of which contains
+    a secret word, and the second of which contains a guess. Each
+    is a string of <span class="tex2jax_process">$5$</span>
+    uppercase English letters (<tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>). Even though
+    Wordle stipulates that secret words and guesses must be real
+    words, for the purpose of this problem the input may be any two
+    <span class="tex2jax_process">$\textrm{length-}5$</span>
+    strings.</p>
+<h2>Output</h2>
+<p>Output a string consisting of <span class="tex2jax_process">$5$</span> characters, representing the
+    colors assigned to the letters in the guess, in the same order.
+    Use ‘<tt class="ttfamily">G</tt>’ for green, ‘<tt class="ttfamily">Y</tt>’ for yellow, and ‘<tt class="ttfamily">-</tt>’ (hyphen) for gray.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>HELLO
+EARTH
+</pre>
+</td>
+<td>
+<pre>Y---Y
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>CHUMP
+CHAMP
+</pre>
+</td>
+<td>
+<pre>GG-GG
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>GUESS
+SASSY
+</pre>
+</td>
+<td>
+<pre>Y--G-
+</pre>
+</td>
+</tr>
+</table>
+</div>

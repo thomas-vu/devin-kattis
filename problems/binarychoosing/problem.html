@@ -1,0 +1,111 @@
+<div class="problembody">
+<p>Two years have passed, and Binary Town is having its next
+    round of biennial elections.<a class="footnote" href="#a0000000005"><sup class="footnotemark">1</sup></a> The “binary
+    voting” system from last time confused a lot of people, so the
+    citizens have decided to not vote at all this year and instead
+    choose one citizen uniformly at random to become the town’s
+    next mayor.</p>
+<p>Because of a lack of trust from last time, though, Binary
+    Town’s citizens have only found a single source of randomness
+    that everyone agrees on: a single perfectly balanced coin that
+    shows <span class="tex2jax_process">$0$</span> on one side and
+    <span class="tex2jax_process">$1$</span> on the other. The town
+    council will repeatedly flip this coin where everyone can see
+    it until they manage to find one random citizen to serve as the
+    next mayor.</p>
+<p>The exact process will go as follows: first, the town will
+    conduct a census and assign every citizen a unique number from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$c - 1$</span>, where <span class="tex2jax_process">$c$</span> equals the number of citizens.
+    Next, the council will flip up to <span class="tex2jax_process">$\lceil \log _2 c \rceil $</span> coins and
+    read the resulting bit string as a binary number. If they read
+    a binary number at least as big as <span class="tex2jax_process">$c$</span>, then this doesn’t represent a
+    valid citizen’s number and so they start again in a new round.
+    Since the citizens have no time to waste, they will start a new
+    round as soon as it becomes clear that their bit string
+    corresponds to too big a number.</p>
+<p>For example, if the census counts <span class="tex2jax_process">$c = 5$</span> citizens, they will flip up to
+    <span class="tex2jax_process">$\lceil \log _2 5 \rceil =
+    3$</span> coins to try to generate a binary number from
+    <span class="tex2jax_process">$000_2 = 0$</span> to
+    <span class="tex2jax_process">$100_2 = 4 = c-1$</span>. If they
+    get the binary number <span class="tex2jax_process">$101_2 =
+    5$</span> they will have to restart, and if their bit string
+    begins with two <span class="tex2jax_process">$1$</span>’s in a
+    row they will also immediately restart, since <span class="tex2jax_process">$110_2 = 6$</span> and <span class="tex2jax_process">$111_2 = 7$</span> both exceed the highest
+    number corresponding to a citizen.</p>
+<p>Binary Town hasn’t conducted its census yet but would like
+    to know how many expected coin flips they will have to make
+    before choosing their new mayor. In the case of <span class="tex2jax_process">$c = 5$</span>, they have a <span class="tex2jax_process">$5/8$</span> chance of flipping <span class="tex2jax_process">$3$</span> coins and choosing the new mayor
+    without having to start a new round, a <span class="tex2jax_process">$1/8$</span> chance of flipping <span class="tex2jax_process">$3$</span> coins and starting a new round (if
+    they get the bit string <span class="tex2jax_process">$101$</span>), and a <span class="tex2jax_process">$1/4$</span> chance of flipping <span class="tex2jax_process">$2$</span> coins and starting a new round
+    early (if they get a bit string starting with <span class="tex2jax_process">$11$</span>). The expected number of total
+    coin flips then equals the expected number of coin flips in a
+    single round (<span class="tex2jax_process">$3 \cdot 3/4 + 2
+    \cdot 1/4 = 11/4 = 2.75$</span> expected coin flips in our
+    example) times the expected number of rounds (this equals the
+    inverse of the probability of successfully choosing a
+    neighbour, or <span class="tex2jax_process">$1/(5/8) = 8/5 =
+    1.6$</span> expected rounds in our example, making the total
+    expected coin flips across all rounds <span class="tex2jax_process">$2.75 \cdot 1.6 = 4.4$</span>).<a class="footnote" href="#a0000000006"><sup class="footnotemark">2</sup></a></p>
+<h2>Input</h2>
+<p>Input consists of a single integer <span class="tex2jax_process">$1 \leq c \leq 10^9$</span> on a single line,
+    the number of citizens (Binary Town really should conduct
+    censuses more often given how much uncertainty they have about
+    their population).</p>
+<h2>Output</h2>
+<p>Output the expected number of coin flips needed to choose
+    Binary Town’s next mayor as a real number. Answers will be
+    accepted up to a relative or absolute error of <span class="tex2jax_process">$10^{-3}$</span>. (If you submit answer
+    <span class="tex2jax_process">$a$</span> and the correct answer
+    equals <span class="tex2jax_process">$b$</span>, the judge will
+    accept your solution if <span class="tex2jax_process">$\min
+    \left(\frac{|a-b|}{b}, |a-b|\right) \leq 10^{-3}$</span>.)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+</pre>
+</td>
+<td>
+<pre>4.4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2022
+</pre>
+</td>
+<td>
+<pre>11.0969337289812
+</pre>
+</td>
+</tr>
+</table>
+</div>

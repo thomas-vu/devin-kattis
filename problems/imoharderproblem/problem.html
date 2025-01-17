@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>After passing the final round of the Hunter Exam, Gon is now
+    a Hunter! But before continuing his exciting journey, Gon
+    decides to visit his home in ‘While Island’.</p>
+<p>Aunt Mito is happy that Gon has become a Hunter and has
+    visited home. But at the same time, she feels worried about
+    Gon — the life of a Hunter is challenging. Thus, she will
+    not allow Gon to leave ‘While Island’, unless Gon is able to
+    solve a puzzle prepared by aunt Mito.</p>
+<p>But what puzzle should Mito give to Gon? Mito opened ‘IMO
+    2019 Problems’ and found the following problem:</p>
+<blockquote class="quotation">
+<p>The Bank of Bath issues coins with an <span class="tex2jax_process">$H$</span> on one side and a <span class="tex2jax_process">$T$</span> on the other. Prof. Tuy has
+      <span class="tex2jax_process">$n$</span> of these coins
+      arranged in a line from left to right. He repeatedly performs
+      the following operation: if there are exactly <span class="tex2jax_process">$k &gt; 0$</span> coins showing
+      <span class="tex2jax_process">$H$</span>, then he turns over
+      the <span class="tex2jax_process">$k$</span>-th coin from the
+      left; otherwise, all coins show <span class="tex2jax_process">$T$</span> and he stops. For example, if
+      <span class="tex2jax_process">$n = 3$</span> the process
+      starting with the configuration <span class="tex2jax_process">$THT$</span> would be: <span class="tex2jax_process">$THT \rightarrow HHT \rightarrow HTT
+      \rightarrow TTT$</span>, which stops after three
+      operations.</p>
+<p>Show that, for each initial configuration, Prof. Tuy stops
+      after a finite number of operations.</p>
+</blockquote>
+<p>‘This problem is too easy’ — Mito thought. ‘Gon will be
+    able to solve it in no time’.</p>
+<p>After some more thinking, Mito changed the above problem to
+    the following harder version:</p>
+<blockquote class="quotation">
+<p>For each initial configuration <span class="tex2jax_process">$C$</span>, let <span class="tex2jax_process">$L(C)$</span> be the number of operations
+      before Prof. Tuy stops.</p>
+<p>Given a sequence <span class="tex2jax_process">$S$</span>
+      consisting of <span class="tex2jax_process">$H$</span>,
+      <span class="tex2jax_process">$T$</span> and <span class="tex2jax_process">$?$</span>, representing some initial
+      state, where <span class="tex2jax_process">$?$</span> denotes
+      an unknown state. Calculate the average value of <span class="tex2jax_process">$L(C)$</span> over all possible sequences
+      <span class="tex2jax_process">$C$</span> represented by
+      <span class="tex2jax_process">$S$</span>.</p>
+</blockquote>
+<p>Even though Gon is smart, he is still unable to solve this
+    question. Please help Gon!</p>
+<h2>Input</h2>
+<p>The input contains a single non-empty line with at most
+    <span class="tex2jax_process">$10^6$</span> characters —
+    the sequence <span class="tex2jax_process">$S$</span>.</p>
+<h2>Output</h2>
+<p>The output must contain a single number — the average
+    value of <span class="tex2jax_process">$L(C)$</span>, as
+    explained in the statement.</p>
+<p>Your answer will be considered correct if its relative or
+    absolute error doesn’t exceed <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<p>Namely: let’s assume that your answer is <span class="tex2jax_process">$a$</span>, and the answer of the jury is
+    <span class="tex2jax_process">$b$</span>. The checker program
+    will consider your answer correct, if <span class="tex2jax_process">$\frac{|a-b|}{max(1,b)} \leq
+    10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>HH
+</pre>
+</td>
+<td>
+<pre>2.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>H?
+</pre>
+</td>
+<td>
+<pre>1.5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>??
+</pre>
+</td>
+<td>
+<pre>1.5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>Write a program which will read lines of text and print the
+    text in a triangle.</p>
+<p>In particular, no line begins or ends with a space. There is
+    exactly one space between words on the same line if they are
+    part of the same sentence. There are exactly two spaces
+    following a period on a line if the next sentence starts on the
+    same line. No word is split between different lines. No period
+    appears at the start of a line and the character before each
+    period is a letter.</p>
+<p>Finally, the words in the input should be presented in
+    triangular format. That is, the last row of the triangle
+    consists of a single word. All other rows are to contain the
+    minimum number of words needed in order to make that row longer
+    than the row below (spaces and periods do count toward the
+    length of the row). Any excess words should be placed in the
+    first row. Of course, the words have to appear in the same
+    order as they do in the input.</p>
+<h2>Input</h2>
+<p>Input consists of a collection of sentences consisting of at
+    most <span class="tex2jax_process">$400$</span> characters (not
+    counting newline characters) spread over multiple lines. All
+    words consist only of uppercase letters and the only
+    punctuation is a period. The input conforms to the same text
+    formatting specification mentioned above except it is not
+    necessarily in triangular format.</p>
+<h2>Output</h2>
+<p>Output the result of converting the input text to triangular
+    form as in the description above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>MUCH CURRENT RESEARCH IN ARTIFICIAL INTELLIGENCE INVOLVES
+DESIGNING PROGRAMS THAT CAPTURE THE KNOWLEDGE AND REASONING
+PROCESS OF HIGHLY INTELLIGENT SPECIALISTS.  THE PRACTICAL GOAL OF
+SUCH WORK IS TO MAKE SPECIALIZED EXPERTISE MORE GENERALLY
+ACCESSIBLE.
+</pre>
+</td>
+<td>
+<pre>MUCH CURRENT RESEARCH IN ARTIFICIAL INTELLIGENCE INVOLVES
+DESIGNING PROGRAMS THAT CAPTURE THE KNOWLEDGE AND
+REASONING PROCESS OF HIGHLY INTELLIGENT
+SPECIALISTS.  THE PRACTICAL GOAL
+OF SUCH WORK IS TO MAKE
+SPECIALIZED EXPERTISE
+MORE GENERALLY
+ACCESSIBLE.
+</pre>
+</td>
+</tr>
+</table>
+</div>

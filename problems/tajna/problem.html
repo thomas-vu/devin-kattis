@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>Every evening, little Ivica sends secret messages to little
+    Marica through e-mail. Knowing Ivica’s e-letter travels
+    unguarded through the network on its way to Marica’s e-mailbox,
+    they have decided to encrypt every message using the following
+    algorithm:</p>
+<ul class="itemize">
+<li>
+<p>Suppose Ivica’s message consists of <span class="tex2jax_process">$N$</span> characters.</p>
+</li>
+<li>
+<p>Ivica must first find a matrix consisting of
+        <span class="tex2jax_process">$R$</span> rows and
+        <span class="tex2jax_process">$C$</span> columns such that
+        <span class="tex2jax_process">$R \le C$</span> and
+        <span class="tex2jax_process">$R \cdot C = N$</span>. If
+        there is more than one such matrix, Ivica chooses the one
+        with the most rows.</p>
+</li>
+<li>
+<p>Ivica writes his message into the matrix in row-major
+        order. In other words, he writes the first segment of the
+        message into the first row, the second segment into the
+        second row and so on.</p>
+</li>
+<li>
+<p>The message he sends to Marica is the matrix read in
+        column-major order.</p>
+</li>
+</ul>
+<p>For instance, suppose Ivica wants to send the message
+    “bombonisuuladici” containing 16 letters. He can use a
+    <span class="tex2jax_process">$1 \times 16$</span>,
+    <span class="tex2jax_process">$2 \times 8$</span>, or
+    <span class="tex2jax_process">$4 \times 4$</span> matrix. Of
+    these, the <span class="tex2jax_process">$4 \times 4$</span>
+    has the most rows. When the message is written into it, the
+    matrix looks like this, and the encrypted message becomes
+    “boudonuimilcbsai”.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>b</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>o</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>m</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>b</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>o</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>n</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>i</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>s</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>u</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>u</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>l</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>a</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p>d</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>i</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>c</p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>i</p>
+</td>
+</tr>
+</table>
+<p>Marica has grown tired of spending her precious time
+    deciphering Ivica’s messages, so you must write a program to do
+    it for her.</p>
+<h2>Input</h2>
+<p>The input contains the received message, a string of
+    lowercase letters of the English alphabet (with no spaces). The
+    number of letters will be between 1 and 100.</p>
+<h2>Output</h2>
+<p>Output the original (decrypted) message.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+bok
+</pre>
+</td>
+<td>
+<pre>
+bok
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+koaski
+</pre>
+</td>
+<td>
+<pre>
+kakosi
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+boudonuimilcbsai
+</pre>
+</td>
+<td>
+<pre>
+bombonisuuladici
+</pre>
+</td>
+</tr>
+</table>
+</div>

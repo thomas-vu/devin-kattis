@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>In chess the bishop is the chessman, which can only move
+    diagonal. It is well known that bishops can reach only fields
+    of one color but all of them in some number of moves (assuming
+    no other figures are on the field). You are given two
+    coordinates on a chess-field and should determine, if a bishop
+    can reach the one field from the other and how. Coordinates in
+    chess are given by a letter (’A’ to ’H’) and a number (1 to 8).
+    The letter specifies the column, the number the row on the
+    chessboard.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{images/chess.pdf}" src="/problems/chess/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Chessboard, bishop and fields the bishop
+          can reach in one move
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input starts with the number of test cases. Each test
+    case consists of one line, containing the start position
+    <span class="tex2jax_process">$X$</span> and end position
+    <span class="tex2jax_process">$Y$</span>. Each position is
+    given by two space separated characters. A letter for the
+    column and a number for the row. There are no duplicate test
+    cases in one input.</p>
+<h2>Output</h2>
+<p>Output one line for every test case. If it’s not possible to
+    move a bishop from <span class="tex2jax_process">$X$</span> to
+    <span class="tex2jax_process">$Y$</span> in any number of moves
+    output ’<tt class="tt">Impossible</tt>’. Otherwise output one
+    possible move sequence from <span class="tex2jax_process">$X$</span> to <span class="tex2jax_process">$Y$</span>. Output the number <span class="tex2jax_process">$n$</span> of moves first (allowed to be
+    <span class="tex2jax_process">$4$</span> at most). Followed by
+    <span class="tex2jax_process">$n + 1$</span> positions, which
+    describe the path the bishop has to go. Every character is
+    separated by one space. There are many possible solutions. Any
+    with at most <span class="tex2jax_process">$4$</span> moves
+    will be accepted. Remember that in a chess move one chessman
+    (the bishop in this case) has to change his position to be a
+    valid move (i.e. two consecutive positions in the output
+    must differ).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+E 2 E 3
+F 1 E 8
+A 3 A 3
+</pre>
+</td>
+<td>
+<pre>
+Impossible
+2 F 1 B 5 E 8
+0 A 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

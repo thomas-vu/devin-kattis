@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:10.00%">
+<img alt="/problems/basketballoneonone/file/statement/en/img-0001.png" class="illustration" src="/problems/basketballoneonone/file/statement/en/img-0001.png"/>
+<div class="description">
+        Photo by <a href="https://pixabay.com/vectors/basketball-player-ball-dunking-306924/">
+        Pixabay</a>
+</div>
+</div>
+<p>Alice and Barbara played some friendly games of one-on-one
+    basketball after work, and you agreed to help them keep score.
+    The rules of the game were simple:</p>
+<ul class="itemize">
+<li>
+<p>Each successful shot by a player earns them either one
+        or two points;</p>
+</li>
+<li>
+<p>The first player to eleven points wins, with one
+        exception;</p>
+</li>
+<li>
+<p>If the score is tied <span class="tex2jax_process">$10$</span>–<span class="tex2jax_process">$10$</span>, the previous rule is
+        replaced by a “win by 2” rule: the first player to lead the
+        other by at least two points wins.</p>
+</li>
+</ul>
+<p>So for example, <span class="tex2jax_process">$11$</span>–<span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$9$</span>–<span class="tex2jax_process">$11$</span>, and <span class="tex2jax_process">$14$</span>–<span class="tex2jax_process">$12$</span> are possible final scores (but
+    not <span class="tex2jax_process">$14$</span>–<span class="tex2jax_process">$13$</span>).</p>
+<p>Whenever Alice or Barbara scored points, you jotted down an
+    <tt class="ttfamily">A</tt> or <tt class="ttfamily">B</tt>
+    (indicating a score by Alice or by Barbara) followed by a
+    <tt class="ttfamily">1</tt> or <tt class="ttfamily">2</tt> (the
+    number of points scored). You have some records of the games
+    Alice and Barbara played in this format, but do not remember
+    who won each game. Can you reconstruct the winner from the game
+    record?</p>
+<h2>Input</h2>
+<p>The input consists of a single line with no more than
+    <span class="tex2jax_process">$200$</span> characters: the
+    record of one game. The record consists of single letters
+    (either <tt class="ttfamily">A</tt> or <tt class="ttfamily">B</tt>) alternating with single numbers (either
+    <tt class="ttfamily">1</tt> or <tt class="ttfamily">2</tt>),
+    and includes no spaces or other extraneous characters. Each
+    record will be a correct scoring history of a single completed
+    game, played under the rules described above.</p>
+<h2>Output</h2>
+<p>Print a single character, either <tt class="ttfamily">A</tt>
+    or <tt class="ttfamily">B</tt>: the winner of the recorded
+    game.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>A2B1A2B2A1A2A2A2
+</pre>
+</td>
+<td>
+<pre>A
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>A2B2A1B2A2B1A2B2A1B2A1A1B1A1A2
+</pre>
+</td>
+<td>
+<pre>A
+</pre>
+</td>
+</tr>
+</table>
+</div>

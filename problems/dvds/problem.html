@@ -1,0 +1,55 @@
+<div class="problembody">
+<p>Dezider is very unhappy as he just discovered that his DVDs
+    got unsorted. Dezider is (occasionally) very organized and
+    during one of his get-organized spells he numbered the DVDs
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. He keeps the DVDs in a tall stack
+    and he wants to have them sorted in increasing order by their
+    number, with <span class="tex2jax_process">$1$</span> at the
+    bottom and <span class="tex2jax_process">$n$</span> at the top
+    of the stack. The trouble is that his space allows him to
+    perform only one type of sorting operation: take a DVD, pull it
+    out of the stack while the DVDs above it fall down by one
+    position, then place it at the top of the stack. What is the
+    smallest number of such operations he needs to do to sort the
+    DVD stack?</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$k$</span>, the number of input instances.
+    Each input instance is described on two lines. The first line
+    contains <span class="tex2jax_process">$1\leq n\leq 1\, 000\,
+    000$</span>. The second line lists the DVDs in the initial
+    order on the stack, from the bottom to the top.</p>
+<h2>Output</h2>
+<p>The output contains <span class="tex2jax_process">$k$</span>
+    lines. The <span class="tex2jax_process">$i$</span>-th line
+    corresponds to the <span class="tex2jax_process">$i$</span>-th
+    input. It contains the smallest number of operations needed to
+    sort the stack.</p>
+<h2>Note</h2>
+<p>In the first sample input it suffices to take DVD
+    <span class="tex2jax_process">$4$</span> and move it to the top
+    of the stack; then the stack is sorted. In the second sample
+    input one can first move DVD <span class="tex2jax_process">$4$</span> and then DVD <span class="tex2jax_process">$5$</span> to get a sorted stack.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4
+1 4 2 3
+5
+5 1 2 4 3
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

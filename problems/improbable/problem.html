@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>It is a sunny day in spring and you are about to meet
+    Patrick, a close friend and former partner in crime. Patrick
+    lost most of his money betting on programming contests, so he
+    needs to pull off another job. For this he needs your help,
+    even though you have retired from a life of crime. You are
+    reluctant at first, as you have no desire to return to your old
+    criminal ways, but you figure there is no harm in listening to
+    his plan.</p>
+<p>There is a shipment of expensive consumer widgets in a
+    nearby warehouse and Patrick intends to steal as much of it as
+    he can. This entails finding a way into the building,
+    incapacitating security guards, passing through various arrays
+    of laser beams – you know, the usual heist techniques. However,
+    the heart of the warehouse has been equipped with a security
+    system that Patrick cannot disable. This is where he needs your
+    help.</p>
+<p>The shipment is stored in large cubical crates, all of which
+    have the same dimensions. The crates are stacked in neat piles,
+    forming a three-dimensional grid. The security system takes
+    pictures of the piles once per hour using three cameras: a
+    front camera, a side camera and a top camera. The image from
+    the front camera shows the height of the tallest pile in each
+    column, the image from the side camera shows the height of the
+    tallest pile in each row, and the image from the top camera
+    shows whether or not each pile is empty. If the security system
+    detects a change in any of the images, it sounds an alarm.</p>
+<p>Once Patrick is inside, he will determine the heights of the
+    piles and send them to you. Figure 1 shows a possible
+    layout of the grid and the view from each of the cameras.</p>
+<div class="figure" id="fig:initial">
+<center>
+<img alt="\includegraphics[width=0.875\textwidth ]{fig-1.pdf}" src="/problems/improbable/file/statement/en/img-0001.png" style="width:87.50%"/>
+<div class="caption">
+<b>Figure 1</b>: Grid of heights and the corresponding
+          camera views.
+        </div>
+</center>
+</div>
+<div class="figure" id="fig:final">
+<center>
+<img alt="\includegraphics[width=0.14\textwidth ]{fig-final.pdf}" src="/problems/improbable/file/statement/en/img-0002.png" style="width:14.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Possible grid of heights after the heist
+        </div>
+</center>
+</div>
+<p>Patrick wants to steal as many crates as possible. Since he
+    cannot disable the security system, he plans to fool it by
+    arranging the remaining crates into piles so that the next set
+    of camera images are the same. In the above example, it is
+    possible to steal nine crates. Figure 2 shows one possible
+    post-heist configuration that appears identical to the security
+    system.</p>
+<p>Patrick asks you to help him determine the maximum number of
+    crates that can be stolen while leaving a configuration of
+    crates that will fool the security system. Will you help him
+    pull off this final job?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$r$</span> (<span class="tex2jax_process">$1
+    \le r \le 100$</span>) and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le c \le 100$</span>), the number of rows and columns in the
+    grid, respectively. Each of the following <span class="tex2jax_process">$r$</span> lines contains <span class="tex2jax_process">$c$</span> integers, the heights (in crates)
+    of the piles in the corresponding row. All heights are between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10^9$</span> inclusive.</p>
+<h2>Output</h2>
+<p>Display the maximum number of crates that can be stolen
+    without being detected.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+1 4 0 5 2
+2 1 2 0 1
+0 2 3 4 4
+0 3 0 3 1
+1 2 2 1 1
+</pre>
+</td>
+<td>
+<pre>
+9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3
+50 20 3
+20 10 3
+</pre>
+</td>
+<td>
+<pre>
+30
+</pre>
+</td>
+</tr>
+</table>
+</div>

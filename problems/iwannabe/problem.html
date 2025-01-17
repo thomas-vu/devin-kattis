@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>In order to become the very best Pokenom trainer, Bash needs
+    to prepare a team of Pokenom to participate in the Pokenom
+    world championship.</p>
+<p>Bash has <span class="tex2jax_process">$N$</span> Pokenoms.
+    Each Pokenom has <span class="tex2jax_process">$3$</span>
+    stats: Attack, Defense and Health. Bash wants to select
+    <span class="tex2jax_process">$K$</span> Pokenoms with highest
+    attack, <span class="tex2jax_process">$K$</span> Pokenoms with
+    highest defense and <span class="tex2jax_process">$K$</span>
+    Pokenoms with highest Health.</p>
+<p>After selection, Bash found something strange: his team have
+    less than <span class="tex2jax_process">$3 \times K$</span>
+    Pokenoms!</p>
+<p>Bash looks carefully at <span class="tex2jax_process">$N =
+    4$</span> Pokenoms he has:</p>
+<ul class="itemize">
+<li>
+<p>‘Chikapu’: Attack = <span class="tex2jax_process">$100$</span>, Defense = <span class="tex2jax_process">$100$</span>, Health = <span class="tex2jax_process">$100$</span></p>
+</li>
+<li>
+<p>‘Batterfly’: Attack = <span class="tex2jax_process">$10$</span>, Defense = <span class="tex2jax_process">$10$</span>, Health = <span class="tex2jax_process">$10$</span></p>
+</li>
+<li>
+<p>‘Mewthree’: Attack = <span class="tex2jax_process">$200$</span>, Defense = <span class="tex2jax_process">$200$</span>, Health = <span class="tex2jax_process">$80$</span></p>
+</li>
+<li>
+<p>‘Dragonon’: Attack = <span class="tex2jax_process">$150$</span>, Defense = <span class="tex2jax_process">$150$</span>, Health = <span class="tex2jax_process">$90$</span></p>
+</li>
+</ul>
+<p>When Bash selects Pokenom with <span class="tex2jax_process">$K = 1$</span>, only ‘Mewthree’ and ‘Chikapu’
+    are selected! This is because ‘Mewthree’ has highest attack and
+    highest defense!</p>
+<p>Your task is simple, you are given the stats of all
+    <span class="tex2jax_process">$N$</span> Pokenoms and the
+    number <span class="tex2jax_process">$K$</span>. Calculate how
+    many different Pokenoms are there in Bash’s team.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line of input contains <span class="tex2jax_process">$2$</span> integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> <span class="tex2jax_process">$(1 \le K \le N \le 1\, 000)$</span>.</p>
+</li>
+<li>
+<p>In the next <span class="tex2jax_process">$N$</span>
+        lines, the <span class="tex2jax_process">$i$</span>-th line
+        contains <span class="tex2jax_process">$3$</span> integers:
+        <span class="tex2jax_process">$A_ i$</span>, <span class="tex2jax_process">$D_ i$</span> and <span class="tex2jax_process">$H_ i$</span>, representing the
+        <span class="tex2jax_process">$3$</span> stats of the
+        <span class="tex2jax_process">$i$</span>-th Pokenom.
+        <span class="tex2jax_process">$A_ i$</span>, <span class="tex2jax_process">$D_ i$</span> and <span class="tex2jax_process">$H_ i$</span> are unsigned <span class="tex2jax_process">$32$</span>-bit integers.</p>
+</li>
+</ul>
+<p>It is guaranteed that no <span class="tex2jax_process">$2$</span> Pokenom have same Attack, no
+    <span class="tex2jax_process">$2$</span> Pokenom have same
+    Defense, and no <span class="tex2jax_process">$2$</span>
+    Pokenoms have same Health.</p>
+<h2>Output</h2>
+<p>Output one line containing exactly one integer: the number
+    of Pokenom in Bash’s team.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 1
+100 100 100
+10 10 10
+200 200 80
+150 150 90
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

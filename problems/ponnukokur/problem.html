@@ -1,0 +1,177 @@
+<div class="problembody">
+<p>Signý is making pancakes. The pancakes have two sides, side
+    <span class="tex2jax_process">$0$</span> and side <span class="tex2jax_process">$1$</span>, and they have been arranged into
+    a row. Thus what side faces up can be denoted by binary.
+    Initially side <span class="tex2jax_process">$0$</span> faces
+    up. Sometimes when she’s cooking the pancakes she flips them.
+    If she flips a pancake with side <span class="tex2jax_process">$0$</span> facing up, then after the flip,
+    side <span class="tex2jax_process">$1$</span> will face up, and
+    vice versa. Signý is a bit odd and wants to know how many
+    pancakes have side <span class="tex2jax_process">$1$</span>
+    facing up in a particular interval. You are tasked with the job
+    of keeping track of Signý’s flips and answering her
+    questions.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$q$</span>, the number of pancakes and number
+    of operations. Next there are <span class="tex2jax_process">$q$</span> lines where each line describes
+    one operation. There are four kinds of operations, the first
+    integer in each line denotes what kind of operation it is.</p>
+<ul class="itemize">
+<li>
+<p>Signý flips pancake <span class="tex2jax_process">$i$</span>. The input is of the format
+        <tt class="ttfamily">1 i</tt>, where <span class="tex2jax_process">$1 \leq i \leq n$</span>.</p>
+</li>
+<li>
+<p>Signý flips all pancakes. The input is of the format
+        <tt class="ttfamily">2</tt>.</p>
+</li>
+<li>
+<p>Signý asks how many pancakes have side <span class="tex2jax_process">$1$</span> facing upwards. The input is
+        of the format <tt class="ttfamily">3</tt>.</p>
+</li>
+<li>
+<p>Signý asks how many pancakes have side <span class="tex2jax_process">$1$</span> facing upwards from pancake
+        <span class="tex2jax_process">$l$</span> to pancake
+        <span class="tex2jax_process">$r$</span>. The input is of
+        the format <tt class="ttfamily">4 l r</tt>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>For each question print a single integer, the answer to the
+    question. The answers should come in the same order as the
+    questions they answer.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n,q \leq 2 \cdot
+          10^5$</span> only operations of types 1 and 3</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n,q \leq 2 \cdot
+          10^5$</span> only operations of types 1, 2 and 3</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n,q \leq
+          1000$</span> with all operations</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>36</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n,q \leq 2 \cdot
+          10^5$</span> with all operations</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 7
+1 1
+3
+1 2
+3
+1 3
+1 2
+3
+</pre>
+</td>
+<td>
+<pre>1
+2
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+3
+1 1
+2
+3
+3
+</pre>
+</td>
+<td>
+<pre>0
+1
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>9 6
+3
+2
+2
+1 9
+4 2 9
+3
+</pre>
+</td>
+<td>
+<pre>0
+1
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

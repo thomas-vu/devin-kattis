@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Oh no, you slept in and have to rush to get to work on time!
+    It is also very cold outside!</p>
+<p>In your rush to put on Winter gear and leave home quickly,
+    you wonder if you forgot your <tt class="ttfamily">keys</tt>,
+    <tt class="ttfamily">phone</tt>, or <tt class="ttfamily">wallet</tt>. You had better check.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 20$</span>) indicating the
+    number of items you grabbed before heading out the door.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    contain a single nonempty string of lowercase letters with
+    length at most <span class="tex2jax_process">$10$</span>
+    indicating an item you grabbed before heading out the door. No
+    two strings will be the same.</p>
+<h2>Output</h2>
+<p>Output each of <tt class="ttfamily">keys</tt>, <tt class="ttfamily">phone</tt>, and <tt class="ttfamily">wallet</tt>
+    that does not appear in the input, one per line and in
+    alphabetic order. If you did not forget any of these items,
+    simply print a single line with the text <tt class="ttfamily">ready</tt></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+jacket
+gloves
+wallet
+keys
+</pre>
+</td>
+<td>
+<pre>phone
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+phone
+toque
+wallet
+keys
+</pre>
+</td>
+<td>
+<pre>ready
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+scarf
+jacket
+gloves
+snowpants
+shades
+</pre>
+</td>
+<td>
+<pre>keys
+phone
+wallet
+</pre>
+</td>
+</tr>
+</table>
+</div>

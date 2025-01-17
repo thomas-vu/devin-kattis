@@ -1,0 +1,132 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/1dfroggereasy/file/statement/en/img-0001.png" class="illustration" src="/problems/1dfroggereasy/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://www.istockphoto.com/photo/frog-in-plant-isolated-on-black-gm146788098-7080753">
+        alptraum (iStock)</a>; Used under license
+      </div>
+</div>
+<p><em>Frogger</em> is a classic <span class="mbox" style="width:"><span class="tex2jax_process">$2$</span>-D</span> video
+    game that challenges the player to move a frog character safely
+    across a traffic-filled road and a hazardous river. What is not
+    well known is that Frogger actually began as a prototype board
+    game based on a <span class="mbox" style="width:"><span class="tex2jax_process">$1$</span>-D</span> concept at a now-defunct
+    toy company.<a class="footnote" href="#a0000000005"><sup class="footnotemark">1</sup></a> After spending millions of dollars
+    following the advice of consultants, company executives
+    realized that the resulting game was almost completely
+    deterministic, and therefore not much fun to play,<a class="footnote" href="#a0000000006"><sup class="footnotemark">2</sup></a> so they sold all Frogger rights to a
+    video game company in an attempt to recoup some of the
+    development costs. The rest, as they say, is video game
+    history.</p>
+<p>The original <span class="mbox" style="width:"><span class="tex2jax_process">$1$</span>-D</span> Frogger design, however,
+    makes for good programming competition problems. Here is how
+    the game works. The board is a row of <span class="tex2jax_process">$n$</span> squares, each of which contains a
+    non-zero integer. These squares are indexed <span class="tex2jax_process">$1, 2, \ldots , n$</span>, from left to
+    right. To start the game, the player rolls an <span class="mbox" style="width:"><span class="tex2jax_process">$n$</span>-sided</span> die with one of the
+    distinct indices on each side, and places a frog token on the
+    board square with the resulting index. The player then randomly
+    selects a card from a deck of cards with integers written on
+    them (one per card); the integer on each card is contained in
+    at least one board square. The number on the selected card is
+    the <em>magic number</em> (or <em>goal number</em>) for this
+    instance of the game.</p>
+<p>The player then applies the following rule as many times as
+    necessary until the game ends:</p>
+<ul class="itemize">
+<li>
+<p>If the frog is on a square containing a positive
+        integer, <span class="tex2jax_process">$k$</span>, the frog
+        makes a <span class="mbox" style="width:">length-<span class="tex2jax_process">$k$</span></span> hop to the right. (Hop
+        distance is measured in board square units.)</p>
+</li>
+<li>
+<p>If the frog is on a square containing a negative
+        integer, <span class="tex2jax_process">$k$</span>, the frog
+        makes a <span class="mbox" style="width:">length-<span class="tex2jax_process">$|k|$</span></span> hop to the left (note
+        the absolute value).</p>
+</li>
+</ul>
+<p>The game ends as soon as the frog encounters one of the
+    following four fates:</p>
+<ol class="enumerate">
+<li>
+<p>The frog lands on a square containing the magic number.
+        This is the only winning outcome for the player. Note that
+        if the frog starts on a square containing the magic number,
+        the player wins immediately (i.e., after <span class="tex2jax_process">$0$</span> hops).</p>
+</li>
+<li>
+<p>The frog falls off the left end of the board.</p>
+</li>
+<li>
+<p>The frog falls off the right end of the board.</p>
+</li>
+<li>
+<p>The frog hops onto a square where the frog has been
+        before, and therefore is trapped in a cycle.</p>
+</li>
+</ol>
+<p>Let <span class="tex2jax_process">$h \geq 0$</span> be the
+    number of hops the frog makes before the game ends. Given an
+    instance of the game, your task is to determine the frog’s fate
+    and the corresponding value of <span class="tex2jax_process">$h$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains three space-separated
+    integers, <span class="tex2jax_process">$n$</span>,
+    <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$m$</span>, where <span class="tex2jax_process">$n$</span> is the number of board squares
+    <span class="tex2jax_process">$(1 \leq n \leq 200)$</span>,
+    <span class="tex2jax_process">$s$</span> is the index of the
+    frog’s starting square <span class="tex2jax_process">$(1 \leq s
+    \leq n)$</span>, and <span class="tex2jax_process">$m$</span>
+    is the magic number. This is followed by a line containing
+    <span class="tex2jax_process">$n$</span> space-separated
+    non-zero integers. These are the numbers in the board squares
+    in order from left to right. Each board square number is in the
+    interval <span class="tex2jax_process">$[-200, 200]$</span>,
+    and the magic number is guaranteed to be one of the board
+    square numbers.</p>
+<h2>Output</h2>
+<p>Output two lines. The first line contains a word indicating
+    the fate of the frog, one of <span class="tex2jax_process">$\{
+    $</span>‘<tt class="ttfamily">magic</tt>’, ‘<tt class="ttfamily">left</tt>’, ‘<tt class="ttfamily">right</tt>’,
+    ‘<tt class="ttfamily">cycle</tt>’<span class="tex2jax_process">$\} $</span>, corresponding to the four fates
+    listed above, respectively. The second line contains the
+    integer <span class="tex2jax_process">$h$</span>, the
+    number of hops the frog makes before encountering its fate.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 4 42
+-9 1 42 -2 -3 -3
+</pre>
+</td>
+<td>
+<pre>magic
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 2 13
+7 5 4 2 13 -2 -3 6
+</pre>
+</td>
+<td>
+<pre>cycle
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

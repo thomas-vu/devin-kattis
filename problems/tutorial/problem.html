@@ -1,0 +1,242 @@
+<div class="problembody">
+<p>ACM-ICPC returns to Singapore in 2015 after a long absence.
+    There may be new contestants from this region who are joining
+    ACM-ICPC for the very first time<a class="footnote" href="#a0000002102"><sup class="footnotemark">1</sup></a>. This problem
+    serves as a tutorial for such contestants.</p>
+<p>First, let establish the fact that the problems posed in
+    ICPC are not research problems where nobody on earth knows how
+    to solve them efficiently. Some people (at least the problem
+    authors) have solved these problems before. There can be more
+    than one possible solution to these problems. As the contest
+    has limited time (5 hours) and each problem has an associated
+    time penalty, it is always beneficial to pick the easiest
+    problem to solve first<a class="footnote" href="#a0000002103"><sup class="footnotemark">2</sup></a>.</p>
+<p>Some problems may look complicated but happen to have a
+    small input size constraint <span class="tex2jax_process">$n$</span> that allows even a naïve brute
+    force solution to pass. Some other problems may look simple but
+    standard textbook algorithm cannot be used to pass the time
+    limit as the input size constraint <span class="tex2jax_process">$n$</span> is too big and one has to figure
+    out the special properties that simplify the problem.</p>
+<p>In the “Competitive Programming” book<a class="footnote" href="#a0000002104"><sup class="footnotemark">3</sup></a> that has
+    been written specifically for preparing for programming
+    contests such as ICPC, we have the following compilation of
+    typical algorithm complexities found in programming
+    contests:</p>
+<div class="table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$t$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>algorithm complexity for input size <span class="tex2jax_process">$n$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$O(n!)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>2</p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$O(2^ n)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>3</p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$O(n^4)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>4</p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$O(n^3)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>5</p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$O(n^2)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black">
+<p>6</p>
+</td>
+<td style="text-align:center">
+<p><span class="tex2jax_process">$O(n \log _2
+              n)$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-right:1px solid black">
+<p>7</p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+<p><span class="tex2jax_process">$O(n)$</span></p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<p>For this problem, we ignore the constant factor and the
+    lower terms hidden in the Big O notation, i.e. an <span class="tex2jax_process">$O(g(n))$</span> algorithm is assumed to
+    perform <b class="bfseries">exactly</b> <span class="tex2jax_process">$g(n)$</span> operations.</p>
+<p>Let <span class="tex2jax_process">$m$</span> be the number
+    of operations that the computer used in the contest<a class="footnote" href="#a0000002105"><sup class="footnotemark">4</sup></a> can run in one second. Suppose
+    <span class="tex2jax_process">$m = 100\, 000\, 000$</span> and
+    the team is trying to solve a problem with a time limit of one
+    second. If the team can devise an algorithm of type
+    <span class="tex2jax_process">$t = 3$</span>, i.e., a rather
+    slow <span class="tex2jax_process">$O(n^4)$</span> algorithm,
+    but the largest <span class="tex2jax_process">$n$</span>
+    mentioned in the problem description is just <span class="tex2jax_process">$50$</span>, then this algorithm is actually
+    fast enough and will get “Accepted” since <span class="tex2jax_process">$50^4 = 6\, 250\, 000$</span> is <b class="bfseries">less than (or equal to</b>) <span class="tex2jax_process">$m$</span>.</p>
+<p>However, if for another problem also with one second time
+    limit, the team can only devise an algorithm of type
+    <span class="tex2jax_process">$t = 5$</span>, i.e. an
+    <span class="tex2jax_process">$O(n^2)$</span> algorithm, but
+    the largest <span class="tex2jax_process">$n$</span> mentioned
+    in the problem description is <span class="tex2jax_process">$10\, 001$</span>, then this algorithm is
+    likely not fast enough to pass the time limit and will get
+    “Time Limit Exceeded”, since <span class="tex2jax_process">$10\, 001^2 = 100\, 020\, 001$</span> which
+    is <b class="bfseries">greater than</b> <span class="tex2jax_process">$m$</span>.</p>
+<p><br/>
+    Formally, given three integer parameters <span class="tex2jax_process">$m$</span> <span class="tex2jax_process">$(1
+    \le m \le 10^9)$</span>, <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1
+    \le n \le 10^9)$</span>, and <span class="tex2jax_process">$t
+    \in [1..7]$</span>, decide if an algorithm of type <span class="tex2jax_process">$t$</span> with time complexity as described
+    in the table above can pass the time limit of one second, that
+    is, performs <b class="bfseries">less than (or equal to)</b>
+<span class="tex2jax_process">$m$</span> operations. Output
+    “AC” (that stands for “Accepted”) if that is the case, or “TLE”
+    (that stands for “Time Limit Exceeded”) otherwise.</p>
+<h2>Input</h2>
+<p>The input consists of three integers in one line:
+    <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$n$</span>, and <span class="tex2jax_process">$t$</span> as elaborated above.</p>
+<h2>Output</h2>
+<p>Output a single string “AC” or “TLE” in one line as
+    elaborated above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000000 500 3
+</pre>
+</td>
+<td>
+<pre>
+TLE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000000 50 3
+</pre>
+</td>
+<td>
+<pre>
+AC
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000000 10001 5
+</pre>
+</td>
+<td>
+<pre>
+TLE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000000 10000 5
+</pre>
+</td>
+<td>
+<pre>
+AC
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+19931568 1000000 6
+</pre>
+</td>
+<td>
+<pre>
+TLE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>
+19931569 1000000 6
+</pre>
+</td>
+<td>
+<pre>
+AC
+</pre>
+</td>
+</tr>
+</table>
+</div>

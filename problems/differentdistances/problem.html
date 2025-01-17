@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Some people say ‘The shortest distance between two points is
+    a straight line.’ However, this depends on the distance metric
+    employed. Between points <span class="tex2jax_process">$(x_1,y_1)$</span> and <span class="tex2jax_process">$(x_2,y_2)$</span>, the Euclidean (aka
+    straight-line) distance is</p><span class="tex2jax_process">\[
+    \sqrt {(x_1 - x_2)^2 + (y_1 - y_2)^2} \]</span>
+<p>However, other distance metrics are often useful. For
+    instance, in a city full of buildings, it is often impossible
+    to travel in a straight line between two points, since
+    buildings are in the way. In this case, the so-called Manhattan
+    (or city-block) distance is the most useful:</p><span class="tex2jax_process">\[ |x_1 - x_2| + |y_1 - y_2| \]</span>
+<p>Both Euclidean and city-block distance are specific
+    instances of what is more generally called the family of
+    <span class="tex2jax_process">$p$</span>-norms. The distance
+    according to norm <span class="tex2jax_process">$p$</span> is
+    given by</p><span class="tex2jax_process">\[ \left( |x_1 - x_2|
+    ^ p + |y_1 - y_2| ^ p \right)^{1/p} \]</span>
+<p>If we look at Euclidean and Manhattan distances, these are
+    both just specific instances of <span class="tex2jax_process">$p = 2$</span> and <span class="tex2jax_process">$p=1$</span>, respectively.</p>
+<p>For <span class="tex2jax_process">$p &lt; 1$</span> this
+    distance measure is not actually a metric, but it may still be
+    interesting sometimes. For this problem, write a program to
+    compute the <span class="tex2jax_process">$p$</span>-norm
+    distance between pairs of points, for a given value of
+    <span class="tex2jax_process">$p$</span>.</p>
+<h2>Input</h2>
+<p>The input file contains up to <span class="tex2jax_process">$1\, 000$</span> test cases, each of which
+    contains five real numbers, <span class="tex2jax_process">$x_1~
+    y_1~ x_2~ y_2~ p$</span>, each of which have at most
+    <span class="tex2jax_process">$10$</span> digits past the
+    decimal point. All coordinates are in the range <span class="tex2jax_process">$(0, 100]$</span> and <span class="tex2jax_process">$p$</span> is in the range <span class="tex2jax_process">$[0.1, 10]$</span>. The last test case is
+    followed by a line containing a single zero.</p>
+<h2>Output</h2>
+<p>For each test case output the <span class="tex2jax_process">$p$</span>-norm distance between the two
+    points <span class="tex2jax_process">$(x_1,y_1)$</span> and
+    <span class="tex2jax_process">$(x_2,y_2)$</span>. Your answer
+    may have absolute or relative error of at most <span class="tex2jax_process">$0.0001$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1.0 1.0 2.0 2.0 2.0
+1.0 1.0 2.0 2.0 1.0
+1.0 1.0 20.0 20.0 10.0
+0
+</pre>
+</td>
+<td>
+<pre>
+1.4142135624
+2.0000000000
+20.3636957882
+</pre>
+</td>
+</tr>
+</table>
+</div>

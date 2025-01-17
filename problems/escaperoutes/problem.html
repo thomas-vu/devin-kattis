@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/escaperoutes/file/statement/en/img-0001.png" class="illustration" src="/problems/escaperoutes/file/statement/en/img-0001.png"/>
+<div class="description">
+        Illustration of the two sample inputs. The coloured paths
+        show where each friend goes in order to inspect every
+        street at least once.
+      </div>
+</div>
+<p>As the zombies start approaching your position, you and your
+    surviving friends are devising a plan to evacuate to the next
+    safe area. You know all the streets to the safe area, but don’t
+    yet know of any possible dangers along the way. Some of your
+    friends volunteer to follow different streets to the safe area
+    and report what they find. Time is short, so your friends will
+    only move towards the safe area and never backtrack. How many
+    friends do you need to send out at the same time such that they
+    inspect all the streets to the safe area?</p>
+<p>We can model the possible routes as a directed acyclic
+    graph, where the set of vertices <span class="tex2jax_process">$V$</span> represents junctions where streets
+    can meet or merge and the set of directed edges <span class="tex2jax_process">$E$</span> represents streets towards the
+    safe area. We number the junctions such that every street
+    strictly increases the junction number. Your friends each start
+    at junction <span class="tex2jax_process">$0$</span> and end at
+    the safe area <span class="tex2jax_process">$|V|-1$</span>.</p>
+<p>Can you find the minimum number of friends you need to send
+    towards the safe area so that every street gets inspected by at
+    least one friend along the way?</p>
+<h2>Input</h2>
+<p>Input begins with two space-separated integers <span class="tex2jax_process">$2 \leq |V| \leq 100$</span> and <span class="tex2jax_process">$|V|-1 \leq |E| \leq {|V| \choose 2}$</span>.
+    The next <span class="tex2jax_process">$|E|$</span> lines
+    consist of two space-separated integers <span class="tex2jax_process">$0 \leq a &lt; b &lt; |V|$</span> indicating
+    that a street exists from junction <span class="tex2jax_process">$a$</span> to <span class="tex2jax_process">$b$</span>. The streets come in lexicographic
+    order, i.e. sorted by closer junction then further junction,
+    and no two streets connect the same two junctions. Every
+    junction and every street lies on some path from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$|V| - 1$</span>.</p>
+<h2>Output</h2>
+<p>Output the smallest number of friends you need to send
+    towards the safe area in order to inspect all the streets.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 8
+0 1
+0 2
+1 3
+2 3
+3 4
+3 5
+4 6
+5 6
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 7
+0 1
+0 2
+1 3
+2 3
+2 4
+3 5
+4 5
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

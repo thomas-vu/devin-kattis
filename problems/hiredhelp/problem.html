@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>Viv’s shoe repair company has seen a spike in demand. Today,
+    she has a backlog of shoes that need repairs. So Viv wants to
+    hire some people to assist with the extra work. According to
+    labour laws, each employee is not allowed to repair more than a
+    certain number of shoes (say <span class="tex2jax_process">$K$</span>) each day. Each shoe takes
+    <span class="tex2jax_process">$1$</span> minute to repair: no
+    more, no less. Each shoe also has a deadline: if it is not
+    repaired by the deadline then the customer gets mad and takes
+    their business elsewhere.</p>
+<p>Viv believes everyone should put in an honest day’s work. If
+    an employee fixes fewer than <span class="tex2jax_process">$K$</span> shoes today then Viv would prefer
+    to not have hired them at all. In fact, she believes in this so
+    strongly that she would prefer to lose business from clients
+    than have an employee not complete their quota.</p>
+<p>Help Viv determine the maximum number of employees she can
+    hire so: a) each employee can repair <span class="tex2jax_process">$K$</span> shoes before their deadlines, and
+    b) each shoe is (of course) repaired by at most one
+    employee.</p>
+<h2>Input</h2>
+<p>Input begins with a line consisting of two integers
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \leq N \leq 10^5$</span>) and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq N$</span>) where <span class="tex2jax_process">$N$</span> is the number of shoes that need
+    to be repaired and <span class="tex2jax_process">$K$</span> is
+    as described above.</p>
+<p>Then a second line follows containing <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$d_1, \ldots , d_ N$</span>
+    (<span class="tex2jax_process">$1 \leq d_ i \leq 10^9$</span>
+    for each <span class="tex2jax_process">$1 \leq i \leq
+    N$</span>) describing the deadlines for the repairs. That is,
+    if the repair of shoe <span class="tex2jax_process">$i$</span>
+    is not completed within at most <span class="tex2jax_process">$d_ i$</span> minutes of the start of the day
+    then client <span class="tex2jax_process">$i$</span> will take
+    their business elsewhere.</p>
+<p>Note, the days can be much longer on Viv’s planet than
+    ours.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$M$</span> on a single line indicating the
+    maximum number of employees such that it is possible to
+    allocate <span class="tex2jax_process">$K$</span> shoes to each
+    employee and each employee can complete their assigned repairs
+    before their respective deadlines, assuming all employees start
+    working on their list of assigned jobs at the start of the
+    day.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 3
+1 1 2 2 1 2
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 3
+3 1 3 2 1 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>6 3
+3 1 2 2 1 2
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

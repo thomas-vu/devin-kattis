@@ -1,0 +1,87 @@
+<div class="problembody">
+<p>Golomb Industries is designing their new office building
+    following modern principles that allow for flexible,
+    reconfigurable meeting spaces. Their plans include a very wide
+    rectangular room, with a series of optional parallel
+    partitions.</p>
+<div class="figure" id="fig:example">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{example}" src="/problems/flexible/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: An example of a configurable space
+      </div>
+</div>
+<p>Figure 1 illustrates such a room having a width of
+    10 units and three optional partitions located 1 unit, 4
+    units, and 8 units away from the left wall of the room. The
+    width of the room always measures the distance between the left
+    and right walls, and partitions always run parallel to these
+    walls. We do not concern ourselves with the depth of the
+    room.</p>
+<p>For this example, if no partitions are used, a meeting can
+    be held in the original space having width 10. If the company
+    needs a space that is precisely 4 units wide, they can use
+    the portion of the room between the left wall and a partition
+    placed at location 4 (or they could use the portion
+    between the partitions at locations 4 and 8). To provide a
+    space having width 7 they can use the portion of the room
+    between the partitions placed at locations 1 and 8
+    (omitting the partition at location 4).</p>
+<p>Given a particular room design, your job is to determine all
+    feasible widths for a meeting.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers: the
+    overall width <span class="tex2jax_process">$W$</span> of
+    the room, with <span class="tex2jax_process">$2 \leq W \leq
+    100$</span>, and the number <span class="tex2jax_process">$P$</span> of intermediate partitions, such
+    that <span class="tex2jax_process">$1 \leq P &lt; W$</span>.
+    Following that is a line with <span class="tex2jax_process">$P$</span> integers, each designating the
+    location <span class="tex2jax_process">$L$</span> of an
+    optional partition, such that <span class="tex2jax_process">$0
+    &lt; L &lt; W$</span>. Each partition is at a distinct location
+    and the partitions’ locations will be listed in increasing
+    order.</p>
+<h2>Output</h2>
+<p>Your program should output a list, from smallest to largest,
+    of each distinct width that can be achieved for a meeting
+    space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 3
+1 4 8
+</pre>
+</td>
+<td>
+<pre>
+1 2 3 4 6 7 8 9 10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 2
+2 5
+</pre>
+</td>
+<td>
+<pre>
+1 2 3 4 5 6
+</pre>
+</td>
+</tr>
+</table>
+</div>

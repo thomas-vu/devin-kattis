@@ -1,0 +1,244 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/utf8/file/statement/en/img-0001.jpg" class="illustration" src="/problems/utf8/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Unicode is an international standard for encoding characters
+    that was designed to overcome the limitations of older text
+    encoding standards like ASCII. The main deficiency of ASCII and
+    similar systems is that they represent only a very limited
+    number of characters (primarily the characters on an
+    English-language keyboard). In contrast, Unicode currently
+    encodes over <span class="tex2jax_process">$130\, 000$</span>
+    characters (as of 2019), including those from most of the
+    world’s languages, and, in theory, could be used to represent
+    over <span class="tex2jax_process">$1\, 000\, 000$</span>
+    characters. Perhaps most importantly for modern human
+    communication, Unicode encodes around <span class="tex2jax_process">$3\, 000$</span> <em>emoji</em> (again, as of
+    2019).</p>
+<p>Unicode has several encoding “flavours,” the most well-known
+    of which are <span class="mbox" style="width:">UTF-8</span>,
+    which uses <span class="tex2jax_process">$8$</span>,
+    <span class="tex2jax_process">$16$</span>, <span class="tex2jax_process">$24$</span>, or <span class="tex2jax_process">$32$</span> bits per character; <span class="mbox" style="width:">UTF-16</span>, which uses <span class="tex2jax_process">$16$</span> or <span class="tex2jax_process">$32$</span> bits per character; and
+    <span class="mbox" style="width:">UTF-32</span>, which uses
+    <span class="tex2jax_process">$32$</span> bits per character.
+    In all these flavours, the encoding of a character is actually
+    the encoding of a non-negative integer corresponding to the
+    character; this integer is called a <em>code
+    point</em>.<a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a></p>
+<p>For this problem, we will focus on <span class="mbox" style="width:">UTF-8</span>. A character that is encoded using
+    <span class="mbox" style="width:">UTF-8</span> is stored in
+    <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span>, or <span class="tex2jax_process">$4$</span> bytes, and we refer to these four
+    options as <b class="bfseries">Type 1</b>, <b class="bfseries">Type 2</b>, <b class="bfseries">Type 3</b>, and <b class="bfseries">Type 4</b>, respectively. The following table
+    is useful for illustrating these. In each representation of a
+    byte as <span class="tex2jax_process">$8$</span> bits, the
+    leftmost bit is the most significant.</p>
+<div class="table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+             </td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-left:1px solid black">
+<p><em>byte <span class="tex2jax_process">$1$</span></em></p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-left:1px solid black">
+<p><em>byte <span class="tex2jax_process">$2$</span></em></p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-left:1px solid black">
+<p><em>byte <span class="tex2jax_process">$3$</span></em></p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><em>byte <span class="tex2jax_process">$4$</span></em></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Type 1</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">0xxxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Type 2</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">110xxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Type 3</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">1110xxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black">
+             </td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><b class="bfseries">Type 4</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">11110xxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><tt class="ttfamily">10xxxxxx</tt></p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<ul class="itemize">
+<li>
+<p><b class="bfseries">Type 1</b> – The first
+        (and only) byte begins with <tt class="ttfamily">0</tt>. The remaining <span class="tex2jax_process">$7$</span> bits are used to store the
+        code point.</p>
+</li>
+<li>
+<p><b class="bfseries">Type 2</b> – The first
+        byte begins with <tt class="ttfamily">110</tt>, and second
+        byte begins with <tt class="ttfamily">10</tt>. The
+        remaining <span class="tex2jax_process">$5$</span> bits of
+        the first byte and the remaining <span class="tex2jax_process">$6$</span> bits of the second byte
+        (<span class="tex2jax_process">$11$</span> bits in total)
+        are used to store the code point.</p>
+</li>
+<li>
+<p><b class="bfseries">Type 3</b> – The first
+        byte begins with <tt class="ttfamily">1110</tt>, and the
+        second and third bytes begin with <tt class="ttfamily">10</tt>. The remaining <span class="tex2jax_process">$4$</span> bits of the first byte and the
+        remaining <span class="tex2jax_process">$6$</span> bits of
+        the second and third bytes are used to store the code point
+        (<span class="tex2jax_process">$16$</span> bits in
+        total).</p>
+</li>
+<li>
+<p><b class="bfseries">Type 4</b> – The first
+        byte begins with <tt class="ttfamily">11110</tt>, and the
+        second, third, and fourth bytes begin with <tt class="ttfamily">10</tt>. The remaining <span class="tex2jax_process">$3$</span> bits of the first byte and the
+        remaining <span class="tex2jax_process">$6$</span> bits of
+        the second, third, and fourth bytes are used to store the
+        code point (<span class="tex2jax_process">$21$</span> bits
+        in total).</p>
+</li>
+</ul>
+<p>A sequence of bytes adheres to the <span class="mbox" style="width:">UTF-8</span> standard if it consists of one or
+    more character encodings, each of which is of <b class="bfseries">Type 1</b>, <b class="bfseries">Type 2</b>, <b class="bfseries">Type 3</b>, or <b class="bfseries">Type 4</b>, in which case we say the byte
+    sequence is <em>valid</em> <span class="mbox" style="width:">UTF-8</span>. Otherwise, the byte sequence is
+    <em>invalid</em> <span class="mbox" style="width:">UTF-8</span>. For example, in Sample
+    Input <span class="tex2jax_process">$2$</span>, the first
+    (and only) byte begins with <tt class="ttfamily">10</tt>, but
+    the first two bits in the first byte of any <span class="mbox" style="width:">UTF-8</span> character encoding can never
+    be <tt class="ttfamily">10</tt>, so this is invalid
+    <span class="mbox" style="width:">UTF-8</span>. And in Sample
+    Input <span class="tex2jax_process">$3$</span>, the first
+    byte should begin a character encoding of <b class="bfseries">Type 4</b>, but only two bytes follow, not
+    three, so this is also invalid <span class="mbox" style="width:">UTF-8</span>.</p>
+<p>Given a sequence of bytes, determine whether or not it is
+    valid <span class="mbox" style="width:">UTF-8</span>, and if it
+    is, report the number of character encodings of <b class="bfseries">Type 1</b>, <b class="bfseries">Type 2</b>, <b class="bfseries">Type 3</b>, and <b class="bfseries">Type 4</b>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer,
+    <span class="tex2jax_process">$n$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$1 \leq n \leq 1\,
+    200$</span>)</span>, the number of bytes in the sequence. This
+    is followed by <span class="tex2jax_process">$n$</span> lines
+    giving the <span class="tex2jax_process">$n$</span> bytes in
+    order, one per line. Each byte is represented as a <span class="mbox" style="width:">length-<span class="tex2jax_process">$8$</span></span> string of ‘<tt class="ttfamily">0</tt>’ and ‘<tt class="ttfamily">1</tt>’
+    characters. The leftmost bit of each byte is the most
+    significant bit.</p>
+<h2>Output</h2>
+<p>If the sequence of bytes is invalid <span class="mbox" style="width:">UTF-8</span>, output a single line containing the
+    word “<tt class="ttfamily">invalid</tt>”. Otherwise output four
+    integers, one per line: the number of character encodings of
+    <b class="bfseries">Type 1</b>, <b class="bfseries">Type 2</b>, <b class="bfseries">Type 3</b>, and <b class="bfseries">Type 4</b>, respectively.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+11100011
+10001111
+10101010
+00000000
+11011011
+10001110
+</pre>
+</td>
+<td>
+<pre>1
+1
+1
+0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1
+10101010
+</pre>
+</td>
+<td>
+<pre>invalid
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+11110111
+10111111
+10111111
+</pre>
+</td>
+<td>
+<pre>invalid
+</pre>
+</td>
+</tr>
+</table>
+</div>

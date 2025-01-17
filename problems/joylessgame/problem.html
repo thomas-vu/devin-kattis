@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>Playing games is the best way to improve flexibility,
+    critical thinking and strategy.</p>
+<p>To become the best Pokenom player, Bash is playing some
+    games with his Pokenom Chikapu.</p>
+<ul class="itemize">
+<li>
+<p>Bash writes down a string <span class="tex2jax_process">$S$</span> containing only lowercase
+        English letters. No <span class="tex2jax_process">$2$</span> consecutive characters in
+        <span class="tex2jax_process">$S$</span> are equal.</p>
+</li>
+<li>
+<p>Bash and Chikapu alternatively take turns to play.</p>
+</li>
+<li>
+<p>In each turn, a player must delete one character in
+        <span class="tex2jax_process">$S$</span>. There are
+        <span class="tex2jax_process">$2$</span> conditions:</p>
+<ul class="itemize">
+<li>
+<p>The first and last characters can not be
+            deleted.</p>
+</li>
+<li>
+<p>After the character is deleted, in the new string,
+            no <span class="tex2jax_process">$2$</span> consecutive
+            characters are equal.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The player who cannot delete a character loses.</p>
+</li>
+<li>
+<p>Chikapu plays first.</p>
+</li>
+</ul>
+<p>After playing <span class="tex2jax_process">$10^9 +
+    7$</span> games, Chikapu won <span class="tex2jax_process">$0$</span> games and lost all <span class="tex2jax_process">$10^9 + 7$</span> times. Chikapu thinks that
+    Bash is cheating, by selecting a string <span class="tex2jax_process">$S$</span> such that Bash always wins.</p>
+<p>Given some string <span class="tex2jax_process">$S$</span>,
+    can you help determine who would win the game, if they both
+    play optimally?</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$T$</span> — the number of test cases
+    <span class="tex2jax_process">$(1 \le T \le 20)$</span>.</p>
+<p>The next <span class="tex2jax_process">$T$</span> lines each
+    contain exactly one string <span class="tex2jax_process">$S$</span> <span class="tex2jax_process">$(3
+    \le |S| \le 10^5)$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print on one line the name of the
+    winner, if they both play optimally. Please note that this
+    problem uses case-sensitive checker.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+vietnam
+icpc
+</pre>
+</td>
+<td>
+<pre>Chikapu
+Bash
+</pre>
+</td>
+</tr>
+</table>
+</div>

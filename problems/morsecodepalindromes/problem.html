@@ -1,0 +1,138 @@
+<div class="problembody">
+<p>A <i class="itshape">Palindrome</i> is a word, number,
+    phrase, or other sequence of characters which reads the same
+    backward as forward, such as <b class="bfseries">madam</b> or
+    <b class="bfseries">racecar</b> or <b class="bfseries">1881</b>. Phrase palindromes ignore capitalization,
+    punctuation, and word boundaries. For example: <b class="bfseries">Madam I’m Adam.</b></p>
+<p>Morse code is a method used in telecommunication to encode
+    text characters as standardized sequences of two different
+    signal durations, called dots and dashes, or dits and dahs.
+    Morse code is named after Samuel Morse, one of the inventors of
+    the telegraph. The international morse code for letters and
+    digits is:</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{morse.png}" src="/problems/morsecodepalindromes/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<p>(Note that the code for upper and lower case letters is the
+    same.)</p>
+<p>A word, number or phrase is a <i class="itshape">Morse Code
+    Palindrome</i> if the morse code for the letters and digits in
+    the word, number or phrase reads the same backwards and
+    forwards (ignoring spaces between character codes). For
+    example:</p>
+<p><b class="bfseries">159</b><br/>
+<img alt="\includegraphics[width=0.52\textwidth ]{159.png}" src="/problems/morsecodepalindromes/file/statement/en/img-0002.png" style="width:52.00%"/></p>
+<p><b class="bfseries">Footstool</b><br/>
+<img alt="\includegraphics[width=0.9\textwidth ]{FOOTSTOOL.png}" src="/problems/morsecodepalindromes/file/statement/en/img-0003.png" style="width:90.00%"/></p>
+<p><b class="bfseries">A E</b><br/>
+<img alt="\includegraphics[width=0.11\textwidth ]{AE.png}" src="/problems/morsecodepalindromes/file/statement/en/img-0004.png" style="width:11.00%"/></p>
+<p>Determine if an input string is a <i class="itshape">Morse
+    Code Palindrome</i>.</p>
+<h2>Input</h2>
+<p>The single input line contains a string of up to
+    <span class="tex2jax_process">$80$</span> ASCII characters,
+    possibly including spaces and other non-alphanumeric printable
+    characters.</p>
+<h2>Output</h2>
+<p>The single output line consists of the integer <tt class="ttfamily">1</tt> if the input string (ignoring everything but
+    letters and digits) is a <i class="itshape">Morse Code
+    Palindrome</i>. Otherwise the output line consists of the
+    integer <tt class="ttfamily">0</tt>. If there are no letters or
+    digits in the input string, the output should be <tt class="ttfamily">0</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>hello
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>159
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>Madam I'm Adam
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>footstool
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>SOS
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>A E
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

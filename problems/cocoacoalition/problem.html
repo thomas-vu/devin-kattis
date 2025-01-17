@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>Alice and Bob decide to share a chocolate bar, which is an
+    <span class="tex2jax_process">$n$</span> by <span class="tex2jax_process">$m$</span> rectangular grid of chocolate
+    cells. They decide that Alice should get <span class="tex2jax_process">$a &lt; n \cdot m$</span> pieces and that Bob
+    should get <span class="tex2jax_process">$b = n \cdot m -
+    a$</span> pieces. To split the chocolate bar, they repeatedly
+    take a single piece of chocolate and break it either
+    horizontally or vertically, creating two smaller pieces of
+    chocolate. See Figure 1 for an example.</p>
+<p>What is the minimum number of splits that Alice and Bob need
+    to perform in order to split the <span class="tex2jax_process">$n$</span>-by-<span class="tex2jax_process">$m$</span> chocolate bar into two piles
+    consisting of <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> chocolate cells?</p>
+<div class="figure" id="fig:chocolate">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{sample2}" src="/problems/cocoacoalition/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of a solution to Sample
+          Input 2, showing the original <span class="tex2jax_process">$10$</span>-by-<span class="tex2jax_process">$10$</span> chocolate bar split three
+          times into pieces of size <span class="tex2jax_process">$10$</span>-by-<span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$10$</span>-by-<span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$3$</span>-by-<span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$7$</span>-by-<span class="tex2jax_process">$3$</span>. Giving Alice the
+          <span class="tex2jax_process">$10$</span>-by-<span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$7$</span>-by-<span class="tex2jax_process">$3$</span> pieces, she gets a total of
+          <span class="tex2jax_process">$50 + 21 = 71$</span>
+          chocolate cells.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single line, containing the three
+    integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$1
+    \le n, m \le 10^6$</span>, <span class="tex2jax_process">$1 \le
+    a &lt; n \cdot m$</span>).</p>
+<h2>Output</h2>
+<p>Output the minimum number of splits needed to achieve the
+    desired division of chocolate.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 10 9
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 10 71
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

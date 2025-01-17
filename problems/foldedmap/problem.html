@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>Freddy’s garden became so large that he needs a map to
+    keep evidence of which vegetables are planted in what area. He
+    ordered a high-quality map from the International
+    Cartographic Publishing Company (ICPC). Since the map has
+    a large scale, it does not fit onto a single page and
+    it has to be split into several rectangular tiles.</p>
+<p>Even with a fixed tile size (determined by a page
+    size) and map scale, the number of tiles may still differ by
+    adjusting the position of the tile grid. Your task is to find
+    the minimal number of tiles necessary to cover the whole region
+    of Freddy’s garden.</p>
+<div class="figure" id="fig:texas">
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{texas}" src="/problems/foldedmap/file/statement/en/img-0001.png" style="width:60.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Two of many possible ways of tiling
+          Texas-shaped region
+        </div>
+</center>
+</div>
+<p>Let’s have a look at Figure 1. The figure on the left shows
+    14 map tiles covering a region. By adjusting the grid
+    position a little bit, we may cover the same region with
+    only 10 tiles, without changing their size or orientation.</p>
+<p>Note that the tiles must be part of a rectangular grid
+    aligned with the <span class="tex2jax_process">$x$</span>-axis
+    and <span class="tex2jax_process">$y$</span>-axis. That is,
+    they touch each other only with their whole sides and cannot be
+    rotated.</p>
+<h2>Input</h2>
+<p>The input contains several test cases. The first line of
+    each test case contains four integer numbers: <span class="tex2jax_process">$A_ r$</span>, <span class="tex2jax_process">$A_ c$</span>, <span class="tex2jax_process">$T_ r$</span>, and <span class="tex2jax_process">$T_ c$</span>. <span class="tex2jax_process">$A_ r$</span> and <span class="tex2jax_process">$A_ c$</span> give the input image resolution
+    in pixels (<span class="tex2jax_process">$1 \le A_ x \le
+    1000$</span>), while <span class="tex2jax_process">$T_
+    r$</span> and <span class="tex2jax_process">$T_ c$</span> is
+    the size of one tile in pixels (<span class="tex2jax_process">$1 \le T_ x \le 100$</span>). The next
+    <span class="tex2jax_process">$A_ r$</span> lines each contain
+    <span class="tex2jax_process">$A_ c$</span> characters, each of
+    them being either “<tt class="tt">X</tt>” (the pixel
+    corresponds to a part of the garden to be covered by
+    a tile) or “<tt class="tt">.</tt>” (the corresponding
+    pixel is outside the garden and does not need to be covered).
+    The region pixels form one <em>connected</em> region.</p>
+<h2>Output</h2>
+<p>For each test case, print one integer number — the minimal
+    number of tiles necessary to cover all pixels represented by
+    “<tt class="tt">X</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3 2 2
+XXX
+XXX
+XXX
+3 3 2 2
+XX.
+XXX
+XXX
+17 32 5 9
+........XXXXXXXX................
+........XXXXXXXX................
+........XXXXXXXX................
+........XXXXXXXXX...............
+........XXXXXXXXXXXXXXX.........
+........XXXXXXXXXXXXXXXXXXXX....
+........XXXXXXXXXXXXXXXXXXXXX...
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..
+..XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
+....XXXXXXXXXXXXXXXXXXXXXXXXXXX.
+......XXXXXXXXXXXXXXXXXXXXXXXXX.
+........XX..XXXXXXXXXXXXXXXXX...
+.............XXXXXXXXXXXXXX.....
+...............XXXXXXXXX........
+................XXXXXXX.........
+.................XXXXX..........
+....................XXX.........
+</pre>
+</td>
+<td>
+<pre>
+4
+3
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

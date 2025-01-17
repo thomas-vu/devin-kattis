@@ -1,0 +1,160 @@
+<div class="problembody">
+<p>Tonight is Halloween and Scared John and his friends have
+    decided to do something fun to celebrate the occasion: crossing
+    the graveyard. Although Scared John does not find this fun at
+    all, he finally agreed to join them in their adventure. Once at
+    the entrance, the friends have begun to cross the graveyard one
+    by one, and now it is the time for Scared John. He still
+    remembers the tales his grandmother told him when he was a
+    child. She told him that, on Halloween night, “haunted holes”
+    appear in the graveyard. These are not usual holes, but they
+    transport people who fall inside to some point in the
+    graveyard, possibly far away. But the scariest feature of these
+    holes is that they allow one to travel in time as well as in
+    space; i.e., if you fall inside a “haunted hole”, you appear
+    somewhere in the graveyard a certain time before (or after) you
+    entered the hole, in a parallel universe otherwise identical to
+    ours.</p>
+<p>The graveyard is organized as a grid of <span class="tex2jax_process">$W \times H$</span> cells, with the entrance
+    in the cell at position <span class="tex2jax_process">$(0,
+    0)$</span> and the exit at <span class="tex2jax_process">$(W -
+    1, H - 1)$</span>. Despite the darkness, Scared John can always
+    recognize the exit, and he will leave as soon as he reaches it,
+    determined never to set foot anywhere in the graveyard again.
+    On his way to the exit, he can walk from one cell to an
+    adjacent one, and he can only head to the North, East, South or
+    West. In each cell there can be either one gravestone, one
+    “haunted hole”, or grass:</p>
+<ul class="itemize">
+<li>
+<p>If the cell contains a gravestone, you cannot walk over
+        it, because gravestones are too high to climb.</p>
+</li>
+<li>
+<p>If the cell contains a “haunted hole” and you walk over
+        it, you will appear somewhere in the graveyard at a
+        possibly different moment in time. The time difference
+        depends on the particular “haunted hole” you fell into, and
+        can be positive, negative or zero.</p>
+</li>
+<li>
+<p>Otherwise, the cell has only grass, and you can walk
+        freely over it.</p>
+</li>
+</ul>
+<p>He is terrified, so he wants to cross the graveyard as
+    quickly as possible. And that is the reason why he has phoned
+    you, a renowned programmer. He wants you to write a program
+    that, given the description of the graveyard, computes the
+    minimum time needed to go from the entrance to the exit. Scared
+    John accepts using “haunted holes” if they permit him to cross
+    the graveyard quicker, but he is frightened to death of the
+    possibility of getting lost and being able to travel back in
+    time indefinitely using the holes, so your program must report
+    these situations.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics{graveyard}" src="/problems/hauntedgraveyard/file/statement/en/img-0001.png" style="width:; height:"/>
+<div class="caption">
+<b>Figure 1</b>: Sample graveyard
+        </div>
+</center>
+</div>
+<p>Figure 3 illustrates a possible graveyard (the second
+    test case from the sample input). In this case there are two
+    gravestones in cells <span class="tex2jax_process">$(2,
+    1)$</span> and <span class="tex2jax_process">$(3, 1)$</span>,
+    and a “haunted hole” from cell <span class="tex2jax_process">$(3, 0)$</span> to cell <span class="tex2jax_process">$(2, 2)$</span> with a difference in time of
+    <span class="tex2jax_process">$0$</span> seconds. The minimum
+    time to cross the graveyard is <span class="tex2jax_process">$4$</span> seconds, corresponding to the
+    path:</p><span class="tex2jax_process">\begin{equation*} (0,0)
+    \xrightarrow [\text {1 sec}]{\text {East}} (1,0) \xrightarrow
+    [\text {1 sec}]{\text {East}} (2,0) \xrightarrow [\text {1
+    sec}]{\text {East}} (3,0) \xrightarrow [\text {0 sec}]{\text
+    {hole}} (2,2) \xrightarrow [\text {1 sec}]{\text {East}} (3,2)
+    \end{equation*}</span>
+<p>If you do not use the “haunted hole”, you need at least
+    <span class="tex2jax_process">$5$</span> seconds.</p>
+<p>Note that the destination of a “haunted hole” may have the
+    entrance to another “haunted hole”. In this situation, Scared
+    John will enter the second hole as soon as he exits the first
+    one.</p>
+<p>Scared John will leave the graveyard as soon as he reaches
+    the exit, even if he would be able to travel back in time by
+    continuing walking through the graveyard.</p>
+<h2>Input</h2>
+<p>The input consists of several test cases (at most
+    <span class="tex2jax_process">$25$</span>). Each test case
+    begins with a line containing two integers <span class="tex2jax_process">$W$</span> and <span class="tex2jax_process">$H$</span> (<span class="tex2jax_process">$1
+    \leq W, H \leq 30$</span>). These integers represent the width
+    <span class="tex2jax_process">$W$</span> and height
+    <span class="tex2jax_process">$H$</span> of the graveyard. The
+    next line contains an integer <span class="tex2jax_process">$G$</span> (<span class="tex2jax_process">$G
+    \geq 0$</span>), the number of gravestones in the graveyard,
+    and is followed by <span class="tex2jax_process">$G$</span>
+    lines containing the positions of the gravestones. Each
+    position is given by two integers <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> (<span class="tex2jax_process">$0
+    \leq X &lt; W$</span> and <span class="tex2jax_process">$0 \leq
+    Y &lt; H$</span>).</p>
+<p>The next line contains an integer <span class="tex2jax_process">$E$</span> (<span class="tex2jax_process">$E
+    \geq 0$</span>), the number of “haunted holes”, and is followed
+    by <span class="tex2jax_process">$E$</span> lines. Each of
+    these contains five integers <span class="tex2jax_process">$X_1, Y_1, X_2, Y_2, T$</span>. <span class="tex2jax_process">$(X_1, Y_1)$</span> is the position of the
+    “haunted hole” (<span class="tex2jax_process">$0 \leq X_1 &lt;
+    W$</span> and <span class="tex2jax_process">$0 \leq Y_1 &lt;
+    H$</span>). <span class="tex2jax_process">$(X_2, Y_2)$</span>
+    is the destination of the “haunted hole” (<span class="tex2jax_process">$0 \leq X_2 &lt; W$</span> and <span class="tex2jax_process">$0 \leq Y_2 &lt; H$</span>). <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$-10\, 000 \leq T \leq 10\, 000$</span>) is
+    the difference in seconds between the moment somebody enters
+    the “haunted hole” and the moment he appears in the destination
+    position; a positive number indicates that he reaches the
+    destination after entering the hole.</p>
+<p>You can safely assume that there are no two “haunted holes”
+    with the same origin, and that neither the entrance nor the
+    destination of a “haunted hole” contains a gravestone.
+    Furthermore, there are neither gravestones nor “haunted holes”
+    at positions <span class="tex2jax_process">$(0,0)$</span> and
+    <span class="tex2jax_process">$(W-1,H-1)$</span>.</p>
+<p>The input will finish with a line containing <tt class="ttfamily">0 0</tt>, which should not be processed.</p>
+<h2>Output</h2>
+<p>For each test case, if it is possible for Scared John to
+    travel back in time indefinitely without passing by the exit,
+    output <tt class="ttfamily">Never</tt>. Otherwise, print the
+    minimum time in seconds that it takes him to cross the
+    graveyard from the entrance to the exit if it is reachable, and
+    <tt class="ttfamily">Impossible</tt> if not.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+2
+2 1
+1 2
+0
+4 3
+2
+2 1
+3 1
+1
+3 0 2 2 0
+4 2
+0
+1
+2 0 1 0 -3
+0 0
+</pre>
+</td>
+<td>
+<pre>
+Impossible
+4
+Never
+</pre>
+</td>
+</tr>
+</table>
+</div>

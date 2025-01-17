@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>Mario finds himself in a wealthy neighborhood. There are
+    <span class="tex2jax_process">$N$</span> homes on a street each
+    with <span class="tex2jax_process">$S_ i$</span> stars where
+    <span class="tex2jax_process">$i \in [1, N]$</span>. He is
+    given <span class="tex2jax_process">$K$</span> burlap sacks
+    with an infinite capacity to hold stolen stars. He can take as
+    many or as few stars as he’d like from each house. However, a
+    star from one home does not get along with a star from another
+    home. As a result, stars from different homes can’t be placed
+    in the same knapsack. However, Mario can split the stars from
+    the one house across multiple sacks. Mario can also leave a
+    sack empty if he deems it necessary.</p>
+<p>Once Mario has completed his robbery, he will encounter
+    Bowser who will steal exactly half of his knapsacks. Bowser
+    will of course steal the sacks with the most stars. Knowing
+    this, Mario has two objectives. His first priority is to
+    maximize the amount of stars that he has at the end. After
+    maximizing this value <span class="tex2jax_process">$M$</span>,
+    his second priority is to ensure that Bowser steals the minimum
+    amount of stars across all possible robbing outcomes that leave
+    Mario with <span class="tex2jax_process">$M$</span> stars.</p>
+<p>For example, in the first sample case, Mario can steal
+    <span class="tex2jax_process">$10$</span> stars from the houses
+    <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$6$</span>, and <span class="tex2jax_process">$9$</span>, while stealing <span class="tex2jax_process">$9$</span> stars from house <span class="tex2jax_process">$8$</span>. Bowser will steal the largest two
+    sacks giving him <span class="tex2jax_process">$20$</span>
+    stars while Mario will keep <span class="tex2jax_process">$19$</span> of the stars. Note that
+    <span class="tex2jax_process">$19$</span> stars is the largest
+    amount of stars that Mario could have possibly acquired, while
+    <span class="tex2jax_process">$20$</span> is the minimum amount
+    of stars that Bowser will steal across all outcomes where Mario
+    gets <span class="tex2jax_process">$19$</span> stars.</p>
+<p>However, in the second sample case, Mario will split the
+    <span class="tex2jax_process">$30$</span> stars from house
+    <span class="tex2jax_process">$2$</span> across three of his
+    knapsacks evenly, and then steal <span class="tex2jax_process">$10$</span> of the stars from house
+    <span class="tex2jax_process">$3$</span> in his fourth
+    knapsack. Bowser will steal <span class="tex2jax_process">$20$</span> of these stars, leaving Mario
+    with <span class="tex2jax_process">$20$</span> stars as
+    well.</p>
+<p>Output two numbers representing the maximum stars Mario can
+    rob and the minimum number of stars he must give Bowser.</p>
+<h2>Input</h2>
+<p>The first line contains two space-separated integers:
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$K$</span> <span class="tex2jax_process">$(1
+    \leq N,K \leq 1\, 000)$</span> . It is guaranteed that
+    <span class="tex2jax_process">$K$</span> is even.<br/>
+    The next line will contain <span class="tex2jax_process">$N$</span> numbers <span class="tex2jax_process">$S_ i$</span> <span class="tex2jax_process">$(0 \leq S_ i \leq 1\, 000)$</span>, each
+    representing the number of stars at each house.</p>
+<h2>Output</h2>
+<p>Output one line containing two numbers representing the
+    maximum stars Mario can rob and the minimum number of stars he
+    must give Bowser in that order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 4
+3 12 4 6 1 10 8 9 18 0
+</pre>
+</td>
+<td>
+<pre>19 20
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+9 30 11
+</pre>
+</td>
+<td>
+<pre>20 20
+</pre>
+</td>
+</tr>
+</table>
+</div>

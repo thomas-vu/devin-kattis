@@ -1,0 +1,106 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/grapevine/file/statement/en/img-0001.jpg" class="illustration" src="/problems/grapevine/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Pieter Brueghel the Younger, <a href="https://www.wga.hu/frames-e.html?/html/b/bruegel/pieter_y/">
+        Web Gallery of Art</a>
+</div>
+</div>
+<p>According to Wikipedia, to hear something “through the
+    grapevine” is to learn of something informally and unofficially
+    by means of gossip or rumor. In this problem, you are tasked
+    with determining how many people will hear about a particular
+    rumor “through the grapevine” after a certain number of
+    days.</p>
+<p>Rumors are always started by a single person. On any given
+    day, a person who knows the rumor can spread it by telling the
+    people that they know. Upon hearing of the rumor, that person
+    must wait until the following day before they can begin to
+    spread it themselves. Furthermore, some people are skeptical
+    and will only spread the rumor once they’ve heard it from a
+    number of distinct sources. However once a person has heard the
+    rumor from enough people, they will always try to spread the
+    rumor to as many people as possible.</p>
+<h2>Input</h2>
+<p>The first line will contain three integers: <span class="tex2jax_process">$0 &lt; n \leq 100\, 000$</span>,
+    <span class="tex2jax_process">$0 &lt; m \leq 100\, 000$</span>,
+    and <span class="tex2jax_process">$0 \leq d \leq 10\,
+    000$</span>, where <span class="tex2jax_process">$n$</span> is
+    the number of people, <span class="tex2jax_process">$m$</span>
+    is the number of connections, and <span class="tex2jax_process">$d$</span> is the number of days that
+    elapse.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines will
+    each consist of a unique string <span class="tex2jax_process">$s$</span> and an integer <span class="tex2jax_process">$0 \leq t \leq 1000$</span> where
+    <span class="tex2jax_process">$s$</span> is the name of a
+    person and <span class="tex2jax_process">$t$</span> is their
+    level of skepticism. In other words, person <span class="tex2jax_process">$s$</span> must hear the rumor from
+    <span class="tex2jax_process">$t$</span> distinct other people
+    before <span class="tex2jax_process">$s$</span> will begin
+    spreading the rumor.</p>
+<p>This is followed by <span class="tex2jax_process">$m$</span>
+    lines each consisting of two strings <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> which indicates that person
+    <span class="tex2jax_process">$u$</span> and person
+    <span class="tex2jax_process">$v$</span> know each other. Each
+    of these lines represents a unique pair of persons.</p>
+<p>The final line will contain a single string <span class="tex2jax_process">$r$</span>, the name of the person that the
+    rumor originates from. Note that <span class="tex2jax_process">$r$</span> is the only person with skepticism
+    <span class="tex2jax_process">$t = 0$</span>. All strings are
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$20$</span> characters long and
+    consists only of English lowercase or uppercase letters and
+    digits.</p>
+<h2>Output</h2>
+<p>Output a single integer: the number of people (not including
+    person <span class="tex2jax_process">$r$</span>) that have
+    heard the rumor after <span class="tex2jax_process">$d$</span>
+    days.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 1
+Alice 0
+Bob 1
+Carol 1
+Alice Bob
+Bob Carol
+Alice
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5 3
+Alice 0
+Bob 1
+Carol 1
+Dan 3
+Erin 1
+Alice Bob
+Alice Carol
+Bob Dan
+Carol Dan
+Dan Erin
+Alice
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>The Hogwarts School of Witchcraft and Wizardry is the home
+    of many students during the school year. The school has many
+    rooms connected by corridors and stairs. Each room has four
+    exits labelled by the integers <span class="tex2jax_process">$1, 2, 3$</span> or <span class="tex2jax_process">$4$</span>. Some exits lead to another room,
+    some of them are blocked, and some even lead back to the same
+    room you just came from.</p>
+<p>New students often have difficulty finding their way,
+    especially since the corridors and stairs are regularly moving,
+    disconnecting and reconnecting different rooms! Luckily, these
+    reconfigurations only take place when no one is walking in the
+    school. All you want to know is how to get from the entrance to
+    the dormitory. A senior student has given you instructions as a
+    sequence of numbers among <span class="tex2jax_process">$1, 2,
+    3, 4$</span>. The first number in the sequence is the exit to
+    take from the starting room. The second number is the exit to
+    take from the second room in the path, and so on. If at any
+    point the indicated exit is blocked, you go back to the
+    entrance and give up. To be successful you must arrive at the
+    dormitory at the end of the entire sequence. Even if it appears
+    you have reached the dormitory before the entire sequence is
+    followed, you are not sure if that is an illusion. Therefore
+    you follow the entire sequence.</p>
+<p>You carefully followed the instructions and arrived at the
+    dormitory. However, the way the rooms are connected to each
+    other has changed after the senior student gave you the
+    instructions, and you just happen to arrive at the same
+    destination even if the rooms you encountered along the way may
+    be completely different.</p>
+<p>You wonder if you are just lucky, or if the reconfiguration
+    of the corridors and stairs ensures that the instructions still
+    lead you to the same destination. Isn’t that magical?</p>
+<p>You will be given a configuration of the school when the
+    senior student walked from the entrance to the dormitory, as
+    well as the configuration of the school when you start
+    following the given instructions. You want to know if every
+    possible sequence of instructions that led the senior student
+    to the dormitory will also lead you to the dormitory in the
+    configuration you walk through. Both the senior student and you
+    start walking from the entrance of the school.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 1\, 000$</span>), indicating
+    the number of rooms in the school. The rooms are numbered
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, where room <span class="tex2jax_process">$1$</span> is the entrance and room
+    <span class="tex2jax_process">$n$</span> is the dormitory.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines of
+    input describe the configuration of the school when the senior
+    student walked to the dormitory, followed by another
+    <span class="tex2jax_process">$n$</span> lines describing the
+    configuration of the school when you start to walk to the
+    dormitory.</p>
+<p>The <span class="tex2jax_process">$i^\textrm {th}$</span>
+    line in the school configuration consists of four non-negative
+    integers, indicating which room exits <span class="tex2jax_process">$1, 2, 3$</span> and <span class="tex2jax_process">$4$</span> lead to. If the room number is
+    <span class="tex2jax_process">$0$</span>, the corresponding
+    exit is blocked.</p>
+<h2>Output</h2>
+<p>If it is not possible for the senior student to walk from
+    the entrance to the dormitory, display <tt class="ttfamily">Impossible</tt>.</p>
+<p>If it is possible, display <tt class="ttfamily">Yes</tt> if
+    you can get from the entrance to the dormitory by following any
+    sequence of instructions taking the senior student from the
+    entrance to the dormitory. Otherwise, display <tt class="ttfamily">No</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 1 1 2
+2 2 2 3
+3 3 3 4
+0 0 0 0
+2 2 2 2
+3 3 3 3
+4 4 4 4
+4 4 4 4
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 1 1 2
+2 2 2 3
+3 3 3 4
+0 0 0 0
+2 2 2 2
+3 3 3 3
+4 4 4 4
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

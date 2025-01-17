@@ -1,0 +1,147 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ricochetrobots/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ricochetrobots/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>A team of up-to four robots is going to deliver parts in a
+    factory floor. The floor is organized as a rectangular grid
+    where each robot ocupies a single square cell. Each robot is
+    represented by an integer from 1 to 4 and can move in the four
+    orthogonal directions (left, right, up, down). However, once
+    set in motion, a robot will stop only when it detects a
+    neighbouring obstacle (i.e., walls, the edges of the factory or
+    other stationary robots). Robots do not move simultaneously,
+    i.e. only a single robot moves at each time step.</p>
+<p>The goal is to compute an efficient move sequence such that
+    robot 1 reaches a designed target spot; this may require
+    moving other robots out of the way or to use them as obstacles
+    for “ricocheting” moves.</p>
+<div class="figure" id="fig:position1">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{position1.png}" src="/problems/ricochetrobots/file/statement/en/img-0002.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Initial position for sample input 1
+        </div>
+</center>
+</div>
+<p>Consider the example in Figure 1, where the gray cells
+    represent walls, <span class="sffamily">X</span> is the
+    target location and <img alt="\includegraphics[height=1em]{robot1.png}" src="/problems/ricochetrobots/file/statement/en/img-0003.png" style="height:1em"/>
+    , <img alt="\includegraphics[height=1em]{robot2.png}" src="/problems/ricochetrobots/file/statement/en/img-0004.png" style="height:1em"/>
+    mark the initial positions of two robots. One optimal solution
+    consists of the six moves described below.</p>
+<div class="figure" id="a0000000006">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{position2.png}" src="/problems/ricochetrobots/file/statement/en/img-0005.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Robot 1 moved up
+        </div>
+</center>
+</div>
+<p> </p>
+<div class="figure" id="a0000000007">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{position3.png}" src="/problems/ricochetrobots/file/statement/en/img-0006.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 3</b>: Robot 2 moved right, down, and left
+        </div>
+</center>
+</div>
+<p> </p>
+<div class="figure" id="a0000000008">
+<center>
+<img alt="\includegraphics[width=0.2\textwidth ]{position4.png}" src="/problems/ricochetrobots/file/statement/en/img-0007.png" style="width:20.00%"/>
+<div class="caption">
+<b>Figure 4</b>: Robot 1 moved down and left
+        </div>
+</center>
+</div>
+<p>Note that the move sequence must leave robot 1 at the target
+    location and not simply pass through it (the target does not
+    cause robots to stop — only walls, edges and other robots).</p>
+<h3>Task</h3>
+<p>Given the description of the factory floor plan, the initial
+    robot and target positions, compute the <em>minimal total
+    number of moves</em> such that robot 1 reaches the target
+    position.</p>
+<h3>Input</h3>
+<p>The first line contains the number of robots <span class="tex2jax_process">$n$</span>, the width <span class="tex2jax_process">$w$</span> and height <span class="tex2jax_process">$h$</span> of the factory floor in cells, and
+    an upper-bound limit <span class="tex2jax_process">$\ell
+    $</span> on the number of moves for searching solutions.</p>
+<p>The remaining <span class="tex2jax_process">$h$</span> lines
+    of text represent rows of the factory floor with exactly
+    <span class="tex2jax_process">$w$</span> characters each
+    representing a cell position:</p>
+<dl class="description">
+<dt><tt class="ttfamily">W</tt></dt>
+<dd>
+<p>a cell occupied by a wall;</p>
+</dd>
+<dt><tt class="ttfamily">X</tt></dt>
+<dd>
+<p>the (single) target cell;</p>
+</dd>
+<dt><tt class="ttfamily">1,2,3,4</tt></dt>
+<dd>
+<p>initial position of a robot;</p>
+</dd>
+<dt><tt class="ttfamily">.</tt></dt>
+<dd>
+<p>an empty cell.</p>
+</dd>
+</dl>
+<h3>Constraints</h3>
+<p><span class="tex2jax_process">$1 \leq n\leq 4$</span><br/>
+<span class="tex2jax_process">$\max (w,h) \leq 10$</span><br/>
+<span class="tex2jax_process">$w, h \geq 1$</span><br/>
+<span class="tex2jax_process">$1 \leq \ell \leq 10$</span></p>
+<h3>Output</h3>
+<p>The output should be the minimal number of moves for
+    robot 1 to reach the target location or <tt class="tt">NO
+    SOLUTION</tt> if no solution with less than or equal the given
+    upper-bound number of moves exists.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5 4 10
+.2...
+...W.
+WWW..
+.X.1.
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 5 4 10
+.....
+...W.
+WWW..
+.X.1.
+</pre>
+</td>
+<td>
+<pre>
+NO SOLUTION
+</pre>
+</td>
+</tr>
+</table>
+</div>

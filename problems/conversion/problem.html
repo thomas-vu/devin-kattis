@@ -1,0 +1,113 @@
+<div class="problembody">
+<p>To help support a patent defense, we need to recover some
+    experimental data that was stored as single precision floating
+    point on a now-defunct Gould Power-Node mini-computer. The
+    Gould used a base 16 floating-point format. We want to convert
+    Gould floating point values, as much as possible, to single
+    precision <em>IEEE</em> floating-point values.</p>
+<p>The Gould internal floating-point format has 1 sign bit,
+    <span class="tex2jax_process">$S$</span>, a 7-bit offset (base
+    16) exponent field, <span class="tex2jax_process">$E$</span>,
+    and a 24-bit (6 hex digits) hexadecimal mantissa. (Note that
+    this means that up to 3 high bits of the mantissa may be
+    zero.)</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{c1.png}" src="/problems/conversion/file/statement/en/img-0001.png" style="width:; height:"/><br/>
+<img alt="\includegraphics[]{c2.png}" src="/problems/conversion/file/statement/en/img-0002.png" style="width:; height:"/><br/>
+</center>
+</div>
+<p>Floating-point zero is represented by 32 bits of 0.</p>
+<p>The IEEE format has 1 sign bit, <span class="tex2jax_process">$S$</span>, an 8-bit offset (base 2) exponent
+    field, <span class="tex2jax_process">$E$</span>, and a 24-bit
+    mantissa, for which the high bit is (in normalized numbers)
+    always 1 and not part of the 23 bits in the format.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{c3.png}" src="/problems/conversion/file/statement/en/img-0003.png" style="width:; height:"/><br/>
+</center>
+</div>
+<p>If the exponent is not 255 and not 0, the value is a
+    normalized floating point number,</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{c4.png}" src="/problems/conversion/file/statement/en/img-0004.png" style="width:; height:"/><br/>
+</center>
+</div>
+<p>If the exponent is 255 and the mantissa is 0, the value is
+    plus or minus infinity (depending on the sign bit). If the
+    exponent is 255 and the mantissa is not 0, it indicates special
+    values that will not be used in this problem.</p>
+<p>If the exponent is 0 and the mantissa is zero, the value is
+    plus or minus zero (depending on the sign bit).</p>
+<p>If the exponent is 0 and the mantissa is not zero, the value
+    is a de-normalized floating-point number with:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[]{c5.png}" src="/problems/conversion/file/statement/en/img-0005.png" style="width:; height:"/><br/>
+</center>
+</div>
+<p>Write a program that takes as input a floating-point value
+    in Gould format and outputs the value in IEEE format as
+    follows:</p>
+<p>If the value is zero return (plus) zero.</p>
+<p>If the value is too large to be represented as a normalized
+    floating-point value, return plus or minus infinity depending
+    on the sign.</p>
+<p>If the value is too small to be represented as a normalized
+    floating-point value:</p>
+<ul class="itemize">
+<li>
+<p>If it may be represented as a de-normalized value,
+        return the de-normalized value.</p>
+</li>
+<li>
+<p>Otherwise, return plus or minus zero, depending on the
+        sign.</p>
+</li>
+</ul>
+<p>In all other cases, return the normalized value.</p>
+<p>If there are less significant bits than required for IEEE
+    floating-point, extend with 0 bits.</p>
+<p>If there are more significant bits than required for IEEE
+    floating-point, truncate the extra bits.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 100$</span>) which is the number
+    of data sets that follow. Each data set should be processed
+    identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by 8 hex digits
+    (<tt class="ttfamily">0-9,A-F</tt>) of the Gould floating-point
+    value.</p>
+<h2>Output</h2>
+<p>For each data set there is one line of output. The single
+    output line consists of the data set number, <span class="tex2jax_process">$K$</span>, followed by a single space
+    followed by the 8 hex digits (<tt class="ttfamily">0-9,A-F</tt>) of the corresponding (as described
+    above) IEEE floating point value.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 41200000
+2 E0FFFFFE
+3 E11FFFFF
+4 88888888
+</pre>
+</td>
+<td>
+<pre>
+1 40000000
+2 FF7FFFFE
+3 FF800000
+4 80000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

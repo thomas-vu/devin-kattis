@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>You are going to buy <span class="tex2jax_process">$N$</span> books of different kinds (numbered
+    from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span>), and are currently checking the
+    different Internet book stores for prices. Each book is sold by
+    at least one book store, and can vary in prices between the
+    different stores. Furthermore, each book store incurs a postage
+    fee if you order from it. Postage may vary between the various
+    book stores, but it is always the same for a book store no
+    matter how many books you decide to order. Compute the smallest
+    amount of money you need to pay for all the books. You may
+    order any number of books from any number of the book
+    stores.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100$</span>), the number of books to buy, and
+    <span class="tex2jax_process">$M$</span> <span class="tex2jax_process">$(1 \le M \le 15$</span>), the number of book
+    shops.</p>
+<p>Each book shop is then described in the input. A book shop
+    is described first by two integers denoting the number of books
+    <span class="tex2jax_process">$K$</span> (of the ones you are
+    going to buy) present in the book shop, and the postage fee for
+    the shop. The next <span class="tex2jax_process">$K$</span>
+    lines each contains two integers: the number of a book present
+    in the book store, and its price.</p>
+<p>All prices and the postage fee are in whole Swedish crowns,
+    and do not exceed <span class="tex2jax_process">$10\,
+    000$</span>. The book prices are always positive, but the
+    postage fee can be free in some stores.</p>
+<h2>Output</h2>
+<p>The program should output the smallest amount that the books
+    cost, including the postage fee of all shops you choose to
+    purchase from.</p>
+<h2>Scoring</h2>
+<p>Your program will be tested on <span class="tex2jax_process">$5$</span> cases. Each case is worth
+    <span class="tex2jax_process">$20$</span> points.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 4
+4 9
+1 28
+6 45
+3 49
+4 108
+7 49
+1 26
+2 179
+3 54
+4 99
+5 129
+6 45
+7 244
+5 20
+7 249
+2 184
+5 133
+4 109
+6 42
+1 0
+6 43
+</pre>
+</td>
+<td>
+<pre>822
+</pre>
+</td>
+</tr>
+</table>
+</div>

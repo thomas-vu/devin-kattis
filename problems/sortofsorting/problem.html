@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Can you believe school has already started? It seems like we
+    were just finishing last semester. Last semester was tough
+    because the administration had a hard time keeping records of
+    all the students in order, which slowed everything down. This
+    year, they are going to be on top of things. They have
+    recognized that you have the skills to help them get into shape
+    with your programming ability, and you have volunteered to
+    help. You recognize that the key to getting to student records
+    quickly is having them in a sorted order. However, they don’t
+    really have to be perfectly sorted, just so long as they are
+    sort-of sorted.</p>
+<p>Write a program that sorts a list of student last names, but
+    the sort only uses the first two letters of the name. Nothing
+    else in the name is used for sorting. However, if two names
+    have the same first two letters, they should stay in the same
+    order as in the input (this is known as a ‘stable sort’).
+    Sorting is <em>case sensitive</em> based on ASCII order (with
+    uppercase letters sorting before lowercase letters, i.e.,
+    <span class="tex2jax_process">$A &lt; B &lt; \ldots &lt; Z &lt;
+    a &lt; b &lt; \ldots &lt; z$</span>).</p>
+<h2>Input</h2>
+<p>Input consists of a sequence of up to <span class="tex2jax_process">$500$</span> test cases. Each case starts
+    with a line containing an integer <span class="tex2jax_process">$1 \leq n \leq 200$</span>. After this follow
+    <span class="tex2jax_process">$n$</span> last names made up of
+    only letters (a–z, lowercase or uppercase), one name per line.
+    Names have between <span class="tex2jax_process">$2$</span> and
+    <span class="tex2jax_process">$20$</span> letters. Input ends
+    when <span class="tex2jax_process">$n = 0$</span>.</p>
+<h2>Output</h2>
+<p>For each case, print the last names in sort-of-sorted order,
+    one per line. Print a blank line between cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+Mozart
+Beethoven
+Bach
+5
+Hilbert
+Godel
+Poincare
+Ramanujan
+Pochhammmer
+0
+</pre>
+</td>
+<td>
+<pre>
+Bach
+Beethoven
+Mozart
+
+Godel
+Hilbert
+Poincare
+Pochhammmer
+Ramanujan
+</pre>
+</td>
+</tr>
+</table>
+</div>

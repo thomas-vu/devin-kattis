@@ -1,0 +1,129 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/race/file/statement/en/img-0001.png" class="illustration" src="/problems/race/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>A scavenger hunt is being organized for programming
+    contest participants. In addition to the starting and ending
+    locations of the race, there are <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$n
+    \leq 20$</span>) other locations for competitors to travel to.
+    At each location <span class="tex2jax_process">$i$</span>
+    (<span class="tex2jax_process">$1 \leq i \leq n$</span>), there
+    is a task that must be performed to earn <span class="tex2jax_process">$p_ i$</span> points. The task at each
+    location takes <span class="tex2jax_process">$t_ i$</span>
+    minutes to complete. However, each task can only be performed
+    once, so a competitor may not travel to the same location more
+    than once. The competitor cannot return to the starting
+    location after the race begins, and the race finishes as soon
+    as the ending location is reached.
+
+    <p>The scavenger hunt must be completed within <span class="tex2jax_process">$T$</span> minutes. That is, the time between
+    leaving the starting location and arriving at the ending
+    location must be no more than <span class="tex2jax_process">$T$</span> minutes. In addition, some tasks
+    have a specific deadline <span class="tex2jax_process">$d_
+    i$</span>, meaning that the task must be completed within
+    <span class="tex2jax_process">$d_ i$</span> minutes since
+    leaving the starting location. Again, note that if a competitor
+    arrives at location <span class="tex2jax_process">$i$</span>,
+    the task at location <span class="tex2jax_process">$i$</span>
+    must be performed. If the competitor were to arrive at the
+    location too late and would not finish the task at that
+    location by the deadline, then the competitor would not be
+    allowed to travel to the location at all.</p>
+<p>What is the maximum total number of points that can be
+    obtained from the tasks?</p>
+<h2>Input</h2>
+<p>The input consists of one case. The first line of input
+    contains two positive integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$T
+    \leq 1440$</span>). Each of the next <span class="tex2jax_process">$n$</span> lines contains three integers
+    <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$1 \leq p_ i \leq 100$</span>), <span class="tex2jax_process">$t_ i$</span> (<span class="tex2jax_process">$1 \leq t_ i \leq 1440$</span>), and
+    <span class="tex2jax_process">$d_ i$</span> (<span class="tex2jax_process">$-1 \leq d_ i \leq 1440$</span>). If
+    <span class="tex2jax_process">$d_ i = -1$</span> then there is
+    no deadline for task <span class="tex2jax_process">$i$</span>.
+    Finally, the last <span class="tex2jax_process">$n+2$</span>
+    lines each contains <span class="tex2jax_process">$n+2$</span>
+    nonnegative integers. The entry in the <span class="tex2jax_process">$i$</span>th row and <span class="tex2jax_process">$j$</span>th column is the number of minutes
+    (<span class="tex2jax_process">$\leq 1440$</span>) it takes to
+    travel from location <span class="tex2jax_process">$i$</span>
+    to location <span class="tex2jax_process">$j$</span>. The
+    indices of the starting and ending locations are <span class="tex2jax_process">$n+1$</span> and <span class="tex2jax_process">$n+2$</span>, respectively.</p>
+<p>It is guaranteed that the time to travel from a location to
+    itself is <span class="tex2jax_process">$0$</span>, but the
+    time to travel between two locations in different directions
+    may not be the same (e.g. uphill instead of downhill).</p>
+<h2>Output</h2>
+<p>Print the maximum total number of points that can be
+    obtained on the first line. In the second line, print a set of
+    indices of the tasks that need to be performed to achieve this
+    maximum. The list of tasks should be sorted by the indices of
+    the tasks (not by the order in which they are performed). The
+    indices should be separated by a single space. If there are
+    multiple sets of tasks that can achieve the maximum, print the
+    one that is lexicographically smallest. That is, if two sets of
+    tasks achieve the same maximum, the index of the first task in
+    the set should be as small as possible. If there is a tie, the
+    index of the second task in the set should be as small as
+    possible, and so on.</p>
+<p>If the maximum number of points that can be obtained is
+    <span class="tex2jax_process">$0$</span>, output a blank line
+    for the indices of the tasks to be performed.</p>
+<p>If there is no way of travelling from the starting location
+    to the ending location within <span class="tex2jax_process">$T$</span> minutes, print <span class="tex2jax_process">$0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 352
+93 82 444
+92 76 436
+99 62 -1
+0 70 66 71 97
+76 0 87 66 74
+62 90 0 60 94
+60 68 68 0 69
+83 78 83 73 0
+</pre>
+</td>
+<td>
+<pre>
+99
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 696
+96 88 532
+99 70 519
+96 66 637
+90 92 592
+95 94 -1
+0 67 80 81 60 83 61
+72 0 99 68 85 93 82
+100 91 0 88 99 70 68
+69 65 77 0 65 68 75
+63 65 91 96 0 92 100
+65 76 85 62 89 0 75
+93 83 74 65 88 84 0
+</pre>
+</td>
+<td>
+<pre>
+386
+1 2 3 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>In the Royal Family, names are very important! As the Royal
+    Historian you have been charged with analyzing the patterns in
+    the names of the Royal Ladies in the realm.</p>
+<p>There have been <span class="tex2jax_process">$n$</span>
+    Royal Ladies, for convenience numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. The name of each Lady is an
+    uppercase letter concatenated with the name of her mother. The
+    exception is the Lady numbered <span class="tex2jax_process">$1$</span>, the founder of the Royal Family,
+    whose name is just a single uppercase letter.</p>
+<p>For example, ENERYS could be the mother of AENERYS (as the
+    name AENERYS consists of the single uppercase letter ‘A’
+    concatenated with ENERYS, which is her mother’s name).
+    Similarly, AENERYS could be the mother of DAENERYS and
+    YAENERYS.</p>
+<p>You are given the description of all the Royal Ladies. Your
+    task is to determine, for certain interesting strings
+    <span class="tex2jax_process">$s$</span>, the number of Royal
+    Ladies for whom <span class="tex2jax_process">$s$</span> is a
+    prefix of their name.</p>
+<p>For example, consider Sample Input 1 below, with a Royal
+    Line that goes straight from the founder S to AENERYS (through
+    YS, RYS, ERYS, NERYS and ENERYS), with each Lady having exactly
+    one daughter. Then AENERYS has two daughters—DAENERYS and
+    YAENERYS, with the latter having one daughter, RYAENERYS.</p>
+<p>In such a family, RY is a prefix of the names of two ladies:
+    RYS and RYAENERYS. E is a prefix of the names of ERYS and
+    ENERYS. N is a prefix only of NERYS’s name, while S is a prefix
+    only of the name of the founder, S. AY is not a prefix of any
+    Royal Lady’s name.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, where <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^6$</span>) is the total number of Royal Ladies
+    and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq 10^6$</span>) is the number of
+    query strings.</p>
+<p>Then follow <span class="tex2jax_process">$n$</span> lines
+    describing the Royal Ladies. The <span class="tex2jax_process">$i^{\text {th}}$</span> of these lines
+    describes the Royal Lady numbered <span class="tex2jax_process">$i$</span>, and contains an uppercase letter
+    <span class="tex2jax_process">$c_ i$</span> (‘<tt class="ttfamily">A</tt>’–‘<tt class="ttfamily">Z</tt>’) and an
+    integer <span class="tex2jax_process">$p_ i$</span>, where
+    <span class="tex2jax_process">$c_ i$</span> is the first letter
+    of the name of Lady <span class="tex2jax_process">$i$</span>,
+    and <span class="tex2jax_process">$p_ i$</span> (<span class="tex2jax_process">$p_1 = 0$</span> and <span class="tex2jax_process">$1 \le p_ i &lt; i$</span> for <span class="tex2jax_process">$i &gt; 1$</span>) is the number of her
+    mother (or <span class="tex2jax_process">$0$</span>, in the
+    case of the First Lady). All the names are unique.</p>
+<p>The remaining <span class="tex2jax_process">$k$</span> lines
+    each contain one nonempty query string, consisting only of
+    uppercase letters. The sum of the lengths of the query strings
+    is at most <span class="tex2jax_process">$10^6$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$k$</span> lines, with
+    the <span class="tex2jax_process">$i^{\text {th}}$</span> line
+    containing the number of Royal Ladies who have the <span class="tex2jax_process">$i^{\text {th}}$</span> query string as a
+    prefix of their name.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 5
+S 0
+Y 1
+R 2
+E 3
+N 4
+E 5
+A 6
+D 7
+Y 7
+R 9
+RY
+E
+N
+S
+AY
+</pre>
+</td>
+<td>
+<pre>2
+2
+1
+1
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

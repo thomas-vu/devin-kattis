@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>We say that an integer sequence is <em>increasing</em> if
+    the numbers in the sequence increase (rather than decrease or
+    stay the same). For example, the following is an increasing
+    sequence of length <span class="tex2jax_process">$7$</span>:</p><span class="tex2jax_process">\[ (15, 27, 39, 56, 60, 80, 96) \]</span>
+<p>A <em>subsequence</em> of a sequence uses some of the same
+    members, in the same order, but may leave some out. For
+    example, if we have the following (non-increasing) sequence of
+    length <span class="tex2jax_process">$7$</span>:</p><span class="tex2jax_process">\[
+    (3, 11, 53, 21, 41, 61, 23) \]</span>
+<p>then <span class="tex2jax_process">$(11, 53, 61)$</span> is
+    a subsequence of length <span class="tex2jax_process">$3$</span>. And this subsequence also happens
+    to be increasing. However, for this example there are longer
+    increasing subsequences; what is the longest you can find?</p>
+<p>Write a program that, given a sequence of integers, finds a
+    subsequence that is increasing and is as long as possible.</p>
+<h2>Input</h2>
+<p>The input consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$64$</span> test cases. Each test case has
+    two lines. The first line has a positive integer <span class="tex2jax_process">$n \le 100\, 000$</span>, indicating the
+    length of a sequence. Then follows a line containing a sequence
+    of <span class="tex2jax_process">$n$</span> integers, each in
+    the range <span class="tex2jax_process">$[-2^{31},
+    2^{31})$</span>. Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing the length of a
+    longest increasing subsequence, followed by a line containing
+    the indices of the elements in one such sequence (the first
+    element has index <span class="tex2jax_process">$0$</span>, the
+    second index <span class="tex2jax_process">$1$</span>, and so
+    on). The indices should be given in ascending order. If
+    multiple increasing subsequences have maximal length, report
+    any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+1 2 3 4 5 6 7 8 9 10
+10
+1 1 1 1 1 1 1 1 1 1
+10
+5 19 5 81 50 28 29 1 83 23
+</pre>
+</td>
+<td>
+<pre>10
+0 1 2 3 4 5 6 7 8 9
+1
+7
+5
+0 1 5 6 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

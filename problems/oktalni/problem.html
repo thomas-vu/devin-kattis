@@ -1,0 +1,136 @@
+<div class="problembody">
+<p>Slavko is learning about different numeral systems. Slavko
+    is not the brightest when it comes to math, so he is starting
+    out converting binary numerals to octal. The algorithm Slavko
+    uses is this:</p>
+<ul class="itemize">
+<li>
+<p>Pad the binary numeral with zeros on the left until the
+        number of digits is divisible by three.</p>
+</li>
+<li>
+<p>Group adjacent binary digits into groups of <span class="tex2jax_process">$3$</span> digits.</p>
+</li>
+<li>
+<p>Replace each group of binary digits with the
+        corresponding octal digit (as in Table 1).</p>
+</li>
+</ul>
+<div class="table" id="tab:bintooct">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:center">
+<p>000</p>
+</td>
+<td style="text-align:center">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>001</p>
+</td>
+<td style="text-align:center">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>010</p>
+</td>
+<td style="text-align:center">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>011</p>
+</td>
+<td style="text-align:center">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>100</p>
+</td>
+<td style="text-align:center">
+<p>4</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>101</p>
+</td>
+<td style="text-align:center">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>110</p>
+</td>
+<td style="text-align:center">
+<p>6</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+<p>111</p>
+</td>
+<td style="text-align:center">
+<p>7</p>
+</td>
+</tr>
+</table>
+<div class="caption">
+<b>Table 1</b>: Binary to octal
+        </div>
+</center>
+</div>
+<p>Write a program that converts a binary numeral to octal so
+    that Slavko can verify his results.</p>
+<h2>Input</h2>
+<p>The input contains a binary numeral. The number of digits
+    will be less than <span class="tex2jax_process">$100$</span>,
+    and the first digit will be <span class="tex2jax_process">$1$</span>.</p>
+<h2>Output</h2>
+<p>Output the number in octal.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1010
+</pre>
+</td>
+<td>
+<pre>
+12
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11001100
+</pre>
+</td>
+<td>
+<pre>
+314
+</pre>
+</td>
+</tr>
+</table>
+</div>

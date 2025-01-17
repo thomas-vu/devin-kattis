@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>A ‘Golomb ruler’ is a set of unique positive integers
+    (called ‘marks’) which can be used to measure distances by
+    using the difference between pairs of marks. Golomb rulers are
+    useful in designing radio antennae and in cryptography. It’s
+    helpful to think of the marks as being measurement marks on a
+    real ruler. For example, <span class="tex2jax_process">$\{ 0,
+    1, 3\} $</span> is a Golomb ruler which can be used to measure
+    distances of <span class="tex2jax_process">$1$</span> (by using
+    <span class="tex2jax_process">$1 - 0$</span>), <span class="tex2jax_process">$2$</span> (by using <span class="tex2jax_process">$3 - 1$</span>), and <span class="tex2jax_process">$3$</span> (by using <span class="tex2jax_process">$3 - 0$</span>). One extra constraint on a
+    Golomb ruler is that there is at most one unique way to measure
+    a given distance. So <span class="tex2jax_process">$\{ 0, 1,
+    2\} $</span> is not a Golomb ruler, because there are two ways
+    to measure the distance <span class="tex2jax_process">$1$</span>: <span class="tex2jax_process">$1-0=1$</span>, and <span class="tex2jax_process">$2-1=1$</span>. Another Golomb ruler is
+    <span class="tex2jax_process">$\{ 0, 1, 4, 6\} $</span>, and
+    the distances that it can measure are</p><span class="tex2jax_process">\[ \begin{array}{ccc} 1 = 1 - 0, &amp; 2 = 6
+    - 4, &amp; 3 = 4 - 1, \\ 4 = 4 - 0, &amp; 5 = 6 - 1, &amp; 6 =
+    6 - 0 \end{array} \]</span>
+<p>which are visually demonstrated as the arrows above the
+    ruler in Figure 1.</p>
+<div class="figure" id="golomb-figure">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{golomb-figure0}" src="/problems/golombrulers/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Measurements (arrows with associated
+          lengths) that are possible with the Golomb ruler
+          <span class="tex2jax_process">$\{ 0,1,4,6\} $</span>
+          (marks on the bottom line).
+        </div>
+</center>
+</div>
+<p>If a Golomb ruler can be used to measure all distances from
+    <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span> (where <span class="tex2jax_process">$n$</span> is the largest mark), then it is
+    called <em>perfect</em>. If the largest mark in a Golomb ruler
+    is as small as possible for all rulers with the same number of
+    marks, then the ruler is called <em>optimal</em>. The rulers
+    above are each both perfect and optimal.</p>
+<p>For this problem, you need to determine whether some set of
+    numbers make a Golomb ruler, and if that Golomb ruler is
+    perfect.</p>
+<h2>Input</h2>
+<p>Each line of input contains a list of at least two but at
+    most <span class="tex2jax_process">$25$</span> space-separated
+    distinct integers in the range <span class="tex2jax_process">$[0, 2\, 000]$</span>. Each list of numbers
+    includes <span class="tex2jax_process">$0$</span>. There are at
+    most <span class="tex2jax_process">$1\, 000$</span> lines of
+    input. Input ends at the end of file.</p>
+<h2>Output</h2>
+<p>For each input line, if the numbers given make a perfect
+    Golomb ruler, output ‘<tt class="tt">perfect</tt>’. If they
+    make a Golomb ruler that is not perfect, output ‘<tt class="tt">missing</tt>’ followed by a space-separated list of
+    numbers that are missing from the ruler in the range
+    <span class="tex2jax_process">$1$</span> to the largest mark,
+    in increasing order. If the numbers do not make a Golomb ruler,
+    output ‘<tt class="tt">not a ruler</tt>’.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0 1 2
+0 3 1
+0 5
+0 1 4 9 10
+0 1 4 9 11
+</pre>
+</td>
+<td>
+<pre>
+not a ruler
+perfect
+missing 1 2 3 4
+not a ruler
+missing 6
+</pre>
+</td>
+</tr>
+</table>
+</div>

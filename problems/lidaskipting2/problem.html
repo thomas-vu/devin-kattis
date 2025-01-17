@@ -1,0 +1,155 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/lidaskipting2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/lidaskipting2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Tables_gigognes_STB6985.jpg">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>The competitive programming association of Iceland has been
+    hard at work preparing the contest. Luckily, the association
+    gets plenty of help from Reykjavík University. However, this
+    year there was a bit of a problem. Due to the cyberattack on
+    the university some of the registration data was lost! <a class="footnote" href="#a0000000010"><sup class="footnotemark">1</sup></a> Now the association only knows who
+    is registered, but not to which team they belong to. The
+    university wants to know how many tables are needed, but this
+    is hard to answer without knowing the number of teams
+    competing. Each team must have at least one contestant and can
+    have at most three contestants. Given this information, along
+    with how many are registered to compete, can you find the
+    minimum and maximum number of teams that could be registered to
+    compete?</p>
+<h2>Input</h2>
+<p>The first and only line of input contains an integer
+    <span class="tex2jax_process">$n$</span>, the number of
+    registered contestants.</p>
+<h2>Output</h2>
+<p>Print two lines. On the first print how many teams could be
+    registered at the most. On the second print how many teams
+    could be registered at the least.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          3$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          30$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 30\,
+          000$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^{12}$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^{100}$</span>.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+</pre>
+</td>
+<td>
+<pre>6
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>61
+</pre>
+</td>
+<td>
+<pre>61
+21
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10000000000000000000000000000000000000000
+</pre>
+</td>
+<td>
+<pre>10000000000000000000000000000000000000000
+3333333333333333333333333333333333333334
+</pre>
+</td>
+</tr>
+</table>
+</div>

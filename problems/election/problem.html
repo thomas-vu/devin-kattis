@@ -1,0 +1,85 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/election/file/statement/en/img-0001.jpg" class="illustration" src="/problems/election/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/democraticalliance/5692370307/in/dateposted/">
+        Image</a> by democratic alliance cc by-sa 2.0
+      </div>
+</div>After all the fundraising, campaigning and debating, the
+    election day has finally arrived. Only two candidates remain on
+    the ballot and you work as an aide to one of them.
+
+    <p>Reports from the voting stations are starting to trickle in
+    and you hope that you can soon declare a victory.</p>
+<p>There are <span class="tex2jax_process">$N$</span> voters
+    and everyone votes for one of the two candidates (there are no
+    spoiled ballots). In order to win, a candidate needs more than
+    half of the votes. A certain number <span class="tex2jax_process">$M \leq N$</span> of ballots have been
+    counted, and there are <span class="tex2jax_process">$V_
+    i$</span> votes for candidate <span class="tex2jax_process">$i$</span> (<span class="tex2jax_process">$V_1+V_2 = M$</span>).</p>
+<p>Due to the historical data and results of highly scientific
+    polls, you know that each of the remaining votes has a
+    <span class="tex2jax_process">$50\% $</span> chance to go to
+    your candidate (the first candidate, corresponding to
+    <span class="tex2jax_process">$V_1$</span>). That makes you
+    think that you could announce the win before all the votes are
+    counted. So, if the probability of winning strictly exceeds a
+    certain threshold <span class="tex2jax_process">$W$</span>, the
+    victory is yours! We just hope you are sure of this, we don’t
+    want any scandals...</p>
+<h2>Input</h2>
+<p>The first line of input contains a single positive integer
+    <span class="tex2jax_process">$T \leq 100$</span> indicating
+    the number of test cases. Next <span class="tex2jax_process">$T$</span> lines each contain four integers:
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$V_1$</span>, <span class="tex2jax_process">$V_2$</span> and <span class="tex2jax_process">$W$</span> as described above.</p>
+<p>The input limits are as follows:<br/>
+<span class="tex2jax_process">$1 \leq N \leq 50$</span><br/>
+<span class="tex2jax_process">$50 \leq W &lt; 100$</span><br/>
+<span class="tex2jax_process">$V_1,V_2 \geq 0$</span><br/>
+<span class="tex2jax_process">$V_1+V_2 \leq N$</span></p>
+<h2>Output</h2>
+<p>For each test case print a single line containing the
+    appropriate action:</p>
+<ul class="itemize">
+<li>
+<p>If the probability that your candidate will win is
+        strictly greater than <span class="tex2jax_process">$W\%
+        $</span>, print</p>
+<p><tt class="ttfamily">GET A CRATE OF CHAMPAGNE FROM THE
+        BASEMENT!</tt></p>
+</li>
+<li>
+<p>If your candidate has no chance of winning, print</p>
+<p><tt class="ttfamily">RECOUNT!</tt></p>
+</li>
+<li>
+<p>Otherwise, print</p>
+<p><tt class="ttfamily">PATIENCE, EVERYONE!</tt></p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+5 0 3 75
+5 0 2 75
+6 1 0 50
+7 4 0 75
+</pre>
+</td>
+<td>
+<pre>
+RECOUNT!
+PATIENCE, EVERYONE!
+PATIENCE, EVERYONE!
+GET A CRATE OF CHAMPAGNE FROM THE BASEMENT!
+</pre>
+</td>
+</tr>
+</table>
+</div>

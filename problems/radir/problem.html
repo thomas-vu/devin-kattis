@@ -1,0 +1,169 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/radir/file/statement/en/img-0001.jpg" class="illustration" src="/problems/radir/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://unsplash.com/photos/tSE54tVzlqM">Three of
+        Hearts</a> by Harry Shelton, Unsplash
+      </div>
+</div>You really like playing card games with your friend. She
+    recently introduced you to a new card game. Initially
+    <span class="tex2jax_process">$p$</span> cards are dealt to
+    both players. You then take turns drawing a card to your hand
+    and then discarding a card from your hand. The goal is to
+    obtain a <em>sequence</em> in your hand. A sequence is any
+    three cards of the same suite, such that if the card of the
+    smallest value has value <span class="tex2jax_process">$a$</span>, then the other two cards have
+    value <span class="tex2jax_process">$a+1$</span> and
+    <span class="tex2jax_process">$a+2$</span>. You can declare
+    victory at the end of your turn, as long as you have a sequence
+    in your hand.
+    <p>You just lost a game to your friend. This does not bother
+    you too much, since you just learned how to play the game, but
+    you want to learn from your mistakes. Looking over your cards,
+    you wonder how early you could have achieved a sequence, had
+    you played optimally.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span>, the total number of
+    cards, and <span class="tex2jax_process">$p$</span>, the number
+    of cards you can keep in your hand, where <span class="tex2jax_process">$3 \leq p \leq n \leq 10^6$</span>. Then
+    there are <span class="tex2jax_process">$n$</span> lines, the
+    <span class="tex2jax_process">$j$</span>-th of which contains
+    two integers <span class="tex2jax_process">$c_ j$</span> and
+    <span class="tex2jax_process">$k_ j$</span>, the suit and value
+    of the <span class="tex2jax_process">$j$</span>-th card you
+    receive, where <span class="tex2jax_process">$1 \leq c_ j \leq
+    4$</span> and <span class="tex2jax_process">$1 \leq k_ j \leq
+    13$</span>. The first <span class="tex2jax_process">$p$</span>
+    cards are the cards you got dealt initially, and the subsequent
+    <span class="tex2jax_process">$n-p$</span> cards are the cards
+    you drew, in that order.</p>
+<h2>Output</h2>
+<p>The output should contain one integer, the fewest number of
+    turns it could have taken you to obtain a sequence. If no
+    sequence can be optained, output “<tt class="ttfamily">Neibb</tt>”.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>27</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 5\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^6$</span>,
+          all cards have the same suit and each card has a value of
+          <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> or <span class="tex2jax_process">$3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>35</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 1
+1 2
+4 3
+2 3
+1 3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 1
+1 2
+1 4
+1 3
+1 5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+1 1
+1 2
+1 4
+1 5
+1 7
+</pre>
+</td>
+<td>
+<pre>Neibb
+</pre>
+</td>
+</tr>
+</table>
+</div>

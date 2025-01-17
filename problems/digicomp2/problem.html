@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/digicomp2/file/statement/en/img-0001.jpg" class="illustration" src="/problems/digicomp2/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/oskay/">oskay</a> from
+        Flickr, cc by-sa
+      </div>
+</div>The Digi Comp II is a machine where balls enter from the
+    top and find their way to the bottom via a certain circuit
+    defined by switches. Whenever a ball falls on a switch it
+    either goes to the left or to the right depending on the state
+    of the switch and flips this state in the process. Abstractly
+    it can be modelled by a directed graph with a vertex of
+    outdegree <span class="tex2jax_process">$2$</span> for each
+    switch and in addition a designated end vertex of outdegree
+    <span class="tex2jax_process">$0$</span>. One of the switch
+    vertices is the start vertex, it has indegree <span class="tex2jax_process">$0$</span>. Each switch vertex has an
+    internal state (L/R). A ball starts at the start vertex and
+    follows a path down to the end vertex, where at each switch
+    vertex it will pick the left or right outgoing edge based on
+    the internal state of the switch vertex. The internal state of
+    a vertex is flipped after a ball passes through. A ball always
+    goes down and therefore cannot get into a loop.
+
+    <p>One can “program” this machine by specifying the graph
+    structure, the initial states of each switch vertex and the
+    number of balls that enter. The result of the computation is
+    the state of the switches at the end of the computation.
+    Interestingly one can program quite sophisticated algorithms
+    such as addition, multiplication, division and even the stable
+    marriage problem. However, it is not Turing complete.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0\le n\le 10^{18}$</span>) and
+        <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1\le m\le 500\, 000$</span>), the number
+        of balls and the number of switches of the graph;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$m$</span> lines
+        describing switches <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span> in order. Each line consists
+        of a single character <span class="tex2jax_process">$c$</span> (‘<tt class="ttfamily">L</tt>’
+        or ‘<tt class="ttfamily">R</tt>’) and two integers
+        <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$0\le L,R\le m$</span>), describing the
+        initial state (<span class="tex2jax_process">$c$</span>) of
+        the switch and the destination vertex of the left
+        (<span class="tex2jax_process">$L$</span>) and right
+        (<span class="tex2jax_process">$R$</span>) outgoing edges.
+        <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span> can be equal.</p>
+</li>
+</ul>
+<p>Vertex number <span class="tex2jax_process">$0$</span> is
+    the end vertex and vertex <span class="tex2jax_process">$1$</span> is the start vertex. There are no
+    loops in the graph, i.e., after going through a switch a ball
+    can never return to it.</p>
+<h2>Output</h2>
+<p>Output one line with a string of length <span class="tex2jax_process">$m$</span> consisting of the characters
+    ‘<tt class="ttfamily">L</tt>’ and ‘<tt class="ttfamily">R</tt>’, describing the final state of the switches
+    (<span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span> in order).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3
+L 2 3
+R 0 3
+L 0 0
+</pre>
+</td>
+<td>
+<pre>
+RLL
+</pre>
+</td>
+</tr>
+</table>
+</div>

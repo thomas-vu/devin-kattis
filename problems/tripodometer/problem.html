@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>A trip odometer can be used to record the distance driven on
+    a single trip. You are very diligent: at the start of each trip
+    you reset the trip odometer to read <span class="tex2jax_process">$0$</span> and at the end of each trip you
+    write down the distance travelled.</p>
+<p>Thus, you maintain a list of distances (in kilometers) taken
+    by all trips. Unfortunately, exactly one number from this list
+    is spurious; you mistakenly recorded the length of one trip you
+    took in another vehicle. You also forget which entry in your
+    list corresponds to this trip.</p>
+<p>You want to know all possible total distances that you could
+    have taken in your own vehicle given that one of the written
+    distances was fake. More specifically, all values <span class="tex2jax_process">$D$</span> such that it is possible to remove
+    one trip from your list and have the remaining distances sum to
+    <span class="tex2jax_process">$D$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \leq N \leq 10^5$</span>), the number of
+    distances you wrote down. The second line of input consists of
+    <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$d_1, d_2, \ldots , d_ N$</span>
+    (<span class="tex2jax_process">$1 \leq d_ i \leq 10^4$</span>),
+    where <span class="tex2jax_process">$d_ i$</span> is the length
+    of the <span class="tex2jax_process">$i$</span>th trip you
+    recorded.</p>
+<h2>Output</h2>
+<p>Display two lines. The first line should contain a single
+    number <span class="tex2jax_process">$K$</span>, which is the
+    number of possible distinct distances that could be obtained.
+    The second line should contain the list of the <span class="tex2jax_process">$K$</span> distinct integers, each of which
+    is a possible sum that can be obtained by removing exactly one
+    of the written distances. The list should be displayed in
+    ascending order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 5 3 1
+</pre>
+</td>
+<td>
+<pre>3
+5 7 9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10 9 8 7 6
+</pre>
+</td>
+<td>
+<pre>5
+30 31 32 33 34
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+87 42 101 102 191 87 42
+</pre>
+</td>
+<td>
+<pre>5
+461 550 551 565 610
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10 10 10 10 10
+</pre>
+</td>
+<td>
+<pre>1
+40
+</pre>
+</td>
+</tr>
+</table>
+</div>

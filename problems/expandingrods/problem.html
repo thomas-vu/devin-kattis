@@ -1,0 +1,65 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/expandingrods/file/statement/en/img-0001.jpg" class="illustration" src="/problems/expandingrods/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>When a thin rod of length <span class="tex2jax_process">$L$</span> is heated <span class="tex2jax_process">$n$</span> degrees, it expands to a new
+    length <span class="tex2jax_process">$L’ = (1+n \cdot C) \cdot
+    L$</span>, where <span class="tex2jax_process">$C$</span> is
+    the coefficient of heat expansion.</p>
+<p>When a thin rod is mounted on two solid walls and then
+    heated, it expands and takes the shape of a circular segment,
+    the original rod being the chord of the segment.</p>
+<p>Your task is to compute the distance by which the center of
+    the rod is displaced.</p>
+<h2>Input</h2>
+<p>The input contains at most <span class="tex2jax_process">$20$</span> lines. Each line of input
+    contains three non-negative numbers:</p>
+<ul class="itemize">
+<li>
+<p>an integer <span class="tex2jax_process">$L$</span>, the
+        initial lenth of the rod in millimeters (<span class="tex2jax_process">$1 \le L \le 10^9$</span>),</p>
+</li>
+<li>
+<p>an integer <span class="tex2jax_process">$n$</span>, the
+        temperature change in degrees (<span class="tex2jax_process">$0 \le n \le 10^5$</span>),</p>
+</li>
+<li>
+<p>a real number <span class="tex2jax_process">$C$</span>,
+        the coefficient of heat expansion of the material
+        (<span class="tex2jax_process">$0 \le C \le 100$</span>, at
+        most <span class="tex2jax_process">$5$</span> digits after
+        the decimal point).</p>
+</li>
+</ul>
+<p>The input is such that the displacement of the center of any
+    rod is at most one half of the original rod length. The last
+    line of input contains three <span class="tex2jax_process">$-1$</span>’s and it should not be
+    processed.</p>
+<h2>Output</h2>
+<p>For each line of input, output one line with the
+    displacement of the center of the rod in millimeters with an
+    absolute error of at most <span class="tex2jax_process">$10^{-3}$</span> or a relative error of at
+    most <span class="tex2jax_process">$10^{-9}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1000 100 0.0001
+15000 10 0.00006
+10 0 0.001
+-1 -1 -1
+</pre>
+</td>
+<td>
+<pre>61.328991534
+225.020248568
+0.000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,124 @@
+<div class="problembody">
+<p>Hill encryption (devised by mathematician Lester S. Hill in
+    1929) is a technique that makes use of matrices and modular
+    arithmetic. It is ideally used with an alphabet that has a
+    prime number of characters, so we’ll use the <span class="tex2jax_process">$37$</span> character alphabet <tt class="tt">A, B, <span class="tex2jax_process">$\ldots $</span>, Z,
+    0, 1, <span class="tex2jax_process">$\ldots $</span>, 9,</tt>
+    and the space character. The steps involved are the
+    following:</p>
+<ol class="enumerate">
+<li>
+<p>Replace each character in the initial text (the
+        <em>plaintext</em>) with the substitution <tt class="tt">A<span class="tex2jax_process">$\rightarrow 0$</span>,
+        B<span class="tex2jax_process">$\rightarrow 1$</span>,
+        <span class="tex2jax_process">$\ldots $</span>,
+        (space)<span class="tex2jax_process">$ \rightarrow
+        36$</span></tt>. If the plaintext is <tt class="tt">ATTACK
+        AT DAWN</tt> this becomes</p>
+<center>
+<span class="tex2jax_process">$0\ 19\ 19\ 0\ 2\ 10\ 36\
+          0\ 19\ 36\ 3\ 0\ 22\ 13$</span>
+</center>
+</li>
+<li>
+<p>Group these number into three-component vectors, padding
+        with spaces at the end if necessary. After this step we
+        have</p><span class="tex2jax_process">\[ \left(
+        \begin{array}{c} 0 \\ 19 \\ 19 \end{array} \right) \left(
+        \begin{array}{c} 0 \\ 2 \\ 10 \end{array} \right) \left(
+        \begin{array}{c} 36 \\ 0 \\ 19 \end{array} \right) \left(
+        \begin{array}{c} 36 \\ 3 \\ 0 \end{array} \right) \left(
+        \begin{array}{c} 22 \\ 13 \\ 36 \end{array} \right)
+        \]</span>
+</li>
+<li>
+<p>Multiply each of these vectors by a predetermined
+        <span class="tex2jax_process">$3 \times 3$</span>
+        encryption matrix using modulo <span class="tex2jax_process">$37$</span> arithmetic. If the encryption
+        matrix is</p><span class="tex2jax_process">\[ \left(
+        \begin{array}{ccc} 30 &amp; 1 &amp; 9 \\ 4 &amp; 23 &amp; 7
+        \\ 5 &amp; 9 &amp; 13 \end{array} \right) \]</span>
+<p>then the first vector is transformed as
+        follows:</p><span class="tex2jax_process">\begin{eqnarray*}
+        \left( \begin{array}{ccc} 30 &amp; 1 &amp; 9 \\ 4 &amp; 23
+        &amp; 7 \\ 5 &amp; 9 &amp; 13 \end{array} \right) \left(
+        \begin{array}{c} 0 \\ 19 \\ 19 \end{array} \right) &amp; =
+        &amp; \left( \begin{array}{c} (30 \times 0 + 1 \times 19 +
+        9 \times 19) \mod 37 \\ (4 \times 0 + 23 \times 19 + 7
+        \times 19) \mod 37 \\ (5 \times 0 + 9 \times 19 + 13 \times
+        19) \mod 37 \end{array} \right) \\ &amp; = &amp; \left(
+        \begin{array}{c} 5 \\ 15 \\ 11 \end{array} \right)
+        \end{eqnarray*}</span>
+</li>
+<li>
+<p>After multiplying all the vectors by the encryption
+        matrix, convert the resulting values back to the
+        <span class="tex2jax_process">$37$</span>-character
+        alphabet and concatenate the results to obtain the
+        encrypted <em>ciphertext</em>. In our example the
+        ciphertext is <tt class="tt">FPLSFA4SUK2W9K3</tt>.</p>
+</li>
+</ol>
+<p>This method can be generalized to work with any <span class="tex2jax_process">$n \times n$</span> encryption matrix in
+    which case the initial plaintext is broken up into vectors of
+    length <span class="tex2jax_process">$n$</span>. For this
+    problem you will be given an encryption matrix and a plaintext
+    and must compute the corresponding ciphertext.</p>
+<h2>Input</h2>
+<p>Input begins with a line containing a positive integer
+    <span class="tex2jax_process">$n \leq 10$</span> indicating the
+    size of the matrix and the vectors to use in the encryption.
+    After this are <span class="tex2jax_process">$n$</span> lines
+    each containing <span class="tex2jax_process">$n$</span>
+    integers (each between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$36$</span>) specifying the
+    encryption matrix. After this is a single line containing the
+    plaintext consisting of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$100$</span> characters in the <span class="tex2jax_process">$37$</span>-character alphabet specified
+    above.</p>
+<h2>Output</h2>
+<p>Output the corresponding ciphertext on a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+30 1 9
+4 23 7
+5 9 13
+ATTACK AT DAWN
+</pre>
+</td>
+<td>
+<pre>FPLSFA4SUK2W9K3
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+26 11 23 14 13 16
+6 7 32 4 29 29
+26 19 30 10 30 11
+6 28 23 5 24 23
+6 24 1 27 24 20
+13 9 32 18 20 18
+MY HOVERCRAFT IS FULL OF EELS
+</pre>
+</td>
+<td>
+<pre>W4QVBO0NJG5 Y76H5A6XHR11BV670Z
+</pre>
+</td>
+</tr>
+</table>
+</div>

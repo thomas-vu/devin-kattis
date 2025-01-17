@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>Jimmy is performing in ByteLand today! Anthony the Ant is a
+    huge fan of Jimmy’s music, so he can’t wait to get to the
+    concert.</p>
+<p>ByteLand consists of of <span class="tex2jax_process">$N$</span> intersections and <span class="tex2jax_process">$M$</span> roads. Every road is bidirectional
+    and connects two distinct intersections. Anthony is currently
+    on intersection <span class="tex2jax_process">$s$</span> and
+    the concert is being held at intersection <span class="tex2jax_process">$t$</span>. Anthony must get to the concert
+    in <span class="tex2jax_process">$T$</span> seconds and he can
+    travel at <span class="tex2jax_process">$1$</span>
+    meter/second.</p>
+<p>Unfortunately for Anthony, he has a huge fear of spiders and
+    ByteLand is full of spiders. Spiders reside at certain
+    intersections in ByteLand. Anthony will choose a path from
+    <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$t$</span> that maximizes <span class="tex2jax_process">$D$</span>, the minimum distance between any
+    intersection on the path and any spider, such that the path can
+    be travelled in no more than <span class="tex2jax_process">$T$</span> seconds.</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2\leq N\leq 100\, 000$</span>), <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1\leq M\leq \min (200\, 000,
+    n(n-1)/2)$</span>), and <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1\leq T\leq 10^9$</span>).</p>
+<p>Each of the next <span class="tex2jax_process">$M$</span>
+    lines specify the roads. A road is described by three integers
+    <span class="tex2jax_process">$u, v$</span> (<span class="tex2jax_process">$0\leq u, v\leq N-1$</span> and <span class="tex2jax_process">$u\neq v$</span>) and <span class="tex2jax_process">$d$</span> (<span class="tex2jax_process">$1\leq d\leq 10\, 000$</span>), which means
+    that a <span class="tex2jax_process">$d$</span> meters long
+    road connects intersections <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>. It is guaranteed that at most one
+    road connect any two intersections, and that there exists a
+    path between any two intersections.</p>
+<p>The next line contains <span class="tex2jax_process">$s,
+    t$</span> (<span class="tex2jax_process">$0\leq s, t\leq
+    N-1$</span> and <span class="tex2jax_process">$s\neq t$</span>,
+    representing Anthony’s current location and the location of the
+    concert. You may assume Anthony can always travel from
+    <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$t$</span> in no more than <span class="tex2jax_process">$T$</span> seconds.</p>
+<p>The last line contains a integer <span class="tex2jax_process">$1\leq K\leq N$</span>, denoting the number
+    of intersections occupied by spiders, followed by <span class="tex2jax_process">$K$</span> integers <span class="tex2jax_process">$0\leq a_ i\leq N-1$</span> denoting the
+    intersections with spiders.</p>
+<h2>Output</h2>
+<p>Print the maximum <span class="tex2jax_process">$D$</span>
+    (as defined earlier) for the path Anthony takes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 3000
+0 1 1
+1 3 1
+2 0 2018
+2 3 42
+0 3
+1 1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 4 10
+0 1 1
+1 3 1
+2 0 2018
+2 3 42
+0 3
+1 1
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

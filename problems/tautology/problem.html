@@ -1,0 +1,190 @@
+<div class="problembody">
+<p>WFF ’N PROOF is a logic game played with dice. Each die has
+    six faces representing some subset of the possible symbols K,
+    A, N, C, E, p, q, r, s, t. A Well-formed formula (WFF) is any
+    string of these symbols obeying the following rules:</p>
+<ul class="itemize">
+<li>
+<p>p, q, r, s, and t are WFFs</p>
+</li>
+<li>
+<p>if <em>w</em> is a WFF, N<em>w</em> is a WFF</p>
+</li>
+<li>
+<p>if <em>w</em> and <em>x</em> are WFFs, K<em>wx</em>,
+        A<em>wx</em>, C<em>wx</em>, and E<em>wx</em> are WFFs.</p>
+</li>
+</ul>
+<p>The meaning of a WFF is defined as follows:</p>
+<ul class="itemize">
+<li>
+<p>p, q, r, s, and t are logical variables that may take on
+        the value 0 (false) or 1 (true).</p>
+</li>
+<li>
+<p>K, A, N, C, E mean <em>and</em>, <em>or</em>,
+        <em>not</em>, <em>implies</em>, and <em>equals</em> as
+        defined in the truth table below.</p>
+</li>
+</ul>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td colspan="7" style="text-align:center">
+<p><b class="bfseries">Definitions of K, A, N, C, and
+            E</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-left:1px solid black">
+<p><em>w</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><em>x</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>K<em>wx</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>A<em>wx</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>N<em>w</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>C<em>wx</em></p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>E<em>wx</em></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-left:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-left:1px solid black">
+<p>0</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>0</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>1</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p>1</p>
+</td>
+</tr>
+</table>
+</center>
+<p>A <em>tautology</em> is a WFF that has value 1 (true)
+    regardless of the values of its variables. For example, ApNp is
+    a tautology because it is true regardless of the value of p. On
+    the other hand, ApNq is not, because it has the value 0 for
+    <span class="tex2jax_process">$\text {p}=0$</span>,
+    <span class="tex2jax_process">$\text {q}=1$</span>.</p>
+<p>You must determine whether or not a WFF is a tautology.</p>
+<h2>Input</h2>
+<p>Input consists of several test cases. Each test case is a
+    single line containing a WFF with no more than 100 symbols. A
+    line containing 0 follows the last case.</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing “<tt class="ttfamily">tautology</tt>” or “<tt class="ttfamily">not</tt>”
+    as appropriate.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+ApNp
+ApNq
+0
+</pre>
+</td>
+<td>
+<pre>
+tautology
+not
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>On the occasion of its <span class="tex2jax_process">$10$</span>-year anniversary, an e-commerce
+    company is running a campaign to engage with their loyal
+    customers. They have prepared <span class="tex2jax_process">$m$</span> gifts, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$m$</span>, to thank its loyal customers
+    where each customer will receive no more than one gift. The
+    company has <span class="tex2jax_process">$n$</span> loyal
+    customers, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>. In order to ensure that customers
+    are satisfied with the gift they receive, the company decided
+    to conduct a customer survey. The customer survey result is
+    recorded by the feedback cards, each of which can be described
+    by a tuple of three positive integers <span class="tex2jax_process">$(i,j,p)$</span> indicating that customer
+    <span class="tex2jax_process">$i$</span> has a satisfaction
+    level of <span class="tex2jax_process">$p$</span> if he or she
+    receives the gift <span class="tex2jax_process">$j$</span>.
+    Each customer will give his or her level of satisfaction for
+    every gift unless he/she has a satisfaction level of
+    <span class="tex2jax_process">$0$</span>. At the end, the
+    company receives <span class="tex2jax_process">$k$</span>
+    feedback cards from their loyal customers.</p>
+<p>Based on the result of the customer survey, your task is to
+    determine how to send gifts to loyal customers to bring the
+    greatest sum of satisfaction of all customers receiving the
+    gifts.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains three integers <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$k$</span> <span class="tex2jax_process">$(1 \leq m,n \leq 1\, 000, \; 1 \leq k
+        \leq m \times n)$</span>;</p>
+</li>
+<li>
+<p>The next <span class="tex2jax_process">$k$</span> lines
+        describe the customer survey results, each of which
+        contains three positive integers <span class="tex2jax_process">$i, j, p$</span> described above
+        <span class="tex2jax_process">$(1 \leq i \leq n, \; 1 \leq
+        j \leq m, \; 1 \leq p \leq 30\, 000)$</span>. It is
+        guaranteed that no <span class="tex2jax_process">$2$</span>
+        surveys have same <span class="tex2jax_process">$i$</span>
+        and <span class="tex2jax_process">$j$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains an integer that is the greatest
+        sum of satisfaction of all customers;</p>
+</li>
+<li>
+<p>The second line contains the integer <span class="tex2jax_process">$s$</span> – the number of gifts that
+        must be sent to the customers;</p>
+</li>
+<li>
+<p>The next <span class="tex2jax_process">$s$</span> lines
+        describe how the gifts are sent: each line contains two
+        integers <span class="tex2jax_process">$x,y$</span>
+        indicating that the customer <span class="tex2jax_process">$x$</span> receives the gift <span class="tex2jax_process">$y$</span>.</p>
+</li>
+</ul>
+<p>If there are more than one solutions giving the greatest sum
+    of satisfaction, you can print any of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2 4
+1 1 2
+1 2 3
+1 3 5
+2 3 8
+</pre>
+</td>
+<td>
+<pre>
+11
+2
+1 2
+2 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

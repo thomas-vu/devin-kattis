@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>A <em>Doublet</em> is a pair of words that differ in exactly
+    one letter; for example, “booster” and “rooster” or “rooster”
+    and “roaster” or “roaster” and “roasted”.</p>
+<p>You are given a dictionary of up to <span class="tex2jax_process">$25\, 143$</span> lower case words, not
+    exceeding <span class="tex2jax_process">$16$</span> letters
+    each. You are then given a number of pairs of words. For each
+    pair of words, find the shortest sequence of words that begins
+    with the first word and ends with the second, such that each
+    pair of adjacent words is a doublet. For example, if you were
+    given the input pair “booster” and “roasted”, a possible
+    solution would be: (“booster”, “rooster”, “roaster”, “roasted”)
+    provided that these words are all in the dictionary.</p>
+<h2>Input</h2>
+<p>Input consists of the dictionary (with at most <span class="tex2jax_process">$25\, 143$</span> words) followed by a number
+    of word pairs (at most <span class="tex2jax_process">$10$</span>). The dictionary consists of a
+    number of words, one per line, and is terminated by an empty
+    line. The pairs of input words follow; the words of each pair
+    occur on a line separated by a space.</p>
+<h2>Output</h2>
+<p>For each input pair, print a set of lines starting with the
+    first word and ending with the last. Each pair of adjacent
+    lines must be a doublet. If there are several minimal
+    solutions, any one will do. If there is no solution, print a
+    line: “<tt class="ttfamily">No solution.</tt>” Leave a blank
+    line between cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>booster
+rooster
+roaster
+coasted
+roasted
+coastal
+postal
+
+booster roasted
+coastal postal
+</pre>
+</td>
+<td>
+<pre>booster
+rooster
+roaster
+roasted
+
+No solution.
+</pre>
+</td>
+</tr>
+</table>
+</div>

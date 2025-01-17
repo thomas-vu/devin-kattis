@@ -1,0 +1,135 @@
+<div class="problembody">
+<p>You work at a clinic. The clinic factors in the waiting time
+    when selecting patients to treat next. This approach was
+    adopted to prevent patients from having to wait too long before
+    being treated. Your task is to help the clinic perform
+    <span class="tex2jax_process">$3$</span> types of queries:</p>
+<ol class="enumerate">
+<li>
+<p>Process a patient arrival to the clinic. The patient
+        will have an arrival time <span class="tex2jax_process">$T$</span>, a name <span class="tex2jax_process">$M$</span>, and a severity <span class="tex2jax_process">$S$</span> that is accessed automatically
+        by scanners at the entrance.</p>
+</li>
+<li>
+<p>At time <span class="tex2jax_process">$T$</span>, the
+        doctor is ready to treat a patient. Every time this
+        happens, the clinic will calculate priority values for
+        every patient waiting in the clinic, and the patient with
+        the highest priority value will be treated first. The
+        priority value is computed as the following
+        sum</p><span class="tex2jax_process">\[ S + K \cdot W
+        \]</span>
+<p>where <span class="tex2jax_process">$S$</span> is the
+        severity value of the patient, <span class="tex2jax_process">$K$</span> is the constant that the
+        clinic uses, and <span class="tex2jax_process">$W$</span>
+        is the total time the patient has been waiting in the
+        clinic. If there are multiple patients with that value, the
+        patient with the lexicographically smallest name is treated
+        next. Your program will announce the name of that
+        patient.</p>
+</li>
+<li>
+<p>At time <span class="tex2jax_process">$T$</span>, the
+        clinic receives a notification stating that, due to
+        unfortunate circumstances, a patient with name <span class="tex2jax_process">$M$</span> has left the queue
+        permanently. If no patient with name <span class="tex2jax_process">$M$</span> exists in the queue, it is
+        always a false alarm and will be ignored by the clinic.
+        Otherwise, the notification is guaranteed to be valid and
+        should be processed accordingly.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line of the input contains <span class="tex2jax_process">$2$</span> integers, <span class="tex2jax_process">$1 \leq N \leq 200\, 000$</span>, the number
+    of queries to be processed, and <span class="tex2jax_process">$0 \leq K \leq 10\, 000\, 000$</span>, the
+    constant for the clinic. <span class="tex2jax_process">$N$</span> lines follow, each line beginning
+    with an integer <span class="tex2jax_process">$Q$</span> where
+    <span class="tex2jax_process">$Q$</span> = <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> or <span class="tex2jax_process">$3$</span>. <span class="tex2jax_process">$Q
+    = 1$</span> denotes a query of the first type and will be
+    followed by an integer <span class="tex2jax_process">$T$</span>, a string <span class="tex2jax_process">$M$</span> and an integer <span class="tex2jax_process">$S$</span>. <span class="tex2jax_process">$Q
+    = 2$</span> denotes a query of the second type and will be
+    followed by an integer <span class="tex2jax_process">$T$</span>. <span class="tex2jax_process">$Q
+    = 3$</span> denotes a query of the third type and will be
+    followed by an integer <span class="tex2jax_process">$T$</span>
+    and a string <span class="tex2jax_process">$M$</span>. For all
+    queries, <span class="tex2jax_process">$0 \leq T,S \leq 10\,
+    000\, 000$</span>, and <span class="tex2jax_process">$T$</span>
+    values are strictly increasing. <span class="tex2jax_process">$M$</span> is a non-empty alphanumeric string
+    containing no spaces, and contains at most <span class="tex2jax_process">$10$</span> characters. All patients have
+    unique names. There is at least one query of the second
+    type.</p>
+<h2>Output</h2>
+<p>For each query of the second type, output the name of the
+    patient who will be treated on a new line. If the clinic is
+    empty, print the string “doctor takes a break” (without quotes)
+    on a new line instead.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(28 Points)</b>: <span class="tex2jax_process">$1 \leq N \leq 10,000$</span>. There is
+        no query of type <span class="tex2jax_process">$3$</span>.
+        You can assume that <span class="tex2jax_process">$K =
+        0$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(32 Points)</b>: <span class="tex2jax_process">$1 \leq N \leq 10,000$</span>. There is
+        no query of type <span class="tex2jax_process">$3$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(20 Points)</b>: There is no query
+        of type <span class="tex2jax_process">$3$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">(20 Points)</b>: No additional
+        constraints.</p>
+</li>
+</ol>
+<h2>Warning</h2>
+<p><b class="bfseries">The I/O files are large. Please use fast
+    I/O methods.</b></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 1
+1 10 Alice 5
+1 15 Bob 15
+2 20
+2 25
+2 30
+</pre>
+</td>
+<td>
+<pre>Bob
+Alice
+doctor takes a break
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 5
+1 10 Alice 5
+1 15 Bob 15
+2 20
+2 25
+2 30
+</pre>
+</td>
+<td>
+<pre>Alice
+Bob
+doctor takes a break
+</pre>
+</td>
+</tr>
+</table>
+</div>

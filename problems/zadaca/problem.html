@@ -1,0 +1,85 @@
+<div class="problembody">
+<p>Mirko has received a homework assignment to compute the
+    greatest common divisor of the two positive integers
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. Since the numbers are quite
+    large, the teacher provided him with <span class="tex2jax_process">$N$</span> smaller integers whose product is
+    <span class="tex2jax_process">$A$</span>, and <span class="tex2jax_process">$M$</span> integers with product <span class="tex2jax_process">$B$</span>.</p>
+<p>Mirko would like to verify his result, so he has asked you
+    to write a program to solve his problem. If the result is more
+    than <span class="tex2jax_process">$9$</span> digits long,
+    output only the last <span class="tex2jax_process">$9$</span>
+    digits.</p>
+<h2>Input</h2>
+<p>The first line of input contains the positive integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 1000$</span>).</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> space-separated positive integers
+    less than <span class="tex2jax_process">$1\, 000\, 000\,
+    000$</span>, whose product is the number <span class="tex2jax_process">$A$</span>.</p>
+<p>The third line of input contains the positive integer
+    <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1 \le M \le 1000$</span>).</p>
+<p>The fourth line of input contains <span class="tex2jax_process">$M$</span> space-separated positive integers
+    less than <span class="tex2jax_process">$1\, 000\, 000\,
+    000$</span>, whose product is the number <span class="tex2jax_process">$B$</span>.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain the greatest
+    common divisor of numbers <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>. If the result is more than
+    <span class="tex2jax_process">$9$</span> digits long, output
+    only the last (least significant) <span class="tex2jax_process">$9$</span> digits.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+2 3 5
+2
+4 5
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+6 2 3 4
+1
+1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+358572 83391967 82
+3
+50229961 1091444 8863
+</pre>
+</td>
+<td>
+<pre>000012028
+</pre>
+</td>
+</tr>
+</table>
+</div>

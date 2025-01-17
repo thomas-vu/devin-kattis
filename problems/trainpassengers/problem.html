@@ -1,0 +1,115 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/trainpassengers/file/statement/en/img-0001.jpg" class="illustration" src="/problems/trainpassengers/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://commons.wikimedia.org/wiki/File:Train_stuck_in_snow.jpg">
+        Elmer and Tenney</a>
+</div>
+</div>
+<p>The Nordic Company of Passing Carriages is losing money at
+    an alarming rate because most of their trains are empty.
+    However, on some lines the passengers are complaining that they
+    cannot fit in the cars and have to wait for the next train!</p>
+<p>The authorities want to fix this situation. They asked their
+    station masters to write down, for a given train, how many
+    people left the train at their station, how many went in, and
+    how many had to wait. Then they hired your company of highly
+    paid consultants to assign properly sized trains to their
+    routes.</p>
+<p>You just received the measurements for a train, but before
+    feeding them to your optimisation algorithm you remembered that
+    they were collected on a snowy day, so any sensible station
+    master would have preferred to stay inside their cabin and make
+    up the numbers instead of going outside and counting.</p>
+<p>Verify your hunch by checking whether the input is
+    inconsistent, i.e., at every time the number of people in the
+    train did not exceed the capacity nor was below <span class="tex2jax_process">$0$</span> and no passenger waited in vain
+    (i.e., waited on the station when there was room in the train).
+    The train should start and finish the journey empty, in
+    particular passengers should not wait for the train at the last
+    station.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$C$</span> and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq C \leq 10^9$</span>, <span class="tex2jax_process">$2 \leq
+    n \leq 100$</span>), the total capacity and the number of
+    stations the train stops in. The next <span class="tex2jax_process">$n$</span> lines contain three integers each,
+    the number of people that left the train, entered the train,
+    and had to stay at a station. Lines are given in the same order
+    as the train visits each station. All integers are between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10^9$</span> inclusive.</p>
+<h2>Output</h2>
+<p>One line containing one word: <tt>possible</tt> if the
+    measurements are consistent, <tt>impossible</tt> otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+0 1 1
+1 0 0
+</pre>
+</td>
+<td>
+<pre>possible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+1 0 0
+0 1 0
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+0 1 0
+1 0 1
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+0 1 1
+0 0 0
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

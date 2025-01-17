@@ -1,0 +1,101 @@
+<div class="problembody">
+<p>A small group of commandos has infiltrated deep into enemy
+    territory. They have just accomplished their mission and now
+    have to return to their rendezvous point. Of course they don’t
+    want to get caught even if the mission is already over.
+    Therefore they decide to take the route that will keep them as
+    far away from any enemy base as possible.</p>
+<p>Being well prepared for the mission, they have a detailed
+    map of the area which marks all (known) enemy bases, their
+    current position and the rendezvous point. For simplicity, we
+    view the the map as a rectangular grid with integer coordinates
+    <span class="tex2jax_process">$(x, y)$</span> where
+    <span class="tex2jax_process">$0 \le x &lt; X$</span>,
+    <span class="tex2jax_process">$0 \le y &lt; Y$</span>.
+    Furthermore, we approximate movements as horizontal and
+    vertical steps on this grid, so we use Manhattan distance:
+    <span class="tex2jax_process">$\text {dist}((x_1,y_1), (x_2,
+    y_2)) = |x_2 - x_1| + |y_2 - y_1|$</span>. The commandos can
+    only travel in vertical and horizontal directions at each
+    step.</p>
+<p>Can you help them find the best route? Of course, in case
+    that there are multiple routes that keep the same minimum
+    distance to enemy bases, the commandos want to take a shortest
+    route that does so. Furthermore, they don’t want to take a
+    route off their map as it could take them in unknown, dangerous
+    areas, but you don’t have to worry about unknown enemy bases
+    off the map.</p>
+<h2>Input</h2>
+<p>Input contains a single test case, consisting of:</p>
+<ul class="itemize">
+<li>
+<p>One line with three positive integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span>. <span class="tex2jax_process">$1 \le N \le 10\, 000$</span> is the
+        number of enemy bases and <span class="tex2jax_process">$1
+        \le X, Y \le 1\, 000$</span> the size of the map:
+        coordinates <span class="tex2jax_process">$(x, y)$</span>
+        are on the map if <span class="tex2jax_process">$0 \le x
+        &lt; X$</span>, <span class="tex2jax_process">$0 \le y &lt;
+        Y$</span>.</p>
+</li>
+<li>
+<p>One line containing two pairs of integer coordinates
+        <span class="tex2jax_process">$x_ i$</span>, <span class="tex2jax_process">$y_ i$</span> and <span class="tex2jax_process">$x_ r$</span>, <span class="tex2jax_process">$y_ r$</span>: the initial position of
+        the commandos and the rendezvous point.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N$</span> lines each
+        containing one pair of integer coordinates <span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$y$</span> of an enemy base. All pairs of
+        coordinates are on the map and different from each
+        other.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>One line with two numbers separated by one space: the
+        minimum separation from an enemy base and the length of the
+        route.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 2 2
+0 0 1 1
+0 1
+</pre>
+</td>
+<td>
+<pre>
+1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 5 6
+0 0 4 0
+2 1
+2 3
+</pre>
+</td>
+<td>
+<pre>
+2 14
+</pre>
+</td>
+</tr>
+</table>
+</div>

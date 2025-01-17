@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>For some years, quite a lot of work has been put into
+    listening to electromagnetic radio signals received from space,
+    in order to understand what civilizations in distant galaxies
+    might be trying to tell us. One signal source that has been of
+    particular interest to the scientists at <em>Université de
+    Technologie Spatiale</em> is the Nebula Stupidicus.</p>
+<p>Recently, it was discovered that if each message is assumed
+    to be transmitted as a sequence of integers <span class="tex2jax_process">$a_0,a_1,...a_{n-1}$</span>, the function
+    <span class="tex2jax_process">$f(k)=(\sum _{i=0}^{n-1}{a_ i k^
+    i})\bmod {p}$</span> always evaluates to values <span class="tex2jax_process">$0 \le f(k) \le 26$</span> for <span class="tex2jax_process">$1 \le k \le n$</span>, provided that the
+    correct value of <span class="tex2jax_process">$p$</span> is
+    used. <span class="tex2jax_process">$n$</span> is of course the
+    length of the transmitted message, and the integers
+    <span class="tex2jax_process">$a_ i$</span> satisfy
+    <span class="tex2jax_process">$0 \le a_ i &lt; p$</span>.
+    <span class="tex2jax_process">$p$</span> is a prime number that
+    is guaranteed to be larger than <span class="tex2jax_process">$n$</span> as well as larger than
+    <span class="tex2jax_process">$26$</span>. It is, however,
+    known to never exceed <span class="tex2jax_process">$30\,
+    000$</span>.</p>
+<p>These relationships altogether have been considered too
+    peculiar for being pure coincidences, so this calls for further
+    investigation.</p>
+<p>The linguists at the faculty of <em>Langues et Cultures
+    Extraterrestres</em> transcribe these messages to strings in
+    the English alphabet to make the messages easier to handle
+    while trying to interpret their meanings. The transcription
+    procedure simply assigns the letters <span class="tex2jax_process">$a \ldots z$</span> to the values
+    <span class="tex2jax_process">$1 \ldots 26$</span> that
+    <span class="tex2jax_process">$f(k)$</span> might evaluate to,
+    such that <span class="tex2jax_process">$1=a$</span>,
+    <span class="tex2jax_process">$2=b$</span> etc. The value
+    <span class="tex2jax_process">$0$</span> is transcribed to ‘*’
+    (an asterisk). While transcribing messages, the linguists
+    simply loop from <span class="tex2jax_process">$k=1$</span> to
+    <span class="tex2jax_process">$n$</span>, and append the
+    character corresponding to the value of <span class="tex2jax_process">$f(k)$</span> at the end of the string.</p>
+<p>The backward transcription procedure, has however, turned
+    out to be too complex for the linguists to handle by
+    themselves. You are therefore assigned the task of writing a
+    program that converts strings created in this way back to the
+    original number sequence <span class="tex2jax_process">$a_0,
+    \ldots , a_{n-1}$</span>.</p>
+<h2>Input</h2>
+<p>On the first line of the input there is a single positive
+    integer <span class="tex2jax_process">$N$</span>, telling the
+    number of test cases to follow. Each case consists of one line
+    containing the value of <span class="tex2jax_process">$p$</span> to use during the transcription of
+    the string, followed by the actual string to be transcribed.
+    The only allowed characters in the string are the lower case
+    letters ‘a’-‘z’ and ’*’ (asterisk). No string will be longer
+    than 70 characters.</p>
+<h2>Output</h2>
+<p>For each transcribed string, output a line with the
+    corresponding list of integers <span class="tex2jax_process">$a_0, \dots , a_{n-1}$</span>, separated by
+    space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+31 aaa
+37 abc
+29 hello*earth
+</pre>
+</td>
+<td>
+<pre>
+1 0 0
+0 1 0
+8 13 9 13 4 27 18 10 12 24 15
+</pre>
+</td>
+</tr>
+</table>
+</div>

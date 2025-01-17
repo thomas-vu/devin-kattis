@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Daenerys frequently invents games to help teach her second
+    grade Computer Science class about various aspects of the
+    discipline. For this week’s lesson she has the children form a
+    circle and (carefully) throw around a petrified dragon egg.</p>
+<p>The <span class="tex2jax_process">$n$</span> children are
+    numbered from <span class="tex2jax_process">$0$</span> to
+    <span class="tex2jax_process">$n - 1$</span> (it is a Computer
+    Science class after all) clockwise around the circle. Child
+    <span class="tex2jax_process">$0$</span> always starts with the
+    egg. Daenerys will call out one of two things:</p>
+<ol class="enumerate">
+<li>
+<p>a number <span class="tex2jax_process">$t$</span>,
+        indicating that the egg is to be thrown to the child who is
+        <span class="tex2jax_process">$t$</span> positions
+        clockwise from the current egg holder, wrapping around if
+        necessary. If <span class="tex2jax_process">$t$</span> is
+        negative, then the throw is to the counter-clockwise
+        direction.</p>
+</li>
+<li>
+<p>the phrase <tt class="tt">undo <span class="tex2jax_process">$m$</span></tt>, indicating that the last
+        <span class="tex2jax_process">$m$</span> throws should be
+        undone. Note that <tt class="tt">undo</tt> commands never
+        undo other <tt class="tt">undo</tt> commands; they just
+        undo commands described in item <span class="tex2jax_process">$1$</span> above.</p>
+</li>
+</ol>
+<p>For example, if there are <span class="tex2jax_process">$5$</span> children, and the teacher calls
+    out the four throw commands <tt class="tt">8 -2 3 undo 2</tt>,
+    the throws will start from child <span class="tex2jax_process">$0$</span> to child <span class="tex2jax_process">$3$</span>, then from child <span class="tex2jax_process">$3$</span> to child <span class="tex2jax_process">$1$</span>, then from child <span class="tex2jax_process">$1$</span> to child <span class="tex2jax_process">$4$</span>. After this, the <tt class="tt">undo 2</tt> instructions will result in the egg being
+    thrown back from child <span class="tex2jax_process">$4$</span>
+    to child <span class="tex2jax_process">$1$</span> and then from
+    child <span class="tex2jax_process">$1$</span> back to child
+    <span class="tex2jax_process">$3$</span>. If Daenerys calls out
+    <span class="tex2jax_process">$0$</span> (or <span class="tex2jax_process">$n, -n, 2n, -2n$</span>, etc.) then the child
+    with the egg simply throws it straight up in the air and
+    (carefully) catches it again.</p>
+<p>Daenerys would like a little program that determines where
+    the egg should end up if her commands are executed correctly.
+    Don’t ask what happens to the children if this isn’t the
+    case.</p>
+<h2>Input</h2>
+<p>Input consists of two lines. The first line contains two
+    positive integers <span class="tex2jax_process">$n$</span>
+<span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1\leq n \leq 30$</span>, <span class="tex2jax_process">$1 \leq k \leq 100$</span>) indicating the
+    number of students and how many throw commands Daenerys calls
+    out, respectively. The following line contains the <span class="tex2jax_process">$k$</span> throw commands. Each command is
+    either an integer <span class="tex2jax_process">$p$</span>
+    (<span class="tex2jax_process">$-10\, 000 \leq p \leq 10\,
+    000$</span>) indicating how many positions to throw the egg
+    clockwise or <tt class="tt">undo</tt> <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$m
+    \geq 1$</span>) indicating that the last <span class="tex2jax_process">$m$</span> throws should be undone. Daenerys
+    never has the kids undo beyond the start of the game.</p>
+<h2>Output</h2>
+<p>Display the number of the child with the egg at the end of
+    the game.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4
+8 -2 3 undo 2
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 10
+7 -3 undo 1 4 3 -9 5 undo 2 undo 1 6
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

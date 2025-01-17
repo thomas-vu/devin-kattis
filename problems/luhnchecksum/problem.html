@@ -1,0 +1,203 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/luhnchecksum/file/statement/en/img-0001.jpg" class="illustration" src="/problems/luhnchecksum/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.istockphoto.com/ca/photo/hand-holding-plastic-credit-card-gm522887521-51013142">
+        simpson33 (iStock)</a>, Used under license
+      </div>
+</div>
+<p>In 1954, Hans Peter Luhn, a researcher at IBM, filed a
+    patent describing a simple checksum algorithm for numbers
+    written as strings of <span class="mbox" style="width:">base-<span class="tex2jax_process">$10$</span></span>
+    digits. If a number is chosen according to Luhn’s technique,
+    the algorithm provides a basic integrity check. This means that
+    with reasonably high probability it can detect whether one or
+    more digits have been accidentally modified. (On the other
+    hand, it provides essentially no protection against intentional
+    modifications.) Most credit card and bank card numbers can be
+    validated using Luhn’s checksum algorithm, as can the national
+    identification numbers of several countries (including
+    Canada).</p>
+<p>Given a number <span class="tex2jax_process">$n = d_ k
+    d_{k-1} \ldots d_2 d_1$</span>, where each <span class="tex2jax_process">$d_ i$</span> is a <span class="mbox" style="width:">base-<span class="tex2jax_process">$10$</span></span> digit, here is how to
+    apply Luhn’s checksum test:</p>
+<ol class="enumerate">
+<li>
+<p>Starting at the <em>right</em> end of <span class="tex2jax_process">$n$</span>, transform every
+        <em>second</em> digit <span class="tex2jax_process">$d_ i$</span> (i.e., <span class="tex2jax_process">$d_2, d_4, d_6, \ldots $</span>) as
+        follows:</p>
+<ul class="itemize">
+<li>
+<p>multiply <span class="tex2jax_process">$d_ i$</span>
+            by <span class="tex2jax_process">$2$</span></p>
+</li>
+<li>
+<p>if <span class="tex2jax_process">$2 \cdot d_
+            i$</span> consists of more than one digit, i.e., is
+            greater than 9, add these digits together; this will
+            always produce a single-digit number</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add up all the digits of <span class="tex2jax_process">$n$</span> after the transformation step.
+        If the resulting sum is divisible by <span class="tex2jax_process">$10$</span>, <span class="tex2jax_process">$n$</span> <em>passes</em> the Luhn
+        checksum test. Otherwise, <span class="tex2jax_process">$n$</span> <em>fails</em> the Luhn
+        checksum test.</p>
+</li>
+</ol>
+<p>For example, consider the number <span class="tex2jax_process">$n = 1234567890123411$</span> from Sample
+    Input 1. The first row of Figure 1 gives the original
+    digits of <span class="tex2jax_process">$n$</span>, and the
+    second row contains the digits of <span class="tex2jax_process">$n$</span> after the transformation step,
+    with transformed digits shown in bold. The sum of the digits in
+    the second row is</p><span class="tex2jax_process">\[
+    2+2+6+4+1+6+5+8+9+0+2+2+6+4+2+1=60 \]</span>
+<p>and since <span class="tex2jax_process">$60$</span> is
+    divisible by <span class="tex2jax_process">$10$</span>,
+    <span class="tex2jax_process">$n$</span> passes the Luhn
+    checksum test.</p>
+<div class="figure" id="table:luhn">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{2}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{6}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{1}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{5}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{9}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$0$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{2}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{6}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$\mathbf{2}$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+</table>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Application of Luhn’s algorithm to
+        <span class="tex2jax_process">$n = 1234567890123411$</span>
+</div>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$T$</span> <span class="tex2jax_process">$(1 \leq T \leq 100)$</span>, the number of
+    test cases. Each of the following <span class="tex2jax_process">$T$</span> lines contains a single test case
+    consisting of a number given as a string of <span class="mbox" style="width:">base-<span class="tex2jax_process">$10$</span></span> digits <span class="mbox" style="width:">(<tt class="ttfamily">0</tt>–<tt class="ttfamily">9</tt>)</span>. The length of each string is between
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$50$</span>, inclusive, and numbers may have
+    leading (leftmost) zeros.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing
+    “<tt class="ttfamily">PASS</tt>” if the number passes the Luhn
+    checksum test, or “<tt class="ttfamily">FAIL</tt>” if the
+    number fails the Luhn checksum test.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+00554
+999
+1234567890123411
+</pre>
+</td>
+<td>
+<pre>PASS
+FAIL
+PASS
+</pre>
+</td>
+</tr>
+</table>
+</div>

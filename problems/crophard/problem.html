@@ -1,0 +1,81 @@
+<div class="problembody">
+<p><em>Note that this is a harder version of the problem
+    cropeasy.</em></p>
+<p>Some pranksters have watched too much Discovery Channel and
+    now they want to build a crop triangle during the night. They
+    want to build it inside a large crop that looks like an evenly
+    spaced grid from above. There are some trees planted on the
+    field. Each tree is situated on an intersection of two grid
+    lines (a grid point). The pranksters want the vertices of their
+    crop triangle to be located at these trees. Also, for their
+    crop triangle to be more interesting they want the
+    <em>center</em> of that triangle to be located at some grid
+    point as well. We remind you that if a triangle has the
+    vertices <span class="tex2jax_process">$(x_1, y_1), (x_2,
+    y_2)$</span> and <span class="tex2jax_process">$(x_3,
+    y_3)$</span>, then the center for this triangle will have the
+    coordinates <span class="tex2jax_process">$((x_1 + x_2 + x_3) /
+    3, (y_1 + y_2 + y_3) / 3)$</span>.</p>
+<p>You will be given a set of points with integer coordinates
+    giving the location of all the trees on the grid. You are asked
+    to compute how many triangles you can form with
+    <em>distinct</em> vertices in this set of points so that their
+    center is a grid point as well (i.e. the center has integer
+    coordinates).</p>
+<p>If a triangle has area 0 we will still consider it a valid
+    triangle.</p>
+<h2>Input</h2>
+<p>The first line of input gives the number of cases,
+    <span class="tex2jax_process">$T$</span>.</p>
+<p><span class="tex2jax_process">$T$</span> test cases follow.
+    Each test case consists of one line containing the integers
+    <span class="tex2jax_process">$n, A, B, C, D, x_0, y_0$</span>
+    and <span class="tex2jax_process">$M$</span> separated by
+    exactly one space. <span class="tex2jax_process">$n$</span>
+    will be the number of trees in the input set.</p>
+<p>Using the numbers <span class="tex2jax_process">$n, A, B, C,
+    D, x_0, y_0$</span> and <span class="tex2jax_process">$M$</span> the following pseudocode will
+    print the coordinates of the trees in the input set.
+    <span class="tex2jax_process">$\bmod $</span> indicates the
+    remainder operation. The parameters will be chosen such that
+    the input set of trees will not have duplicates.</p>
+<pre>
+X = x0, Y = y0
+print X, Y
+for i = 1 to n-1
+    X = (A * X + B) mod M
+    Y = (C * Y + D) mod M
+    print X, Y
+</pre>
+<p>You can assume that <span class="tex2jax_process">$1\leq
+    T\leq 10; 0\leq A, B, C, D, x_0, y_0 \leq 10^9; 1\leq M\leq
+    10^9$</span> and <span class="tex2jax_process">$3\leq n\leq
+    100\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing "Case
+    #<span class="tex2jax_process">$X$</span>: " where <span class="tex2jax_process">$X$</span> is the test case number (starting
+    from 1). This should be followed by an integer indicating the
+    number of triangles which can be located at 3 distinct trees
+    and has a center that is a grid point.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 10 7 1 2 0 1 20
+6 2 0 2 1 1 2 11
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 1
+Case #2: 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

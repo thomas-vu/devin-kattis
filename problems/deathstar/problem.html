@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>Young jedi Ivan has infiltrated in The Death Star and his
+    task is to destroy it. In order to destroy The Death Star, he
+    needs an array of non-negative integers <span class="tex2jax_process">$a_ i$</span> of length <span class="tex2jax_process">$N$</span> that represents the code for
+    initiating the self-destruction of The Death Star. Ivan doesn’t
+    have the array, but he has a piece of paper with requirements
+    for that array, given to him by his good old friend Darth
+    Vader.</p>
+<p>On the paper, a square matrix of the size <span class="tex2jax_process">$N$</span> is written down. In that matrix
+    <span class="tex2jax_process">$m$</span> in the <span class="tex2jax_process">$i$</span>-th row and <span class="tex2jax_process">$j$</span>-th column there is a number that
+    is equal to bitwise and between numbers <span class="tex2jax_process">$a_ i$</span> and <span class="tex2jax_process">$a_ j$</span>. Unfortunately, a lightsaber
+    has destroyed all the fields on the matrix’s main diagonal and
+    Ivan cannot read what is on these fields. Help Ivan to
+    reconstruct an array for the self-destruction of The Death Star
+    that meets the requirements of the matrix.</p>
+<p>The solution doesn’t need to be unique, but will always
+    exist.</p>
+<h2>Input</h2>
+<p>The first line of input contains the integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 1\, 000$</span>), size of the matrix. Each of the
+    following <span class="tex2jax_process">$N$</span> lines
+    contains <span class="tex2jax_process">$N$</span> numbers
+    <span class="tex2jax_process">$m_{ij}$</span> (<span class="tex2jax_process">$0 \leq m_{ij} \leq 10^9$</span>), the
+    elements of the matrix. Additionally, each diagonal element
+    (<span class="tex2jax_process">$m_{ii}$</span>) is <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>The first and only line of output must contain any array of
+    <span class="tex2jax_process">$N$</span> non-negative integers
+    at most <span class="tex2jax_process">$10^9$</span> that meet
+    the requirements from the task.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 1 1
+1 0 1
+1 1 0
+</pre>
+</td>
+<td>
+<pre>1 1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 0 1 1 1
+0 0 2 0 2
+1 2 0 1 3
+1 0 1 0 1
+1 2 3 1 0
+</pre>
+</td>
+<td>
+<pre>1 2 3 1 11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 1 1 0 1
+1 0 1 0 3
+1 1 0 0 1
+0 0 0 0 0
+1 3 1 0 0
+</pre>
+</td>
+<td>
+<pre>1 7 1 8 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

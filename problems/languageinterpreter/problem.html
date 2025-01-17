@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>When preparing for the CS3233 Final Team Contest, we (the
+    problem setters) realized that one of the problems can be
+    easily solved by using our custom programming language. Right
+    after that realization, we decided to simply replace that
+    problem with this one — write the interpreter for our
+    programming language!</p>
+<p>Our programming language is quite simple and was inspired by
+    the assembly language. There are only 32 local variables (i.e.,
+    the registers), denoted by <tt class="ttfamily">r0</tt>,
+    <tt class="ttfamily">r1</tt>, <tt class="ttfamily">r2</tt>, …,
+    <tt class="ttfamily">r31</tt>.</p>
+<p>The instructions are as follows (<span class="tex2jax_process">$0 \leq x, y, z \leq 31$</span>; <span class="tex2jax_process">$0 \leq c \leq 2^{32}-1$</span>). We denote
+    the <span class="tex2jax_process">$(i+1)$</span>-th register by
+    <tt class="ttfamily">r<span class="tex2jax_process">$i$</span></tt>.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">add r<span class="tex2jax_process">$x$</span>, r<span class="tex2jax_process">$y$</span>, r<span class="tex2jax_process">$z$</span></tt> — this instruction adds
+        the value contained in register <tt class="ttfamily">r<span class="tex2jax_process">$y$</span></tt>
+        and the value contained in register <tt class="ttfamily">r<span class="tex2jax_process">$z$</span></tt>,
+        and stores the result in register <tt class="ttfamily">r<span class="tex2jax_process">$x$</span></tt>.
+        In other words, <span class="tex2jax_process">$\texttt{r$x$} \gets \texttt{r$y$} +
+        \texttt{r$z$}$</span>. Note that it is possible that
+        <span class="tex2jax_process">$x = y$</span>, <span class="tex2jax_process">$x = z$</span>, or <span class="tex2jax_process">$y = z$</span>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">addi r<span class="tex2jax_process">$x$</span>, r<span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$c$</span></tt> — this instruction adds
+        the value contained in register <tt class="ttfamily">r<span class="tex2jax_process">$y$</span></tt>
+        and the constant <span class="tex2jax_process">$c$</span>,
+        and stores the result in register <tt class="ttfamily">r<span class="tex2jax_process">$x$</span></tt>.
+        In other words, <span class="tex2jax_process">$\texttt{r$x$} \gets \texttt{r$y$} +
+        c$</span>. Note that it is possible that <span class="tex2jax_process">$x = y$</span>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">move r<span class="tex2jax_process">$x$</span>, r<span class="tex2jax_process">$y$</span></tt> — this instruction copies
+        the value contained in register <tt class="ttfamily">r<span class="tex2jax_process">$y$</span></tt>
+        to register <tt class="ttfamily">r<span class="tex2jax_process">$x$</span></tt>. In other words,
+        <span class="tex2jax_process">$\texttt{r$x$} \gets
+        \texttt{r$y$}$</span>. Note that it is possible that
+        <span class="tex2jax_process">$x = y$</span>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">li r<span class="tex2jax_process">$x$</span>, <span class="tex2jax_process">$c$</span></tt> — this instruction sets
+        the value of register <tt class="ttfamily">r<span class="tex2jax_process">$x$</span></tt> to <span class="tex2jax_process">$c$</span>. In other words, <span class="tex2jax_process">$\texttt{r$x$} \gets c$</span>. Note that
+        <span class="tex2jax_process">$c$</span> is a constant.</p>
+</li>
+<li>
+<p><tt class="ttfamily">for <span class="tex2jax_process">$c$</span></tt> — this instruction starts
+        a for-loop. The instructions inside the for-loop will be
+        executed <span class="tex2jax_process">$c$</span> times.
+        Note that <span class="tex2jax_process">$c$</span> is a
+        constant.</p>
+</li>
+<li>
+<p><tt class="ttfamily">rof</tt> — this instruction ends
+        the innermost for-loop. It is guaranteed that there is an
+        open for-loop when this instruction is encountered, and
+        every opened for-loop will be closed by this
+        instruction.</p>
+</li>
+</ul>
+<p>Furthermore, each register can only store integers in the
+    range <span class="tex2jax_process">$[0, 2^{32}-1]$</span>. If
+    the result of an operation is outside this range, it will be
+    wrapped around. In other words, every operation is performed
+    modulo <span class="tex2jax_process">$2^{32}$</span>.</p>
+<p>Given the instructions in our programming language, your
+    task is to execute the instructions and output the value of all
+    registers after the execution.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, denoting the number of
+    instructions and the number of registers used in the program
+    (<span class="tex2jax_process">$1 \leq n \leq 100$</span>;
+    <span class="tex2jax_process">$1 \leq k \leq 32$</span>). The
+    registers are numbered from <tt class="ttfamily">r0</tt> to
+    <tt class="ttfamily">r</tt><span class="tex2jax_process">$(k-1)$</span>.</p>
+<p>The second line contains <span class="tex2jax_process">$k$</span> integers between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2^{32}-1$</span> (inclusive), denoting the
+    initial values of the first <span class="tex2jax_process">$k$</span> registers. The <span class="tex2jax_process">$(i+1)$</span>-th integer is the initial
+    value of register <tt class="ttfamily">r<span class="tex2jax_process">$i$</span></tt>.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines
+    contain the instructions. All instructions are guaranteed to be
+    valid and formatted as described above. The instructions are
+    guaranteed to be well-formed, i.e., every <tt class="ttfamily">for</tt> instruction will have a corresponding
+    <tt class="ttfamily">rof</tt> instruction. For each
+    instruction, <span class="tex2jax_process">$0 \le x, y, z \le
+    k-1$</span> and <span class="tex2jax_process">$0 \le c \le
+    2^{32}-1$</span>.</p>
+<h2>Output</h2>
+<p>Output a line containing <span class="tex2jax_process">$k$</span> integers, denoting the value of
+    the first <span class="tex2jax_process">$k$</span> registers
+    after the program is executed. The <span class="tex2jax_process">$(i+1)$</span>-th integer should be the value
+    of register <tt class="ttfamily">r<span class="tex2jax_process">$i$</span></tt>.</p>
+<h2>Explanation of Sample Input</h2>
+<p>The program in the sample is equivalent to the following
+    Python program:</p>
+<pre>
+r0, r1, r2 = 1, 2, 3
+r0 = r0 + r0
+r0 = r1 + 1
+r1 = 100
+for i in range(2):
+    for j in range(3):
+        r2 = r0 + r1
+        r1 = r2
+    for j in range(4):
+        r2 = r0 + r2
+        r1 = r2
+        r0 = r0
+r2 = 4234
+r2 = (r2 + 4294966295) % (1 &lt;&lt; 32)
+print(r0, r1, r2)
+</pre>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>16 3
+1 2 3
+add r0, r0, r0
+addi r0, r1, 1
+li r1, 100
+for 2
+for 3
+add r2, r0, r1
+move r1, r2
+rof
+for 4
+add r2, r0, r2
+move r1, r2
+move r0, r0
+rof
+rof
+li r2, 4234
+addi r2, r2, 4294966295
+</pre>
+</td>
+<td>
+<pre>3 142 3233
+</pre>
+</td>
+</tr>
+</table>
+</div>

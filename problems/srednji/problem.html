@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Consider a sequence <span class="tex2jax_process">$A$</span>
+    of integers, containing <span class="tex2jax_process">$N$</span> integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span>. Each integer appears exactly once
+    in the sequence.</p>
+<p>A subsequence of <span class="tex2jax_process">$A$</span> is
+    a sequence obtained by removing some (possibly none) numbers
+    from the beginning of <span class="tex2jax_process">$A$</span>,
+    and then from the end of <span class="tex2jax_process">$A$</span>.</p>
+<p>Calculate how many different subsequences of <span class="tex2jax_process">$A$</span> of <b class="bfseries">odd</b>
+    length have their median equal to <span class="tex2jax_process">$B$</span>. The median of a sequence is the
+    element in the middle of the sequence after it is sorted. For
+    example, the median of the sequence <span class="tex2jax_process">$(5, 1, 3)$</span> is <span class="tex2jax_process">$3$</span>.</p>
+<h2>Input</h2>
+<p>The first line contains two integers, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100\, 000$</span>) and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1
+    \le B \le N$</span>).</p>
+<p>The second line contains <span class="tex2jax_process">$N$</span> integers separated by spaces, the
+    elements of sequence <span class="tex2jax_process">$A$</span>.</p>
+<h2>Output</h2>
+<p>Output the number of subsequences of <span class="tex2jax_process">$A$</span> whose median is <span class="tex2jax_process">$B$</span>.</p>
+<h2>Explanation of Sample Input</h2>
+<p>In Sample Input 3, the four subsequences of <span class="tex2jax_process">$A$</span> with median <span class="tex2jax_process">$4$</span> are <span class="tex2jax_process">$(4)$</span>, <span class="tex2jax_process">$(7, 2, 4)$</span>, <span class="tex2jax_process">$(5, 7, 2, 4, 3)$</span> and <span class="tex2jax_process">$(5, 7, 2, 4, 3, 1, 6)$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 4
+1 2 3 4 5
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 3
+1 2 4 5 6 3
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 4
+5 7 2 4 3 1 6
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

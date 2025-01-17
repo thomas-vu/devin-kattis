@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Notch is holding a race for Steve and Alex to see who is the
+    better miner. The rules are simple: they must each move
+    <span class="tex2jax_process">$n$</span> blocks forward and
+    <span class="tex2jax_process">$n$</span> blocks down. They can
+    do this in any order they choose—that is, they each mine
+    <span class="tex2jax_process">$2n$</span> times (<span class="tex2jax_process">$n$</span> blocks in front of them and
+    <span class="tex2jax_process">$n$</span> below them) and may
+    order these <span class="tex2jax_process">$2n$</span> mining
+    steps in any way they want. They will never mine above or
+    behind them, as that will just slow them down.<br/></p>
+<p>Steve and Alex do not want to take the same mining path, to
+    avoid getting in each other’s way or mining blocks for their
+    opponent. To avoid this, Alex decides to move <span class="tex2jax_process">$b$</span> blocks behind and <span class="tex2jax_process">$b$</span> blocks below Steve before the race
+    begins. However, as Steve and Alex start to mine, Notch
+    realizes there is a problem with their approach: it is still
+    possible that they run into each other’s mining paths during
+    the race! For example, consider the following figure:</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=400px]{miningrace.png}" src="/problems/miningrace/file/statement/en/img-0001.png" style="width:400px"/>
+<div class="caption">
+<b>Figure 1</b>: Example of paths taken by Alex and Steve
+          that could lead to a collision.
+        </div>
+</center>
+</div>
+<p>Notch wants to know whether or not their paths will
+    intersect. Assuming that both Steve and Alex choose their path
+    randomly and independently (that is, each chooses a
+    randomly-ordered sequence of <span class="tex2jax_process">$n$</span> moves forward and <span class="tex2jax_process">$n$</span> moves down), what is the
+    probability that their paths collide during the race?</p>
+<h2>Input</h2>
+<p>The input is a single line containing two integers
+    <span class="tex2jax_process">$n,b$</span> (<span class="tex2jax_process">$1 \leq b \leq n \leq 500\, 000$</span>).</p>
+<h2>Output</h2>
+<p>Output a single line containing the probability of Steve and
+    Alex’s mining paths intersecting. Your answer will be
+    considered correct if its absolute or relative error doesn’t
+    exceed <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+</pre>
+</td>
+<td>
+<pre>0.0318877551
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+</pre>
+</td>
+<td>
+<pre>0.4444444444
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+</pre>
+</td>
+<td>
+<pre>0.0025000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

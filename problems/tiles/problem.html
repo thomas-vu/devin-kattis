@@ -1,0 +1,93 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/tiles/file/statement/en/img-0001.png" class="illustration" src="/problems/tiles/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Youssef is a Moroccan tile installer who specializes in
+    mosaics like the one shown on the right. He has rectangular
+    tiles of many dimensions at his disposal, and the dimensions of
+    all his tiles are integer numbers of centimeters. When Youssef
+    needs parallelogram-shaped tiles, he cuts them from his supply
+    on hand. To make this work easier, he invented a tile cutting
+    machine that superimposes a centimeter grid on the cutting
+    surface to guide the cuts on the tiles. Due to machine
+    limitations, aesthetic sensibilities, and Youssef’s dislike of
+    wasted tiles, the following rules determine the possible cuts.
+
+    <ol class="enumerate">
+<li>
+<p>The rectangular tile to be cut must be positioned in the
+        bottom left corner of the cutting surface and the edges
+        must be aligned with the grid lines.</p>
+</li>
+<li>
+<p>The cutting blade can cut along any line connecting two
+        different grid points on the tile boundary as long as the
+        points are on adjacent boundary edges.</p>
+</li>
+<li>
+<p>The four corners of the resulting parallelogram tile
+        must lie on the four sides of the original rectangular
+        tile.</p>
+</li>
+<li>
+<p>No edge of the parallelogram tile can lie along an edge
+        of the rectangular tile.</p>
+</li>
+</ol>
+<p>Figure 1 shows the eight different ways in which a
+    parallelogram tile of area <span class="tex2jax_process">$4$</span> square centimeters can be cut out
+    of a rectangular tile, subject to these restrictions.</p>
+<div class="figure" id="fig:tiles2">
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{tiles-fig2}" src="/problems/tiles/file/statement/en/img-0002.png" style="width:90.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The eight different ways for cutting a
+          parallelogram of area 4.
+        </div>
+</center>
+</div>
+<p>Youssef needs to cut tiles of every area between
+    <span class="tex2jax_process">$a_{\text {lo}}$</span> and
+    <span class="tex2jax_process">$a_{\text {hi}}$</span>. Now he
+    wonders, for which area <span class="tex2jax_process">$a$</span> in this range can he cut the
+    maximum number of different tiles?</p>
+<h2>Input</h2>
+<p>The input consists of multiple test cases. The first line of
+    input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 500$</span>), the number of test cases. The next
+    <span class="tex2jax_process">$n$</span> lines each contain two
+    integers <span class="tex2jax_process">$a_{\text {lo}},
+    a_{\text {hi}}$</span> (<span class="tex2jax_process">$1 \le
+    a_{\text {lo}} \le a_{\text {hi}} \le 500\, 000$</span>), the
+    range of areas of the tiles.</p>
+<h2>Output</h2>
+<p>For each test case <span class="tex2jax_process">$a_{\text
+    {lo}}$</span>, <span class="tex2jax_process">$a_{\text
+    {hi}}$</span>, display the value <span class="tex2jax_process">$a$</span> between <span class="tex2jax_process">$a_{\text {lo}}$</span> and <span class="tex2jax_process">$a_{\text {hi}}$</span> such that the number
+    of possible ways to cut a parallelogram of area <span class="tex2jax_process">$a$</span> is maximized as well as the number
+    of different ways <span class="tex2jax_process">$w$</span> in
+    which such a parallelogram can be cut. If there are multiple
+    possible values of <span class="tex2jax_process">$a$</span>
+    display the smallest one.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 4
+2 6
+</pre>
+</td>
+<td>
+<pre>
+4 8
+6 20
+</pre>
+</td>
+</tr>
+</table>
+</div>

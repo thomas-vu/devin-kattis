@@ -1,0 +1,146 @@
+<div class="problembody">
+<p><img alt="\includegraphics[width=0.95\textwidth ]{visualgo.jpg}" src="/problems/visualgo/file/statement/en/img-0001.jpg" style="width:95.00%"/></p>
+<p><span class="scshape">VisuAlgo</span> (http://visualgo.net)
+    is a website developed by a team of staff and students of
+    School of Computing, National University of Singapore, the host
+    of the 2015 ACM-ICPC Asia Singapore Regional. VisuAlgo
+    visualizes a number of popular data structures and algorithms
+    in the Computer Science curriculum. Currently, it receives
+    approximately 2000 hits/day from CS students and instructors
+    worldwide.</p>
+<p>One new feature of <span class="scshape">VisuAlgo</span> is
+    the online quiz. As an example, the above figure shows a
+    question about the classic Single-Source (Single-Destination)
+    Shortest Paths problem in graph theory. The beauty of this
+    online quiz feature is that the question parameters are
+    <b class="bfseries">randomized</b>. The drawn graph <b class="bfseries">G</b> is taken from a collection of hundreds of
+    directed weighted graphs (with their 2-D layouts) in
+    <span class="scshape">VisuAlgo</span>’s internal database. The
+    graph <b class="bfseries">G</b> has <span class="tex2jax_process">$V$</span> vertices numbered from
+    <span class="tex2jax_process">$[0..V-1]$</span>. The source
+    vertex <span class="tex2jax_process">$s$</span> and the
+    destination vertex <span class="tex2jax_process">$t$</span> are
+    selected at random from <span class="tex2jax_process">$[0..V-1]$</span>.</p>
+<p>However, such randomization of the question parameters may
+    produce either a trivial question (e.g. “No Answer” when
+    <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$t$</span> are disconnected, <span class="tex2jax_process">$0$</span> when <span class="tex2jax_process">$s = t$</span>, simple tracing of a path if
+    there is only a single unique path from <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$t$</span> as shown in the above figure) or
+    insanely difficult question to be computed manually if there
+    are too many possible shortest paths from <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$t$</span>.</p>
+<p>The developers of <span class="scshape">VisuAlgo</span> want
+    to calibrate such Shortest Paths question with randomized
+    parameters so that it is possible for a normal Computer Science
+    student to answer the randomly generated question manually
+    within a reasonable amount of time. Please help them.</p>
+<h2>Input</h2>
+<p>The first line of input contains two non-negative integers
+    <span class="tex2jax_process">$1 \leq V \leq 10\, 000$</span>
+    and <span class="tex2jax_process">$0 \leq E \leq 200\,
+    000$</span>, giving the number of vertices and edges of the
+    drawn graph <b class="bfseries">G</b>.</p>
+<p>Thereafter follow <span class="tex2jax_process">$E$</span> lines, each describing the
+    directed weighted edges in <b class="bfseries">G</b> by three
+    integers <span class="tex2jax_process">$0 \leq u, v \leq
+    V-1$</span> and <span class="tex2jax_process">$1 \leq w \leq
+    99$</span> (<span class="scshape">VisuAlgo</span> limits the
+    edge weight to be at most 2 characters for visual aesthetic
+    purpose), where <span class="tex2jax_process">$u$</span>
+    and <span class="tex2jax_process">$v$</span> are the
+    vertex numbers and <span class="tex2jax_process">$w$</span> is the weight of the directed edge
+    <span class="tex2jax_process">$u \rightarrow v$</span>. It is
+    guaranteed that <b class="bfseries">G</b> is a simple graph
+    without self-loops or multiple directed edges with the same
+    direction between the same pair of vertices.</p>
+<p>Finally, there are two integers in the last line of input
+    <span class="tex2jax_process">$0 \leq s, t \leq
+    V-1$</span>.</p>
+<h2>Output</h2>
+<p>Print a line with the number of different shortest paths
+    between <span class="tex2jax_process">$s$</span> to
+    <span class="tex2jax_process">$t$</span> in <b class="bfseries">G</b>. Two shortest paths <span class="tex2jax_process">$p_1$</span> and <span class="tex2jax_process">$p_2$</span> are considered different if
+    there exists at least one edge in <span class="tex2jax_process">$p_1$</span> that is not found in
+    <span class="tex2jax_process">$p_2$</span>. It is guaranteed
+    that the answer fits in a 32-bit signed integer data type.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 10
+0 1 26
+1 3 29
+1 5 9
+2 3 25
+2 4 43
+4 2 3
+5 0 13
+5 2 33
+5 3 18
+5 4 58
+5 1
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 9
+0 1 1
+0 2 2
+1 2 1
+2 3 1
+2 4 3
+3 4 1
+4 5 1
+4 6 2
+5 6 1
+0 6
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 6
+0 1 1
+1 2 2
+2 4 3
+0 3 3
+3 4 4
+0 4 6
+0 4
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

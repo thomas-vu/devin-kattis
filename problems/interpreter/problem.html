@@ -1,0 +1,102 @@
+<div class="problembody">
+<p>A certain computer has <span class="tex2jax_process">$10$</span> registers and <span class="tex2jax_process">$1000$</span> words of RAM. Each register or
+    RAM location holds a <span class="tex2jax_process">$3$</span>-digit integer between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$999$</span>. Instructions are encoded as
+    <span class="tex2jax_process">$3$</span>-digit integers and
+    stored in RAM. The encodings are as follows:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1xy$</span> means halt
+        (regardless of the values of <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>)</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2dn$</span> means set
+        register <span class="tex2jax_process">$d$</span> to
+        <span class="tex2jax_process">$n$</span> (between
+        <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$9$</span>)</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$3dn$</span> means add
+        <span class="tex2jax_process">$n$</span> to register
+        <span class="tex2jax_process">$d$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$4dn$</span> means
+        multiply register <span class="tex2jax_process">$d$</span>
+        by <span class="tex2jax_process">$n$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$5ds$</span> means set
+        register <span class="tex2jax_process">$d$</span> to the
+        value of register <span class="tex2jax_process">$s$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$6ds$</span> means add the
+        value of register <span class="tex2jax_process">$s$</span>
+        to register <span class="tex2jax_process">$d$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$7ds$</span> means
+        multiply register <span class="tex2jax_process">$d$</span>
+        by the value of register <span class="tex2jax_process">$s$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$8da$</span> means set
+        register <span class="tex2jax_process">$d$</span> to the
+        value in RAM whose address is in register <span class="tex2jax_process">$a$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$9sa$</span> means set the
+        value in RAM whose address is in register <span class="tex2jax_process">$a$</span> to the value of register
+        <span class="tex2jax_process">$s$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0ds$</span> means goto
+        the location in register <span class="tex2jax_process">$d$</span> unless register <span class="tex2jax_process">$s$</span> contains <span class="tex2jax_process">$0$</span></p>
+</li>
+</ul>
+<p>All registers initially contain <span class="tex2jax_process">$000$</span>. The first instruction to be
+    executed is at RAM address <span class="tex2jax_process">$0$</span>. All results of add/multiply
+    instructions are reduced modulo <span class="tex2jax_process">$1000$</span>.</p>
+<h2>Input</h2>
+<p>The initial content of the RAM is read from standard input.
+    The input to your program consists of up to <span class="tex2jax_process">$1000$</span> <span class="tex2jax_process">$3$</span>-digit unsigned integers,
+    representing the contents of consecutive RAM locations starting
+    at <span class="tex2jax_process">$0$</span>. Unspecified RAM
+    locations are initialized to <span class="tex2jax_process">$000$</span>.</p>
+<h2>Output</h2>
+<p>The output from your program is a single integer: the number
+    of instructions executed up to and including the halt
+    instruction. You may assume that the program does halt and
+    takes at most <span class="tex2jax_process">$10\, 000$</span>
+    steps.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>299
+492
+495
+399
+492
+495
+399
+283
+279
+689
+078
+100
+000
+000
+000
+</pre>
+</td>
+<td>
+<pre>16
+</pre>
+</td>
+</tr>
+</table>
+</div>

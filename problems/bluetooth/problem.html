@@ -1,0 +1,175 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/bluetooth/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bluetooth/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Harald Bluetooth depicted in the 17th century.
+      </div>
+</div>
+<p>King Harold of Denmark (c. 998–1098) wants to eat an apple
+    to celebrate the founding of the town Lund. Harold’s teeth are
+    in terrible condition; some are missing, some are rotten and
+    discoloured, earning him the nickname “Bluetooth.”</p>
+<p>Harold can chew the apple on the left or the right side of
+    his mouth. Chewing with rotten teeth causes terrible pain, so
+    he cannot chew on a side containing a blue tooth. He needs at
+    least one tooth in both the upper and the lower jaw on the same
+    side to be able to chew on that side.</p>
+<p>As Harold’s chief advisor and reluctant dentist, you have a
+    complete overview of his dental problems. Can you help him
+    decide on which side to chew, or if apples are too hard to
+    handle?</p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$n$</span>, the number of Harold’s dental
+    problems, where <span class="tex2jax_process">$1\leq n\leq
+    32$</span>. Each of the following <span class="tex2jax_process">$n$</span> lines describes a dental problem.
+    A dental problem consists of a space separated tooth and a
+    condition, »m« (for »missing«) or »b« (for »blue«). No tooth
+    will appear more than once in the problem description. Teeth
+    are described using the nomenclature created by your dentist
+    colleague Victor Haderup:</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{img/dental-en.pdf}" src="/problems/bluetooth/file/statement/en/img-0002.png" style="width:50.00%"/>
+</center>
+<p>Harald has at least one blue tooth. A tooth cannot be both
+    missing and blue.</p>
+<h2>Output</h2>
+<p>The integer <span class="tex2jax_process">$0$</span> if
+    Harold can chew the apple with the left side. The integer
+    <span class="tex2jax_process">$1$</span> if Harold can chew the
+    apple with the right side. The integer <span class="tex2jax_process">$2$</span> if you recommend soup.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>19</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$n = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>81</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1\leq n\leq
+          32$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+-5 b
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>9
+8- m
+7- m
+6- m
+5- m
+4- m
+3- m
+2- m
+1- b
++3 m
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>9
+8- m
+7- m
+6- m
+5- m
+4- m
+3- m
+2- m
+1- m
++3 b
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>15
+6+ b
++2 m
++3 m
++4 m
++5 m
++6 m
++7 m
++8 m
+-1 m
+-2 m
+-3 m
+-4 m
+-5 m
+-6 m
+-7 m
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,146 @@
+<div class="problembody">
+<p>Congratulations! You are now the judge of a programming
+    contest! You’ve been put in charge of a problem, and since your
+    problem may not have unique correct output, you’ve got to write
+    an output checker for it.</p>
+<p>Your problem is called “Good as Goldbach”, and it’s based on
+    the Goldbach Conjecture (that any positive even integer greater
+    than <span class="tex2jax_process">$3$</span> can be expressed
+    as the sum of two primes). A solving program’s output should
+    have three numbers separated by whitespace: First, a positive
+    even integer greater than <span class="tex2jax_process">$3$</span> and less than or equal to
+    <span class="tex2jax_process">$10^9$</span>, and then two
+    (positive) prime numbers which sum to the even number.</p>
+<p>You must write a checker for this problem. Your checker
+    should take the output of a contestant’s program, and determine
+    whether or not it could possibly be correct. That is, determine
+    if the contestant’s output consists only of three tokens
+    separated by whitespace, the first of which is a positive even
+    integer greater than <span class="tex2jax_process">$3$</span>
+    and less than or equal to <span class="tex2jax_process">$10^9$</span>, and the next two are positive
+    prime integers which sum to the first. The integers should be
+    in base ten, with no signs or leading zeros. Any amount of
+    white space anywhere except within an integer, including blank
+    lines, is OK. Any other output, extra characters, missing
+    numbers, etc. should be considered incorrect.</p>
+<h2>Input</h2>
+<p>The input will consist of from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$1\, 000$</span> lines. Each line consists of
+    from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$100$</span> printable ASCII characters (with
+    codes 32 through 126), or tabs.</p>
+<h2>Output</h2>
+<p>Output a single integer, which is <span class="tex2jax_process">$1$</span> if the input could possibly be a
+    correct output for the “Good as Goldbach” problem, or
+    <span class="tex2jax_process">$0$</span> if the input could not
+    possibly be a correct output for the “Good as Goldbach”
+    problem.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 3 7
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10   3   7
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>314
+159 265
+358
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>22 19 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+   60
+  
+  29
+  
+      31
+          
+          
+          
+          
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>fred!
+sam!
+george!
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

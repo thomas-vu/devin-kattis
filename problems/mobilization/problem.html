@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>Mobilization is a brand new strategy game in which you are
+    required to mobilize an army. The army can consist of different
+    types of troops, each of which has a cost, health, and potency.
+    You can acquire any combination of the troop types, even
+    fractional, such that the total cost is no more than the amount
+    you have to spend. The efficacy of the army is equal to its
+    total health value multiplied by its total potency. What is the
+    greatest efficacy you can achieve with the given purchasing
+    constraints?</p>
+<p>You may assume that there are always sufficient troops
+    available to buy as many as you want (subject to the total
+    constraint).</p>
+<h2>Input</h2>
+<p>The first line will contain two integers, the number of
+    different types of troops <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 30\, 000$</span> and the total budget you have to
+    spend <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$1 \le b \le 100\, 000$</span>).</p>
+<p>Following this will be <span class="tex2jax_process">$n$</span> lines, each with three values for
+    this troop type: an integer value of its unit cost <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \le c \le 100\, 000$</span>, a real value of its unit health
+    <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$0 \le h \le 1$</span>), and a real value of
+    its unit potency <span class="tex2jax_process">$p$</span>
+    (<span class="tex2jax_process">$0 \le p \le 1$</span>). The
+    real values may contain up to <span class="tex2jax_process">$20$</span> digits after the decimal
+    point.</p>
+<h2>Output</h2>
+<p>The output is a line containing one number, the greatest
+    possible efficacy expressed with a relative or absolute error
+    less than <span class="tex2jax_process">$0.005$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 100000
+300 1 0.02
+500 0.2 1
+250 0.3 0.1
+1000 1 0.1
+</pre>
+</td>
+<td>
+<pre>19436.05
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 100
+1 0.1 1
+1 1 0.1
+</pre>
+</td>
+<td>
+<pre>3025.00
+</pre>
+</td>
+</tr>
+</table>
+</div>

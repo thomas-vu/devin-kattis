@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>Write a program which, given an integer <span class="tex2jax_process">$n$</span> as input, will produce a
+    mathematical expression whose solution is <span class="tex2jax_process">$n$</span>. The solution is restricted to
+    using exactly four <span class="tex2jax_process">$4$</span>’s
+    and exactly three of the binary operations selected from the
+    set <span class="tex2jax_process">$\{ *, +, -, /\} $</span>.
+    The number <span class="tex2jax_process">$4$</span> is the ONLY
+    number you can use. You are not allowed to concatenate fours to
+    generate other numbers, such as <span class="tex2jax_process">$44$</span> or <span class="tex2jax_process">$444$</span>.</p>
+<p>For example given <span class="tex2jax_process">$n=0$</span>, a solution is <span class="tex2jax_process">$4 * 4 - 4 * 4 = 0$</span>. Given
+    <span class="tex2jax_process">$n=7$</span>, a solution is
+    <span class="tex2jax_process">$4 + 4 - 4~ /~ 4 = 7$</span>.
+    Division is considered truncating integer division, so that
+    <span class="tex2jax_process">$1/4$</span> is <span class="tex2jax_process">$0$</span> (instead of <span class="tex2jax_process">$0.25$</span>). Assume the usual precedence
+    of operations so that <span class="tex2jax_process">$4 + 4 * 4
+    = 20$</span>, not <span class="tex2jax_process">$32$</span>.
+    Not all integer inputs have solutions using four <span class="tex2jax_process">$4$</span>’s with the aforementioned
+    restrictions (consider <span class="tex2jax_process">$n=11$</span>).</p>
+<p><em>Hint: Using your forehead and some forethought should
+    make an answer forthcoming. When in doubt use the
+    fourth.</em></p>
+<h2>Input</h2>
+<p>Input begins with an integer <span class="tex2jax_process">$1 \leq m \leq 1\, 000$</span>, indicating
+    the number of test cases that follow. Each of the next
+    <span class="tex2jax_process">$m$</span> lines contain exactly
+    one integer value for <span class="tex2jax_process">$n$</span>
+    in the range <span class="tex2jax_process">$-1\, 000\, 000 \leq
+    n \leq 1\, 000\, 000$</span>.</p>
+<h2>Output</h2>
+<p>For each test case print one line of output containing
+    either an equation using four <span class="tex2jax_process">$4$</span>’s to reach the target number or
+    the phrase <tt class="tt">no solution</tt>. Print the equation
+    following the format of the sample output; use spaces to
+    separate the numbers and symbols printed. If there is more than
+    one such equation which evaluates to the target integer, print
+    any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+9
+0
+7
+11
+24
+</pre>
+</td>
+<td>
+<pre>4 + 4 + 4 / 4 = 9
+4 * 4 - 4 * 4 = 0
+4 + 4 - 4 / 4 = 7
+no solution
+4 * 4 + 4 + 4 = 24
+</pre>
+</td>
+</tr>
+</table>
+</div>

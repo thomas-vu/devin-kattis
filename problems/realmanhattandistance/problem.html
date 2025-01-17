@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>The city of Manhattan is well known for its regular
+    arrangement of numbered streets and avenues (streets run
+    east-west and avenues run north-south), which can be modeled by
+    a grid superimposed on the <span class="tex2jax_process">$x\textrm{-}y$</span> plane with vertical and
+    horizontal lines at integer values of <span class="tex2jax_process">$x~ \textrm{and}~ y$</span>. The
+    <em>Manhattan distance</em> (or <em>taxicab distance</em>)
+    between two points, <span class="tex2jax_process">$p_1 = (x_1,
+    y_1)$</span> and <span class="tex2jax_process">$p_2 = (x_2,
+    y_2)$</span>, is given by</p><span class="tex2jax_process">\[
+    \left| x_1 - x_2 \right| + \left| y_1 - y_2 \right| \]</span>
+<p>(here we assume integer coordinates, although Manhattan
+    distance can also be applied more generally). This captures the
+    idea that the shortest distance between two intersections in
+    Manhattan (for a vehicle like a car or truck that is restricted
+    to travelling along streets and avenues) is the sum of the
+    differences between the street numbers and the avenue numbers
+    (in absolute value for each).</p>
+<p>But this simple model ignores one of the most famous
+    features of Manhattan — <em>Broadway!</em> Known as a
+    global center for live theater, especially musical theater,
+    Broadway (which is a road) is also significant because, in a
+    certain part of Manhattan, it cuts at an angle across the
+    regular grid of streets and avenues. If a vehicle can travel
+    along Broadway for at least part of its journey, this
+    potentially reduces the shortest distance between its starting
+    point and its destination relative to a trip along only streets
+    and avenues.</p>
+<p>We will model Broadway by adding a single non-vertical and
+    non-horizontal line segment to the grid described above. This
+    line segment has endpoints with integer coordinates,
+    <span class="tex2jax_process">$(\mathit{bx}_1,
+    \mathit{by}_1)$</span> and <span class="tex2jax_process">$(\mathit{bx}_2, \mathit{by}_2)$</span>, and
+    each point where it intersects a vertical or horizontal grid
+    line creates a new intersection (unless one exists there
+    already).</p>
+<p>Now what is the shortest distance from <span class="tex2jax_process">$(x_1, y_1)$</span> to <span class="tex2jax_process">$(x_2, y_2)$</span> for a vehicle that can
+    travel along any street or avenue, and can also travel along
+    Broadway? Note that all streets, all avenues, and Broadway are
+    bi-directional.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{route}" src="/problems/realmanhattandistance/file/statement/en/img-0001.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Shortest route for the first test case
+          in the sample input
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains an integer, <span class="tex2jax_process">$n$</span>, the number of test cases
+    <span class="tex2jax_process">$(1 \leq n \leq 100)$</span>.
+    This is followed by <span class="tex2jax_process">$n$</span>
+    lines, each of which contains <span class="tex2jax_process">$8$</span> space-separated integers,
+    <span class="tex2jax_process">$\mathit{bx}_1$</span>,
+    <span class="tex2jax_process">$\mathit{by}_1$</span>,
+    <span class="tex2jax_process">$\mathit{bx}_2$</span>,
+    <span class="tex2jax_process">$\mathit{by}_2$</span>,
+    <span class="tex2jax_process">$x_1$</span>, <span class="tex2jax_process">$y_1$</span>, <span class="tex2jax_process">$x_2$</span>, <span class="tex2jax_process">$y_2$</span>, where <span class="tex2jax_process">$(\mathit{bx}_1, \mathit{by}_1)$</span> and
+    <span class="tex2jax_process">$(\mathit{bx}_2,
+    \mathit{by}_2)$</span> are the endpoints of Broadway,
+    <span class="tex2jax_process">$(x_1, y_1)$</span> is the
+    starting intersection of a trip through Manhattan, and
+    <span class="tex2jax_process">$(x_2, y_2)$</span> is the
+    destination intersection. Each coordinate is in the interval
+    <span class="tex2jax_process">$[1,50]$</span>. It is guaranteed
+    that <span class="tex2jax_process">$\mathit{bx}_1 \neq
+    \mathit{bx}_2$</span>, <span class="tex2jax_process">$\mathit{by}_1 \neq \mathit{by}_2$</span>,
+    and <span class="tex2jax_process">$(x_1, y_1) \neq (x_2,
+    y_2)$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    shortest distance between <span class="tex2jax_process">$(x_1,
+    y_1)$</span> and <span class="tex2jax_process">$(x_2,
+    y_2)$</span> as described above. An answer will be considered
+    correct if it is within <span class="tex2jax_process">$10^{-6}$</span> of the official answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+5 10 13 14 9 8 11 16
+5 10 13 14 9 8 12 7
+</pre>
+</td>
+<td>
+<pre>9.23606797749979
+4.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

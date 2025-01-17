@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/cookiecutter/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cookiecutter/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Theta likes to bake cookies for the upcoming holidays. She
+    has a selection of cookie cutters of different shapes and
+    sizes. She thinks it’s unfair that some shapes are larger than
+    others – because even if everyone gets the same number of
+    cookies, some will end up with more dough!</p>
+<p>She comes up with a plan to enlarge (or shrink) the cookie
+    cutters’ shapes – while retaining their proportions – so that
+    all cookies will have the same weight.</p>
+<p>Your task in this problem is to help her draw the plans the
+    new cookie cutters will be based on!</p>
+<h2>Input</h2>
+<p>The input is a single test case, consisting of one cookie
+    cutter outline. Cookie cutters are modeled as simple polygons.
+    (Simple polygons do not self-intersect.) The first line of
+    input contains a number <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$3
+    \le N \le 50$</span>) denoting the number of corners of the
+    polygon. This is followed by <span class="tex2jax_process">$N$</span> lines containing two floating
+    point numbers <span class="tex2jax_process">$X$</span> and
+    <span class="tex2jax_process">$Y$</span> (<span class="tex2jax_process">$-500 \le X, Y \le 500$</span>), each
+    describing a set of coordinates of a polygon point. Each
+    floating point number will have at most <span class="tex2jax_process">$6$</span> digits after the period. The
+    coordinates are given in counter-clockwise order.</p>
+<p>The next line will contain an integer number <span class="tex2jax_process">$A$</span> (<span class="tex2jax_process">$0
+    &lt; A \le 10\, 000\, 000$</span>) denoting the size of the
+    desired area to which the polygon should be grown or shrunk.
+    (Since the dough is rolled out precisely to an even height
+    everywhere, we can use area to represent weight.) The resized
+    polygon must be similar to the original polygon, that is, all
+    interior angles must be congruent and all corresponding sides
+    must have the same ratio.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span> lines with
+    the <span class="tex2jax_process">$X$</span>, <span class="tex2jax_process">$Y$</span> coordinates of the expanded/shrunk
+    polygon. Because these coordinates will be used to draw a new
+    cookie cutter, your new polygon should lie in the north-east
+    quadrant (<span class="tex2jax_process">$x, y \ge 0$</span>)
+    and it should touch the <span class="tex2jax_process">$x$</span>- and <span class="tex2jax_process">$y$</span>-axes in at least one point. More
+    precisely, you must move the resized polygon horizontally
+    and/or vertically so that <span class="tex2jax_process">$\min
+    x_ i = \min y_ j = 0$</span>. You may not, however, rotate or
+    skew the polygon in any way.</p>
+<p>Provide your answers as floating point numbers. Your answer
+    will be considered correct if none of the <span class="tex2jax_process">$x, y$</span> coordinates have an absolute or
+    relative error larger than <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+0 0
+1 1
+0 2
+4
+</pre>
+</td>
+<td>
+<pre>
+0.0 0.0
+2.0 2.0
+0.0 4.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+12
+-1.5 2
+0 1.5
+0 0
+1 .5
+2 0
+2 1.5
+3.5 2
+2 2.5
+2 4
+1 3.5
+0 4
+0 2.5
+20
+</pre>
+</td>
+<td>
+<pre>
+0.0 3.06785995539
+2.30089496654 2.30089496654
+2.30089496654 0.0
+3.83482494424 0.766964988847
+5.36875492193 0.0
+5.36875492193 2.30089496654
+7.66964988847 3.06785995539
+5.36875492193 3.83482494424
+5.36875492193 6.13571991078
+3.83482494424 5.36875492193
+2.30089496654 6.13571991078
+2.30089496654 3.83482494424
+</pre>
+</td>
+</tr>
+</table>
+</div>

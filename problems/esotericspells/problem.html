@@ -1,0 +1,111 @@
+<div class="problembody">
+<blockquote class="quote">
+      SoCCat the Spellcaster is a very magical cat. Currently,
+      SoCCat is learning about combination spells!
+    </blockquote>
+<p>SoCCat has just learned about combination spells, which are
+    spells that combine two or more spells from different
+    spellcasters to deal more damage.</p>
+<p>According to the Unified Theory of Magic, if there are
+    <span class="tex2jax_process">$k$</span> spellcasters casting
+    spells <span class="tex2jax_process">$x_1, x_2, \ldots , x_
+    k$</span> respectively, then the combination spell will deal
+    damage equal to <span class="tex2jax_process">$x_1 \oplus x_2
+    \oplus \ldots \oplus x_ k$</span>, where <span class="tex2jax_process">$\oplus $</span> is the bitwise XOR
+    operation.</p>
+<p>SoCCat knew of the famous spellcasting group, the
+    <span class="tex2jax_process">$n$</span>-membered Spellcasters
+    of the Round Table. SoCCat also knew that the <span class="tex2jax_process">$i$</span>-th member of the group can cast
+    spells <span class="tex2jax_process">$0, 1, 2, \ldots , a_
+    i$</span>.</p>
+<p>Now that SoCCat has learned about combination spells, SoCCat
+    wants to know the maximum damage that can be dealt by the
+    Spellcasters of the Round Table using a combination spell. Help
+    SoCCat calculate the maximum damage!</p>
+<h2>Notes</h2>
+<p><i class="itshape">Bitwise XOR</i> of two integers
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> can be computed as follows.</p>
+<ol class="enumerate">
+<li>
+<p>Write <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span> in base two with
+        the same bit length.</p>
+</li>
+<li>
+<p>Perform the <span class="tex2jax_process">$\texttt{XOR}$</span> operation for each
+        corresponding bit pair:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0 \; \texttt{XOR} \;
+            0 = 0$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \; \texttt{XOR} \;
+            1 = 1$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \; \texttt{XOR} \;
+            0 = 1$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 \; \texttt{XOR} \;
+            1 = 0$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Convert the <span class="tex2jax_process">$\texttt{XOR}$</span> result back to base
+        ten.</p>
+</li>
+</ol>
+<p>As an example, <span class="tex2jax_process">$6 \;
+    \texttt{XOR} \; 10 = 12$</span>. Because <span class="tex2jax_process">$6 = 0110$</span> and <span class="tex2jax_process">$10=1010$</span> in base two, the bitwise XOR
+    obtained is <span class="tex2jax_process">$1100=12$</span> in
+    base ten.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$C$</span>, denoting the number
+    of test cases (<span class="tex2jax_process">$1 \leq C \leq
+    100$</span>). Each test case has the following format.</p>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, denoting the number of members in
+    the Spellcasters of the Round Table (<span class="tex2jax_process">$1 \leq n \leq 100$</span>).</p>
+<p>The next line contains <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$a_1, a_2, \ldots , a_ n$</span>
+    (<span class="tex2jax_process">$0 \leq a_ i \leq
+    10^{18}$</span>). The <span class="tex2jax_process">$i$</span>-th integer denotes that the
+    <span class="tex2jax_process">$i$</span>-th member of the
+    Spellcasters of the Round Table can cast spells <span class="tex2jax_process">$0, 1, 2, \ldots , a_ i$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output two lines.</p>
+<p>The first line of output should contain an integer denoting
+    the maximum damage that can be dealt by the Spellcasters of the
+    Round Table using a combination spell.</p>
+<p>The next line should contain <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$x_1, x_2, \ldots , x_ n$</span>, where
+    <span class="tex2jax_process">$x_ i$</span> is the spell that
+    the <span class="tex2jax_process">$i$</span>-th member of the
+    Spellcasters of the Round Table should cast for the combination
+    spell to deal the maximum amount of damage (<span class="tex2jax_process">$0 \leq x_ i \leq a_ i$</span>). If there are
+    multiple possible answers, output any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+3
+3 7 1
+4
+3 2 3 3
+</pre>
+</td>
+<td>
+<pre>7
+3 5 1
+3
+3 0 3 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

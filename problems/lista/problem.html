@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>Mirko received a birthday present from his aunt in the US –
+    a brand-new doubly-linked list (an example of which is shown in
+    the figure below). The list contains <span class="tex2jax_process">$N$</span> nodes numbered <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$N$</span>. Two types of moves can be done on
+    the list:</p>
+<ol class="enumerate">
+<li>
+<p>Move node <span class="tex2jax_process">$X$</span> in
+        front of node <span class="tex2jax_process">$Y$</span>.</p>
+</li>
+<li>
+<p>Move node <span class="tex2jax_process">$X$</span> after
+        node <span class="tex2jax_process">$Y$</span>.</p>
+</li>
+</ol>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.75\textwidth ]{lista}" src="/problems/lista/file/statement/en/img-0001.png" style="width:75.00%"/>
+</center>
+</div>
+<p>Mirko played with his new toy for hours, writing down each
+    move on a piece of paper so that he can reconstruct the list’s
+    initial state (nodes <span class="tex2jax_process">$1$</span>
+    through <span class="tex2jax_process">$N$</span> in order from
+    left to right).</p>
+<p>When he decided to reconstruct the list, Mirko was
+    astonished to find that there is no easy way to invert the
+    moves and restore the list’s initial state. Mirko cannot know
+    where node <span class="tex2jax_process">$X$</span> was prior
+    to each move, only where it ended up.</p>
+<p>Seeing how Mirko is still recovering from the shock, write a
+    program that finds a shortest sequence of moves that restores
+    the list to its initial state from Mirko’s logs.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$2
+    \le N \le 500\, 000$</span>, <span class="tex2jax_process">$0
+    \le M \le 100\, 000$</span>), the number of nodes and the
+    number of moves made by Mirko.</p>
+<p>Each of the next <span class="tex2jax_process">$M$</span>
+    rows contains a description of a single move made by Mirko –
+    the type of move(‘<tt class="ttfamily">A</tt>’ or ‘<tt class="ttfamily">B</tt>’) and two integers <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span>.</p>
+<h2>Output</h2>
+<p>Output the minimum number of moves (call this number
+    <span class="tex2jax_process">$K$</span>) on the first line.
+    Each of the next <span class="tex2jax_process">$K$</span> lines
+    should contain a description of a single move in the same
+    format as in the input.</p>
+<p><em>Note:</em> The sequence need not be unique.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1
+A 2 1
+</pre>
+</td>
+<td>
+<pre>
+1
+A 1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3
+B 1 2
+A 4 3
+B 1 4
+</pre>
+</td>
+<td>
+<pre>
+2
+A 1 2
+B 4 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 5
+A 1 4
+B 2 5
+B 4 2
+B 6 3
+A 3 5
+</pre>
+</td>
+<td>
+<pre>
+3
+A 4 5
+B 6 5
+A 2 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

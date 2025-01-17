@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>The popular board game “Settlers of Catan” starts by
+    creating a random board. This board consists of hexagonal
+    resource tiles containing five different resources: clay,
+    lumber, wool, grain, and ore. For simplicity, we will denote
+    these by the numbers 1 to 5.</p>
+<p>Random boards, however, often have multiple equal resource
+    tiles next to each other. This annoys some players. Therefore,
+    we have invented a new way of creating the playing board.
+    Starting in the middle and spiraling outwards, each time we add
+    a new tile to the board we choose the resource of the tile
+    according to the following rules:</p>
+<ul class="itemize">
+<li>
+<p>the new tile must be different from its neighboring
+        tiles on the board so far;</p>
+</li>
+<li>
+<p>in case multiple tiles are possible, we choose a
+        resource that occurs the least number of times on the board
+        so far;</p>
+</li>
+<li>
+<p>in case multiple tiles are still possible, the new
+        resource must have the lowest number possible.</p>
+</li>
+</ul>
+<p>The figure underneath shows how to spiral outwards and which
+    resource tiles are chosen first. We are curious what the number
+    of the resource is on the <span class="tex2jax_process">$n$</span>th tile that is added to the board
+    (starting with <span class="tex2jax_process">$n=1$</span>).</p>
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{settlers}" src="/problems/settlers2/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+<h2>Input</h2>
+<p>On the first line of the input there is one integer
+    <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(1 \le c \le 200)$</span>, the number of
+    test cases. Each following test case consists of a single line
+    with one integer <span class="tex2jax_process">$n$</span>
+<span class="tex2jax_process">$(1 \le n \le 10\, 000)$</span>,
+    the number of the tile we are curious about.</p>
+<h2>Output</h2>
+<p>For each test case, print a single line with one integer,
+    specifying the resource of the <span class="tex2jax_process">$n$</span>th tile.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1
+4
+10
+100
+</pre>
+</td>
+<td>
+<pre>
+1
+4
+5
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

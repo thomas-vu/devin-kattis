@@ -1,0 +1,71 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/suspensionbridges/file/statement/en/img-0001.jpg" class="illustration" src="/problems/suspensionbridges/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="http://bit.ly/2yGa3jk">Bertbau</a>, cc-sa
+        4.0 int
+      </div>
+</div>
+<p>Mountain villages like to attract tourists by building
+    suspension bridges, such as the one depicted here in the Harz
+    Mountains in Germany. These bridges allow
+    adventurously-inclined people to seek their thrills by crossing
+    over deep gorges. To make sure that everyone gets just the
+    right amount of excitement, the sag at the deepest point of the
+    bridge should be significant relative to the distance the
+    bridge covers.</p>
+<p>Given the distance between the anchor points where the
+    bridge is attached, and given a desired amount of sag, compute
+    how long each of the cables holding the suspension bridge needs
+    to be!</p>
+<p>To help you solve this task, here is some background: A
+    free-hanging suspension bridge will take on the form of a
+    catenary curve (<i class="itshape">catena</i> is Latin for
+    chain), just like a free-hanging chain between two poles. Given
+    the horizontal distance <span class="tex2jax_process">$d$</span> between two anchor points and the
+    desired amount <span class="tex2jax_process">$s$</span> the
+    cable is sagging in the center, there exists a positive
+    parameter <span class="tex2jax_process">$a$</span> such that
+    <span class="tex2jax_process">$a + s = a \cdot \cosh
+    \left(\frac{d}{2 a}\right)$</span>. The length of the cable is
+    then given by <span class="tex2jax_process">$\ell (a,d) = 2 a
+    \cdot \sinh \left(\frac{d}{2 a}\right)$</span>.</p>
+<p>The functions <span class="tex2jax_process">$\sinh $</span>
+    and <span class="tex2jax_process">$\cosh $</span> denote the
+    hyperbolic sine and hyperbolic cosine, respectively, which are
+    defined as follows:</p><span class="tex2jax_process">\begin{align*} \sinh x &amp; = \frac{e^ x -
+    e^{-x}}{2} &amp; \cosh x &amp; = \frac{e^ x + e^{-x}}{2}
+    \end{align*}</span>
+<h2>Input</h2>
+<p>The input consists of a single test case with two
+    space-separated integers <span class="tex2jax_process">$d$</span> and <span class="tex2jax_process">$s$</span> given on a single line such that
+    <span class="tex2jax_process">$0 &lt; d \le 1\, 000$</span> and
+    <span class="tex2jax_process">$0 &lt; s \le 1\, 000$</span>.
+    The number <span class="tex2jax_process">$d$</span> denotes the
+    distance between the anchor points and <span class="tex2jax_process">$s$</span> is the desired sag at the center
+    of the bridge. More precisely, the “sag” here is the vertical
+    distance between the cable’s lowest point in the center and the
+    horizontal line formed by the <span class="tex2jax_process">$2$</span> anchor points on either side of
+    the gorge.</p>
+<h2>Output</h2>
+<p>Output the length of cable needed to cover the distance
+    between the anchor points to achieve the desired sag. Your
+    answer should be correct within an absolute error of
+    <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>400 40
+</pre>
+</td>
+<td>
+<pre>410.474747252
+</pre>
+</td>
+</tr>
+</table>
+</div>

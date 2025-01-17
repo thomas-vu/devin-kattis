@@ -1,0 +1,70 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/color/file/statement/en/img-0001.jpg" class="illustration" src="/problems/color/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by Johan Sannemo and Oskar Werkelin Ahlin
+      </div>
+</div>
+<p>Having discolored his white socks in a rather beige shade
+    (as seen on the picture), Luktas Svettocek realised he can’t
+    just throw all his laundry into one machine and expect it to
+    retain its original colors. However, he is also too lazy to do
+    his laundry in several rounds. He would much rather buy more
+    laundry machines!</p>
+<p>Each of Luktas’ socks have a color <span class="tex2jax_process">$D_ i$</span> which has a number between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10^9$</span> assigned to it. After some
+    experimentation, he found that he could wash any socks with a
+    maximum absolute color difference of <span class="tex2jax_process">$K$</span> in the same machine without any
+    discoloring. The color difference of two socks <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> is <span class="tex2jax_process">$|D_ i - D_ j|$</span>.</p>
+<p>Luktas now needs to know how many washing machines he needs
+    to wash his <span class="tex2jax_process">$S$</span> socks,
+    given that each machine can take at most <span class="tex2jax_process">$C$</span> socks a time.</p>
+<h2>Input</h2>
+<p>The first line consists of three integers <span class="tex2jax_process">$1 \le S, C \le 10^5$</span> and <span class="tex2jax_process">$0 \le K \le 10^9$</span>, the number of
+    socks, the capacity of a laundry machine and the maximum color
+    difference, respectively. Then follow one line with
+    <span class="tex2jax_process">$S$</span> integers; these are
+    the color values <span class="tex2jax_process">$D_ i$</span> of
+    every sock.</p>
+<h2>Output</h2>
+<p>Output a single integer; the number of machines Luktas needs
+    to wash all his socks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3 0
+0 0 1 1 2
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 3 1
+0 0 1 1 2
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>Brojko and Brojana are happily married with <span class="tex2jax_process">$N$</span> little boys. The boys are named
+    with distinct even integers <span class="tex2jax_process">$P_1,
+    P_2, \ldots , P_ N$</span>.</p>
+<p>Brojko and Brojana are expecting an addition to their family
+    and have to come up with a nice name for the little girl. They
+    have decided that the name will be an <em>odd</em> integer in
+    the range <span class="tex2jax_process">$[A, B]$</span>.
+    Because they find all integers in that range equally beautiful,
+    they have decided to choose the number which maximizes the
+    distance to the name of the closest of the <span class="tex2jax_process">$N$</span> boys.</p>
+<p>More precisely, they seek an odd integer <span class="tex2jax_process">$X \in [ A , B ]$</span> such that the
+    expression</p><span class="tex2jax_process">\[ \min \{ |X - P_
+    i| , i \in [ 1 , N ] \} \]</span>
+<p>is as large as possible.</p>
+<p>Write a program that determines the name for the little
+    girl.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1\le N \le 100$</span>), the number of
+    boys.</p>
+<p>The second line contains N distinct positive even integers,
+    the names of the boys. The integers will be less than
+    <span class="tex2jax_process">$10^9$</span>.</p>
+<p>The third line contains the integers <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$1
+    \le A &lt; B \le 10^9$</span>), the range of names they are
+    considering for the girl.</p>
+<h2>Output</h2>
+<p>Output an integer, the name for the little girl. If there
+    are multiple solutions, any one of them will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 6 16
+20 50
+</pre>
+</td>
+<td>
+<pre>
+49
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 6 16
+3 15
+</pre>
+</td>
+<td>
+<pre>
+11
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 6 16
+1 7
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

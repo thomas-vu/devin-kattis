@@ -1,0 +1,86 @@
+<div class="problembody">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/kayaking/file/statement/en/img-0001.jpg" class="illustration" src="/problems/kayaking/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Solution to Sample Input 1, with kayaks replaced by canoes
+        (cc by-sa NCPC 2017)
+      </div>
+</div>You are leading a kayaking trip with a mixed group of
+    participants in the Stockholm archipelago, but as you are about
+    to begin your final stretch back to the mainland you notice a
+    storm on the horizon. You had better paddle as fast as you can
+    to make sure you do not get trapped on one of the islands. Of
+    course, you cannot leave anyone behind, so your speed will be
+    determined by the slowest kayak. Time to start thinking; How
+    should you distribute the participants among the kayaks to
+    maximize your chance of reaching the mainland safely?
+
+    <p>The kayaks are of different types and have different amounts
+    of packing, so some are more easily paddled than others. This
+    is captured by a speed factor <span class="tex2jax_process">$c$</span> that you have already figured out
+    for each kayak. The final speed <span class="tex2jax_process">$v$</span> of a kayak, however, is also
+    determined by the strengths <span class="tex2jax_process">$s_1$</span> and <span class="tex2jax_process">$s_2$</span> of the two people in the kayak,
+    by the relation <span class="tex2jax_process">$v=c(s_1+s_2)$</span>. In your group you have
+    some beginners with a kayaking strength of <span class="tex2jax_process">$s_ b$</span>, a number of normal
+    participants with strength <span class="tex2jax_process">$s_
+    n$</span> and some quite experienced strong kayakers with
+    strength <span class="tex2jax_process">$s_ e$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains three non-negative integers
+    <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$n$</span>, and <span class="tex2jax_process">$e$</span>, denoting the number of beginners,
+    normal participants, and experienced kayakers, respectively.
+    The total number of participants, <span class="tex2jax_process">$b+n+e$</span>, will be even, at least
+    <span class="tex2jax_process">$2$</span>, and no more than
+    <span class="tex2jax_process">$100\, 000$</span>. This is
+    followed by a line with three integers <span class="tex2jax_process">$s_ b$</span>, <span class="tex2jax_process">$s_ n$</span>, and <span class="tex2jax_process">$s_ e$</span>, giving the strengths of the
+    corresponding participants (<span class="tex2jax_process">$1
+    \leq s_ b &lt; s_ n &lt; s_ e \leq 1\, 000$</span>). The third
+    and final line contains <span class="tex2jax_process">$m =
+    \frac{b+n+e}{2}$</span> integers <span class="tex2jax_process">$c_1, \ldots , c_ m$</span> (<span class="tex2jax_process">$1 \leq c_ i \leq 100\, 000$</span> for each
+    <span class="tex2jax_process">$i$</span>), each giving the
+    speed factor of one kayak.</p>
+<h2>Output</h2>
+<p>Output a single integer, the maximum speed that the slowest
+    kayak can get by distributing the participants two in each
+    kayak.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 1 0
+40 60 90
+18 20
+</pre>
+</td>
+<td>
+<pre>
+1600
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 0 7
+5 10 500
+1 1 1 1 1 1 1
+</pre>
+</td>
+<td>
+<pre>
+505
+</pre>
+</td>
+</tr>
+</table>
+</div>

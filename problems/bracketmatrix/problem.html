@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bracketmatrix/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bracketmatrix/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.deviantart.com/gamerdruid/art/Desktop-Background-Matrix-471026671">
+        GamerDruid</a>
+</div>
+</div>
+<p>A bracket sequence consisting of ‘(’ and ‘)’ is defined to
+    be <i class="it">valid</i> as follows:</p>
+<ol class="enumerate">
+<li>
+<p>An empty sequence is valid.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$x$</span> is a valid
+        bracket sequence, then <span class="tex2jax_process">$(x)$</span> is a valid bracket
+        sequence.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$x$</span> and
+        <span class="tex2jax_process">$y$</span> are valid bracket
+        sequences, then the concatenation of <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, <span class="tex2jax_process">$z=xy$</span>, is a valid bracket
+        sequence.</p>
+</li>
+</ol>
+<p>You are given a bracket matrix of size <span class="tex2jax_process">$n \times n$</span>, in which each cell has a
+    single bracket. Each row of the matrix, read from left to
+    right, presents a bracket sequence. You may modify the matrix
+    by choosing two brackets in a same column and swapping their
+    positions. You may make any number of swaps (possibly zero).
+    Can you make every row of the matrix present a valid bracket
+    sequence?</p>
+<h2>Input</h2>
+<p>The first line has an even integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 2\, 000$</span>). Each of the next <span class="tex2jax_process">$n$</span> lines has <span class="tex2jax_process">$n$</span> brackets giving one row of the
+    bracket matrix.</p>
+<h2>Output</h2>
+<p>If you can obtain a valid bracket sequence on every row of
+    the matrix, output “<tt class="tt">Yes</tt>”. Otherwise, output
+    “<tt class="tt">No</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+((()
+()))
+()))
+((()
+</pre>
+</td>
+<td>
+<pre>Yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+()
+)(
+</pre>
+</td>
+<td>
+<pre>No
+</pre>
+</td>
+</tr>
+</table>
+</div>

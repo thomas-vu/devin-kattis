@@ -1,0 +1,70 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/waronweather/file/statement/en/img-0001.jpg" class="illustration" src="/problems/waronweather/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>After an unprovoked hurricane attack on the south shore,
+    Glorious Warrior has declared war on weather. The first salvo
+    in this campaign will be a coordinated pre-emptive attack on as
+    many tropical depressions as possible. GW reckons that the
+    attack will neutralize the tropical depressions before they
+    become storms, and dissuade others from forming.</p>
+<p>GW has at his disposal <span class="tex2jax_process">$k$</span> space-to-earth killer satellites
+    at various locations in space. <span class="tex2jax_process">$m$</span> tropical depressions are known to
+    exist at various locations on the earth’s surface. Each
+    satellite can attack any number of targets on the earth
+    provided there is line of sight between the satellite and each
+    target. How many different targets can be hit?</p>
+<p>The input consists of several test cases. Each case begins
+    with a line containing integers <span class="tex2jax_process">$0 &lt; k, m \leq 100$</span> as defined
+    above. <span class="tex2jax_process">$k$</span> lines follow,
+    each giving <span class="tex2jax_process">$x,y,z$</span> - the
+    location in space of a satellite at the scheduled time of
+    attack. <span class="tex2jax_process">$m$</span> lines then
+    follow, each giving <span class="tex2jax_process">$x,y,z$</span> - the location of a target
+    tropical depression. Assume the earth is a sphere centred at
+    <span class="tex2jax_process">$(0,0,0)$</span> with
+    circumference 40,000 km. All targets will be on the surface of
+    the earth (within <span class="tex2jax_process">$10^{-8}$</span> km) and all satellites will
+    be at least 50 km above the surface. A line containing 0 0
+    follows the last test case.</p>
+<p>For each test case, output a line giving the total number of
+    targets that can be hit. If a particular target falls within
+    <span class="tex2jax_process">$10^{-8}$</span> km of the
+    boundary between being within line-of-sight and not, it may be
+    counted either way. (That is, you need not consider rounding
+    error so long as it does not exceed <span class="tex2jax_process">$10^{-8}$</span> km.)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 2
+-10.82404031 -1594.10929753 -6239.77925152
+692.58497298 -5291.64700245 4116.92402298
+3006.49210582 2844.61925179 5274.03201053
+2151.03635167 2255.29684503 5551.13972186
+-1000.08700886 -4770.25497971 4095.48127333
+3 4
+0 0 6466.197723676
+0 6466.197723676 0
+6466.197723676 0 0
+6366.197723676 0 0
+6365.197723676 112.833485488 0
+0 0 6366.197723676
+0 -6366.197723676 0
+0 0
+</pre>
+</td>
+<td>
+<pre>
+2
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

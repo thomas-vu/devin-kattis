@@ -1,0 +1,138 @@
+<div class="problembody">
+<p>Pegs and Legs is a game where a disk slides down a
+    nearly-vertical board. At the bottom of the board are places
+    for the disk to land, called <i class="itshape">legs</i>. Each
+    leg is worth a certain amount of points if your disk lands in
+    it.</p>
+<p>You start with a disk at the top and drop it onto some
+    <i class="itshape">drop point</i> peg or directly into some
+    <i class="itshape">drop point</i> leg. When your disk hits a
+    peg, one of three things happen: (1) the disk falls to the left
+    with probability <span class="tex2jax_process">$\ell $</span>,
+    (2) the disk falls to the right with probability <span class="tex2jax_process">$r$</span>, or (3) it gets stuck with
+    probability <span class="tex2jax_process">$1 - \ell -
+    r$</span>. The probabilities may be different for each peg. If
+    the disk falls to the left or to the right, then it will either
+    fall onto another peg or into a leg. If the disk gets stuck,
+    then you must drop it again from some drop point on the top.
+    The figure below illustrates the 3rd sample input, the two dark
+    pegs are the drop points.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{pegsandlegs.pdf}" src="/problems/pegsandlegs/file/statement/en/img-0001.png" style="width:50.00%"/>
+</center>
+</div>
+<p>Because of gravity it is not possible for a disk to hit the
+    same peg more than once unless the disk is dropped again. The
+    game continues until your disk lands in a leg, at which point
+    you earn the value of that leg. What is the maximum possible
+    expected score the player can earn?</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1
+    \leq L \leq 100\, 000$</span>), which is the number of legs,
+    and <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1 \leq P \leq 100\, 000$</span>), which is
+    the number of pegs. Legs are numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$L$</span> and pegs are labeled from
+    <span class="tex2jax_process">$L+1$</span> to <span class="tex2jax_process">$L+P$</span>.</p>
+<p>The next <span class="tex2jax_process">$L$</span> lines
+    describe the legs, in order. Each of these lines contains a
+    single integer <span class="tex2jax_process">$v$</span>
+    (<span class="tex2jax_process">$1 \leq v \leq 1\, 000\,
+    000$</span>), which is the value of this leg.</p>
+<p>The next <span class="tex2jax_process">$P$</span> lines
+    describe the pegs, in order. Each of these lines starts with
+    two real numbers <span class="tex2jax_process">$\ell $</span>
+    (<span class="tex2jax_process">$0 &lt; \ell &lt; 1$</span>),
+    which is the probability that the disk falls to the left after
+    hitting this peg, and <span class="tex2jax_process">$r$</span>
+    (<span class="tex2jax_process">$0 &lt; r &lt; 1$</span>), which
+    is the probability that the disk falls to the right after
+    hitting this peg (<span class="tex2jax_process">$\ell + r \leq
+    1$</span>), followed by two integers <span class="tex2jax_process">$x$</span> (<span class="tex2jax_process">$1
+    \leq x \leq L+P$</span>), which is the label of the peg/leg the
+    disk falls onto if it falls to the left, and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$1
+    \leq y \leq L+P$</span>), which is the label of the peg/leg the
+    disk falls onto if it falls to the right. It is guaranteed that
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> are smaller labels than the label
+    of this peg.</p>
+<p>All real numbers are specified to exactly 3 decimal places.
+    A peg or leg is a drop point if there are no pegs that drop
+    into this peg or leg.</p>
+<p>It is guaranteed that from any peg (whether a drop point or
+    not), the probability the disk eventually gets stuck after
+    reaching this peg is at most <span class="tex2jax_process">$0.9999$</span>.</p>
+<h2>Output</h2>
+<p>Display the maximum possible expected score the player can
+    earn. Answers with an absolute error or relative error of at
+    most <span class="tex2jax_process">$10^{-6}$</span> will be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+344969
+539194
+0.508 0.318 1 1
+0.990 0.009 1 3
+0.807 0.041 3 1
+0.225 0.617 4 4
+</pre>
+</td>
+<td>
+<pre>539194.0000000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 8
+684841
+506003
+0.277 0.692 1 1
+0.007 0.864 2 1
+0.783 0.067 2 1
+0.962 0.026 3 1
+0.580 0.171 4 4
+0.997 0.003 1 6
+0.548 0.207 8 7
+0.537 0.238 5 7
+</pre>
+</td>
+<td>
+<pre>684556.2033270609
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+11
+12
+10
+0.500 0.500 1 2
+0.800 0.100 1 4
+0.600 0.400 4 3
+</pre>
+</td>
+<td>
+<pre>11.0555555556
+</pre>
+</td>
+</tr>
+</table>
+</div>

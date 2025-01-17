@@ -1,0 +1,173 @@
+<div class="problembody">
+<p>Insecure Inc. has decided to shift directions after a
+    failed attempt at developing a new encryption standard. Their
+    new effort is a password system used to hide a password inside
+    another string of characters we denote as a <em>message</em>.
+    However, it is important that the message has a certain
+    property relative to the hidden password.</p>
+<p>Let us assume that we denote the characters of the password
+    as <span class="tex2jax_process">$ c_1 c_2 \ldots c_ P$</span>
+    (although those characters need not be distinct). To be a valid
+    message for the password, if you start from the beginning of
+    the message and search for any character from the set
+    <span class="tex2jax_process">$\{ c_1, \ldots , c_ P \}
+    $</span>, it must be that <span class="tex2jax_process">$c_1$</span> is the first that you find.
+    Subsequently, if you continue looking from that point of the
+    message for any character from the set <span class="tex2jax_process">$\{ c_2, \ldots , c_ P \} $</span>, it must
+    be that <span class="tex2jax_process">$c_2$</span> is the next
+    that you find. Continuing in that manner, <span class="tex2jax_process">$c_3$</span> must be the next character from
+    the set <span class="tex2jax_process">$\{ c_3, \ldots , c_ P\}
+    $</span>, and so on until reaching <span class="tex2jax_process">$c_ P$</span>.</p>
+<p>For example, if the password is <tt class="tt">ABC</tt>,
+    then the string <tt class="tt">H<u><u><b class="bfseries">A</b></u></u>PPY<u><u><b class="bfseries">B</b></u></u>IRTHDAY<u><u><b class="bfseries">C</b></u></u>ACEY</tt> is a valid message.</p>
+<ul class="itemize">
+<li>
+<p>Notice that <tt class="tt">A</tt> is the first of the
+        set <span class="mbox" style="width:"><span class="tex2jax_process">$\{ $</span><tt class="tt">A</tt>,
+        <tt class="tt">B</tt>, <tt class="tt">C</tt><span class="tex2jax_process">$\} $</span></span> to appear in the
+        message. (The initial <tt class="tt">H</tt> is not
+        relevant.)</p>
+</li>
+<li>
+<p>Following the <tt class="tt">A</tt> that was found, the
+        next occurrence from the set <span class="mbox" style="width:"><span class="tex2jax_process">$\{ $</span><tt class="tt">B</tt>, <tt class="tt">C</tt><span class="tex2jax_process">$\} $</span></span> is <tt class="tt">B</tt>.</p>
+</li>
+<li>
+<p>Following the <tt class="tt">B</tt> that was found, the
+        next occurrence from the set <span class="mbox" style="width:"><span class="tex2jax_process">$\{ $</span><tt class="tt">C</tt><span class="tex2jax_process">$\}
+        $</span></span> is indeed <tt class="tt">C</tt>.<br/>
+        (Note that the <tt class="tt">A</tt> in <tt class="tt">D<u><u>A</u></u>Y</tt> is not relevant, since we are
+        only looking for a <tt class="tt">C</tt> at this point, and
+        the additional <tt class="tt">A</tt> and <tt class="tt">C</tt> in <tt class="tt">C<u><u>AC</u></u>EY</tt> are
+        not relevant, because we have already completed the
+        password with the first <tt class="tt">C</tt>.)</p>
+</li>
+</ul>
+<p>However, for the password <tt class="tt">ABC</tt>, the
+    string <tt class="tt">TR<u><u><b class="bfseries">A</b></u></u>GI<u><u>C</u></u>BIRTHDAYCACEY</tt> is
+    not a valid message.</p>
+<ul class="itemize">
+<li>
+<p>While the <tt class="tt">A</tt> is the first of the set
+        <span class="mbox" style="width:"><span class="tex2jax_process">$\{ $</span><tt class="tt">A</tt>,
+        <tt class="tt">B</tt>, <tt class="tt">C</tt><span class="tex2jax_process">$\} $</span></span> to appear in the
+        string,<br/>
+        the next occurrence from the set <span class="mbox" style="width:"><span class="tex2jax_process">$\{
+        $</span><tt class="tt">B</tt>, <tt class="tt">C</tt><span class="tex2jax_process">$\}
+        $</span></span> is <tt class="tt">C</tt> rather than
+        <tt class="tt">B</tt>.</p>
+</li>
+</ul>
+<p>Also, the string <tt class="tt">H<u><u><b class="bfseries">A</b></u></u>PPY<u><u><b class="bfseries">B</b></u></u>IRTHDAY</tt> is not a valid message for
+    the password <tt class="tt">ABC</tt> because the <tt class="tt">C</tt> never appears.</p>
+<p>As an example with duplicate letters in the password,
+    consider the password <tt class="tt">SECRET</tt>. For this
+    password, the string <tt class="tt"><u><u><b class="bfseries">S</b></u></u>OM<u><u><b class="bfseries">E</b></u></u><u><u><b class="bfseries">C</b></u></u>HO<u><u><b class="bfseries">R</b></u></u><u><u><b class="bfseries">E</b></u></u>SARE<u><u><b class="bfseries">T</b></u></u>OUGH</tt> is a valid message. In
+    contrast, the string <tt class="tt"><u><u><b class="bfseries">S</b></u></u>OM<u><u><b class="bfseries">E</b></u></u><u><u><b class="bfseries">C</b></u></u>H<u><u>E</u></u>ERSARETOUGH</tt> is not
+    a valid message, because an extraneous <tt class="tt">E</tt> is
+    found at the point when an <tt class="tt">R</tt> is first
+    expected.</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing two strings.
+    The first string is the password, having length <span class="tex2jax_process">$P$</span>, with <span class="tex2jax_process">$3 \leq P \leq 8$</span>. The second string
+    has length <span class="tex2jax_process">$S$</span>, with
+    <span class="tex2jax_process">$10 \leq S \leq 40$</span>. Both
+    strings will consist solely of uppercase letters. (That is,
+    neither string can include whitespace, lowercase letters,
+    digits, or other special characters.)</p>
+<h2>Output</h2>
+<p>Output a single line with the word <tt class="tt">PASS</tt>
+    if the second string is a valid message for the password, or
+    <tt class="tt">FAIL</tt> otherwise.</p>
+<p><br/></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+ABC HAPPYBIRTHDAYCACEY
+</pre>
+</td>
+<td>
+<pre>
+PASS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+ABC TRAGICBIRTHDAYCACEY
+</pre>
+</td>
+<td>
+<pre>
+FAIL
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+ABC HAPPYBIRTHDAY
+</pre>
+</td>
+<td>
+<pre>
+FAIL
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+SECRET SOMECHORESARETOUGH
+</pre>
+</td>
+<td>
+<pre>
+PASS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+SECRET SOMECHEERSARETOUGH
+</pre>
+</td>
+<td>
+<pre>
+FAIL
+</pre>
+</td>
+</tr>
+</table>
+</div>

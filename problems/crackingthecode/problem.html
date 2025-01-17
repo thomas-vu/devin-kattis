@@ -1,0 +1,112 @@
+<div class="problembody">
+<p>A terrorist organisation known as the New World Ensemble for
+    Rebellious Coders (NWERC) is a menace to our society.
+    Fortunately, we have found a way to intercept their
+    communications without them knowing it. There is a problem
+    however, since their messages are encrypted.</p>
+<p>What we do know from intelligence is that their messages
+    consist of lowercase letters only, and that the encryption
+    method is the Basic Alphabet Permutation Code (BAPC). In this
+    code, every same letter is replaced with another (lowercase)
+    letter from the alphabet (or possibly the same letter).
+    Obviously, two different letters in the original message are
+    still different after encryption, so that there is a unique
+    decryption. So for example, “<tt>hello</tt>” might be encrypted
+    as “<tt>ifmmp</tt>” or “<tt>holle</tt>”, but not as
+    “<tt>cnoiz</tt>” or “<tt>bgrrb</tt>”.</p>
+<p>Still, this leaves a lot of possibilities, and our efforts
+    to break the code have been in vain so far. Fortunately, we had
+    a stroke of luck: through an informant, we were able to get
+    hold of a decrypted message <span class="tex2jax_process">$D$</span>. We do not have the corresponding
+    encrypted message, but we are fairly certain that it must be
+    somewhere in a list of intercepted encrypted messages we
+    have.</p>
+<p>Your task is to write a program which, given the original
+    message <span class="tex2jax_process">$D$</span> and a list of
+    encrypted messages, works out which encrypted letter belongs to
+    which decrypted letter (assuming that one of the encrypted
+    messages corresponds to the original message), for as much as
+    is possible.</p>
+<p>This should then be used to decrypt a freshly intercepted
+    encoded message <span class="tex2jax_process">$X$</span>, as
+    much as possible. Specifically, each letter of <span class="tex2jax_process">$X$</span> for which it can be determined
+    with absolute certainty what it represents – either directly or
+    deductively – should be decrypted. All other letters should be
+    replaced by a question mark.</p>
+<p>Note that, even when multiple messages can correspond to
+    <span class="tex2jax_process">$D$</span>, it may still be
+    possible to decrypt certain letters (see for example the third
+    test case in the sample input).</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 100$</span>): the number
+        of encrypted messages.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines with a
+        single string <span class="tex2jax_process">$M_ i$</span>:
+        the encrypted messages.</p>
+</li>
+<li>
+<p>one line with a single string <span class="tex2jax_process">$D$</span>: the decrypted message,
+        assumed to correspond to one of the encrypted messages.</p>
+</li>
+<li>
+<p>one line with a single string <span class="tex2jax_process">$X$</span>: the message to be
+        decoded.</p>
+</li>
+</ul>
+<p>All strings consist of at least <span class="tex2jax_process">$1$</span> and at most <span class="tex2jax_process">$1\, 000$</span> lowercase letters.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single string <span class="tex2jax_process">$Y$</span>. For each letter in
+        <span class="tex2jax_process">$X$</span>, the corresponding
+        letter in <span class="tex2jax_process">$Y$</span> should
+        be the decrypted counterpart, or a ‘<tt>?</tt>’ if it is
+        unknown. If there is no encrypted message <span class="tex2jax_process">$M_ i$</span> that could possibly be the
+        encrypted version of <span class="tex2jax_process">$D$</span>, then the string should be
+        “<tt>IMPOSSIBLE</tt>” instead.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3
+mtahovcjqxels
+irajsbkticlur
+gnubipwdgkryf
+aboringsample
+rbunyfka
+2
+ejotydins
+xchmrwbcxg
+decrypted
+dmvenw
+2
+abccdeb
+afccdgf
+message
+abcdefg
+</pre>
+</td>
+<td>
+<pre>
+problem?
+IMPOSSIBLE
+m?sa???
+</pre>
+</td>
+</tr>
+</table>
+</div>

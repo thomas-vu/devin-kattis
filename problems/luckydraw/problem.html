@@ -1,0 +1,90 @@
+<div class="problembody">
+<div class="illustration" style="width:28.00%">
+<img alt="/problems/luckydraw/file/statement/en/img-0001.png" class="illustration" src="/problems/luckydraw/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>You and your friends at the Betting against All Probability
+    Club are visiting a casino where the following game is
+    played.</p>
+<p>Each of the <span class="tex2jax_process">$n$</span> players
+    starts with <span class="tex2jax_process">$k$</span> lives and
+    puts in a fixed amount of money. In each round of the game,
+    each player flips a biased coin and loses a life if she gets
+    tails. The game ends when only one player remains, in which
+    case this person wins, or ends in a draw if all remaining
+    players lose their last life in the same round. If there is a
+    winner, she wins <span class="tex2jax_process">$n$</span> times
+    her original bet. In case of a draw, no one wins anything.</p>
+<p>Being a BAPC member you quickly realize the casino has an
+    edge here: whenever the game ends in a draw all of the
+    contestants lose the money they bet. You are now wondering what
+    exactly is the probability that this game ends in a draw, so
+    you can figure out how much the casino profits on average.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing two integers, <span class="tex2jax_process">$2\leq n\leq 50$</span>, the number of
+        players, <span class="tex2jax_process">$1\leq k\leq
+        50$</span>, the number of lives each player has, and a real
+        number <span class="tex2jax_process">$0.1 \leq p \leq
+        0.9$</span>, with at most two digits after the decimal
+        point, which is the probability the coin lands heads.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<ul class="itemize">
+<li>
+<p>Output a single real number: the probability of the game
+        ending in a draw. Your answer should have an absolute error
+        of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 0.5
+</pre>
+</td>
+<td>
+<pre>0.185185185
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 0.8
+</pre>
+</td>
+<td>
+<pre>0.056241426
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5 3 0.85
+</pre>
+</td>
+<td>
+<pre>0.045463964
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,75 @@
+<div class="problembody">
+<p>Puff the Magic Dinosaur is a renowned magician. Due to the
+    pandemic, he can only perform for his princess using the latest
+    video conferencing tools. As a result, many of his usual
+    in-person routines cannot be performed, and he must come up
+    with a new trick.</p>
+<p>Puff has decided to perform the following mentalist trick
+    for the princess. First, Puff lays out <span class="tex2jax_process">$N$</span> cards on the table. Each of these
+    cards have a unique label <span class="tex2jax_process">$1,
+    \ldots , N$</span>. Before the start of the show, Puff wrote
+    down a prediction which is the label of one of the cards, put
+    it into a sealed envelope, and mailed it to the princess.</p>
+<p>During the show, Puff asks the princess to choose some of
+    the remaining cards. Puff is careful to remind the princess to
+    choose at least one but not all of the remaining cards. After
+    the princess tells Puff which cards she chose, Puff would then
+    say either “you chose to keep those cards” or “you chose to
+    remove those cards”. In the first case, the chosen cards are
+    kept and all other cards are removed from the table. In the
+    second case, the chosen cards are removed and the remaining
+    cards are kept. This is repeated until there is only one card
+    left. At this point Puff asks the princess to open the
+    envelope, and magically the prediction matches the remaining
+    card on the table.</p>
+<p>Help Puff determine the appropriate response at each
+    step.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 200$</span>), which is the number of cards,
+    <span class="tex2jax_process">$P$</span> (<span class="tex2jax_process">$1 \leq P \leq N$</span>), which is the
+    secret prediction, and <span class="tex2jax_process">$S$</span>
+    (<span class="tex2jax_process">$1 \leq S \leq N-1$</span>),
+    which is the number of steps.</p>
+<p>The next <span class="tex2jax_process">$S$</span> lines
+    describe the choices of the princess at each step. Each of
+    these lines starts with the integer <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq m \leq N-1$</span>), which is the number of cards chosen,
+    followed by <span class="tex2jax_process">$m$</span> distinct
+    integers indicating the labels of the cards chosen. It is
+    guaranteed that if Puff has carried out the previous steps
+    correctly, the princess will only choose cards still on the
+    table. Furthermore, the princess will always choose at least
+    one but not all of the remaining cards.</p>
+<p>It is guaranteed that there will be one card left after
+    <span class="tex2jax_process">$S$</span> steps if Puff has
+    carried out all <span class="tex2jax_process">$S$</span> steps
+    correctly.</p>
+<h2>Output</h2>
+<p>For each step, display on a line either <tt class="ttfamily">KEEP</tt> or <tt class="ttfamily">REMOVE</tt> if
+    Puff should keep the chosen cards or remove the chosen cards,
+    respectively.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 3 4
+2 1 5
+5 2 3 7 8 10
+3 2 7 10
+1 8
+</pre>
+</td>
+<td>
+<pre>REMOVE
+KEEP
+REMOVE
+REMOVE
+</pre>
+</td>
+</tr>
+</table>
+</div>

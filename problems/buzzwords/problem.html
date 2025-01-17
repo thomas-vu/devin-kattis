@@ -1,0 +1,63 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/buzzwords/file/statement/en/img-0001.png" class="illustration" src="/problems/buzzwords/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The word <em>the</em> is the most common three-letter word.
+    It even shows up inside other words, such as “o<em>the</em>r”
+    and “ma<em>the</em>matics”. Sometimes it hides, split between
+    two words, such as “no<em>t he</em>re”. Have you ever wondered
+    what the most common words of lengths other than three are?</p>
+<p>Your task is the following. You will be given a text. In
+    this text, find the most common word of length one. If there
+    are multiple such words, any one will do. Then count how many
+    times this most common word appears in the text. If it appears
+    more than once, output how many times it appears. Then repeat
+    the process with words of length 2, 3, and so on, until you
+    reach such a length that there is no longer any repeated word
+    of that length in the text.</p>
+<h2>Input</h2>
+<p>The input consists of a sequence of lines. The last line of
+    input is empty and should not be processed. Each line of input
+    other than the last contains at least one but no more than one
+    thousand uppercase letters and spaces. The spaces are
+    irrelevant and should be ignored.</p>
+<p>Note that the last line of the sample input is a blank
+    line.</p>
+<h2>Output</h2>
+<p>For each line of input, output a sequence of lines, giving
+    the number of repetitions of words of length 1, 2, 3, and so
+    on. When you reach a length such that there are no repeated
+    words of that length, output one blank line, do not output
+    anything further for that input line, and move on to the next
+    line of input.</p>
+<p>Note that the last line of the sample output is a blank
+    line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+THE OTHER MATHEMATICS NOT HERE
+AA
+
+</pre>
+</td>
+<td>
+<pre>
+5
+4
+4
+2
+2
+
+2
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

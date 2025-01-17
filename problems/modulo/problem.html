@@ -1,0 +1,111 @@
+<div class="problembody">
+<p>Given two integers <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span>, <span class="tex2jax_process">$A$</span> modulo <span class="tex2jax_process">$B$</span> is the remainder when dividing
+    <span class="tex2jax_process">$A$</span> by <span class="tex2jax_process">$B$</span>. For example, the numbers
+    <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$14$</span>, <span class="tex2jax_process">$27$</span> and <span class="tex2jax_process">$38$</span> become <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$2$</span>, modulo <span class="tex2jax_process">$3$</span>. Write a program that accepts
+    <span class="tex2jax_process">$10$</span> numbers as input and
+    outputs the number of distinct numbers in the input, if the
+    numbers are considered modulo <span class="tex2jax_process">$42$</span>.</p>
+<h2>Input</h2>
+<p>The input will contain 10 non-negative integers, each
+    smaller than <span class="tex2jax_process">$1000$</span>, one
+    per line.</p>
+<h2>Output</h2>
+<p>Output the number of distinct values when considered modulo
+    <span class="tex2jax_process">$42$</span> on a single line.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>In sample input <span class="tex2jax_process">$1$</span>,
+    the numbers modulo <span class="tex2jax_process">$42$</span>
+    are <span class="tex2jax_process">$1, 2, 3, 4, 5, 6, 7, 8,
+    9$</span> and <span class="tex2jax_process">$10$</span>.</p>
+<p>In sample input <span class="tex2jax_process">$2$</span>,
+    all numbers modulo <span class="tex2jax_process">$42$</span>
+    are <span class="tex2jax_process">$0$</span>.</p>
+<p>In sample input <span class="tex2jax_process">$3$</span>,
+    the numbers modulo <span class="tex2jax_process">$42$</span>
+    are <span class="tex2jax_process">$39, 40, 41, 0, 1, 2, 40, 41,
+    0$</span> and <span class="tex2jax_process">$1$</span>. There
+    are <span class="tex2jax_process">$6$</span> distinct
+    numbers.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+</td>
+<td>
+<pre>
+10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+42
+84
+252
+420
+840
+126
+42
+84
+420
+126
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+39
+40
+41
+42
+43
+44
+82
+83
+84
+85
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

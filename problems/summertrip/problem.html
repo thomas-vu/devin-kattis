@@ -1,0 +1,73 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/summertrip/file/statement/en/img-0001.jpg" class="illustration" src="/problems/summertrip/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Cartoon of items related to travel. Image from <a href="https://pixabay.com/illustrations/map-flight-vacation-luggage-visa-3953229/">
+        mohamed_hassan at pixabay.com</a>
+</div>
+</div>
+<p>Leo has started a job in a travel agency. His first task is
+    to organize a summer trip to an exotic overseas city. During
+    the summer season, events of various types take place in the
+    city: sports matches, concerts, beach parties, and many others.
+    At any given time, there is exactly one event taking place.
+    Events of any particular type may take place more than once
+    during the season. The itinerary of events that Leo offers to
+    his clients cannot be chosen arbitrarily; the company requires
+    them to form a so-called “good itinerary.” A good itinerary is
+    a consecutive sequence of at least two events in the summer
+    season, where the first and last events are of different types,
+    and they are both unique among all event types during the
+    sequence. For example, if the first event in a good itinerary
+    is a beach party, none of the other events during the itinerary
+    can also be a beach party. There are no other restrictions on
+    the event types in the sequence of a good itinerary.</p>
+<p>Before he starts organizing the trip, Leo wants to know the
+    total number of good itineraries that are possible given a
+    calendar of events that will take place over the summer
+    season.</p>
+<h2>Input</h2>
+<p>The input consists of one line with a string describing the
+    sequence of event types in the summer season. All characters
+    are lowercase English letters (<tt class="ttfamily">’a’</tt> –
+    <tt class="ttfamily">’z’</tt>), with different letters
+    represent different types of events. Character <span class="tex2jax_process">$i$</span> of the string encodes the
+    <span class="tex2jax_process">$i$</span>th event of the summer.
+    There are no blanks or spaces in the string.</p>
+<p>The length of the input string is at least <span class="tex2jax_process">$2$</span> and at most <span class="tex2jax_process">$100\, 000$</span> characters.</p>
+<h2>Output</h2>
+<p>Print the number of good itineraries that exist for the
+    given summer season.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>abbcccddddeeeee
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>thenumberofgoodstringsis
+</pre>
+</td>
+<td>
+<pre>143
+</pre>
+</td>
+</tr>
+</table>
+</div>

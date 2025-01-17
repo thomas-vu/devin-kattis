@@ -1,0 +1,104 @@
+<div class="problembody">
+<p>After Loke beat you in last week’s programming competition
+    you want play a prank on him. You both live in the same student
+    apartment and in order to get from floor <span class="tex2jax_process">$A$</span> to floor <span class="tex2jax_process">$B$</span>, Loke (who is very lazy) of course
+    wants to take the elevator. You want him to suffer as long as
+    possible inside the elevator and therefore you have pressed
+    <span class="tex2jax_process">$N$</span> different floors that
+    the elevator should stop at.</p>
+<p>The elevator stops for <span class="tex2jax_process">$10$</span> seconds on each floor that it
+    stops on. Opening and closing the elevator doors is instant. It
+    takes <span class="tex2jax_process">$4$</span> seconds for the
+    elevator to move from one floor to another.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">$-10 \leq A, B \leq 50$</span>), the origin
+    and destination floors for Loke. The next line of input
+    contains one integer, <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$0 \leq N \leq 60$</span>), the
+    number of floors you have pressed. The following <span class="tex2jax_process">$N$</span> lines each contain one integer,
+    <span class="tex2jax_process">$a_ i$</span> (<span class="tex2jax_process">$-10 \leq a_ i \leq 50$</span>), the floors
+    the elevator will stop at.</p>
+<h2>Output</h2>
+<p>Print one integer, the number of seconds Loke has to suffer
+    <i class="itshape">inside</i> the elevator, from the doors
+    closing on floor <span class="tex2jax_process">$A$</span> to
+    the doors opening on floor <span class="tex2jax_process">$B$</span>.</p>
+<h2>Explanation of Sample 2</h2>
+<p>The elevator will move <span class="tex2jax_process">$8$</span> floors in total, from floor
+    <span class="tex2jax_process">$0$</span> to floor <span class="tex2jax_process">$8$</span>. This takes <span class="tex2jax_process">$32$</span> seconds. Among the floors that
+    you have pressed for the elevator to stop, only floor
+    <span class="tex2jax_process">$5$</span> is between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$8$</span>. The time for the doors to open
+    and close on floor <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$8$</span> is zero, so it does
+    not affect the answer. In total, Loke will spend <span class="tex2jax_process">$42$</span> seconds inside the elevator.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 5
+5
+2
+4
+5
+3
+1
+</pre>
+</td>
+<td>
+<pre>46
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 8
+10
+-10
+-5
+0
+5
+10
+15
+20
+25
+30
+35
+</pre>
+</td>
+<td>
+<pre>42
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 0
+3
+5
+1
+10
+</pre>
+</td>
+<td>
+<pre>60
+</pre>
+</td>
+</tr>
+</table>
+</div>

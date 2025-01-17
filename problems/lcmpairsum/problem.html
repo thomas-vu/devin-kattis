@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>One of your friends desperately needs your help. He is
+    working with a secret agency and doing some encoding stuff. As
+    the mission is confidential he does not tell you much about
+    that, he just wants you to help him with a special property of
+    a number. This property can be expressed as a function
+    <span class="tex2jax_process">$f(n)$</span> for a positive
+    integer <span class="tex2jax_process">$n$</span>. It is defined
+    as</p><span class="tex2jax_process">\[ f(n)=\sum _{\substack
+    {1\leq p\leq q\leq n\\ \mathrm{lcm}(p,q)=n}}(p+q) \]</span>
+<p>In other words, he needs the sum of all possible pairs whose
+    least common multiple is <span class="tex2jax_process">$n$</span> (the least common multiple (LCM)
+    of two numbers <span class="tex2jax_process">$p$</span> and
+    <span class="tex2jax_process">$q$</span> is the lowest positive
+    integer which can be perfectly divided by both <span class="tex2jax_process">$p$</span> and <span class="tex2jax_process">$q$</span>). For example, there are
+    <span class="tex2jax_process">$5$</span> different pairs having
+    their LCM equal to <span class="tex2jax_process">$6$</span> as
+    <span class="tex2jax_process">$(1, 6)$</span>, <span class="tex2jax_process">$(2, 6)$</span>, <span class="tex2jax_process">$(2, 3)$</span>, <span class="tex2jax_process">$(3, 6)$</span>, <span class="tex2jax_process">$(6, 6)$</span>. So <span class="tex2jax_process">$f (6)$</span> is calculated
+    as</p><span class="tex2jax_process">\[ f (6) = (1 + 6) + (2 +
+    6) + (2 + 3) + (3 + 6) + (6 + 6) = 7 + 8 + 5 + 9 + 12 = 41.
+    \]</span>
+<p>Your friend knows you are good at solving this kind of
+    problems, so he asked you to lend a hand. He also does not want
+    to disturb you much, so to assist you he has factorized the
+    number. He thinks it may help you.</p>
+<h2>Input</h2>
+<p>The first line of input will contain the number of test
+    cases <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$T \leq 10$</span>). After that there will be
+    <span class="tex2jax_process">$T$</span> test cases.</p>
+<p>Each of the test cases will start with a positive number
+    <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$C \leq 15$</span>) denoting the number of
+    prime factors of <span class="tex2jax_process">$n$</span>. Then
+    there will be <span class="tex2jax_process">$C$</span> lines
+    each containing two numbers <span class="tex2jax_process">$P_
+    i$</span> and <span class="tex2jax_process">$a_ i$</span>
+    denoting the prime factor and its power (<span class="tex2jax_process">$P_ i$</span> is a prime between <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$1\, 000$</span>) and (<span class="tex2jax_process">$1 \leq a_ i \leq 50$</span>). All the primes
+    for an input case will be distinct.</p>
+<h2>Output</h2>
+<p>For each of the test cases produce one line of output
+    denoting the case number and <span class="tex2jax_process">$f(n)$</span> modulo <span class="tex2jax_process">$1\, 000\, 000\, 007$</span>. See the output
+    for sample input for exact formatting.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2
+2 1
+3 1
+2
+2 2
+3 1
+1
+5 1
+</pre>
+</td>
+<td>
+<pre>
+Case 1: 41
+Case 2: 117
+Case 3: 16
+</pre>
+</td>
+</tr>
+</table>
+</div>

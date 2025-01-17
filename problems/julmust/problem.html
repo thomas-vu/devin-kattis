@@ -1,0 +1,191 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/julmust/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/julmust/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        An array of julmust bottles with a glass of julmust in
+        front.
+      </div>
+</div>Maj loves the traditional Swedish Christmas soft drink
+    called <em>julmust</em>. She likes it so much that she has
+    convinced her local store to start selling it already on the
+    1st of October!
+    <p>Maj is a creature of habit. She consumes exactly the same
+    number of bottles of julmust every day from the 1st of October
+    until Christmas Eve (the 24th of December). The number of
+    bottles per day is a positive integer <span class="tex2jax_process">$r$</span>, where <span class="tex2jax_process">$0 &lt; r \leq R$</span>.</p>
+<p>You need to determine the total number of julmust bottles
+    she has consumed so far. You need to be done at the end of
+    Christmas Eve, <span class="tex2jax_process">$85$</span> days
+    after she started drinking.</p>
+<p>At the end of every day, you ask Maj how much julmust she
+    had so far. You can only ask one question per day.</p>
+<h2>Interaction</h2>
+<p>The interaction starts by giving your program a single line
+    of input with an integer <span class="tex2jax_process">$R$</span>, the maximum number of bottles Maj
+    could possibly consume per day. Interaction proceeds in round,
+    with one round per day. In each round, your program asks if Maj
+    has consumed <span class="tex2jax_process">$X$</span> bottles
+    of julmust since the 1st of October up to and including the
+    current day. The format of a question is “<span class="tex2jax_process">$X$</span>” where <span class="tex2jax_process">$X$</span> is a non-negative integer. Thus,
+    your first question “<span class="tex2jax_process">$X_1$</span>” means “Have you consumed
+    <span class="tex2jax_process">$X_1$</span> bottles on the 1st
+    of October,” your second question “<span class="tex2jax_process">$X_2$</span>” means “Have you consumed
+    <span class="tex2jax_process">$X_2$</span> bottles in total on
+    the 1st and 2nd of October,” and so on.</p>
+<p>Maj’s response to each question can be read from standard
+    input. Her response is a single line with one of the following
+    three words:</p>
+<ul class="itemize">
+<li>
+<p>“less” if Maj has consumed strictly fewer than
+        <span class="tex2jax_process">$X$</span> bottles so
+        far.</p>
+</li>
+<li>
+<p>“exact” if Maj has consumed exactly <span class="tex2jax_process">$X$</span> bottles so far.</p>
+</li>
+<li>
+<p>“more” if Maj has consumed strictly more than
+        <span class="tex2jax_process">$X$</span> bottles so
+        far.</p>
+</li>
+</ul>
+<p>When your program receives “exact” it has successfully
+    completed the task and should exit, not asking any more
+    questions.</p>
+<p>Your program is judged <em>wrong</em> if you have not
+    received an “exact” response after <span class="tex2jax_process">$85$</span> rounds.</p>
+<h2>Flushing</h2>
+<p>In interactive problems your program will be judged by a
+    judge program. If your program does not flush the output stream
+    when printing output the judge program might not receive your
+    output in time and your program might be judged as Time Limit
+    Exceeded. To avoid this, make sure to always flush your output
+    after each time you print.</p>
+<p>In Python3:</p>
+<pre>
+print(x, flush=True)
+</pre>
+<p>In Java:</p>
+<pre>
+System.out.println(x);
+System.out.flush();
+</pre>
+<p>In C++:</p>
+<pre>
+std::cout &lt;&lt; x &lt;&lt; "\n" &lt;&lt; std::flush;
+</pre>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Group</p>
+</td>
+<td style="text-align:left">
+<p>Points</p>
+</td>
+<td style="text-align:left">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$R = 84$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>2</p>
+</td>
+<td style="text-align:left">
+<p>20</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$R = 1\, 500$</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>3</p>
+</td>
+<td style="text-align:left">
+<p>55</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$R = 1\, 000\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<h2>Sample Description</h2>
+<p>In Sample Interaction 1, Maj consumes 5 bottles of julmust
+    each day. On the first day you ask if she has consumed 8
+    bottles, but she has only consumed 5 so far. On the second day
+    you ask if she has consumed 10 bottles, which is true and the
+    interaction ends.</p>
+<p>In Sample Interaction 2, Maj consumes 6 bottles of julmust
+    each day. On the first day you ask if she has consumed 10
+    bottles, but she has only consumed 6 so far. On the second day
+    you ask if she has consumed 10 bottles, but now she has
+    consumed 12 bottles. On the third day you ask if she has
+    consumed 18 bottles, which is true and the interaction
+    ends.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>84</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>8</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>less</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>10</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>exact</pre>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 2</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>84</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>10</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>less</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>10</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>more</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>18</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>exact</pre>
+</div>
+</div>

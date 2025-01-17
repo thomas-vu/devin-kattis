@@ -1,0 +1,208 @@
+<div class="problembody">
+<p>Arnar, being a true Icelander, loves ice cream and today is
+    just the perfect weather to go grab some of this delicious
+    treat. He heads out into the blizzard to his favourite ice
+    cream store. When he arrives he is surprised to see an
+    unusually short queue ahead of him; he is only the <span class="tex2jax_process">$n$</span>th person waiting to order!</p>
+<p>Arnar knows this ice cream store well. They offer
+    <span class="tex2jax_process">$m$</span> different flavours,
+    and they have <span class="tex2jax_process">$k$</span> ice
+    cream machines. However, each machine can only serve one
+    flavour at a time, and machines need to be cleaned before they
+    can be loaded with a different flavour. Since cleaning a
+    machine takes some time and Arnar is in a hurry, he wonders if
+    he can help the store operator determine the optimal machine to
+    clean every time a new flavour is needed to serve a customer,
+    in order to minimise the total number of times the machines
+    need to be cleaned.</p>
+<p>Fortunately, Iceland is a small place and Arnar knows every
+    single person in the queue and the flavour of ice cream they
+    want. The store strictly enforces a no-cutting policy, so they
+    will serve customers in the order they arrived. Can you help
+    Arnar figure out the minimum number of times the ice cream
+    machines need to be cleaned to serve everyone in the queue,
+    including himself?</p>
+<p>Initially all the ice cream machines are empty and need to
+    be cleaned before they are loaded with their first flavour.
+    Once an ice cream machine has been loaded with a particular
+    flavour, it can be used to serve any number of customers that
+    want that particular flavour, until the machine is cleaned and
+    loaded with a different flavour. A machine that is not used at
+    all does not need to be cleaned.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with three integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, and <span class="tex2jax_process">$k$</span>, the number of customers
+        waiting in the queue, the number of available flavours, and
+        the number of ice cream machines.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, the
+        <span class="tex2jax_process">$i$</span>th of which
+        contains an integer <span class="tex2jax_process">$c_
+        i$</span>, where <span class="tex2jax_process">$1 \leq c_ i
+        \leq m$</span>, the flavour that the <span class="tex2jax_process">$i$</span>th customer in the queue
+        wants.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output the minimum total number of times the ice cream
+    machines need to be cleaned in order to serve all <span class="tex2jax_process">$n$</span> customers.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1\, 000$</span>,
+          <span class="tex2jax_process">$M \leq 10$</span>,
+          <span class="tex2jax_process">$K = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>12</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1\, 000$</span>,
+          <span class="tex2jax_process">$M \leq 10$</span>,
+          <span class="tex2jax_process">$K \leq 2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>22</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1\, 000$</span>,
+          <span class="tex2jax_process">$M \leq 10$</span>,
+          <span class="tex2jax_process">$K \leq 5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>11</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 1\, 000$</span>,
+          <span class="tex2jax_process">$M \leq 200$</span>,
+          <span class="tex2jax_process">$K \leq 100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 2 \cdot
+          10^5$</span>, <span class="tex2jax_process">$M \leq
+          500$</span>, <span class="tex2jax_process">$K \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>13</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \leq 2 \cdot
+          10^5$</span>, <span class="tex2jax_process">$M \leq 2
+          \cdot 10^5$</span>, <span class="tex2jax_process">$K \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>21</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N \leq 2 \cdot
+          10^5$</span>, <span class="tex2jax_process">$M \leq 2
+          \cdot 10^5$</span>, <span class="tex2jax_process">$K \leq
+          2 \cdot 10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 3 1
+2
+3
+3
+1
+2
+1
+1
+3
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8 3 2
+2
+3
+3
+1
+2
+1
+1
+3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

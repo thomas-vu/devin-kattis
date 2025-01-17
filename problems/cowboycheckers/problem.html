@@ -1,0 +1,156 @@
+<div class="problembody">
+<div class="figure" id="fig:mills">
+<center>
+<img alt="\includegraphics[width=0.4\textwidth ]{nmm480w.png}" src="/problems/cowboycheckers/file/statement/en/img-0001.png" style="width:40.00%"/> <img alt="\includegraphics[width=0.4\textwidth ]{nmm2-480.png}" src="/problems/cowboycheckers/file/statement/en/img-0002.png" style="width:40.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Left: the layout of the board at the
+          beginning of the game. Right: a position that results in
+          a win for White. Source: <a href="https://en.wikipedia.org/wiki/Nine_Men%E2%80%99s_Morris">
+          Wikimedia Commons</a>
+</div>
+</center>
+</div>
+<p>Theta likes to play a board game called Cowboy Checkers,
+    also known under the name “Nine Men’s Morris.” This strategy
+    board game, which dates at least to the Roman Empire, is played
+    by two players on a grid with <span class="tex2jax_process">$24$</span> intersections, or points, as
+    shown on the left in Figure 1. Each player has nine pieces
+    represented by white and black colors. During the initial phase
+    of the game, players take turns placing pieces on the board at
+    unoccupied intersections. Once all pieces have been placed,
+    players take turns moving pieces. Pieces can be moved along the
+    lines of the board from one intersection (or corner) to any
+    connected open intersection (or corner).</p>
+<p>The goal of the game is to take one’s opponent’s pieces,
+    which is accomplished by forming “mills,” which consist of
+    three pieces that are either horizontally or vertically
+    adjacent. For instance, Figure 1 shows two mills: white
+    has a mill consisting of the pieces on <tt class="ttfamily">e3</tt>, <tt class="ttfamily">e4</tt>, and
+    <tt class="ttfamily">e5</tt>, and black has a mill consisting
+    of the pieces on <tt class="ttfamily">f2</tt>, <tt class="ttfamily">f4</tt>, and <tt class="ttfamily">f6</tt>.</p>
+<p>Each time a player forms a mill they can take one piece from
+    their opponent. Thus, a desirable position, which almost always
+    results in a win, is a “double mill”: in this position, the
+    player whose turn it is can move one piece from one mill such
+    that it closes (completes) another mill. In the next move, the
+    player can move back, closing the first mill again and
+    reopening the second. For instance, in Figure 1, White has
+    created a double mill: the move <tt class="ttfamily">e3</tt> to
+    <tt class="ttfamily">d3</tt> would close a mill consisting of
+    <tt class="ttfamily">d1</tt>, <tt class="ttfamily">d2</tt>, and
+    <tt class="ttfamily">d3</tt> while simultaneously creating an
+    open mill <tt class="ttfamily">e4</tt>, <tt class="ttfamily">e5</tt>.</p>
+<p>Theta is pretty good at spotting double mills - can you
+    write a program that does the same?</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. This test case
+    consists of <span class="tex2jax_process">$7$</span> lines with
+    <span class="tex2jax_process">$7$</span> characters each. The
+    letters <tt class="ttfamily">B</tt> and <tt class="ttfamily">W</tt> denote black and white pieces, respectively.
+    The character <tt class="ttfamily">.</tt> denotes an open
+    corner or intersection, except in the center of the board,
+    where it has no significance. The characters <tt class="ttfamily">|</tt> and <tt class="ttfamily">-</tt> are used to
+    denote connector lines that may not contain any pieces. All
+    inputs represents valid positions as far as which points may
+    contain pieces, as displayed on the left in Figure 1.
+    There may be up to nine black and up to nine white pieces on
+    the board.</p>
+<h2>Output</h2>
+<p>If White has at least one double mill, output <tt class="ttfamily">double mill</tt>, else output <tt class="ttfamily">no double mill</tt>!</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+.--.--.
+|.-.-B|
+||..W||
+.BB.WB.
+||..W||
+|B-W-B|
+.--W--.
+</pre>
+</td>
+<td>
+<pre>
+double mill
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+.--.--.
+|.-.-.|
+||...||
+.......
+||...||
+|.-.-.|
+.--.--.
+</pre>
+</td>
+<td>
+<pre>
+no double mill
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+B--.--.
+|W-.-.|
+||BBB||
+......B
+||WWW||
+|W-.-W|
+.--B--B
+</pre>
+</td>
+<td>
+<pre>
+double mill
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+B--B--.
+|W-.-B|
+||BBB||
+.W....B
+||WWW||
+|W-W-W|
+.--B--B
+</pre>
+</td>
+<td>
+<pre>
+no double mill
+</pre>
+</td>
+</tr>
+</table>
+</div>

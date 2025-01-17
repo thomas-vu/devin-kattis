@@ -1,0 +1,58 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/tictactoe/file/statement/en/img-0001.png" class="illustration" src="/problems/tictactoe/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>The game of Tic Tac Toe is played on an <span class="tex2jax_process">$n$</span>-by-<span class="tex2jax_process">$n$</span> grid (where <span class="tex2jax_process">$n$</span> is usually but not necessarily
+    three). Two players alternate placing symbols on squares of the
+    grid. One player places Xes and the other player places Os. The
+    player placing Xes always goes first. When the grid contains a
+    vertical, horizontal, or diagonal sequence of at least
+    <span class="tex2jax_process">$m$</span> consecutive squares
+    all containing the same symbol, the game ends and the winner is
+    the player who placed the last symbol. When all the squares of
+    the grid are filled, if neither player has won, the game ends
+    in a draw.</p>
+<p>Your task is to analyze the state of a Tic Tac Toe board,
+    and determine whether the game is still in progress, or if it
+    has completed, who won, or if the game ended in a draw. You
+    should also detect erroneous states of the Tic Tac Toe board
+    that could never occur during an actual game.</p>
+<h2>Input</h2>
+<p>The first line of input contains the two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, separated by spaces, with
+    <span class="tex2jax_process">$1 \le m \le n \le 1000$</span>.
+    The following <span class="tex2jax_process">$n$</span> lines of
+    input each contain one row of the Tic Tac Toe board. Each of
+    these lines contains exactly <span class="tex2jax_process">$n$</span> characters, and each of these
+    characters is either an <tt class="ttfamily">X</tt>, an
+    <tt class="ttfamily">O</tt>, or a period (<tt class="ttfamily">.</tt>), indicating an empty square.</p>
+<h2>Input</h2>
+<p>Output a single line containing the appropriate string
+    “<tt class="ttfamily">X WINS</tt>”, “<tt class="ttfamily">O
+    WINS</tt>”, or “<tt class="ttfamily">DRAW</tt>” if the game is
+    over, the string “<tt class="ttfamily">IN PROGRESS</tt>” if the
+    game has not yet finished, or “<tt class="ttfamily">ERROR</tt>”
+    if the state of the board could never occur during a game.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+..X
+OOX
+..X
+</pre>
+</td>
+<td>
+<pre>
+X WINS
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,137 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/delimitersoup/file/statement/en/img-0001.jpg" class="illustration" src="/problems/delimitersoup/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/juditk/3851311863">Judit
+        Klein</a>
+</div>
+</div>
+<p>Whenever a programmer starts to learn a Lisp, they think
+    that there are too many parentheses in it. Sophia thinks there
+    are too few, so she is making a programming language with only
+    parentheses. To spice it up a bit, she is also adding square
+    brackets (‘<tt class="ttfamily">[]</tt>’) and curly braces
+    (‘<tt class="ttfamily">{}</tt>’) to the language.</p>
+<p>Right now, she is struggling to make people use it for
+    production code. Obviously, it has to be because of the bad
+    error messages you get when you mess up the delimiters! Right
+    now, you only get the error message ‘<tt class="ttfamily">syntax error</tt>’ when you mess them up.</p>
+<p>Any opening delimiter must be closed by the same type of
+    delimiter: ‘<tt class="ttfamily">(</tt>’ is closed with
+    ‘<tt class="ttfamily">)</tt>’, ‘<tt class="ttfamily">[</tt>’ is
+    closed by ‘<tt class="ttfamily">]</tt>’, etc.</p>
+<p>Sophia wants to improve the error message so that you at
+    least get some help finding out where it all went wrong.</p>
+<h2>Input</h2>
+<p>The input consists of two lines. The first line contains an
+    integer <span class="tex2jax_process">$|L|$</span>, the length
+    of the next line. The next line contains <span class="tex2jax_process">$L$</span>, the program you want to
+    validate.</p>
+<h2>Output</h2>
+<p>Output the character and the <span class="tex2jax_process">$0$</span>-indexed location of the first
+    closing delimiter that does not match with the opening
+    delimiter.</p>
+<p>If there are no errors, or there are more opening delimiters
+    than closing delimiters, print ‘<tt class="ttfamily">ok so
+    far</tt>’ instead.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$1 \leq |L| \leq
+        200$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$L$</span> contains only
+        the characters ‘<tt>()[]{}</tt>’ and spaces</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$L$</span> does not start
+        with a space character</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8
+([] [] ]
+</pre>
+</td>
+<td>
+<pre>] 7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>13
+(([] [[]] ())
+</pre>
+</td>
+<td>
+<pre>ok so far
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>21
+[ { { () () () () } ]
+</pre>
+</td>
+<td>
+<pre>] 20
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>27
+[ { [[()]] (({})) } ] () {}
+</pre>
+</td>
+<td>
+<pre>ok so far
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>19
+[[]] () ) [] {{}} {
+</pre>
+</td>
+<td>
+<pre>) 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

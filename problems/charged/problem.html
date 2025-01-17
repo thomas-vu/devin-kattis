@@ -1,0 +1,184 @@
+<div class="problembody">
+<h2>Background</h2>
+<p>The electric field <span class="tex2jax_process">$\vec{E}$</span> of a particle with charge
+    <span class="tex2jax_process">$q$</span> can be derived from
+    its electric potential <span class="tex2jax_process">$V$</span>:</p><span class="tex2jax_process">\[ \vec{E} = -\nabla V \]</span>
+<p>where <span class="tex2jax_process">$\nabla $</span> is the
+    derivative operator and <span class="tex2jax_process">$V$</span> at every point in space
+    is</p><span class="tex2jax_process">\[ V = {1\over 4\pi
+    \varepsilon _0}{q\over ||\vec{r}||} \]</span>
+<p>where <span class="tex2jax_process">$\vec{r}$</span> is the
+    distance from the particle at that point, <span class="tex2jax_process">$1\over 4\pi \varepsilon _0$</span> is some
+    constant, and <span class="tex2jax_process">$||\vec{r}|| =
+    \sqrt{r_ x^2 + r_ y^2}$</span> (in a two-dimensional plane).
+    The net electric potential at any point is the sum of all of
+    the electric potentials from all the particles.</p>
+<p>The force from particle <span class="tex2jax_process">$B$</span> on particle <span class="tex2jax_process">$A$</span> is the charge of <span class="tex2jax_process">$A$</span> <span class="tex2jax_process">$(q_
+    A)$</span> multiplied by the electric field from <span class="tex2jax_process">$B$</span>:</p><span class="tex2jax_process">\begin{align*} \vec{F}_{B\rightarrow A} &amp;
+    = q_ A\vec{E}_ B\\ &amp; = {1\over 4\pi \varepsilon _0}{q_
+    A\cdot q_ B\over ||\vec{r}||^2}\hat{r} \end{align*}</span>
+<p>For this problem, however, you will only visualize the
+    electric potential <span class="tex2jax_process">$V$</span>.</p>
+<h2>Problem</h2>
+<p>Given two kinds of particles, those with a positive charge
+    <span class="tex2jax_process">$+e$</span>, and those with
+    negative charges <span class="tex2jax_process">$-e$</span>,
+    display the electric potential at every point in space. The
+    electric potential should be normalized relative to
+    <span class="tex2jax_process">${|e|\over 4\pi \varepsilon
+    _0}$</span> (i.e., treat <span class="tex2jax_process">${|e|\over 4\pi \varepsilon _0}$</span> as
+    <span class="tex2jax_process">$1$</span>).</p>
+<h3>Input</h3>
+<p>Input starts with <span class="tex2jax_process">$3$</span>
+    integers <span class="tex2jax_process">$n,m,q$</span> where
+    <span class="tex2jax_process">$0&lt;n,m\le 50$</span> and
+    <span class="tex2jax_process">$0&lt;q\le 10$</span>. Then
+    follows <span class="tex2jax_process">$q$</span> lines: each
+    line contains three values <span class="tex2jax_process">$x,y,s$</span>, where <span class="tex2jax_process">$1 \leq x \leq m$</span> and <span class="tex2jax_process">$1 \leq y \leq n$</span> correspond to the
+    integer coordinates of the charged particle and <span class="tex2jax_process">$s$</span> is the sign of the particle’s
+    charge being either a <tt>+</tt> or a <tt>-</tt>. No two
+    particles will have the same coordinates.</p>
+<h3>Output</h3>
+<p>Your output should be an <span class="tex2jax_process">$n\times m$</span> grid of ASCII characters
+    oriented with the positive <span class="tex2jax_process">$y$</span>-axis pointing down and the
+    positive <span class="tex2jax_process">$x$</span>-axis pointing
+    to the right, with coordinates starting from <span class="tex2jax_process">$1$</span>. Every character in the grid
+    corresponds to the total potential at that point.</p>
+<p>If the field contains a particle, print either a <tt>+</tt>
+    or <tt>-</tt> corresponding to its charge. Otherwise, the
+    character you place will be related to the sign of the
+    potential. If the potential is negative then use the characters
+    <tt>{%,X,x}</tt>. If it is positive, however, use the character
+    set <tt>{0,O,o}</tt> (the first element is a zero).</p>
+<p>There are <span class="tex2jax_process">$3$</span> tiers to
+    the field’s magnitude:</p>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$1 / \pi $</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 / \pi ^2$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$1 / \pi ^3$</span></p>
+</li>
+</ol>
+<p>If the field is below the third tier print a
+    “<tt>.</tt>”.</p>
+<p>If the magnitude is above the first tier then you would use
+    <tt>%</tt> or <tt>0</tt> (zero) depending on the sign, if it is
+    below the first tier then you would use <tt>X</tt> or
+    <tt>O</tt>, and so on and so forth.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>20 20 2
+5 5 +
+15 15 -
+</pre>
+</td>
+<td>
+<pre>OOOOOOOOOoooo.......
+OOOOOOOOOoooo.......
+OOO000OOOOooo.......
+OO00000OOOooo.......
+OO00+00OOOoo........
+OO00000OOooo........
+OOO000OOOoo....xxxxx
+OOOOOOOOoo...xxxxxxx
+OOOOOOOoo...xxxxxxxx
+ooOOOooo...xxxXXXxxx
+ooooooo...xxXXXXXXXx
+oooooo...xxXXXXXXXXX
+oooo....xxXXX%%%XXXX
+.......xxxXX%%%%%XXX
+.......xxXXX%%-%%XXX
+......xxxXXX%%%%%XXX
+......xxxXXXX%%%XXXX
+......xxxxXXXXXXXXXX
+......xxxxXXXXXXXXXX
+......xxxxxXXXXXXXXx
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>20 20 3
+15 15 -
+10 10 +
+5 5 -
+</pre>
+</td>
+<td>
+<pre>XXXXXXXXXXxxxxxxxxxx
+XXXXXXXXXXxxxxxxxxxx
+XXX%%%XXXXxxxxxxxxxx
+XX%%%%%XXXxxxxxxxxxx
+XX%%-%%XXxxxxxxxxxxx
+XX%%%%%Xxx..xxxxxxxx
+XXX%%%Xx.oo..xxxxxxx
+XXXXXXx.OOOo..xxxxxx
+XXXXXx.O000Oo.xxxxxx
+XXXXxxoO0+0OoxxXXXXX
+xxxxx.oO000O.xXXXXXX
+xxxxx..oOOO.xXXXXXXX
+xxxxxx..oo.xX%%%XXXX
+xxxxxxx..xxX%%%%%XXX
+xxxxxxxxxxXX%%-%%XXX
+xxxxxxxxxXXX%%%%%XXX
+xxxxxxxxxXXXX%%%XXXX
+xxxxxxxxxXXXXXXXXXXX
+xxxxxxxxxXXXXXXXXXXX
+xxxxxxxxxXXXXXXXXXXX
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>20 20 2
+10 2 +
+10 18 -
+</pre>
+</td>
+<td>
+<pre>oooOOOO00000OOOOoooo
+oooOOOO00+00OOOOoooo
+oooOOOO00000OOOOoooo
+ooooOOOO000OOOOooooo
+oooooOOOOOOOOOoooooo
+ooooooOOOOOOOoooooo.
+.oooooooOOOooooooo..
+....ooooooooooo.....
+....................
+....................
+....................
+....xxxxxxxxxxx.....
+.xxxxxxxXXXxxxxxxx..
+xxxxxxXXXXXXXxxxxxx.
+xxxxxXXXXXXXXXxxxxxx
+xxxxXXXX%%%XXXXxxxxx
+xxxXXXX%%%%%XXXXxxxx
+xxxXXXX%%-%%XXXXxxxx
+xxxXXXX%%%%%XXXXxxxx
+xxxXXXXX%%%XXXXXxxxx
+</pre>
+</td>
+</tr>
+</table>
+</div>

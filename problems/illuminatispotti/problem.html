@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>One of Xxayvier’s favorite pastimes is spotting triangles
+    due to his obsession with the Illuminati. Xxayvier has taken it
+    to the extreme and has been trying to spot triangles on the
+    larger scale.</p>
+<p>He believes that the Illuminati has control of all cities
+    which have <span class="tex2jax_process">$3$</span> undirected
+    flights connecting to each other in a triangle shape. To test
+    this theory, Xxayvier has been making maps listing undirected
+    flights that connect from city <span class="tex2jax_process">$i$</span> to city <span class="tex2jax_process">$j$</span>. He then tries to find the
+    triangles from the map afterwards.</p>
+<p>Because of the large number of cities that Xxayvier has
+    listed, it has been very difficult keeping track and finding
+    them all. Can you help him find the number of triangles made
+    without duplicates?</p>
+<h2>Input</h2>
+<p>Input consists of <span class="tex2jax_process">$N+1$</span>
+    lines. The first contains the number of cities that you are
+    given <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \leq N \leq 500$</span>). The next
+    <span class="tex2jax_process">$N$</span> input lines represent
+    a city <span class="tex2jax_process">$i$</span> and the
+    undirected flight that connects to another city <span class="tex2jax_process">$j$</span>. Each line has <span class="tex2jax_process">$N$</span> numbers each number representing a
+    city <span class="tex2jax_process">$j$</span> in ascending
+    order. Each number can be either a <span class="tex2jax_process">$1$</span> in which a flight towards city
+    <span class="tex2jax_process">$j$</span> exists or a
+    <span class="tex2jax_process">$0$</span> meaning the flight
+    does not exist.</p>
+<h2>Output</h2>
+<p>Given that the triangles are created only by <span class="tex2jax_process">$3$</span> connecting cities, output the
+    number of triangles the map can have without repeats.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0 1 1 0 
+1 0 1 1 
+1 1 0 1 
+0 1 1 0 
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+0 1 1 0 1 
+1 0 1 1 0 
+1 1 0 1 1 
+0 1 1 0 0 
+1 0 1 0 0 
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

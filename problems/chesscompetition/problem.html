@@ -1,0 +1,106 @@
+<div class="problembody">
+<p>In a chess competition, every player plays one game against
+    every other player. The winner receives one point, the loser
+    none. In case of a draw, both players receive half a point.
+    When all games have been played, whoever scored the most points
+    wins the competition. If multiple competitors are tied for the
+    highest score, they will play a series of tie-break games to
+    determine the winner.</p>
+<p>For this problem we consider a competition where the games
+    are played in arbitrary order. Based on the outcome of the
+    games that have been played so far (which could be all, or
+    none, or anything in between) the organizers want to determine
+    which players can still win the competition.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$2 \leq n \leq 30$</span>): the number of
+        players.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines with
+        <span class="tex2jax_process">$n$</span> characters each,
+        describing the intermediate results. The <span class="tex2jax_process">$j$</span>-th character on the
+        <span class="tex2jax_process">$i$</span>-th line gives the
+        result of the <span class="tex2jax_process">$i$</span>-th
+        player against the <span class="tex2jax_process">$j$</span>-th player:</p>
+<ul class="itemize">
+<li>
+<p>’<tt>1</tt>’ for a win,</p>
+</li>
+<li>
+<p>’<tt>0</tt>’ for a loss,</p>
+</li>
+<li>
+<p>’<tt>d</tt>’ for a draw,</p>
+</li>
+<li>
+<p>’<tt>.</tt>’ if this game has not been played
+            yet,</p>
+</li>
+<li>
+<p>’<tt>x</tt>’ when <span class="tex2jax_process">$i =
+            j$</span> (since competitors do not play against
+            themselves).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>The intermediate results are guaranteed to be internally
+    consistent. More formally, if the <span class="tex2jax_process">$j$</span>-th character on the <span class="tex2jax_process">$i$</span>-th line is a digit (’<tt>0</tt>’
+    or ’<tt>1</tt>’) then the <span class="tex2jax_process">$i$</span>-th character on the <span class="tex2jax_process">$j$</span>-th line will be the other digit.
+    In all other cases, the <span class="tex2jax_process">$j$</span>-th character on the <span class="tex2jax_process">$i$</span>-th line equals the <span class="tex2jax_process">$i$</span>-th character on the <span class="tex2jax_process">$j$</span>-th line.</p>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with the <span class="tex2jax_process">$1$</span>-based indices of all the
+        players that can possibly win the competition, in
+        increasing order, separated by spaces.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+5
+x.11d
+.x1d1
+00x.0
+0d.x.
+d01.x
+7
+x00111.
+1x01d.d
+11x1.00
+000x000
+0d.1xd1
+0.11dxd
+.d110dx
+7
+x00011.
+1x00d.d
+11x0.0.
+111x111
+0d.0xd.
+0.10dx.
+.d.0..x
+</pre>
+</td>
+<td>
+<pre>
+1 2
+1 2 3 5 6 7
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

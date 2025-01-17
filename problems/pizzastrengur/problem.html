@@ -1,0 +1,166 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/pizzastrengur/file/statement/en/img-0001.jpg" class="illustration" src="/problems/pizzastrengur/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg">
+        wikipedia.com</a>
+</div>
+</div>
+<p>Today is game day at Tommi’s pizzas so Georg and his friends
+    are going to order some pizzas. The game starts with the
+    employees at Tommi’s pizzas choosing a secret passcode,
+    consisting only of the letters {“<tt class="ttfamily">P</tt>”,
+    “<tt class="ttfamily">I</tt>”, “<tt class="ttfamily">Z</tt>”,
+    “<tt class="ttfamily">A</tt>”}, and telling the customer the
+    length of the passcode. If Georg and his friends manage to
+    guess the passcode in at most <span class="tex2jax_process">$m$</span> attempts they get their pizza for
+    free! Georg and his friends may pick words shorter than the
+    passcode as guesses, in which case they will be told whether
+    the guess is a prefix of the passcode. Can you help Georg and
+    his friends in guessing the passcode, so they can get their
+    pizza for free?</p>
+<p>A word <span class="tex2jax_process">$A$</span> is a prefix
+    of a word <span class="tex2jax_process">$B$</span> if
+    <span class="tex2jax_process">$B$</span> starts with
+    <span class="tex2jax_process">$A$</span>. For example, “PIZ” is
+    a prefix of “PIZZA”, but “‘ZZA” is not a prefix of “PIZZA”.</p>
+<h2>Interactivity</h2>
+<p>This is an interactive problem. Your solution will be tested
+    against an interactive judge which reads the output of your
+    solution and prints the input your solution recieves. This
+    interaction follows certain rules:</p>
+<p>The judge starts by printing an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 10^4$</span>), the length of the passcode
+    <span class="tex2jax_process">$S$</span> which only contains
+    the letters {“<tt class="ttfamily">P</tt>”, “<tt class="ttfamily">I</tt>”, “<tt class="ttfamily">Z</tt>”, “<tt class="ttfamily">A</tt>”}.</p>
+<p>Next your solution must output a guess string <span class="tex2jax_process">$P$</span> which must contain at least
+    <span class="tex2jax_process">$1$</span> letter and at most
+    <span class="tex2jax_process">$n$</span> letters. After this
+    the judge will respond as such:</p>
+<ul class="itemize">
+<li>
+<p>If <span class="tex2jax_process">$P$</span> is not a
+        prefix of <span class="tex2jax_process">$S$</span> the
+        judge will print <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$P$</span> is a prefix
+        of <span class="tex2jax_process">$S$</span> the judge will
+        print <span class="tex2jax_process">$1$</span>.</p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$P$</span> is equal to
+        the passcode the judge will print <span class="tex2jax_process">$2$</span> and your program should stop
+        guessing.</p>
+</li>
+</ul>
+<p>Make sure to <tt class="ttfamily">flush</tt> after each
+    guess, for example using</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">print(..., flush=True)</tt> in
+        Python,</p>
+</li>
+<li>
+<p><tt class="ttfamily">cout &lt;&lt; ... &lt;&lt;
+        endl;</tt> in C++,</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush();</tt> in
+        Java.</p>
+</li>
+</ul>
+<p>The problem comes with a testing tool to help test your
+    solution.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 10^3, m =
+          4 \cdot n$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 10^3, m =
+          3 \cdot n + 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 10^3, m = 2.75
+          \cdot n$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$n = 10^3, m = 2.45
+          \cdot n$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th style="text-align:left; width:33%;">Read</th>
+<th style="text-align:center; width:33%;">Sample
+        Interaction 1</th>
+<th style="text-align:right; width:33%;">Write</th>
+</tr>
+</table>
+<div class="sampleinteractionread">
+<pre>5</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>ZAP</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>0</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>PIZ</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>1</pre>
+</div>
+<div class="sampleinteractionwrite">
+<pre>PIZZA</pre>
+</div>
+<div class="sampleinteractionread">
+<pre>2</pre>
+</div>
+</div>

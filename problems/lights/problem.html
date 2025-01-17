@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>John has <span class="tex2jax_process">$n$</span> light
+    bulbs and a switchboard with <span class="tex2jax_process">$n$</span> switches; each bulb can be either
+    on or off, and pressing the <span class="tex2jax_process">$i$</span>-th switch changes the state of
+    bulb <span class="tex2jax_process">$i$</span> from on to off,
+    and viceversa. He is using them to play a game he has made up.
+    In each move, John selects a (possibly empty) set of switches
+    and presses them, thus inverting the states of the
+    corresponding bulbs. After exactly <span class="tex2jax_process">$m$</span> moves, John would like to have the
+    first <span class="tex2jax_process">$v$</span> bulbs on and the
+    rest off; otherwise he loses the game. There is only one
+    restriction: he is not allowed to press the same <em>set</em>
+    of switches in two different moves.</p>
+<p>This is quite an easy game, as there are lots of ways of
+    winning. This has encouraged him to keep playing different
+    winning games, and now he is intent on trying them all. Help
+    him count how many ways of winning there are. Two games are
+    considered the same if, after a reordering of the moves in one
+    of them, at every step the same set of switches is pressed in
+    both of them.</p>
+<p>For example, if <span class="tex2jax_process">$n =
+    4$</span>, <span class="tex2jax_process">$m = 3$</span>, and
+    <span class="tex2jax_process">$v = 2$</span>, one possible
+    winning game is obtained by pressing switches 1, 2 and 4 in the
+    first move, 1 and 3 in the second one, and 1, 3 and 4 in the
+    last one. This is considered equivalent to, say, first pressing
+    1 and 3; then 1, 2, 4; and then 1, 3, 4.</p>
+<h2>Input</h2>
+<p>The input has at most 500 lines, one for each test case.
+    Each line contains three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 1 000$</span>), <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq m \leq 1 000$</span>), and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0
+    \leq v \leq n$</span>). The last line of input will hold the
+    values <tt class="ttfamily">0 0 0</tt> and must not be
+    processed.</p>
+<h2>Output</h2>
+<p>Print one line for each test case containing the number of
+    ways John can play the game, modulo the prime <span class="tex2jax_process">$10\, 567\, 201$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3 1
+6 4 0
+6 4 3
+0 0 0
+</pre>
+</td>
+<td>
+<pre>
+7
+10416
+9920
+</pre>
+</td>
+</tr>
+</table>
+</div>

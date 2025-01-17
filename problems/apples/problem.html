@@ -1,0 +1,86 @@
+<div class="problembody">
+<div class="minipage" style="width:469.755pt">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/apples/file/statement/en/img-0001.png" class="illustration" src="/problems/apples/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>You have a 2D rectangular grid. Each grid cell contains
+      either an apple, an obstacle, or is empty. Empty cells are
+      denoted as ’<tt class="tt">.</tt>’, apples as ’<tt class="tt">a</tt>’, and obstacles as ’<tt class="tt">#</tt>’. You
+      are to implement a simulation of gravity, based on the
+      following rules:
+
+      <ul class="itemize">
+<li>
+<p>The obstacles do not move.</p>
+</li>
+<li>
+<p>Whenever there is an empty cell immediately below an
+          apple, the apple moves into the empty cell.</p>
+</li>
+</ul>
+<p>Print out the final configuration of the board after all
+      apples reach their final locations. Merely iterating the
+      gravity rule, a step at a time, will likely take too long on
+      large datasets.</p>
+</div>
+<h2>Input</h2>
+<p>The input begins with a line containing integers
+    <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span>, designating the number of rows
+    and columns of the grid, such that <span class="tex2jax_process">$1 \leq R \leq 50\, 000$</span> and
+    <span class="tex2jax_process">$1 \leq C \leq 10$</span>. The
+    first line is followed by <span class="tex2jax_process">$R$</span> additional lines, each designating
+    a row of the grid, from top to bottom. Each line has
+    <span class="tex2jax_process">$C$</span> characters, each of
+    which is either ’<tt class="tt">.</tt>’, ’<tt class="tt">a</tt>’, or ’<tt class="tt">#</tt>’.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$R$</span> grid lines
+    displaying the final state.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+aaa
+#..
+..#
+</pre>
+</td>
+<td>
+<pre>
+a..
+#.a
+.a#
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 5
+aaa.a
+aa.a.
+a.a..
+...a.
+</pre>
+</td>
+<td>
+<pre>
+.....
+a....
+aaaa.
+aaaaa
+</pre>
+</td>
+</tr>
+</table>
+</div>

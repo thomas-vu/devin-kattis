@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>The multiplicative persistence of a number is defined by
+    Neil Sloane (Neil J.A. Sloane in <em>The Persistence of a
+    Number</em> published in Journal of Recreational Mathematics 6,
+    1973, pp. 97-98., 1973) as the number of steps to reach a
+    one-digit number when repeatedly multiplying the digits. For
+    example:</p><span class="tex2jax_process">\[ 697 \rightarrow
+    378 \rightarrow 168 \rightarrow 48 \rightarrow 32 \rightarrow 6
+    \]</span>
+<p>That is, the persistence of <span class="tex2jax_process">$697$</span> is <span class="tex2jax_process">$5$</span>. The persistence of a single digit
+    number is <span class="tex2jax_process">$0$</span>. At the time
+    of this writing it is known that there are numbers with the
+    persistence of <span class="tex2jax_process">$11$</span>. It is
+    not known whether there are numbers with the persistence of
+    <span class="tex2jax_process">$12$</span>, but it is known that
+    if they exist then the smallest of them would have more than
+    <span class="tex2jax_process">$3000$</span> digits.</p>
+<p>The problem that you are to solve here is: what is the
+    smallest number such that the first step of computing its
+    persistence results in the given number?</p>
+<h2>Input</h2>
+<p>The input consists of multiple test cases. Each line
+    contains a test case, which consists of a decimal number with
+    up to <span class="tex2jax_process">$1\, 000$</span> digits.
+    The input ends with a line containing <tt class="ttfamily">-1</tt>.</p>
+<p>There will be at most <span class="tex2jax_process">$50$</span> test cases in a single input
+    file.</p>
+<h2>Output</h2>
+<p>For each testcase, output a single line containing one
+    integer number satisfying the condition stated above. If no
+    such number exists, output “<tt class="ttfamily">There is no
+    such number</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+0
+1
+4
+7
+18
+49
+51
+768
+-1
+</pre>
+</td>
+<td>
+<pre>
+10
+11
+14
+17
+29
+77
+There is no such number.
+2688
+</pre>
+</td>
+</tr>
+</table>
+</div>

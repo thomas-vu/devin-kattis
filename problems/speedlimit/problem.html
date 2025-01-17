@@ -1,0 +1,94 @@
+<div class="problembody">
+<p>Bill and Ted are taking a road trip. But the odometer in
+    their car is broken, so they don’t know how many miles they
+    have driven. Fortunately, Bill has a working stopwatch, so they
+    can record their speed and the total time they have driven.
+    Unfortunately, their record keeping strategy is a little odd,
+    so they need help computing the total distance driven. You are
+    to write a program to do this computation.</p>
+<p>For example, if their log shows</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>Speed in miles per hour</p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>Total elapsed time in hours</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+</tr>
+</table>
+<p>this means they drove <span class="tex2jax_process">$2$</span> hours at <span class="tex2jax_process">$20$</span> miles per hour, then <span class="tex2jax_process">$6-2=4$</span> hours at <span class="tex2jax_process">$30$</span> miles per hour, then <span class="tex2jax_process">$7-6=1$</span> hour at <span class="tex2jax_process">$10$</span> miles per hour. The distance
+    driven is then <span class="tex2jax_process">$2 \cdot 20 + 4
+    \cdot 30 + 1 \cdot 10 = 40 + 120 + 10 = 170$</span> miles. Note
+    that the total elapsed time is always since the beginning of
+    the trip, not since the previous entry in their log.</p>
+<h2>Input</h2>
+<p>The input consists of one or more data sets (at most
+    <span class="tex2jax_process">$10$</span>). Each set starts
+    with a line containing an integer <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \le n \le 10$</span>, followed by <span class="tex2jax_process">$n$</span> pairs of values, one pair per
+    line. The first value in a pair, <span class="tex2jax_process">$s$</span>, is the speed in miles per hour
+    and the second value, <span class="tex2jax_process">$t$</span>,
+    is the total elapsed time. Both <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$t$</span> are integers, <span class="tex2jax_process">$1 \le s \le 90$</span> and <span class="tex2jax_process">$1 \le t \le 12$</span>. The values for
+    <span class="tex2jax_process">$t$</span> are always in strictly
+    increasing order. A value of <span class="tex2jax_process">$-1$</span> for <span class="tex2jax_process">$n$</span> signals the end of the input.</p>
+<h2>Output</h2>
+<p>For each input set, print the distance driven, followed by a
+    space, followed by the word “<tt class="ttfamily">miles</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+20 2
+30 6
+10 7
+2
+60 1
+30 5
+4
+15 1
+25 2
+30 3
+10 5
+-1
+</pre>
+</td>
+<td>
+<pre>
+170 miles
+180 miles
+90 miles
+</pre>
+</td>
+</tr>
+</table>
+</div>

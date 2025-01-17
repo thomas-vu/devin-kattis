@@ -1,0 +1,173 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/sannvirdi/file/statement/en/img-0001.png" class="illustration" src="/problems/sannvirdi/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Dröfn Karen loves the new game show, Sannvirði, in the
+    television programme schedule. What she enjoys the most is
+    seeing how happy the winner is once they receive the prize. She
+    is thrilled to watch each episode.</p>
+<p>Each episode begins with the game show host displaying some
+    item you may find for sale, for example, a refrigerator, an
+    automobile, a carrot, a bottle of perfume, and so forth. All
+    the contestants get to view the item for the same amount of
+    time. Then the contestants must guess what the real value of
+    the item is. The contestant which guesses closest, but not
+    above, the correct answer is the winner. Contestants make their
+    guesses simultaneously and cannot see the guesses of other
+    contestants. However, the viewers, such as Dröfn, receive all
+    of the information. The show cuts to very short interviews with
+    each contestant where they explain their guess.</p>
+<p>Of course, we cannot have television content without
+    commercials. Before the winner is announced, the show cuts to a
+    commercial break. Dröfn is shaking in excitement. She has her
+    own ideas of the item’s real value and wonders what contestant
+    would win if any of her ideas were the correct answer.</p>
+<p>Can you find the winner for each of Dröfn’s ideas?</p>
+<h2>Input</h2>
+<p>The first line consists of one integer <span class="tex2jax_process">$n$</span>, the number of contestants.</p>
+<p>Next, <span class="tex2jax_process">$n$</span> lines follow,
+    each describing a contestant. A contestant’s description
+    consists of a name and a guess, separated by a space. Each name
+    consists of at least <span class="tex2jax_process">$1$</span>
+    and at most <span class="tex2jax_process">$10$</span> English
+    lowercase characters. Each guess is an integer between
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$10^9$</span>, inclusive on both ends. You
+    may assume that no two contestants guessed the same value.</p>
+<p>A line containing one integer <span class="tex2jax_process">$q$</span>, the number of ideas, follows.</p>
+<p>Finally, <span class="tex2jax_process">$q$</span> lines
+    follow, each describing one of Dröfn’s ideas. Each idea is an
+    integer between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$10^9$</span>, inclusive on both
+    ends.</p>
+<h2>Output</h2>
+<p>For each idea, in the same order they appear in the input,
+    output the name of the contestant which wins if that idea were
+    the correct answer. If no contestant wins for the idea, you
+    should output <tt class="ttfamily">:(</tt>, since Dröfn will be
+    sad if nobody wins.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span>,
+          <span class="tex2jax_process">$q = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n = 1$</span>,
+          <span class="tex2jax_process">$1 \leq q \leq 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 1\,
+          000$</span>, <span class="tex2jax_process">$q =
+          1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq 1\,
+          000$</span>, <span class="tex2jax_process">$1 \leq q \leq
+          1\, 000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq 200\,
+          000$</span>, <span class="tex2jax_process">$1 \leq q \leq
+          200\, 000$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+Hannes 10
+1
+9
+</pre>
+</td>
+<td>
+<pre>:(
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Eva 500
+Sammi 100
+Arnar 1000
+4
+1000000000
+500
+499
+250
+</pre>
+</td>
+<td>
+<pre>Arnar
+Eva
+Sammi
+Sammi
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>The legendary starship of Flatland, Rectalateral, needs to
+    escape from a star which is about to go supernova by
+    teleporting away. Unfortunately, the possible teleport
+    destinations are in the middle of an asteroid field. Luckily,
+    you have a map of the asteroid field with the exact radius and
+    location of the asteroids (asteroids in Flatland are circles,
+    obviously). As the navigator on board, you must investigate
+    each of the possible teleport destinations and determine if
+    they are safe.</p>
+<p>A teleportation destination is safe if and only if no
+    asteroid would touch or overlap Rectalateral immediately after
+    the teleportation completes. Rectalateral will be axis-aligned
+    after the teleportation (the sides of Rectalateral are parallel
+    to the <span class="tex2jax_process">$x$</span>-axis or the
+    <span class="tex2jax_process">$y$</span>-axis).</p>
+<h2>Input</h2>
+<p>The first line of input is two integers <span class="tex2jax_process">$ 1\leq w, h \leq 100$</span>, the width and
+    height of the rectangular Rectalateral.</p>
+<p>The second line of input is two integers <span class="tex2jax_process">$n, m$</span>, where <span class="tex2jax_process">$1 \leq n \leq 100$</span> is the number of
+    asteroids in the asteroid field, and <span class="tex2jax_process">$1 \leq m \leq 100$</span> is the number of
+    potential teleportation destinations.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines are
+    each three integers <span class="tex2jax_process">$x_ a , y_ a
+    , r_ a$</span>, where <span class="tex2jax_process">$-1000 \leq
+    x_ a , y_ a \leq 1000$</span> is the location of the center of
+    the circular asteroid and <span class="tex2jax_process">$1 \leq
+    r_ a \leq 100$</span> is the radius of the asteroid.</p>
+<p>The next <span class="tex2jax_process">$m$</span> lines are
+    each two integers <span class="tex2jax_process">$x_ r,y_
+    r$</span>, where <span class="tex2jax_process">$-1000 \leq x_
+    r,y_ r \leq 1000$</span> is the location of the bottom-left
+    corner of Rectalateral after the teleport. (This means that the
+    top-right corner will be at <span class="tex2jax_process">$(x_
+    r + w, y_ r + h)$</span>.)</p>
+<p>The <span class="tex2jax_process">$x$</span>-axis increases
+    rightwards, and the <span class="tex2jax_process">$y$</span>-axis increases upwards.</p>
+<h2>Output</h2>
+<p>For each potential teleportation destination, in the order
+    the teleportation destinations were given, output a single line
+    “<tt>DOOMSLUG GO!</tt>” if the teleport destination is safe,
+    otherwise output a single line “<tt>DOOMSLUG STOP!</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+2 4
+0 0 10
+7 9 1
+8 6
+8 7
+8 9
+0 0
+</pre>
+</td>
+<td>
+<pre>DOOMSLUG STOP!
+DOOMSLUG GO!
+DOOMSLUG STOP!
+DOOMSLUG STOP!
+</pre>
+</td>
+</tr>
+</table>
+</div>

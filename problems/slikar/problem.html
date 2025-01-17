@@ -1,0 +1,107 @@
+<div class="problembody">
+<p>The evil emperor Cactus has in his possession the Magic Keg
+    and has flooded the Enchanted Forest! The Painter and the three
+    little hedgehogs now have to return to the Beaver’s den where
+    they will be safe from the water as quickly as possible!</p>
+<p>The map of the Enchanted Forest consists of R rows and C
+    columns. Empty fields are represented by ‘<tt class="ttfamily">.</tt>’ characters, flooded fields by ‘<tt class="ttfamily">*</tt>’ and rocks by ‘<tt class="ttfamily">X</tt>’.
+    Additionally, the Beaver’s den is represented by ‘<tt class="ttfamily">D</tt>’ and the Painter and the three little
+    hedgehogs are shown as ‘<tt class="ttfamily">S</tt>’.</p>
+<p>Every minute the Painter and the three little hedgehogs can
+    move to one of the four neighbouring fields (up, down, left or
+    right). Every minute the flood expands as well so that all
+    empty fields that have at least one common side with a flooded
+    field become flooded as well. Neither water nor the Painter and
+    the three little hedgehogs can pass through rocks. Naturally,
+    the Painter and the three little hedgehogs cannot pass through
+    flooded fields, and water cannot flood the Beaver’s den.</p>
+<p>Write a program that will, given a map of the Enchanted
+    Forest, output the <b class="bfseries">shortest</b> time needed
+    for the Painter and the three little hedgehogs to safely reach
+    the Beaver’s den.</p>
+<p><b class="bfseries">Note:</b> The Painter and the three
+    little hedgehogs cannot move into a field that is about to be
+    flooded (in the same minute).</p>
+<h2>Input</h2>
+<p>The first line of input will contain two positive integers,
+    <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span>, smaller than or equal to
+    <span class="tex2jax_process">$50$</span>. The following
+    <span class="tex2jax_process">$R$</span> lines will each
+    contain <span class="tex2jax_process">$C$</span> characters
+    (‘<tt class="ttfamily">.</tt>’, ‘<tt class="ttfamily">*</tt>’,
+    ‘<tt class="ttfamily">X</tt>’, ‘<tt class="ttfamily">D</tt>’ or
+    ‘<tt class="ttfamily">S</tt>’). The map will contain exactly
+    one ‘<tt class="ttfamily">D</tt>’ character and exactly one
+    ‘<tt class="ttfamily">S</tt>’ character.</p>
+<h2>Output</h2>
+<p>Output the shortest possible time needed for the Painter and
+    the three little hedgehogs to safely reach the Beaver’s den. If
+    this is impossible output the word “<tt class="ttfamily">KAKTUS</tt>” on a line by itself.</p>
+<p><b class="bfseries">Clarification of the second sample test
+    below:</b> The best they can do is to go along the lower border
+    and then the left border, and get flooded one minute before
+    reaching the den.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+D.*
+...
+.S.
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+D.*
+...
+..S
+</pre>
+</td>
+<td>
+<pre>
+KAKTUS
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 6
+D...*.
+.X.X..
+....S*
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>The <em>complexity </em> of an integer is the minimum number
+    of <span class="tex2jax_process">$1$</span>’s needed to
+    represent it using only addition, multiplication and
+    parentheses. For example, the complexity of <span class="tex2jax_process">$2$</span> is <span class="tex2jax_process">$2$</span> (writing <span class="tex2jax_process">$2$</span> as <span class="tex2jax_process">$1+1$</span>) and the complexity of
+    <span class="tex2jax_process">$12$</span> is <span class="tex2jax_process">$7$</span> (writing <span class="tex2jax_process">$12$</span> as <span class="tex2jax_process">$(1+1+1)\times (1+1+1+1)$</span>). We’ll
+    modify this definition slightly to allow the concatenation
+    operation as well. This operation (which we’ll represent using
+    ©) takes two integers and “glues” them together, so
+    <span class="tex2jax_process">$12\ $</span>©<span class="tex2jax_process">$\ 34$</span> becomes the four digit number
+    <span class="tex2jax_process">$1234$</span>. Using this
+    operation, the complexity of <span class="tex2jax_process">$12$</span> is now <span class="tex2jax_process">$3$</span> (writing it either as <span class="tex2jax_process">$(1 \ $</span>©<span class="tex2jax_process">$\ 1) + 1$</span> or <span class="tex2jax_process">$1\ $</span>©<span class="tex2jax_process">$\
+    (1+1)$</span>). Note that the concatenation operation ignores
+    any initial zeroes in the second operand: <span class="tex2jax_process">$1\ $</span>©<span class="tex2jax_process">$\
+    01$</span> does not result in <span class="tex2jax_process">$101$</span> but results in <span class="tex2jax_process">$11$</span>.</p>
+<p>We’ll give you <span class="tex2jax_process">$1$</span>
+    guess what the object of this problem is.</p>
+<h2>Input</h2>
+<p>Each test case consists of a single line containing an
+    integer <span class="tex2jax_process">$n$</span>, where
+    <span class="tex2jax_process">$0 &lt; n \leq 100\,
+    000$</span>.</p>
+<h2>Output</h2>
+<p>Output the complexity of the number, using the revised
+    definition above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>2
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

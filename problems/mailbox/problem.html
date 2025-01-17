@@ -1,0 +1,88 @@
+<div class="problembody">
+<p>In the good old days when Swedish children were still
+    allowed to blow up their fingers with fire-crackers, gangs of
+    excited kids would plague certain smaller cities during Easter
+    time, with only one thing in mind: To blow things up. Small
+    boxes were easy to blow up, and thus mailboxes became a popular
+    target. Now, a small mailbox manufacturer is interested in how
+    many fire-crackers his new mailbox prototype can withstand
+    without exploding and has hired you to help him. He will
+    provide you with <span class="tex2jax_process">$k$</span>
+    (<span class="tex2jax_process">$1 \le k \le 10$</span>)
+    identical mailbox prototypes each fitting up to <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le m \le 100$</span>) crackers.</p>
+<p>However, he is not sure of how many fire-crackers he needs
+    to provide you with in order for you to be able to solve his
+    problem, so he asks you. You think for a while and then
+    say:</p>
+<p>“Well, if I blow up a mailbox I can’t use it again, so if
+    you would provide me with only <span class="tex2jax_process">$k
+    = 1$</span> mailboxes, I would have to start testing with
+    <span class="tex2jax_process">$1$</span> cracker, then
+    <span class="tex2jax_process">$2$</span> crackers, and so on
+    until it finally exploded. In the worst case, that is if it
+    does not blow up even when filled with <span class="tex2jax_process">$m$</span> crackers, I would need
+    <span class="tex2jax_process">$1 + 2 + 3 + \ldots + m = \frac{m
+    (m + 1)}{2}$</span> crackers. If <span class="tex2jax_process">$m = 100$</span> that would mean more than
+    <span class="tex2jax_process">$5000$</span> fire-crackers!”</p>
+<p>“That’s too many”, he replies. “What if I give you more than
+    <span class="tex2jax_process">$k = 1$</span> mailboxes? Can you
+    find a strategy that requires fewer fire crackers?”</p>
+<p>Can you? And what is the minimum number of crackers that you
+    should ask him to provide you with?</p>
+<p>You may assume the following:</p>
+<ol class="enumerate">
+<li>
+<p>If a mailbox can withstand <span class="tex2jax_process">$x$</span> fire-crackers, it can also
+        withstand <span class="tex2jax_process">$x-1$</span>
+        fire-crackers.</p>
+</li>
+<li>
+<p>Upon an explosion, a mailbox is either totally destroyed
+        (blown up) or unharmed, which means that it can be reused
+        in another test explosion.</p>
+</li>
+</ol>
+<p><em>Note:</em> If the mailbox can withstand a full load of
+    <span class="tex2jax_process">$m$</span> fire-crackers, then
+    the manufacturer will of course be satisfied with that answer.
+    But otherwise he is looking for the maximum number of crackers
+    that his mailboxes can withstand.</p>
+<h2>Input</h2>
+<p>The input starts with a single integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 100$</span>) indicating the number of test cases to
+    follow. Each test case is described by a line containing two
+    integers: <span class="tex2jax_process">$k$</span> and
+    <span class="tex2jax_process">$m$</span>, separated by a single
+    space.</p>
+<h2>Output</h2>
+<p>For each test case print one line with a single integer
+    indicating the minimum number of fire-crackers that is needed,
+    in the worst case, in order to figure out how many crackers the
+    mailbox prototype can withstand.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 10
+1 100
+3 73
+5 100
+</pre>
+</td>
+<td>
+<pre>
+55
+5050
+382
+495
+</pre>
+</td>
+</tr>
+</table>
+</div>

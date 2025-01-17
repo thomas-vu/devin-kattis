@@ -1,0 +1,48 @@
+<div class="problembody">
+<p>An integer <span class="tex2jax_process">$m$</span> is a
+    rotated number of some integer <span class="tex2jax_process">$n$</span> if <span class="tex2jax_process">$m$</span> can be obtained by moving some
+    digits from the back of <span class="tex2jax_process">$n$</span> to the front without changing
+    their order. In this case, <span class="tex2jax_process">$(n,m)$</span> is considered as a rotated
+    pair. For example, <span class="tex2jax_process">$(1234,4123)$</span> is a rotated pair since
+    you can obtain <span class="tex2jax_process">$4123$</span> by
+    moving <span class="tex2jax_process">$4$</span> from the back
+    of <span class="tex2jax_process">$1234$</span> to the front.
+    Note that both <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$m$</span> do not contain leading
+    zeros.</p>
+<p>Given two integers <span class="tex2jax_process">$A$</span>
+    and <span class="tex2jax_process">$B$</span>, your task is to
+    count the number of distinct rotated pairs <span class="tex2jax_process">$(n,m)$</span> with <span class="tex2jax_process">${A \leq n &lt; m \leq B}$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of several datasets. The first line of
+    the input contains the number of datasets, which is not greater
+    than <span class="tex2jax_process">$100$</span>. The following
+    lines describe the datasets.</p>
+<p>Each dataset is printed in one line containing two integers
+    <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span> (<span class="tex2jax_process">${1
+    \leq A &lt; B \leq 10^6}$</span>).</p>
+<h2>Output</h2>
+<p>For each dataset, write out on one line the number of
+    rotated pairs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 10
+10 50
+</pre>
+</td>
+<td>
+<pre>
+0
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

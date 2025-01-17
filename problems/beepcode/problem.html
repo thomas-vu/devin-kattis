@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>Aecepece is having computer problems. Their computer will
+    not turn on, and is producing a beeping sound which is supposed
+    to help diagnose the issue, but they cannot seem to analyze it
+    by ear. Your task is to analyze a recording of this beeping
+    sound to determine what the problems are.</p>
+<p>There are <span class="tex2jax_process">$20$</span>
+    different things that can go wrong with the computer, and any
+    subset of those <span class="tex2jax_process">$20$</span>
+    problems may actually be occurring. Additionally, for each
+    problem which occurs, the computer will indicate that it is due
+    to one of two reasons: <tt class="ttfamily">A</tt> or
+    <tt class="ttfamily">B</tt>. The problems are indicated by
+    <em>square waves</em> with a specific period and phase. A
+    square wave with period <span class="tex2jax_process">$p$</span> and phase <tt class="ttfamily">A</tt> is a repeating sequence of <span class="tex2jax_process">$p/2$</span> ones followed by <span class="tex2jax_process">$p/2$</span> zeros. Similarly, a square wave
+    with period <span class="tex2jax_process">$p$</span> and phase
+    <tt class="ttfamily">B</tt> is a repeating sequence of
+    <span class="tex2jax_process">$p/2$</span> zeros followed by
+    <span class="tex2jax_process">$p/2$</span> ones. For example,
+    the following is a square wave with period <span class="tex2jax_process">$4$</span> and phase <tt class="ttfamily">A</tt>:</p><span class="tex2jax_process">\begin{equation*} 1~ 1~ 0~ 0~ 1~ 1~ 0~ 0~ 1~
+    1~ 0~ 0~ 1~ 1~ 0~ 0~ \dots \end{equation*}</span>
+<p>and the following is a square wave with period <span class="tex2jax_process">$2$</span> and with phase <tt class="ttfamily">B</tt>:</p><span class="tex2jax_process">\begin{equation*} 0~ 1~ 0~ 1~ 0~ 1~ 0~ 1~ 0~
+    1~ 0~ 1~ 0~ 1~ 0~ 1~ \dots \end{equation*}</span>
+<p>If problem <span class="tex2jax_process">$k$</span>
+    (<span class="tex2jax_process">$1\le k\le 20$</span>) occurs,
+    the computer generates a square wave with a period of
+    <span class="tex2jax_process">$2^ k$</span> and with phase
+    matching the reason for the problem. The computer generates
+    waves for all problems which are occurring and sums them to
+    produce an integer sequence <span class="tex2jax_process">$a_1,a_2,\dots $</span> which it then plays
+    using the speaker. For example, if the previous two example
+    square waves are summed, the following sequence <span class="tex2jax_process">$a_1,a_2,\dots $</span> would
+    result:</p><span class="tex2jax_process">\begin{equation*} 1~
+    2~ 0~ 1~ 1~ 2~ 0~ 1~ 1~ 2~ 0~ 1~ 1~ 2~ 0~ 1~ \dots
+    \end{equation*}</span>
+<p>The recording you need to analyze is a prefix of the
+    infinite sequence <span class="tex2jax_process">$a_1,a_2,\dots
+    $</span>. However, Aecepece is not sure if they made a long
+    enough recording to detect all of the problems. You should
+    determine as much as you can from it.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$2\le N\le 2^{20}$</span>, the length of the
+    recording. The second line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$a_1,\dots ,a_ N$</span>, where <span class="tex2jax_process">$0\le a_ i\le 20$</span>.</p>
+<h2>Output</h2>
+<p>The output should consist of <span class="tex2jax_process">$20$</span> characters (separated by spaces),
+    where character <span class="tex2jax_process">$k$</span>
+    indicates what you were able to determine about problem
+    <span class="tex2jax_process">$k$</span>. If the problem did
+    not occur, write <tt class="ttfamily">x</tt>. If it occurred,
+    write <tt class="ttfamily">A</tt> or <tt class="ttfamily">B</tt> to denote the reason. If the recording was
+    not long enough to determine with certainty whether the problem
+    occurred, write <tt class="ttfamily">?</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 2 0 1
+</pre>
+</td>
+<td>
+<pre>B A ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>17
+0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1
+</pre>
+</td>
+<td>
+<pre>B x x x B ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8
+19 18 20 19 18 17 19 18
+</pre>
+</td>
+<td>
+<pre>A B A A A A A A A A A A A A A A A A A A
+</pre>
+</td>
+</tr>
+</table>
+</div>

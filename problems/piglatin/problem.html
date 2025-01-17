@@ -1,0 +1,83 @@
+<div class="problembody">
+<p>Ancay youyay eakspay igpay atinlay? (Can you speak pig
+    latin?) If you can’t, here are the rules:</p>
+<ul class="itemize">
+<li>
+<p>If a word begins with a consonant, take all of the
+        letters before the first vowel and move them to the end of
+        the word, then add <i class="itshape">ay</i> to the end of
+        the word. Examples: <i class="itshape">pig</i> <span class="tex2jax_process">$\to $</span> <i class="itshape">igpay</i>, <i class="itshape">there</i>
+<span class="tex2jax_process">$\to $</span> <i class="itshape">erethay</i>.</p>
+</li>
+<li>
+<p>If a word begins with a vowel (<i class="itshape">a</i>,
+        <i class="itshape">e</i>, <i class="itshape">i</i>,
+        <i class="itshape">o</i>, <i class="itshape">u</i>, or
+        <i class="itshape">y</i>), simply add <i class="itshape">yay</i> to the end of the word. For this problem,
+        <i class="itshape">y</i> is always a vowel. Examples:
+        <i class="itshape">and</i> <span class="tex2jax_process">$\to $</span> <i class="itshape">andyay</i>, <i class="itshape">ordinary</i>
+<span class="tex2jax_process">$\to $</span> <i class="itshape">ordinaryyay</i>.</p>
+</li>
+</ul>
+<p>Although there are many variants of Pig Latin (such as
+    Kedelkloppersprook in Germany), for this problem we will always
+    use the rules described above.</p>
+<p>A friend of yours was frustrated with everyone writing in
+    Pig Latin and has asked you to write a program to translate to
+    Pig Latin for him. Ouldway youyay ebay osay indkay otay oday
+    ityay? (Would you be so kind to do it?)</p>
+<h2>Input</h2>
+<p>Input consists of <span class="tex2jax_process">$1$</span>
+    to <span class="tex2jax_process">$4\, 000$</span> lines, ending
+    at end of file. Each line contains up to <span class="tex2jax_process">$100$</span> words, each word up to
+    <span class="tex2jax_process">$30$</span> characters long,
+    using only the characters a–z (lowercase). Every word contains
+    at least one vowel, and adjacent words are separated by a
+    single space. No punctuation or special characters will appear
+    in the input.</p>
+<h2>Output</h2>
+<p>Your program should output the text translated to Pig Latin
+    using the rules described above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+i cant speak pig latin
+</pre>
+</td>
+<td>
+<pre>
+iyay antcay eakspay igpay atinlay
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+the quick brown fox
+jumps over the lazy dog
+and ordinary foxes
+dont jump over lazy dogs
+</pre>
+</td>
+<td>
+<pre>
+ethay uickqay ownbray oxfay
+umpsjay overyay ethay azylay ogday
+andyay ordinaryyay oxesfay
+ontday umpjay overyay azylay ogsday
+</pre>
+</td>
+</tr>
+</table>
+</div>

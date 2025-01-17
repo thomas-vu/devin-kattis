@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Anthony has two multiple choice assignments to hand in
+    today. The answer to each assignment is a string, where the
+    <span class="tex2jax_process">$i^\textrm {th}$</span> letter
+    represents the answer to the <span class="tex2jax_process">$i^\textrm {th}$</span> question.</p>
+<p>But instead of handing in two strings, Anthony only hands in
+    a single string. He claims he answered every question correctly
+    but his little sister Cora merged his two strings into a single
+    string. Moreover, Cora merged his string in such a way that the
+    following conditions are satisfied:</p>
+<ol class="enumerate">
+<li>
+<p>For any two integers <span class="tex2jax_process">$0\leq i&lt;j&lt;|s_1|$</span> (where
+        <span class="tex2jax_process">$|s_1|$</span> is the length
+        of <span class="tex2jax_process">$s_1$</span>), the index
+        of <span class="tex2jax_process">$s_1[i]$</span> in
+        <span class="tex2jax_process">$s$</span> is less than the
+        index of <span class="tex2jax_process">$s_1[j]$</span> in
+        <span class="tex2jax_process">$s$</span></p>
+</li>
+<li>
+<p>For any two integers <span class="tex2jax_process">$0\leq i&lt;j&lt;|s_2|$</span>, the index
+        of <span class="tex2jax_process">$s_2[i]$</span> in
+        <span class="tex2jax_process">$s$</span> is less than the
+        index of <span class="tex2jax_process">$s_2[j]$</span> in
+        <span class="tex2jax_process">$s$</span></p>
+</li>
+</ol>
+<p>Can you help Anthony’s teacher verify whether Anthony’s
+    claim is possible?</p>
+<h2>Input</h2>
+<p>The first line contains a single string <span class="tex2jax_process">$s$</span>. It is guaranteed that
+    <span class="tex2jax_process">$2\leq |s|\leq 10\,
+    000$</span>.</p>
+<p>The next two lines contain strings <span class="tex2jax_process">$s_1$</span> and <span class="tex2jax_process">$s_2$</span> respectively. It is guaranteed
+    that <span class="tex2jax_process">$1\leq |s_1|, |s_2|\leq 5\,
+    000$</span> and <span class="tex2jax_process">$|s_1|+|s_2|=|s|$</span>.</p>
+<p>All the strings consists of only lowercase English
+    letters.</p>
+<h2>Output</h2>
+<p>If Anthony’s claim is possible, print “yes” (without
+    quotes). Otherwise, print “no” (without quotes).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>aabcad
+aba
+acd
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>aabcad
+acb
+aad
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

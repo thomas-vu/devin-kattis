@@ -1,0 +1,65 @@
+<div class="problembody">
+<p>The new semester is about to begin, and finding classrooms
+    for orientation activities is always a headache.</p>
+<p>There are <span class="tex2jax_process">$k$</span>
+    classrooms on campus and <span class="tex2jax_process">$n$</span> proposed activities that need to
+    be assigned a venue. Every proposed activity has specfic
+    starting time <span class="tex2jax_process">$s_ i$</span> and
+    ending time <span class="tex2jax_process">$f_ i$</span>. Any
+    such an activity should take place at one of the classrooms.
+    Any of the <span class="tex2jax_process">$k$</span> classrooms
+    is big enough to hold any of the proposed activities, and each
+    classroom can hold at most one activity at any time. No two
+    proposed activities can take place at the same classroom at the
+    same time. Even if two proposed activities overlap momentarily
+    (the ending time of one activity equals the starting time
+    another activity), they cannot be assigned to the same
+    classroom.</p>
+<p>There are so many proposed activities that there may not be
+    enough classrooms to hold all the activities. It is desirable
+    to have as many activities as possible. At most how many
+    proposed activities can be assigned to the classrooms?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains two positive integers
+        <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq n \leq 200\, 000$</span>),
+        representing the number of proposed activities and number
+        of classrooms, respectively.</p>
+</li>
+<li>
+<p>The following <span class="tex2jax_process">$n$</span>
+        lines each contains two positive integers: the <span class="tex2jax_process">$i$</span>th line among these
+        <span class="tex2jax_process">$n$</span> lines contains
+        <span class="tex2jax_process">$s_ i$</span> and
+        <span class="tex2jax_process">$f_ i$</span> (<span class="tex2jax_process">$1 \leq s_ i \leq f_ i \leq
+        10^9$</span>), indicating the starting time and ending time
+        of proposed activity <span class="tex2jax_process">$i$</span>.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output an integer indicating the maximum number proposed
+    activities that can be scheduled.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 2
+1 4
+2 9
+4 7
+5 8
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

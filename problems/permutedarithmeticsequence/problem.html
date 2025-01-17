@@ -1,0 +1,44 @@
+<div class="problembody">
+<p>An arithmetic sequence is a list of values where the
+    difference between consecutive values is always the same. For
+    example, <span class="tex2jax_process">$3, 7, 11, 15$</span>
+    qualifies and so does <span class="tex2jax_process">$25, 15, 5,
+    -5, -15$</span>. However <span class="tex2jax_process">$2, 4,
+    7$</span> and <span class="tex2jax_process">$3, 6, 9, 6$</span>
+    are not arithmetic sequences.</p>
+<h2>Input</h2>
+<p>Input begins with an integer, <span class="tex2jax_process">$1 \leq n \leq 100$</span>, on a line by
+    itself. Following this are <span class="tex2jax_process">$n$</span> lines, each describing a sequence.
+    Each line begins with an integer, <span class="tex2jax_process">$3 \leq m \leq 100$</span>, giving the length
+    of the sequence. This is followed by the <span class="tex2jax_process">$m$</span> integer values that actually make
+    up the sequence. Each of the sequence integers is in the range
+    <span class="tex2jax_process">$[-10^6,10^6]$</span>.</p>
+<h2>Output</h2>
+<p>For each sequence, output a line that says “arithmetic” if
+    the sequence is an arithmetic sequence. Output “permuted
+    arithmetic” if the sequence can be reordered to make an
+    arithmetic sequence. Otherwise, output “non-arithmetic”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+5 1 2 3 4 5
+3 20 6 13
+4 5 9 15 19
+</pre>
+</td>
+<td>
+<pre>
+arithmetic
+permuted arithmetic
+non-arithmetic
+</pre>
+</td>
+</tr>
+</table>
+</div>

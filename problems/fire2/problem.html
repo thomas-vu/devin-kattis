@@ -1,0 +1,103 @@
+<div class="problembody">
+<p>You are trapped in a building consisting of open spaces and
+    walls. Some places are on fire and you have to run for the
+    exit. Will you make it?</p>
+<p>At each second, the fire will spread to all open spaces
+    directly connected to the North, South, East or West side of
+    it. Fortunately, walls will never catch fire and will keep the
+    fire inside the building, so as soon as you are out of the
+    building you will be safe. To run to any of the four open
+    spaces adjacent to you takes you exactly one second. You cannot
+    run through a wall or into an open space that is on fire or is
+    just catching fire, but you can run out of an open space at the
+    same moment it catches fire.</p>
+<p>Given a map of the building, decide how fast you can exit
+    the building.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with two space-separated integers <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span> <span class="tex2jax_process">$(1\le w, h \le 1\, 000)$</span>: the
+        width and height of the map of the building,
+        respectively.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$h$</span> lines with
+        <span class="tex2jax_process">$w$</span> characters each:
+        the map of the building, consisting of</p>
+<ul class="itemize">
+<li>
+<p>‘<tt>.</tt>’: a room,</p>
+</li>
+<li>
+<p>‘<tt>#</tt>’: a wall,</p>
+</li>
+<li>
+<p>‘<tt>@</tt>’: your starting location,</p>
+</li>
+<li>
+<p>‘<tt>*</tt>’: fire.</p>
+</li>
+</ul>
+<p>There will be exactly one ‘<tt>@</tt>’ in the map.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a single integer which is the minimal
+        number of seconds that you need to exit the building or the
+        string “<tt>IMPOSSIBLE</tt>” when this is not possible.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+4 3
+####
+#*@.
+####
+7 6
+###.###
+#*#.#*#
+#.....#
+#.....#
+#..@..#
+#######
+7 4
+###.###
+#....*#
+#@....#
+.######
+5 5
+.....
+.***.
+.*@*.
+.***.
+.....
+3 3
+###
+#@#
+###
+</pre>
+</td>
+<td>
+<pre>
+2
+5
+IMPOSSIBLE
+IMPOSSIBLE
+IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

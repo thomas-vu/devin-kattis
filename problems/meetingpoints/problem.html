@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/meetingpoints/file/statement/en/img-0001.jpg" class="illustration" src="/problems/meetingpoints/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://commons.wikimedia.org/w/index.php?curid=11306796">Radosław
+        Dro zd zewski (Wikimedia Commons)</a>, CC <span class="mbox" style="width:">BY-SA</span> 3.0
+      </div>
+</div>
+<p>This problem is very simple. Given <span class="tex2jax_process">$n$</span> lines lying in the <span class="mbox" style="width:"><span class="tex2jax_process">$x$</span>-<span class="tex2jax_process">$y$</span></span> plane, determine the number
+    of intersection points. Here are the details:</p>
+<ol class="enumerate">
+<li>
+<p>Each line is specified by two distinct points,
+        <span class="mbox" style="width:"><span class="tex2jax_process">$(x_1, y_1)$</span></span> and
+        <span class="mbox" style="width:"><span class="tex2jax_process">$(x_2, y_2)$</span></span>, through which
+        the line passes.</p>
+</li>
+<li>
+<p>All <span class="tex2jax_process">$n$</span> lines are
+        distinct, i.e., no two lines will be coincident (lie on top
+        of each other).</p>
+</li>
+<li>
+<p>You are guaranteed that there is no point in the plane
+        at which three or more lines intersect.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first input line contains an integer <span class="tex2jax_process">$n$</span> <span class="mbox" style="width:">(<span class="tex2jax_process">$2 \leq n \leq 100\,
+    000$</span>)</span>, the number of lines in the <span class="mbox" style="width:"><span class="tex2jax_process">$x$</span>-<span class="tex2jax_process">$y$</span></span> plane. This is followed by
+    <span class="tex2jax_process">$n$</span> input lines, each
+    containing the specification of a line in the plane given as
+    four space-separated integers, <span class="tex2jax_process">$x_1$</span> <span class="tex2jax_process">$y_1$</span> <span class="tex2jax_process">$x_2$</span> <span class="tex2jax_process">$y_2$</span>. Each coordinate is at most
+    <span class="tex2jax_process">$10^6$</span> in absolute
+    value.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of intersection
+    points.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+-1 0 1 0
+0 1 0 -1
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1 2 2
+2 2 3 1
+3 1 1 1
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0 2 2 0
+0 -2 2 0
+0 2 0 -2
+-1 -1 0 1
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+</div>

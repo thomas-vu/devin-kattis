@@ -1,0 +1,122 @@
+<div class="problembody">
+<p>Unnur has an interest in plants. She waters all her plants
+    once a day. Most of the plants are rather normal, but one of
+    her trees is especially odd and unique. That’s Unnur’s
+    wondertree. The wondertree is originally just a branch sticking
+    out of the ground, but that branch is often called the root of
+    the wondertree. The wondertree is special in the sense that it
+    grows differently depending on where you water it. If a branch
+    is watered then another branch will grow from it. The same
+    branch can not be watered too often, if a branch is watered
+    more than <span class="tex2jax_process">$k$</span> times the
+    tree wilts and dies. Unnur waters exactly one branch per day.
+    If a branch has never been watered it is called a leaf. The
+    wondertree thus always has at least one leaf. The width of the
+    wondertree is defined as the number of leaves. The width of the
+    wondertree is defined as the number of leaves. The width of the
+    wondertree is thus initially <span class="tex2jax_process">$1$</span>. The height of the wondertree is
+    defined as the number of branches in the longest path from the
+    root to a leaf, including the root and the leaf. Thus the
+    height of the wondertree is initially <span class="tex2jax_process">$1$</span>. Unnur wonders how wide and high
+    the wondertree could be in <span class="tex2jax_process">$n$</span> days. Can you help her?</p>
+<h2>Input</h2>
+<p>The first and only line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$k$</span>, the number of days and how often
+    each branch can be watered.</p>
+<h2>Output</h2>
+<p>Two lines where the frst line contains the minimum and
+    maximum height possible after <span class="tex2jax_process">$n$</span> days. The second line should
+    contain the minimum and maximum width possible after
+    <span class="tex2jax_process">$n$</span> days.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n \leq
+          10^{9}$</span>, <span class="tex2jax_process">$k =
+          2$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$0 \leq n \leq
+          10^{15}$</span>, <span class="tex2jax_process">$1 \leq k
+          \leq 10^4$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+</pre>
+</td>
+<td>
+<pre>3 6
+1 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14 2
+</pre>
+</td>
+<td>
+<pre>4 15
+1 8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>14 5
+</pre>
+</td>
+<td>
+<pre>3 15
+1 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

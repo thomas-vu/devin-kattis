@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>In your base you have dug through sand and rock to construct
+    a deep pit with stairs and a lift. The pit goes very deep into
+    the ground where on various floors you leave equipment and on
+    the deepest levels you leave cheeses to age, particularly
+    Eidam. You often take a stroll downstairs, but wonder whether
+    it is faster to go up to the surface by foot or take a lift for
+    a part or all of the trip.</p>
+<p>You know the position and the speed of yourself and the
+    lift. The surface floor is numbered <span class="tex2jax_process">$0$</span>, positive numbers denote
+    underground floors by their distance to the surface. You are
+    alone on the Mars so only you will use the lift. Also, it takes
+    (you and lift) almost no time to start and stop moving so you
+    will neglect these. When the lift is called to multiple floors,
+    it moves to them in the same order in which it was called. The
+    lift is not very special – once you enter it, you may order it
+    to go to an arbitrary floor. In such case, any previous calls
+    must be processed first.</p>
+<h2>Input</h2>
+<p>The first input line contains a single integer <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1
+    \le T \le 10^4$</span>), the number of test cases.</p>
+<p>Next <span class="tex2jax_process">$T$</span> lines contain
+    one test case each. Each test case is composed of four
+    integers: <span class="tex2jax_process">$Y_ p$</span>,
+    <span class="tex2jax_process">$L_ p$</span>, <span class="tex2jax_process">$Y_ s$</span>, <span class="tex2jax_process">$L_ s$</span> where <span class="tex2jax_process">$0 \le Y_ p, L_ p \le 10^9$</span> are the
+    initial floors of you and the lift, and <span class="tex2jax_process">$0 &lt; Ys, Ls \le 10^6$</span> are the times
+    it takes you and of the lift to move by one floor,
+    respectively.</p>
+<h2>Output</h2>
+<p>For each test case, print a single integer – the minimum
+    time it takes you to move from your initial floor to the
+    <span class="tex2jax_process">$0$</span>’th floor.</p>
+<h2>Sample Explanation</h2>
+<p>The first sample contains two test cases. In the first one,
+    you will rather walk to <span class="tex2jax_process">$0$</span>’th floor than to wait for the lift
+    which is <span class="tex2jax_process">$18$</span> floors
+    away.</p>
+<p>In the second test case, an example of the fastest way is
+    when you call the lift and walk 1 floor upstairs in the
+    meantime, then you call the lift to <span class="tex2jax_process">$9$</span>’th underground floor and wait for
+    the lift which you then take to the <span class="tex2jax_process">$0$</span>’th floor.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+2 20 10 2
+10 20 10 2
+</pre>
+</td>
+<td>
+<pre>20
+40
+</pre>
+</td>
+</tr>
+</table>
+</div>

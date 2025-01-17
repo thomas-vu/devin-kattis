@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>In an unprecedented turn of events, goblins recently
+    launched an invasion against the Nedewsian city of Mlohkcots.
+    Goblins—small, green critters—love nothing more than to
+    introduce additional entropy into the calm and ordered lives of
+    ordinary people. They fear little, but one of the few things
+    they fear is water.</p>
+<p>The goblin invasion has now reached the royal gardens, where
+    the goblins are busy stealing fruit, going for joyrides on the
+    lawnmower and carving the trees into obscene shapes, and King
+    Lrac Fatsug has decreed that this nonsense stop
+    immediately!</p>
+<p>Thankfully, the garden is equipped with an automated
+    sprinkler system. Enabling the sprinklers will soak all goblins
+    within range, forcing them to run home and dry themselves.</p>
+<p>Serving in the royal garden guards, you have been asked to
+    calculate how many goblins will remain in the royal garden
+    after the sprinklers have been turned on, so that the royal
+    gardeners can plan their next move.</p>
+<h2>Input</h2>
+<p>The input starts with one integer <span class="tex2jax_process">$1 \leq g \leq 100\ 000$</span>, the number
+    of goblins in the royal gardens.</p>
+<p>Then, for each goblin follows the position of the goblin as
+    two integers, <span class="tex2jax_process">$0 \leq x_ i \leq
+    10\ 000$</span> and <span class="tex2jax_process">$0 \leq y_ i
+    \leq 10\ 000$</span>. The garden is flat, square and all
+    distances are in meters. Due to quantum interference, several
+    goblins can occupy exactly the same spot in the garden.</p>
+<p>Then follows one integer <span class="tex2jax_process">$1
+    \leq m \leq 20\, 000$</span>, the number of sprinklers in the
+    garden.</p>
+<p>Finally, for each sprinkler follows the location of the
+    sprinkler as two integers <span class="tex2jax_process">$0 \leq
+    x_ i \leq 10\ 000$</span> and <span class="tex2jax_process">$0
+    \leq y_ i \leq 10\ 000$</span>, and the integer radius
+    <span class="tex2jax_process">$1 \leq r \leq 100$</span> of the
+    area it covers, meaning that any goblin at a distance of at
+    most <span class="tex2jax_process">$r$</span> from the point
+    <span class="tex2jax_process">$(x_ i, y_ i)$</span> will be
+    soaked by this sprinkler. There can be several sprinklers in
+    the same location.</p>
+<h2>Output</h2>
+<p>Output the number of goblins remaining in the garden after
+    the sprinklers have been turned on.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+0 0
+100 0
+0 100
+100 100
+50 50
+1
+0 0 50
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

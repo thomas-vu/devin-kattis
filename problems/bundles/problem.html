@@ -1,0 +1,105 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bundles/file/statement/en/img-0001.png" class="illustration" src="/problems/bundles/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Bob’s Bakery is celebrating its grand opening! To
+    commemorate this exciting occasion, they are offering a
+    “Bundles of Joy” sale to encourage people to sample their full
+    range of delectable desserts.
+
+    <p>For example, you can buy the “Chocolate Cakes” bundle which
+    includes chocolate layer cake and black forest cake for $20. Or
+    you can buy the “Fruity Cakes” bundle which includes lemon
+    pound cake and key lime cake, also for $20. They offer an even
+    bigger bundle that includes a slice of each of these cakes for
+    an even lower price of $38.</p>
+<p>You want to try out each dessert they offer. So, you need to
+    buy some bundles to ensure you get at least one of each
+    dessert. Of course, your goal is to do this while minimizing
+    the amount of money you spend on bundles.</p>
+<p>Finally, you make a few observations about the bundles they
+    offer:</p>
+<ul class="itemize">
+<li>
+<p>For any two bundles <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, either every dessert in
+        <span class="tex2jax_process">$A$</span> is also in
+        <span class="tex2jax_process">$B$</span>, every dessert in
+        <span class="tex2jax_process">$B$</span> is also in
+        <span class="tex2jax_process">$A$</span>, or there is no
+        dessert in both <span class="tex2jax_process">$A$</span>
+        and <span class="tex2jax_process">$B$</span>.</p>
+</li>
+<li>
+<p>The only way to buy an item individually is if it is in
+        a bundle of size 1. Not all items are in such a bundle.</p>
+</li>
+<li>
+<p>The pricing is not very well thought out. It may be
+        cheaper to acquire items in a bundle <span class="tex2jax_process">$B$</span> by buying some combination of
+        other bundles rather than <span class="tex2jax_process">$B$</span> itself.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$T \leq 50$</span> indicating the number of
+    test cases. The first line of each test case contains two
+    integers <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$m$</span> where <span class="tex2jax_process">$n$</span> is the number of different types
+    of desserts offered by Bob’s Bakery and <span class="tex2jax_process">$m$</span> is the number of different
+    bundles. Here, <span class="tex2jax_process">$1 \leq n \leq
+    100$</span> and <span class="tex2jax_process">$1 \leq m \leq
+    150$</span>.</p>
+<p>Then <span class="tex2jax_process">$m$</span> lines follow,
+    each describing a bundle. The <span class="tex2jax_process">$i$</span>th such line begins with two
+    positive integers <span class="tex2jax_process">$p_ i$</span>
+    and <span class="tex2jax_process">$s_ i$</span>. Here,
+    <span class="tex2jax_process">$0 &lt; p_ i \leq 10^6$</span> is
+    the price of bundle <span class="tex2jax_process">$i$</span>
+    and <span class="tex2jax_process">$1 \leq s_ i \leq n$</span>
+    is the number of items in bundle <span class="tex2jax_process">$i$</span>. The rest of this line consists of
+    <span class="tex2jax_process">$s_ i$</span> distinct integers
+    ranging from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>, indicating what
+    desserts are included in this bundle.</p>
+<p>Each of the <span class="tex2jax_process">$n$</span> items
+    will appear in at least one bundle.</p>
+<h2>Output</h2>
+<p>The output for each test case is a single line containing
+    the minimum cost of purchasing bundles to ensure you get at
+    least one of each item. This value is guaranteed to fit in a
+    32-bit signed integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+4 3
+20 2 1 2
+20 2 3 4
+38 4 1 2 3 4
+2 3
+5 1 1
+10 2 1 2
+4 1 2
+2 2
+1 1 1
+5 2 2 1
+1 2
+2 1 1
+1 1 1
+</pre>
+</td>
+<td>
+<pre>
+38
+9
+5
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

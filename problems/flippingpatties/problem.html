@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/flippingpatties/file/statement/en/img-0001.jpg" class="illustration" src="/problems/flippingpatties/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/7200789@N06">Lets Ideas
+        Complete</a>
+</div>
+</div>
+<p>Business is booming at Big Bill’s Burger Shack. Bill sells
+    the most convenient, customizable burger in town. Using either
+    the shack’s website or mobile application, customers can
+    request patties that are prepared precisely <em>to the
+    second</em>. The <span class="tex2jax_process">$i$</span>-th
+    order consists of two integers: <span class="tex2jax_process">$d_ i$</span>, the amount of time each side
+    of the patty should be cooked and <span class="tex2jax_process">$t_ i$</span>, the exact time at which the
+    customer would like to pick up their order.</p>
+<p>Big Bill is a talented grill cook, and he only hires
+    talented grill cooks. In a given second, a grill cook can use a
+    hand to do at most one of the following:</p>
+<ol class="enumerate">
+<li>
+<p>place a new patty on the grill,</p>
+</li>
+<li>
+<p>flip a patty that is already on the grill,</p>
+</li>
+<li>
+<p>remove a patty from the grill to serve it to a customer,
+        or</p>
+</li>
+<li>
+<p>do nothing.</p>
+</li>
+</ol>
+<p>Each grill cook has two hands, so they can do up to two of
+    the above actions in a second.</p>
+<p>When a patty is placed or flipped on the grill, the side on
+    the grill immediately starts cooking. For example, if a patty
+    is placed on the grill at <span class="tex2jax_process">$500$</span> seconds, flipped at <span class="tex2jax_process">$600$</span> seconds, and removed at
+    <span class="tex2jax_process">$700$</span> seconds, then it has
+    cooked <span class="tex2jax_process">$100$</span> seconds on
+    each side.</p>
+<p>These customers are demanding — they want to be served
+    exactly at <span class="tex2jax_process">$t_ i$</span>, and the
+    patty must be cooked for exactly <span class="tex2jax_process">$d_ i$</span> seconds on each side. Once a
+    patty is on the grill, it must not be taken off until the
+    customer wants it served. Orders that are not prepared exactly
+    to the customers’ specifications would ruin Big Bill’s
+    reputation. However, he doesn’t want to hire more grill cooks
+    than he needs to. What is the minimum number of grill cooks
+    needed to serve all the orders?</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$1 \leq n \leq 100$</span>, the number of
+    orders for Big Bill’s patties. The next <span class="tex2jax_process">$n$</span> lines each contain two integers,
+    <span class="tex2jax_process">$d_ i$</span> and <span class="tex2jax_process">$t_ i$</span>. This means that the
+    <span class="tex2jax_process">$i$</span>-th patty should be
+    cooked for exactly <span class="tex2jax_process">$d_ i$</span>
+    seconds on each side and needs to be served exactly at time
+    <span class="tex2jax_process">$t_ i$</span>. It is guaranteed
+    that <span class="tex2jax_process">$1 \leq d_ i \leq
+    600$</span>, <span class="tex2jax_process">$2 \leq t_ i \leq
+    43\, 200$</span>, and that it is possible to cook every order
+    to specification without taking an action before second
+    <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer, the minimum number of cooks needed
+    to prepare all of the orders.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 4
+2 5
+7 14
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+2 4
+2 4
+2 4
+2 4
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

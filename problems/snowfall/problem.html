@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>The Yraglac cross-country skiing team would like to know if
+    there will be enough snow on the ground to train after a
+    certain number of days. They have a weather forecast in an
+    unconventional format, described in the input section, and
+    would like you to help them figure out how much snow there will
+    be on the ground after all of the days in the forecast have
+    passed.</p>
+<p>Assume the ground starts out bare (with no snow).</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 100$</span>), the number of days in the weather
+    forecast.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains two space-separated integers <span class="tex2jax_process">$t \in \{ 0, 1\} $</span> and <span class="tex2jax_process">$a$</span> <span class="tex2jax_process">$(1
+    \leq a \leq 50)$</span>, with the <span class="tex2jax_process">$i^\text {th}$</span> line containing weather
+    information about the <span class="tex2jax_process">$i^\text
+    {th}$</span> day.</p>
+<p>If <span class="tex2jax_process">$t = 0$</span>, then
+    <span class="tex2jax_process">$a$</span> millimeters of snow
+    will fall on that day.</p>
+<p>If <span class="tex2jax_process">$t=1$</span>, then up to
+    <span class="tex2jax_process">$a$</span> millimeters of snow
+    will melt.</p>
+<h2>Output</h2>
+<p>A single integer, the depth of the snow after all
+    <span class="tex2jax_process">$n$</span> days have passed, in
+    millimeters.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 4
+0 5
+1 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0 5
+1 2
+1 2
+0 6
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+</div>

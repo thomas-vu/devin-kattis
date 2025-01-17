@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>You have found an old jigsaw puzzle in the attic of your
+    house, left behind by the previous occupants. Because you like
+    puzzles, you decide to put this one together. But before you
+    start, you want to know whether this puzzle was left behind for
+    a reason. Maybe it is incomplete? Maybe the box contains pieces
+    from multiple puzzles?</p>
+<p>If it looks like a complete puzzle, you also need to know
+    how big your work surface needs to be. Nothing worse than
+    having to start a jigsaw over because you started on a small
+    table.</p>
+<p>The box does not tell you the dimensions <span class="tex2jax_process">$w \times h$</span> of the puzzle, but you
+    can quickly count the three types of pieces in the box:</p>
+<ul class="itemize">
+<li>
+<p>Corner pieces, which touch two of the edges of the
+        puzzle.</p>
+</li>
+<li>
+<p>Edge pieces, which touch one of the edges of the
+        puzzle.</p>
+</li>
+<li>
+<p>Centre pieces, which touch none of the edges of the
+        puzzle.</p>
+</li>
+</ul>
+<p>Do these pieces add up to a complete jigsaw puzzle? If so,
+    what was the original size of the jigsaw puzzle?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing three integers <span class="tex2jax_process">$c$</span>, <span class="tex2jax_process">$e$</span>, and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0\leq c,e,m\leq 10^9$</span>), the
+        number of corner pieces, edge pieces, and centre pieces
+        respectively.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>If there exist numbers <span class="tex2jax_process">$w$</span> and <span class="tex2jax_process">$h$</span> satisfying <span class="tex2jax_process">$w\geq h\geq 2$</span> such that the original
+    size of the jigsaw puzzle could have been <span class="tex2jax_process">$w\times h$</span>, then output a single line
+    containing <span class="tex2jax_process">$w$</span> and
+    <span class="tex2jax_process">$h$</span>. Otherwise, output
+    “<tt class="ttfamily">impossible</tt>”.</p>
+<p>If there are multiple valid solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 8 4
+</pre>
+</td>
+<td>
+<pre>4 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 10 14
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4 12 6
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>4 2048 195063
+</pre>
+</td>
+<td>
+<pre>773 255
+</pre>
+</td>
+</tr>
+</table>
+</div>

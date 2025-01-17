@@ -1,0 +1,87 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/recount/file/statement/en/img-0001.jpg" class="illustration" src="/problems/recount/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The recent schoolboard elections were hotly contested: a
+    proposal to swap school start times for elementary and high
+    school students, a controversial new dress code proposal that
+    bans athletic clothes in school, and a proposal to raise
+    real-estate taxes to pay for a new football practice facility,
+    and the list goes on and on. It is now hours after the polls
+    have closed and a winner has yet to emerge!
+
+    <p>In their desperation, the election officials turn to you and
+    ask you to write a program to count the vote!</p>
+<h2>Input</h2>
+<p>The input consists of a single test case, which is a list of
+    votes cast. Each line in the input contains the name of a
+    candidate for whom a vote was cast. A name may consist of
+    multiple words, separated by spaces. Words contain letters or
+    hyphens, but no other punctuation characters. There will be at
+    least <span class="tex2jax_process">$2$</span> votes on the
+    list. The list of votes ends with a single line containing the
+    characters <tt class="ttfamily">***</tt>. This line should not
+    be counted. There can be up to <span class="tex2jax_process">$100\, 000$</span> valid votes.</p>
+<h2>Output</h2>
+<p>If a candidate obtained a simple or absolute majority of all
+    votes cast (that is, more than any other candidate), output the
+    name of this candidate! If no candidate obtained a simple
+    majority, output: “<tt class="ttfamily">Runoff!</tt>” (don’t
+    forget to include the exclamation mark!)</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+Penny Franklin
+Marti Graham
+Connie Froggatt
+Joseph Ivers
+Connie Froggatt
+Penny Franklin
+Connie Froggatt
+Bruce Stanger
+Connie Froggatt
+Barbara Skinner
+Barbara Skinner
+***
+</pre>
+</td>
+<td>
+<pre>
+Connie Froggatt
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+Penny Franklin
+Connie Froggatt
+Barbara Skinner
+Connie Froggatt
+Jose Antonio Gomez-Iglesias
+Connie Froggatt
+Bruce Stanger
+Barbara Skinner
+Barbara Skinner
+***
+</pre>
+</td>
+<td>
+<pre>
+Runoff!
+</pre>
+</td>
+</tr>
+</table>
+</div>

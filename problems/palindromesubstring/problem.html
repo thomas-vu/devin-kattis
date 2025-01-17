@@ -1,0 +1,53 @@
+<div class="problembody">
+<p>A palindrome is a word or phrase that reads the same
+    backwards or forwards. For this problem, we’re going to find
+    all the different palindromes that occur inside a string.</p>
+<p>We’ll say that string <span class="tex2jax_process">$a$</span> is a <i class="itshape">nontrivial
+    palindrome substring</i> of <span class="tex2jax_process">$b$</span> if <span class="tex2jax_process">$a$</span> is a substring of <span class="tex2jax_process">$b$</span>, the sequence of characters in
+    <span class="tex2jax_process">$a$</span> reads the same
+    forwards or backwards, and <span class="tex2jax_process">$a$</span> is at least two characters long.
+    Here, a substring of <span class="tex2jax_process">$b = b_1 b_2
+    \ldots b_ n$</span> is any string <span class="tex2jax_process">$b_ i b_{i+1} \ldots b_{i+j}$</span> where
+    <span class="tex2jax_process">$i \geq 1$</span> and
+    <span class="tex2jax_process">$j \geq 1$</span> and
+    <span class="tex2jax_process">$i + j \leq n$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of up to <span class="tex2jax_process">$100$</span> lines. Each line contains a
+    string of <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$1000$</span> characters chosen
+    from a–z. Input ends at end of file.</p>
+<h2>Output</h2>
+<p>For each input string, print out the list of all of its
+    non-trivial palindrome substrings. Each list of palindromes
+    should be sorted lexicographically, and should not contain
+    duplicates. Print a blank line after the output for each input
+    string.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+thisisatest
+xxxxoooo
+</pre>
+</td>
+<td>
+<pre>
+isi
+sis
+
+oo
+ooo
+oooo
+xx
+xxx
+xxxx
+
+</pre>
+</td>
+</tr>
+</table>
+</div>

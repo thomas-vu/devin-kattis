@@ -1,0 +1,63 @@
+<div class="problembody">
+<p>You and a few friends are running together once a week
+    around Lund. You all agree that it is boring and also dangerous
+    to run on your own rather than running with others. Therefore
+    you and your friends decide to minimize the distance that
+    anyone needs to run on their own.</p>
+<p>You are <span class="tex2jax_process">$N$</span> friends,
+    who live in <span class="tex2jax_process">$N$</span> different
+    locations numbered <span class="tex2jax_process">$0$</span>
+    through <span class="tex2jax_process">$N-1$</span>. Everyone
+    will run exactly one lap going through all the locations in
+    cyclic order (if you live in location <span class="tex2jax_process">$i$</span>, you run <span class="tex2jax_process">$i\rightarrow i+1\pmod{N}\rightarrow \ldots
+    \rightarrow N-1\rightarrow 0\rightarrow \ldots \rightarrow
+    i-1\pmod{N}\rightarrow i$</span>. Someone starts the run, then
+    everyone joins the run as the group comes, runs exactly one lap
+    and stops when the group comes back to their house.</p>
+<center>
+<img alt="\includegraphics[width=.2\textwidth ]{img/socialrunning-img.pdf}" src="/problems/socialrunning/file/statement/en/img-0001.png" style="width:20.00%"/>
+</center>
+<p>Given that an optimal person starts the run, what is the
+    minimal total distance that anyone has to run on their own? In
+    the above example, an optimal choice would be to start the run
+    at location <span class="tex2jax_process">$3$</span>. Then
+    the first runner has to run the leg from 3 to 0 alone, and it
+    is easily checked that your friend living in location 2 also
+    will be running alone from 1 to 2, for a total solitary
+    distance of <span class="tex2jax_process">$4$</span>.</p>
+<h2>Input</h2>
+<p>The first line of the input contains the number of friends
+    in the group, <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$2\leq N\leq 10$</span>). It is
+    followed by <span class="tex2jax_process">$N$</span> lines
+    where the <span class="tex2jax_process">$i$</span>-th line
+    contains a single integer, the distance from location
+    <span class="tex2jax_process">$i$</span> to location
+    <span class="tex2jax_process">$i+1\pmod{N}$</span>. Each
+    distance is between <span class="tex2jax_process">$1$</span>
+    and <span class="tex2jax_process">$10^4$</span>.</p>
+<h2>Output</h2>
+<p>The output consists of a single integer, the minimal total
+    distance anyone has to run on their own, given that the optimal
+    person starts the run.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+4
+1
+2
+3
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

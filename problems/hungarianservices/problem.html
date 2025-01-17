@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>You have been hired by Hungarian Services to match a list of
+    <span class="tex2jax_process">$m$</span> problem proposals to a
+    list of <span class="tex2jax_process">$n$</span> problem topics
+    for a contest, where <span class="tex2jax_process">$m \geq
+    n$</span>. The problem proposals have an index of <span class="tex2jax_process">$1, 2, \ldots , m$</span>, while the topics
+    have an index of <span class="tex2jax_process">$1, 2, \ldots
+    n$</span>.</p>
+<p>Not all problems are suitable for all topics. You will be
+    given <span class="tex2jax_process">$r$</span> tuples of
+    <span class="tex2jax_process">$(a_ i, b_ i, c_ i)$</span>
+    denoting that problem proposal <span class="tex2jax_process">$b_ i$</span> can be matched to topic
+    <span class="tex2jax_process">$a_ i$</span> with suitability of
+    <span class="tex2jax_process">$c_ i$</span>. In a valid
+    matching, each topic must be matched to exactly one suitable
+    problem, while each problem can be matched to at most one
+    topic.</p>
+<p>Alas! it is not always possible to have a valid matching. A
+    partial matching is a valid matching where some of the
+    <span class="tex2jax_process">$n$</span> topics may be
+    unmatched. Your task is to find the minimum number of unmatched
+    topics among all partial matchings. Among partial matchings
+    that minimize the number of unmatched topics, maximize the sum
+    of suitability of problem proposals to topics within the
+    partial matching.</p>
+<h2>Input</h2>
+<p>The first line contains three integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span> and <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$(1\leq n \leq m \leq 400; 1 \leq r \leq
+    nm)$</span> — the number of topics, the number of problem
+    proposals and the number of suitable pairs of problem proposals
+    and topics.</p>
+<p>The <span class="tex2jax_process">$i^{th}$</span> of the
+    following <span class="tex2jax_process">$r$</span> lines
+    contains three integers <span class="tex2jax_process">$a_ i, b_
+    i, c_ i$</span>, <span class="tex2jax_process">$(1 \leq a_ i
+    \leq n, 1 \leq b_ i \leq m, 1 \leq c_ i \leq 10)$</span>, where
+    problem <span class="tex2jax_process">$b_ i$</span> can be
+    matched to topic <span class="tex2jax_process">$a_ i$</span>
+    with suitability <span class="tex2jax_process">$c_ i$</span>.
+    It is guaranteed that all <span class="tex2jax_process">$(a_ i,
+    b_ i)$</span> pairs are unique.</p>
+<h2>Output</h2>
+<p>Output two integers — the minimum number of unmatched
+    topics, and the maximum sum of suitability of problem proposals
+    to topics within the partial matching.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 4
+1 1 1
+2 2 1
+1 2 2
+2 1 2
+</pre>
+</td>
+<td>
+<pre>0 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 4 5
+1 2 1
+1 3 1
+1 4 1
+2 4 2
+3 4 3
+</pre>
+</td>
+<td>
+<pre>1 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/santaklas/file/statement/en/img-0001.jpg" class="illustration" src="/problems/santaklas/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by <a href="http://www.flickr.com/photos/mprinke/1159416091/">m.prinke</a>
+</div>
+</div>
+<p>Santa Klas is in trouble! The ACM (Aerodynamic Christmas
+    Machines) has called you in to be their subject matter expert
+    for the current situation.</p>
+<p>Santa Klas recently got himself a new bunch of reindeers,
+    that would boost his speed even more while travelling across
+    the sky. The reindeers even came with an autopilot, so Santa
+    Klas calmly took off into the sky, adjusted his heading,
+    activated his autopilot and fell asleep.</p>
+<p>Santa Klas has been playing too much flight simulator
+    computer games lately, and he is certain that when the
+    autopilot is activated, the ship he is flying in will hold
+    altitude and course. This is not the case. The autopilot on his
+    new reindeers only guarantee that the heading is the same, and
+    the vertical angle is kept the same. This means that if Santa
+    Klas’ ship is currently heading for the ground, he will crash
+    if he doesn’t wake up soon enough! If the ship isn’t pointing
+    to the ground, Santa Klas will exit the atmosphere. But that’s
+    fine, he’s done that before.</p>
+<p>The ACM has given you Santa Klas’ angle between his course
+    and the ground and altitude in meters. Help them determine how
+    much time they have to wake him up, or if Santa Klas will exit
+    the atmosphere. Santa Klas always flies with a speed of one
+    meter per second (yeah, it takes him a while to round the
+    earth).</p>
+<h2>Input</h2>
+<p>The only line of input contains two integers <span class="tex2jax_process">$1 \le H \le 10\, 000 , 0 \le v \le
+    359$</span>, Santa Klas’ current altitude and his current angle
+    in degrees from the horizon, i.e. if <span class="tex2jax_process">$v = 0$</span> then Santa Klas is flying with
+    constant altitude (since the earth is flat), and is therefore
+    safe. If <span class="tex2jax_process">$v = 90$</span>, then
+    Santa Klas is heading straight for the stars.</p>
+<h2>Output</h2>
+<p>Output should consist of one single integer: the number of
+    whole seconds that the ACM have to safely wake Santa Klas up,
+    so that he can adjust his course. You may assume that Santa
+    Klas is infinitely fast at adjusting it after waking up, as the
+    flight simulator professional he is. If Santa Klas is not
+    heading for the ground, just print the word "<tt class="ttfamily">safe</tt>" on a single line instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+30 270
+</pre>
+</td>
+<td>
+<pre>
+30
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 180
+</pre>
+</td>
+<td>
+<pre>
+safe
+</pre>
+</td>
+</tr>
+</table>
+</div>

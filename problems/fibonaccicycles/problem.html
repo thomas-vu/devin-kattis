@@ -1,0 +1,46 @@
+<div class="problembody">
+<p>Yraglac loves number sequences. One of his favourites is the
+    classic Fibonacci numbers. He likes to set the base case as
+    <span class="tex2jax_process">$F_0 = F_1 = 1$</span> and
+    <span class="tex2jax_process">$F_ n = F_{n-1} +
+    F_{n-2}$</span>.</p>
+<p>Now, one can only list out the same numbers so many times
+    before getting bored, so Yraglac came up with a new game: if he
+    took the sequence of Fibonacci numbers modulo some <span class="tex2jax_process">$k$</span>, what is the index of the first
+    number in the new sequence that gets repeated? Yraglac only
+    considers numbers in the sequence starting from <span class="tex2jax_process">$n=2$</span> since <span class="tex2jax_process">$F_0 = F_1$</span> is boring.</p>
+<p>Can you write a program to help Yraglac find the answer?</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$1 \leq Q \leq 500$</span>, the number of
+    queries to follow.</p>
+<p>The next <span class="tex2jax_process">$Q$</span> lines each
+    contain a single integer <span class="tex2jax_process">$2 \leq
+    k \leq 1\, 000$</span>, the modulo to be used for the query. It
+    is guaranteed that some number in the sequence will be
+    repeated.</p>
+<h2>Output</h2>
+<p>For each query, output the <span class="tex2jax_process">$n$</span> such that <span class="tex2jax_process">$F_ n$</span> is the first number in the
+    sequence of Fibonacci numbers modulo <span class="tex2jax_process">$k$</span> that has a repeat at some point in
+    the sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+4
+13
+22
+</pre>
+</td>
+<td>
+<pre>4
+5
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

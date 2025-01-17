@@ -1,0 +1,94 @@
+<div class="problembody">
+<div class="illustration" style="width:85.00%">
+<img alt="/problems/cyclicalperiods/file/statement/en/img-0001.jpg" class="illustration" src="/problems/cyclicalperiods/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The image illustrates the superposition of four cycles
+    <span class="tex2jax_process">$a$</span>, <span class="tex2jax_process">$b$</span>, <span class="tex2jax_process">$c$</span>, and <span class="tex2jax_process">$d$</span> of differing offsets and periods.
+    It can be quickly seen that <span class="tex2jax_process">$a$</span> appears every 3 steps with an
+    offset of 3, <span class="tex2jax_process">$b$</span> every 4
+    steps with an offset of 2, <span class="tex2jax_process">$c$</span> every 7 steps with an offset of 5,
+    and <span class="tex2jax_process">$d$</span> every 11 steps
+    with an offset of 4. Cycle <span class="tex2jax_process">$d$</span> can be seen to have the longest
+    period. The first sample input describes the case in the image.
+    <p>Given a sequence of strings of lowercase letters (arbitrary
+    ordering of letters in each string) and their positions on the
+    number line, your task is to determine which letter represents
+    the cycle with the longest period. The number line will start
+    at 1 and will not be longer than <span class="tex2jax_process">$65{,}536$</span>. Any letter that appears
+    will appear at least twice, and it will appear on the entire
+    number line at locations consistent with its offset and
+    period.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 65{,}536$</span>), representing the number of
+    strings on the number line. Each subsequent line describes a
+    position on the number line that has at least one letter
+    associated with it. Each description line begins with a
+    positive integer <span class="tex2jax_process">$P$</span>
+    (<span class="tex2jax_process">$1 \leq P \leq 65{,}536$</span>)
+    representing the position on the number line followed by a
+    space, and then the string of lowercase letters associated with
+    this position. No letters will be repeated within a string, and
+    the positions are strictly increasing from one line to the
+    next.</p>
+<h2>Output</h2>
+<p>Print the single letter that represents the longest cycle
+    length. In case of a tie, use the cycle that appears at the
+    earliest position. If there is still a tie, use the letter that
+    appears first in the string when the cycle is first
+    discovered.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>18
+2 b
+3 a
+4 d
+5 c
+6 ab
+9 a
+10 b
+12 ac
+14 b
+15 ad
+18 ab
+19 c
+21 a
+22 b
+24 a
+26 bcd
+27 a
+30 ab
+</pre>
+</td>
+<td>
+<pre>d
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 pz
+2 d
+4 zp
+5 d
+</pre>
+</td>
+<td>
+<pre>z
+</pre>
+</td>
+</tr>
+</table>
+</div>

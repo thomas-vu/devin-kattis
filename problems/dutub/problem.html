@@ -1,0 +1,134 @@
+<div class="problembody">
+<p>You know that you should be sleeping by now... but you are
+    going to just watch <em>some</em> more MeTube before going to
+    bed.</p>
+<p>On MeTube, there are number of <em>categories</em> you are
+    interested in. Each video on MeTube can belong to one or more
+    categories. Before going to bed, you must have watched one
+    video in each category. Of course you don’t want to be up for
+    longer than necessary.</p>
+<p>Write a program that, given a list of videos, computes the
+    smallest possible time you must stay up to have seen at least
+    one video from each category.</p>
+<h2>Input</h2>
+<p>The first line contains the number of videos <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$N
+    \le 30$</span>).</p>
+<p>This is followed by <span class="tex2jax_process">$N$</span>
+    lines describing the videos. Each video is described first by
+    an integer <span class="tex2jax_process">$d_ i$</span>
+    (<span class="tex2jax_process">$1 \le d_ i \le 900$</span>),
+    the length of the video in seconds, and then by a string with
+    the categories that the video belongs to. In the string, each
+    letter (between <tt class="ttfamily">a</tt> and <tt class="ttfamily">j</tt>) denotes one category. Each video belongs to
+    at least one category and no category appears twice in the list
+    for a video.</p>
+<h2>Output</h2>
+<p>Output the smallest number of seconds you need to spend on
+    MeTube to watch a video from each category.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test case groups.
+    To get the points for a group, you need to pass all the test
+    cases in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 10$</span>, each
+          video belongs to only one category.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N \le 10$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1</h2>
+<p>There are four categories: <tt class="ttfamily">e</tt>,
+    <tt class="ttfamily">i</tt>, <tt class="ttfamily">g</tt>,
+    <tt class="ttfamily">b</tt>. Watching the third video
+    (<tt class="ttfamily">g</tt>) is pointless since you must watch
+    the fourth video (<tt class="ttfamily">gb</tt>), since that’s
+    the only one in category <tt class="ttfamily">b</tt>. We prefer
+    video <span class="tex2jax_process">$1$</span> over videos
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$5$</span>, since its total time is shorter
+    and covers both categories <tt class="ttfamily">i</tt> and
+    <tt class="ttfamily">e</tt>. The answer is <span class="tex2jax_process">$250$</span> seconds, by watching the first
+    and fourth videos.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+200 ei
+150 e
+10 g
+50 gb
+60 i
+</pre>
+</td>
+<td>
+<pre>250
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+268 abe
+271 ca
+262 da
+145 cd
+150 ebc
+143 deb
+</pre>
+</td>
+<td>
+<pre>412
+</pre>
+</td>
+</tr>
+</table>
+</div>

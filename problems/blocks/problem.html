@@ -1,0 +1,54 @@
+<div class="problembody">
+<p>If you know the game <em>tetris</em>, you may be familiar
+    with the following figures:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics{blocks1}" src="/problems/blocks/file/statement/en/img-0001.jpg" style="width:; height:"/>
+</center>
+</div>
+<p>These figures contains rows of squares. In each row, squares
+    are consecutive. Adjacent rows share at least one side of a
+    square, so the following figures are not allowed:</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics{blocks2}" src="/problems/blocks/file/statement/en/img-0002.jpg" style="width:; height:"/>
+</center>
+</div>
+<p>Given the number of squares, count the number of figures.
+    Since the number may be huge, the answer is the number of
+    figures modulo <span class="tex2jax_process">$10000$</span>.
+    That is, the output will always be between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$9999$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$1\le t \le 100$</span>), the number of test
+    cases. Each test case contains a single integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 1\, 000\, 000\, 000$</span>), the number of
+    squares.</p>
+<h2>Output</h2>
+<p>For each test case, print the case number followed by the
+    answer for that case. Use the format in the sample output
+    below.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3
+5
+7
+</pre>
+</td>
+<td>
+<pre>
+Case 1: 6
+Case 2: 61
+Case 3: 629
+</pre>
+</td>
+</tr>
+</table>
+</div>

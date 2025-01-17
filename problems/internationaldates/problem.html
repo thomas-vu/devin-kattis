@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>You read a lot of documents that come from the United
+    States, Europe, and other countries around the world. The issue
+    is that their date formats aren’t consistent! The US formats
+    their dates as MM/DD/YYYY while in Europe they format it as
+    DD/MM/YYYY. That is, in the US the month comes before the day,
+    while in Europe the day comes first. Given a date, can you
+    determine if its <i class="it">definitely</i> the US format,
+    for sure European, or could be either? (Note that there are
+    even more date formats, but luckily since the year is
+    guaranteed to be last in this case, we only have to worry about
+    these 2 formats.)</p>
+<h2>Input</h2>
+<p>The input consists of a single string comprised of 3
+    integers separated by forward slashes, as <span class="tex2jax_process">$AA/BB/CCCC$</span>, where <span class="tex2jax_process">$1 \le AA, BB, \le 31$</span>, and
+    <span class="tex2jax_process">$0 \le CCCC \le 9999$</span>. It
+    is guaranteed that the given string will be a valid date for at
+    least one of the formats. You can assume that all <span class="tex2jax_process">$12$</span> months have exactly <span class="tex2jax_process">$31$</span> days, so there is no need to
+    worry about months with 30 days, or February.</p>
+<h2>Output</h2>
+<p>Output either <tt>US</tt> if the date doesn’t conform to the
+    European format, or <tt>EU</tt> if the date doesn’t conform to
+    the US format. Otherwise, output <tt>either</tt> if there is no
+    way to know for sure which format the date follows.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>25/03/2023
+</pre>
+</td>
+<td>
+<pre>EU
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>04/02/2023
+</pre>
+</td>
+<td>
+<pre>either
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>07/23/1972
+</pre>
+</td>
+<td>
+<pre>US
+</pre>
+</td>
+</tr>
+</table>
+</div>

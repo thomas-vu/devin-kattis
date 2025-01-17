@@ -1,0 +1,154 @@
+<div class="problembody">
+<p>How many keystrokes are necessary to type a text message?
+    You may think that it is equal to the number of characters in
+    the text, but this is correct only if one keystroke generates
+    one character. With pocket-size devices, the possibilities for
+    typing text are often limited. Some devices provide only a few
+    buttons, significantly fewer than the number of letters in the
+    alphabet. For such devices, several strokes may be needed to
+    type a single character. One mechanism to deal with these
+    limitations is a virtual keyboard displayed on a screen, with a
+    cursor that can be moved from key to key to select characters.
+    Four arrow buttons control the movement of the cursor, and when
+    the cursor is positioned over an appropriate key, pressing the
+    fifth button selects the corresponding character and appends it
+    to the end of the text. To terminate the text, the user must
+    navigate to and select the Enter key. This provides users with
+    an arbitrary set of characters and enables them to type text of
+    any length with only five hardware buttons.</p>
+<p>In this problem, you are given a virtual keyboard layout and
+    your task is to determine the minimal number of strokes needed
+    to type a given text, where pressing any of the five hardware
+    buttons constitutes a stroke. The keys are arranged in a
+    rectangular grid, such that each virtual key occupies one or
+    more connected unit squares of the grid. The cursor starts in
+    the upper left corner of the keyboard and moves in the four
+    cardinal directions, in such a way that it always skips to the
+    next unit square in that direction that belongs to a different
+    key. If there is no such unit square, the cursor does not
+    move.</p>
+<div class="figure" id="fig:keyboard">
+<center>
+<img alt="\includegraphics[width=0.75\textwidth ]{keyboard-fig}" src="/problems/keyboard/file/statement/en/img-0001.png" style="width:75.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample Input 1. An example virtual
+          keyboard and hardware buttons.
+        </div>
+</center>
+</div>
+<p>Figure 1, illustrating Sample Input 1, shows a possible way
+    to type CONTEST using 30 strokes on an example virtual
+    keyboard. The red dots represent the virtual keys where the
+    select button was pressed.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$1
+    \leq r, c \leq 50$</span>), giving the number of rows and
+    columns of the virtual keyboard grid. The virtual keyboard is
+    specified in the next <span class="tex2jax_process">$r$</span>
+    lines, each of which contains <span class="tex2jax_process">$c$</span> characters. The possible values of
+    these characters are uppercase letters, digits, a dash, and an
+    asterisk (representing Enter). There is only one key
+    corresponding to any given character. Each key is made up of
+    one or more grid squares, which will always form a connected
+    region. The last line of the input contains the text to be
+    typed. This text is a non-empty string of at most <span class="tex2jax_process">$10\, 000$</span> of the available characters
+    other than the asterisk.</p>
+<h2>Output</h2>
+<p>Display the minimal number of strokes necessary to type the
+    whole text, including the Enter key at the end. It is
+    guaranteed that the text can be typed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 7
+ABCDEFG
+HIJKLMN
+OPQRSTU
+VWXYZ**
+CONTEST
+</pre>
+</td>
+<td>
+<pre>
+30
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 20
+12233445566778899000
+QQWWEERRTTYYUUIIOOPP
+-AASSDDFFGGHHJJKKLL*
+--ZZXXCCVVBBNNMM--**
+--------------------
+ACM-ICPC-WORLD-FINALS-2015
+</pre>
+</td>
+<td>
+<pre>
+160
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 19
+ABCDEFGHIJKLMNOPQZY
+X*****************Y
+AZAZ
+</pre>
+</td>
+<td>
+<pre>
+19
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+6 4
+AXYB
+BBBB
+KLMB
+OPQB
+DEFB
+GHI*
+AB
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+</div>

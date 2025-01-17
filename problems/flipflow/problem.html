@@ -1,0 +1,114 @@
+<div class="problembody">
+<p><span style="float:right"><img alt="\includegraphics[width=0.33\textwidth ]{hourglass-620397_1280.jpg}" src="/problems/flipflow/file/statement/en/img-0001.jpg" style="width:33.00%"/></span></p>
+<div style="text-align:right">
+<span style="float:right"><small class="tiny"><a href="https://pixabay.com/photos/hourglass-time-hours-clock-620397/">
+      Hourglass</a> by <a href="https://pixabay.com/users/nile-598962/">nile</a> on
+      Pixabay</small></span>
+</div>
+<p>For over 600 years, the hourglass has been a well-known
+    timekeeping instrument. An hourglass consists of two glass
+    flasks arranged one above the other which are connected by a
+    narrow channel. Inside the hourglass there is sand which slowly
+    flows from the upper to the lower flask. Hourglasses are
+    typically symmetrical so that the sand always takes the same
+    amount of time to run through, regardless of orientation. For
+    the purposes of this problem, we also assume that the flow rate
+    of the sand is a known constant and does not depend on the
+    amount or distribution of sand in the upper half.</p>
+<p>Your friend Helen was bored and has been playing around with
+    her hourglass. At time <span class="tex2jax_process">$0$</span>, all the sand was in the lower
+    half. Helen flipped the hourglass over several times and
+    recorded all the moments at which she did so. How many seconds
+    does she need to wait from the current time until all the sand
+    is back in the lower half?</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with three integers <span class="tex2jax_process">$t$</span>, <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$n$</span>, where</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$t$</span>
+            (<span class="tex2jax_process">$1 \le t \le
+            10^6$</span>) is the current time;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$s$</span>
+            (<span class="tex2jax_process">$1 \le s \le
+            10^6$</span>) is the amount of sand in the hourglass,
+            in grams;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span>
+            (<span class="tex2jax_process">$1 \le n \le 1\,
+            000$</span>) is the number of times the hourglass was
+            flipped.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$n$</span>
+        integers <span class="tex2jax_process">$a_1,\dots ,a_
+        n$</span> (<span class="tex2jax_process">$0 &lt; a_1 &lt;
+        \dots &lt; a_ n &lt; t$</span>), the times at which the
+        hourglass was flipped.</p>
+</li>
+</ul>
+<p>All times are given in seconds. You may assume that the sand
+    flows from the top to the bottom at a constant rate of
+    <span class="tex2jax_process">$1$</span> gram per second.</p>
+<h2>Output</h2>
+<p>Output the time in seconds needed for the hourglass to run
+    out starting from time <span class="tex2jax_process">$t$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 7 2
+4 9
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2000 333 3
+1000 1250 1500
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>100 10 5
+15 20 93 96 97
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

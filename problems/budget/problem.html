@@ -1,0 +1,84 @@
+<div class="problembody">
+<p>I have a problem. I was supposed to make a budget proposal
+    for this competition and I haven’t started yet. It must be done
+    at the end of the competition or the others will notice that I
+    haven’t done it. This is where I need you.</p>
+<p>The budget proposal is a matrix where the rows represent the
+    different kinds of expenses and the columns reptresent the
+    different sites.</p>
+<p>We had a meeting about this some time ago where we discussed
+    the sums over different kind of expenses and sums over
+    different sites. There was also some talk about special
+    constraints: someone mentioned that Stockholm would need at
+    least SEK 2000 for food and someone from Lund argued they
+    wouldn’t use more than SEK 100 for paperclips. Anyway, I’m sure
+    there was more, I’ll go and try to find some notes from that
+    meeting if you write a program that can solve the problem when
+    we get the data.</p>
+<p>And, by the way, no one really reads budget proposals
+    anyway, so you’ll just have to make sure that it sums up
+    properly and meets all constraints.</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> giving the number of test
+    cases.</p>
+<p>The first line of each test case contains two integers
+    <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$n$</span> giving the number of rows and
+    columns (<span class="tex2jax_process">$1 \le m \le
+    200$</span>, <span class="tex2jax_process">$1 \le n \le
+    20$</span>). The second line contains <span class="tex2jax_process">$m$</span> integers, giving the row sums of
+    the matrix. The third line contains <span class="tex2jax_process">$n$</span> integers, giving the column sums
+    of the matrix. The fourth line contains an integer <span class="tex2jax_process">$0 \le k \le 1000$</span> giving the number
+    of constraints. The next <span class="tex2jax_process">$k$</span> lines contain the constraints.</p>
+<p>Each constraint consists of two integers <span class="tex2jax_process">$r$</span>, <span class="tex2jax_process">$c$</span> specifying some entry (or entries)
+    in the matrix (the upper left corner is <tt class="ttfamily">1
+    1</tt> and <span class="tex2jax_process">$0$</span> is
+    interpreted as all, i.e., <tt class="ttfamily">4 0</tt> means
+    all entries on the fourth row and <tt class="ttfamily">0 0</tt>
+    means the entire matrix), one element from the set {<tt class="ttfamily">&lt;</tt>, <tt class="ttfamily">=</tt>, <tt class="ttfamily">&gt;</tt>} and one integer <span class="tex2jax_process">$v$</span>, with the obvious interpretation.
+    For instance, the constraint <tt class="ttfamily">1 2 &gt;
+    5</tt> means that the entry in the 1st row and 2nd column must
+    have an entry strictly greater than 5, and the constraint
+    <tt class="ttfamily">4 0 = 3</tt> means that all elements in
+    the fourth row should be equal to 3.</p>
+<p>There is an empty line before each test case.</p>
+<h2>Output</h2>
+<p>For each case output a matrix of non-negative integers
+    meeting the above constraints or the string “<tt class="ttfamily">IMPOSSIBLE</tt>” if no legal solution exists. Output
+    an empty line between cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+
+2 3
+8 10
+5 6 7
+4
+0 2 &gt; 2
+2 1 = 3
+2 3 &gt; 2
+2 3 &lt; 5
+
+2 2
+4 5
+6 7
+1
+1 1 &gt; 10
+</pre>
+</td>
+<td>
+<pre>
+2 3 3
+3 3 4
+
+IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

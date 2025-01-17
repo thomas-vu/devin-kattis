@@ -1,0 +1,83 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/liquidassets/file/statement/en/img-0001.jpg" class="illustration" src="/problems/liquidassets/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You are but a humble villager with big dreams, and they are
+    finally coming true! You have just been promoted to “general
+    manager” at the best (only) tavern in your town, Creeper
+    County.</p>
+<p>You have much loyalty to this town - your original spawn
+    point - but it’s not exactly a popular tourist destination. (It
+    probably has something to do with the unfortunate name.) As a
+    result, the tavern is on the verge of bankruptcy. But, after
+    hours of boring work that only an NPC would do, you’ve come
+    across something startling: the business is spending way too
+    much money on receipt ink! Instead of spelling out “rabbit
+    stew” on a receipt, for example, you could simply write “rbt
+    stw” and get the same information across. All you have to do to
+    save your beloved tavern from bankruptcy is write a program
+    that will remove all of the unnecessary letters from the meal
+    titles on your receipts! Are you up to the task?</p>
+<p>You want to remove letters from each word according to the
+    following 2 rules:</p>
+<ol class="enumerate">
+<li>
+<p>First, if the word contains any adjacent repeated
+        letters, all but one should be removed (eg. in “coffee”,
+        one of the f’s and one of the e’s should be removed).</p>
+</li>
+<li>
+<p>Then, any remaining vowels - a, e, i, o, or u - should
+        be removed, unless they are the first or last letter in a
+        word (eg. in “orange” the “a” should be removed, but the
+        “o” and “e” should not).</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The input consists of two lines. The first line contains an
+    integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0 &lt; n &lt; 1\, 000$</span>), denoting the
+    number of words in the meal title. The second line is a string
+    <span class="tex2jax_process">$S$</span>, the meal title,
+    consisting of <span class="tex2jax_process">$n$</span>
+    space-separated words. Each word <span class="tex2jax_process">$w$</span> (<span class="tex2jax_process">$0
+    &lt; |w| &lt; 100$</span>) will consist of the <span class="tex2jax_process">$26$</span> lowercase letters in the standard
+    English alphabet: [a-z].</p>
+<h2>Output</h2>
+<p>Output a single string: the meal title <span class="tex2jax_process">$S$</span> with all unnecessary letters
+    removed from each word.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+baked potato and beetroot soup
+</pre>
+</td>
+<td>
+<pre>bkd ptto and btrt sp
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>9
+dark chocolate coffee cake with a mocha mascarpone frosting
+</pre>
+</td>
+<td>
+<pre>drk chclte cfe cke wth a mcha mscrpne frstng
+</pre>
+</td>
+</tr>
+</table>
+</div>

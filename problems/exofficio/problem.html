@@ -1,0 +1,160 @@
+<div class="problembody">
+<p><i class="itshape">“I have come to the conclusion that one
+    useless man is called a disgrace, that two are called a law
+    firm, and that three or more become a Congress!” ­–Peter
+    Stone.</i></p>
+<p>The bureaucracy of government is often criticized; the
+    frequency of fruitless meetings, the inefficiency of
+    discussions and the like are common topics of ridicule.</p>
+<p>The government is trying to change that impression. To
+    start, they have hired you to redesign the structure of the
+    capitol to decrease inefficiency.</p>
+<p>The capitol can be represented as a grid with <span class="tex2jax_process">$R$</span> rows and <span class="tex2jax_process">$C$</span> columns. Each of the cells in this
+    grid is a chamber where meetings can be held. Right now, there
+    are no walls between any of the chambers; thus, in one minute,
+    it is possible to travel directly from one chamber to any of
+    the chambers it shares a side with in the grid. That is, if we
+    denote the chamber at the <span class="tex2jax_process">$r^\text {th}$</span> row and <span class="tex2jax_process">$c^\text {th}$</span> column of this grid as
+    chamber <span class="tex2jax_process">$(r, c)$</span>, then in
+    one minute one can travel from chamber <span class="tex2jax_process">$(r, c)$</span> to any of the chambers
+    <span class="tex2jax_process">$(r-1, c)$</span>, <span class="tex2jax_process">$(r, c+1)$</span>, <span class="tex2jax_process">$(r+1, c)$</span> or <span class="tex2jax_process">$(r, c-1)$</span> (if they exist).</p>
+<p>Meetings are periodically held in different chambers, and
+    unfortunately, many congressmen end up getting lost and fail to
+    find their way to the required chamber, eating up precious
+    time. Hence, the first requirement is</p>
+<ol class="enumerate">
+<li>
+<p>to build walls between chambers in such a way that there
+        is <i class="itshape">exactly one</i> way to travel between
+        any two chambers.</p>
+</li>
+</ol>
+<p>At the same time, it is imperative that no matter which
+    chamber the meeting is held in, all the congressmen in the
+    capitol (who could be in any of the other chambers) can be
+    gathered in a short amount of time. Hence, define the <i class="itshape">gathering time</i> of a chamber <span class="tex2jax_process">$(r, c)$</span> to be the maximum number of
+    minutes required to travel from any chamber to chamber
+    <span class="tex2jax_process">$(r, c)$</span>, assuming one
+    takes the unique direct route. The second requirement is</p>
+<ol class="enumerate">
+<li>
+<p>to minimize the maximum gathering time across all
+        chambers.</p>
+</li>
+</ol>
+<p>That is, across all wall-building plans satisfying the first
+    requirement, you should choose one that minimizes the maximum
+    gathering time.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.65\textwidth ]{exco.png}" src="/problems/exofficio/file/statement/en/img-0001.png" style="width:65.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of Sample Input 1.
+        </div>
+</center>
+</div>
+<p>Help the government get its act together and eliminate the
+    unnecessary bureaucracy!</p>
+<h2>Input</h2>
+<p>The first and only line of input contains two integers,
+    <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$C$</span> (<span class="tex2jax_process">$1
+    \leq R, C, R \cdot C \leq 200\, 000$</span>), the number of
+    rows and the number of columns of the grid, respectively.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$R+1$</span> rows,
+    representing a wall-building plan satisfying the requirements
+    in the following format:</p>
+<ul class="itemize">
+<li>
+<p>The first row should contain <span class="tex2jax_process">$2 \cdot C$</span> characters. The
+        <span class="tex2jax_process">$c^\text {th}$</span>
+        character in this row should be</p>
+<ul class="itemize">
+<li>
+<p>a space, if <span class="tex2jax_process">$c$</span>
+            is odd;</p>
+</li>
+<li>
+<p><tt class="ttfamily">_</tt>, if <span class="tex2jax_process">$c$</span> is even.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The next <span class="tex2jax_process">$R$</span> rows
+        should each contain <span class="tex2jax_process">$2 \cdot
+        C+1$</span> characters. The <span class="tex2jax_process">$c^\text {th}$</span> character in the
+        <span class="tex2jax_process">$r^\text {th}$</span> of
+        these rows should be</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">|</tt>, if <span class="tex2jax_process">$c = 1$</span> or <span class="tex2jax_process">$c = 2 \cdot C+1$</span>;</p>
+</li>
+<li>
+<p><tt class="ttfamily">_</tt>, if <span class="tex2jax_process">$c$</span> is even and <span class="tex2jax_process">$r = R$</span>;</p>
+</li>
+<li>
+<p>a space, if <span class="tex2jax_process">$c$</span>
+            is even and there is no wall between chambers
+            <span class="tex2jax_process">$(r, c/2)$</span> and
+            <span class="tex2jax_process">$(r+1, c/2)$</span>;</p>
+</li>
+<li>
+<p><tt class="ttfamily">_</tt>, if <span class="tex2jax_process">$c$</span> is even and there is a
+            wall between chambers <span class="tex2jax_process">$(r, c/2)$</span> and <span class="tex2jax_process">$(r+1, c/2)$</span>;</p>
+</li>
+<li>
+<p>a space, if <span class="tex2jax_process">$c$</span>
+            is odd and there is no wall between chambers
+            <span class="tex2jax_process">$(r, (c-1)/2)$</span> and
+            <span class="tex2jax_process">$(r,
+            (c+1)/2)$</span>;</p>
+</li>
+<li>
+<p><tt class="ttfamily">|</tt>, if <span class="tex2jax_process">$c$</span> is odd and there is a wall
+            between chambers <span class="tex2jax_process">$(r,
+            (c-1)/2)$</span> and <span class="tex2jax_process">$(r,
+            (c+1)/2)$</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>If there are multiple correct answers, you can output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+</pre>
+</td>
+<td>
+<pre> _ _ _ _ _
+| |_   _| |
+|  _   _  |
+|_|_ _ _|_|
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+</pre>
+</td>
+<td>
+<pre> _ _
+| | |
+|_ _|
+</pre>
+</td>
+</tr>
+</table>
+</div>

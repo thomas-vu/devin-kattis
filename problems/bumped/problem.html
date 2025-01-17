@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/bumped/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bumped/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/jtosh/195367494">jtosh/Flickr</a>
+</div>
+</div>
+<p>Peter returned from the recently held ACM ICPC World Finals
+    only to find that his return flight was overbooked and he was
+    bumped from the flight! Well, at least he wasn’t beat up by the
+    airline and he’s received a voucher for one free flight between
+    any two destinations he wishes.</p>
+<p>He is already planning next year’s trip. He plans to travel
+    by car where necessary, but he may be using his free flight
+    ticket for one leg of the trip. He asked for your help in his
+    planning.</p>
+<p>He can provide you a network of cities connected by roads,
+    the amount it costs to buy gas for traveling between pairs of
+    cities, and a list of available flights between some of those
+    cities. Help Peter by finding the minimum amount of money he
+    needs to spend to get from his hometown to next year’s
+    destination!</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line
+    lists five space-separated integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$f$</span>, <span class="tex2jax_process">$s$</span>, and <span class="tex2jax_process">$t$</span>, denoting the number of cities
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$0 &lt; n \le 50\, 000$</span>), the number
+    of roads <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$0 \le m \le 150\, 000$</span>), the number
+    of flights <span class="tex2jax_process">$f$</span>
+    (<span class="tex2jax_process">$0 \le f \le 1\, 000$</span>),
+    the number <span class="tex2jax_process">$s$</span>
+    (<span class="tex2jax_process">$0 \le s &lt; n$</span>) of the
+    city in which Peter’s trip starts, and the number <span class="tex2jax_process">$t$</span> (<span class="tex2jax_process">$0
+    \le t &lt; n$</span>) of the city Peter is trying to travel to.
+    (Cities are numbered from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>.)</p>
+<p>The first line is followed by <span class="tex2jax_process">$m$</span> lines, each describing one road. A
+    road description contains three space-separated integers
+    <span class="tex2jax_process">$i$</span>, <span class="tex2jax_process">$j$</span>, and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$0
+    \le i, j &lt; n, i \ne j$</span> and <span class="tex2jax_process">$0 &lt; c \le 50\, 000$</span>), indicating
+    there is a road connecting cities <span class="tex2jax_process">$i$</span> and <span class="tex2jax_process">$j$</span> that costs <span class="tex2jax_process">$c$</span> cents to travel. Roads can be used
+    in either direction for the same cost. All road descriptions
+    are unique.</p>
+<p>Each of the following <span class="tex2jax_process">$f$</span> lines contains a description of an
+    available flight, which consists of two space-separated
+    integers <span class="tex2jax_process">$u$</span> and
+    <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0 \le u, v &lt; n$</span>, <span class="tex2jax_process">$u \ne v$</span>) denoting that a flight from
+    city <span class="tex2jax_process">$u$</span> to city
+    <span class="tex2jax_process">$v$</span> is available (though
+    not from <span class="tex2jax_process">$v$</span> to
+    <span class="tex2jax_process">$u$</span> unless listed
+    elsewhere). All flight descriptions are unique.</p>
+<h2>Output</h2>
+<p>Output the minimum number of cents Peter needs to spend to
+    get from his home town to the competition, using at most one
+    flight. You may assume that there is a route on which Peter can
+    reach his destination.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 11 1 0 5
+0 1 10
+0 2 10
+1 2 10
+2 6 40
+6 7 10
+5 6 10
+3 5 15
+3 6 40
+3 4 20
+1 4 20
+1 3 20
+4 7
+</pre>
+</td>
+<td>
+<pre>
+45
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+8 11 1 0 5
+0 1 10
+0 2 10
+1 2 10
+2 6 40
+6 7 10
+5 6 10
+3 5 15
+3 6 40
+3 4 20
+1 4 20
+1 3 30
+4 7
+</pre>
+</td>
+<td>
+<pre>
+50
+</pre>
+</td>
+</tr>
+</table>
+</div>

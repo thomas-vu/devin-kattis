@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/matarinnkaup/file/statement/en/img-0001.jpg" class="illustration" src="/problems/matarinnkaup/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Chicken_salad_on_striped_tablecloth.jpg">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>A lot of food and drinks were sold at Nauthóll over the last
+    few days. Now it is time to take inventory and figure out
+    necessary purchases. This job falls to you. Given the recipes
+    used at Nauthóll and all receipts from the past few days, how
+    much was used of each ingredient?</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \leq u, k \leq 10\,
+    000$</span> where <span class="tex2jax_process">$u$</span> is
+    the number of recipes and <span class="tex2jax_process">$k$</span> is the number of receipts. Next
+    there will be <span class="tex2jax_process">$u$</span>
+    descriptions of recipes. The first line of each description
+    contains a string giving the name of the dish. Dish names are
+    unique. The next line contains a single integer <span class="tex2jax_process">$1 \leq h \leq 10\, 000$</span>, the number
+    of ingredients that the recipe calls for. Finally there are
+    <span class="tex2jax_process">$h$</span> lines, each containing
+    the name of an ingredient and then an integer <span class="tex2jax_process">$1 \leq x \leq 500$</span>. This means there
+    are <span class="tex2jax_process">$x$</span> instances of the
+    ingredient in the dish. Then there will be <span class="tex2jax_process">$k$</span> descriptions of receipts. Each
+    starts with an integer <span class="tex2jax_process">$1 \leq n
+    \leq 10\, 000$</span>, the number of dishes on the receipt.
+    Then follow <span class="tex2jax_process">$n$</span> lines,
+    each of them containing the name of a dish and an integer
+    <span class="tex2jax_process">$1 \leq y \leq 500$</span>. This
+    means that <span class="tex2jax_process">$y$</span> instances
+    of the dish were purchased. The names of the dishes will always
+    have appeared in the input above. Each name in the input is at
+    most <span class="tex2jax_process">$20$</span> characters and
+    contains only lower case English letters and underscores. The
+    total number of names in the input will be at most <span class="tex2jax_process">$100\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Print how much is needed of every ingredient, one ingredient
+    per line. On each line the name of the ingredient, a space and
+    an integer denoting how much is needed should be printed. The
+    ingredients should be printed in alphabetical order.
+    Underscores are considered to go before all the letters in this
+    order. If an ingredient isn’t needed, it shouldn’t be
+    printed.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>There are at most <span class="tex2jax_process">$500$</span> names in the input.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+hamborgaramaltid
+4
+buff 1
+braud 2
+franskar 100
+salat 1
+hamborgari
+2
+buff 1
+braud 2
+1
+hamborgaramaltid 4
+1
+hamborgari 2
+</pre>
+</td>
+<td>
+<pre>braud 12
+buff 6
+franskar 400
+salat 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

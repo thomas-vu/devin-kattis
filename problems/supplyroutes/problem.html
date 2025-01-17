@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>During a zombie apocalypse, it is important to stay
+    connected between strongholds. Maintaining supply routes
+    between locations is important for survival.</p>
+<p>You are given information about a road network: its
+    junctions and two-way streets that directly connect junctions.
+    Over time, these streets will become overrun by zombies and
+    become impassable. At various moments in time, you wonder if it
+    is <em>safe</em> to travel from junction <span class="tex2jax_process">$u$</span> to junction <span class="tex2jax_process">$w$</span> for two particular junctions.</p>
+<p>That is, is there a sequence of junctions <span class="tex2jax_process">$u = v_1, v_2, \ldots , v_ k = w$</span> of
+    any length <span class="tex2jax_process">$k$</span> such that
+    for each <span class="tex2jax_process">$1 \leq i &lt; k$</span>
+    we have that <span class="tex2jax_process">$v_ i$</span> and
+    <span class="tex2jax_process">$v_{i+1}$</span> are directly
+    connected by a street that is not overrun by zombies?</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2
+    \leq N \leq 2 \cdot 10^5$</span>), <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq M \leq \min \{ 5 \cdot 10^5, N*(N-1)/2\} $</span>) and
+    <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1 \leq Q \leq 5 \cdot 10^5$</span>). Here,
+    <span class="tex2jax_process">$N$</span> is the number of
+    junctions (numbered <span class="tex2jax_process">$0$</span>
+    through <span class="tex2jax_process">$N-1$</span>),
+    <span class="tex2jax_process">$M$</span> is the number of
+    streets that directly connect junctions, and <span class="tex2jax_process">$Q$</span> is the number of queries to
+    process. Initially, no street is overrun by zombies.</p>
+<p>Then <span class="tex2jax_process">$M$</span> lines follow,
+    each describing a street directly connecting two junctions. The
+    <span class="tex2jax_process">$i$</span>th such line contains
+    two distinct integers <span class="tex2jax_process">$u_ i, v_
+    i$</span> (<span class="tex2jax_process">$0 \leq u_ i &lt; v_ i
+    &lt; N$</span>) indicating junctions <span class="tex2jax_process">$u_ i$</span> and <span class="tex2jax_process">$v_ i$</span> are directly connected by a
+    two-way street. No pair of junctions will be directly connected
+    by more than one street.</p>
+<p>Finally, <span class="tex2jax_process">$Q$</span> lines
+    follow describing a sequence of events. The <span class="tex2jax_process">$j$</span>th such line contains three
+    integers <span class="tex2jax_process">$t_ j, u_ j, v_
+    j$</span>. Here <span class="tex2jax_process">$t_ j$</span>
+    will be <span class="tex2jax_process">$0$</span> or
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$u_ j, v_ j$</span> will be two distinct
+    integers (<span class="tex2jax_process">$0 \leq u_ j &lt; v_ j
+    &lt; N$</span>) indicating junctions.</p>
+<p>If <span class="tex2jax_process">$t_ j = 0$</span>, the
+    street connecting <span class="tex2jax_process">$u_ j$</span>
+    to <span class="tex2jax_process">$v_ j$</span> is now overrun
+    and can no longer be safely travelled in either direction. You
+    are guaranteed that in such a case, <span class="tex2jax_process">$u_ j$</span> and <span class="tex2jax_process">$v_ j$</span> will be directly connected by a
+    street given earlier in the input and no street will be overrun
+    more than once.</p>
+<p>If <span class="tex2jax_process">$t_ j = 1$</span>, then you
+    are to report if it is possible to safely travel from
+    <span class="tex2jax_process">$u_ j$</span> to <span class="tex2jax_process">$v_ j$</span> using only streets that have
+    not yet been overrun by zombies (i.e. there is a path from
+    <span class="tex2jax_process">$u_ j$</span> to <span class="tex2jax_process">$v_ j$</span> using only streets that were
+    not overrun in an earlier step <span class="tex2jax_process">$j’ &lt; j$</span>).</p>
+<p>You are guaranteed that <span class="tex2jax_process">$t_
+    j$</span> will be <span class="tex2jax_process">$1$</span> in
+    at least one of these final <span class="tex2jax_process">$Q$</span> lines.</p>
+<h2>Output</h2>
+<p>For each of the last <span class="tex2jax_process">$Q$</span> lines having <span class="tex2jax_process">$t_ j = 1$</span>, output a single line with
+    the message <tt class="ttfamily">safe</tt> if there is a path
+    from <span class="tex2jax_process">$u_ j$</span> to
+    <span class="tex2jax_process">$v_ j$</span> using only streets
+    that are not overrun by zombies. Otherwise, output a single
+    line with the message <tt class="ttfamily">unsafe</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2 6
+0 1
+1 2
+0 1 2
+1 0 1
+1 0 2
+0 0 1
+1 0 1
+1 0 2
+</pre>
+</td>
+<td>
+<pre>safe
+unsafe
+unsafe
+unsafe
+</pre>
+</td>
+</tr>
+</table>
+</div>

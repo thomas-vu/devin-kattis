@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>Scott wants to ride his bike along a straight road. But the
+    road has some barricades! Scott will ride his bike up to the
+    first barricade and stop.</p>
+<p>Model Scott’s straight road as the positive <span class="tex2jax_process">$Y$</span> axis, with Scott starting at the
+    origin. The barricades are line segments, specified by their
+    endpoints. Determine how far Scott can ride, or if his path is
+    completely unobstructed.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 1,000$</span>), which is the
+    number of barricades.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains four integers <span class="tex2jax_process">$x1$</span>, <span class="tex2jax_process">$y1$</span>, <span class="tex2jax_process">$x2$</span> and <span class="tex2jax_process">$y2$</span> (<span class="tex2jax_process">$-100 \le x1,y1,x2,y2 \le 100$</span>,
+    <span class="tex2jax_process">$x1 \ne 0$</span>, <span class="tex2jax_process">$x2 \ne 0$</span>), representing a barricade
+    that runs from <span class="tex2jax_process">$(x1,y1)$</span>
+    to <span class="tex2jax_process">$(x2,y2)$</span>. It is
+    guaranteed that no barricade will run through the origin.</p>
+<h2>Output</h2>
+<p>Output a single real number, which is how far Scott can ride
+    before he hits the closest barricade, or <span class="tex2jax_process">$-1.0$</span> if no barricades get in Scott’s
+    way. This output will be considered correct if it is within an
+    absolute or relative error of <span class="tex2jax_process">$10^{-2}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+-10 7 5 19
+-1 -1 8 21
+</pre>
+</td>
+<td>
+<pre>1.4444444444444446
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+4 -6 -12 -1
+3 5 8 8
+</pre>
+</td>
+<td>
+<pre>-1.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

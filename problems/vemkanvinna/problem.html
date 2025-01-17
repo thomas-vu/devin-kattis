@@ -1,0 +1,128 @@
+<div class="problembody">
+<p>Johan and Abdullah are still playing tic-tac-toe, so now
+    they want help figuring out who can still win in their game. To
+    win in tic-tac-toe you need to have three of your letter in a
+    row, either vertically, horizontally, or diagonally. Johan uses
+    the letter <tt class="ttfamily">X</tt> and makes the first
+    move, and Abdullah uses the letter <tt class="ttfamily">O</tt>.
+    This implies that Johan could at most have <span class="tex2jax_process">$5$</span> <tt class="ttfamily">X</tt>-pieces
+    on the board, while Abdullah could at most have <span class="tex2jax_process">$4$</span> <tt class="ttfamily">O</tt>-pieces. It is guaranteed that no one has
+    won.</p>
+<h2>Input</h2>
+<p>Input consists of a valid tic-tac-toe position, where an
+    underscore <tt class="ttfamily">_</tt> represents an empty
+    square, and the letters <tt class="ttfamily">X</tt> and
+    <tt class="ttfamily">O</tt> represent Johan’s and Abdullah’s
+    moves. The position is described by three rows, each containing
+    three space-separated characters each. It is guaranteed that no
+    player has already won.</p>
+<h2>Output</h2>
+<p>Print who can still win, if anyone. If both Johan and
+    Abdullah can still win, then print “<tt class="ttfamily">Abdullah och Johan kan vinna</tt>”. If only one
+    person can win, print their name, then “<tt class="ttfamily">kan vinna</tt>”. If no player can win, then print
+    “<tt class="ttfamily">ingen kan vinna</tt>”.</p>
+<h2>Grading</h2>
+<p>Your solution will be tested on a number of test-case
+    groups. To receive points for a group, your solution must
+    handle every test-case in the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Point value</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Restrictions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All squares are filled</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$65$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Either Abdullah or Johan can win, not both</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further restrictions</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>_ _ _
+_ _ _
+_ _ _
+</pre>
+</td>
+<td>
+<pre>Abdullah och Johan kan vinna
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>X O X
+X O X
+O X O
+</pre>
+</td>
+<td>
+<pre>ingen kan vinna
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>X O X
+X O O
+_ X O
+</pre>
+</td>
+<td>
+<pre>Johan kan vinna
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,161 @@
+<div class="problembody">
+<p>You are an archaeologist working at an excavation site where
+    your team has found hundreds of clay tablets containing glyphs
+    written in some ancient language. Not much is known about the
+    language yet, but you know that there are only six different
+    glyphs, each of them in the shape of a regular polygon with one
+    vertex pointing to the right (see Figure 1(a) below). Only
+    the boundary of each polygon is carved out of the clay.</p>
+<div class="figure" id="fig:polyrec">
+<center>
+<table class="subfigure" id="a0000000006" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=3.75cm]{alphabet.pdf}" src="/problems/glyphrecognition/file/statement/en/img-0001.png" style="width:3.75cm"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(a) <span>The six
+            glyphs.</span></td>
+</tr>
+</table>
+<table class="subfigure" id="a0000000007" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=5.25cm]{1-without.pdf}" src="/problems/glyphrecognition/file/statement/en/img-0002.png" style="width:5.25cm"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(b) <span>The first
+            sample input.</span></td>
+</tr>
+</table>
+<table class="subfigure" id="a0000000008" style="display:inline-table">
+<tr>
+<td><img alt="\includegraphics[width=5.2cm]{1-triangle.pdf}" src="/problems/glyphrecognition/file/statement/en/img-0003.png" style="width:5.2cm"/> <img alt="\includegraphics[width=5.2cm]{1-hexagon.pdf}" src="/problems/glyphrecognition/file/statement/en/img-0004.png" style="width:5.2cm"/></td>
+</tr>
+<tr>
+<td style="text-align:center">(c) <span>Fitting
+            triangles and hexagons to the first<br/>
+            sample. The triangles’ score is higher.</span></td>
+</tr>
+</table>
+<div class="caption">
+<b>Figure 1</b>: Glyph recognition
+        </div>
+</center>
+</div>
+<p>You want to start analysing the language right away, so you
+    need to get the text on the tablets into some machine readable
+    format. Ideally, you would like to use an OCR (optical
+    character recognition) tool for that, but you do not have one
+    installed on your laptop and there is no internet connection at
+    the site.</p>
+<p>Because of this you have devised your own scheme to digitise
+    the ancient writings: for every glyph on a tablet you first
+    find a number of sample points that are in the carved out
+    region, i.e. on the boundary of the polygon. Based on
+    those sample points you then calculate a score for each of the
+    six glyphs and mark the one with the highest score as the
+    recognised glyph.</p>
+<p>For a given number of corners <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$3
+    \le k \le 8$</span>), the score is computed as follows. Two
+    regular <span class="tex2jax_process">$k$</span>-gons are
+    fitted to the sample points, one from the inside and one from
+    the outside, such that the following hold:</p>
+<ul class="itemize">
+<li>
+<p>Each polygon is centered at the origin, i.e. all
+        vertices have equal distance to <span class="tex2jax_process">$(0,0)$</span>.</p>
+</li>
+<li>
+<p>Each polygon has a vertex on the positive <span class="tex2jax_process">$x$</span>-axis.</p>
+</li>
+<li>
+<p>The inner polygon is the largest such polygon containing
+        none of the sample points.</p>
+</li>
+<li>
+<p>The outer polygon is the smallest such polygon
+        containing all of the sample points.</p>
+</li>
+</ul>
+<p>An example can be seen in Figure 1(c). The score for
+    this value of <span class="tex2jax_process">$k$</span> is
+    <span class="tex2jax_process">$\frac{A_\text {inner}}{A_\text
+    {outer}}$</span>, where <span class="tex2jax_process">$A_\text
+    {inner}$</span> and <span class="tex2jax_process">$A_\text
+    {outer}$</span> are the areas of the inner and outer polygon,
+    respectively.</p>
+<p>Given a set of sample points, find the glyph with the
+    highest score.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with one integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \le 1\, 000$</span>), the number
+        of sample points.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with two integers <span class="tex2jax_process">$x,y$</span> (<span class="tex2jax_process">$-10^6 \le x,y \le 10^6$</span>),
+        specifying a point at coordinates <span class="tex2jax_process">$(x,y)$</span>.</p>
+</li>
+</ul>
+<p>No sample point is at the origin and all points are
+    distinct.</p>
+<h2>Output</h2>
+<p>Output the optimal number of corners <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$3
+    \le k \le 8$</span>), followed by the score obtained for that
+    value of <span class="tex2jax_process">$k$</span>. Your answer
+    will be accepted if the absolute error does not exceed
+    <span class="tex2jax_process">$10^{-6}$</span>. If several
+    values of <span class="tex2jax_process">$k$</span> result in a
+    score that is within <span class="tex2jax_process">$10^{-6}$</span> of the optimal score, any
+    one of them will be accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+9
+-4 -1
+-4 6
+-3 -6
+-3 4
+0 -4
+2 -3
+2 3
+5 1
+7 0
+</pre>
+</td>
+<td>
+<pre>
+3 0.5625000000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 0
+0 1
+-1 0
+0 -1
+</pre>
+</td>
+<td>
+<pre>
+8 1.0000000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

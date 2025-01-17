@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>The fundamental theorem of arithmetic says that any natural
+    number greater than one can be written uniquely as the product
+    of prime numbers. For example: <span class="tex2jax_process">$3
+    = 3^1$</span>, <span class="tex2jax_process">$4 = 2^2$</span>,
+    <span class="tex2jax_process">$6 = 2^1 \times 3^1$</span>,
+    <span class="tex2jax_process">$72 = 2^3 \times 3^2$</span>, and
+    in general,</p><span class="tex2jax_process">\[ n =
+    p_1^{e_1}\times p_2^{e_2}\times \cdots \times p_ k^{e_ k}
+    \]</span>
+<p>for prime numbers <span class="tex2jax_process">$p_1$</span>
+    through <span class="tex2jax_process">$p_ k$</span> and
+    exponents <span class="tex2jax_process">$e_1$</span> through
+    <span class="tex2jax_process">$e_ k$</span>.</p>
+<p>For this problem, given an integer <span class="tex2jax_process">$n \geq 2$</span>, determine what we will
+    call the ‘neighbor’ of <span class="tex2jax_process">$n$</span>. The neighbor is the integer you
+    get by swapping the <span class="tex2jax_process">$p_ i$</span>
+    and <span class="tex2jax_process">$e_ i$</span> values in the
+    prime factorization of <span class="tex2jax_process">$n$</span>. That is, if <span class="tex2jax_process">$n$</span> is written in prime factorization
+    as above, the neighbor of <span class="tex2jax_process">$n$</span> is</p><span class="tex2jax_process">\[ e_1^{p_1}\times e_2^{p_2}\times \cdots
+    \times e_ k^{p_ k}. \]</span>
+<p>For example, if <span class="tex2jax_process">$n = 2\, 000 =
+    2^4\times 5^3$</span> then its neighbor is <span class="tex2jax_process">$4^2\times 3^5=3\, 888$</span>.</p>
+<h2>Input</h2>
+<p>Input is a sequence of up to <span class="tex2jax_process">$20\, 000$</span> integers, one per line.
+    Each integer is in the range <span class="tex2jax_process">$2
+    \le n &lt; 2^{31}$</span>. Input ends at the end of file.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$n$</span>, print
+    <span class="tex2jax_process">$n$</span> followed by its
+    neighbor. Each neighbor is in the range <span class="tex2jax_process">$[1,2^{31})$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3
+4
+5
+6
+7
+8
+9
+10
+72
+200
+</pre>
+</td>
+<td>
+<pre>
+2 1
+3 1
+4 4
+5 1
+6 1
+7 1
+8 9
+9 8
+10 1
+72 72
+200 288
+</pre>
+</td>
+</tr>
+</table>
+</div>

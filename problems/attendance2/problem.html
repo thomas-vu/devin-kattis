@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>Taking attendance in your class is a tedious task. You call
+    out the names of students one at a time in alphabetical order.
+    If the student is present, they respond by saying “<tt class="ttfamily">Present!</tt>” before you call the next name.</p>
+<p>This is such a boring task that you sometimes zone out and
+    don’t keep a proper record of attendance. Write a program to
+    help you summarize the absences!</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1 \leq N \leq 200)$</span> indicating the
+    number of “callouts”. Then <span class="tex2jax_process">$N$</span> lines follow indicating the
+    callouts that were made in the order they were made. A single
+    line consists of either a student’s name or of the response
+    <tt class="ttfamily">Present!</tt>. A student’s name will
+    consist of between <span class="tex2jax_process">$2$</span> and
+    <span class="tex2jax_process">$10$</span> characters, the first
+    always being an uppercase letter (<tt class="ttfamily">’A’</tt>-<tt class="ttfamily">’Z’</tt>) and the
+    remaining characters always being lowercase letters (<tt class="ttfamily">’a’</tt>-<tt class="ttfamily">’z’</tt>).</p>
+<p>The student names will appear in alphabetical order in this
+    input and a line with the response <tt class="ttfamily">Present!</tt> will only appear if the previous line
+    was the name of a student. In particular, the response
+    <tt class="ttfamily">Present!</tt> will never appear as the
+    first callout.</p>
+<h2>Output</h2>
+<p>Output the names of all students that are absent in the
+    order they were called, each on a separate line. If no students
+    were absent, simply output the message <tt class="ttfamily">No
+    Absences</tt></p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6
+Buckley
+Burnadette
+Present!
+Chad
+Present!
+Erin
+</pre>
+</td>
+<td>
+<pre>Buckley
+Erin
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+Alice
+Bob
+Charlie
+</pre>
+</td>
+<td>
+<pre>Alice
+Bob
+Charlie
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8
+Gregory
+Present!
+Maureen
+Present!
+Milton
+Present!
+Xavier
+Present!
+</pre>
+</td>
+<td>
+<pre>No Absences
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5
+Gift
+Present!
+Present
+Treat
+Present!
+</pre>
+</td>
+<td>
+<pre>Present
+</pre>
+</td>
+</tr>
+</table>
+</div>

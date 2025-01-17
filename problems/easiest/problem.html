@@ -1,0 +1,59 @@
+<div class="problembody">
+<p>Some people think this is the easiest problem in today’s
+    problem set. Some people think otherwise, since it involves
+    sums of digits of numbers and that’s difficult to grasp.</p>
+<p>If we multiply a number <span class="tex2jax_process">$N$</span> with another number <span class="tex2jax_process">$m$</span>, the sum of digits typically
+    changes. For example, if <span class="tex2jax_process">$m =
+    26$</span> and <span class="tex2jax_process">$N=3029$</span>,
+    then <span class="tex2jax_process">$N\cdot m = 78754$</span>
+    and the sum of the digits is <span class="tex2jax_process">$31$</span>, while the sum of digits of
+    <span class="tex2jax_process">$N$</span> is 14.</p>
+<p>However, there are some numbers that if multiplied by
+    <span class="tex2jax_process">$N$</span> will result in the
+    same sum of digits as the original number <span class="tex2jax_process">$N$</span>. For example, consider
+    <span class="tex2jax_process">$m = 37, N=3029$</span>, then
+    <span class="tex2jax_process">$N\cdot m = 112073$</span>, which
+    has sum of digits 14, same as the sum of digits of <span class="tex2jax_process">$N$</span>.</p>
+<p>Your task is to find the smallest positive integer
+    <span class="tex2jax_process">$p$</span> among those that will
+    result in the same sum of the digits when multiplied by
+    <span class="tex2jax_process">$N$</span>. To make the task a
+    little bit more challenging, the number must also be higher
+    than ten.</p>
+<h2>Input</h2>
+<p>The input consists of several test cases. Each case is
+    described by a single line containing one positive integer
+    number <span class="tex2jax_process">$N, 1\leq N\leq 100\,
+    000$</span>. The last test case is followed by a line
+    containing zero.</p>
+<h2>Output</h2>
+<p>For each test case, print one line with a single integer
+    number <span class="tex2jax_process">$p$</span> which is the
+    minimal number such that <span class="tex2jax_process">$N\cdot
+    p$</span> has the same sum of digits as <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$p$</span> is bigger than 10.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3029
+4
+5
+42
+0
+</pre>
+</td>
+<td>
+<pre>
+37
+28
+28
+25
+</pre>
+</td>
+</tr>
+</table>
+</div>

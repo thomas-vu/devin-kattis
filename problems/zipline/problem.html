@@ -1,0 +1,76 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/zipline/file/statement/en/img-0001.jpg" class="illustration" src="/problems/zipline/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.flickr.com/photos/vastateparksstaff/34247700580">
+        Virginia State Parks</a>.
+      </div>
+</div>
+<p>A zipline is a very fun and fast method of travel. It uses a
+    very strong steel cable, connected to two poles. A rider (which
+    could be a person or some cargo) attaches to a pulley which
+    travels on the cable. Starting from a high point on the cable,
+    gravity pulls the rider along the cable.</p>
+<p>Your friend has started a company which designs and installs
+    ziplines, both for fun and for utility. However, there’s one
+    key problem: determining how long the cable should be between
+    the two connection points. The cable must be long enough to
+    reach between the two poles, but short enough that the rider is
+    guaranteed to stay a safe distance above the ground. Help your
+    friend determine these bounds on the length.</p>
+<p>The cable connects to two vertical poles that are
+    <span class="tex2jax_process">$w$</span> meters apart, at
+    heights <span class="tex2jax_process">$g$</span> and
+    <span class="tex2jax_process">$h$</span> meters, respectively.
+    You may assume that the cable is inelastic and has negligible
+    weight compared to the rider, so that there is no sag or slack
+    in the cable. That is, at all times the cable forms two
+    straight line segments connecting the rider to the two poles,
+    with the sum of the segments lengths equal to the total length
+    of the cable. The lowest part of the rider hangs <span class="tex2jax_process">$r$</span> meters below the cable; therefore
+    the cable must stay at least <span class="tex2jax_process">$r$</span> meters above the ground at all
+    times during the ride. The ground is flat between the two
+    poles. Please refer to the diagram in Figure 1 for more
+    information.</p>
+<div class="figure" id="fig:zipline_diagram">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{zipline.png}" src="/problems/zipline/file/statement/en/img-0002.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: A zipline, annotated with the four
+          variables used to describe it.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$1 \le n \le 1\, 000$</span>. The next
+    <span class="tex2jax_process">$n$</span> lines each describe a
+    zipline configuration with four integers: <span class="tex2jax_process">$w$</span>, <span class="tex2jax_process">$g$</span>, <span class="tex2jax_process">$h$</span>, and <span class="tex2jax_process">$r$</span>. These correspond to the variables
+    described above. The limits on their values are: <span class="tex2jax_process">$1 \le w, g, h \le 1\, 000\, 000$</span>, and
+    <span class="tex2jax_process">$1 \le r \le \min (g,
+    h)$</span>.</p>
+<h2>Output</h2>
+<p>For each zipline, print a line of output with two lengths
+    (in meters): the minimum and maximum length the cable can be
+    while obeying the above constraints. Both lengths should have
+    an absolute error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+1000 100 100 20
+100 20 30 2
+</pre>
+</td>
+<td>
+<pre>1000.00000000 1012.71911209
+100.49875621 110.07270325
+</pre>
+</td>
+</tr>
+</table>
+</div>

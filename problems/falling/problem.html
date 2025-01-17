@@ -1,0 +1,63 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/falling/file/statement/en/img-0001.png" class="illustration" src="/problems/falling/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Susan is making high-speed videos of falling coffee mugs.
+    When analyzing the videos she wants to know how big the mugs
+    are, but unfortunately they all got destroyed during filming.
+    Susan knows some physics though, so she has figured out how far
+    they moved between different video frames. The camera was
+    filming at a speed of <span class="tex2jax_process">$70$</span>
+    frames per second, which means that at frame <span class="tex2jax_process">$n$</span>, counted from when the mug was
+    released, the number of millimeters it has moved is
+    <span class="tex2jax_process">$d=n^2$</span>. The counting of
+    the frames starts at <span class="tex2jax_process">$0$</span>.</p>
+<p>Susan thinks a certain mug is <span class="tex2jax_process">$D$</span> millimeters high, but to verify
+    this she needs to find two frames between which the mug has
+    moved exactly this distance. Can you help her do this?</p>
+<h2>Input</h2>
+<p>The input file contains the single positive integer
+    <span class="tex2jax_process">$D\leq 200\, 000$</span>, the
+    distance to be measured.</p>
+<h2>Output</h2>
+<p>Output two non-negative integers <span class="tex2jax_process">$n_1$</span> and <span class="tex2jax_process">$n_2$</span>, the numbers of the frames that
+    Susan should compare. They should fulfill <span class="tex2jax_process">$n_2^2-n_1^2=D$</span>. If no two such
+    integers exist, instead output “<tt>impossible</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+88
+</pre>
+</td>
+<td>
+<pre>
+9 13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+86
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

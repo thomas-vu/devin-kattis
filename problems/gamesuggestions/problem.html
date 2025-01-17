@@ -1,0 +1,97 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/gamesuggestions/file/statement/en/img-0001.jpg" class="illustration" src="/problems/gamesuggestions/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://unsplash.com/photos/m3hn2Kn5Bns">Carl Raw</a>
+</div>
+</div>
+<p>Khadija is working on her new game, which will be a…well,
+    she doesn’t really know yet! She has made an extremely flexible
+    game engine, and being a skilled developer, she can implement
+    just about anything in it.</p>
+<p>To find out what the game should contain, she has asked her
+    friends for input. They have a lot of suggestions. So many, in
+    fact, that to not overwhelm her with ideas, they have promised
+    to only present at most one suggestion each.</p>
+<p>However, they all want to give Khadija as many different
+    suggestions as possible, so they have gathered and found a set
+    of suggestions such that:</p>
+<ul class="itemize">
+<li>
+<p>They maximise the total number of suggestions they tell
+        to Khadija</p>
+</li>
+<li>
+<p>Every person suggests at most one of their own
+        suggestions</p>
+</li>
+</ul>
+<p>When Khadija has received all the suggestions, she assigns
+    them to one or more categories.</p>
+<p>To get some variation into the game, she limits the number
+    of suggestions from one category. She then picks as many
+    suggestions as possible, given the category limits (A
+    suggestion only counts towards one category).</p>
+<p>While she’s busy implementing all these suggestions, her
+    friends wonder how many suggestions she could’ve ended up
+    implementing in theory.</p>
+<h2>Input</h2>
+<p>The input begins with a single line with three integers
+    <span class="tex2jax_process">$F$</span>, <span class="tex2jax_process">$S$</span> and <span class="tex2jax_process">$C$</span>: The number of friends, distinct
+    suggestions and distinct categories, respectively.</p>
+<p>Next follow <span class="tex2jax_process">$F$</span> lines,
+    one line for each friend: The line contains <span class="tex2jax_process">$Fn_ i$</span> space separated suggestion
+    names.</p>
+<p>Then, <span class="tex2jax_process">$C$</span> lines follow,
+    one for each category. The line starts with an integer
+    <span class="tex2jax_process">$Cn_ i$</span>, the maximum
+    number of suggestions Khadija wants to include that are
+    assigned to this category, followed by <span class="tex2jax_process">$Sn_ i$</span> space separated suggestion
+    names which are part of this category.</p>
+<h2>Output</h2>
+<p>Output the maximum number of suggestions Khadija could
+    possibly end up implementing.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$0 &lt; F, S, C, Fn_ i\leq
+        200$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 &lt; Cn_ i \leq Sn_ i
+        \leq 100$</span></p>
+</li>
+<li>
+<p>All suggestion names are unique, and consist of between
+        <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$20$</span> characters in the range
+        <tt class="ttfamily">a–z</tt> and <tt class="ttfamily">0–9</tt>.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 9 4
+ducks 2d
+guns 3d swords
+3d swords
+3d swords wolves
+swords 2d
+zombies 2d vampires demons
+2d swords
+1 2d 3d
+1 swords guns
+1 wolves ducks
+4 wolves zombies vampires demons
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

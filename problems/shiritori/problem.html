@@ -1,0 +1,116 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/shiritori/file/statement/en/img-0001.png" class="illustration" src="/problems/shiritori/file/statement/en/img-0001.png"/>
+<div class="description">
+        The original version of Shiritori is played using Japanese
+        hiragana, katakana, or kanji characters. Source <a href="https://commons.wikimedia.org/wiki/File:Shiritori.png">WikiMedia</a>
+</div>
+</div>
+<p>The Japanese game of Shiritori is the perfect 2-player game
+    for a long car ride. The rules are simple: the first player
+    picks any word to say, then the second player must choose a new
+    word that begins with the last letter of the word that the
+    first player just said. Then it is the first player’s turn
+    again to say a word that begins with the last letter of the
+    previous word the second player said, and so on. At each turn,
+    the player whose turn it is must say a word that links to the
+    previous one <em>and</em> which has not been called out before
+    during the game. Your job is to determine if the game was
+    played according to these rules, given a history of the words
+    used in a particular game. In a game, player <span class="tex2jax_process">$1$</span> always starts first.</p>
+<h2>Input</h2>
+<p>Input consists of one test case that begins with an integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \leq N \leq 100\, 000$</span>) on a single
+    line. Each of the following <span class="tex2jax_process">$N$</span> lines contains <span class="tex2jax_process">$1$</span> word. The words are presented in
+    the order in which the players called them out, starting with
+    player <span class="tex2jax_process">$1$</span>. All words
+    consist of between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$120$</span> lowercase English
+    letters.</p>
+<h2>Output</h2>
+<p>If the game was played according to the rules, output
+    “<tt class="ttfamily">Fair Game</tt>”. Otherwise, find out
+    which player first violated the rules of the game. That player
+    lost the game, so output “<tt class="ttfamily">Player &lt;i&gt;
+    lost</tt>”. For example, if player <span class="tex2jax_process">$1$</span> violated the rules first, output
+    “<tt class="ttfamily">Player 1 lost</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+apple
+ear
+real
+letters
+style
+</pre>
+</td>
+<td>
+<pre>Fair Game
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+apple
+extra
+apple
+</pre>
+</td>
+<td>
+<pre>Player 1 lost
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+apple
+neat
+</pre>
+</td>
+<td>
+<pre>Player 2 lost
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5
+apple
+east
+team
+meat
+team
+</pre>
+</td>
+<td>
+<pre>Player 1 lost
+</pre>
+</td>
+</tr>
+</table>
+</div>

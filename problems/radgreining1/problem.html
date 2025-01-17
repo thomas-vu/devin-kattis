@@ -1,0 +1,154 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/radgreining1/file/statement/en/img-0001.png" class="illustration" src="/problems/radgreining1/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://en.wikipedia.org/wiki/File:2019-nCoV-CDC-23312_without_background.png">
+        Wikipedia</a>, public domain
+      </div>
+</div>
+<p>You work at a research lab where the genetic data of the
+    virus 2019-nCoV, better known as COVID, is being sequenced.
+    Using sequencing the structure of its DNA is being analyzed.
+    The DNA sequence of the virus is a string of length
+    <span class="tex2jax_process">$n$</span> containing only the
+    letters <tt class="ttfamily">G</tt>, <tt class="ttfamily">T</tt>, <tt class="ttfamily">A</tt> and <tt class="ttfamily">C</tt>.</p>
+<p>The method your research lab uses can only sequence a small
+    section of the DNA sequence at a time. As an example, if the
+    DNA sequence of the virus is of length <span class="tex2jax_process">$6$</span>, the method could be used to
+    sequence the section starting with letter number <span class="tex2jax_process">$1$</span> and ending with letter number
+    <span class="tex2jax_process">$4$</span> in its DNA and then
+    sequence the section starting with letter number <span class="tex2jax_process">$3$</span> and ending with letter number
+    <span class="tex2jax_process">$6$</span>. If the first
+    sequencing returned <tt class="ttfamily">GCAT</tt> and the
+    second returned <tt class="ttfamily">ATTC</tt>, then it could
+    be deduced that the DNA sequence of the virus is <tt class="ttfamily">GCATTC</tt>.</p>
+<p>Using this method various pieces of the DNA sequence of the
+    virus have been sequenced and all that is left to do is piece
+    them together.</p>
+<p>Given the pieces that have been sequenced and where each of
+    those pieces start, write a program that pieces them together
+    to find out as much as possible about the DNA sequence of the
+    virus.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \leq n, m \leq 500$</span>), the length of the DNA sequence and
+    the number of sections that have been sequenced.</p>
+<p>Then there are <span class="tex2jax_process">$m$</span>
+    lines, one for each section that has been sequenced. Each of
+    these lines starts with an integer <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \leq s \leq n$</span>), the position at which this section
+    starts, followed by the section itself which is a string of
+    length <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq n - s + 1$</span>) which
+    contains only the letters <tt class="ttfamily">G</tt>,
+    <tt class="ttfamily">T</tt>, <tt class="ttfamily">A</tt> and
+    <tt class="ttfamily">C</tt>.</p>
+<h2>Output</h2>
+<p>Print a single line containing the letters of the DNA
+    sequence of the virus. If there are many possibilities for some
+    particular letter in the sequence, denote it by ‘<tt class="ttfamily">?</tt>’. If some data is contradictory, like a
+    letter having different values in different sections, instead
+    simply print a single line containing <tt class="ttfamily">Villa</tt>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>33</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$m=1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>33</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>No contradictions will occur</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>34</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>9 3
+1 GCAT
+3 ATTC
+7 AAC
+</pre>
+</td>
+<td>
+<pre>GCATTCAAC
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 2
+3 AAAA
+8 GGG
+</pre>
+</td>
+<td>
+<pre>??AAAA?GGG
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 2
+3 AAAA
+6 GGG
+</pre>
+</td>
+<td>
+<pre>Villa
+</pre>
+</td>
+</tr>
+</table>
+</div>

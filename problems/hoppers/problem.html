@@ -1,0 +1,123 @@
+<div class="problembody">
+<p>You are part of an elite hacking group who has just invented
+    a new type of malware, called the hoppers. Hoppers can operate
+    in any high-security computer networks; however, they can only
+    propagate themselves in a very limited way.</p>
+<p>A computer network is a set of hosts <span class="tex2jax_process">$V$</span> (<span class="tex2jax_process">$|V| = N$</span>) and direct links
+    <span class="tex2jax_process">$E$</span> (<span class="tex2jax_process">$|E| = M$</span>). Each direct link connects
+    two different hosts, allowing them to communicate in both
+    directions. If a host <span class="tex2jax_process">$u$</span>
+    is infected with a hopper, then it will propagate itself to all
+    hosts <span class="tex2jax_process">$W$</span> where
+    <span class="tex2jax_process">$W$</span> is the set of hosts
+    which are connected to any neighbor of <span class="tex2jax_process">$u$</span>. Formally, <span class="tex2jax_process">$W = \{ w \mid \{ (u,v),(v,w)\} \subseteq E
+    \} $</span>. The newly-infected host <span class="tex2jax_process">$w$</span> can now proceed to infect other
+    hosts in the same manner.</p>
+<p>You are trying to infect all hosts in a particular
+    high-security network by compromising a single host. Of course,
+    a compromised host will be infected with a hopper. Though it
+    may be an impossible mission, you realize that you can trick
+    the administrator into installing new direct links between
+    hosts by submitting IT requests.</p>
+<p>Too many requests may arouse suspicion. Find the minimum
+    number of IT requests you have to submit to ensure that there
+    exists a single host such that if it is infected with a hopper,
+    then it will propagate to the entire network.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>, where <span class="tex2jax_process">$3 \le N \le 5 \cdot 10^5$</span> and
+    <span class="tex2jax_process">$2 \le M \le 5 \cdot
+    10^5$</span>. The next <span class="tex2jax_process">$M$</span>
+    lines contain two integers <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1
+    \le u, v \le N$</span>), representing a direct link between
+    hosts <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span>. There is at most one direct link
+    between any pair of hosts, and no host is directly linked to
+    itself.</p>
+<h2>Output</h2>
+<p>The output contains an integer in a line representing the
+    minimum number of IT requests you must send.</p>
+<h2>Explanation</h2>
+<p>In the first example, there are <span class="tex2jax_process">$N = 3$</span> hosts and <span class="tex2jax_process">$M = 2$</span> direct links <span class="tex2jax_process">$\{ (1,2),(2,3)\} $</span>. In this network,
+    there is no way to spread the hopper to all hosts by
+    compromising only a single host, e.g., if we compromise host
+    <span class="tex2jax_process">$1$</span>, then only hosts
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$3$</span> are infected, etc. We need to
+    submit one IT request to connect <span class="tex2jax_process">$(1,3)$</span> to achieve our goal. By doing
+    so, if we compromise host <span class="tex2jax_process">$1$</span>, all hosts <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$3$</span> are infected. <span class="tex2jax_process">$1 \rightarrow 3 \rightarrow 2$</span> (thus,
+    host <span class="tex2jax_process">$2$</span> is infected).
+    <span class="tex2jax_process">$1 \rightarrow 2 \rightarrow
+    3$</span> (thus, host <span class="tex2jax_process">$3$</span>
+    is infected).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 2
+2 3
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 10
+1 2
+2 3
+3 4
+4 5
+5 1
+1 3
+2 4
+3 5
+4 1
+5 2
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>12 13
+2 3
+3 4
+4 5
+5 2
+6 7
+7 8
+8 9
+9 10
+10 7
+9 12
+12 11
+11 6
+12 7
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

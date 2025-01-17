@@ -1,0 +1,67 @@
+<div class="problembody">
+<p>You’ve got a recipe which specifies a number of ingredients,
+    the amount of each ingredient you will need, and the number of
+    portions it produces. But, the number of portions you need is
+    not the same as the number of portions specified in the recipe!
+    How can you scale it?</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 40$</span>), <span class="tex2jax_process">$x$</span>
+    and <span class="tex2jax_process">$y$</span> (<span class="tex2jax_process">$1 \le x,y \le 40{,}000$</span>), where
+    <span class="tex2jax_process">$n$</span> is the number of
+    ingredients in the recipe, <span class="tex2jax_process">$x$</span> is the number of portions that the
+    recipe produces, and <span class="tex2jax_process">$y$</span>
+    is the number of portions you need.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains a single integer <span class="tex2jax_process">$a$</span> (<span class="tex2jax_process">$1
+    \le a \le 40{,}000$</span>). These are the amounts of each
+    ingredient needed for the recipe.</p>
+<p>The inputs will be chosen so that the amount of each
+    ingredient needed for <span class="tex2jax_process">$y$</span>
+    portions will be an integer.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines. On
+    each line output a single integer, which is the amount of that
+    ingredient needed to produce <span class="tex2jax_process">$y$</span> portions of the recipe. Output
+    these values in the order of the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4 10
+8
+12
+</pre>
+</td>
+<td>
+<pre>20
+30
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 37627 38021
+34571
+38009
+34189
+</pre>
+</td>
+<td>
+<pre>34933
+38407
+34547
+</pre>
+</td>
+</tr>
+</table>
+</div>

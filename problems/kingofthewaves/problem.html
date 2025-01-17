@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="illustration" style="width:27.00%">
+<img alt="/problems/kingofthewaves/file/statement/en/img-0001.jpg" class="illustration" src="/problems/kingofthewaves/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by JD Lasica via Flickr.
+      </div>
+</div>
+<p>You are organising a king of the hill tournament, the Buenos
+    Aires Paddleboarding Competition (BAPC), with <span class="tex2jax_process">$n$</span> participants. In a king of the
+    hill tournament, one person starts as a “king” and is then
+    challenged by another person, the winning person becomes the
+    new king. This is repeated until all participants have
+    challenged exactly once (except for the starting person). In a
+    paddleboarding match, there are no draws. The person which ends
+    up as king, wins the tournament. Since you are the organiser,
+    you get to choose the starting person and the order in which
+    they challenge the king.</p>
+<p>Someone is offering you a substantial amount of money in
+    case one of the participants, Henk, ends up winning the
+    tournament. You happen to know, for any two participants
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, which of the two would win if
+    they were to match during the tournament. Consequently, you
+    choose to do the unethical: you will try to rig the game. Can
+    you find a schedule that makes Henk win the tournament?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains an integer <span class="tex2jax_process">$1 \leq n \leq 1000$</span>, the number
+        of participants. The participants are numbered <span class="tex2jax_process">$0, \dots , n-1$</span>, where Henk is
+        <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>Then <span class="tex2jax_process">$n$</span> lines
+        follow, where each line has exactly <span class="tex2jax_process">$n$</span> characters (not counting the
+        newline character). These lines represent the matrix with
+        the information of who beats who, as follows. On line
+        <span class="tex2jax_process">$i$</span> the <span class="tex2jax_process">$j$</span>th character is (note that
+        <span class="tex2jax_process">$0 \leq i, j &lt;
+        n$</span>):</p>
+<ul class="itemize">
+<li>
+<p>’<tt class="ttfamily">1</tt>’ if person <span class="tex2jax_process">$i$</span> will win against person
+            <span class="tex2jax_process">$j$</span>.</p>
+</li>
+<li>
+<p>’<tt class="ttfamily">0</tt>’ if person <span class="tex2jax_process">$i$</span> will lose against person
+            <span class="tex2jax_process">$j$</span>.</p>
+</li>
+<li>
+<p>’<tt class="ttfamily">X</tt>’ if <span class="tex2jax_process">$i = j$</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Print a sequence of participants, such that the first person
+    starts as king and the consequent participants challenge the
+    king. If there is no way to rig the game such that Henk wins,
+    print “<tt class="ttfamily">impossible</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+X10
+0X1
+10X
+</pre>
+</td>
+<td>
+<pre>
+1 2 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+X10
+0X0
+11X
+</pre>
+</td>
+<td>
+<pre>
+impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,57 @@
+<div class="problembody">
+<p>Bob is texting Alice about his favourite programming
+    problems, but he spilled coffee on his keyboard and now the
+    keys get stuck when he types. The other day, he tried to tell
+    her about the upcoming contest “UAPC”, but accidentally sent
+    “UAAAAAPC” since his A key got stuck! Bob is an undergraduate
+    so he can’t afford a new keyboard. He has asked you to write a
+    program to correct his messages.</p>
+<p>To make your life easier, Bob has agreed to avoid using
+    messages with adjacent copies of the same letter (e.g., he
+    won’t write about the “coffee” incident). So, you should always
+    reduce duplicates down to a single character.</p>
+<h2>Input</h2>
+<p>The input consists of a string <span class="tex2jax_process">$S$</span>, where <span class="tex2jax_process">$1 \le |S| \le 1000$</span>, which is Bob’s
+    entire message to Alice. There may be multiple space-separated
+    words in the message, so the entire string <span class="tex2jax_process">$s$</span> <i class="itshape">including</i>
+    spaces should be considered part of the message.</p>
+<p>The string <span class="tex2jax_process">$S$</span> is
+    guaranteed to only include upper and lower-case characters,
+    digits, and spaces. Thankfully, the coffee did not reach Bob’s
+    spacebar so there will never be multiple spaces in a row.</p>
+<h2>Output</h2>
+<p>Output the message with repeated consecutive characters
+    trimmed to a single character.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>UAAAAAPC
+</pre>
+</td>
+<td>
+<pre>UAPC
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>UUAAPPCCC is my 11th faavvorite conNtEest
+</pre>
+</td>
+<td>
+<pre>UAPC is my 1th favorite conNtEest
+</pre>
+</td>
+</tr>
+</table>
+</div>

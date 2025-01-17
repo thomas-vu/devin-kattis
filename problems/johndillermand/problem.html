@@ -1,0 +1,180 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/johndillermand/file/statement/en/img-0001.png" class="illustration" src="/problems/johndillermand/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Your university maintains excellent relations with the
+    large public service media company behind <em>John
+    Dillermand</em>, a claymation TV show aimed at four- to
+    eight-year-old children. International reactions to the
+    programme have been mixed, with critics viewing it as
+    sophomoric and tone-deaf at best, a deliberate provocation of
+    public morals or a problematic confirmation of stereotypes at
+    worst. To make the show marketable to audiences more fragile
+    than Danish children it has been decided to clean up the
+    footage by removing the mustachioed protagonist’s prehensile
+    appendage.
+    <p>For most episodes, this task has been adequately performed
+    by training your university’s machine-learned information
+    curation algorithms to remove red and white pixels from
+    individual frames. However, the Christmas episode S1E11,
+    <em>John redder julen</em>, needs more attention. Many of the
+    scenes involve candy canes, Danish flags, and other Christmas
+    decorations that must be kept for narrative cohesion.</p>
+<p><img alt="\includegraphics[width=.25\textwidth ]{img/sample1.jpg}" src="/problems/johndillermand/file/statement/en/img-0002.jpg" style="width:25.00%"/></p>
+<p>It turns out that removing <em>only</em> John Dillermand’s
+    eponymous protuberance from these frames requires a lot more
+    delicacy than what deep learning can provide. Instead of
+    editing every frame manually, you decide to write a plug-in to
+    the image processing software that automates this task.</p>
+<h2>Input</h2>
+<p>The input represents a single image of the episode, called a
+    frame. On the first line, the frame’s dimensions as two
+    space-separated integers <span class="tex2jax_process">$h$</span> and <span class="tex2jax_process">$w$</span>. Then follow <span class="tex2jax_process">$h$</span> lines of <span class="tex2jax_process">$w$</span> symbols, each representing a
+    pixel, with “<tt class="ttfamily">#</tt>” meaning red,
+    “<tt class="ttfamily">O</tt>” meaning white, and “<tt class="ttfamily">.</tt>” meaning anything else. The top left corner
+    is guaranteed to be either white or red and is an endpoint of
+    John’s appendage. The appendage is one pixel wide, alternates
+    between red and white neighbouring pixels, and does neither
+    touch nor intersect itself, nor does it touch other red or
+    white pixels in the frame. Two pixels are considered touching
+    if they share a horizontal or vertical side.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$h$</span> lines of
+    <span class="tex2jax_process">$w$</span> symbols: The improved
+    frame, where the pixels that make up John’s appendage have been
+    replaced by “<tt class="ttfamily">.</tt>”. No other pixels may
+    be changed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>20 20
+O.#O#O#O#O#O........
+#...........#.......
+O...........O.......
+#.........O#........
+O...................
+#O#O#O#......#......
+......O......#......
+......#....#.#.#....
+......O...#######...
+...O#O#...#O#O#O#...
+...#.......#O#O#....
+...O#O......#O#.....
+.....#O#.....#......
+................O#..
+...............#..O.
+.##O####..........#.
+.##O####.........O..
+.OOOOOOO........#...
+.##O####.......O....
+.##O####......#.....
+</pre>
+</td>
+<td>
+<pre>..#O#O#O#O#O........
+............#.......
+............O.......
+..........O#........
+....................
+.............#......
+.............#......
+...........#.#.#....
+..........#######...
+..........#O#O#O#...
+...........#O#O#....
+............#O#.....
+.............#......
+................O#..
+...............#..O.
+.##O####..........#.
+.##O####.........O..
+.OOOOOOO........#...
+.##O####.......O....
+.##O####......#.....
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 5
+#....
+O....
+...#O
+...O#
+</pre>
+</td>
+<td>
+<pre>.....
+.....
+...#O
+...O#
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+#.
+.O
+</pre>
+</td>
+<td>
+<pre>..
+.O
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>2 2
+#.
+O#
+</pre>
+</td>
+<td>
+<pre>..
+..
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+O
+</pre>
+</td>
+<td>
+<pre>.
+</pre>
+</td>
+</tr>
+</table>
+</div>

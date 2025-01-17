@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>Simone is learning to trade crypto currencies. Right now,
+    she is looking into a new currency called
+    <em>CryptoKattis</em>. A CryptoKattis can be used to improve
+    your Kattis ranklist score without having to solve
+    problems.</p>
+<p>Simone, unlike most competitive programmers, is very
+    perceptive of competition trends. She has lately noticed many
+    coders talking about a new online judge called <em>Doggo</em>,
+    and suspect that using the Kattis judge will soon fall out of
+    fashion. This, of course, will cause the CryptoKattis to
+    rapidly fall in value once demand fades.</p>
+<p>To take advantage of this, Simone has performed very careful
+    market research. This has allowed her to estimate the price of
+    a CryptoKattis in dollars during the next <span class="tex2jax_process">$N$</span> days. She intends to use this data
+    to perform a <em>short sell</em>. This means she will at some
+    day borrow <span class="tex2jax_process">$100$</span>
+    CryptoKattis from a bank, immediately selling the currency. At
+    some other day, she must purchase the same amount of
+    CryptoKattis to repay her loan. For every day between (and
+    including) these two days, she must pay <span class="tex2jax_process">$K$</span> dollars in interest. What is the
+    maximum profit Simone can make by carefully choosing when to
+    borrow and repay the <span class="tex2jax_process">$100$</span>
+    CryptoKattis?</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \le N \le 100\, 000$</span>
+    and <span class="tex2jax_process">$1 \le K \le 100$</span>.
+    <span class="tex2jax_process">$N$</span> is the number of days
+    you know the CryptoKattis price of, and <span class="tex2jax_process">$K$</span> is the cost in dollars of
+    borrowing CryptoKattis per day.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers separated by spaces.
+    These are the CryptoKattis prices during the <span class="tex2jax_process">$N$</span> days. Each CryptoKattis price is
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$100\, 000$</span> dollars.</p>
+<h2>Output</h2>
+<p>Output a single decimal number; the maximum profit you can
+    make performing a short sell. If you cannot make a profit no
+    matter what short sell you make, output <span class="tex2jax_process">$0$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 10
+1000 980 960 940 10
+</pre>
+</td>
+<td>
+<pre>98950
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 100
+100 100 100 103 100
+</pre>
+</td>
+<td>
+<pre>100
+</pre>
+</td>
+</tr>
+</table>
+</div>

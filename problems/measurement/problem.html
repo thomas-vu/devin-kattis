@@ -1,0 +1,127 @@
+<div class="problembody">
+<div class="minipage" style="width:600.0pt">
+<div class="illustration" style="width:45.00%">
+<img alt="/problems/measurement/file/statement/en/img-0001.jpg" class="illustration" src="/problems/measurement/file/statement/en/img-0001.jpg"/>
+<div class="description">
+          Photo by William Warby (wwarby) on flickr
+        </div>
+</div>
+<p>The traditional imperial system has eight units of
+      distance (excluding maritime units and some units used in
+      surveying), related as follows:</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>thou (th)</p>
+</td>
+<td style="text-align:left"> </td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>inch (in)</p>
+</td>
+<td style="text-align:left">
+<p>1000 thous</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>foot (ft)</p>
+</td>
+<td style="text-align:left">
+<p>12 inches</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>yard (yd)</p>
+</td>
+<td style="text-align:left">
+<p>3 feet</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>chain (ch)</p>
+</td>
+<td style="text-align:left">
+<p>22 yards</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>furlong (fur)</p>
+</td>
+<td style="text-align:left">
+<p>10 chains</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>mile (mi)</p>
+</td>
+<td style="text-align:left">
+<p>8 furlongs</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p>league (lea)</p>
+</td>
+<td style="text-align:left">
+<p>3 miles</p>
+</td>
+</tr>
+</table>
+<p>Given a distance measured in one of these units, can you
+      figure out what it will be in another unit?</p>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single line of the form “<tt class="ttfamily"><span class="tex2jax_process">$v$</span>
+<span class="tex2jax_process">$u$</span> in <span class="tex2jax_process">$\tilde{u}$</span></tt>”, where <span class="tex2jax_process">$1 \le v \le 100$</span> is an integer amount
+    and <span class="tex2jax_process">$u$</span>, <span class="tex2jax_process">$\tilde{u}$</span> are any of the units
+    listed above, indicating that we are converting <span class="tex2jax_process">$v$</span> <span class="tex2jax_process">$u$</span>’s into <span class="tex2jax_process">$\tilde{u}$</span>’s. Units are given either
+    by their full name or by their acronym, but will always be
+    given in singular using only lower case letters.</p>
+<h2>Output</h2>
+<p>Output the distance converted into <span class="tex2jax_process">$\tilde{u}$</span>. You do not need to worry
+    about the precise formatting of the answer (e.g., number of
+    decimals), but either the absolute error or the relative error
+    of your output must be smaller than <span class="tex2jax_process">$10^{-9}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+42 ft in inch
+</pre>
+</td>
+<td>
+<pre>
+504
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 furlong in lea
+</pre>
+</td>
+<td>
+<pre>
+0.4166666666667
+</pre>
+</td>
+</tr>
+</table>
+</div>

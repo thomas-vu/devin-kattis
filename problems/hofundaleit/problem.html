@@ -1,0 +1,173 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/hofundaleit/file/statement/en/img-0001.jpg" class="illustration" src="/problems/hofundaleit/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:HK_Wan_Chai_Library_Inside_Bookcase_a.jpg">
+        commons.wikimedia.org</a>
+</div>
+</div>
+<p>Hallgerður Stuttbrók is stood in the library in
+    Reyðarfjörður. She is looking for something fun to read, but
+    cannot find the book she has in mind. This is because she does
+    not remember the name of the author, and at this library the
+    books are ordered by the names of the authors. Can you help her
+    find where the books she wants to read are located?</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$n$</span>, the number of books at the
+    library, and <span class="tex2jax_process">$q$</span>, the
+    number of books Hallgerður wants to read. The next <span class="tex2jax_process">$n$</span> lines each contain the title and
+    author name of one book, separated by a comma. Finally there
+    are <span class="tex2jax_process">$q$</span> lines, each
+    containing one book title, each giving the title of one book
+    Hallgerður wants to read. The titles and author names will only
+    contain English lower and upper case letters along with
+    underscores. No two different books will have the same title.
+    Each title and author name is at most <span class="tex2jax_process">$25$</span> letters. The total length of all
+    strings in the input will be at most <span class="tex2jax_process">$10^6$</span> letters.</p>
+<h2>Output</h2>
+<p>For each book Hallgerður wants to read, print the location
+    of the book in the order of all books at the library. We
+    consider the first book to be number <span class="tex2jax_process">$1$</span>, the second number <span class="tex2jax_process">$2$</span> and so on. If the book is not
+    available at the library, print <span class="tex2jax_process">$-1$</span> instead. If an author has more
+    than one book, the internal order of those books is determined
+    by the title. The order is the usual alphabetical order of
+    strings with respect to ASCII-values. Note that this is the
+    same order as the built-in sorting functionality of most
+    programming languages produces. For example <tt class="ttfamily">sorted</tt> in Python or <tt class="ttfamily">std::sort</tt> in C++.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, q \leq
+          100$</span>, no requested books are available at the
+          library.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, q \leq
+          100$</span>, no author has more than one book, the
+          library books are sorted by author, all books are
+          available.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, q \leq
+          100$</span>, no author has more than one book, all books
+          are available.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, q \leq
+          100$</span>, no author has more than one book.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$0 \leq n, q \leq
+          100$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>6</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$0 \leq n, q \leq 100\,
+          000$</span>.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+Krimmi_Hundrad, Arnaldur_Indridason
+Lenging_broka, Hallgerdur
+Dune, Herbert_S_Wilf
+Lenging_broka
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 3
+Undirstodur, Isaac_Aasimov
+Sjalfstaett_folk, Halldor_Laxness
+Britt_Marie_heilsar, Fredrik_Backman
+Eg_velmenni, Isaac_Aasimov
+Madur_sem_heitir_Ove, Fredrik_Backman
+Undirstodur
+Madur_sem_heitir_Ove
+Inngangur_ad_forritun
+</pre>
+</td>
+<td>
+<pre>5
+2
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

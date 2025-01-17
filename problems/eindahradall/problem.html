@@ -1,0 +1,86 @@
+<div class="problembody">
+<p>A particle accelerator is being built in Iceland. The
+    accelerator is <span class="tex2jax_process">$N$</span> Planck
+    lengths in length and is circular. An experiment is planned
+    where two particles should collide. At the start, an electron
+    is placed inside the circular accelerator and the magnets then
+    start to accelerate it. It always moves an integer number of
+    Planck lengths forward. As it is accelerating, it will at each
+    step move further than in the last. In the first step, it moves
+    <span class="tex2jax_process">$1$</span> unit forward with
+    probability half, <span class="tex2jax_process">$2$</span>
+    units with probability a quarter, and so forth. Going forward
+    if it moved <span class="tex2jax_process">$k$</span> units in
+    the previous step, it will move <span class="tex2jax_process">$k + 1$</span> units forward with probability
+    half this time, <span class="tex2jax_process">$k + 2$</span>
+    with probability a quarter, and so forth. When the particle
+    moves <span class="tex2jax_process">$\geq N$</span> units in a
+    single step the magnets cannot keep it contained anymore. Thus,
+    we want the collision to happen at this exact moment, and for
+    this the particle needs to be where it started. What is the
+    probability of this occurring?</p>
+<p>For example if <span class="tex2jax_process">$N = 7$</span>
+    it could move two units forward, then three and finally six
+    before it needs to collide. In this example it does not end up
+    where it started, but many other sets of moves are possible. To
+    better understand how often this repelling effect comes into
+    play, we are interested in the probability that the particle is
+    at the origin when the experiment ends. If the particle is at
+    the origin it is equally likely to go left or right. If the
+    particle moves <span class="tex2jax_process">$k$</span> steps
+    it is equally likely to take <span class="tex2jax_process">$k +
+    1$</span> steps next or to take more than <span class="tex2jax_process">$k + 1$</span> steps next. Similarly, it is
+    equally likely to take <span class="tex2jax_process">$k +
+    2$</span> steps and to take more than <span class="tex2jax_process">$k + 2$</span> steps, so it half of the time
+    it takes <span class="tex2jax_process">$k + 1$</span> steps, a
+    quarter of the time it takes <span class="tex2jax_process">$k +
+    2$</span> steps, and so forth.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$1 \leq t \leq 100$</span>, the
+    number of test cases. Then <span class="tex2jax_process">$t$</span> lines follow, each representing a
+    test case with one integer <span class="tex2jax_process">$N$</span>, where <span class="tex2jax_process">$1 \leq N \leq 10^{18}$</span>.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$N$</span> in the
+    input, print the probability for that <span class="tex2jax_process">$N$</span> as explained above on its own
+    line. The probability can be written as a reduced fraction
+    <span class="tex2jax_process">$p/q$</span>. Since these numbers
+    could be very large, you should instead print <span class="tex2jax_process">$pq^{-1}$</span> modulo <span class="tex2jax_process">$1\, 000\, 000\, 007$</span>, where
+    <span class="tex2jax_process">$q^{-1}$</span> is the
+    multiplicative inverse of <span class="tex2jax_process">$q$</span> modulo <span class="tex2jax_process">$1\, 000\, 000\, 007$</span>.</p>
+<p>For example, if <span class="tex2jax_process">$p=2$</span>
+    and <span class="tex2jax_process">$q=4$</span>, then we find
+    the integer <span class="tex2jax_process">$q^{-1}$</span> such
+    that <span class="tex2jax_process">$q \cdot q^{-1} \equiv 1
+    \pmod{1\, 000\, 000\, 007}$</span>. Since <span class="tex2jax_process">$4 \cdot 250\, 000\, 002 = 1\, 000\, 000\,
+    008$</span> and <span class="tex2jax_process">$1\, 000\, 000\,
+    008 \equiv 1 \pmod{1\, 000\, 000\, 007}$</span>, we can compute
+    <span class="tex2jax_process">$pq^{-1} \equiv 2 \cdot 250\,
+    000\, 002 \equiv 500\, 000\, 004 \pmod{1\, 000\, 000\,
+    007}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+1
+2
+3
+4
+100
+</pre>
+</td>
+<td>
+<pre>1
+500000004
+500000004
+250000002
+263762378
+</pre>
+</td>
+</tr>
+</table>
+</div>

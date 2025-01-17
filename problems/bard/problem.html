@@ -1,0 +1,100 @@
+<div class="problembody">
+<p>Every evening villagers in a small village gather around a
+    big fire and sing songs.</p>
+<p>A prominent member of the community is the bard. Every
+    evening, if the bard is present, he sings a brand new song that
+    no villager has heard before, and no other song is sung that
+    night. In the event that the bard is not present, other
+    villagers sing without him and exchange all songs that they
+    know.</p>
+<p>Given the list of villagers present for <span class="tex2jax_process">$E$</span> consecutive evenings, output all
+    villagers that know all songs sung during that period.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$2
+    \leq N \leq 100$</span>, the number of villagers. The villagers
+    are numbered <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$N$</span>. Villager number
+    <span class="tex2jax_process">$1$</span> is the bard.</p>
+<p>The second line contains an integer <span class="tex2jax_process">$E$</span>, <span class="tex2jax_process">$1
+    \leq E \leq 50$</span>, the number of evenings.</p>
+<p>The next <span class="tex2jax_process">$E$</span> lines
+    contain the list of villagers present on each of the
+    <span class="tex2jax_process">$E$</span> evenings. Each line
+    begins with a positive integer <span class="tex2jax_process">$K$</span>, <span class="tex2jax_process">$2
+    \leq K \leq N$</span>, the number of villagers present that
+    evening, followed by <span class="tex2jax_process">$K$</span>
+    positive integers separated by spaces representing the
+    villagers.</p>
+<p>No villager will appear twice in one night and the bard will
+    appear at least once across all nights.</p>
+<h2>Output</h2>
+<p>Output all villagers that know all songs, including the
+    bard, one integer per line in ascending order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+3
+2 1 2
+3 2 3 4
+3 4 2 1
+</pre>
+</td>
+<td>
+<pre>1
+2
+4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+5
+4 1 3 5 6
+2 5 6
+3 6 7 8
+2 6 2
+4 2 6 8 1
+</pre>
+</td>
+<td>
+<pre>1
+2
+6
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>5
+3
+2 1 3
+2 2 1
+4 2 1 4 5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>Yan and Fen have just accepted jobs in TechValley California
+    allowing them to pursue their childhood dream of renting the
+    most expensive apartment in the area.</p>
+<p>Yan and Fen have decided that the rent of an apartment
+    denoted <span class="tex2jax_process">$R$</span> is a function
+    of its square footage <span class="tex2jax_process">$x$</span>
+    and the number of smartbulbs <span class="tex2jax_process">$y$</span> it has. The cost of <span class="tex2jax_process">$1$</span> square foot is given by
+    <span class="tex2jax_process">$a$</span> and the cost of
+    <span class="tex2jax_process">$1$</span> smartbulb is given by
+    <span class="tex2jax_process">$b$</span> and thus we
+    have,</p><span class="tex2jax_process">\begin{equation*} R = ax
+    + by \end{equation*}</span>
+<p>Fortunately for the pair, TechValley California has no
+    shortage of expensive apartments for rent. Unfortunately, there
+    are some specific constraints on the apartment and the contents
+    of the apartment that Yan and Fen must follow. First the square
+    footage of the apartment and the number of smart bulbs must
+    both be greater than or equal to <span class="tex2jax_process">$1$</span>.</p><span class="tex2jax_process">\begin{align*} x &amp; \geq 1\\ y &amp; \geq
+    1 \end{align*}</span>
+<p>Secondly, the square footage of the apartment plus the
+    number of smartbulbs cannot exceed a specific <span class="tex2jax_process">$m$</span>, you may assume that <span class="tex2jax_process">$m$</span> will always be an even
+    integer.</p><span class="tex2jax_process">\begin{equation*} x +
+    y \leq m \end{equation*}</span>
+<p>Lastly, since both Yan and Fen need lots of outlets in their
+    apartment to support all their electronics they will only look
+    at apartments that have exactly <span class="tex2jax_process">$2$</span> outlets for each square foot of
+    the house in addition to one outlet for each smartbulb with
+    minimum of <span class="tex2jax_process">$\sigma $</span>
+    outlets. You may assume that <span class="tex2jax_process">$\sigma $</span> will always be an even
+    integer.</p><span class="tex2jax_process">\begin{equation*} 2x
+    + y \geq \sigma \end{equation*}</span>
+<p>Find the maximum rent of an apartment <span class="tex2jax_process">$R$</span> subject to these constraints</p>
+<h2>Input</h2>
+<p>The input consists of a single test case with two lines. The
+    test case starts with two integers <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> (<span class="tex2jax_process">$0
+    \leq a, b &lt; 100$</span>), the price per square foot and
+    price per smart bulb respectively. The next line consists of
+    two integers <span class="tex2jax_process">$m$</span> and
+    <span class="tex2jax_process">$\sigma $</span> (<span class="tex2jax_process">$0 &lt; m, \sigma \leq 10^8$</span> and
+    <span class="tex2jax_process">$m, \sigma $</span> are both
+    even) the square footage and smartbulbs maximum and the minimum
+    number of outlets respectively.</p>
+<h2>Output</h2>
+<p>Output a single line with the maximum value of <span class="tex2jax_process">$R$</span>. Note that <span class="tex2jax_process">$R$</span> is guaranteed to be an integer and
+    the input will be supplied such that there will always be a
+    solution.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 1
+12 16
+</pre>
+</td>
+<td>
+<pre>34
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>0 3
+8 12
+</pre>
+</td>
+<td>
+<pre>12
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>To help with vehicle stability, the outer edge of a road in
+    a curve is raised with respect to the inner edge. This is
+    called superelevation and is specified as the difference in
+    elevation divided by the width of the road. It needs to be
+    higher for faster speeds and sharper curves.</p>
+<p>The radius of a curve is the radius of the section of a
+    circle along the middle of the road where the curve is
+    constant. See Figure 1 for a drawing of this.</p>
+<div class="figure" id="fig:1">
+<center>
+<img alt="\includegraphics[width=.65\textwidth ]{F1CurveSpeed.pdf}" src="/problems/curvespeed/file/statement/en/img-0001.png" style="width:65.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Section of a circle along the middle of a
+        road with radius <span class="tex2jax_process">$R$</span>.
+      </div>
+</div>
+<p>In some cases the curve may need a lower speed limit than
+    straight portions of the road. The superelevation shouldn’t be
+    more than about <span class="tex2jax_process">$.12$</span> to
+    keep vehicles from sliding off the road in slippery
+    conditions.</p>
+<p>Your job is to calculate the maximum speed on a curve given
+    the radius of the curve and the superelevation.</p>
+<p>The maximum speed is given by this formula:</p><span class="tex2jax_process">\[ V = \sqrt{(R*(S+.16))/.067}, \]</span>
+<p>where <span class="tex2jax_process">$V$</span> is the max
+    speed in miles per hour, <span class="tex2jax_process">$R$</span> is the radius of the curve in
+    feet, and S is the superelevation.</p>
+<h2>Input</h2>
+<p>The input is a series of lines terminated by end-of-file.
+    Each line will be a test case consisting of <span class="tex2jax_process">$R$</span> and <span class="tex2jax_process">$S$</span> separated by whitespace.
+    <span class="tex2jax_process">$R$</span> will be an integer
+    greater than <span class="tex2jax_process">$99$</span> and less
+    than <span class="tex2jax_process">$5281$</span> and
+    <span class="tex2jax_process">$S$</span> will be a real number
+    greater than <span class="tex2jax_process">$.009$</span> and
+    less than <span class="tex2jax_process">$1.0$</span>. Neither
+    will have leading zeros. There are at most <span class="tex2jax_process">$100$</span> lines in input.</p>
+<h2>Output</h2>
+<p>For each test case output the maximum speed rounded to the
+    nearest integer. It is guaranteed the answer before rounding
+    will not be within <span class="tex2jax_process">$10^{-3}$</span> of a half-integer value.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1433   .09
+1433 .12
+2000 .09
+600 .12
+</pre>
+</td>
+<td>
+<pre>73
+77
+86
+50
+</pre>
+</td>
+</tr>
+</table>
+</div>

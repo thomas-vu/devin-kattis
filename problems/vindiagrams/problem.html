@@ -1,0 +1,153 @@
+<div class="problembody">
+<p>Venn diagrams were invented by the great logician John Venn
+    as a way of categorizing elements belonging to different sets.
+    Given two sets <span class="tex2jax_process">$A$</span> and
+    <span class="tex2jax_process">$B$</span>, two overlapping
+    circles are drawn – a circle representing the elements of
+    <span class="tex2jax_process">$A$</span>, and another
+    representing the elements of <span class="tex2jax_process">$B$</span>. The overlapping region of the
+    circles represents element that belong to both <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, i.e., the intersection of the two
+    sets <span class="tex2jax_process">$A \cap B$</span>. A classic
+    Venn diagram might look like this:</p>
+<div class="figure" id="vinfigure">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{vin1}" src="/problems/vindiagrams/file/statement/en/img-0001.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Venn diagram of <span class="tex2jax_process">$A \cap B$</span>.
+        </div>
+</center>
+</div>
+<p>One of John’s biggest fans was his grandson, Vin Vaughn
+    Venn. Vin was inspired by his grandfather’s diagrams, but Vin
+    was a very creative individual. Simple overlapping circles
+    struck Vin as too boring of a way to visualize the sometimes
+    messy intersections of categories, so he set out to make his
+    grandfather’s diagrams more interesting. Just like Venn
+    diagrams, Vin diagrams are used as a way of categorizing
+    elements belonging to different sets <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>, but the representation of each
+    set is not required to be a circle. In fact, each set can have
+    any shape as long as there is single overlapping section for
+    elements in the intersection of <span class="tex2jax_process">$A$</span> and <span class="tex2jax_process">$B$</span>.</p>
+<p>In this problem, Vin diagrams will be laid out on a grid.
+    Each set representation is a loop of ‘<tt class="tt">X</tt>’
+    characters, with one ‘<tt class="tt">X</tt>’ in each loop
+    replaced by an ‘<tt class="tt">A</tt>’ or ‘<tt class="tt">B</tt>’ to identify the loop. All empty positions (both
+    inside and outside of the loops) are represented by period
+    (‘.’) characters, and the set of positions inside a loop is
+    contiguous. Each loop character touches exactly two other loop
+    characters either vertically or horizontally. Loops do not
+    self-intersect, and other than the allowed horizontal/vertical
+    paths and right angle connections, different parts of the loop
+    do not touch (see Figures 2 and 3 below).</p>
+<div class="figure" id="vindiagramlegalfig">
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{vin2a}" src="/problems/vindiagrams/file/statement/en/img-0002.png" style="width:45.00%"/>
+<div class="caption">
+<b>Figure 2</b>: Two legal loops
+        </div>
+</center>
+</div>
+<div class="figure" id="vindiagramillegalfig">
+<center>
+<img alt="\includegraphics[width=0.45\textwidth ]{vin3a}" src="/problems/vindiagrams/file/statement/en/img-0003.png" style="width:45.00%"/>
+<div class="caption">
+<b>Figure 3</b>: Two illegal loops
+        </div>
+</center>
+</div>
+<p>Loops A and B intersect at exactly two points. Loop
+    intersection points always follow the pattern shown in Figure 4
+    (including the four ‘.’ positions around the intersection). No
+    loop makes a right angle turn at an intersection point but
+    always flows straight through the intersection, either
+    vertically or horizontally. An example of legally intersecting
+    loops is shown in Figure 5.</p>
+<div class="figure" id="vindiagramintersectionpoint">
+<center>
+<img alt="\includegraphics[width=0.15\textwidth ]{vin4}" src="/problems/vindiagrams/file/statement/en/img-0004.png" style="width:15.00%"/>
+<div class="caption">
+<b>Figure 4</b>: Intersection point
+        </div>
+</center>
+</div>
+<div class="figure" id="vindiagramintersectingloops">
+<center>
+<img alt="\includegraphics[width=0.25\textwidth ]{vin5}" src="/problems/vindiagrams/file/statement/en/img-0005.png" style="width:25.00%"/>
+<div class="caption">
+<b>Figure 5</b>: Legally intersecting loops surrounding
+          positions
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input starts with two integers <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$c$</span> describing the number of rows and
+    columns in the Vin diagram (<span class="tex2jax_process">$7
+    \leq r, c \leq 100$</span>). The following <span class="tex2jax_process">$r$</span> rows each contain a string of
+    <span class="tex2jax_process">$c$</span> characters. All
+    positions that are not part of loop <span class="tex2jax_process">$A$</span> or loop <span class="tex2jax_process">$B$</span> are marked with a period (‘.’)
+    character. The loop labels ‘A’ and ‘B’ are placed somewhere
+    around the loops’ perimeters at non-intersection positions and
+    are never on the same loop. The two loops will touch only at
+    the two points where they intersect.</p>
+<h2>Output</h2>
+<p>Display, in order, the area of the Vin diagram exclusive to
+    set <span class="tex2jax_process">$A$</span>, the area
+    exclusive to set <span class="tex2jax_process">$B$</span>, and
+    the area of the intersection. Given the representation of Vin
+    diagrams, the area of a section is defined as the number of
+    periods (‘.’) it encloses.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 7
+AXXXX..
+X...X..
+X.XXXXX
+X.X.X.X
+XXXXX.X
+..X...X
+..XXXXB
+</pre>
+</td>
+<td>
+<pre>
+5 5 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+11 13
+XXXXXXA......
+X.....X......
+X..XXXXXXXXX.
+X..X..X....X.
+X..X..XXX..XX
+X..B....X...X
+X..X.XXXX...X
+X..X.X......X
+XX.XXXXXX...X
+.X...X..X.XXX
+.XXXXX..XXX..
+</pre>
+</td>
+<td>
+<pre>
+21 22 10
+</pre>
+</td>
+</tr>
+</table>
+</div>

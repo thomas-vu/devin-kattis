@@ -1,0 +1,311 @@
+<div class="problembody">
+<p>Freddy discovered a new procedure to grow much bigger
+    cauliflowers. He wants to share this finding with his fellow
+    gardener Tommy but he does not want anyone to steal the
+    procedure. So the two gardeners agreed upon using a simple
+    encryption technique proposed by M. E. Ohaver.</p>
+<p>The encryption is based on the Morse code, which represents
+    characters as variable-length sequences of dots and dashes. The
+    following table shows the Morse code sequences for all
+    letters:</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-left:1px solid black">
+<p>A</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">.-</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>H</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">....</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>O</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">---</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center">
+<p>V</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">...-</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-left:1px solid black">
+<p>B</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-...</tt></p>
+</td>
+<td style="text-align:center">
+<p>I</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">..</tt></p>
+</td>
+<td style="text-align:center">
+<p>P</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.--.</tt></p>
+</td>
+<td style="text-align:center">
+<p>W</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.--</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-left:1px solid black">
+<p>C</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-.-.</tt></p>
+</td>
+<td style="text-align:center">
+<p>J</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.---</tt></p>
+</td>
+<td style="text-align:center">
+<p>Q</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">--.-</tt></p>
+</td>
+<td style="text-align:center">
+<p>X</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-..-</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-left:1px solid black">
+<p>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-..</tt></p>
+</td>
+<td style="text-align:center">
+<p>K</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-.-</tt></p>
+</td>
+<td style="text-align:center">
+<p>R</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.-.</tt></p>
+</td>
+<td style="text-align:center">
+<p>Y</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-.--</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-left:1px solid black">
+<p>E</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.</tt></p>
+</td>
+<td style="text-align:center">
+<p>L</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">.-..</tt></p>
+</td>
+<td style="text-align:center">
+<p>S</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">...</tt></p>
+</td>
+<td style="text-align:center">
+<p>Z</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">--..</tt></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-left:1px solid black">
+<p>F</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">..-.</tt></p>
+</td>
+<td style="text-align:center">
+<p>M</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">--</tt></p>
+</td>
+<td style="text-align:center">
+<p>T</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="tt">-</tt></p>
+</td>
+<td style="text-align:center"> </td>
+<td style="text-align:left; border-right:1px solid black">
+           </td>
+</tr>
+<tr>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:center; border-bottom-style:solid; border-left:1px solid black">
+<p>G</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="tt">--.</tt></p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+<p>N</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="tt">-.</tt></p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+<p>U</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="tt">..-</tt></p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:center">
+           </td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+           </td>
+</tr>
+</table>
+</center>
+<p>Note that four possible dot-dash combinations are
+    unassigned. For the purposes of this problem we will assign
+    them as follows (note these are not the assignments for actual
+    Morse code):</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-left:1px solid black">
+<p>underscore (“<tt class="tt">_</tt>”)</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">..--</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>period (“<tt class="tt">.</tt>”)</p>
+</td>
+<td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p><tt class="tt">---.</tt></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-left:1px solid black">
+<p>comma (“<tt class="tt">,</tt>”)</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="tt">.-.-</tt></p>
+</td>
+<td style="border-bottom-width:1px; border-bottom-color:black; border-bottom-style:solid; text-align:left">
+<p>question mark (“<tt class="tt">?</tt>”)</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:left; border-bottom-style:solid; border-right:1px solid black">
+<p><tt class="tt">----</tt></p>
+</td>
+</tr>
+</table>
+</center>
+<p>In practice, characters in a message are delimited by
+    short pauses, typically displayed as spaces. Thus, the message
+    “ACM_GREATER_NY_REGION” is encoded as:<br/>
+      <small class="small"><tt class="tt">.- -.-. -- ..-- --.
+    .-. . .- - . .-. ..-- -. -.-- ..-- .-. . --. .. ---
+    -.</tt></small> </p>
+<p>The Ohaver’s encryption scheme is based on mutilating Morse
+    code, namely by removing the pauses between letters. Since the
+    pauses are necessary (because Morse is a variable-length
+    encoding that is not prefix-free), a string is added that
+    identifies the number of dots and dashes in each character. For
+    example, consider the message “<tt class="tt">.--.-.--</tt>”.
+    Without knowing where the pauses should be, this could be
+    “<tt class="tt">ACM</tt>”, “<tt class="tt">ANK</tt>”, or
+    several other possibilities. If we add length information, such
+    as “<tt class="tt">.--.-.-- 242</tt>”, then the code is
+    unambiguous.</p>
+<p>Ohaver’s scheme has three steps, the same for encryption and
+    decryption:</p>
+<ol class="enumerate">
+<li>
+<p>Convert the text to Morse code without pauses but with
+        a string of numbers to indicate code lengths.</p>
+</li>
+<li>
+<p>Reverse the string of numbers.</p>
+</li>
+<li>
+<p>Convert the dots and dashes back into the text using the
+        reversed string of numbers as code lengths.</p>
+</li>
+</ol>
+<p>As an example, consider the encrypted message “<tt class="tt">AKADTOF_IBOETATUK_IJN</tt>”. Converting to Morse code with
+    a length string yields:<br/>
+      <tt class="tt">.--.-.--..----..-...--..-...---.-.--..--.-..--...----. 232313442431121334242</tt> <br/>
+    By reversing the numbers and decoding, we get the original
+    message “<tt class="tt">ACM_GREATER_NY_REGION</tt>”.</p>
+<p>The security of this encoding scheme is not too high but
+    Freddy believes it is sufficient for his purposes. Will you
+    help Freddy to implement this encoding algorithm and to protect
+    his sensitive information?</p>
+<h2>Input</h2>
+<p>The input will consist of several messages encoded with
+    Ohaver’s algorithm, each of them on one line. There will be at
+    most <span class="tex2jax_process">$3\, 000$</span>
+    messages.</p>
+<p>Each message will use only the twenty-six capital letters,
+    underscores, commas, periods, and question marks. Messages will
+    not exceed <span class="tex2jax_process">$1\, 000$</span>
+    characters in length.</p>
+<h2>Output</h2>
+<p>For each message in the input, output the decoded message on
+    one line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+FENDSVTSLHW.EDATS,EULAY
+TRDNWPLOEF
+NTTTGAZEJUIIGDUZEHKUE
+QEWOISE.EIVCAEFNRXTBELYTGD.
+?EJHUT.TSMYGW?EJHOT
+DSU.XFNCJEVE.OE_UJDXNO_YHU?VIDWDHPDJIKXZT?E
+ADAWEKHZN,OTEATWRZMZN_IDWCZGTEPION
+</pre>
+</td>
+<td>
+<pre>
+FALSE_SENSE_OF_SECURITY
+CTU_PRAGUE
+TWO_THOUSAND_THIRTEEN
+QUOTH_THE_RAVEN,_NEVERMORE.
+TO_BE_OR_NOT_TO_BE?
+THE_QUICK_BROWN_FOX_JUMPS_OVER_THE_LAZY_DOG
+ADAPTED_FROM_ACM_GREATER_NY_REGION
+</pre>
+</td>
+</tr>
+</table>
+</div>

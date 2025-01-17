@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>You are implementing an operating system, and now need to
+    write a program to list files in a directory: “ls”. You want
+    the user to be able to list only files that match a given
+    pattern that can include wildcards (<tt class="tt">*</tt>), for
+    example <tt class="tt">*.c</tt>. A wildcard matches zero or
+    more characters of any kind.</p>
+<h2>Input</h2>
+<p>The first line contains a string <span class="tex2jax_process">$P$</span>, containing <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$100$</span> characters ’<tt class="tt">a</tt>’–’<tt class="tt">z</tt>’, ’<tt class="tt">*</tt>’
+    and ’<tt class="tt">.</tt>’. This is the pattern. The second
+    line contains an integer <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$1
+    \leq N \leq 100$</span>, which is the number of files in the
+    directory. Then follow <span class="tex2jax_process">$N$</span>
+    lines containing the names of the files in the directory. Each
+    line is a string containing <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$100$</span> characters ’<tt class="tt">a</tt>’–’<tt class="tt">z</tt>’ and ’<tt class="tt">.</tt>’.</p>
+<h2>Output</h2>
+<p>The output shall consist of the filenames that match the
+    pattern, <span class="tex2jax_process">$P$</span>, each on its
+    own line, in the same order that they were given as input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+*.*
+4
+main.c
+a.out
+readme
+yacc
+</pre>
+</td>
+<td>
+<pre>
+main.c
+a.out
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+*a*a*a
+4
+aaa
+aaaaa
+aaaaax
+abababa
+</pre>
+</td>
+<td>
+<pre>
+aaa
+aaaaa
+abababa
+</pre>
+</td>
+</tr>
+</table>
+</div>

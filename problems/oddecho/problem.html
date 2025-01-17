@@ -1,0 +1,119 @@
+<div class="problembody">
+<p>ECHO! Echo! Ech...</p>
+<p>You love shouting in caves to hear your words echoed back at
+    you. Unfortunately, as a hard-working software engineer you are
+    not lucky enough to get out that often to shout in caves.
+    Instead, you would like to implement a program that serves as a
+    replacement for a cave.</p>
+<p>Every now and then, you want to input a few words into the
+    program and have them echoed back to you. However, as is well
+    known, if you shout too quickly in a cave, the echo might cause
+    interference with the new words you say. More specifically,
+    every other word you say will interfere with the echo of your
+    previous word. Thus only the first, third, fifth, and so on,
+    words will actually produce an echo.</p>
+<p>Your task is to write a program that simulates this
+    behavior.</p>
+<h2>Input</h2>
+<p>The first line of the input contains an integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \le N \le 10$</span>).</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines each
+    contains a word. Each word is at most <span class="tex2jax_process">$100$</span> letters long, and contains only
+    letters ‘a-z‘.</p>
+<h2>Output</h2>
+<p>Output the odd-indexed (i.e. first, third, fifth, and so on)
+    words in the input.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N$</span> is always
+          <span class="tex2jax_process">$5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+hello
+i
+am
+an
+echo
+</pre>
+</td>
+<td>
+<pre>hello
+am
+echo
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10
+only
+if
+these
+oddindexed
+words
+appear
+are
+you
+correct
+output
+</pre>
+</td>
+<td>
+<pre>only
+these
+words
+are
+correct
+</pre>
+</td>
+</tr>
+</table>
+</div>

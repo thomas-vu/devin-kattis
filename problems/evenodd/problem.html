@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>Consider the following function <span class="tex2jax_process">$f(X)$</span>, which takes a single positive
+    integer as argument, and returns an integer.</p>
+<pre>
+function f(X):
+    iterations := 0
+    while X is not 1:
+        if X is even:
+            divide X by 2
+        else:
+            add 1 to X
+        add 1 to iterations
+    return iterations
+</pre>
+<p>It can be shown that for any positive integer <span class="tex2jax_process">$X$</span>, this function terminates. Given
+    an interval <span class="tex2jax_process">$[L, R]$</span>,
+    compute the sum</p><span class="tex2jax_process">\[ S = f(L) +
+    f(L+1) + \cdots + f(R-1) + f(R)\enspace . \]</span>
+<h2>Input</h2>
+<p>The first and only line of input contains two integers
+    <span class="tex2jax_process">$L$</span> and <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$1
+    \leq L \leq R \leq 10^{18}$</span>).</p>
+<h2>Output</h2>
+<p>Output the result <span class="tex2jax_process">$S$</span>
+    modulo the prime <span class="tex2jax_process">$10^9+7$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 127
+</pre>
+</td>
+<td>
+<pre>
+1083
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+74 74
+</pre>
+</td>
+<td>
+<pre>
+11
+</pre>
+</td>
+</tr>
+</table>
+</div>

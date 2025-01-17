@@ -1,0 +1,87 @@
+<div class="problembody">
+<p><em>On our planet, Jamcode IX, three Great Events occurred.
+    They happened <span class="tex2jax_process">$26\, 000$</span>,
+    <span class="tex2jax_process">$11\, 000$</span> and
+    <span class="tex2jax_process">$6\, 000$</span> slarboseconds
+    ago. In <span class="tex2jax_process">$4\, 000$</span>
+    slarboseconds, the amount of time since all of those events
+    will be multiples of <span class="tex2jax_process">$5\,
+    000$</span> slarboseconds, the largest possible amount… and the
+    apocalypse will come.</em></p>
+<p>Luckily for you, you live on Jamcode X! The apocalypse came
+    on Jamcode IX less than a year ago. But Jamcode X has a
+    worrying prophecy: “After the moment of reckoning, on the first
+    <em>optimum anniversary</em> of the <span class="tex2jax_process">$N$</span> Great Events, the apocalypse will
+    come. <span class="tex2jax_process">$64$</span> bits will not
+    save you. You have been warned.”</p>
+<p>The people of Jamcode X are very concerned by this prophecy.
+    All of the Great Events have already happened, and their times
+    have been measured to the nearest slarbosecond; but nobody
+    knows when their <em>optimum anniversary</em> will occur. After
+    studying the diary of a scientist from Jamcode IX, scientists
+    working on the problem have come up with a theory:</p>
+<p>The <em>moment of reckoning</em> is now, the moment you
+    solve this problem. At some time <span class="tex2jax_process">$y \geq 0$</span> slarboseconds from now, the
+    number of slarboseconds since each of the Great Events will be
+    divisible by some maximum number <span class="tex2jax_process">$T$</span>. If you can find the smallest
+    value of <span class="tex2jax_process">$y$</span> that gives
+    this largest possible <span class="tex2jax_process">$T$</span>,
+    that will give you the <em>optimum anniversary</em> when the
+    apocalypse will come.</p>
+<p>On Jamcode IX, for example, there were 3 Great Events and
+    they happened <span class="tex2jax_process">$26\, 000$</span>,
+    <span class="tex2jax_process">$11\, 000$</span> and
+    <span class="tex2jax_process">$6\, 000$</span> slarboseconds
+    before the moment of reckoning. <span class="tex2jax_process">$4\, 000$</span> slarboseconds later, the
+    amount of time since each event was a multiple of <span class="tex2jax_process">$T=5\, 000$</span> slarboseconds, and the
+    apocalypse came.</p>
+<p>Your job is to compute the amount of time until the
+    apocalypse comes. But remember the prophecy: even though the
+    people of Jamcode X have been solving problems for two years,
+    and <span class="tex2jax_process">$64$</span>-bit integers have
+    always been enough, they might not always be enough now or in
+    the future.</p>
+<h2>Input</h2>
+<p>The first line of the input gives the number of test cases,
+    <span class="tex2jax_process">$C$</span>. <span class="tex2jax_process">$C$</span> lines follow. Each starts with a
+    single integer <span class="tex2jax_process">$N$</span>, which
+    is followed by a space and then <span class="tex2jax_process">$N$</span> space-separated integers
+    <span class="tex2jax_process">$t_ i$</span>, the number of
+    slarboseconds since Great Event <span class="tex2jax_process">$i$</span> occurred.</p>
+<p>You can assume that <span class="tex2jax_process">$1 \leq C
+    \leq 100$</span>, <span class="tex2jax_process">$t_ i \not= t_
+    j$</span> for some <span class="tex2jax_process">$i, j$</span>.
+    Furthermore, <span class="tex2jax_process">$2 \leq N \leq 1\,
+    000$</span> and <span class="tex2jax_process">$1 \leq t_ i \leq
+    10^{50}$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output one line containing “Case
+    #<span class="tex2jax_process">$x$</span>: <span class="tex2jax_process">$y$</span>”, where <span class="tex2jax_process">$x$</span> is the case number (starting from
+    <span class="tex2jax_process">$1$</span>) and <span class="tex2jax_process">$y$</span> is the minimum number of
+    slarboseconds until <span class="tex2jax_process">$t_ i +
+    y$</span> is a multiple of the largest possible integer factor
+    <span class="tex2jax_process">$T$</span> for all <span class="tex2jax_process">$i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3 26000000 11000000 6000000
+3 1 10 11
+2 800000000000000000001 900000000000000000001
+</pre>
+</td>
+<td>
+<pre>
+Case #1: 4000000
+Case #2: 0
+Case #3: 99999999999999999999
+</pre>
+</td>
+</tr>
+</table>
+</div>

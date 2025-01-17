@@ -1,0 +1,103 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/exponial/file/statement/en/img-0001.jpg" class="illustration" src="/problems/exponial/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Illustration of <span class="tex2jax_process">$\operatorname {exponial}(3)$</span> (not
+        to scale), <a href="https://en.wikipedia.org/wiki/File:Manhattan_-_9_West_57th_Street.JPG">
+        Picture</a> by C.M. de Talleyrand-Périgord via Wikimedia
+        Commons
+      </div>
+</div>Everybody loves big numbers (if you do not, you might
+    want to stop reading at this point). There are many ways of
+    constructing really big numbers known to humankind, for
+    instance:
+
+    <ul class="itemize">
+<li>
+<p>Exponentiation: <span class="tex2jax_process">$42^{2016}
+        = \underbrace{42 \cdot 42 \cdot \ldots \cdot 42}_{2016\text
+        { times}}$</span>.</p>
+</li>
+<li>
+<p>Factorials: <span class="tex2jax_process">$2016! = 2016
+        \cdot 2015 \cdot \ldots \cdot 2 \cdot 1$</span>.</p>
+</li>
+</ul>
+<p>In this problem we look at their lesser-known love-child the
+    <em>exponial</em>, which is an operation defined for all
+    positive integers <span class="tex2jax_process">$n$</span>
+    as</p><span class="tex2jax_process">\[ \operatorname
+    {exponial}(n) = n^{(n-1)^{(n-2)^{\cdots ^{2^{1}}}}}. \]</span>
+<p>For example, <span class="tex2jax_process">$\operatorname
+    {exponial}(1) = 1$</span> and <span class="tex2jax_process">$\operatorname {exponial}(5) =
+    5^{4^{3^{2^1}}} \approx 6.206 \cdot 10^{183230}$</span> which
+    is already pretty big. Note that exponentiation is
+    right-associative: <span class="tex2jax_process">$a^{b^ c} =
+    a^{(b^ c)}$</span>.</p>
+<p>Since the exponials are really big, they can be a bit
+    unwieldy to work with. Therefore we would like you to write a
+    program which computes <span class="tex2jax_process">$\operatorname {exponial}(n) \bmod m$</span>
+    (the remainder of <span class="tex2jax_process">$\operatorname
+    {exponial}(n)$</span> when dividing by <span class="tex2jax_process">$m$</span>).</p>
+<h2>Input</h2>
+<p>The input consists of two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \le n \le 10^9$</span>) and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1
+    \le m \le 10^9$</span>).</p>
+<h2>Output</h2>
+<p>Output a single integer, the value of <span class="tex2jax_process">$\operatorname {exponial}(n) \bmod
+    m$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 42
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 123456789
+</pre>
+</td>
+<td>
+<pre>
+16317634
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+94 265
+</pre>
+</td>
+<td>
+<pre>
+39
+</pre>
+</td>
+</tr>
+</table>
+</div>

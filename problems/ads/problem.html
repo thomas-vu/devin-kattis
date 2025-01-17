@@ -1,0 +1,183 @@
+<div class="problembody">
+<p>Web pages are littered with ads (advertisements) these days.
+    You wrote a simple program to detect images which are ads and
+    remove them.</p>
+<p>Characters that are any of the following are allowed in
+    images:</p>
+<ul class="itemize">
+<li>
+<p>alphanumeric characters</p>
+</li>
+<li>
+<p>question mark ‘?’</p>
+</li>
+<li>
+<p>exclamation mark ‘!’</p>
+</li>
+<li>
+<p>comma ‘,’</p>
+</li>
+<li>
+<p>full stop ‘.’</p>
+</li>
+<li>
+<p>whitespace ‘ ’</p>
+</li>
+</ul>
+<p>Any images contained characters that are not allowed are
+    considered ads, and will be removed by your program. The
+    ‘<span class="tex2jax_process">$+$</span>’ character will be
+    used only as the border of an image.</p>
+<p>All images will follow these rules:</p>
+<ul class="itemize">
+<li>
+<p>They are all axis-aligned rectangles with ‘<span class="tex2jax_process">$+$</span>’ as its border and is at least
+        <span class="tex2jax_process">$3 x 3$</span> big (including
+        the borders).</p>
+</li>
+<li>
+<p>All ‘<span class="tex2jax_process">$+$</span>’
+        characters belong to the border of exactly 1 image.</p>
+</li>
+<li>
+<p>Borders of different images will not be adjacent to each
+        other (contact at their corners is also not allowed).</p>
+</li>
+<li>
+<p>They can contain other images while adhering to the
+        rules above.</p>
+</li>
+<li>
+<p>For every banned character that is found inside at least
+        one image, in order not to remove too many unnecessary
+        parts of the images on the web page, you decide that the
+        smallest image (in terms of pixel count) that contains that
+        character will be flagged as an ad and removed.</p>
+</li>
+<li>
+<p>When an ad is removed, every character inside the ad and
+        the border is replaced with a whitespace.</p>
+</li>
+</ul>
+<p>Note that the web page is not considered an image.
+    Characters found on the web page that is not in any image
+    should not be removed.</p>
+<h2>Input</h2>
+<p>The first line of the input contains <span class="tex2jax_process">$1 \leq H \leq 200$</span> and <span class="tex2jax_process">$1 \leq W \leq 200$</span>, the height and
+    width of the web page to be processed respectively.
+    <span class="tex2jax_process">$H$</span> lines follow, each
+    line contain exactly <span class="tex2jax_process">$W$</span>
+    ASCII characters whose ASCII decimal value fall in the range
+    <span class="tex2jax_process">$[32, 126]$</span>.</p>
+<h2>Output</h2>
+<p>Output the web page with all the ads removed. Do not print
+    extra spaces or new lines.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">(21 Points)</b>: There is no ads in
+        the web page at all.</p>
+</li>
+<li>
+<p><b class="bfseries">(21 Points)</b>: There is either one
+        image or no image in the web page.</p>
+</li>
+<li>
+<p><b class="bfseries">(28 Points)</b>: No images will be
+        found inside other images.</p>
+</li>
+<li>
+<p><b class="bfseries">(30 Points)</b>: No additional
+        constraint.</p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 20
+ apples are great!  
+++++++++++++++++++++
++ oranges are      +
++ way better!      +
++ #oranges&gt;apples  +
+++++++++++++++++++++
+ check out our      
+ fresh apples!      
+</pre>
+</td>
+<td>
+<pre> apples are great!  
+                    
+                    
+                    
+                    
+                    
+ check out our      
+ fresh apples!      
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 7
++++++++
++  =  +
++ +++ +
++ + + +
++ +++ +
++     +
++++++++
+</pre>
+</td>
+<td>
+<pre>       
+       
+       
+       
+       
+       
+       
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 7
++++++++
++     +
++ +++ +
++ +=+ +
++ +++ +
++     +
++++++++
+</pre>
+</td>
+<td>
+<pre>+++++++
++     +
++     +
++     +
++     +
++     +
++++++++
+</pre>
+</td>
+</tr>
+</table>
+</div>

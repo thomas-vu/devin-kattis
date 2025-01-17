@@ -1,0 +1,48 @@
+<div class="problembody">
+<p>Given two strings <span class="tex2jax_process">$a$</span>
+    and <span class="tex2jax_process">$b$</span> we define
+    <span class="tex2jax_process">$a\cdot b$</span> to be their
+    concatenation. For example, if <span class="tex2jax_process">$a
+    = \text {"abc"}$</span> and <span class="tex2jax_process">$b =
+    \text {"def"}$</span> then <span class="tex2jax_process">$a\cdot b = \text {"abcdef"}$</span>. If we
+    think of concatenation as multiplication, exponentiation by a
+    non-negative integer is defined in the normal way: <span class="tex2jax_process">$a^0 = \text {""}$</span> (the empty string)
+    and <span class="tex2jax_process">$a^{n+1} = a\cdot {a^
+    n}$</span>.</p>
+<h2>Input</h2>
+<p>The input consists of up to <span class="tex2jax_process">$10$</span> test cases. Each test case is a
+    line of input containing <span class="tex2jax_process">$s$</span>, a string of lower case letters
+    (a-z). The length of <span class="tex2jax_process">$s$</span>
+    will be at least <span class="tex2jax_process">$1$</span> and
+    will not exceed <span class="tex2jax_process">$2\, 000\,
+    000$</span> characters. A line containing a period follows the
+    last test case.</p>
+<h2>Output</h2>
+<p>For each <span class="tex2jax_process">$s$</span> you should
+    print the largest <span class="tex2jax_process">$n$</span> such
+    that <span class="tex2jax_process">$s = a^ n$</span> for some
+    string <span class="tex2jax_process">$a$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+abcd
+aaaa
+ababab
+.
+</pre>
+</td>
+<td>
+<pre>
+1
+4
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

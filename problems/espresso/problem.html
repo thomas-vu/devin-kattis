@@ -1,0 +1,88 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/espresso/file/statement/en/img-0001.jpg" class="illustration" src="/problems/espresso/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by <a href="https://www.pexels.com/photo/coffee-coffee-shop-latte-latte-art-851556/">
+        Jason Villanueva</a>
+</div>
+</div>
+<p>John is a student working as a part-time barista at the
+    micro kitchen of his school department. He operates the
+    espresso machine at the kitchen to make espresso and latte for
+    students seeking energy to study.</p>
+<p>Today, there are <span class="tex2jax_process">$n$</span>
+    students coming to the micro kitchen to place an order. An
+    order is noted with an espresso shot number <span class="tex2jax_process">$x$</span> ranging between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$4$</span>, and an optional letter <tt class="tt">L</tt> that indicates that the student wants to have a
+    <span class="tex2jax_process">$x$</span>-shot latte. For
+    example, an order <tt class="tt">2</tt> means a <span class="tex2jax_process">$2$</span>-shot espresso, and an order
+    <tt class="tt">3L</tt> means a <span class="tex2jax_process">$3$</span>-shot latte.</p>
+<p>Making an <span class="tex2jax_process">$x$</span>-shot
+    espresso consumes <span class="tex2jax_process">$x$</span>
+    ounces of water. Making a latte requires steaming milk and
+    consumes one additional ounce of water, e.g. making a
+    <span class="tex2jax_process">$3$</span>-shot latte consumes
+    <span class="tex2jax_process">$4$</span> ounces of water. The
+    espresso machine at the micro kitchen has a water tank of
+    <span class="tex2jax_process">$s$</span> ounces that is full at
+    the beginning of the day. John refills the water tank to
+    <span class="tex2jax_process">$s$</span> ounces whenever the
+    remaining water in the tank is not enough to fulfill the next
+    student’s order. John fulfills the <span class="tex2jax_process">$n$</span> orders one by one without changing
+    their order.</p>
+<p>How many times do John have to refill the water tank today
+    in order to serve all the <span class="tex2jax_process">$n$</span> students?</p>
+<h2>Input</h2>
+<p>The first line of input has two integers <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1
+    \leq n \leq 100$</span>) and <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$10
+    \leq s \leq 200$</span>). The next <span class="tex2jax_process">$n$</span> lines each contain a digit between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$4$</span> followed by an optional letter
+    <tt class="tt">L</tt> to describe an order. The orders are to
+    be fulfilled in the given order as they appear in the
+    input.</p>
+<h2>Output</h2>
+<p>Output the number of times John has to refill the water tank
+    of the espresso machine.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 10
+1
+2L
+3
+4
+3L
+1
+1L
+4L
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 12
+4
+4
+4
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

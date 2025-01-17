@@ -1,0 +1,142 @@
+<div class="problembody">
+<p>Let <span class="tex2jax_process">$x_0, \ldots ,
+    x_{n-1}$</span> denote <span class="tex2jax_process">$n$</span>
+    boolean variables (i.e., variables taking only values
+    <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1$</span>). A <em>binary decision
+    diagram</em> (BDD) over these variables is a diagrammatic
+    representation of a boolean function <span class="tex2jax_process">$f(x_0, \ldots , x_{n-1})$</span> as
+    inputs.</p>
+<p>A BDD is a rooted binary tree such that all internal
+    vertices <span class="tex2jax_process">$v$</span> have
+    precisely two children. The edges connecting an internal vertex
+    <span class="tex2jax_process">$v$</span> with its children are
+    labelled with a <span class="tex2jax_process">$0$</span> or
+    <span class="tex2jax_process">$1$</span> (exactly one of each).
+    Each leaf vertex is also labelled with a <span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$1$</span>. We note that a BDD may consist of
+    a single vertex, which is considered to be both the root and a
+    leaf vertex.</p>
+<center>
+<img alt="\includegraphics[width=0.6\textwidth ]{bdd_v2.pdf}" src="/problems/decisions/file/statement/en/img-0001.png" style="width:60.00%"/>
+</center>
+<p>Given input <span class="tex2jax_process">$(x_0, \ldots ,
+    x_{n-1})$</span>, the boolean function represented by the BDD
+    is evaluated as follows.</p>
+<ul class="itemize">
+<li>
+<p><b class="bf">let</b> <span class="tex2jax_process">$v$</span> be the root vertex</p>
+</li>
+<li>
+<p><b class="bf">let</b> <span class="tex2jax_process">$i
+        \leftarrow 0$</span></p>
+</li>
+<li>
+<p><b class="bf">while</b> <span class="tex2jax_process">$v$</span> is not a leaf <b class="bf">do</b></p>
+<ul class="itemize">
+<li>
+<p>replace <span class="tex2jax_process">$v$</span>
+            with the child vertex of <span class="tex2jax_process">$v$</span> by traversing the edge
+            labelled <span class="tex2jax_process">$x_
+            i$</span></p>
+</li>
+<li>
+<p>increase <span class="tex2jax_process">$i$</span> by
+            <span class="tex2jax_process">$1$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p><b class="bf">output</b> the label of leaf vertex
+        <span class="tex2jax_process">$v$</span></p>
+</li>
+</ul>
+<p>Consider the function <span class="tex2jax_process">$f(x_0,x_1,x_2)$</span> represented by the
+    BDD above. To evaluate <span class="tex2jax_process">$f(1,0,1)$</span>, we start from the root, we
+    descend along edges labelled <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$0$</span>, and then <span class="tex2jax_process">$1$</span>. We reach a leaf vertex labelled
+    <span class="tex2jax_process">$1$</span>, so <span class="tex2jax_process">$f(1,0,1) = 1$</span>.</p>
+<p>A BDD is <em>minimal</em> if there is no way to replace any
+    subtree of an internal vertex of the BDD by a single leaf
+    vertex to get a new BDD defining the same boolean function. The
+    BDD depicted above is minimal. It is a fact that for each
+    boolean function <span class="tex2jax_process">$f$</span>,
+    there is a unique minimal BDD that represents the boolean
+    function.</p>
+<p>In this problem, you are given an <span class="tex2jax_process">$n$</span>-variable boolean function
+    specified by a list of the <span class="tex2jax_process">$2^
+    n$</span> different values the function should take for various
+    inputs. Compute the number of vertices in the minimal BDD
+    representing this function.</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single integer
+    <span class="tex2jax_process">$1 \leq n \leq 18$</span>. Then
+    one more line follows that contains <span class="tex2jax_process">$2^ n$</span> values (either <span class="tex2jax_process">$0$</span> or <span class="tex2jax_process">$1$</span>) describing an <span class="tex2jax_process">$n$</span>-variable boolean function.</p>
+<p>We think of these values as being indexed from <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$2^ n-1$</span>. The <span class="tex2jax_process">$i$</span>th such value represents
+    <span class="tex2jax_process">$f(x_0, \ldots , x_{n-1})$</span>
+    where <span class="tex2jax_process">$x_ j$</span> is the
+    <span class="tex2jax_process">$j$</span>th least-significant
+    bit of the binary representation of <span class="tex2jax_process">$i$</span>. In other words, <span class="tex2jax_process">$x_ j$</span> is the coefficient of
+    <span class="tex2jax_process">$2^ j$</span> in the binary
+    expansion of <span class="tex2jax_process">$i$</span>.</p>
+<p>The third sample input below corresponds to the BDD depicted
+    above.</p>
+<h2>Output</h2>
+<p>Output consists of a single integer <span class="tex2jax_process">$m$</span> that is the number of vertices in
+    the unique minimal BDD representing the boolean function from
+    the input.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+1 1 0 1
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0 0 0 0
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+1 0 1 0 1 1 1 0
+</pre>
+</td>
+<td>
+<pre>
+7
+</pre>
+</td>
+</tr>
+</table>
+</div>

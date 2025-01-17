@@ -1,0 +1,181 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/roomba1/file/statement/en/img-0001.jpg" class="illustration" src="/problems/roomba1/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image of a vacuuming robot by <a href="https://flic.kr/p/5BrYTp">geranium alpha</a>
+</div>
+</div>
+<p>Your friend Tómas has a very eccentric grandfather, mister
+    Miyagi, from which he inherited a large shed in Raufarhöfn. The
+    only condition his grandfather stipulated is that the floor
+    must be kept clean. A rumor has long been going around
+    regarding what’s stored in the shed, but some thing its the
+    first 3141 digits of <span class="tex2jax_process">$\pi
+    $</span>. Others think it stores the Ramsey-number <span class="tex2jax_process">$R(6,6)$</span>. What truly lives in the shed
+    will ultimately only be known by Tómas.</p>
+<p>Tómas lives in Reykjavík and doesn’t have the time to drive
+    to Raufarhöfn regularly to vacuum the shed. He thus contacts
+    the main vacuuming experts of the country, which can be found
+    at the store <em>Ryksugur í Úrvali Með Barka og Allt</em>
+    (initials are RÚMBA) and asks them to send over their most
+    powerful vacuuming robot.</p>
+<p>RÚMBA starts designing a vacuuming robot that will meet
+    Tómas’s needs. After a great deal of work they end up with a
+    robot that vacuums twice as well and has twice the range of any
+    other known vacuuming robot. They haven’t decided on a name
+    yet, but decide to call it R2-D2 while they’re looking for a
+    better name.</p>
+<p>At RÚMBA they want to make the vacuuming robot as efficient
+    as possible. That is to say, when the robot vacuums as room,
+    the people at RÚMBA don’t want the robot to take an
+    unneccesarily long path.</p>
+<p>No programmers work at RÚMBA so they look to Tómas, who is
+    from one of the most famous computer science families of
+    Iceland, to implement the path finding algorithm of the robot.
+    Tómas is too busy solving the knapsack problem in polynomial
+    time, so he asks you to implement it for him.</p>
+<p>RÚMBA tells you the robot only vacuums rectangular rooms and
+    that they get to know the length and width beforehand. The
+    robot starts by dividing the room into cells, i.e. <span class="tex2jax_process">$r$</span> rows and <span class="tex2jax_process">$d$</span> columns. The robot chooses the
+    size of the cells such that if it is at the center of a cell it
+    can vacuum the entire cell. The robot assigns each cell some
+    coordinates <span class="tex2jax_process">$(a, b)$</span> where
+    <span class="tex2jax_process">$a$</span> is the row of the cell
+    and <span class="tex2jax_process">$b$</span> the column. The
+    rows are numbered in increasing order from bottom to top and
+    the columns from left to right. The count starts at
+    <span class="tex2jax_process">$0$</span>. See the example in
+    Image 1.</p>
+<p>Your assignment is to find the shortest possible path for
+    the robot to vacuum the entire room such that it starts and
+    ends in the same place. The robot starts in the bottom left
+    corner of the room, i.e. in cell <span class="tex2jax_process">$(0,0)$</span> and can only move between
+    adjacent cells (not diagonally).</p>
+<div class="figure" id="fig:layout">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{layout.png}" src="/problems/roomba1/file/statement/en/img-0002.png" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Example of a room divided into
+          <span class="tex2jax_process">$6 \times 6$</span> cells.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input is a single line containing two integers,
+    <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$d$</span>, which denote the number of rows
+    and columns the robot has divided the room into.</p>
+<h2>Output</h2>
+<p>Print the length of the shortest path the robot can take to
+    vacuum the entire room. Note that the robot always starts by
+    visiting <span class="tex2jax_process">$(0,0)$</span>.</p>
+<h2>Scoring</h2>
+<p>The solution will be tested on differently hard input data
+    and the data is divided into groups as shown in the table
+    below. The solution will then be scored according to how many
+    groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq r,d \leq
+          4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq r,d \leq
+          5$</span>, harder cases than in group 1</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq r,d \leq
+          50$</span>, harder cases than in groups 1, 2</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq r,d \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq r,d \leq
+          100$</span>, harder cases than in group 4</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+</pre>
+</td>
+<td>
+<pre>8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 2
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+</div>

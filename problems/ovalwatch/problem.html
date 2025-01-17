@@ -1,0 +1,98 @@
+<div class="problembody">
+<p>It’s the year 2020 and OvalWatch is the most popular massive
+    online first person shooter game.</p>
+<p>OvalWatch features a set of <span class="tex2jax_process">$N$</span> characters, and during a match,
+    each player can choose one of these characters to play.</p>
+<p>In order to keep each match interesting, for every match,
+    OvalWatch requires that all players select unique characters
+    and that all characters are selected (there are <span class="tex2jax_process">$N$</span> players in each match).</p>
+<p>This requirement however is problematic because sometimes
+    multiple players might want to play the same character. For
+    example, suppose player <span class="tex2jax_process">$1$</span> wants to pick “TraySir”, and they
+    tell everyone “I wanna be TraySir”, but player <span class="tex2jax_process">$2$</span> might have already picked
+    “TraySir” and replies “I’m already TraySir”, leaving player
+    <span class="tex2jax_process">$1$</span> disappointed and
+    frustrated.</p>
+<p>Player <span class="tex2jax_process">$1$</span> might then
+    attempt to pick another character, say, “WindowMaker”, and they
+    ask “What about WindowMaker?”. Unfortunately, another player
+    may have picked WindowMaker in this time and replies “I’m
+    already WindowMaker.”, leaving Player <span class="tex2jax_process">$1$</span> no choice but to pick yet someone
+    else.</p>
+<p>BeeLizard, the developer of OvalWatch, wants to eliminate
+    the frustrating player experience of having to pick a character
+    many times just to find one that’s available, and came up with
+    an ingenious algorithm to do so.</p>
+<p>Announcing BeeLizard’s OvalWatch’s newest feature: Ghost
+    Leg.</p>
+<p>In Ghost Leg, the players are are enumerated horizontally
+    across the top of the page, while the in game characters are
+    enumerated horizontally across the bottom of the page. Vertical
+    lines are drawn connecting each person with the character
+    directly below.</p>
+<p>Next, “legs” are added to the page. Each leg is a horizontal
+    line connecting two adjacent vertical lines, and must not touch
+    any other leg.</p>
+<p>Finally, each player <span class="tex2jax_process">$P$</span> traces a continuous path from
+    themselves to a character at the bottom. If player <span class="tex2jax_process">$P$</span> encounters a leg while tracing the
+    path, they must follow the leg across to the other vertical
+    line, and resume tracing downwards. The character at the end of
+    their path is the character assigned to player <span class="tex2jax_process">$P$</span>.</p>
+<p>As BeeLizard’s intern, you have to implement the GhostLeg
+    feature of OvalWatch.</p>
+<h2>Input</h2>
+<p>The first line of the input contains <span class="tex2jax_process">$N$</span>, the number of players, and
+    <span class="tex2jax_process">$K$</span>, the number of legs.
+    It is guaranteed that <span class="tex2jax_process">$2\leq
+    N\leq 5\, 000$</span> and <span class="tex2jax_process">$1\leq
+    K\leq 100\, 000$</span>.</p>
+<p>The next <span class="tex2jax_process">$K$</span> lines of
+    the input contains two integers <span class="tex2jax_process">$A_ i, B_ i$</span> describing each leg.
+    <span class="tex2jax_process">$A_ i$</span> denotes the index
+    of vertical line on the left side of the leg. Note that
+    vertical lines are indexed from left to right starting from
+    <span class="tex2jax_process">$0$</span>. <span class="tex2jax_process">$B_ i$</span> denotes the distance between
+    the top of the board and the leg’s position at the left
+    vertical line. It is guaranteed that <span class="tex2jax_process">$0\leq A_ i&lt;N-1$</span> and <span class="tex2jax_process">$1\leq B_ i\leq 10^9$</span>.</p>
+<h2>Output</h2>
+<p>A single line containing <span class="tex2jax_process">$N$</span> integers, where the <span class="tex2jax_process">$i^\textrm {th}$</span> integer <span class="tex2jax_process">$V_ i$</span> denotes that character
+    <span class="tex2jax_process">$V_ i$</span> is assigned to
+    player <span class="tex2jax_process">$i$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 4
+0 1
+1 3
+0 5
+1 10
+</pre>
+</td>
+<td>
+<pre>1 2 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 1
+1 2
+</pre>
+</td>
+<td>
+<pre>0 2 1 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

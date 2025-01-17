@@ -1,0 +1,156 @@
+<div class="problembody">
+<p>You are an invoker, a master sorcerer that is able to
+    command sources of magic.</p>
+<h2>Magical Training</h2>
+<p>There are two sources of magic you can control, <span class="tex2jax_process">$\mathbb {R}$</span>eagus and <span class="tex2jax_process">$\mathbb {I}$</span>magus. Each source has a
+    potency coefficient in front of it. This potency is a real
+    number at most <span class="tex2jax_process">$10^6$</span> in
+    absolute value.</p>
+<p>As an invoker you have the choice of combining two sources
+    of magic (denoted <span class="tex2jax_process">$\oplus
+    $</span>), or casting one on to another (denoted <span class="tex2jax_process">$\otimes $</span>).</p>
+<p>The rules for combining sources is as follows:</p>
+<ul class="itemize">
+<li>
+<p>Combining a source of Reagus or Imagus with another
+        source of equal type creates the same type but you add the
+        potencies.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\oplus
+            y\mathbb {R}=(x+y)\mathbb {R}$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$x\mathbb {I}\oplus
+            y\mathbb {I}=(x+y)\mathbb {I}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Combining a source of Reagus and Imagus together creates
+        a new complex form of magic.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\oplus
+            y\mathbb {I} \in \mathbb {C}_{\mathbb {M}}$</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Casting sources of magic has some different laws:</p>
+<ul class="itemize">
+<li>
+<p>Casting Reagus on to Reagus creates a source of Reagus
+        whose potency is the product of the previous sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\otimes
+            y\mathbb {R} = (x\cdot y)\mathbb {R}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Casting Imagus on to another source of Imagus creates
+        anti-Reagus (negative potency) with a potency of the
+        product of the two sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {I}\otimes
+            y\mathbb {I} = -(x\cdot y)\mathbb {R}$</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Casting Reagus on Imagus or Imagus on Reagus creates
+        Imagus with a potency of the product of the two
+        sources.</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$x\mathbb {R}\otimes
+            y\mathbb {I} = (x\cdot y)\mathbb {I}$</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Another thing that you remember well from your studies is
+    that for every magical source, there is an anti-source that
+    when cast will neutralize the magical energies.</p><span class="tex2jax_process">\[ \forall s\in \mathbb {M}~ \exists
+    s^{-1}\in \mathbb {M} : s\otimes s^{-1} = \epsilon \]</span>
+<p>where <span class="tex2jax_process">$\mathbb {M}$</span> is
+    the set of non-zero magical sources and <span class="tex2jax_process">$\epsilon $</span> is the neutral source, or
+    <span class="tex2jax_process">$1\mathbb {R}$</span>.</p>
+<p>Additionally, every magic source <span class="tex2jax_process">$s$</span> has a magic complement
+    <span class="tex2jax_process">$s^\dagger $</span> such
+    that:</p><span class="tex2jax_process">\[ \begin{aligned}
+    s=x\mathbb {R}&amp; \rightarrow s^\dagger =s\\ s=y\mathbb
+    {I}&amp; \rightarrow s^\dagger =-s\\ s=x\mathbb {R}\oplus
+    y\mathbb {I}&amp; \rightarrow s+s^\dagger =2x\mathbb {R}
+    \end{aligned} \]</span>
+<p>Casting a magic source on its complement (or visa versa),
+    generates a non-negative number known as the potency norm of
+    the source.</p><span class="tex2jax_process">\[ s\otimes
+    s^\dagger = |s|^2 \]</span>
+<h3>Problem</h3>
+<p>You are currently locked in battle against an equally
+    powerful foe. You recognize that you can defeat them by
+    neutralizing their source of magic. That is, you cast a spell
+    on them that will turn their source into the neutral source
+    <span class="tex2jax_process">$\epsilon = 1\mathbb
+    {R}$</span>.</p>
+<p>However, magic is not without its consequences. Any source
+    you cast on your opponent will also be cast on you as well,
+    changing your current magical source.</p>
+<p>When the dust settles and you are declared victorious, what
+    is your new magical source?</p>
+<h2>Input</h2>
+<p>The inputs are two magical sources separated by new lines.
+    Each line contains two space-separated integers. The first
+    integer is the potency of Reagus, and the second integer is the
+    potency of Imagus.</p>
+<p>The first line contains your sources <span class="tex2jax_process">$a,b$</span>, and the second line contains
+    your opponents sources <span class="tex2jax_process">$c,d$</span>.</p>
+<p>All sources are integers in the range <span class="tex2jax_process">$-10^6 \le a,b,c,d \le 10^6$</span>, and
+    neither source has both potencies equal to zero.</p>
+<h2>Output</h2>
+<p>Output your resulting source after you have annihilated your
+    opponent. The output should be two space-separated values
+    <span class="tex2jax_process">$x,y$</span>. <span class="tex2jax_process">$x$</span> is the potency of Reagus and
+    <span class="tex2jax_process">$y$</span> the potency of Imagus
+    present in your final source.</p>
+<p>Your answers will be accepted if they have an absolute or
+    relative error of at most <span class="tex2jax_process">$10^{-5}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 2
+3 4
+</pre>
+</td>
+<td>
+<pre>0.44 0.08
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+3 3
+</pre>
+</td>
+<td>
+<pre>1.0 0.0
+</pre>
+</td>
+</tr>
+</table>
+</div>

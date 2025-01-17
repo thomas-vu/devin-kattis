@@ -1,0 +1,174 @@
+<div class="problembody">
+<div class="illustration" style="width:37.00%">
+<img alt="/problems/gamerank/file/statement/en/img-0001.png" class="illustration" src="/problems/gamerank/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="http://gonkasth.deviantart.com/art/Hearthstone-Heroes-of-Warcraft-ICON-625272708">
+        Picture</a> by Gonkasth on DeviantArt, cc by-nd
+      </div>
+</div>The gaming company Sandstorm is developing an online two
+    player game. You have been asked to implement the ranking
+    system. All players have a rank determining their playing
+    strength which gets updated after every game played. There are
+    <span class="tex2jax_process">$25$</span> regular ranks, and an
+    extra rank, “Legend”, above that. The ranks are numbered in
+    decreasing order, <span class="tex2jax_process">$25$</span>
+    being the lowest rank, <span class="tex2jax_process">$1$</span>
+    the second highest rank, and Legend the highest rank.
+
+    <p>Each rank has a certain number of “stars” that one needs to
+    gain before advancing to the next rank. If a player wins a
+    game, she gains a star. If before the game the player was on
+    rank <span class="tex2jax_process">$6$</span>-<span class="tex2jax_process">$25$</span>, and this was the third or more
+    consecutive win, she gains an additional bonus star for that
+    win. When she has all the stars for her rank (see list below)
+    and gains another star, she will instead gain one rank and have
+    one star on the new rank.</p>
+<p>For instance, if before a winning game the player had all
+    the stars on her current rank, she will after the game have
+    gained one rank and have <span class="tex2jax_process">$1$</span> or <span class="tex2jax_process">$2$</span> stars (depending on whether she
+    got a bonus star) on the new rank. If on the other hand she had
+    all stars except one on a rank, and won a game that also gave
+    her a bonus star, she would gain one rank and have <span class="tex2jax_process">$1$</span> star on the new rank.</p>
+<p>If a player on rank <span class="tex2jax_process">$1$</span>-<span class="tex2jax_process">$20$</span> loses a game, she loses a star.
+    If a player has zero stars on a rank and loses a star, she will
+    lose a rank and have all stars minus one on the rank below.
+    However, one can never drop below rank <span class="tex2jax_process">$20$</span> (losing a game at rank
+    <span class="tex2jax_process">$20$</span> with no stars will
+    have no effect).</p>
+<p>If a player reaches the Legend rank, she will stay legend no
+    matter how many losses she incurs afterwards.</p>
+<p>The number of stars on each rank are as follows:</p>
+<ul class="itemize">
+<li>
+<p>Rank <span class="tex2jax_process">$25$</span>-<span class="tex2jax_process">$21$</span>: <span class="tex2jax_process">$2$</span> stars</p>
+</li>
+<li>
+<p>Rank <span class="tex2jax_process">$20$</span>-<span class="tex2jax_process">$16$</span>: <span class="tex2jax_process">$3$</span> stars</p>
+</li>
+<li>
+<p>Rank <span class="tex2jax_process">$15$</span>-<span class="tex2jax_process">$11$</span>: <span class="tex2jax_process">$4$</span> stars</p>
+</li>
+<li>
+<p>Rank <span class="tex2jax_process">$10$</span>-<span class="tex2jax_process">$1$</span>: <span class="tex2jax_process">$5$</span> stars</p>
+</li>
+</ul>
+<p>A player starts at rank <span class="tex2jax_process">$25$</span> with no stars. Given the match
+    history of a player, what is her rank at the end of the
+    sequence of matches?</p>
+<h2>Input</h2>
+<p>The input consists of a single line describing the sequence
+    of matches. Each character corresponds to one game; ‘<tt class="ttfamily">W</tt>’ represents a win and ‘<tt class="ttfamily">L</tt>’ a loss. The length of the line is between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10\, 000$</span> characters (inclusive).</p>
+<h2>Output</h2>
+<p>Output a single line containing a rank after having played
+    the given sequence of games; either an integer between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$25$</span> or “<tt class="ttfamily">Legend</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+WW
+</pre>
+</td>
+<td>
+<pre>
+25
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+WWW
+</pre>
+</td>
+<td>
+<pre>
+24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+WWWW
+</pre>
+</td>
+<td>
+<pre>
+23
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+WLWLWLWL
+</pre>
+</td>
+<td>
+<pre>
+24
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>
+WWWWWWWWWLLWW
+</pre>
+</td>
+<td>
+<pre>
+19
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 6</th>
+<th>Sample Output 6</th>
+</tr>
+<tr>
+<td>
+<pre>
+WWWWWWWWWLWWL
+</pre>
+</td>
+<td>
+<pre>
+18
+</pre>
+</td>
+</tr>
+</table>
+</div>

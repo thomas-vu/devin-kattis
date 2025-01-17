@@ -1,0 +1,188 @@
+<div class="problembody">
+<p>There are many different varieties of solitaire (card games
+    for one), but most require an area where you can lay out cards.
+    Here’s one you can do by simply holding the deck in your
+    hand.</p>
+<p>The game uses a standard <span class="tex2jax_process">$52$</span> card deck where each card has one
+    of <span class="tex2jax_process">$4$</span> suits – spades (S),
+    hearts (H), diamonds (D) or clubs (C) – and one of <span class="tex2jax_process">$13$</span> ranks – Ace (A), <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$7$</span>, <span class="tex2jax_process">$8$</span>, <span class="tex2jax_process">$9$</span>, <span class="tex2jax_process">$10$</span> (T), Jack (J), Queen (Q), King
+    (K). To play the game you hold the deck face down in your hand
+    and starting turning over cards from the bottom of the deck to
+    the top, face up. Each time you turn over a card you check if
+    it matches the rank or suit of the card three positions before
+    it in the previously turned-over cards. If they match in rank,
+    you remove those two cards and the two cards between them; if
+    they match in suit you remove just those two cards. These
+    actions might cause a cascade effect as now one or more of the
+    remaining turned-over cards might match the ranks or suits of
+    the cards three positions before them. (More detailed rules for
+    processing cascades are described below.) Once all actions in a
+    cascade have been performed (some of which may have forced the
+    processing of even more cascades), you turn over the next card.
+    If all the cards are removed in a single pass through the deck,
+    you win the game!</p>
+<p>The start of a sample game is shown below: suppose the first
+    seven cards turned over are the TH, <span class="tex2jax_process">$4$</span>C, KS, AD, <span class="tex2jax_process">$2$</span>S and <span class="tex2jax_process">$8$</span>H. The table below show the next
+    few actions taken in the game – suits and ranks are underlined
+    when they match. Note that turning over the <span class="tex2jax_process">$8$</span>S results in a cascade of two
+    actions.</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Card Dealt</p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-left:1px solid black">
+<p>Hand</p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Action</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>—</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>TH <span class="tex2jax_process">$4$</span>C KS AD
+            <span class="tex2jax_process">$2$</span>S <span class="tex2jax_process">$8$</span>H</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>none</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>TH <span class="tex2jax_process">$4$</span>C KS AD
+            <span class="tex2jax_process">$2$</span>S <span class="tex2jax_process">$8$</span>H <span class="tex2jax_process">$5$</span>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>remove AD, <span class="tex2jax_process">$5$</span>D</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$6$</span>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>TH <span class="tex2jax_process">$4$</span>C KS
+            <span class="tex2jax_process">$2$</span>S <span class="tex2jax_process">$8$</span>H <span class="tex2jax_process">$6$</span>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>none</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$8$</span>S</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>TH <span class="tex2jax_process">$4$</span>C KS
+            <span class="tex2jax_process">$2$</span>S <span class="tex2jax_process">$8$</span>H <span class="tex2jax_process">$6$</span>D <span class="tex2jax_process">$8$</span>S</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>remove <span class="tex2jax_process">$2$</span>S,
+            <span class="tex2jax_process">$8$</span>S</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>—</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>TH <span class="tex2jax_process">$4$</span>C KS
+            <span class="tex2jax_process">$8$</span>H <span class="tex2jax_process">$6$</span>D</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>remove TH, <span class="tex2jax_process">$8$</span>H</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$9$</span>H</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span>C KS
+            <span class="tex2jax_process">$6$</span>D <span class="tex2jax_process">$9$</span>H</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>none</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>KC</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$4$</span>C KS
+            <span class="tex2jax_process">$6$</span>D <span class="tex2jax_process">$9$</span>H KC</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>remove KS, <span class="tex2jax_process">$6$</span>D, <span class="tex2jax_process">$9$</span>H, KC</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span>C</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$4$</span>C
+            <span class="tex2jax_process">$2$</span>C</p>
+</td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>none</p>
+</td>
+</tr>
+</table>
+</center>
+<p>If there is ever a choice of actions (which can happen
+    during a cascade), you should pick an action which removes four
+    adjacent cards over an action that removes two non-adjacent
+    cards. If several possible actions might result in removing the
+    same number of cards, use the one that removes the most
+    recently turned-over card. For example, if the <span class="tex2jax_process">$6$</span>D had been <span class="tex2jax_process">$6$</span>C in the example above, then in the
+    fifth row of the table the <span class="tex2jax_process">$4$</span>C and <span class="tex2jax_process">$6$</span>C would have been removed instead
+    of the TH and <span class="tex2jax_process">$8$</span>H.</p>
+<p>You have one solitary task: given the order in which cards
+    are turned over, determine the cards remaining at the end of
+    the game.</p>
+<h2>Input</h2>
+<p>Input consists of four lines, each containing <span class="tex2jax_process">$13$</span> cards. Cards appear in the order
+    in which they are turned over in the game. Each card is
+    represented by two consecutive characters, the first indicating
+    the rank of the card (from <tt class="ttfamily">A</tt>,
+    <tt class="ttfamily">2</tt>, <tt class="ttfamily">3</tt>,
+    <tt class="ttfamily">4</tt>, <tt class="ttfamily">5</tt>,
+    <tt class="ttfamily">6</tt>, <tt class="ttfamily">7</tt>,
+    <tt class="ttfamily">8</tt>, <tt class="ttfamily">9</tt>,
+    <tt class="ttfamily">T</tt>, <tt class="ttfamily">J</tt>,
+    <tt class="ttfamily">Q</tt>, <tt class="ttfamily">K</tt>) and
+    the second indicating the suit of the card (from <tt class="ttfamily">S</tt>, <tt class="ttfamily">H</tt>, <tt class="ttfamily">D</tt>, <tt class="ttfamily">C</tt>). A single space
+    will separate adjacent cards.</p>
+<h2>Output</h2>
+<p>Output the number of cards remaining at the end of the game
+    followed by the remaining cards, using the format described in
+    the Input section.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>TC 2C 6C TS KC QS QC 3C KD 8D JH JS KH
+5D JD 2S 8S AS 9S 3D 5H 9C AH 4D 4C KS
+JC 4S 7S 6D 2H 7C 8C 7D AD 7H TH 2D QH
+8H 9H 5C TD 3S 6H 3H QD 5S 9D 4H 6S AC
+</pre>
+</td>
+<td>
+<pre>2 3S 9D
+</pre>
+</td>
+</tr>
+</table>
+</div>

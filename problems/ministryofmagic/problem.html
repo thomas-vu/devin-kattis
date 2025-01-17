@@ -1,0 +1,96 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/ministryofmagic/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ministryofmagic/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        The election of the European minister of magic<br/>
+        Author: <a href="https://www.flickr.com/photos/inyucho/2331899782">inyucho</a>,
+        cc by
+      </div>
+</div>
+<p>Many countries have a system of government where the
+    parliament chooses the prime minister, who then forms a
+    government. Generally, the parliament needs to elect the prime
+    minister by majority vote. When no single party manages to get
+    a majority in parliament, parties have to form a coalition that
+    gets a majority vote. As a result, some countries have been
+    without a government for years during negotiations!</p>
+<p>The wizarding world realized that lacking a government for
+    years is not sustainable because dark wizards could easily use
+    the lack of government to take over the wizarding world without
+    anyone fighting back. Thus it was decided that the minister of
+    magic would be determined automatically as soon as everyone has
+    cast their votes. The system they use for this is called
+    <em>instant-runoff voting</em>.</p>
+<p>In instant-runoff voting, <span class="tex2jax_process">$C$</span> candidates compete against each
+    other in up to <span class="tex2jax_process">$C - 1$</span>
+    rounds. After each round, if one of the candidates gets a
+    majority vote, that candidate is elected. Otherwise, the least
+    popular candidate is eliminated. If two candidates both are
+    equally unpopular, the lowest numbered one is eliminated. Here,
+    a majority vote requires a <em>strict</em> majority, i.e. more
+    than half of the votes.</p>
+<p>Votes for all the rounds are specified before the first
+    round by giving a ranking of all the <span class="tex2jax_process">$C$</span> candidates. Given such a ranking,
+    a voter will vote for the highest ranked candidate in their
+    ranking that hasn’t been eliminated. For example, if a voter
+    has the ranking <span class="tex2jax_process">$4, 1, 2, 3,
+    5$</span> and the candidates <span class="tex2jax_process">$1,
+    4, 5$</span> have been eliminated, the voter will vote for
+    candidate <span class="tex2jax_process">$2$</span> in the next
+    round.</p>
+<p>Just as in the normal world, the wizarding world has a
+    number of parties (more specifically <span class="tex2jax_process">$P$</span> parties). Each party has a number
+    of representatives in the parliament that choose the minister.
+    You will be given the candidate rankings for each party. Can
+    you determine who will win the election?</p>
+<h2>Explanation of Sample 1</h2>
+<p>The favourite candidate of the four parties are <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$4$</span>. Each party have a single vote, so
+    candidates <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$4$</span> get two votes each in
+    the first round. In the first two rounds, this means candidates
+    <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> have zero votes, so they will be
+    eliminiated (first <span class="tex2jax_process">$2$</span>
+    since it is the lower-numbered candidate). Finally, candidate
+    <span class="tex2jax_process">$1$</span> is eliminated since
+    candidates <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$4$</span> are both equally
+    unpopular with <span class="tex2jax_process">$2$</span> votes,
+    but <span class="tex2jax_process">$1$</span> is the
+    lower-numbered candidate. This means candidate <span class="tex2jax_process">$4$</span> wins.</p>
+<h2>Input</h2>
+<p>The first line contains two integers – the number of
+    candidates <span class="tex2jax_process">$C$</span>
+    (<span class="tex2jax_process">$1 \le C \le 10\, 000$</span>)
+    and parties <span class="tex2jax_process">$P$</span>
+    (<span class="tex2jax_process">$1 \le P \le 100$</span>). The
+    next <span class="tex2jax_process">$P$</span> lines describe
+    each party. Each line starts with an integer <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$1
+    \le v \le 10^6$</span>), the number of votes that the party has
+    in the parliament, followed by a permutation of the numbers
+    <span class="tex2jax_process">$1, 2, \dots , C$</span>, the
+    party’s ranking of the candidates. The ranking is given from
+    most preferred candidate to least preferred candidate.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of the candidate that is
+    elected.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+1 1 2 3 4
+1 4 3 2 1
+1 1 3 2 4
+1 4 2 3 1
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+</div>

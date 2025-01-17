@@ -1,0 +1,147 @@
+<div class="problembody">
+<div class="illustration" style="width:33.00%">
+<img alt="/problems/lostisclosetolose/file/statement/en/img-0001.png" class="illustration" src="/problems/lostisclosetolose/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Better Documents Inc. is contemplating the next
+    generation of word processors. Now, nearly every word processor
+    includes a Spell Checker. BDI, however, is looking forward to
+    replacing that with a true Typo Checker. We’ve all been caught,
+    after relying on a spell checker, by typing mistakes (“typos”)
+    that just happen to wind up as a correctly spelled word, just
+    not the word we intended. BDI hopes to use AI to determine when
+    a word’s context suggests that it is out of place and probably
+    should have been a different, but similarly spelled, word.</p>
+<p>As a first step in this process, they want to see how common
+    such similar words really are in ordinary text. Write a program
+    to read in paragraphs of text and to produce a list of
+    similarly spelled words occurring in that text.</p>
+<p>For the purpose of this program, a <em>word</em> is any
+    maximal string of non-whitespace characters containing at least
+    one alphabetic character. <em>Whitespace</em> can be either
+    blanks or line terminators (“<tt class="ttfamily">\r</tt>” or
+    “<tt class="ttfamily">\n</tt>”). The <em>core</em> of a word is
+    what you have left after removing any non-alphabetic characters
+    and replacing any upper-case alphabetic characters to their
+    lower-case equivalents.</p>
+<p>Two words are considered to be <em>similarly spelled</em> if
+    the core of one word can be converted to the core of the other
+    word by a single application of any one of the following
+    transformations:</p>
+<ul class="itemize">
+<li>
+<p>Delete a single character.</p>
+</li>
+<li>
+<p>Insert a single alphabetic character.</p>
+</li>
+<li>
+<p>Replace a single character by a different alphabetic
+        character.</p>
+</li>
+<li>
+<p>Transpose (exchange) any two adjacent characters.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>Input consists of <span class="tex2jax_process">$1$</span>
+    to <span class="tex2jax_process">$100$</span> lines of text,
+    followed by an end of input marker in the form of a line
+    containing only the string “***”.</p>
+<p>Each line of text will contain <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$80$</span> ASCII characters (not counting
+    line terminators).</p>
+<h2>Output</h2>
+<p>For each word core in the text that has one or more
+    similarly spelled words, print a line consisting of</p>
+<ol class="enumerate">
+<li>
+<p>That word core</p>
+</li>
+<li>
+<p>A colon (“:”) followed by a blank</p>
+</li>
+<li>
+<p>A list of all similarly spelled word cores (with no
+        duplicates and not containing the core to the left of the
+        colons), in alphabetic order, separated by single
+        spaces.</p>
+</li>
+</ol>
+<p>The lines printed should be in alphabetic order of the word
+    cores to the left of the colon.</p>
+<p>If there are no similarly spelled words in the input, print
+    a single line containing the string “***”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>Lost is Close to Lose
+
+"Better Documents Inc. wants to add Typo Checking in to the
+next generation of word processors," he said.
+***
+</pre>
+</td>
+<td>
+<pre>close: lose
+he: the
+in: inc is
+inc: in
+is: in
+lose: close lost
+lost: lose
+the: he
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>The fox said, "When?"
+"Not till 12 o'clock", replied the hen.
+"That clock is stopped, it will never strike.", he said.
+***
+</pre>
+</td>
+<td>
+<pre>clock: oclock
+he: hen the
+hen: he when
+is: it
+it: is
+oclock: clock
+the: he
+till: will
+when: hen
+will: till
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>There are no similar words
+in this input set.
+***
+</pre>
+</td>
+<td>
+<pre>***
+</pre>
+</td>
+</tr>
+</table>
+</div>

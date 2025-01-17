@@ -1,0 +1,104 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/toytraintracks/file/statement/en/img-0001.jpg" class="illustration" src="/problems/toytraintracks/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Model railroad by Marshman via <a href="https://en.wikipedia.org/wiki/Image:HO_Layout_1.jpg">Wikimedia
+        Commons</a>, cc by-sa
+      </div>
+</div>Every little child, and quite a number of adults, are
+    fascinated by toy trains. From a toddler’s choo-choo train to a
+    hobbyist’s elaborate model railroad filling an entire basement,
+    they are a profitable business. The Toy Train Tracks
+    Construction Company (TTTCC) manufactures train tracks for all
+    ages and skill levels. To keep their existing customers busy
+    and maybe attract some new ones, the TTTCC has recently started
+    publishing maps for how to connect their train tracks into
+    elaborate layouts. Usually, this starts with a designer coming
+    up with an interesting track layout, and then publishing both
+    the layout and the required number of different track segments
+    (say, curves and straight parts) needed to construct it. But
+    the TTTCC has recently learned that many customers are looking
+    for the reverse: they already have train track segments lying
+    around (maybe found in grandma’s attic), and would like to use
+    them to create a large train course. How difficult might that
+    be?
+    <p>To study the feasibility of automating the layout-creation
+    process, TTTCC is interested in constructing train courses
+    using two different shapes: straight line segments, and
+    <span class="tex2jax_process">$90$</span>-degree turns (see
+    Figure 1).</p>
+<div class="figure" id="fig:tracks:tiles">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{tiles}" src="/problems/toytraintracks/file/statement/en/img-0002.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 1</b>: A straight track segment and a curved
+          track segment.
+        </div>
+</center>
+</div>
+<p>Valid layouts are created by placing these shapes on a
+    square grid, with each track piece taking up exactly one grid
+    cell. Both types of pieces can be rotated in <span class="tex2jax_process">$90$</span>-degree increments. A “proper”
+    train track needs to be connected, and should form a single
+    closed loop. Given a set of straight and curved track segments,
+    what is the longest closed loop that one can construct?</p>
+<div class="figure" id="fig:tracks:sample1">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{sample1}" src="/problems/toytraintracks/file/statement/en/img-0003.png" style="width:30.00%"/>
+<div class="caption">
+<b>Figure 2</b>: A sample track using four straight track
+          segments and twelve curves. This corresponds to Sample
+          Output 1.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of a single line containing two integers
+    <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$c$</span>, the number of straight and curved
+    track segments available, respectively (<span class="tex2jax_process">$0 \leq s \leq 10^5$</span>, <span class="tex2jax_process">$4 \leq c \leq 10^5$</span>).</p>
+<h2>Output</h2>
+<p>Output a train loop using at most <span class="tex2jax_process">$s$</span> straight segments and <span class="tex2jax_process">$c$</span> curved segments, that has the
+    longest length (in number of track segments used) under this
+    restriction. The loop must be closed and cannot intersect
+    itself. If there are multiple loops of maximal length, any one
+    of them will be accepted.</p>
+<p>If the loop is of length <span class="tex2jax_process">$n$</span>, then print a single string of
+    length <span class="tex2jax_process">$n$</span>, where the
+    characters represent the loop’s segments as encountered in a
+    single traversal. The character ‘<tt class="tt">S</tt>‘ stands
+    for a straight-line segment, ‘<tt class="tt">L</tt>‘ for a
+    curved segment that is a left turn, and ‘<tt class="tt">R</tt>’
+    for a curved segment that is a right turn.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 12
+</pre>
+</td>
+<td>
+<pre>LSRLLRLSLSRLLSRL
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 5
+</pre>
+</td>
+<td>
+<pre>LLLL
+</pre>
+</td>
+</tr>
+</table>
+</div>

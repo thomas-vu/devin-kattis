@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Mirko has assembled an excellent crossword puzzle and now he
+    wants to frame it. Mirko’s crossword puzzle consists of
+    <span class="tex2jax_process">$M \times N$</span> letters, and
+    the frame around it should be <span class="tex2jax_process">$U$</span> characters wide on top,
+    <span class="tex2jax_process">$L$</span> characters on the
+    left, <span class="tex2jax_process">$R$</span> characters on
+    the right and <span class="tex2jax_process">$D$</span>
+    characters on the bottom side.</p>
+<p>The frame consists of characters <tt class="ttfamily">#</tt>
+    (hash) and <tt class="ttfamily">.</tt> (dot) which alternate
+    like fields on a chessboard. These characters should be
+    arranged in a way that, if the frame is expanded to cover the
+    entire crossword puzzle and we treat these characters as a
+    chessboard, the <tt class="ttfamily">#</tt> characters should
+    be placed as the red fields on a chessboard (i.e. the top left
+    field). See the examples below for a better understanding of
+    the task.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq M, N \leq 10$</span>). The second line of input contains
+    integers <span class="tex2jax_process">$U$</span>, <span class="tex2jax_process">$L$</span>, <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$D$</span> (<span class="tex2jax_process">$0
+    \leq U, L, R, D \leq 5$</span>). The following <span class="tex2jax_process">$M$</span> lines of input contains
+    <span class="tex2jax_process">$N$</span> characters — lowercase
+    letters of the English alphabet. These lines represent Mirko’s
+    crossword puzzle.</p>
+<h2>Output</h2>
+<p>Output the framed crossword puzzle as stated in the
+    text.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+2 2 2 2
+honi
+oker
+nera
+irak
+</pre>
+</td>
+<td>
+<pre>#.#.#.#.
+.#.#.#.#
+#.honi#.
+.#oker.#
+#.nera#.
+.#irak.#
+#.#.#.#.
+.#.#.#.#
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 4
+1 0 3 1
+rima
+mama
+</pre>
+</td>
+<td>
+<pre>#.#.#.#
+rima.#.
+mama#.#
+.#.#.#.
+</pre>
+</td>
+</tr>
+</table>
+</div>

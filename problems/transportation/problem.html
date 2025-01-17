@@ -1,0 +1,103 @@
+<div class="problembody">
+<p>You have just been hired by Amalgamated, Inc. in the
+    country of Acmania to oversee the transportation of raw
+    materials to the company’s factories. Each supplier of raw
+    materials and each factory resides in one of Acmania’s states.
+    No state has both a factory and a supplier (and never more than
+    one of either) and there are arcane laws governing which
+    transportation companies can transport materials across state
+    lines. Because of the fierce competition between factories and
+    between suppliers each transportation company handles the
+    output of at most one raw material site and delivers to at most
+    one factory (or to another transportation company). Each
+    supplier can produce enough material to contract with at most
+    one factory and no factory will contract with more than one
+    supplier. Your job is to determine the maximum number of
+    factories that can be supplied with raw materials.</p>
+<p>For example, suppose that there are three suppliers in
+    states A, B and C, and three factories in states D, E and F.
+    Let’s say you contract three transportation firms: firm
+    <span class="tex2jax_process">$1$</span> can transport between
+    states A, E and G; firm <span class="tex2jax_process">$2$</span> can transport between states A, C
+    and E; and firm <span class="tex2jax_process">$3$</span> can
+    transport between states B, D and F. In this case, you can
+    supply at most two factories (for example, factory E can be
+    supplied from supplier A using firm <span class="tex2jax_process">$1$</span>, and factory F can be supplied
+    from supplier B using firm <span class="tex2jax_process">$3$</span>). If you find a fourth firm that
+    transports between states G and F then you can supply all three
+    factories: factory D can be supplied from B using firm
+    <span class="tex2jax_process">$3$</span>, factory E can be
+    supplied from C using firm <span class="tex2jax_process">$2$</span>, and factory F can be supplied
+    from A using firms <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$4$</span>.</p>
+<h2>Input</h2>
+<p>The input will start with four positive integers
+    <span class="tex2jax_process">$s$</span> <span class="tex2jax_process">$r$</span> <span class="tex2jax_process">$f$</span> <span class="tex2jax_process">$t$</span> indicating the number of states,
+    raw material sites, factories and transportation companies,
+    where <span class="tex2jax_process">$1 \leq r,f \leq
+    200$</span>, <span class="tex2jax_process">$r+f \leq s \leq
+    600$</span> and <span class="tex2jax_process">$1 \leq t \leq
+    1000$</span>.</p>
+<p>Next will follow a line containing <span class="tex2jax_process">$r$</span> state names, one for each raw
+    material site.</p>
+<p>The next line will contain <span class="tex2jax_process">$f$</span> state names, one for each factory
+    site.</p>
+<p>Finally there will be <span class="tex2jax_process">$t$</span> lines, one for each transportation
+    company. Each of these lines will start with an integer
+    <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1 \leq n \leq s$</span>, indicating the
+    number of states the company is allowed to work in, followed by
+    <span class="tex2jax_process">$n$</span> state names. No state
+    will contain both a raw material site and a factory site.</p>
+<p>All state names will be alphabetic strings with no
+    blanks.<br/></p>
+<h2>Output</h2>
+<p>Output the maximum number of factories that can be supplied
+    with raw materials.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 3 3 3
+A B C
+D E F
+3 A E G
+3 A C E
+3 B D F
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 3 3 4
+A B C
+D E F
+3 A E G
+3 A C E
+3 B D F
+2 G F
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

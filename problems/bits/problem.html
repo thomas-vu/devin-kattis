@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>As we all know, it takes more energy to store binary numbers
+    with lots of ones in them. Yraglac’s calculator has some
+    batteries that are almost dead, and he’s concerned that the
+    battery may run out as he types in a number.</p>
+<p>The way the calculator processes numbers being entered is as
+    follows. Initially, the calculator stores the number zero in a
+    <span class="tex2jax_process">$32$</span>-bit internal
+    register. As Yraglac types in each digit of his number, the
+    register updates to store the number entered thus far. For
+    example, when Yraglac enters the number <span class="tex2jax_process">$94$</span>, the register stores the number
+    <span class="tex2jax_process">$9$</span> (binary <span class="tex2jax_process">$1001$</span>) after the first key is
+    pressed. When he presses the second key, the register clears
+    itself and stores the number <span class="tex2jax_process">$94$</span> (binary <span class="tex2jax_process">$1011110$</span>). What is the maximum number
+    of one-bits in the register as Yraglac enters a number
+    digit-by-digit?</p>
+<p>To convert an integer <span class="tex2jax_process">$x$</span> to a binary string, you can use
+    <tt class="ttfamily">Integer.toBinaryString(x)</tt> in Java and
+    <tt class="ttfamily">bin(x)</tt> in Python. See the language
+    documentation for more information.</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$T \leq 1\, 000$</span> giving the number of
+    test cases. Each test case consists of a line with a single
+    integer <span class="tex2jax_process">$X$</span> (<span class="tex2jax_process">$0 \leq X &lt; 2^{31}$</span>), the number
+    Yraglac wants to enter.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    maximum number of one-bits in the storage register as the
+    number <span class="tex2jax_process">$X$</span> is entered,
+    digit by digit.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+6
+1
+2
+3
+4
+10
+94
+</pre>
+</td>
+<td>
+<pre>
+1
+1
+2
+1
+2
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>Given <span class="tex2jax_process">$2$</span> linear
+    equations on the variables <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>, solve for <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le N \le 100$</span>, the number of test
+    cases. Each test case consists of two equations, each on a
+    separate line. An empty line separates cases.</p>
+<p>An equation consists of at least <span class="tex2jax_process">$2$</span> and at most <span class="tex2jax_process">$10$</span> terms separated by addition,
+    subtraction, or equality operators. A term is an integer, or a
+    variable name (<span class="tex2jax_process">$x$</span> or
+    <span class="tex2jax_process">$y$</span>) optionally preceded
+    by a minus sign or an integer coefficient. There is exactly one
+    equality operator. Constant terms and coefficients are at most
+    <span class="tex2jax_process">$100$</span> in absolute value.
+    All operators are surrounded by spaces, and there are no spaces
+    within terms.</p>
+<h2>Output</h2>
+<p>For each case, print two lines, giving the values of
+    <span class="tex2jax_process">$x$</span> and <span class="tex2jax_process">$y$</span> as rationals in simplest terms. If
+    <span class="tex2jax_process">$x$</span> or <span class="tex2jax_process">$y$</span> has no unique rational value such
+    that both equations hold, print “<tt class="ttfamily">don’t
+    know</tt>” for its value. Print an empty line between
+    cases.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7
+2x + 3y = x
+5 = x + y + 3
+
+2x + 3y = 0
+10x = -15y
+
+2x + 3y = 0
+10x = -15y + 1
+
+x = 1
+3x = 6y
+
+2x = 3x + -x + y
+x + y = x + y
+
+2x = -3
+-2y = 3
+
+1 = 2
+x = 3
+</pre>
+</td>
+<td>
+<pre>
+3
+-1
+
+don't know
+don't know
+
+don't know
+don't know
+
+1
+1/2
+
+don't know
+0
+
+-3/2
+-3/2
+
+don't know
+don't know
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,112 @@
+<div class="problembody">
+<div class="illustration" style="width:36.00%">
+<img alt="/problems/eenymeeny/file/statement/en/img-0001.jpg" class="illustration" src="/problems/eenymeeny/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/52020252@N07/6125042131">Picture</a>
+        by Gina Harbach Glenn Green on Flickr, cc by-nd
+      </div>
+</div>“Eeny meeny miny moe” is a well-known nursery rhyme in
+    English, used (among other things) by kids to “randomly” select
+    members of a team. It exists in many variations, one of which
+    goes like this:
+    <blockquote class="quote">
+      Eeny, meeny, miny, moe,<br/>
+      Catch a tiger by the toe.<br/>
+      If he hollers, let him go,<br/>
+      Eeny, meeny, miny, moe.
+    </blockquote>
+<p>Similar verses exist in most languages, such as “Ulle dulle
+    dof” in Finnish, “Akka bakka bonka rakka” in Norwegian, and
+    “Ole dole doff” in Swedish.</p>
+<p>Two teams are to be selected for a game and the rhyme is
+    used to select one kid for a team at a time, alternating
+    between the two teams, until all kids have been selected. The
+    kids are standing in a circle. In each selection round we start
+    counting the kids in clockwise order around the circle,
+    skipping one kid for every word in the rhyme, until the last
+    word. The kid matching the last word is chosen for the current
+    team and then the next round starts. In all rounds but the
+    first, the counting starts at the next remaining kid (in
+    clockwise order) after the one that was selected in the
+    previous round. See Figure 1 for an example.</p>
+<p>Given such a rhyme, and a group of kids, can you tell which
+    kids will be in which team?</p>
+<div class="figure" id="fig:eeny meeny sample 1">
+<p><img alt="\includegraphics[width=0.99\textwidth ]{sample1}" src="/problems/eenymeeny/file/statement/en/img-0002.png" style="width:99.00%"/></p>
+<div class="caption">
+<b>Figure 1</b>: Illustration of the first three rounds of
+        Sample Input 1. In rounds 1 and 3, Alvar and Rakel get
+        selected for the first team, and in round 2, Lisa is
+        selected for the second team. In round 4 (not shown), only
+        Kalle remains and is selected for the second team.
+      </div>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains the rhyme, consisting of a
+    list of words separated by spaces. The second line of input
+    contains an integer <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \le n \le 100$</span>), the
+    number of kids. Then follow the names of the kids, one per
+    line. The kids are given in clockwise order and the first kid
+    listed is the one at which counting starts in the first
+    round.</p>
+<p>All words and names consist only of upper and lower case
+    letters ‘<tt class="ttfamily">A</tt>’-‘<tt class="ttfamily">Z</tt>’ and ‘<tt class="ttfamily">a</tt>’-‘<tt class="ttfamily">z</tt>’. No input line
+    is empty or longer than <span class="tex2jax_process">$100$</span> characters (excluding the
+    newline character at the end of the line).</p>
+<h2>Output</h2>
+<p>Output the two teams, starting with the one whose first
+    member is chosen first. For each team, output the number of
+    kids in the team, followed by the names of the kids in the
+    team, in the same order as they were chosen for the team.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>eeny meeny miny
+4
+Kalle
+Lisa
+Alvar
+Rakel
+</pre>
+</td>
+<td>
+<pre>2
+Alvar
+Rakel
+2
+Lisa
+Kalle
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>Every Other
+3
+a
+b
+c
+</pre>
+</td>
+<td>
+<pre>2
+b
+c
+1
+a
+</pre>
+</td>
+</tr>
+</table>
+</div>

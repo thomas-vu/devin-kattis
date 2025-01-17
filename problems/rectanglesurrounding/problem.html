@@ -1,0 +1,43 @@
+<div class="problembody">
+<p>You are given a list of rectangle boundaries. Each rectangle
+    boundary is on integer coordinates. The rectangles surround
+    squares on the coordinate grid. Your job is to determine the
+    total number of such grid squares that are surrounded by at
+    least one of the given rectangles.</p>
+<h2>Input</h2>
+<p>Input consists of a set of <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$10$</span> cases. Each case starts with the
+    number of rectangles <span class="tex2jax_process">$0 &lt; n
+    \le 50$</span>. Following this are <span class="tex2jax_process">$n$</span> rectangles, each given as four
+    integers, <span class="tex2jax_process">$a$</span> <span class="tex2jax_process">$b$</span> <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$d$</span>, where <span class="tex2jax_process">$a &lt; c$</span> and <span class="tex2jax_process">$b &lt; d$</span>. The point <span class="tex2jax_process">$(a,b)$</span> defines the bottom left corner
+    of the rectangle and the point <span class="tex2jax_process">$(c,d)$</span> defines the top right. All
+    coordinates are between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$500$</span> (inclusive). Input ends when
+    <span class="tex2jax_process">$n$</span> is <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>For each set of rectangles, print the total number of grid
+    points they surround.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+1 1 2 2
+1
+10 10 19 19
+2
+10 10 19 19
+15 15 24 24
+0
+</pre>
+</td>
+<td>
+<pre>1
+81
+146
+</pre>
+</td>
+</tr>
+</table>
+</div>

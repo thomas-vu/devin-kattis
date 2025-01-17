@@ -1,0 +1,122 @@
+<div class="problembody">
+<p>Last night, Tom went on a date with a really nice girl.
+    However, he forgot to take his credit card with him and he had
+    no cash in his wallet, so he ended up working at the restaurant
+    to pay for the bill. His task is to take plates from the waiter
+    when he comes from the tables, and pass them along when the
+    diswasher requests them. It is very important for the plates to
+    be washed in the same order as they are brought from the
+    tables, as otherwise it could take too long before a plate is
+    washed, and leftover food might get stuck. Trying to hold all
+    the plates in his hands is probably not a great idea, so Tom
+    puts them on a table as soon as the waiter hands them over to
+    him, and picks them up from the table again when the time comes
+    to pass them along to the dishwasher. There is space for only
+    two piles of plates on the table, which will be referred to as
+    pile 1 and pile 2. There is only one table Tom can use.</p>
+<p>Tom won last year’s SWERC, so he is certainly capable of
+    optimizing for efficiency. You have to output a transcript of
+    one possible way in which Tom might decide to organize the
+    plates on the table during the process, given the sequence of
+    plates and requests he receives.</p>
+<h2>Input</h2>
+<p>The input has several test cases, at most <span class="tex2jax_process">$50$</span>. Each case begins with a line
+    containing a number <span class="tex2jax_process">$N$</span>
+    (<span class="tex2jax_process">$1 \leq N \leq 1\, 000$</span>),
+    followed by <span class="tex2jax_process">$N$</span> lines,
+    which contain either <tt class="ttfamily">DROP m</tt> or
+    <tt class="ttfamily">TAKE m</tt>, where <span class="tex2jax_process">$m &gt; 0$</span> is the number of plates to
+    take or drop. <tt class="ttfamily">DROP m</tt> represents that
+    the next event is the waiter bringing <span class="tex2jax_process">$m$</span> plates to Tom, so he has to drop
+    them on the table, while <tt class="ttfamily">TAKE m</tt>
+    represents that the next event is Tom taking <span class="tex2jax_process">$m$</span> plates from the table and passing
+    them along in the right order. You can assume that he never
+    receives a <tt class="ttfamily">TAKE m</tt> instruction when
+    there are fewer than <span class="tex2jax_process">$m$</span>
+    plates on the table, and that the sum <span class="tex2jax_process">$M$</span> of all values of <span class="tex2jax_process">$m$</span> corresponding to <tt class="ttfamily">DROP</tt> operations does not exceed <span class="tex2jax_process">$100\, 000$</span>. Note that there might be
+    plates left on Tom’s table when the last request is issued, as
+    Tom might be relieved of his duty to stay until the restaurant
+    closes.</p>
+<p>The input ends with a line with <span class="tex2jax_process">$N = 0$</span>, which must not be
+    processed.</p>
+<h2>Output</h2>
+<p>For every test case, the output will be a series of lines
+    describing the operations to be performed with the plates. The
+    content of each line will be one of the following:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">DROP 1 m</tt> (<tt class="ttfamily">DROP 2 m</tt>), <span class="tex2jax_process">$m
+        &gt; 0$</span>, if Tom needs to take a plate from the
+        waiter, drop it on top of pile 1 (pile 2), and repeat this
+        operation <span class="tex2jax_process">$m$</span> times in
+        total.</p>
+</li>
+<li>
+<p><tt class="ttfamily">TAKE 1 m</tt> (<tt class="ttfamily">TAKE 2 m</tt>), <span class="tex2jax_process">$m
+        &gt; 0$</span>, if Tom needs to take a plate from the top
+        of pile 1 (pile 2), pass it along to the dishwasher, and
+        repeat <span class="tex2jax_process">$m$</span> times in
+        total.</p>
+</li>
+<li>
+<p><tt class="ttfamily">MOVE 1-&gt;2 m</tt> (<tt class="ttfamily">MOVE 2-&gt;1 m</tt>), <span class="tex2jax_process">$m &gt; 0$</span>, if Tom needs to take a
+        plate from the top of pile 1 (pile 2), drop it on top of
+        pile 2 (pile 1), and repeat <span class="tex2jax_process">$m$</span> times in total.</p>
+</li>
+</ul>
+<p>You must output at most <span class="tex2jax_process">$6N$</span> lines, and the total number of
+    movements of plates in your transcript (that is, the sum of the
+    m’s printed in your output, for all three kinds of operations),
+    must be at most <span class="tex2jax_process">$6M$</span>, as
+    otherwise Tom won’t be able to cope with all the work.</p>
+<p>Note that Tom must obey the commands in the same order as
+    they are issued. This means that, if he receives a <tt class="ttfamily">TAKE m</tt> command, he must perform a certain
+    number of <tt class="ttfamily">MOVE</tt> and <tt class="ttfamily">TAKE</tt> operations such that the sum of the
+    numbers of plates <em>taken</em> adds up exactly to
+    <span class="tex2jax_process">$m$</span> before performing the
+    operations corresponding to the next command; and if he
+    receives a <tt class="ttfamily">DROP m</tt> command, he must
+    perform a number of <tt class="ttfamily">DROP</tt> or
+    <tt class="ttfamily">MOVE</tt> operations for which the sum of
+    the numbers of plates dropped adds up exactly to <span class="tex2jax_process">$m$</span> before performing the operations
+    corresponding to the next command.</p>
+<p>Of course, it is also forbidden to take plates from the
+    waiter or pass them along to the dishwasher in the absence of a
+    corresponding order.</p>
+<p>There <em>must</em> be an empty line between the outputs of
+    different cases.</p>
+<p>Any solution satisfying these conditions will be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+DROP 100
+TAKE 50
+TAKE 20
+3
+DROP 3
+DROP 5
+TAKE 8
+0
+</pre>
+</td>
+<td>
+<pre>DROP 2 100
+MOVE 2-&gt;1 100
+TAKE 1 50
+TAKE 1 20
+
+DROP 2 3
+DROP 2 5
+MOVE 2-&gt;1 8
+TAKE 1 8
+</pre>
+</td>
+</tr>
+</table>
+</div>

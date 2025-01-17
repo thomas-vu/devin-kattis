@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/rodunarrugl/file/statement/en/img-0001.png" class="illustration" src="/problems/rodunarrugl/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image from <a href="https://commons.wikimedia.org/wiki/File:Permutation_cycles_qtl1.svg">
+        commons.wikimedia.org</a>
+</div>
+</div>While waiting for the pizza from Trominos those who have
+    arrived to the KFFÍ party are going to watch something. There
+    were few suggestions for what to watch so eventually Atli
+    suggests Bogletics, which no one bothers to veto. Thus they
+    begin to watch. At some point the main character encounters a
+    bit of a problem. He has <span class="tex2jax_process">$n$</span> items and <span class="tex2jax_process">$n + 1$</span> places to store them. Since he
+    can’t carry a whole lot and already has some things he can’t
+    part with, he can only carry one item at once. Currently the
+    items are arranged in some order in places <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$n$</span>, but not in the order he wishes
+    them to be. The only thing he can do to fix this is move one
+    item from its current location to an empty place. How many such
+    moves must he make to get everything into its desired place?
+    <h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$n$</span> satisfying
+    <span class="tex2jax_process">$1 \leq n \leq 10^5$</span>, the
+    number of items to rearrange. Next there is a line with
+    <span class="tex2jax_process">$n$</span> integers <span class="tex2jax_process">$k_1, k_2, \dots , k_ n$</span> satisfying
+    <span class="tex2jax_process">$1 \leq k_ i \leq n$</span>. The
+    value <span class="tex2jax_process">$k_ i$</span> is the place
+    the main character wants the item that is currently at location
+    <span class="tex2jax_process">$i$</span> to be in. None of the
+    <span class="tex2jax_process">$k_ i$</span> will equal
+    <span class="tex2jax_process">$n + 1$</span> as that place
+    should be empty at the end. The values will be unique as
+    well.</p>
+<h2>Output</h2>
+<p>A single line with an integer giving the minimum number of
+    moves needed to get everything to the desired place.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+1 3 2 4
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>8
+7 4 6 8 1 3 5 2
+</pre>
+</td>
+<td>
+<pre>11
+</pre>
+</td>
+</tr>
+</table>
+</div>

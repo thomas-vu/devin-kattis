@@ -1,0 +1,102 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/buriedtreasure2/file/statement/en/img-0001.png" class="illustration" src="/problems/buriedtreasure2/file/statement/en/img-0001.png"/>
+<div class="description">
+        a treasure map
+      </div>
+</div>
+<p>Buried treasure can be found using treasure maps. There are
+    <span class="tex2jax_process">$m$</span> different locations
+    numbered from <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$m$</span>. Each location
+    contains either treasure or a trap.</p>
+<p>Joey gives you <span class="tex2jax_process">$n$</span>
+    treasure maps. Each treasure map has two markers <span class="tex2jax_process">$m_1, m_2$</span>. For <span class="tex2jax_process">$i\in \{ 1,2\} $</span>, if <span class="tex2jax_process">$m_ i &lt; 0$</span>, then the map is
+    claiming that location <span class="tex2jax_process">$|m_
+    i|$</span> contains a trap. If <span class="tex2jax_process">$m_ i &gt; 0$</span>, then the map is
+    claiming that location <span class="tex2jax_process">$|m_
+    i|$</span> contains treasure.</p>
+<p>We say that a treasure map is <i class="itshape">reasonable</i> if at least one of the claims it makes
+    is correct. For example, if a map claims that location
+    <span class="tex2jax_process">$1$</span> contains treasure and
+    location <span class="tex2jax_process">$2$</span> contains a
+    trap, while in reality location <span class="tex2jax_process">$1$</span> contains a trap and location
+    <span class="tex2jax_process">$2$</span> contains treasure,
+    then the map is <i class="itshape">not</i> reasonable.</p>
+<p>Joey asserts that every treasure map that he has given you
+    is reasonable. Can you check whether this is possible, i.e.
+    whether there exists an assignment of locations <span class="tex2jax_process">$1$</span> through <span class="tex2jax_process">$m$</span> to either treasure or trap such
+    that each map makes at least one correct claim?</p>
+<h2>Input</h2>
+<p>The first line of input contains two space-separated
+    integers <span class="tex2jax_process">$n$</span>, the number
+    of treasure maps you have, and <span class="tex2jax_process">$m$</span>, the number of possible locations
+    on the treasure maps (<span class="tex2jax_process">$1 \leq n
+    \leq 10^{5}, 1 \leq m \leq 10^{5}$</span>).</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines of
+    input each contain <span class="tex2jax_process">$2$</span>
+    integers. For <span class="tex2jax_process">$1\leq j \leq
+    n$</span>, the <span class="tex2jax_process">$j^{th}$</span>
+    line contains two integers <span class="tex2jax_process">$m_1,
+    m_2$</span> (<span class="tex2jax_process">$-m \leq m_1, m_2
+    \leq m$</span>, and <span class="tex2jax_process">$m_1, m_2
+    \neq 0$</span>) which represent the two locations marked by map
+    <span class="tex2jax_process">$j$</span>.</p>
+<h2>Output</h2>
+<p>If it’s possible for every map to be reasonable, print YES.
+    Otherwise, print NO.</p>
+<h2>Sample Explanation</h2>
+<p>In Sample Input <span class="tex2jax_process">$1$</span>,
+    there is no assignment of locations to either treasure or trap
+    to make all maps reasonable. If for example we say that
+    location <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$2$</span> both contain treasure,
+    then map <span class="tex2jax_process">$4$</span> will not be
+    reasonable, while if we say that location <span class="tex2jax_process">$1$</span> contains a trap and location
+    <span class="tex2jax_process">$2$</span> contains treasure,
+    then map <span class="tex2jax_process">$3$</span> will not be
+    reasonable. The other cases are similar.</p>
+<p>In Sample Input <span class="tex2jax_process">$2$</span>, if
+    location <span class="tex2jax_process">$1$</span> contains a
+    trap and location <span class="tex2jax_process">$2$</span>
+    contains treasure, then all <span class="tex2jax_process">$3$</span> maps will be reasonable.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+1 2
+2 -1
+1 -2
+-1 -2
+</pre>
+</td>
+<td>
+<pre>NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+1 2
+2 -1
+-1 -2
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

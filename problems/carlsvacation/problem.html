@@ -1,0 +1,62 @@
+<div class="problembody">
+<p>Carl the ant is back! After traversing meandering paths
+    (Problem A, 2004 World Finals) and wandering over octahedrons
+    (Problem C, 2009 World Finals) it is time for a little vacation
+    — time to see the sights! And where better to see the sights
+    than at the tips of tall structures like, say, pyramids!! And
+    where better to see tall pyramids but Egypt!!! (This is so
+    exciting!!!!!)</p>
+<p>After taking in the view from the tip of one pyramid, Carl
+    would like to go to the tip of another. Since ants do not do
+    particularly well in the hot sun, he wants to find the minimum
+    distance to travel between the tips of these two pyramids,
+    assuming he can only walk on the surfaces of the pyramids and
+    the plane which the pyramids sit upon. The pyramids are,
+    geometrically, right square pyramids, meaning the apex of the
+    pyramid lies directly above the center of a square base.</p>
+<div class="figure" id="fig:sample1">
+<center>
+<img alt="\includegraphics[width=0.55\textwidth ]{sample1.pdf}" src="/problems/carlsvacation/file/statement/en/img-0001.png" style="width:55.00%"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: Illustration of two pyramids corresponding
+        to Sample Input 1. The black line shows the shortest path
+        between their apexes.
+      </div>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains five integers <span class="tex2jax_process">$x_1, y_1, x_2, y_2, h$</span> where
+    <span class="tex2jax_process">$x_1, y_1, x_2, y_2$</span>
+    (<span class="tex2jax_process">$-10^5\leq x_1,x_2,y_1,y_2 \leq
+    10^5$</span> and <span class="tex2jax_process">$(x_1, y_1) \ne
+    (x_2, y_2)$</span>) define an edge of the first pyramid, with
+    the body of the pyramid lying to the left of the directed
+    vector from <span class="tex2jax_process">$(x_1, y_1)$</span>
+    to <span class="tex2jax_process">$(x_2, y_2)$</span>, and
+    <span class="tex2jax_process">$h$</span> (<span class="tex2jax_process">$1 \leq h \leq 10^5$</span>) is the height of
+    the pyramid. The second line of input describes the second
+    pyramid in the same format. The intersection of the bases of
+    the two pyramids has <span class="tex2jax_process">$0$</span>
+    area.</p>
+<h2>Output</h2>
+<p>Output the minimum distance Carl travels between the tips of
+    the two pyramids. Your answer should have an absolute or
+    relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0 0 10 0 4
+9 18 34 26 42
+</pre>
+</td>
+<td>
+<pre>60.866649532
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>Bob Roberts likes to listen to music while he drives, but
+    the car he owns is a little antiquated. No Bluetooth or USB
+    connections here, but at least he has a CD player, so he’s been
+    transferring a lot of his music to CDs. At the moment he has
+    only two CDs left and would like to get as much of his
+    remaining music as possible on them. Given the capacity of the
+    CDs and collection of songs, can you help him find the maximum
+    number of minutes of music he can put on the two CDs?</p>
+<h2>Input</h2>
+<p>Input starts with a line containing two integers
+    <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$n$</span>, where <span class="tex2jax_process">$c$</span> <span class="tex2jax_process">$(1
+    \leq c\leq 1\, 000)$</span> is the number of minutes of music
+    each CD can hold, and <span class="tex2jax_process">$n$</span>
+<span class="tex2jax_process">$(1 \leq n \leq 1\, 000)$</span>
+    is the number of songs to select from. Following this is a
+    single line containing <span class="tex2jax_process">$n$</span>
+    positive integers indicating the length (in minutes) of each of
+    the songs. No song will be longer than <span class="tex2jax_process">$1\, 000$</span> minutes.</p>
+<h2>Output</h2>
+<p>Output the amount of music on each CD, in minutes, that
+    maximizes the total amount of music that Bob can transfer to
+    the two CDs. Display the time of the larger-filled CD first. If
+    there is a tie, use the solution which minimizes the time
+    difference between the two CDs.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>100 5
+10 20 40 60 85
+</pre>
+</td>
+<td>
+<pre>100 95
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>100 5
+10 20 30 40 50
+</pre>
+</td>
+<td>
+<pre>80 70
+</pre>
+</td>
+</tr>
+</table>
+</div>

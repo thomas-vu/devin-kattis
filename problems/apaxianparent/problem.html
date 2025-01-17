@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>While breaking ground for the Obama Presidential Center,
+    which will be located just a few blocks from campus in Jackson
+    Park, archeologists from the Oriental Institute have made an
+    astounding discovery: a new set of scrolls from the ancient and
+    certainly not made-up Apaxian civilization!</p>
+<p>It seems that the Apaxian civilization, which the Oriental
+    Institute is starting to suspect may have been way too
+    concerned with string manipulation, provided a way for young
+    Apaxians to extend their name using the name of one of their
+    parents. The basic principle was to take an Apaxian name
+    <span class="tex2jax_process">$Y$</span>, add <tt class="ttfamily">ex</tt>, and then the name <span class="tex2jax_process">$P$</span> of one of the parents. For
+    example, if <span class="tex2jax_process">$Y$</span> is
+    <tt class="ttfamily">menolaxios</tt> and <span class="tex2jax_process">$P$</span> is <tt class="ttfamily">mox</tt>,
+    the extended name is <span class="tex2jax_process">$\texttt{menolaxios}+\texttt{ex}+\texttt{mox}=\texttt{menolaxiosexmox}$</span></p>
+<p>However, there were a few exceptions to this rule:</p>
+<ul class="itemize">
+<li>
+<p>If <span class="tex2jax_process">$Y$</span> ends with
+        <tt class="ttfamily">e</tt>, then the extended name is
+        <span class="tex2jax_process">$Y+\texttt{x}+P$</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$Y$</span> ends with
+        any other vowel (<tt class="ttfamily">a</tt>,<tt class="ttfamily">i</tt>,<tt class="ttfamily">o</tt>, or
+        <tt class="ttfamily">u</tt>), we remove that final vowel
+        from <span class="tex2jax_process">$Y$</span>, and then
+        extend <span class="tex2jax_process">$Y$</span> with
+        <span class="tex2jax_process">$\texttt{ex}+P$</span></p>
+</li>
+<li>
+<p>If <span class="tex2jax_process">$Y$</span> already ends
+        with <tt class="ttfamily">ex</tt>, then the extended name
+        is simply <span class="tex2jax_process">$Y+P$</span>.</p>
+</li>
+</ul>
+<p>As usual, the Oriental Institute has asked us to help them
+    apply the power of computation to generating these extended
+    names.</p>
+<h2>Input</h2>
+<p>The input contains two strings separated by a single space:
+    <span class="tex2jax_process">$Y$</span> and <span class="tex2jax_process">$P$</span>, as defined above. Each string
+    contains only lowercase English letters, and is at least
+    <span class="tex2jax_process">$2$</span> characters long and at
+    most <span class="tex2jax_process">$10$</span> characters
+    long.</p>
+<h2>Output</h2>
+<p>The output is a single string containing the extended name,
+    as defined above.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>menolaxios mox
+</pre>
+</td>
+<td>
+<pre>menolaxiosexmox
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>alemaxe maxos
+</pre>
+</td>
+<td>
+<pre>alemaxexmaxos
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>pamoli toxes
+</pre>
+</td>
+<td>
+<pre>pamolextoxes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>andrex naxos
+</pre>
+</td>
+<td>
+<pre>andrexnaxos
+</pre>
+</td>
+</tr>
+</table>
+</div>

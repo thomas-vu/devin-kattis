@@ -1,0 +1,136 @@
+<div class="problembody">
+<p>Arthur and his sister Carol have been playing a game called
+    Nim for some time now. Nim is played as follows:</p>
+<ul class="itemize">
+<li>
+<p>The starting position has a number of heaps, all
+        containing some, not necessarily equal, number of
+        beads.</p>
+</li>
+<li>
+<p>The players take turns chosing a heap and removing a
+        positive number of beads from it.</p>
+</li>
+<li>
+<p>The first player not able to make a move, loses.</p>
+</li>
+</ul>
+<p>Arthur and Carol really enjoyed playing this simple game
+    until they recently learned an easy way to always be able to
+    find the best move:</p>
+<ul class="itemize">
+<li>
+<p>Xor the number of beads in the heaps in the current
+        position (i.e., if we have <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$4$</span> and <span class="tex2jax_process">$7$</span> the <em>xor-sum</em> will be
+        <span class="tex2jax_process">$1$</span> since <span class="tex2jax_process">$2\ \mathbf{xor}\ 4\ \mathbf{xor}\ 7 =
+        1$</span>).</p>
+</li>
+<li>
+<p>If the xor-sum is <span class="tex2jax_process">$0$</span>, too bad, you will lose.</p>
+</li>
+<li>
+<p>Otherwise, move such that the xor-sum becomes
+        <span class="tex2jax_process">$0$</span>. This is always
+        possible.</p>
+</li>
+</ul>
+<p>It is quite easy to convince oneself that this works.
+    Consider these facts:</p>
+<ul class="itemize">
+<li>
+<p>The player that takes the last bead wins.</p>
+</li>
+<li>
+<p>After the winning player’s last move the xor-sum will be
+        <span class="tex2jax_process">$0$</span>.</p>
+</li>
+<li>
+<p>The xor-sum will change after every move.</p>
+</li>
+</ul>
+<p>Which means that if you make sure that the xor-sum always is
+    <span class="tex2jax_process">$0$</span> when you have made
+    your move, your opponent will never be able to win, and, thus,
+    you will win.</p>
+<p>Understandably it is no fun to play a game when both players
+    know how to play perfectly (ignorance is bliss). Fortunately,
+    Arthur and Carol soon came up with a similar game, <span class="tex2jax_process">$S$</span>-Nim, that seemed to solve this
+    problem. Each player is now only allowed to remove a number of
+    beads in some predefined set <span class="tex2jax_process">$S$</span>, e.g. if we have <span class="tex2jax_process">$S = \{ 2, 5\} $</span> each player is only
+    allowed to remove <span class="tex2jax_process">$2$</span> or
+    <span class="tex2jax_process">$5$</span> beads. Now it is not
+    always possible to make the xor-sum <span class="tex2jax_process">$0$</span> and, thus, the strategy above is
+    useless. Or is it?</p>
+<p>Your job is to write a program that determines if a position
+    of <span class="tex2jax_process">$S$</span>-Nim is a losing or
+    a winning position. A position is a winning position if there
+    is at least one move to a losing position. A position is a
+    losing position if there are no moves to a losing position.
+    This means, as expected, that a position with no legal moves is
+    a losing position.</p>
+<h2>Input</h2>
+<p>The first line of input contains a number <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \le k \le 100$</span>) describing the size of <span class="tex2jax_process">$S$</span>, followed by <span class="tex2jax_process">$k$</span> numbers <span class="tex2jax_process">$s_ i$</span> (<span class="tex2jax_process">$1 \le s_ i \le 10\, 000$</span>) describing
+    <span class="tex2jax_process">$S$</span>. The second line
+    contains a number <span class="tex2jax_process">$m$</span>
+    (<span class="tex2jax_process">$1 \le m \le 100$</span>)
+    describing the number of positions to evaluate. The next
+    <span class="tex2jax_process">$m$</span> lines each contain a
+    number <span class="tex2jax_process">$l$</span> (<span class="tex2jax_process">$1 \le l \le 100$</span>) describing the
+    number of heaps and <span class="tex2jax_process">$l$</span>
+    numbers <span class="tex2jax_process">$h_ i$</span>
+    (<span class="tex2jax_process">$0 \le h_ i \le 10\,
+    000$</span>) describing the number of beads in the heaps.</p>
+<h2>Output</h2>
+<p>For each position:</p>
+<ul class="itemize">
+<li>
+<p>If the described position is a winning position print a
+        ‘<tt class="ttfamily">W</tt>’.</p>
+</li>
+<li>
+<p>If the described position is a losing position print an
+        ‘<tt class="ttfamily">L</tt>’.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 2 5
+3
+2 5 12
+3 2 4 7
+4 2 3 7 12
+</pre>
+</td>
+<td>
+<pre>LWW
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 1 2 3 4 5
+3
+2 5 12
+3 2 4 7
+4 2 3 7 12
+</pre>
+</td>
+<td>
+<pre>WWL
+</pre>
+</td>
+</tr>
+</table>
+</div>

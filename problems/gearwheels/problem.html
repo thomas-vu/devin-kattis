@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>Gear wheels can be connected to form chains, where the teeth
+    of adjacent gears interlock. This helps to transmit rotary
+    motion over a long distance.</p>
+<p>Now, you have <span class="tex2jax_process">$N$</span> gear
+    wheels arranged on a straight line, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N$</span> from left to right. Gear wheel
+    <span class="tex2jax_process">$i$</span> has <span class="tex2jax_process">$T_ i$</span> teeth.</p>
+<p>If we connect gear wheel <span class="tex2jax_process">$i$</span> to gear wheel <span class="tex2jax_process">$j$</span>, we can calculate the gear ratio
+    as <span class="tex2jax_process">$T_ i / T_ j$</span> (or
+    <span class="tex2jax_process">$T_ j / T_ i$</span>). For the
+    transmission to work perfectly, the gear ratio must be an
+    integer.</p>
+<p>You would like to form a longest chain of gear wheels such
+    that the transmission between every pair of adjacent gear
+    wheels works perfectly. Also, as moving the gears around is a
+    lot of work, you are not allowed to reorder the gears on a
+    chain. That is, if gear wheels <span class="tex2jax_process">$w_1, w_2, \ldots , w_ k$</span> are
+    connected in this order from left to right, then <span class="tex2jax_process">$w_1 &lt; w_2 &lt; \ldots &lt; w_
+    k$</span>.</p>
+<p>That is an easy task for you, so you would like to challenge
+    yourself further. On top of finding one longest chain of gear
+    wheels, you wish to find the <i class="itshape">maximum
+    number</i> of longest chains of gear wheels that can be formed,
+    while each gear wheel can only be used in one chain.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 1000)$</span>, the number of gear wheels.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers <span class="tex2jax_process">$T_1, T_2, \ldots , T_ N$</span> <span class="tex2jax_process">$(1 \leq T_ i \leq 10^{18})$</span>, the
+    number of teeth on each gear wheel.</p>
+<h2>Output</h2>
+<p>Output two integers <span class="tex2jax_process">$L$</span>
+    and <span class="tex2jax_process">$C$</span> on the first line:
+    the length of the longest chain of gear wheels that can be
+    formed, and the maximum number of longest chains of gear wheels
+    that can be formed.</p>
+<p>Then, output <span class="tex2jax_process">$C$</span> lines,
+    each containing <span class="tex2jax_process">$L$</span>
+    integers. The <span class="tex2jax_process">$i$</span>-th line
+    should contain the indices of the gear wheels in the
+    <span class="tex2jax_process">$i$</span>-th longest chain of
+    gear wheels, in increasing order.</p>
+<p>If there are multiple valid answers, you may output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7
+9 7 18 11 14 2 3
+</pre>
+</td>
+<td>
+<pre>3 2
+1 3 7
+2 5 6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+2 3 4 6 12
+</pre>
+</td>
+<td>
+<pre>3 1
+1 3 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

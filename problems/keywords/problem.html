@@ -1,0 +1,113 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/keywords/file/statement/en/img-0001.jpg" class="illustration" src="/problems/keywords/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-vector/cloud-computing-word-concept-vector-illustration-1243584733">
+        Boris15 (Shutterstock)</a>, Used under license
+      </div>
+</div>
+<p>Catherine is a brilliant software engineer, but she has been
+    having difficulty landing a job, despite having submitted a
+    superb resume to dozens of tech companies. After doing some
+    research, she discovered that most tech companies in her area
+    use an algorithm to prescreen resumes by scanning for certain
+    keywords before the resume is even seen by a human. Any resume
+    that does not contain sufficiently many technology-related
+    keywords is automatically rejected!</p>
+<p>Catherine has devised a plan to outwit the prescreening
+    algorithm: she intends to cram as many keywords as possible
+    into her resume to maximize her chances of passing the
+    prescreening process. As a first step, she has downloaded a
+    list of the most common tech buzzwords from an online data bank
+    that includes entries such as “machine learning”, “Big data”,
+    “AI”, “C++”, “Neural-network”, “unix”, “cryptography”, etc.
+    (Note that <em>keyword</em> sometimes really means
+    <em>keyphrase</em>.)</p>
+<p>In the early stages of drafting her new resume, Catherine
+    notices that many keywords from the data bank are very similar
+    to each other (e.g., “Machine-learning” vs. “machine learning”,
+    or “MySQL” vs. “MySql”). Since she suspects that including
+    nearly identical keywords won’t help her fool the prescreening
+    algorithm, she wants to filter out such similar keywords in
+    order to save room on her resume. Catherine considers two
+    keywords <span class="tex2jax_process">$k_1$</span> and
+    <span class="tex2jax_process">$k_2$</span> to be similar if,
+    after replacing hyphens with spaces and ignoring
+    capitalization, <span class="tex2jax_process">$k_1$</span> is
+    the same as <span class="tex2jax_process">$k_2$</span>.</p>
+<p>Can you help Catherine craft the perfect resume to land her
+    a job?</p>
+<h2>Input</h2>
+<p>The first line contains an integer, <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1
+    \leq n \leq 40\, 000)$</span>, the number of keywords in the
+    data bank. This is followed by <span class="tex2jax_process">$n$</span> lines, each of which contains a
+    keyword string <span class="tex2jax_process">$k$</span> that is
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$25$</span> characters in length
+    (inclusive). All characters in a keyword are guaranteed to fall
+    in the <span class="tex2jax_process">$[32, 126]$</span> ASCII
+    range, and no keyword begins or ends with a space or a
+    hyphen.</p>
+<h2>Output</h2>
+<p>Output a single line containing the number of (pairwise)
+    non-similar keywords in the data bank.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+c++
+C++
+c
+c#
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+cryptography
+blockchain
+Artificial intelligence
+Machine-Learning
+Linux
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>2
+MySQL
+MySql
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

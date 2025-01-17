@@ -1,0 +1,70 @@
+<div class="problembody">
+<p>Oh, no. Atli has just painted himself into a corner. He has
+    been playing the video game <em>Planetaris</em> and decided to
+    start a war against his friend Finni. The downside is Finni had
+    a considerably larger spaceship fleet than Atli expected. Atli
+    now needs your help to turn the tide, by determining how many
+    fights Atli can win.</p>
+<p>Each space fight takes place in a solar system. This early
+    in <em>Planetaris</em> all the spaceships are identical. Since
+    Atli spent most of his Intergalactic Super Kurrency (ISK) on an
+    eavesdropping station he knows to which solar systems Finni’s
+    fleets are going and how many ships are in each fleet. If Atli
+    sends fewer ships than Finni to a particular solar system he
+    will lose and Finni gains control of the solar system. If they
+    send the same number of ships there will be no ships left over
+    to claim the system, so there is no winner. However if Atli
+    sends more ships than Finni to a system he wins the battle and
+    gains control of that solar system.</p>
+<h2>Input</h2>
+<p>The first line of the input contains two integers
+    <span class="tex2jax_process">$1 \leq n \leq 10^5$</span> and
+    <span class="tex2jax_process">$0 \leq a \leq 10^9$</span>,
+    where <span class="tex2jax_process">$n$</span> is the number of
+    solar systems and <span class="tex2jax_process">$a$</span> is
+    the total number of ships Atli has at his disposal. The next
+    line contains <span class="tex2jax_process">$n$</span> integers
+    <span class="tex2jax_process">$0 \leq e_ i \leq 10^9$</span>,
+    where <span class="tex2jax_process">$e_ i$</span> indicates
+    Finni is sending <span class="tex2jax_process">$e_ i$</span>
+    ships to the <span class="tex2jax_process">$i$</span>th solar
+    system.</p>
+<h2>Output</h2>
+<p>The only line of the output should contain an integer
+    indicating the largest number of battles Atli can win if he
+    plays optimally.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+1 2 3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5 8
+7 0 3 5 2
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

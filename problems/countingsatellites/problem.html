@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>Nick likes satellites. He likes them so much that he looks
+    for them everywhere. One day he found a string of letters and
+    counted a lot of instances of the word “<tt class="tt">SATELLITE</tt>” among all subsequences of the string.
+    However the next day he forgot this string. Can you help him
+    construct such a string?</p>
+<p>String <span class="tex2jax_process">$s$</span> is a
+    subsequence of string <span class="tex2jax_process">$t$</span>
+    if and only if it is possible to delete some (possibly zero)
+    characters from <span class="tex2jax_process">$t$</span> to get
+    <span class="tex2jax_process">$s$</span>. Two subsequences are
+    considered different if some character at a given position in
+    <span class="tex2jax_process">$t$</span> is deleted in one
+    subsequence but not the other.</p>
+<h2>Input</h2>
+<p>The single line of input contains a single integer
+    <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1 \leq k \leq 10^{18})$</span>, which is the
+    number of instances of the word “<tt class="tt">SATELLITE</tt>”
+    in the string Nick forgot.</p>
+<h2>Output</h2>
+<p>Output a string of at most <span class="tex2jax_process">$5\, 000$</span> uppercase letters. The
+    string must have exactly <span class="tex2jax_process">$k$</span> instances of the word “<tt class="tt">SATELLITE</tt>” among all its subsequences. It can be
+    proven that under the given constraints a solution always
+    exists. Note that the length of the string does <i class="it">not</i> have to be minimized.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>SATELLITE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+</pre>
+</td>
+<td>
+<pre>NICKLIKESSATELLITES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+</pre>
+</td>
+<td>
+<pre>SSSATELLITE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>19
+</pre>
+</td>
+<td>
+<pre>SATELLITESATELLITE
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,110 @@
+<div class="problembody">
+<p>Suppose we have a certain number of red square tiles, all of
+    size <span class="tex2jax_process">$1 \times 1,$</span> that we
+    would like to place, without overlapping, to form the largest
+    two-dimensional square possible, such that the only gap is a
+    single <span class="tex2jax_process">$1 \times 1$</span> square
+    left empty in the middle. Depending on the initial number of
+    tiles, it may not always be possible to use all the tiles to
+    build such a configuration, i.e., some tiles may be left
+    over.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{red-squares.jpg}" src="/problems/hiptobesquare/file/statement/en/img-0001.jpg" style="width:70.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Attempts to solve problem when starting
+          with <span class="tex2jax_process">$4,$</span>
+<span class="tex2jax_process">$8,$</span> <span class="tex2jax_process">$12,$</span> and <span class="tex2jax_process">$24$</span> red tiles
+        </div>
+</center>
+</div>
+<p>Consider the following examples illustrated in Figure 1
+    (from left to right):</p>
+<ul class="itemize">
+<li>
+<p>Starting with only <span class="tex2jax_process">$4$</span> red tiles, we can form a
+        <span class="tex2jax_process">$2 \times 2$</span> square,
+        but without an empty <span class="tex2jax_process">$1
+        \times 1$</span> square in the middle. Thus there are not
+        enough tiles to form any square with an empty <span class="tex2jax_process">$1 \times 1$</span> square in the
+        middle.</p>
+</li>
+<li>
+<p>Starting with <span class="tex2jax_process">$8$</span>
+        red tiles, the largest square that can be formed with an
+        empty <span class="tex2jax_process">$1 \times 1$</span>
+        square in the middle is of size <span class="tex2jax_process">$3 \times 3,$</span> using all
+        <span class="tex2jax_process">$8~ \textrm{red}$</span>
+        tiles. In this case, there is <b class="bfseries">one layer
+        of red tiles</b> surrounding the empty central square.</p>
+</li>
+<li>
+<p>Starting with <span class="tex2jax_process">$12$</span>
+        red tiles, we could form a <span class="tex2jax_process">$4
+        \times 4$</span> square using all the tiles, but there
+        would be four empty <span class="tex2jax_process">$1 \times
+        1$</span> squares in the middle, i.e., an empty
+        <span class="tex2jax_process">$2 \times 2$</span> square.
+        Thus, the largest square that can be formed with an empty
+        <span class="tex2jax_process">$1 \times 1$</span> square in
+        the middle is still of size <span class="tex2jax_process">$3 \times 3,$</span> using only
+        <span class="tex2jax_process">$8$</span> of the
+        <span class="tex2jax_process">$12$</span> red tiles, and
+        still with <b class="bfseries">one layer of red tiles</b>
+        surrounding the empty central square (and <span class="tex2jax_process">$4$</span> tiles left over).</p>
+</li>
+<li>
+<p>Starting with <span class="tex2jax_process">$24$</span>
+        red tiles, the largest square that can be formed with an
+        empty <span class="tex2jax_process">$1 \times 1$</span>
+        square in the middle is of size <span class="tex2jax_process">$5 \times 5,$</span> using all
+        <span class="tex2jax_process">$24$</span> red tiles. In
+        this case, there are <b class="bfseries">two layers of red
+        tiles</b> surrounding the empty central square.</p>
+</li>
+</ul>
+<p>Given a number, <span class="tex2jax_process">$N,$</span> of
+    red tiles, determine the maximum number of layers that can be
+    used to form a square with one empty <span class="tex2jax_process">$1 \times 1$</span> square in the middle.</p>
+<p><em>Note:</em> This problem was inspired by a post to the
+    LinkedIn group <em>The Math Connection</em> by Doddy
+    Kastanya.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer, <span class="tex2jax_process">$T,$</span> the number of test cases
+    <span class="tex2jax_process">$(1 \leq T \leq 1\, 000).$</span>
+    This is followed by <span class="tex2jax_process">$T$</span>
+    lines, each of which contains an integer, <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 10^9),$</span> representing a number of red
+    tiles.</p>
+<h2>Output</h2>
+<p>For each test case, <span class="tex2jax_process">$N,$</span> output a line containing a single
+    integer, the maximum number of layers of red tiles that can be
+    used to build a square with a single empty <span class="tex2jax_process">$1 \times 1$</span> square in the middle when
+    starting with <span class="tex2jax_process">$N$</span>
+    tiles.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+10
+24
+50
+200
+1000000
+</pre>
+</td>
+<td>
+<pre>1
+2
+3
+6
+499
+</pre>
+</td>
+</tr>
+</table>
+</div>

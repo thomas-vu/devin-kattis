@@ -1,0 +1,58 @@
+<div class="problembody">
+<p>Quicksort is a recursive sorting algorithm developed in 1959
+    by Tony Hoare. One of the major steps in the algorithm is the
+    <em>partition </em> step: given an element <span class="tex2jax_process">$p$</span> in the array (the <em>pivot </em>
+    element) rearrange the elements in the array as shown below
+    where all the values in <span class="tex2jax_process">$X_
+    L$</span> are <span class="tex2jax_process">$\leq p$</span> and
+    all elements in <span class="tex2jax_process">$X_ R$</span> are
+    <span class="tex2jax_process">$&gt; p$</span>.</p>
+<center>
+<img alt="\includegraphics[width=0.5\linewidth ]{pivotal_illustration}" src="/problems/apivotalquestion/file/statement/en/img-0001.png" style="width:0.5"/>
+</center>
+<p>Figure 1 below shows an array before and after it’s been
+    partitioned with the pivot element <span class="tex2jax_process">$13$</span>. Note that the elements in
+    <span class="tex2jax_process">$X_ L$</span> and <span class="tex2jax_process">$X_ R$</span> are typically not in sorted
+    order and either one of them could be empty.</p>
+<div class="figure" id="qsort:fig1">
+<center>
+<img alt="\includegraphics[width=0.9\linewidth ]{pivotal_figure}" src="/problems/apivotalquestion/file/statement/en/img-0002.png" style="width:0.9"/>
+</center>
+<div class="caption">
+<b>Figure 1</b>: An array before and after a partition
+      </div>
+</div>
+<p>How a partition is executed and how a pivot element is
+    selected are fascinating questions but are not of interest to
+    us. What we would like you to do is the following: given an
+    array, determine all the values that could be the pivot value
+    assuming the array has been partitioned, or determine that the
+    array has not been partitioned.</p>
+<h2>Input</h2>
+<p>Input starts with a positive integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(1\leq n\leq 10^6)$</span> denoting the size
+    of the array. Following this are <span class="tex2jax_process">$n$</span> positive integers indicating the
+    values in the array. All values are unique and <span class="tex2jax_process">$\leq 10^6$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$m =$</span> the number
+    of values in the array that could have served as pivot values
+    to partition the array, followed by the pivot values in the
+    order that they appear in the input. If <span class="tex2jax_process">$m &gt; 100$</span> just output the first 100
+    of these pivot values. Note that a value of <span class="tex2jax_process">$m=0$</span> indicates that the array is not
+    partitioned.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 1 11 8 13 53 20 63 99 79 94
+</pre>
+</td>
+<td>
+<pre>3 1 13 63
+</pre>
+</td>
+</tr>
+</table>
+</div>

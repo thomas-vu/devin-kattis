@@ -1,0 +1,97 @@
+<div class="problembody">
+<p>Consider a grid consisting of <span class="tex2jax_process">$N$</span> rows and <span class="tex2jax_process">$M$</span> columns, where each cell is either
+    air, stone, or water. Each second, the water spreads in the
+    following fashion:</p>
+<ol class="enumerate">
+<li>
+<p>If a water cell is directly above an air cell then the
+        air cell turns into water in the next second.</p>
+</li>
+<li>
+<p>If a water cell is directly above a stone cell then any
+        air cells directly left or right of the water cell turn
+        into water in the next second.</p>
+</li>
+</ol>
+<p>After some number of seconds, the water will have stopped
+    spreading. Show how the grid looks when that happens. You can
+    assume that all cells outside of the grid behave as air cells;
+    for instance, if a water cell is at the bottommost row then its
+    water will not spread to the sides.</p>
+<h2>Input</h2>
+<p>The first line consists of two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$2
+    \leq N,M \leq 50$</span>), the number of rows and columns in
+    the grid.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains a string
+    <span class="tex2jax_process">$S$</span> of length <span class="tex2jax_process">$M$</span>. The string <span class="tex2jax_process">$S$</span> represents one of the rows in the
+    grid. It consists of the symbols “<tt class="ttfamily">.</tt>”
+    (air), “<tt class="ttfamily">#</tt>” (stone), and “<tt class="ttfamily">V</tt>” (water).</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$N$</span> lines, each
+    consisting of a string of length <span class="tex2jax_process">$M$</span>, describing the grid as it looks
+    when the water has stopped spreading.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 7
+...V...
+.......
+.......
+...#...
+..###..
+</pre>
+</td>
+<td>
+<pre>...V...
+...V...
+..VVV..
+.VV#VV.
+.V###V.
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>12 14
+....V...V.....
+..............
+..............
+..............
+...#########..
+.......#......
+.......#.#....
+.......#####..
+........###...
+........#.#...
+........#.#...
+##############
+</pre>
+</td>
+<td>
+<pre>....V...V.....
+....V...V.....
+....V...V.....
+..VVVVVVVVVVV.
+..V#########V.
+..V....#....V.
+..V....#.#..V.
+..V....#####V.
+..V.....###.V.
+..V.....#.#.V.
+VVVVVVVV#.#VVV
+##############
+</pre>
+</td>
+</tr>
+</table>
+</div>

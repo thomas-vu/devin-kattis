@@ -1,0 +1,165 @@
+<div class="problembody">
+<p>A <em>graph</em> is a mathematical structure which consists
+    of a set of <em>vertices</em>, and a set of <em>edges</em>,
+    each connecting two vertices. An example of a graph with
+    <span class="tex2jax_process">$4$</span> vertices and
+    <span class="tex2jax_process">$3$</span> edges is shown in the
+    sample explanation below.</p>
+<p>A <em>path</em> in the graph is defined as an ordered list
+    of <span class="tex2jax_process">$2$</span> or more vertices,
+    such that there are edges between consecutive vertices in the
+    list. In this task we are only interested in <em>simple
+    paths</em> in which no vertex occurs more than once. Note that
+    the list is ordered; for example, “<tt class="ttfamily">5-6-7</tt>”, “<tt class="ttfamily">5-7-6</tt>” and
+    “<tt class="ttfamily">7-6-5</tt>” are all treated as different
+    paths.</p>
+<p>In this task, each vertex in the graph has one of
+    <span class="tex2jax_process">$K$</span> colors. The task is to
+    find the number of possible (simple) paths in which no two
+    vertices have the same color.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers:
+    <span class="tex2jax_process">$N$</span> (the number of
+    vertices), <span class="tex2jax_process">$M$</span> (the number
+    of edges), and <span class="tex2jax_process">$K$</span> (the
+    number of different colors).</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> integers between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$K$</span> – the colors of each vertex
+    (starting with vertex <span class="tex2jax_process">$1$</span>
+    and ending with vertex <span class="tex2jax_process">$N$</span>).</p>
+<p>Each of the following <span class="tex2jax_process">$M$</span> lines describes an edge and
+    contains two integers <span class="tex2jax_process">$a,
+    b$</span> (<span class="tex2jax_process">$1 \le a, b \le N, a
+    \neq b$</span>) – the two vertices connected by the edge. There
+    will be at most one edge between any two vertices.</p>
+<h2>Output</h2>
+<p>Output one integer – the number of paths whose vertices all
+    have distinct colors. This number will always be smaller than
+    <span class="tex2jax_process">$10^{18}$</span>.</p>
+<h2>Constraints</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. Each test group contains a set of
+    test cases. To get the points for a test group you need to
+    solve all test cases in the test group. Your final score will
+    be the maximum score of a single submission.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Limits</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>23</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N, M \le 100, 1
+          \le K \le 4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N, M \le 300\,
+          000, 1 \le K \le 3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>27</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le N, M \le 300\,
+          000, 1 \le K \le 4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \le N, M \le 100\,
+          000, 1 \le K \le 5$</span></p>
+</td>
+</tr>
+</table>
+<h2>Explanation of Sample 1</h2>
+<p><img alt="\includegraphics[width=5cm]{pathsfig.pdf}" src="/problems/paths/file/statement/en/img-0001.png" style="width:5cm"/></p>
+<p>The graph in the first example is illustrated in the figure,
+    where each vertex has been filled with white (color 1), gray
+    (color 2) or black (color 3). There are 10 paths whose vertices
+    all have distinct colors: “<tt class="ttfamily">1-2</tt>”,
+    “<tt class="ttfamily">2-1</tt>”, “<tt class="ttfamily">2-3</tt>”, “<tt class="ttfamily">3-2</tt>”,
+    “<tt class="ttfamily">2-4</tt>”, “<tt class="ttfamily">4-2</tt>”, “<tt class="ttfamily">1-2-4</tt>”,
+    “<tt class="ttfamily">4-2-1</tt>”, “<tt class="ttfamily">3-2-4</tt>” and “<tt class="ttfamily">4-2-3</tt>”.</p>
+<p>Note that “<tt class="ttfamily">1</tt>” is not allowed as a
+    path, because it is a single vertex, nor is “<tt class="ttfamily">1-2-3</tt>”, because it contains two nodes of color
+    <span class="tex2jax_process">$1$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3 3
+1 2 1 3
+1 2
+2 3
+4 2
+</pre>
+</td>
+<td>
+<pre>10
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>9 11 4
+1 2 3 4 1 2 1 2 2
+1 2
+1 3
+2 3
+2 4
+3 6
+6 2
+6 5
+4 3
+4 5
+7 8
+9 8
+</pre>
+</td>
+<td>
+<pre>70
+</pre>
+</td>
+</tr>
+</table>
+</div>

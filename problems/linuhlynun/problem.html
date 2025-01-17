@@ -1,0 +1,164 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/linuhlynun/file/statement/en/img-0001.jpg" class="illustration" src="/problems/linuhlynun/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://www.flickr.com/photos/shiyang_huang/11319287966/">flickr.com</a>
+</div>
+</div>
+<p>The residents of Lineland recently received the news that a
+    university was going to be built in the country. This is
+    exciting news, especially since linear algebra, linear
+    optimization and linear functional analysis will all be taught
+    among other exciting subjects.</p>
+<p>The greenhouse effect has affected Lineland like other
+    countries and this has caused linewarming. Authorities worry
+    that this could worsen when the students of the new university
+    drive to school, since that could increase the amount of carbon
+    dioxide in the air. They have thus gotten you to choose the
+    location of the school that will minimize pollution.</p>
+<p>As the name suggests the citizens of Lineland live on a
+    line. House numbers in the country are positive integers, but
+    the distance between house number <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> is <span class="tex2jax_process">$|a-b|$</span> kilometers.</p>
+<p>Given a list of the university’s students, where they live,
+    and how much their car pollutes per kilometer, find at which
+    house number it would be best to build the university to
+    minimize the total carbon dioxide output each morning as
+    students drive to school.</p>
+<p>Note that several students can live at the same house. It is
+    also acceptable to build the university where students already
+    live, they will simply get the privilege of living at the
+    university.</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 2\cdot 10^5$</span>), the
+    number of students at the new university.</p>
+<p>Then there are <span class="tex2jax_process">$n$</span>
+    lines, one for each student, where line number <span class="tex2jax_process">$i$</span> contains two integers <span class="tex2jax_process">$x_i$</span> (<span class="tex2jax_process">$1 \leq x_i \leq 10^9$</span>), the number of
+    the house the <span class="tex2jax_process">$i$</span>-th
+    student lives in, and <span class="tex2jax_process">$c_i$</span> (<span class="tex2jax_process">$1 \leq c_i \leq 10^3$</span>), the amount of
+    carbon dioxide the <span class="tex2jax_process">$i$</span>-th
+    students’ car pollutes per kilometer.</p>
+<h2>Output</h2>
+<p>Print at what house number it would be best to build the
+    university to minimize pollution from students driving to
+    school every morning. If several house numbers are possible,
+    print the smallest one.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 10^3$</span>,
+          <span class="tex2jax_process">$x_i \leq 10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$x_i \leq
+          10^3$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$c_i = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1
+2 1
+5 1
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 1
+2 1
+5 3
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4
+9 2
+4 1
+18 4
+4 2
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+</div>

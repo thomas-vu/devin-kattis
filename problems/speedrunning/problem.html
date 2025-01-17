@@ -1,0 +1,141 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/speedrunning/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/speedrunning/file/statement/en/img-0001.jpeg"/>
+<div class="description"></div>
+</div>
+<p>Mario has recently discovered that the physics engine has
+    gotten an update: he can now run faster when he’s in Small
+    Mario form. This has caused quite the headache for
+    speedrunners.</p>
+<p>For simplicity, we consider the level to be a <span class="tex2jax_process">$1\times N$</span> grid of tiles. Mario
+    starts at the first tile, and completes the level when he
+    reaches the <span class="tex2jax_process">$N$</span>-th
+    tile.</p>
+<p>On each tile, there can be either a question block (denoted
+    ‘?’), a saw (denoted ‘S’), or neither (denoted by ‘.’). It is
+    guaranteed that the first tile and <span class="tex2jax_process">$N$</span>-th tile are empty.</p>
+<p>Mario can take one of three forms: Small Mario, Super Mario,
+    or Fire Mario. To move one tile forward, the movement takes
+    Small Mario <span class="tex2jax_process">$1$</span> game tick,
+    but it takes Super Mario and Fire Mario <span class="tex2jax_process">$2$</span> game ticks. Mario is not
+    considered to have reached a tile until the end of his movement
+    and Mario is unable to move backwards (it wouldn’t be a
+    speedrun if he was moving backwards).</p>
+<p>When Mario reaches a tile with a saw on it, he activates the
+    saw and takes damage (the saws are unavoidable). This causes
+    the following behavior:</p>
+<ol class="enumerate">
+<li>
+<p>If Mario is in Small Mario form, he dies.</p>
+</li>
+<li>
+<p>If Mario is in Super Mario form, he becomes Small
+        Mario.</p>
+</li>
+<li>
+<p>If Mario is in Fire Mario form, he becomes Super
+        Mario.</p>
+</li>
+</ol>
+<p>When Mario reaches a question block, he can choose to
+    activate it, causing the following behavior if he activates
+    it:</p>
+<ol class="enumerate">
+<li>
+<p>If Mario is in Small Mario form, he becomes Super
+        Mario.</p>
+</li>
+<li>
+<p>If Mario is in Super Mario form, he becomes Fire
+        Mario.</p>
+</li>
+<li>
+<p>If Mario is in Fire Mario form, nothing happens.</p>
+</li>
+</ol>
+<p>Interactions with saws and question blocks both take
+    <span class="tex2jax_process">$0$</span> game ticks. That is,
+    when Mario reaches and activates them, Mario will instantly
+    change his form and update his speed. It is impossible for
+    Mario to activate the same saw twice, or the same question
+    block twice.</p>
+<p>Speedrunners now face the difficult choice of min-maxing
+    whether or not they should activate each question block. To
+    make matters even more complicated, players are allowed to
+    start in any of the <span class="tex2jax_process">$3$</span>
+    Mario forms. Being in Small Mario form allows them to run
+    faster, but running faster won’t matter if they die before
+    reaching the end.</p>
+<p>Given optimal play, is it possible to complete the level,
+    and if so, what is the minimum amount of game ticks required to
+    successfully complete the level?</p>
+<h2>Input</h2>
+<p>The first line of input is an integer <span class="tex2jax_process">$2 \leq N \leq 200\, 000$</span>.</p>
+<p>The second line of input is a string of length <span class="tex2jax_process">$N$</span>, consisting of only the characters
+    ‘.’, ‘?’, and ‘S’. The first and last characters are guaranteed
+    to be ‘.’.</p>
+<h2>Output</h2>
+<p>Output a single integer denoting the minimum amount of game
+    ticks required to successfully complete the level, or
+    <span class="tex2jax_process">$-1$</span> if it is impossible
+    to complete the level.</p>
+<p>Explanation for Sample Input 1: Mario should start the level
+    on the 1st tile as Super Mario. In this form, it takes 2 ticks
+    for a movement. Thus, Mario reaches the 2nd tile after 2 ticks.
+    The saw instantly activates, and Mario becomes Small Mario. It
+    now takes him only 1 tick to complete a movement. He reaches
+    the 3rd tile in one additional tick, and reaches the 4th and
+    final tile in one more tick. Thus, it takes him a total of
+    2+1+1 = 4 ticks.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+.S..
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+.?.?S.
+</pre>
+</td>
+<td>
+<pre>6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7
+.SS?SS.
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

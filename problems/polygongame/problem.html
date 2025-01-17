@@ -1,0 +1,84 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/polygongame/file/statement/en/img-0001.jpg" class="illustration" src="/problems/polygongame/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Jack and Jill are playing a game they call Polygon Game. In
+    this game they start with a convex polygon and then take turns
+    dividing the polygon into smaller parts. They divide the
+    polygon by drawing a straight line from one point on the border
+    of the original polygon to another point on the border of the
+    original polygon. The goal of the game is then to guess which
+    of the resulting polygons has the largest area.</p>
+<h2>Input</h2>
+<p>The first line of the input consists of two integers
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>: The number of vertices in the
+    original polygon, and the number of lines drawn by Jack and
+    Jill.<br/>
+    Then follows <span class="tex2jax_process">$N$</span> lines,
+    each consisting of two integers <span class="tex2jax_process">$X_ i$</span> and <span class="tex2jax_process">$Y_ i$</span>, representing the coordinates
+    of the <span class="tex2jax_process">$i^\textrm {th}$</span> of
+    the vertex in original polygon given in a counter-clockwise
+    order.<br/>
+    Then follows <span class="tex2jax_process">$M$</span> lines,
+    each consisting four real numbers <span class="tex2jax_process">$X_1, Y_1, X_2,$</span> and <span class="tex2jax_process">$Y_2$</span>, representing the two endpoints
+    of a line drawn by Jack and Jill.</p>
+<h2>Output</h2>
+<p>The output should be a single line consisting of the area of
+    the largest polygon created. Your answer must have an absolute
+    or relative error of at most <span class="tex2jax_process">$10^{-6}$</span>.</p>
+<h2>Limits</h2>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$3 \leq N \leq
+        25$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$2 \leq M \leq
+        50$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$M$</span> will be an even
+        number.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \leq X_ i, Y_ i \leq
+        1\, 000$</span></p>
+</li>
+<li>
+<p>The polygon’s vertices are distinct.</p>
+</li>
+<li>
+<p>All lines will start and end on the border of the
+        original polygon with an absolute error of at most
+        <span class="tex2jax_process">$10^{-6}$</span>, and all
+        lines will divide the original polygon into two parts.</p>
+</li>
+<li>
+<p>Real numbers in the input will have at most <span class="tex2jax_process">$20$</span> digits after the decimal
+        point.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+0 0
+1 0
+1 1
+0 1
+0 0 1 1
+0.5 0 0.5 1
+</pre>
+</td>
+<td>
+<pre>0.375
+</pre>
+</td>
+</tr>
+</table>
+</div>

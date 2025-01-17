@@ -1,0 +1,92 @@
+<div class="problembody">
+<p>You maintain a very nice collection of magical runes. They
+    generally come in two types, type <tt class="ttfamily">A</tt>
+    and type <tt class="ttfamily">B</tt>.</p>
+<p>You have arranged your runes on a shelf to show them off.
+    Because they are magical runes, they change each day. That is,
+    at the start of each day the leftmost rune will switch its type
+    (i.e. from <tt class="ttfamily">A</tt> to <tt class="ttfamily">B</tt> or from <tt class="ttfamily">B</tt> to
+    <tt class="ttfamily">A</tt>, depending on its type just before
+    the start of the day). Every other rune will only change if the
+    type of the rune to its left changes from <tt class="ttfamily">B</tt> to <tt class="ttfamily">A</tt>.</p>
+<p>For example, if you have three runes initially arranged like
+    <tt class="ttfamily">ABBAA</tt>, then at the start of the next
+    day only the leftmost rune will change and the sequence will
+    look like <tt class="ttfamily">BBBAA</tt>. After another day,
+    the leftmost rune will change, but then the second rune from
+    the left will change because the rune beside it changed from
+    <tt class="ttfamily">B</tt> to <tt class="ttfamily">A</tt>. But
+    then the third rune will also change for the same reason. And
+    then the fourth rune will also change! That is, after the
+    changes at the start of this day the runes will look like
+    <tt class="ttfamily">AAABA</tt>.</p>
+<p>Your task is the following. Given the initial states
+    <span class="tex2jax_process">$S$</span> of an initial
+    arrangement of runes and given a number of days <span class="tex2jax_process">$D$</span>, you should determine the states
+    of the runes after <span class="tex2jax_process">$D$</span>
+    days have elapsed.</p>
+<h2>Input</h2>
+<p>Input consists of a single line that first begins with a
+    string <span class="tex2jax_process">$S$</span> followed by an
+    integer <span class="tex2jax_process">$D$</span>. The length of
+    <span class="tex2jax_process">$S$</span> will be between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$30$</span> (inclusive) and <span class="tex2jax_process">$S$</span> will consist only of characters
+    <tt class="ttfamily">A</tt> and <tt class="ttfamily">B</tt>.
+    The value <span class="tex2jax_process">$D$</span> satisfies
+    <span class="tex2jax_process">$0 \leq D &lt;
+    2^{30}$</span>.</p>
+<p>Finally, you are also guaranteed that the rightmost rune
+    does not change from <tt class="ttfamily">B</tt> to <tt class="ttfamily">A</tt> at the start of any of the <span class="tex2jax_process">$D$</span> days that you are to consider.</p>
+<h2>Output</h2>
+<p>Display a single string showing the states of the runes
+    after <span class="tex2jax_process">$D$</span> days have
+    elapsed, given they started in state <span class="tex2jax_process">$S$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ABBAA 2
+</pre>
+</td>
+<td>
+<pre>AAABA
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>ABAA 4
+</pre>
+</td>
+<td>
+<pre>ABBA
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>ABBABBABBABBABBABBABBABBABBABA 536870912
+</pre>
+</td>
+<td>
+<pre>ABBABBABBABBABBABBABBABBABBABB
+</pre>
+</td>
+</tr>
+</table>
+</div>

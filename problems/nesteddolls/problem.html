@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/nesteddolls/file/statement/en/img-0001.jpg" class="illustration" src="/problems/nesteddolls/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>Dilworth is the world’s most prominent collector of
+    Russian nested dolls: he literally has thousands of them! You
+    know, the wooden hollow dolls of different sizes of which the
+    smallest doll is contained in the second smallest, and this
+    doll is in turn contained in the next one and so forth. One day
+    he wonders if there is another way of nesting them so he will
+    end up with fewer nested dolls? After all, that would make his
+    collection even more magnificent! He unpacks each nested doll
+    and measures the width and height of each contained doll. A
+    doll with width <span class="tex2jax_process">$w_1$</span> and
+    height <span class="tex2jax_process">$h_1$</span> will fit in
+    another doll of width <span class="tex2jax_process">$w_2$</span> and height <span class="tex2jax_process">$h_2$</span> if and only if <span class="tex2jax_process">$w_1&lt;w_2$</span> and <span class="tex2jax_process">$h_1&lt;h_2$</span>. Can you help him
+    calculate the smallest number of nested dolls possible to
+    assemble from his massive list of measurements?
+
+    <h2>Input</h2>
+<p>On the first line of input is a single positive integer
+    <span class="tex2jax_process">$1\leq t \leq 5$</span>
+    specifying the number of test cases to follow. Each test case
+    begins with a positive integer <span class="tex2jax_process">$1
+    \leq m \leq 100\, 000$</span> on a line of itself telling the
+    number of dolls in the test case. Next follow <span class="tex2jax_process">$2m$</span> positive integers <span class="tex2jax_process">$w_1,h_1,w_2,h_2,\dots , w_ m, h_ m$</span>,
+    where <span class="tex2jax_process">$w_ i$</span> is the width
+    and <span class="tex2jax_process">$h_ i$</span> is the height
+    of doll number <span class="tex2jax_process">$i$</span>.
+    <span class="tex2jax_process">$1 \leq w_ i,h_ i \leq
+    10^9$</span> for all <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>For each test case there should be one line of output
+    containing the minimum number of nested dolls possible.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+3
+20 30 40 50 30 40
+4
+20 30 10 10 30 20 40 50
+3
+10 30 20 20 30 10
+4
+10 10 20 30 40 50 39 51
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+3
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

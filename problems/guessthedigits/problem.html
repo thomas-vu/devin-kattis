@@ -1,0 +1,61 @@
+<div class="problembody">
+<p>Filip came across an interesting math problem: He was
+    supposed to find a five-digit number with the following
+    property. If you cross out its first two digits, then place the
+    digit <span class="tex2jax_process">$8$</span> after the
+    remaining three digits to form a four-digit number and multiply
+    the resulting four-digit number by <span class="tex2jax_process">$4$</span>, you will get the original
+    five-digit number.</p>
+<p>After thinking for a while, he found his answer. But now he
+    is wondering, what if he had to find an <span class="tex2jax_process">$m$</span>-digit number, where you have to
+    cross out the first <span class="tex2jax_process">$n$</span>
+    digits, place a (possibly multi-digit) number <span class="tex2jax_process">$p$</span> after the remaining <span class="tex2jax_process">$(m-n)$</span>-digit number, then multiply
+    this new number by a number <span class="tex2jax_process">$q$</span> to get the original number? Please
+    help him!</p>
+<p>(You may assume that <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$p$</span>, and <span class="tex2jax_process">$q$</span> start with a non-zero digit, and
+    <span class="tex2jax_process">$n$</span> is either <span class="tex2jax_process">$0$</span> or starts with a non-zero digit.
+    The <span class="tex2jax_process">$(m-n)$</span>-digit number
+    also needs to start with a non-zero digit.)</p>
+<h2>Input</h2>
+<p>The input consists of a single line containing four numbers:
+    <span class="tex2jax_process">$m$</span>, <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$p$</span>, and <span class="tex2jax_process">$q$</span>. You may assume that each number
+    is positive and not larger than <span class="tex2jax_process">$1\, 000\, 000$</span>. You may also assume
+    that <span class="tex2jax_process">$m\geq n$</span>.</p>
+<h2>Output</h2>
+<p>The output consists of a single line. If such an
+    <span class="tex2jax_process">$m$</span>-digit number exists,
+    the line contains the smallest such number. If no such number
+    exists, the line contains the string <tt class="tt">IMPOSSIBLE</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 2 8 4
+</pre>
+</td>
+<td>
+<pre>20512
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1 11 4
+</pre>
+</td>
+<td>
+<pre>IMPOSSIBLE
+</pre>
+</td>
+</tr>
+</table>
+</div>

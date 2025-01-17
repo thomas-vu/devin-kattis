@@ -1,0 +1,216 @@
+<div class="problembody">
+<p>The popular ARMPIT processor has a simple architecture that
+    is built around a single register that is <span class="tex2jax_process">$12$</span> bits long. The most significant
+    bit is viewed as being at the left end, and the least
+    significant bit at the right end. The contents of the register
+    are often represented as an unsigned integer written in
+    base <span class="tex2jax_process">$10$</span>. The
+    processor supports the following operations:</p>
+<div class="table">
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-left:1px solid black">
+<p><b class="bfseries">Instruction</b></p>
+</td>
+<td colspan="1" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Result</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">ORWITH</tt>
+<em>&lt;v&gt;</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>modifies the register by performing a bitwise OR
+              with <em>&lt;v&gt;</em></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">LSL</tt>
+<em>&lt;amt&gt;</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>bitwise left shifts the register by
+              <em>&lt;amt&gt;</em> positions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">ROR</tt>
+<em>&lt;amt&gt;</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>bitwise right rotates the register by
+              <em>&lt;amt&gt;</em> positions</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">ADDONE</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>increments the register by <span class="tex2jax_process">$1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">NOT</tt></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>inverts (complements) each bit in the register</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><tt class="ttfamily">ADDSHIFT</tt>
+<em>&lt;amt&gt;</em></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>adds the register to a copy of itself that has
+              been bitwise</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+             </td>
+<td style="text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>left shifted by <em>&lt;amt&gt;</em> positions</p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<p>In the above table:</p>
+<ul class="itemize">
+<li>
+<p><em>&lt;v&gt;</em> is an unsigned integer stored in
+        <span class="tex2jax_process">$4$</span> bits; bitwise
+        OR combines this with the <span class="tex2jax_process">$4$</span> least significant bits of
+        the register</p>
+</li>
+<li>
+<p><em>&lt;amt&gt;</em> is an unsigned integer stored in
+        <span class="tex2jax_process">$3$</span> bits</p>
+</li>
+<li>
+<p>a left shift by <em>&lt;amt&gt;</em> positions moves
+        <em>&lt;amt&gt;</em> <span class="tex2jax_process">$0$</span>’s into the right end of the
+        register, and discards the <em>&lt;amt&gt;</em> bits that
+        “fall off” the left end</p>
+</li>
+<li>
+<p>a bitwise rotation by <span class="tex2jax_process">$1$</span> position puts the least
+        significant bit into the most significant bit position, and
+        all other bits shift right by <span class="tex2jax_process">$1$</span> position; a bitwise
+        rotation by <em>&lt;amt&gt;</em> positions is equivalent to
+        <em>&lt;amt&gt;</em> successive rotate-by-<span class="tex2jax_process">$1$</span> operations</p>
+</li>
+<li>
+<p>for operations <tt class="ttfamily">ADDONE</tt> and
+        <tt class="ttfamily">ADDSHIFT</tt>, addition is performed
+        mod <span class="tex2jax_process">$2^{12}$</span>,
+        i.e., with truncation on overflow</p>
+</li>
+</ul>
+<p>Note that with the exception of <tt class="ttfamily">ADDSHIFT</tt>, similar operations are found in most
+    CPU instruction sets. Here are examples of the supported
+    operations, assuming that the register stores <span class="tex2jax_process">$6$</span> (<span class="tex2jax_process">$0000\, 0000\, 0110$</span>) before each
+    operation, <em>&lt;v&gt;</em> is <span class="tex2jax_process">$12$</span> (<span class="tex2jax_process">$1100$</span>), and <em>&lt;amt&gt;</em> is
+    <span class="tex2jax_process">$5$</span> (<span class="tex2jax_process">$101$</span>). For convenience, leading
+    (high-end) zeros in the register are often omitted.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">ORWITH</tt> makes the register
+        <span class="tex2jax_process">$14$</span>, since the OR of
+        binary <span class="tex2jax_process">$0110$</span> and
+        <span class="tex2jax_process">$1100$</span> is <span class="tex2jax_process">$1110$</span>.</p>
+</li>
+<li>
+<p><tt class="ttfamily">LSL</tt> makes the register
+        <span class="tex2jax_process">$192$</span>, since left
+        shifting <span class="tex2jax_process">$0110$</span> by
+        <span class="tex2jax_process">$5$</span> positions gives
+        binary <span class="tex2jax_process">$1100\, 0000$</span>.
+        If, on the other hand, the register initially stored
+        <span class="tex2jax_process">$1111\, 1111\, 1111$</span>,
+        left shifting by <span class="tex2jax_process">$5$</span>
+        positions would yield <span class="tex2jax_process">$4064$</span> (binary <span class="tex2jax_process">$1111\, 1110\, 0000$</span>), because the
+        result is truncated to <span class="tex2jax_process">$12$</span> bits.</p>
+</li>
+<li>
+<p><tt class="ttfamily">ROR</tt> makes the register
+        <span class="tex2jax_process">$768$</span>, since the
+        binary value <span class="tex2jax_process">$0110$</span>
+        becomes <span class="tex2jax_process">$0011\, 0000\,
+        0000$</span> when rotated rightward by <span class="tex2jax_process">$5$</span> positions.</p>
+</li>
+<li>
+<p><tt class="ttfamily">ADDONE</tt> makes the register
+        store <span class="tex2jax_process">$7$</span>. If the
+        register had initially stored <span class="tex2jax_process">$4095$</span>, it would contain
+        <span class="tex2jax_process">$0$</span> after the
+        <tt class="ttfamily">ADDONE</tt> operation.</p>
+</li>
+<li>
+<p><tt class="ttfamily">NOT</tt> makes the register store
+        <span class="tex2jax_process">$4089$</span> (binary
+        <span class="tex2jax_process">$1111\, 1111\,
+        1001$</span>).</p>
+</li>
+<li>
+<p><tt class="ttfamily">ADDSHIFT</tt> makes the register
+        store <span class="tex2jax_process">$198$</span>, because
+        <span class="tex2jax_process">$6$</span> is added to
+        <span class="tex2jax_process">$192$</span> (see the example
+        for <tt class="ttfamily">LSL</tt> to explain the
+        <span class="tex2jax_process">$192$</span>).</p>
+</li>
+</ul>
+<p>For each of a given list of <span class="mbox" style="width:"><span class="tex2jax_process">$12$</span>-bit</span>
+    target values, determine the length of the shortest sequence of
+    ARMPIT instructions that puts that value into the register,
+    under the assumption that the register is initially filled with
+    zeros. For example, for a target value of <span class="tex2jax_process">$769$</span>, the shortest sequence contains
+    <span class="tex2jax_process">$3$</span> operations (one
+    possiblity is: <tt class="ttfamily">ORWITH</tt> <span class="tex2jax_process">$6$</span>, <tt class="ttfamily">ROR</tt> <span class="tex2jax_process">$5$</span>, <tt class="ttfamily">ADDONE</tt>).</p>
+<h2>Input</h2>
+<p>The first line of the input contains a positive integer,
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$T \leq 200$</span>), representing the number
+    of test cases. Each of the next <span class="tex2jax_process">$T$</span> lines contains a single integer
+    between <span class="tex2jax_process">$0$</span> and
+    <span class="tex2jax_process">$4095$</span>, inclusive, the
+    target value for that test case.</p>
+<h2>Output</h2>
+<p>For each of the <span class="tex2jax_process">$T$</span>
+    test cases, output a line containing a single integer, the
+    minimum number of ARMPIT instructions that must be executed to
+    put the target value in the register, assuming that the
+    register is initially filled with zeros (for each test
+    case).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+769
+0
+10
+20
+</pre>
+</td>
+<td>
+<pre>3
+0
+1
+2
+</pre>
+</td>
+</tr>
+</table>
+</div>

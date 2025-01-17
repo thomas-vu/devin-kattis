@@ -1,0 +1,80 @@
+<div class="problembody">
+<p>Liam is heavily invested in the stock market, and has
+    various theories that he uses to predict when the market will
+    rise and when it will fall. Lately, things haven’t been going
+    too well – the only thing rising is his frustration and the
+    only thing falling is his portfolio. He has decided that he
+    needs more data to test his theories with. One characteristic
+    of the market he is particularly interested in is the peaks and
+    valleys of the price of particular stocks. Liam’s definition of
+    a peak is an increasing sequence of at least <span class="tex2jax_process">$n$</span> consecutive stock prices ending on
+    a <em>peak day</em>, and then a decreasing sequence of at least
+    <span class="tex2jax_process">$n$</span> consecutive stock
+    prices starting on the peak day (where <span class="tex2jax_process">$n$</span> depends on the particular stock).
+    A valley is analogous: a decreasing sequence of at least
+    <span class="tex2jax_process">$m$</span> consecutive stock
+    prices ending on a <em>valley day</em>, and then an increasing
+    sequence of at least <span class="tex2jax_process">$m$</span>
+    consecutive stock prices starting on the valley day (where
+    again <span class="tex2jax_process">$m$</span> depends on the
+    particular stock and may differ from <span class="tex2jax_process">$n$</span>). For example, consider the two
+    weeks of stock prices shown below:</p>
+<center>
+<img alt="\includegraphics[width=0.9\textwidth ]{upsanddowns.jpg}" src="/problems/upsanddownsofinvesting/file/statement/en/img-0001.jpg" style="width:90.00%"/>
+</center>
+<p>If <span class="tex2jax_process">$n=2$</span> and
+    <span class="tex2jax_process">$m=3$</span> then there are three
+    peaks in this data (with highest points on days <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$7$</span> and <span class="tex2jax_process">$12$</span>) and one valley (with lowest
+    point on day <span class="tex2jax_process">$9$</span>). Notice
+    that there is no valley around day <span class="tex2jax_process">$6$</span>, since there is not an increasing
+    sequence of length <span class="tex2jax_process">$3$</span>
+    starting at day <span class="tex2jax_process">$6$</span>.</p>
+<p>Given a set of stock prices and values for <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>, Liam would like to know how many
+    peaks and valleys there are in the data.</p>
+<h2>Input</h2>
+<p>Input starts with a line containing three positive integers
+    <span class="tex2jax_process">$s$</span> <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$m$</span>, where <span class="tex2jax_process">$1 \leq s \leq 1\, 000$</span> is the number
+    of stock prices, and <span class="tex2jax_process">$2 \leq n,m
+    \leq 100$</span> are the parameters described above. Following
+    this line will be one or more lines containing a total of
+    <span class="tex2jax_process">$s$</span> stock prices. All
+    stock prices are non-negative and no two consecutive stock
+    prices will be the same.</p>
+<h2>Output</h2>
+<p>Display the number of peaks in the data and the number of
+    valleys in the data.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>14 2 3
+5 6 9 8 5 4 6 5 2 3 6 8 7 4
+</pre>
+</td>
+<td>
+<pre>3 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>14 3 2
+5 6 9 8 5 4 6 5 2 3 6 8 7 4
+</pre>
+</td>
+<td>
+<pre>2 2
+</pre>
+</td>
+</tr>
+</table>
+</div>

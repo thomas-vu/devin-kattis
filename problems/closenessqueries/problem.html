@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>In an undirected graph, we define the distance between two
+    vertices <span class="tex2jax_process">$u$</span> and
+    <span class="tex2jax_process">$v$</span> as the minimum length
+    of a sequence of edges starting at <span class="tex2jax_process">$u$</span> and ending at <span class="tex2jax_process">$v$</span>. Given <span class="tex2jax_process">$Q$</span> pairs of vertices in the graph,
+    can you for each pair of vertices compute the distance between
+    them?</p>
+<p>The <span class="tex2jax_process">$M$</span> edges of the
+    graph have been chosen using the following method:</p>
+<pre>
+for i between 1...M:
+    choose a random edge not in the graph
+    add the edge to the graph
+</pre>
+<p>The <span class="tex2jax_process">$Q$</span> queries have
+    been chosen using the following method:</p>
+<pre>
+for i between 1...Q:
+    choose a random pair of distinct vertices
+</pre>
+<h2>Input</h2>
+<p>The first line contains the integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$N
+    = 45\, 000$</span>, <span class="tex2jax_process">$M = 200\,
+    000$</span>).</p>
+<p>The next <span class="tex2jax_process">$M$</span> lines
+    contains the edges of the graph. Each line consists of two
+    integers <span class="tex2jax_process">$u$</span> and
+    <span class="tex2jax_process">$v$</span> (<span class="tex2jax_process">$0 \le u \neq v &lt; N$</span>, the vertices
+    of the edge).</p>
+<p>This is followed by a line containing the number of pairs of
+    vertices <span class="tex2jax_process">$Q$</span> (<span class="tex2jax_process">$1 \le Q \le 10\, 000$</span>).</p>
+<p>The next and final <span class="tex2jax_process">$Q$</span>
+    lines each contains two <b class="bfseries">distinct</b>
+    integers: the name of the vertices in a pair.</p>
+<h2>Output</h2>
+<p>For each pair of vertices in the input, output the distance
+    between them.</p>
+<p>If there is no path between the vertices, output <tt class="ttfamily">-1</tt>.</p>
+<h2>Scoring</h2>
+<p>Your solution will be tested on a set of test groups, each
+    worth a number of points. To get the points for a test group
+    you need to solve all test cases in the test group.</p>
+<p><b class="bfseries">Note</b>: For group <span class="tex2jax_process">$2$</span>, you can get part of the score.
+    Let the correct distance for a pair be <span class="tex2jax_process">$d$</span> and your answer be <span class="tex2jax_process">$d’$</span>. If <span class="tex2jax_process">$d’ \le d \le 2d’$</span> for every query or
+    no path exists (and you give an arbitrary integer answer
+    between <span class="tex2jax_process">$-1$</span> and
+    <span class="tex2jax_process">$N$</span>), you will receive
+    <span class="tex2jax_process">$20$</span> points.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$Q = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 4
+0 1
+1 2
+2 0
+0 3
+7
+0 1
+0 2
+0 3
+1 2
+1 3
+2 3
+0 4
+</pre>
+</td>
+<td>
+<pre>1
+1
+1
+1
+2
+2
+-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

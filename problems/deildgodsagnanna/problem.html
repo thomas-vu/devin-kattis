@@ -1,0 +1,295 @@
+<div class="problembody">
+<p>The members of the Competitive Programming Association of
+    Iceland play League of Legends quite a lot. In League of
+    Legends there are two teams, the blue team and the red team,
+    each of which consists of five players. Each player picks one
+    of the available champions to play for a match before it
+    starts, and no two players can pick the same champion.</p>
+<p>Each champion has its weaknesses and strengths, so it is
+    important to pick the right champion that fits well with your
+    teammates’ champions and against the opponents’ champions.
+    Therefore it is crucial to pick champions wisely. In order to
+    prevent the opponents from selecting specific champions, each
+    team may ban several champions from being picked. Banning a
+    champion means neither team may pick it.</p>
+<p>The draft process has the following steps:</p>
+<ol class="enumerate">
+<li>
+<p>Blue team bans one champion.</p>
+</li>
+<li>
+<p>Red team bans one champion.</p>
+</li>
+<li>
+<p>Blue team bans one champion.</p>
+</li>
+<li>
+<p>Red team bans one champion.</p>
+</li>
+<li>
+<p>Blue team bans one champion.</p>
+</li>
+<li>
+<p>Red team bans one champion.</p>
+</li>
+<li>
+<p>Blue team picks one champion.</p>
+</li>
+<li>
+<p>Red team picks two champions consecutively.</p>
+</li>
+<li>
+<p>Blue team picks two champions consecutively.</p>
+</li>
+<li>
+<p>Red team picks one champion.</p>
+</li>
+<li>
+<p>Red team bans one champion.</p>
+</li>
+<li>
+<p>Blue team bans one champion.</p>
+</li>
+<li>
+<p>Red team bans one champion.</p>
+</li>
+<li>
+<p>Blue team bans one champion.</p>
+</li>
+<li>
+<p>Red team picks one champion.</p>
+</li>
+<li>
+<p>Blue team picks two champions consecutively.</p>
+</li>
+<li>
+<p>Red team picks one champion.</p>
+</li>
+</ol>
+<p>Originally there were only <span class="tex2jax_process">$20$</span> champions available, <a class="footnote" href="#a0000000022"><sup class="footnotemark">1</sup></a> but the developers of the game keep
+    adding more and more champions. We say two drafts differ if any
+    of their steps differ. Currently, there are <span class="tex2jax_process">$n$</span> champions available to choose. How
+    many different draft processes exist?</p>
+<p>Note that it only matters in which step each champion is
+    picked or banned.</p>
+<p>Below you can see three images representing three draft
+    processes where the teams picked their champions. The blue team
+    is on the left and the red team is on the right. Banned
+    champions appear from left to right. Picked champions appear
+    from top to bottom.</p>
+<div class="figure" id="a0000000023">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{original_draft.png}" src="/problems/deildgodsagnanna/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Example of a draft process where
+          champions where banned and picked.
+        </div>
+</center>
+</div>
+<p>In the above draft process, the following happens:</p>
+<ol class="enumerate">
+<li>
+<p>Blue team bans: Fizz.</p>
+</li>
+<li>
+<p>Red team bans: Rumble.</p>
+</li>
+<li>
+<p>Blue team bans: Skarner.</p>
+</li>
+<li>
+<p>Red team bans: Ekko.</p>
+</li>
+<li>
+<p>Blue team bans: Nami.</p>
+</li>
+<li>
+<p>Red team bans: Olaf.</p>
+</li>
+<li>
+<p>Blue team picks: Jarvan IV.</p>
+</li>
+<li>
+<p>Red team picks: Kindred.</p>
+</li>
+<li>
+<p>Red team picks: Lux.</p>
+</li>
+<li>
+<p>Blue team picks: Brand.</p>
+</li>
+<li>
+<p>Blue team picks: Tryndamere.</p>
+</li>
+<li>
+<p>Red team picks: Rammus.</p>
+</li>
+<li>
+<p>Red team bans: Twitch.</p>
+</li>
+<li>
+<p>Blue team bans: Twisted Fate.</p>
+</li>
+<li>
+<p>Red team bans: Malphite.</p>
+</li>
+<li>
+<p>Blue team bans: Vladimir.</p>
+</li>
+<li>
+<p>Red team picks: Jinx.</p>
+</li>
+<li>
+<p>Blue team picks: Draven.</p>
+</li>
+<li>
+<p>Blue team picks: Sett.</p>
+</li>
+<li>
+<p>Red team picks: Blitzcrank.</p>
+</li>
+</ol>
+<div class="figure" id="a0000000024">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{equivalent_draft.png}" src="/problems/deildgodsagnanna/file/statement/en/img-0002.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 2</b>: This draft process is equivalent to the
+          previous draft process.
+        </div>
+</center>
+</div>
+<p>In the above draft process, the same things happen as in the
+    previous draft process, except that the blue team picks
+    Tryndamere before picking Brand. Despite that, they are
+    equivalent, since the two picks take place in the same
+    step.</p>
+<div class="figure" id="a0000000025">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{different_draft.png}" src="/problems/deildgodsagnanna/file/statement/en/img-0003.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 3</b>: This draft process is different from the
+          previous two draft processes.
+        </div>
+</center>
+</div>
+<p>In the above draft process, the same things happen as in the
+    first draft process, except the red team picks Rammus before
+    picking Lux. These picks take place in different steps, meaning
+    this draft process differs from the previous two.</p>
+<h2>Input</h2>
+<p>Input consists of one line containing one integer
+    <span class="tex2jax_process">$n$</span>, the number of
+    different available champions in the game.</p>
+<h2>Output</h2>
+<p>Suppose the number of different draft processes is the
+    integer <span class="tex2jax_process">$k$</span>. Note that
+    <span class="tex2jax_process">$k$</span> can be a very large
+    number. Therefore, you should output one line with one integer,
+    the remainder after dividing <span class="tex2jax_process">$k$</span> by <span class="tex2jax_process">$1\, 000\, 000\, 007$</span>.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20 \leq n \leq
+          21$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>25</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20 \leq n \leq
+          100$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20 \leq n \leq
+          10^{6}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>15</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20 \leq n \leq
+          10^{9}$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$20 \leq n \leq
+          10^{18}$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>21
+</pre>
+</td>
+<td>
+<pre>759105918
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>166
+</pre>
+</td>
+<td>
+<pre>985420928
+</pre>
+</td>
+</tr>
+</table>
+</div>

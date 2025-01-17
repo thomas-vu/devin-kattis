@@ -1,0 +1,152 @@
+<div class="problembody">
+<p>Your friend just bought a new programmable robot and has
+    asked for your help. The robot operates in a 2D grid that may
+    contain obstacles. The environment has a known start location
+    and a known goal location. The robot is controlled with a
+    string consisting of commands <tt class="ttfamily">L</tt>,
+    <tt class="ttfamily">R</tt>, <tt class="ttfamily">U</tt>, and
+    <tt class="ttfamily">D</tt>, which respectively instruct the
+    robot to move one square to the left, right, up or down in the
+    grid. The robot will ignore a command (but continue with future
+    commands) if the command would cause it to leave the grid or to
+    run into an obstacle. If the robot were to reach the goal
+    position, it immediately stops its program with success (even
+    if further commands exist).</p>
+<p>Your friend has already programmed the robot with a command
+    string, but the problem is that your friend is not a very good
+    programmer, and so it may be that the commands do not lead the
+    robot successfully to the goal. You would like to fix the
+    string so that the robot will reach the goal, but you do not
+    want your friend to feel bad, so you are hoping to make as few
+    changes to the program as are needed. A single change consists
+    either of deleting an arbitrary character of the command
+    string, or inserting an arbitrary command anywhere within the
+    string.</p>
+<p>As an example, if we consider Sample Input 1, we see
+    that your friend’s command string of <tt class="tt">DRRDD</tt>
+    does not succeed. The initial <tt class="tt">D</tt> moves the
+    robot one spot down. From there, the <tt class="tt">R</tt> (and
+    the subsequent <tt class="tt">R</tt>) are ignored because of
+    the obstacle to the robot’s right. The subsequent <tt class="tt">D</tt> moves the robot down once again and the final
+    <tt class="tt">D</tt> is ignored. However, by deleting the
+    initial <tt class="tt">D</tt>, we can rely on the command
+    string <tt class="tt">RRDD</tt> which does successfully lead
+    the robot to the goal.</p>
+<p>If we consider Sample Input 2, we find that your
+    friend’s original command string <tt class="tt">LDLDLLDR</tt>
+    is flawed. However, if we insert the single command <tt class="tt">U</tt> after the fifth command, the resulting string
+    <tt class="tt">LDLDLULDR</tt> successfully guides the robot to
+    the goal. It starts by moving left-down-left; the next down
+    command is ignored because the robot is not allowed to leave
+    the grid. The subsequent left-up-left completes the path to the
+    goal (and the final <tt class="tt">DR</tt> commands are ignored
+    as the robot stops immediately upon reaching the goal).</p>
+<p>With Sample Input 3, your friend’s command string can
+    be corrected with two changes, for example with the new command
+    <tt class="tt">ULDLDLLDLR</tt> (although this is not the only
+    way to use two changes to produce a valid sequence).</p>
+<h2>Input</h2>
+<p>The first line of the input contains the two integers
+    <span class="tex2jax_process">$H$</span> and <span class="tex2jax_process">$W$</span> that respectively define the
+    height and width of the grid such that <span class="tex2jax_process">$1 \le H, W \le 50$</span>. The next
+    <span class="tex2jax_process">$H$</span> lines each has
+    <span class="tex2jax_process">$W$</span> characters, describing
+    the corresponding row of the grid, such that the character
+    ’<tt class="tt">S</tt>’ designates the starting location,
+    ’<tt class="tt">G</tt>’ designates the goal location,
+    ’<tt class="tt">#</tt>’ designates an obstacle, and ’<tt class="tt">.</tt>’ designates an empty location. There will always be
+    precisely one ’<tt class="tt">S</tt>’ and one ’<tt class="tt">G</tt>’ in the grid, and there will always exist an
+    unobstructed path from the start position to the goal position.
+    The final line of the input contains your friend’s original
+    command string consisting of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$50$</span> characters, inclusive.</p>
+<h2>Output</h2>
+<p>Output a single integer indicating the minimum number of
+    changes that are needed to fix the program.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+S..
+.#.
+..G
+DRRDD
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 7
+.......
+.G.#.S.
+.......
+LDLDLLDR
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 7
+.#.....
+.G.##S.
+.......
+LDLDLLDR
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+S.#.
+#..G
+RRUUDDRRUUUU
+</pre>
+</td>
+<td>
+<pre>
+0
+</pre>
+</td>
+</tr>
+</table>
+</div>

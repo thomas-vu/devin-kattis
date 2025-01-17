@@ -1,0 +1,208 @@
+<div class="problembody">
+<p>Illiteracy is a simple puzzle game created by Le
+    Sio. <a class="footnote" href="#a0000000004"><sup class="footnotemark">1</sup></a> The game consists of a sequence of
+    eight icons; the actual icons are very artistic, but for
+    simplicity, we’ll label the icons using a capital letter
+    <tt class="ttfamily">A</tt>—<tt class="ttfamily">F</tt>.
+    Clicking any icon has a unique effect on the other icons, based
+    on which icon is clicked and that icon’s position in the
+    sequence. Most of the icons <em>rotate</em> the type of other
+    icons. A rotation changes an <tt class="ttfamily">A</tt> to a
+    <tt class="ttfamily">B</tt>, <tt class="ttfamily">B</tt> to
+    <tt class="ttfamily">C</tt>, <tt class="ttfamily">C</tt> to
+    <tt class="ttfamily">D</tt>, <tt class="ttfamily">D</tt> to
+    <tt class="ttfamily">E</tt>, <tt class="ttfamily">E</tt> to
+    <tt class="ttfamily">F</tt>, and <tt class="ttfamily">F</tt>
+    back to <tt class="ttfamily">A</tt>.</p>
+<p>Here’s what the icons do when you click on one, based on the
+    type of the icon and its position <span class="tex2jax_process">$x$</span> in the sequence (<span class="tex2jax_process">$1\leq x \leq 8$</span>):</p>
+<center>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Type</b></p>
+</td>
+<td style="text-align:left">
+<p><b class="bfseries">Effect</b></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">A</tt></p>
+</td>
+<td style="text-align:left">
+<p>Rotates the icons immediately to the left and right
+            (at positions <span class="tex2jax_process">$x-1$</span> and <span class="tex2jax_process">$x+1$</span>), ignoring any icon that
+            doesn’t exist (when <span class="tex2jax_process">$x=1$</span> or <span class="tex2jax_process">$8$</span>).</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">B</tt></p>
+</td>
+<td style="text-align:left">
+<p>If the icon is at either end of the sequence, does
+            nothing. Otherwise, changes the icon at position
+            <span class="tex2jax_process">$x+1$</span> to the same
+            type as the current icon at <span class="tex2jax_process">$x-1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">C</tt></p>
+</td>
+<td style="text-align:left">
+<p>Rotates the icon at position <span class="tex2jax_process">$9-x$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">D</tt></p>
+</td>
+<td style="text-align:left">
+<p>Rotates all icons between position <span class="tex2jax_process">$x$</span> and the closest of the
+            sequence’s two ends. (Does nothing if <span class="tex2jax_process">$x$</span> is one of the two ends,
+            and does not change the icon at position <span class="tex2jax_process">$x$</span> itself). For example, if
+            <span class="tex2jax_process">$x=3$</span>, the icons
+            at <span class="tex2jax_process">$x=1$</span> and
+            <span class="tex2jax_process">$2$</span> would be
+            rotated. If <span class="tex2jax_process">$x=5$</span>,
+            then the icons at positions <span class="tex2jax_process">$6$</span>, <span class="tex2jax_process">$7$</span>, and <span class="tex2jax_process">$8$</span> would be rotated.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">E</tt></p>
+</td>
+<td style="text-align:left">
+<p>If the icon is at either end of the sequence, does
+            nothing. Otherwise, let <span class="tex2jax_process">$y$</span> be the number of icons
+            between position <span class="tex2jax_process">$x$</span> and the closest of the
+            sequence’s two ends. Rotates the two icons at positions
+            <span class="tex2jax_process">$x-y$</span> and
+            <span class="tex2jax_process">$x+y$</span>. For
+            example, if <span class="tex2jax_process">$x=3$</span>,
+            the icons at <span class="tex2jax_process">$x=1$</span>
+            and <span class="tex2jax_process">$5$</span> would be
+            rotated. If <span class="tex2jax_process">$x=5$</span>,
+            the icons at positions <span class="tex2jax_process">$8$</span> and <span class="tex2jax_process">$2$</span> would be rotated.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p><tt class="ttfamily">F</tt></p>
+</td>
+<td style="text-align:left">
+<p>If <span class="tex2jax_process">$x$</span> is odd,
+            rotates the icon at position <span class="tex2jax_process">$(x+9)/2$</span>. If <span class="tex2jax_process">$x$</span> is even, rotates the icon
+            at position <span class="tex2jax_process">$x/2$</span>.</p>
+</td>
+</tr>
+</table>
+</center>
+<p>Given a starting sequence of icons and a target sequence,
+    what is the minimal number of clicks required to transform the
+    starting sequence into the target sequence?</p>
+<h5>Examples</h5>
+<p>For the cases below, we illustrate one possible minimal
+    sequence of clicks to get from the top configuration to the
+    bottom one. The carets indicate which icon on the previous line
+    was clicked to generate the sequence on the following line. The
+    sequence on the left takes <span class="tex2jax_process">$2$</span> clicks; the sequence on the right
+    takes <span class="tex2jax_process">$4$</span> clicks.</p>
+<center>
+<pre>
+ABCDEFCD        DCDAFCBA
+   ^               ^    
+BCDDEFCD        DCEAACBA
+     ^                ^ 
+BCEDEFCD        DCEAACBC
+                 ^      
+                DCEAACCC
+                  ^     
+                ECEABCCC
+</pre>
+</center>
+<h2>Input</h2>
+<p>The input consists of exactly two lines of eight characters
+    each. The first line is the starting icon sequence, and the
+    second is the target sequence. Each character on each line is
+    one of the six capital letters <tt class="ttfamily">A</tt>,
+    <tt class="ttfamily">B</tt>, <tt class="ttfamily">C</tt>,
+    <tt class="ttfamily">D</tt>, <tt class="ttfamily">E</tt>, or
+    <tt class="ttfamily">F</tt>. It will always be possible to
+    reach the target sequence from the given starting sequence
+    using a finite number of clicks.</p>
+<h2>Output</h2>
+<p>Output a single integer, the smallest number of icon clicks
+    needed to get from the starting sequence to the target
+    sequence.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>ABCDEFCD
+BCEDEFCD
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>DCDAFCBA
+ECEABCCC
+</pre>
+</td>
+<td>
+<pre>4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>ABCDEFCD
+ABCDEFCD
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>ACFEFBEB
+EDBFEFDE
+</pre>
+</td>
+<td>
+<pre>22
+</pre>
+</td>
+</tr>
+</table>
+</div>

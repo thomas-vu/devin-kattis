@@ -1,0 +1,99 @@
+<div class="problembody">
+<p>Dividing two numbers and computing the decimals is an
+    extremely difficult task. Luckily, dividing a number by a
+    “special” number is very easy (at least for us humans)!</p>
+<p>We will define the set of “special” numbers <span class="tex2jax_process">$S=\{ 10^ K\} $</span> for all non-negative
+    integers <span class="tex2jax_process">$K$</span>, i.e.
+    <span class="tex2jax_process">$\{ 1,10,100,\ldots \}
+    $</span>.</p>
+<p>Given a large numbers <span class="tex2jax_process">$N$</span> and a “special” large number
+    <span class="tex2jax_process">$M$</span>, what does the decimal
+    representation of</p><span class="tex2jax_process">\[
+    \frac{N}{M} \]</span>
+<p>look like?</p>
+<h2>Input</h2>
+<p>The first line of input contains 2 integers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span>, where <span class="tex2jax_process">$1\leq N, M\leq 10^{10^6}$</span>, and
+    <span class="tex2jax_process">$M\in S$</span>.</p>
+<h2>Output</h2>
+<p>Print the <em>exact</em> decimal preresentation of
+    <span class="tex2jax_process">$\frac{N}{M}$</span>, i.e. every
+    digit, <em>without</em> trailing zeroes; if the quotient is
+    less than <span class="tex2jax_process">$1$</span>, print one
+    leading zero (see sample input).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+92746237
+100000
+</pre>
+</td>
+<td>
+<pre>
+927.46237
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+100000
+100
+</pre>
+</td>
+<td>
+<pre>
+1000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+1234500
+10000
+</pre>
+</td>
+<td>
+<pre>
+123.45
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+10
+</pre>
+</td>
+<td>
+<pre>
+0.1
+</pre>
+</td>
+</tr>
+</table>
+</div>

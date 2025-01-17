@@ -1,0 +1,255 @@
+<div class="problembody">
+<p>A number of eccentrics from central New York have decided
+    that they have had enough of modern society, and want to move
+    from there. Together they have bought a rectangular piece of
+    land far away, and will now settle there.</p>
+<p>The land consists of <span class="tex2jax_process">$N \times
+    M$</span> squares, and it is possible to build a maximum of one
+    house on a given square. Each square has value <span class="tex2jax_process">$a_{x,y}$</span> that describes how nice it
+    is, on a scale between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$100$</span>.</p>
+<p>The goal of the eccentrics is to get as far away as possible
+    from everyone else, including each other. The happiness an
+    eccentric experiences from building his house on square
+    <span class="tex2jax_process">$(x,y)$</span> is thus
+    <span class="tex2jax_process">$a_{x,y}\cdot d$</span>, where
+    <span class="tex2jax_process">$d$</span> is the smallest
+    distance to another person.</p>
+<p>Out of habit, the eccentrics use <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan
+    distance</a> to measure this; <span class="tex2jax_process">$d$</span> is defined as <span class="tex2jax_process">$\min |x - x_2| + |y - y_2|$</span> over all
+    other people’s squares <span class="tex2jax_process">$(x_2,
+    y_2)$</span>.</p>
+<p>The eccentrics now want your help in placing their houses
+    optimally, so that the sum of the happiness they experience is
+    as high as possible. Can you help them?</p>
+<h2>Input</h2>
+<p>The input consists of <span class="tex2jax_process">$10$</span> test cases, which are described
+    below.</p>
+<p>The first line contains the number <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$0
+    \le T \le 10$</span>), which describes the number of the test
+    case (<span class="tex2jax_process">$0$</span> for the sample).
+    The second line contains the numbers <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \le N, M \le 1\, 000$</span>, <span class="tex2jax_process">$2
+    \le K \le N \cdot M$</span>) – the height and width of the
+    grid, and the number of people. Then follows <span class="tex2jax_process">$N$</span> lines each containing <span class="tex2jax_process">$M$</span> integer values – the value
+    <span class="tex2jax_process">$a_{x,y}$</span> (<span class="tex2jax_process">$0 \le a_{x,y} \le 100$</span>).</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$K$</span> lines with
+    the positions of the houses. Each line should contain two
+    numbers: first the row for the house (between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$N$</span>), then the column (between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$M$</span>). Two houses may not be placed at
+    the same position.</p>
+<h2>Points</h2>
+<p>Your program will be tested on <span class="tex2jax_process">$10$</span> test cases.</p>
+<p>Your score for a submission is the sum of the points for the
+    test cases, and your total points are the points for the best
+    submission. It is therefore not possible to combine test cases
+    between different submissions, but you must submit a single
+    program which maximizes your score on all test cases at
+    once.</p>
+<p>Your score will be set relative to a judge’s solution. If
+    your solution is better than the one the judges threw together,
+    it is thus possible that you temporarily get more than
+    <span class="tex2jax_process">$10$</span> points on a test
+    case. However, your total points will be limited to
+    <span class="tex2jax_process">$100$</span>.</p>
+<p>The sample test case will always give <span class="tex2jax_process">$0$</span> points.</p>
+<h2>Explanation of example case</h2>
+<p>In the example case, we want to place two houses on a
+    <span class="tex2jax_process">$2 \times 3$</span> grid. The
+    example solution places one of the houses in the lower-left
+    corner and one in the upper-right corner. The shortest distance
+    from both houses to another house is then <span class="tex2jax_process">$2 + 1 = 3$</span>, and the sum of happiness
+    thus <span class="tex2jax_process">$3 \cdot 30 + 3 \cdot 50 =
+    240$</span>.</p>
+<h2>Test Cases</h2>
+<p>To avoid this problem becoming a guessing game, here are
+    descriptions of the <span class="tex2jax_process">$10$</span>
+    test cases that occur:</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Test case</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Bounds</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Grid</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 1\, 000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>All <span class="tex2jax_process">$a_{i,j}$</span>
+          values are the same.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 500$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j}$</span> are
+          randomly chosen between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 200$</span>,
+          <span class="tex2jax_process">$M = 1$</span>,
+          <span class="tex2jax_process">$K = 30$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j}$</span> are
+          randomly chosen between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$4$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 1\,
+          000$</span>, <span class="tex2jax_process">$K = 40\,
+          000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j}$</span> are
+          randomly chosen between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$100$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$5$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j} = \min (100,
+          \max (0, i + r))$</span>, where <span class="tex2jax_process">$r$</span> is a random value between
+          <span class="tex2jax_process">$-5$</span> and
+          <span class="tex2jax_process">$5$</span>, and
+          <span class="tex2jax_process">$i$</span> is the line
+          number, <span class="tex2jax_process">$0$</span>-indexed.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$6$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 1\,
+          000$</span>, <span class="tex2jax_process">$K = 10\,
+          000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j} = \min (100,
+          \max (0, \lfloor 0.101 \cdot i \rfloor + r))$</span>,
+          where <span class="tex2jax_process">$r$</span> is
+          randomly chosen between <span class="tex2jax_process">$-5$</span> and <span class="tex2jax_process">$5$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$7$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 500$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j} = \lfloor 100 /
+          r \rceil $</span>, where <span class="tex2jax_process">$r$</span> is a randomly chosen real
+          value between <span class="tex2jax_process">$1$</span>
+          and <span class="tex2jax_process">$200$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$8$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 500$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j} = \lfloor 100 /
+          r^2 \rceil $</span>, where <span class="tex2jax_process">$r$</span> is a randomly chosen real
+          value between <span class="tex2jax_process">$1$</span>
+          and <span class="tex2jax_process">$200$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$9$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = M = 1\,
+          000$</span>, <span class="tex2jax_process">$K = 40\,
+          000$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$a_{i,j} = \lfloor 100 /
+          r^2 \rceil $</span>, where <span class="tex2jax_process">$r$</span> is a randomly chosen real
+          value between <span class="tex2jax_process">$1$</span>
+          and <span class="tex2jax_process">$200$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$10$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$N = M = 100$</span>,
+          <span class="tex2jax_process">$K = 9$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>The grid consists of only <span class="tex2jax_process">$1$</span>s with <span class="tex2jax_process">$50$</span> squares of <span class="tex2jax_process">$0$</span>s randomly placed
+          (overlapping; most with size <span class="tex2jax_process">$10 \times 10$</span>, some
+          larger).</p>
+</td>
+</tr>
+</table>
+<p>Here "random" means <a href="https://en.wikipedia.org/wiki/Continuous_uniform_distribution">
+    uniformly random</a>. <span class="tex2jax_process">$\lfloor x
+    \rfloor $</span> means <span class="tex2jax_process">$x$</span>
+    rounded down, and <span class="tex2jax_process">$\lfloor x
+    \rceil $</span> is <span class="tex2jax_process">$x$</span>
+    rounded to the nearest integer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>0
+2 3 2
+50 60 50
+30 50 40
+</pre>
+</td>
+<td>
+<pre>2 1
+1 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

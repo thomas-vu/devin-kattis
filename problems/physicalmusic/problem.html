@@ -1,0 +1,99 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/physicalmusic/file/statement/en/img-0001.jpg" class="illustration" src="/problems/physicalmusic/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Picture by: <a href="https://en.wikipedia.org/wiki/File:Olivia_Newton-John_1988b.jpg">
+        Larry D. Moore</a>
+</div>
+</div>
+<p>The music business is changing rapidly, and this is
+    reflected by the single charts. Initially, the Dutch Single Top
+    100 was based purely on sale numbers of CD singles. In the
+    course of time, however, these numbers dropped dramatically, in
+    favour of legal and illegal downloads of music from the
+    internet. Therefore, since 2006, downloads of singles from
+    specific legal downloads sites are incorporated into the chart.
+    Nowadays, even streams from certain streaming platforms
+    contribute to the Single Top 100.</p>
+<p>Between 2006 and 2013, when the Single Top 100 was based on
+    both CD singles and downloads, there was also a chart called
+    the Download Top 100, based purely on the downloads. Assuming
+    that both charts used the same numbers of weekly downloads, one
+    could tell from a comparison between the two charts, which
+    singles were selling well physically. And in fact, since some
+    singles did not even appear as CD singles any more, one could
+    tell which singles were <em>certainly</em> available as CD
+    single: the ones that were doing better (as compared to some
+    other singles) in the Single Top 100 than in the Download Top
+    100.</p>
+<p>Now, you are asked to write a program to determine these
+    singles. To be prepared for other communities, which may also
+    have single charts of other sizes, your program should not be
+    limited to charts containing exactly one hundred singles.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1 \leq T \leq 20$</span>), the number of
+    test cases. Then for each test case:</p>
+<ul class="itemize">
+<li>
+<p>One line containing an integer <span class="tex2jax_process">$N$</span>, satisfying <span class="tex2jax_process">$1 \leq N \leq 100\, 000$</span>, the
+        size of both single charts.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N$</span> lines, each
+        containing a single integer, which together form a
+        permutation of the numbers <span class="tex2jax_process">$1,\ldots ,N$</span>. The <span class="tex2jax_process">$i$</span>-th integer <span class="tex2jax_process">$P_{i}$</span> is the position in the
+        Download Top <span class="tex2jax_process">$N$</span> of
+        the single that is ranked <span class="tex2jax_process">$i$</span> in the Single Top <span class="tex2jax_process">$N$</span>.</p>
+</li>
+</ul>
+<p>As the above specification implies, the Download Top
+    <span class="tex2jax_process">$N$</span> and the Single Top
+    <span class="tex2jax_process">$N$</span> contain exactly the
+    same <span class="tex2jax_process">$N$</span> singles, possibly
+    in different orders.</p>
+<h2>Output</h2>
+<p>For each test case, output:</p>
+<ul class="itemize">
+<li>
+<p>One line containing the number of singles <span class="tex2jax_process">$M$</span> that are certainly available
+        as CD single.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$M$</span> lines, each
+        containing a single integer, the <em>positions</em> of the
+        singles in the Download Top <span class="tex2jax_process">$N$</span> that are certainly available
+        as CD single, in ascending order.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3
+1
+2
+3
+4
+4
+3
+1
+2
+</pre>
+</td>
+<td>
+<pre>
+0
+2
+3
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

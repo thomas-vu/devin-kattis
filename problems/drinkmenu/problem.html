@@ -1,0 +1,82 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/drinkmenu/file/statement/en/img-0001.jpg" class="illustration" src="/problems/drinkmenu/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Photo by Priscilla Du Preez on Unsplash
+      </div>
+</div>
+<p>To widen their mixological horizons, some of your bar’s
+    patrons have decided to work themselves through the entire
+    drink menu, top to bottom, over a period of many visits. Due to
+    their forgetfulness, decreptitude, or levels of inebriation,
+    these patrons cannot be trusted with keeping track of how far
+    they’ve progressed down the menu.</p>
+<p>Thus, you decide to take responsibility for always serving
+    the right drink to the right customer, so that each customer
+    goes through the menu in order from top to bottom, no matter in
+    which order the customers arrive.</p>
+<h2>Input</h2>
+<p>The first line contains the number <span class="tex2jax_process">$n$</span> of drinks and the number
+    <span class="tex2jax_process">$m$</span> of orders, where
+    <span class="tex2jax_process">$1\leq n\leq 1\, 000$</span> and
+    <span class="tex2jax_process">$1\leq m\leq 10\,
+    000$</span>.</p>
+<p>The next <span class="tex2jax_process">$n$</span> lines each
+    contain the name of a drink, in the order of the drink menu.
+    The following <span class="tex2jax_process">$m$</span> lines
+    each contain the name of a customer ordering a drink. Both
+    drink and customer names consist of alphabetic characters from
+    A-Z, a–z, and space; each name is at most <span class="tex2jax_process">$25$</span> characters long and neither
+    starts nor ends with space. The drinks and the customers have
+    unique names. There are at most <span class="tex2jax_process">$1\, 000$</span> different customers. It is
+    guaranteed that no customer orders more than <span class="tex2jax_process">$n$</span> drinks.</p>
+<h2>Output</h2>
+<p>Exactly <span class="tex2jax_process">$m$</span> lines
+    containing the drinks you serve in the proper order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+Old Fashioned
+Aperol Spritz
+Thore
+Oskar
+Thore
+</pre>
+</td>
+<td>
+<pre>Old Fashioned
+Old Fashioned
+Aperol Spritz
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 3
+Old Fashioned
+Aperol Spritz
+Thore
+Thore
+Oskar
+</pre>
+</td>
+<td>
+<pre>Old Fashioned
+Aperol Spritz
+Old Fashioned
+</pre>
+</td>
+</tr>
+</table>
+</div>

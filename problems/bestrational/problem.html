@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>Many microcontrollers have no floating point unit but do
+    have a (reasonably) fast integer divide unit. In these cases it
+    may pay to use rational values to approximate floating point
+    constants. For instance,</p><span class="tex2jax_process">\[
+    355/113 = 3.1415929203539823008849557522124 \ldots \]</span>
+<p>is a quite good approximation to</p><span class="tex2jax_process">\[ \pi = 3.14159265358979323846 \ldots
+    \]</span>
+<p>A <em>best rational approximation</em> <span class="tex2jax_process">$p/q$</span> to a real number <span class="tex2jax_process">$x$</span> with denominator at most
+    <span class="tex2jax_process">$M$</span> is a rational number
+    <span class="tex2jax_process">$p/q$</span> (in lowest terms)
+    with <span class="tex2jax_process">$q \le M$</span> such that,
+    for any integers <span class="tex2jax_process">$a$</span> and
+    <span class="tex2jax_process">$b$</span> with <span class="tex2jax_process">$b \le M$</span>, and <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$b$</span> relatively prime, <span class="tex2jax_process">$p/q$</span> is at least as close to
+    <span class="tex2jax_process">$x$</span> as <span class="tex2jax_process">$a/b$</span>:</p><span class="tex2jax_process">\[ |x - p/q| \le |x - a/b| \]</span>
+<p>Write a program to compute the best rational approximation
+    to a real number, <span class="tex2jax_process">$x$</span>,
+    with denominator at most <span class="tex2jax_process">$M$</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$P$</span>, (<span class="tex2jax_process">$1 \le P \le 1\, 000$</span>), which is the
+    number of data sets that follow. Each data set should be
+    processed identically and independently.</p>
+<p>Each data set consists of a single line of input. It
+    contains the data set number, <span class="tex2jax_process">$K$</span>, followed by the maximum
+    denominator value, <span class="tex2jax_process">$M$</span>
+    (<span class="tex2jax_process">$15 \le M \le 1\, 000\,
+    000$</span>), followed by a real number, <span class="tex2jax_process">$x$</span>, (<span class="tex2jax_process">$0
+    \le x &lt; 1$</span>), given with at most <span class="tex2jax_process">$18$</span> digits after the period.</p>
+<h2>Output</h2>
+<p>For each data set there is a single line of output. The
+    single output line consists of the data set number,
+    <span class="tex2jax_process">$K$</span>, followed by a single
+    space followed by the numerator, <span class="tex2jax_process">$p$</span>, of the best rational
+    approximation to <span class="tex2jax_process">$x$</span>,
+    followed by a forward slash (/) followed by the denominator,
+    <span class="tex2jax_process">$q$</span>, of the best rational
+    approximation to <span class="tex2jax_process">$x$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 100000 0.141592653589793238
+2 255 0.141592653589793238
+3 15 0.141592653589793238
+</pre>
+</td>
+<td>
+<pre>1 14093/99532
+2 16/113
+3 1/7
+</pre>
+</td>
+</tr>
+</table>
+</div>

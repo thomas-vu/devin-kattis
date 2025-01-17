@@ -1,0 +1,79 @@
+<div class="problembody">
+<p>Darth Vader is back to his favourite hobby: destroying
+    planets (or their population to be precise). He just discovered
+    that the rebel leadership has gathered at a planet named
+    Watooine, so he must act quickly to eliminate the threat.
+    Unfortunately, the Empire is in a pretty bad recession right
+    now, so there aren’t any Death Stars left around. Therefore,
+    Vader’s plan involves dropping several containers with deadly
+    viruses onto the planet’s surface.</p>
+<p>To make things simpler for you, we will model this problem
+    in 2D. Watooine has radius <span class="tex2jax_process">$R$</span> and is centred at <span class="tex2jax_process">$(0,0)$</span>. There are <span class="tex2jax_process">$K$</span> Empire spaceships, each of which
+    will simultaneously launch a rocket with a container towards
+    point <span class="tex2jax_process">$(0, 0)$</span>. Once the
+    rocket hits the surface of the planet, a virus will start
+    spreading along the surface in the shape of a circle of ever
+    increasing radius. Since we are modelling the problem in 2D,
+    the virus spreads from the point of impact at the same rate in
+    both directions, clockwise and counterclockwise along the
+    circumference of the circle that represents the surface of the
+    planet. Each spaceship has a custom rocket speed, and each
+    virus has a custom spread speed. Note that each virus spreads
+    along the surface of the planet—it cannot pass through the
+    planet to reach the other end.</p>
+<p>Your task is to determine how much time will it take for
+    Watooine to become completely infected—i.e., every point on the
+    planet surface has been reached by a virus. Good luck!</p>
+<div class="figure" id="fig:sample1">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{E.png}" src="/problems/planetdestruction/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Sample input
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$T$</span>, the number of test cases,
+    followed by the descriptions of the <span class="tex2jax_process">$T$</span> test cases. Each test case
+    description has the following structure: The first line
+    contains two integers <span class="tex2jax_process">$R$</span>,
+    the radius of the planet (in meters), and <span class="tex2jax_process">$K$</span>, the number of spaceships. The
+    next <span class="tex2jax_process">$K$</span> lines each
+    contain <span class="tex2jax_process">$4$</span> integers: the
+    <span class="tex2jax_process">$X$</span>-coordinate of the
+    ship, the <span class="tex2jax_process">$Y$</span>-coordinate
+    of the ship, the rocket speed and the virus spread speed (in
+    meters per second). It is guaranteed that no ships are inside
+    the planet.</p>
+<p>Both speeds are between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span>, both coordinates are
+    between <span class="tex2jax_process">$-1\, 000\, 000$</span>
+    and <span class="tex2jax_process">$1\, 000\, 000$</span>,
+    <span class="tex2jax_process">$R$</span> is between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span>. <span class="tex2jax_process">$K$</span> is between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10\, 000$</span>, and <span class="tex2jax_process">$T$</span> is between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, print one line containing one real
+    number, the time it takes for the planet to become completely
+    infected. Your answer will be considered correct if it is
+    within <span class="tex2jax_process">$10^{-4}$</span> from the
+    jury answer.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1
+100 1
+200 0 10 7
+</pre>
+</td>
+<td>
+<pre>
+54.879894378
+</pre>
+</td>
+</tr>
+</table>
+</div>

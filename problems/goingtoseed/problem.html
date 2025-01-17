@@ -1,0 +1,229 @@
+<div class="problembody">
+<p>The Great Seedling is a mythical spirit that supposedly
+    rewards whoever catches it with farm crops that remain in bloom
+    forever. Rumor has it that in the dead of tonight, it will be
+    coming to Sweet Apple Acres—the Apple family’s farm!</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.43\textwidth ]{TBO_Apples.png}" src="/problems/goingtoseed/file/statement/en/img-0001.png" style="width:43.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1270461601431326720/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>Applejack and Apple Bloom are hoping to catch the Great
+    Seedling to help out with their massive harvest this season.
+    They’ve decided to stake out the farm and keep close watch over
+    the trees; they’re going to see if they can sense the Great
+    Seedling’s movements. Now, catching the Great Seedling is no
+    easy feat, and they’ve only got one shot—if the Great Seedling
+    becomes aware that it’s being hunted, it will flee and will
+    never be found again!</p>
+<p>There are <span class="tex2jax_process">$N$</span> trees in
+    Sweet Apple Acres, laid out in a row and labelled <span class="tex2jax_process">$1, 2, \dots , N$</span> from left to right.
+    The Great Seedling is hiding behind one of these trees, but
+    they do not know which one.</p>
+<p>In one half-hour, Applejack and Apple Bloom can each choose
+    a consecutive range of trees, and they will intently observe
+    that range of trees. The Great Seedling is restless and so
+    sometime within this half-hour, it will spring from its current
+    tree to an adjacent one. It does this very sneakily, but as it
+    lands it will cause the leaves of the new tree, and only this
+    tree, to rustle.</p>
+<p>At the end of the half-hour, Applejack and Apple Bloom will
+    then each report whether they sensed a rustle among the leaves
+    of the trees they were intently observing. Unfortunately,
+    because the Great Seedling’s movement is very subtle, they
+    won’t be able to determine exactly which tree’s leaves rustled;
+    however, we can assume that they are paying close enough
+    attention that they will never make a mistake.</p>
+<p>Once they are sure which tree the Great Seedling is in, they
+    can quickly rush there to capture it; the Great Seedling will
+    not have time to react. However, they only have one
+    attempt—because they will be making a lot of noise, if they
+    choose the wrong tree, the Great Seedling will flee, and all
+    will be for naught.</p>
+<p>There are only <span class="tex2jax_process">$16$</span>
+    half-hours before the sun rises again and the Great Seedling
+    leaves for good. This is their one chance. Help them catch the
+    Great Seedling!</p>
+<h2>Interaction</h2>
+<p>First, your program should read a single integer
+    <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$2 \leq N \leq 10^9$</span>), the number of
+    trees, on a single line from standard input.</p>
+<p>Then, we repeat the following process:</p>
+<ul class="itemize">
+<li>
+<p>Your program writes a single line to the standard output
+        in either format:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$\texttt{Q}\: l_1\:
+            r_1\: l_2\: r_2$</span> (<span class="tex2jax_process">$1 \leq l_1 \leq r_1 \leq N$</span>;
+            <span class="tex2jax_process">$1 \leq l_2 \leq r_2 \leq
+            N$</span>), meaning that for the next half-hour,
+            Applejack should observe all the trees with labels from
+            <span class="tex2jax_process">$l_1$</span> to
+            <span class="tex2jax_process">$r_1$</span>, inclusive,
+            and Applebloom should observe the trees with labels
+            from <span class="tex2jax_process">$l_2$</span> to
+            <span class="tex2jax_process">$r_2$</span>, inclusive.
+            Note that these ranges can overlap, and in particular
+            they can even be the same range. This can be done at
+            most <span class="tex2jax_process">$16$</span>
+            times.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\texttt{A}\:
+            t$</span> (<span class="tex2jax_process">$1 \leq t \leq
+            N$</span>), meaning that you are sure that the Great
+            Seedling is in tree <span class="tex2jax_process">$t$</span> and they should rush to
+            capture it immediately.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If your program asks a question, your program should
+        read two integers <span class="tex2jax_process">$w_1$</span> and <span class="tex2jax_process">$w_2$</span> (<span class="tex2jax_process">$0 \leq w_1, w_2 \leq 1$</span>) from
+        standard input. If <span class="tex2jax_process">$w_1 =
+        0$</span>, it means Applejack did not sense a rustle; if
+        <span class="tex2jax_process">$w_1 = 1$</span>, it means
+        she did. Similarly, if <span class="tex2jax_process">$w_2 =
+        0$</span>, it means Apple Bloom did not sense a rustle; if
+        <span class="tex2jax_process">$w_2 = 1$</span>, it means
+        she did.</p>
+</li>
+<li>
+<p>If your program guesses the answer, your answer will be
+        checked. <b class="bfseries">Your program should terminate
+        immediately after this.</b></p>
+</li>
+</ul>
+<p>After asking each question, do not forget to output end of
+    line and <b class="bfseries">flush</b> the output. To do this,
+    use:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">fflush(stdout)</tt> or <tt class="ttfamily">cout.flush()</tt> in C++;</p>
+</li>
+<li>
+<p><tt class="ttfamily">System.out.flush()</tt> in
+        Java;</p>
+</li>
+<li>
+<p><tt class="ttfamily">stdout.flush()</tt> in Python;</p>
+</li>
+<li>
+<p>see documentation for other languages.</p>
+</li>
+</ul>
+<h2>Sample interaction</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left; border-right:1px solid black">
+<p>Your output (standard output)</p>
+</td>
+<td style="text-align:left; border-right:1px solid black">
+<p>Kattis’ answer (standard input)</p>
+</td>
+<td style="text-align:left">
+<p>Interpretation</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{6}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There are <span class="tex2jax_process">$N=6$</span>
+          trees in Sweet Apple Acres.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{Q 1 3 5
+          5}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Applejack should observe the trees <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$3$</span> while Apple Bloom should
+          observe tree <span class="tex2jax_process">$5$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Applejack reports sensing a rustle while Apple Bloom
+          does not.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{Q 2 2 4
+          4}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Applejack should observe tree <span class="tex2jax_process">$2$</span> while Apple Bloom should
+          observe tree <span class="tex2jax_process">$4$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{0
+          0}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Neither reports sensing a rustle.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{Q 1 4 4
+          6}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Applejack should observe the trees <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$3$</span> and <span class="tex2jax_process">$4$</span> while Apple Bloom should
+          observe the trees <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$6$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{1
+          1}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>Both report sensing a rustle.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$\texttt{A
+          4}$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+         </td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p>There is now enough information to conclude that the
+          Great Seedling is behind tree <span class="tex2jax_process">$4$</span> and they can rush to capture
+          it immediately.</p>
+</td>
+</tr>
+</table>
+</div>

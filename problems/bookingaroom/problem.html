@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/bookingaroom/file/statement/en/img-0001.jpg" class="illustration" src="/problems/bookingaroom/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://en.wikipedia.org/wiki/File:Pigeons-in-holes.jpg">Photo</a>
+        by Igor523 via Wikimedia Commons, cc by-sa
+      </div>
+</div>Going to a contest such as NWERC is not all fun and
+    games, there are also some worldly matters to tend to. One of
+    these is to book hotel rooms in time, before all the rooms in
+    town are booked.
+
+    <p>In this problem, you should write a program to search for
+    available rooms in a given hotel. The hotel has <span class="tex2jax_process">$r$</span> rooms, numbered from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$r$</span>, and you will be given a list
+    describing which of these rooms are already booked.</p>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>one line with two integers <span class="tex2jax_process">$r$</span> and <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1\leq r \leq 100$</span>, <span class="tex2jax_process">$0 \leq n \le r$</span>), the number of
+        rooms in the hotel and the number of rooms that are already
+        booked, respectively;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, each
+        with an integer between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$r$</span> (inclusive), a room number
+        that is already booked;</p>
+</li>
+</ul>
+<p>All <span class="tex2jax_process">$n$</span> room numbers of
+    the already booked rooms are distinct.</p>
+<h2>Output</h2>
+<p>If there are available rooms, output the room number of any
+    such room. Otherwise, output “<tt class="ttfamily">too
+    late</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+100 5
+42
+3
+2
+99
+1
+</pre>
+</td>
+<td>
+<pre>
+23
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 3
+2
+3
+1
+</pre>
+</td>
+<td>
+<pre>
+too late
+</pre>
+</td>
+</tr>
+</table>
+</div>

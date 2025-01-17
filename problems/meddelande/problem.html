@@ -1,0 +1,126 @@
+<div class="problembody">
+<p>In the city where Paula lives, there is a large square. The
+    square can be represented as a grid with <span class="tex2jax_process">$N$</span> rows and <span class="tex2jax_process">$M$</span> columns. Some of the grid cells
+    contain engraved letters.</p>
+<p>According to a legend, these letters form a message if one
+    walks on the cells in a specific order. To make it correct, one
+    must start in the upper-left corner and end in the lower-right
+    corner, by only moving right and downward. If one manages to
+    visit all cells with engraved letters in this way, the secret
+    message will be revealed.</p>
+<p>Paula has decided to crack the mystery once and for all and
+    find the secret message.</p>
+<p>Write a program that finds the message given the grid.</p>
+<h2>Input</h2>
+<p>The first line contains two integers <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span> (<span class="tex2jax_process">$1
+    \leq N, M \leq 6$</span>), the number of rows and columns in
+    the grid.</p>
+<p>The following <span class="tex2jax_process">$N$</span> lines
+    contain a string of length <span class="tex2jax_process">$M$</span> each. These strings represent the
+    rows in the grid and contain lowercase letters <tt class="ttfamily">a</tt>-<tt class="ttfamily">z</tt> and dots “.”. The
+    dots represent empty cells.</p>
+<p>It is guaranteed that it is possible to visit all cells with
+    engraved letters by starting in the upper-left corner and
+    moving right and downward to the lower-right corner.</p>
+<h2>Output</h2>
+<p>Print a string, the secret message.</p>
+<h2>Points</h2>
+<p>Your solution will be tested on several test case groups. To
+    get the points for a group, it must pass all the test cases in
+    the group.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Group</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Point value</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Constraints</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$20$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$N = 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>The number of letters is <span class="tex2jax_process">$N+M-1$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$40$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No additional constraints.</p>
+</td>
+</tr>
+</table>
+<h2>Explanation of sample 1</h2>
+<div class="figure">
+<center>
+<p><img alt="\includegraphics[width=0.3\textwidth ]{sample.PNG}" src="/problems/meddelande/file/statement/en/img-0001.PNG" style="width:30.00%"/><br/>
+        The image shows the solution to sample case 1. The dark
+        cells represent a possible way to go from the upper-left
+        corner to the lower-right corner, visiting all letters.</p>
+</center>
+</div>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5 6
+pa....
+......
+.u.l..
+.....a
+......
+</pre>
+</td>
+<td>
+<pre>paula
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+sn.
+.a.
+.ke
+</pre>
+</td>
+<td>
+<pre>snake
+</pre>
+</td>
+</tr>
+</table>
+</div>

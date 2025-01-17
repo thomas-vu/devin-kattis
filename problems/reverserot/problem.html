@@ -1,0 +1,105 @@
+<div class="problembody">
+<p>A very simplistic scheme, which was used at one time to
+    encode information, is to rotate the characters within an
+    alphabet and rewrite them. ROT13 is the variant in which the
+    characters A-Z are rotated 13 places, and it was a commonly
+    used insecure scheme that attempted to “hide” data in many
+    applications from the late 1990’s and into the early
+    2000’s.</p>
+<p>It has been decided by Insecure Inc. to develop a product
+    that “improves” upon this scheme by first reversing the entire
+    string and then rotating it. As an example, if we apply this
+    scheme to string <tt class="ttfamily">ABCD</tt> with a reversal
+    and rotation of 1, after the reversal we would have DCBA and
+    then after rotating that by 1 position we have the result
+    <tt class="ttfamily">EDCB</tt>.</p>
+<p>Your task is to implement this encoding scheme for strings
+    that contain only capital letters, underscores, and periods.
+    Rotations are to be performed using the alphabet order:</p>
+<pre>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ_.
+</pre>
+<p>Note that underscore follows Z, and the period follows the
+    underscore. Thus a forward rotation of 1 means <tt class="ttfamily">A</tt> is shifted to <tt class="ttfamily">B</tt>,
+    that is:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">A</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">B</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">B</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">C</tt></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\vdots $</span></p>
+</li>
+<li>
+<p><tt class="ttfamily">Z</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">_</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">_</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">.</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">.</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">A</tt></p>
+</li>
+</ul>
+<p>Likewise a rotation of 3 means:</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">A</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">D</tt></p>
+</li>
+<li>
+<p><tt class="ttfamily">B</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">E</tt></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\vdots $</span></p>
+</li>
+<li>
+<p><tt class="ttfamily">.</tt> <span class="tex2jax_process">$\rightarrow $</span> <tt class="ttfamily">C</tt></p>
+</li>
+</ul>
+<h2>Input</h2>
+<p>The input is composed of <span class="tex2jax_process">$T$</span> test cases (<span class="tex2jax_process">$1 \leqslant T \leqslant 30$</span>), each on
+    one line.</p>
+<p>Each input line will consist of an integer <span class="tex2jax_process">$N$</span>, followed by a string.
+    <span class="tex2jax_process">$N$</span> is the amount of
+    forward rotation, such that <span class="tex2jax_process">$1
+    \leqslant N \leqslant 27$</span>. The string is the message to
+    be encrypted, and will consist of 1 to 40 characters, using
+    only capital letters, underscores, and periods.</p>
+<p>The end of the input will be denoted by a final line with
+    only the number <tt class="ttfamily">0</tt>.</p>
+<h2>Output</h2>
+<p>For each test case, display the “encrypted” message that
+    results after being reversed and then shifted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+1 ABCD
+3 YO_THERE.
+1 .DOT
+14 ROAD
+9 SHIFTING_AND_ROTATING_IS_NOT_ENCRYPTING
+2 STRING_TO_BE_CONVERTED
+1 SNQZDRQDUDQ
+0
+</pre>
+</td>
+<td>
+<pre>
+EDCB
+CHUHKWBR.
+UPEA
+ROAD
+PWRAYF_LWNHAXWH.RHPWRAJAX_HMWJHPWRAORQ.
+FGVTGXPQEAGDAQVAIPKTVU
+REVERSE_ROT
+</pre>
+</td>
+</tr>
+</table>
+</div>

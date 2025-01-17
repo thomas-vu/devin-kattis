@@ -1,0 +1,81 @@
+<div class="problembody">
+<p>Poffins are one of the most delicious treats that Pokemon
+    love to eat. You want to reward your <span class="tex2jax_process">$N$</span> Pokemon for their hard work in
+    helping you become the Pokemon Champion, so you decide to buy
+    <span class="tex2jax_process">$M$</span> poffins and you lay
+    them in a pile for all the Pokemon to take. Each Pokemon takes
+    some amount of poffins (potentially even no poffins) until no
+    poffins remain in the pile. However, you notice that some
+    Pokemon didn’t end up getting as many poffins as others, so you
+    set out to distribute the poffins more fairly. You line up your
+    Pokemon in a certain order and go through them one by one until
+    you reach the end of the line, repeating a specific process for
+    each Pokemon in order as follows:</p>
+<ol class="enumerate">
+<li>
+<p>If the current Pokemon doesn’t have a poffin, skip the
+        following steps and move on to the next Pokemon in the
+        line.</p>
+</li>
+<li>
+<p>Take one poffin from the current Pokemon.</p>
+</li>
+<li>
+<p>Give that poffin to the Pokemon with the least number of
+        poffins (it might be the same Pokemon you took the poffin
+        from). If there are multiple Pokemon with the least number
+        of poffins, you may pick any of them to give the poffin
+        to.</p>
+</li>
+</ol>
+<p>After completing this process, you notice that the Pokemon
+    with the most amount of poffins has <span class="tex2jax_process">$P$</span> poffins and the Pokemon with the
+    least poffins has <span class="tex2jax_process">$p$</span>
+    poffins. What is the minimum value of <span class="tex2jax_process">$P-p$</span> over all possible ways the
+    Pokemon initially took poffins?</p>
+<p>For example, if you had <span class="tex2jax_process">$3$</span> Pokemon and bought <span class="tex2jax_process">$5$</span> poffins, one way to achieve the
+    minimum value is if two of the three Pokemon took <span class="tex2jax_process">$1$</span> poffin and one took <span class="tex2jax_process">$3$</span> poffins initially. Then, after the
+    redistribution process, <span class="tex2jax_process">$P$</span> would be <span class="tex2jax_process">$2$</span> and <span class="tex2jax_process">$p$</span> would be <span class="tex2jax_process">$1$</span>, so <span class="tex2jax_process">$P-p=1$</span>, which happens to be the
+    minimum value across all initial distributions of poffins to
+    Pokemon in this case.</p>
+<h2>Input</h2>
+<p>The input consists of one line containing integers
+    <span class="tex2jax_process">$N$</span> and <span class="tex2jax_process">$M$</span>. This denotes the number of
+    Pokemon (<span class="tex2jax_process">$2 \leq N \leq
+    10^7$</span>) and the total number of poffins (<span class="tex2jax_process">$1 \leq M \leq 10^9$</span>)</p>
+<h2>Output</h2>
+<p>Output a single line containing the minimum value of
+    <span class="tex2jax_process">$P-p$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 5
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 6
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

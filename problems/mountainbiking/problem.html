@@ -1,0 +1,95 @@
+<div class="problembody">
+<p>Mount Snowdon, the tallest place in Wales, is a major
+    attraction for mountain bikers far and wide. To take advantage
+    of the popularity of this thrilling sport, an enterprising new
+    venture plans to open several new bike repair shops throughout
+    the rolling foothills.</p>
+<p>The cunning small business owner’s financial success relates
+    directly to the velocity of the average biker: the faster a
+    biker is going at the foot of the hill the more likely they are
+    to encounter a problem and have to walk — or sometimes limp —
+    into the shop.</p>
+<p>Snowdon, like most mountains, has a very angular sort of
+    shape. In fact, the profile of the mountain can be represented
+    as <span class="tex2jax_process">$N$</span> connected line
+    segments pointing downward at various angles, each starting
+    where the last left off. Given this highly scientific
+    representation of the landscape, we need to find the likely
+    speeds of bikers given that they may start off from the top of
+    any of the <span class="tex2jax_process">$N$</span>
+    segments.</p>
+<p>As we all know, a biker on a <span class="tex2jax_process">$\theta $</span>-degree slope from the
+    vertical will accelerate at a rate of precisely <span class="tex2jax_process">$g \cdot \cos (\theta ) \; \; \textrm{m}
+    \textrm{s}^{-2}$</span> along the slope.</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing a positive integer <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1 \le N \le 4$</span>), the number of
+        line segments making up the mountain, followed by a space
+        and then a real number <span class="tex2jax_process">$g$</span> (<span class="tex2jax_process">$1 \le g \le 100$</span>), the
+        coefficient of acceleration due to gravity.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$N$</span> more lines each
+        containing two integers <span class="tex2jax_process">$D_
+        i$</span> and then <span class="tex2jax_process">$\theta _
+        i$</span> (<span class="tex2jax_process">$1 \le D \le 10^4;
+        1 \le \theta \le 89$</span>): the sloped distance in metres
+        and absolute angle in degrees of this line segment from the
+        vertical respectively. The segments are ordered from the
+        top of the hill to its bottom.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Each of the <span class="tex2jax_process">$N$</span> lines
+    of output should contain one real number: the velocity of a
+    biker starting at the <span class="tex2jax_process">$i^{\text
+    {th}}$</span>-most segment from the top and finishing at the
+    foot of the mountain.</p>
+<p>Answers will be judged as correct if they are printed to
+    within an absolute or relative difference of <span class="tex2jax_process">$10^{-6}$</span> from their exact values.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 9
+69 60
+100 60
+</pre>
+</td>
+<td>
+<pre>
+39.0
+30.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 77
+500 65
+20 5
+1000 80
+</pre>
+</td>
+<td>
+<pre>
+249.70323
+172.65601
+163.52926
+</pre>
+</td>
+</tr>
+</table>
+</div>

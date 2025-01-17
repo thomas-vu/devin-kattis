@@ -1,0 +1,205 @@
+<div class="problembody">
+<p>A crime has been committed in the city of <tt class="ttfamily">&lt;insert name here&gt;</tt>! <em>All</em> of the
+    donuts in the bakery next to the police station has
+    mysteriously disappeared. Since this is the favourite bakery of
+    the police, every resource available will be used to find the
+    thief.</p>
+<p>The police has made a list of suspected donut thieves, but
+    there is no evidence against anyone yet. Luckily, there is
+    security footage from the scene of the crime. Unfortunately it
+    takes way too long time to watch all of the footage to be done
+    before the expiry date of the donuts has passed.</p>
+<p>Therefore, you have been tasked with writing a program to
+    find the cookie thieves in the images. Your program will be
+    given a <span class="tex2jax_process">$W \times W$</span> image
+    of a suspected cookie thief, and a <span class="tex2jax_process">$B \times B$</span> image from the security
+    footage. An image consists of a rectangular array of pixels,
+    which we represent as integers.</p>
+<p>Your program should count the number of occurances of the
+    cookie thief image inside the security footage image. We say
+    that a <span class="tex2jax_process">$W \times W$</span>
+    subrectangle of the security footage contains the cookie thief
+    image if there exists some constant <span class="tex2jax_process">$C$</span> such that every pixel in the
+    subrectangle equals the corresponding pixel in the cookie thief
+    image plus <span class="tex2jax_process">$C$</span>. This is
+    because the images may have been taken using different exposure
+    settings, meaning one of the images can be lighter than the
+    other.</p>
+<h2>Example</h2>
+<p>Let the security footage be</p><span class="tex2jax_process">\[ \begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4
+    \\ 1 &amp; 2 &amp; 3 &amp; 4 \\ 4 &amp; 3 &amp; 3 &amp; 4 \\ 4
+    &amp; 3 &amp; 3 &amp; 4 \end{bmatrix} \]</span>
+<p>and the cookie thief image is</p><span class="tex2jax_process">\[ \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 1
+    \end{bmatrix} \]</span>
+<p>Then there are five matches in the security footage: those
+    areas with upper left corners in <span class="tex2jax_process">$(0, 0), (0, 1), (0, 2), (1, 2), (2,
+    2)$</span> (denoted by <span class="tex2jax_process">$(row,
+    column)$</span>). The constants <span class="tex2jax_process">$C$</span> are <span class="tex2jax_process">$1, 2, 3, 3, 3$</span> respectively.</p>
+<h2>Task</h2>
+<p>Your task is to compute how many times the cookie theif
+    image appears in the security footage image. You should
+    implement a function <tt class="ttfamily">surveillance(B, W, S,
+    T)</tt>.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">surveillance(B, W, S, T)</tt> -
+        this function will be called exactly once by the judge.</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">B</tt>: an integer - the size
+            of the security footage image.</p>
+</li>
+<li>
+<p><tt class="ttfamily">W</tt>: an integer - the size
+            of the cookie thief image.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$W \le B$</span></p>
+</li>
+<li>
+<p><tt class="ttfamily">S</tt>: a two-dimensional array
+            with <span class="tex2jax_process">$B \times B$</span>
+            integers. <tt class="ttfamily">S[i][j]</tt>
+            (<span class="tex2jax_process">$0 \le i, j &lt;
+            B$</span>) contains the value of the pixel on row
+            <span class="tex2jax_process">$i$</span> and column
+            <span class="tex2jax_process">$j$</span> in the
+            security footage image.</p>
+</li>
+<li>
+<p><tt class="ttfamily">T</tt>: a two-dimensional array
+            with <span class="tex2jax_process">$W \times W$</span>
+            integers. <tt class="ttfamily">T[i][j]</tt>
+            (<span class="tex2jax_process">$0 \le i, j &lt;
+            W$</span>) contains the value of the pixel on row
+            <span class="tex2jax_process">$i$</span> and column
+            <span class="tex2jax_process">$j$</span> in the cookie
+            thief.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$0 \le S[i][j],
+            T[i][j] \le 10^9$</span></p>
+</li>
+<li>
+<p>The function should return an integer, the number of
+            matches in the image.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>A code skeleton containing the function to be implemented,
+    together with a sample grader, can be found at <a href="http://progolymp.se/uploads/kattis-attachments/surveillance.zip">
+    http://progolymp.se/uploads/kattis-attachments/surveillance.zip</a>.</p>
+<h2>Subtasks</h2>
+<p>The problem consists of a number of subtasks. Each subtask
+    gives some amount of points, and to pass the subtask you must
+    pass all the test cases in the subtask.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p><b class="bfseries">Subtask</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Points</b></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><b class="bfseries">Limits</b></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>7</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le W = B \le 1\,
+          000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>14</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le B \le 1\,
+          000$</span>, <span class="tex2jax_process">$0 \le
+          T[i][j], S[i][j] \le 1$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>24</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le B \le 1\,
+          000$</span>, <span class="tex2jax_process">$0 \le
+          T[i][j], S[i][j] &lt; 16$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>55</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \le B \le 1\,
+          000$</span></p>
+</td>
+</tr>
+</table>
+<h2>Input format</h2>
+<p>The sample judge reads input in the following format:</p>
+<ul class="itemize">
+<li>
+<p>line <span class="tex2jax_process">$1$</span>:
+        <tt class="ttfamily">B W</tt></p>
+</li>
+<li>
+<p>line <span class="tex2jax_process">$i = 2$</span> to
+        <span class="tex2jax_process">$2 + B - 1$</span>:
+        <tt class="ttfamily">B[i][0] B[i][1] ... B[i][B -
+        1]</tt></p>
+</li>
+<li>
+<p>line <span class="tex2jax_process">$i = 2 + B$</span> to
+        <span class="tex2jax_process">$2 + B + W - 1$</span>:
+        <tt class="ttfamily">W[i][0] W[i][1] ... W[i][B -
+        1]</tt></p>
+</li>
+</ul>
+<h2>Output format</h2>
+<p>The judge writes a single line containing the return value
+    of <tt class="ttfamily">surveillance(B, W, S, T)</tt>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 2
+1 2 3 4
+1 2 3 4
+4 3 3 4
+4 3 3 4
+0 1
+0 1
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+</div>

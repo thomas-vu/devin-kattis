@@ -1,0 +1,143 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/charlesincharge/file/statement/en/img-0001.jpg" class="illustration" src="/problems/charlesincharge/file/statement/en/img-0001.jpg"/>
+<div class="description">
+<a href="https://www.flickr.com/photos/f-r-a-n-k/359123912/"><small class="tiny">
+        Picture by Frank Hebbert via Flickr</small></a>
+</div>
+</div>
+<p>Every day, Charles drives from his home to work and back. He
+    uses the highways of the country that run from one city to
+    another. Charles has decided that he wants to help the
+    environment by buying an electrical car. Electrical cars,
+    however, are not very common in his country yet. They can only
+    be charged inside a city; there are no charging stations along
+    the highways in between the cities. Moreover, all electrical
+    cars are identical except for one thing: the size of the
+    battery. As batteries are very expensive, Charles would like to
+    buy a car with battery that is as small as possible.</p>
+<p>However, this greatly increases the time it takes for him to
+    get home, much to the distaste of his wife, Charlotte. This has
+    spawned an argument, and after much discussion they have
+    decided to compromise: Charlotte is fine with Charles taking a
+    longer route, as long as it its length is at most <span class="tex2jax_process">$X \% $</span> longer than the length of
+    shortest route that Charles could have taken to get home from
+    work by using a regular car. Charles has agreed with this, and
+    he now wants to find a route that minimizes the size of the car
+    battery that he needs, i.e. the route that minimizes the
+    maximum distance that Charles has to drive on a highway without
+    passing through a city.</p>
+<p>The amount of time Charles spends to charge his car can be
+    neglected.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{testcase.pdf}" src="/problems/charlesincharge/file/statement/en/img-0002.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The graph of the second and third test
+          case. The shortest path has length <span class="tex2jax_process">$16$</span>. In the second testcase,
+          Charles’s travel distance may not exceed <span class="tex2jax_process">$16 \cdot 1.15 = 18.4$</span> distance
+          units. As a result, he cannot use a battery with which he
+          can travel <span class="tex2jax_process">$4$</span>
+          distance units, as the red path <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$4$</span>–<span class="tex2jax_process">$5$</span>–<span class="tex2jax_process">$6$</span>–<span class="tex2jax_process">$8$</span>–<span class="tex2jax_process">$9$</span> has length <span class="tex2jax_process">$20$</span>. Therefore, he uses the
+          blue path <span class="tex2jax_process">$1$</span>–<span class="tex2jax_process">$4$</span>–<span class="tex2jax_process">$7$</span>–<span class="tex2jax_process">$8$</span>–<span class="tex2jax_process">$9$</span>, which has length
+          <span class="tex2jax_process">$18$</span>, and the
+          longest edge has length <span class="tex2jax_process">$5$</span>. In the third test case, he
+          is allowed to travel <span class="tex2jax_process">$16
+          \cdot 1.30 = 20.8$</span> distance units, so he can
+          follow the red path, where the longest edge has length
+          <span class="tex2jax_process">$4$</span>.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input starts with integers <span class="tex2jax_process">$2 \leq N \leq 10\, 000$</span>, <span class="tex2jax_process">$1 \leq M \leq 100\, 000$</span> and
+    <span class="tex2jax_process">$0 \leq X \leq 10\, 000$</span>:
+    the number of cities, the number of highways connecting the
+    cities and the aforementioned percentage <span class="tex2jax_process">$X$</span>. City <span class="tex2jax_process">$1$</span> is the place where Charles lives
+    and city <span class="tex2jax_process">$N$</span> is where he
+    works.</p>
+<p>Then follow <span class="tex2jax_process">$M$</span> lines
+    with on each line three integers: <span class="tex2jax_process">$1 \leq C_1 \leq N$</span>, <span class="tex2jax_process">$1 \leq C_2 \leq N$</span>, <span class="tex2jax_process">$1 \leq T \leq 10^9$</span>. This means that
+    there is a highway of length <span class="tex2jax_process">$T$</span> connecting cities <span class="tex2jax_process">$C_1$</span> and <span class="tex2jax_process">$C_2$</span> (Charles can traverse the
+    highway in both directions) <em>without</em> passing through
+    any other cities. You may assume that there exists a path from
+    city <span class="tex2jax_process">$1$</span> to city
+    <span class="tex2jax_process">$N$</span>.</p>
+<h2>Output</h2>
+<p>The output is a single integer: the smallest maximum
+    distance that Charles has to travel on a highway without
+    passing through a city, such that the route he takes is at most
+    <span class="tex2jax_process">$X\% $</span> longer than the
+    shortest route.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 1 100
+1 2 5
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 8 15
+1 9 16
+1 4 4
+4 5 4
+5 6 4
+6 8 4
+4 7 5
+7 8 5
+8 9 4
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+9 8 30
+1 9 16
+1 4 4
+4 5 4
+5 6 4
+6 8 4
+4 7 5
+7 8 5
+8 9 4
+</pre>
+</td>
+<td>
+<pre>
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

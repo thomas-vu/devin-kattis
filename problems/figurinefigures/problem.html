@@ -1,0 +1,107 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/figurinefigures/file/statement/en/img-0001.png" class="illustration" src="/problems/figurinefigures/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by Toby Hudson (<a href="https://en.wikipedia.org/wiki/File:Brass_scales_with_cupped_trays.png">Wikimedia
+        Commons</a>), CC BY-SA 3.0
+      </div>
+</div>
+<p>The Miniature Toy Association (or MTA for short) is
+    releasing the latest edition of its brand of collectible
+    figurines. MTA used to sell them individually, but now has
+    decided to adopt a new business strategy that involves randomly
+    choosing <span class="tex2jax_process">$4$</span> figurines
+    from the entire collection to be packaged and sold together as
+    a ‘<span class="tex2jax_process">$4$</span>-pack’. Each
+    figurine in a <span class="tex2jax_process">$4$</span>-pack is
+    chosen independently and randomly with uniform distribution. As
+    such, it is possible that a <span class="tex2jax_process">$4$</span>-pack may contain multiple copies
+    of a particular figurine.</p>
+<p>Even though some figurines may be more valuable than others,
+    every randomly assembled <span class="tex2jax_process">$4$</span>-pack is sold at the same price.
+    Customers buying a <span class="tex2jax_process">$4$</span>-pack of figurines do not know
+    ahead of time which figurines will be inside, and so it is a
+    matter of chance whether they get the figurines that they want
+    most. While the price is the same across all <span class="tex2jax_process">$4$</span>-packs, the weight is not, as each
+    figurine has a distinct integer weight in grams.</p>
+<p>Before MTA releases its new line of figurines, its Chief
+    Financial Officer (CFO) would like an executive summary with
+    information about the proposed <span class="tex2jax_process">$4$</span>-packs. Specifically, the CFO wants
+    to know: the greatest possible weight of a <span class="tex2jax_process">$4$</span>-pack, the smallest possible weight
+    of a <span class="tex2jax_process">$4$</span>-pack, the number
+    of distinct weights that a <span class="tex2jax_process">$4$</span>-pack could have, and the expected
+    weight of a <span class="tex2jax_process">$4$</span>-pack. Note
+    that the expected weight is the average (mean) weight across
+    all possible distinct <span class="tex2jax_process">$4$</span>-packs, where two <span class="tex2jax_process">$4$</span>-packs are distinct if and only if
+    one <span class="tex2jax_process">$4$</span>-pack has a
+    different number of figurines of any particular weight than the
+    other <span class="tex2jax_process">$4$</span>-pack. So, for
+    example, a <span class="tex2jax_process">$4$</span>-pack with
+    weights <span class="tex2jax_process">$\{ 2,2,3,5\} $</span> is
+    distinct from a <span class="tex2jax_process">$4$</span>-pack
+    with weights <span class="tex2jax_process">$\{ 2,3,3,4\}
+    $</span> (even though they both have the same total weight).
+    Also, a <span class="tex2jax_process">$4$</span>-pack with
+    weights <span class="tex2jax_process">$\{ 2,2,3,5\} $</span> is
+    distinct from a 4-pack with weights <span class="tex2jax_process">$\{ 2,3,3,5\} $</span>.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The first line of
+    the input contains a single integer <span class="tex2jax_process">$N$</span>, the number of different figurines
+    to be produced, where <span class="tex2jax_process">$1\leq
+    N\leq 40\, 000$</span>. The next line contains <span class="tex2jax_process">$N$</span> space-separated integers
+    representing the weight in grams of each of the figurines. Each
+    weight, <span class="tex2jax_process">$k$</span>, is an integer
+    satisfying <span class="tex2jax_process">$1\leq k\leq 60\,
+    000$</span>, and all <span class="tex2jax_process">$N$</span>
+    weights are distinct.</p>
+<h2>Output</h2>
+<p>The output should consist of a single line with <span class="tex2jax_process">$4$</span> space-separated values. The first
+    value should be an integer, the maximum weight of a
+    <span class="tex2jax_process">$4$</span>-pack in grams for the
+    given set of figurines. The second value should be an integer,
+    the minimum weight of a <span class="tex2jax_process">$4$</span>-pack in grams for the given set of
+    figurines. The third value should be an integer, the number of
+    distinct weights that the <span class="tex2jax_process">$4$</span>-packs can have for the given set
+    of figurines. The fourth value should be a floating-point
+    value, the expected weight of a <span class="tex2jax_process">$4$</span>-pack in grams for the given set of
+    figurines, with an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 2 4 7
+</pre>
+</td>
+<td>
+<pre>
+28 4 21 14.0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+2 5 4
+</pre>
+</td>
+<td>
+<pre>
+20 8 12 14.66666667
+</pre>
+</td>
+</tr>
+</table>
+</div>

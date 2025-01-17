@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>I bet you have seen a pebble solitaire game. You know the
+    game where you are given a board with an arrangment of small
+    cavities, initially all but one occupied by a pebble each. The
+    aim of the game is to remove as many pebbles as possible from
+    the board. Pebbles disappear from the board as a result of a
+    move. A move is possible if there is a straight line of three
+    adjacent cavities, let us call them <span class="tex2jax_process">$A$</span>, <span class="tex2jax_process">$B$</span>, and <span class="tex2jax_process">$C$</span>, with <span class="tex2jax_process">$B$</span> in the middle, where <span class="tex2jax_process">$A$</span> is vacant, but <span class="tex2jax_process">$B$</span> and <span class="tex2jax_process">$C$</span> each contain a pebble. The move
+    consists of moving the pebble from <span class="tex2jax_process">$C$</span> to <span class="tex2jax_process">$A$</span>, and removing the pebble in
+    <span class="tex2jax_process">$B$</span> from the board. You
+    may continue to make moves until no more moves are
+    possible.</p>
+<p>In this problem, we look at a simple variant of this game,
+    namely a board with twelve cavities located along a line. In
+    the beginning of each game, some of the cavities are occupied
+    by pebbles. Your mission is to find a sequence of moves such
+    that as few pebbles as possible are left on the board.</p>
+<div class="figure" id="a0000001508">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{pebble}" src="/problems/pebblesolitaire/file/statement/en/img-0001.png" style="width:80.00%"/>
+<div class="caption">
+<b>Figure 1</b>: In a) there are two possible moves,
+          namely <span class="tex2jax_process">$8 \rightarrow
+          6$</span>, or <span class="tex2jax_process">$7
+          \rightarrow 9$</span>. In b) the result of the
+          <span class="tex2jax_process">$8 \rightarrow 6$</span>
+          move is depicted, and again there are two possible moves,
+          <span class="tex2jax_process">$5 \rightarrow 7$</span>,
+          or <span class="tex2jax_process">$6 \rightarrow
+          4$</span>. Making the first of these results in c), from
+          which there are no further moves.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input begins with a positive integer <span class="tex2jax_process">$n \le 10$</span> on a line of its own.
+    Thereafter <span class="tex2jax_process">$n$</span> different
+    games follow. Each game consists of one line of input with
+    exactly twelve characters, describing the twelve cavities of
+    the board in order. Each character is either ‘<tt class="ttfamily">-</tt>’ or ‘<tt class="ttfamily">o</tt>’. A
+    ‘<tt class="ttfamily">-</tt>’ character denotes an empty
+    cavity, whereas an ‘<tt class="ttfamily">o</tt>’ character
+    denotes a cavity with a pebble in it. There is at least one
+    pebble in all games.</p>
+<h2>Output</h2>
+<p>For each of the <span class="tex2jax_process">$n$</span>
+    games in the input, output the minimum number of pebbles left
+    on the board possible to obtain as a result of moves, on a line
+    of its own.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+---oo-------
+-o--o-oo----
+-o----ooo---
+oooooooooooo
+oooooooooo-o
+</pre>
+</td>
+<td>
+<pre>
+1
+2
+3
+12
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

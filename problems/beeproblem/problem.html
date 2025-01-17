@@ -1,0 +1,93 @@
+<div class="problembody">
+<p>You are a busy little bee, and you have a problem. After
+    collecting nectar all day long, you are returning to the
+    beehive with a large supply of honey. You would really like to
+    take a nap now, but sadly, you have to store all the honey in
+    your beehive first. Opening up a cell in the hive to funnel
+    honey into takes a lot of time, so you want to avoid doing this
+    as much as possible.</p>
+<p>Some of the cells in the beehive are already filled with
+    old, hardened honey. The other cells are still empty. If you
+    pour honey into an empty cell, it automatically starts flowing
+    into adjacent empty cells. From these cells, the honey again
+    flows to other neighbouring empty cells, and so on. This saves
+    you from having to funnel honey into them directly. You decide
+    to use this to your advantage, by pouring into cells with lots
+    of (indirect) adjacent open cells.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.5\textwidth ]{image.pdf}" src="/problems/beeproblem/file/statement/en/img-0001.png" style="width:50.00%"/>
+<div class="caption">
+<b>Figure 1</b>: The beehives from the first two samples.
+          The black hexagons already contain hardened honey. The
+          white cells are still empty.
+        </div>
+</center>
+</div>
+<p>You have some units of honey, and know the layout of your
+    beehive. By cleverly choosing which cells to funnel honey into,
+    what is the minimal amount of work you have to do?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The input starts with three integers, <span class="tex2jax_process">$0 \leq h \leq 10^6$</span>, the amount
+        of honey you have, and <span class="tex2jax_process">$1
+        \leq n, m \leq 10^3$</span>, the dimensions of the
+        grid.</p>
+</li>
+<li>
+<p>Then follow <span class="tex2jax_process">$n$</span>
+        lines, one for each row of the grid. Each row has
+        <span class="tex2jax_process">$m$</span> symbols, either
+        <tt>.</tt>, representing an empty cell, or <tt>#</tt>,
+        representing a filled cell. These symbols are separated by
+        spaces. Furthermore, every second row starts with a space,
+        as these are slightly offset to the right.</p>
+</li>
+</ul>
+<p>The grid always has enough open cells to store all your
+    honey.</p>
+<h2>Output</h2>
+<p>Output a single integer, the number of cells you have to
+    funnel honey into directly to store all your honey in the
+    hive.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 4 4
+. # # .
+ # . # .
+# # # .
+ # . . .
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6 3 6
+. . # # . .
+ . . # # . #
+# # # . # #
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+</div>

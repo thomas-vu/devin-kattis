@@ -1,0 +1,90 @@
+<div class="problembody">
+<p>After many years without any public transport, the town
+    Krockholm will finally get a network of bus lines. The plans
+    are still on the drawing board, but it has been decided that
+    there shall be <span class="tex2jax_process">$n$</span>
+    stations labelled <span class="tex2jax_process">$1$</span> to
+    <span class="tex2jax_process">$n$</span>, and <span class="tex2jax_process">$m$</span> bus lines where each line connects
+    two stations. The only thing remaining is to decide which pairs
+    of stations should be connected. One important requirement is
+    that it should be possible to get from any station to any
+    other. In addition to this, someone had the brilliant idea that
+    the bus lines should be labelled by the sum of their endpoints.
+    This means that all of these sums must be different.</p>
+<p>You are given two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span>. Construct a graph with
+    <span class="tex2jax_process">$m$</span> edges and <span class="tex2jax_process">$n$</span> vertices labelled <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$n$</span>, such that:</p>
+<ol class="enumerate">
+<li>
+<p>The graph is connected.</p>
+</li>
+<li>
+<p>The sums of edge endpoints are distinct.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The input consists of a single line containing two integers
+    <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \leq n \leq 100$</span>, <span class="tex2jax_process">$1 \leq
+    m \leq 10^4$</span>).</p>
+<h2>Output</h2>
+<p>If it is not possible to construct a graph with the given
+    properties, print “<tt class="ttfamily">-1</tt>”. Otherwise,
+    print <span class="tex2jax_process">$m$</span> lines where the
+    <span class="tex2jax_process">$i$</span>’th line contains two
+    integers <span class="tex2jax_process">$a_ i$</span>,
+    <span class="tex2jax_process">$b_ i$</span>, the endpoints of
+    the <span class="tex2jax_process">$i$</span>’th edge. If there
+    are many possible solutions, any one of them will be
+    accepted.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 4
+</pre>
+</td>
+<td>
+<pre>2 1
+2 3
+4 3
+4 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>10 100
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>10 1
+</pre>
+</td>
+<td>
+<pre>-1
+</pre>
+</td>
+</tr>
+</table>
+</div>

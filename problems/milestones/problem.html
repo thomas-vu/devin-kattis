@@ -1,0 +1,133 @@
+<div class="problembody">
+<p>Driving through the Irish countryside, one frequently sees
+    enigmatic small grey stones sitting by the wayside, spaced
+    about a kilometre and a half apart. As it turns out, these
+    stones once had a purpose: they were <em>milestones</em>,
+    intended to demarcate this venerable unit of measurement.</p>
+<p>Being so old and, crucially, collectible by magpies and
+    larger scamps alike, not all of these stones have remained.</p>
+<p>Passing by some more of these tattered markers at a constant
+    but unknown speed, you may still be able to gain some
+    information from their placements. For example, since you
+    started counting you have passed exactly <span class="tex2jax_process">$M$</span> remaining stones; how fast could
+    you have been driving?</p>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>One line containing two positive integers, <span class="tex2jax_process">$M$</span> and <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$ 2 \leq M \leq N \leq 10^3 $</span>):
+        the number of consecutive stones you noticed and the total
+        number of stones along the road respectively.</p>
+</li>
+<li>
+<p>One line containing <span class="tex2jax_process">$M$</span> distinct non-negative integers
+        <span class="tex2jax_process">$T_{1..M}$</span> in
+        ascending order—the times at which you passed stones in
+        hours (<span class="tex2jax_process">$ 0 \leq T_ i \leq
+        10^{15} $</span>).</p>
+</li>
+<li>
+<p>One line containing <span class="tex2jax_process">$N$</span> distinct non-negative integers
+        <span class="tex2jax_process">$X_{1..N}$</span> in
+        ascending order—the distances along the road of each
+        milestone (<span class="tex2jax_process">$ 0 \leq X_ i \leq
+        10^{15} $</span>) in miles.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Output two lines:</p>
+<ul class="itemize">
+<li>
+<p>First, the number of distinct possible speeds at which
+        the car could have been travelling.</p>
+</li>
+<li>
+<p>Second, a space-separated list of all of the possible
+        distances between the first milestone you saw and the
+        second milestone you saw, in increasing order.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 12
+1 2 4 5
+6 8 12 18 26 28 30 34 36 37 39 40
+</pre>
+</td>
+<td>
+<pre>
+2
+1 2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 10
+1 2 3 4 5
+0 1 2 3 4 5 6 7 8 9
+</pre>
+</td>
+<td>
+<pre>
+1
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+3 6
+1 2 4
+11 12 15 19 24 30
+</pre>
+</td>
+<td>
+<pre>
+0
+
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 3
+1123456789000 1123456789007
+5 8 13
+</pre>
+</td>
+<td>
+<pre>
+2
+3 5
+</pre>
+</td>
+</tr>
+</table>
+</div>

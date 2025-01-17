@@ -1,0 +1,73 @@
+<div class="problembody">
+<p>You are on your way to your first job interview as a program
+    tester, and you are already late. The interview is in a
+    skyscraper and you are currently in floor <span class="tex2jax_process">$s$</span>, where you see an elevator. Upon
+    entering the elvator, you learn that it has only two buttons,
+    marked “<i class="sc">UP</i> <span class="tex2jax_process">$u$</span>” and “<i class="sc">DOWN</i>
+<span class="tex2jax_process">$d$</span>”. You conclude that
+    the <i class="sc">UP</i>-button takes the elevator <span class="tex2jax_process">$u$</span> floors up (if there aren’t enough
+    floors, pressing the <i class="sc">UP</i>-botton does nothing,
+    or at least so you assume), whereas the <i class="sc">DOWN</i>-button takes you <span class="tex2jax_process">$d$</span> stories down (or none if there
+    aren’t enough). Knowing that the interview is at floor
+    <span class="tex2jax_process">$g$</span>, and that there are
+    only <span class="tex2jax_process">$f$</span> floors in the
+    building, you quickly decide to write a program that gives you
+    the amount of button pushes you need to perform. If you simply
+    cannot reach the correct floor, your program halts with the
+    message “<tt class="tt">use the stairs</tt>”.</p>
+<p>Given input <span class="tex2jax_process">$f$</span>,
+    <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$g$</span>, <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$d$</span> (floors, start, goal, up, down),
+    find the shortest sequence of button presses you must press in
+    order to get from <span class="tex2jax_process">$s$</span> to
+    <span class="tex2jax_process">$g$</span>, given a building of
+    <span class="tex2jax_process">$f$</span> floors, or output
+    “<tt class="tt">use the stairs</tt>” if you cannot get from
+    <span class="tex2jax_process">$s$</span> to <span class="tex2jax_process">$g$</span> by the given elevator.</p>
+<h2>Input</h2>
+<p>The input will consist of one line with the five integers
+    <span class="tex2jax_process">$f$</span>, <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$g$</span>, <span class="tex2jax_process">$u$</span>, and <span class="tex2jax_process">$d$</span>, where <span class="tex2jax_process">$1 \leq s,g \leq f \leq 1000000$</span> and
+    <span class="tex2jax_process">$0 \leq u,d \leq 1000000$</span>.
+    The floors are one-indexed, i.e., if there are 10 stories,
+    <span class="tex2jax_process">$s$</span> and <span class="tex2jax_process">$g$</span> are between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> (inclusive).</p>
+<h2>Output</h2>
+<p>Output the minimum numbers of pushes you must make in order
+    to get from <span class="tex2jax_process">$s$</span> to
+    <span class="tex2jax_process">$g$</span>, or output <tt class="tt">use the stairs</tt> if it is impossible given the
+    configuration of the elvator.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10 1 10 2 1
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+100 2 1 1 0
+</pre>
+</td>
+<td>
+<pre>
+use the stairs
+</pre>
+</td>
+</tr>
+</table>
+</div>

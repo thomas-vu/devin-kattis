@@ -1,0 +1,136 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/hakkari/file/statement/en/img-0001.png" class="illustration" src="/problems/hakkari/file/statement/en/img-0001.png"/>
+<div class="description">
+        Bergur hacking
+      </div>
+</div>
+<p>Bergur the hacker has just returned from Holland in his new
+    fine Adidas suit and is ready to work. He opens his email and
+    sees a message from <tt class="ttfamily">hackers.com</tt>. The
+    message asks for a program that hacks Minesweeper and finds all
+    the mines in the game. The message also specifies that this
+    program has to be ready tomorrow.</p>
+<p>“No problem” Bergur thinks to himself and starts
+    programming.</p>
+<p>A few hours later Bergur finishes his program. His program
+    prints <span class="tex2jax_process">$n$</span> rows and
+    <span class="tex2jax_process">$m$</span> columns where each
+    cell contains <tt class="ttfamily">.</tt> if there is no mine
+    there or <tt class="ttfamily">*</tt> if there is a mine there.
+    After all this work Bergur is completely exhausted. He decides
+    to have a beer left over from his trip to Holland.</p>
+<p>A while later Bergur is absolutely wasted and then his
+    girlfriend, Björk, comes home. Björk and Bergur make a good
+    team. Bergur hacks things and then Björk checks if he actually
+    did what he was asked to. Since Bergur has passed out, Björk
+    goes for his computer and checks the message from <tt class="ttfamily">hackers.com</tt>. She carefully reads everything
+    until she sees the last paragraph.</p>
+<blockquote class="quote">
+<b class="bfseries">The program may not output a grid of
+      information. The program has to return a pair of numbers for
+      each mine. Each pair should contain the row and column that
+      the mine was in</b>.
+    </blockquote>
+<p>Dammit, Bergur hadn’t read the entire email and Björk can’t
+    make him fix it due to his state. Can you help Björk change
+    Bergur’s program so it functions like <tt class="ttfamily">hackers.com</tt> wants it to?</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$1 \le
+    n,m \le 100$</span>. The next <span class="tex2jax_process">$n$</span> lines contain <span class="tex2jax_process">$m$</span> characters each, either <b class="bfseries">*</b> or <b class="bfseries">.</b> depending on
+    whether there is a mine in that cell or not.</p>
+<h2>Output</h2>
+<p>On the first line you should print a single integer
+    <span class="tex2jax_process">$k$</span>, the number of mines.
+    The next <span class="tex2jax_process">$k$</span> lines should
+    each contain two integers <span class="tex2jax_process">$r_i,
+    c_i$</span> which denote the row and column of the <span class="tex2jax_process">$i$</span>-th mine. The mines can be printed
+    in any order.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>40</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \le n,m \le
+          15$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>60</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4 3
+***
+...
+...
+...
+</pre>
+</td>
+<td>
+<pre>3
+1 1
+1 2
+1 3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 3
+***
+*.*
+***
+</pre>
+</td>
+<td>
+<pre>8
+1 1
+1 2
+1 3
+2 1
+2 3
+3 1
+3 2
+3 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

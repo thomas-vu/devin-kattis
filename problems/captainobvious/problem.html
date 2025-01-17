@@ -1,0 +1,78 @@
+<div class="problembody">
+<p><em>“It’s you, Captain Obvious!”—cried the evil
+    Rabbit-Man—“you came here to foil my evil plans!”<br/>
+    “Yes, it’s me.”—said Captain Obvious.<br/>
+    “But…how did you know that I would be here, on 625 Sunflower
+    Street?! Did you crack my evil code?”<br/>
+    “I did. Three days ago, you robbed a bank on 5 Sunflower
+    Street, the next day you blew up 25 Sunflower Street, and
+    yesterday you left quite a mess under number 125. These are all
+    powers of 5. And last year you pulled a similar stunt with
+    powers of 13. You seem to have a knack for Fibonacci numbers,
+    Rabbit-Man.”<br/>
+    “That’s not over! I will
+    learn…</em>arithmetics<em>!”—Rabbit-Man screamed as he was
+    dragged into custody—“You will</em> never <em>know what to
+    expect... Owww! Not my ears, you morons!”<br/>
+    “Maybe, but right now you are being arrested.”—Captain added
+    proudly.</em></p>
+<p>Unfortunately, Rabbit-Man has now indeed learned some more
+    advanced arithmetics. To understand it, let us define the
+    sequence <span class="tex2jax_process">$F_ n$</span> (being not
+    completely unlike the Fibonacci sequence):</p><span class="tex2jax_process">\begin{align*} F_1 &amp; = 1\\ F_2 &amp; =
+    2\\ F_ n &amp; = F_{n-1} + F_{n-2} \text { for $n \geq 3$.}
+    \end{align*}</span>
+<p>Rabbit-Man has combined all his previous evil ideas into one
+    master plan. On the <span class="tex2jax_process">$i$</span>-th
+    day, he does a malicious act on the spot number <span class="tex2jax_process">$p(i)$</span>, defined as
+    follows:</p><span class="tex2jax_process">\begin{equation*}
+    p(i) = a_1 \cdot F_1^ i + a_2 \cdot F_2^ i + \cdots + a_ k
+    \cdot F_ k^ i\; . \end{equation*}</span>
+<p>The number <span class="tex2jax_process">$k$</span> and the
+    integer coefficients <span class="tex2jax_process">$a_1, \ldots
+    , a_ k$</span> are fixed. Captain Obvious learned <span class="tex2jax_process">$k$</span>, but does not know the
+    coefficients. Given <span class="tex2jax_process">$p(1), p(2),
+    \ldots , p(k)$</span>, help him to determine <span class="tex2jax_process">$p(k + 1)$</span>. To avoid overwhelmingly
+    large numbers, do all the calculations modulo a fixed prime
+    number <span class="tex2jax_process">$M$</span>. You may assume
+    that <span class="tex2jax_process">$F_1 , F_2 , \ldots , F_
+    n$</span> are pairwise distinct modulo <span class="tex2jax_process">$M$</span>. You may also assume that there
+    always exists a unique solution for the given input.</p>
+<h2>Input</h2>
+<p>The first line of input contains the number of test cases
+    <span class="tex2jax_process">$T$</span>. The descriptions of
+    the test cases follow:</p>
+<p>The first line of each test case contains two integers
+    <span class="tex2jax_process">$k$</span> and <span class="tex2jax_process">$M$</span>, <span class="tex2jax_process">$1
+    \leq k \leq 4\, 000$</span>, <span class="tex2jax_process">$3
+    \leq M \leq 10^9$</span>. The second line contains <span class="tex2jax_process">$k$</span> space-separated integers—the
+    values of <span class="tex2jax_process">$p(1), p(2), \ldots ,
+    p(k)$</span> modulo <span class="tex2jax_process">$M$</span>.</p>
+<h2>Output</h2>
+<p>Print the answers to the test cases in the order in which
+    they appear in the input. For each test case print a single
+    line containing one integer: the value of <span class="tex2jax_process">$p(k + 1)$</span> modulo <span class="tex2jax_process">$M$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+4 619
+5 25 125 6
+3 101
+5 11 29
+</pre>
+</td>
+<td>
+<pre>
+30
+83
+</pre>
+</td>
+</tr>
+</table>
+</div>

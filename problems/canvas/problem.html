@@ -1,0 +1,130 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/canvas/file/statement/en/img-0001.png" class="illustration" src="/problems/canvas/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>After last year’s success, Samuel W. E. R. Craft’s fame
+    continues to grow and now he has funds for all kinds of
+    projects that cross his mind. His newest idea involves creating
+    arrays of canvasses with color patterns having no repeated
+    colors.</p>
+<p>Samuel bought a set of white canvasses of varying sizes.
+    Since painting them manually would take too much time, he
+    devised a huge machine to automate the painting process.<br/>
+    The painting process works as follows:</p>
+<ol class="enumerate">
+<li>
+<p>Assemble all canvasses in a line in the machine’s
+        conveyor belt, disposed in some chosen order.</p>
+</li>
+<li>
+<p>Pick a color <span class="tex2jax_process">$C$</span>
+        and a number <span class="tex2jax_process">$F$</span>
+        (which should be less than the number of color <span class="tex2jax_process">$C$</span> canvasses).</p>
+</li>
+<li>
+<p>Going from left to right, all canvasses with color
+        <span class="tex2jax_process">$C$</span> are painted. The
+        first <span class="tex2jax_process">$F$</span>
+        color <span class="tex2jax_process">$C$</span>
+        canvasses are painted with a new color <span class="tex2jax_process">$X$</span> and the remaining
+        color <span class="tex2jax_process">$C$</span>
+        canvasses are painted with a new color <span class="tex2jax_process">$Y$</span>. Colors <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> are selected by the machine,
+        are distinct, and are different from any color used
+        previously. The amount of ink spent in this step is equal
+        to the sum of the sizes of the painted canvasses.</p>
+</li>
+<li>
+<p>Repeat 2) and 3) until all canvasses have distinct
+        colors.</p>
+</li>
+</ol>
+<p>Consider for example that Samuel bought four canvasses of
+    sizes <span class="tex2jax_process">$3$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$5$</span> and <span class="tex2jax_process">$7$</span>. The following picture shows
+    <span class="tex2jax_process">$2$</span> different options for
+    painting them.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.8\textwidth ]{steps.png}" src="/problems/canvas/file/statement/en/img-0002.png" style="width:80.00%"/>
+</center>
+</div>
+<h2>Task</h2>
+<p>Given the sizes of the canvasses Samuel bought, can you help
+    Samuel finding the minimum amount of ink the machine needs to
+    spend in order to have all canvasses with different colors?</p>
+<h2>Input</h2>
+<p>The first line consists of a single integer <span class="tex2jax_process">$T$</span>, the number of test cases. Each
+    test case is composed by two lines. The first line consists of
+    a single integer <span class="tex2jax_process">$N$</span>
+    representing the number of canvasses. The next line contains
+    <span class="tex2jax_process">$N$</span> space separated
+    integers representing the sizes of the canvasses.</p>
+<h2>Constraints</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq T \leq
+          100$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of test cases.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq N_ i \leq 100\,
+          000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of canvasses in the <span class="tex2jax_process">$i^{th}$</span> test case.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq s \leq 100\,
+          000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Size of each canvas.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1 \leq \sum _{i=1}^{T}
+          N_ i \leq 100\, 000$</span></p>
+</td>
+<td style="text-align:left">
+<p>Number of canvasses over all test cases in one test
+          file.</p>
+</td>
+</tr>
+</table>
+<h2>Output</h2>
+<p>The output contains <span class="tex2jax_process">$T$</span>
+    lines, one for each test case: the minimum amount of ink the
+    machine needs in order to have all canvasses with different
+    colors.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+3
+7 4 7
+4
+5 3 7 5
+</pre>
+</td>
+<td>
+<pre>
+29
+40
+</pre>
+</td>
+</tr>
+</table>
+</div>

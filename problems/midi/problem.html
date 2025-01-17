@@ -1,0 +1,118 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/midi/file/statement/en/img-0001.jpg" class="illustration" src="/problems/midi/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/xnKuj">flickr.com</a>
+</div>
+</div>
+<p>Little Jón has a crush on little Gunna. He intends to send
+    her a note in the middle of class at school. The note will pass
+    through the hands of many students to reach from Jón to Gunna.
+    There is also a risk that the teacher will see the note and
+    confiscate it. Jón is worried that his classmates, or worse,
+    the teacher, will read the note.</p>
+<p>That is why Jón has invented a cipher. The first step is
+    reversing the message in the note to make it harder to read. In
+    order to increase security, he only sends short parts of the
+    message each time, so he will need to send multiple notes. He
+    then sends the notes in reverse order. Jón considers himself
+    particularly clever.</p>
+<p>Who has not experienced receiving a love note without having
+    any knowledge of the encryption method used to write the note?
+    Gunna has experienced that. Therefore she cannot read the
+    original message. Gunna is sitting in the classroom with
+    <span class="tex2jax_process">$n$</span> notes and has to
+    puzzle them together to understand them. The only information
+    she has is the message on each note and the order in which the
+    notes reached her. Can you help Gunna read the message?</p>
+<h2>Input</h2>
+<p>The first line of the input contains a single integer
+    <span class="tex2jax_process">$1 \leq n \leq 2 \cdot
+    10^6$</span>, the number of notes. Then <span class="tex2jax_process">$n$</span> lines follow, each with a single
+    string, the text written on each note in the order they reached
+    Gunna. The number of symbols in the original message is at most
+    <span class="tex2jax_process">$2 \cdot 10^6$</span>. The
+    message will consist of only lowercase english letters and no
+    spaces. Each note includes at least one symbol.</p>
+<h2>Output</h2>
+<p>Output one line with the original message Jón wanted to send
+    to Gunna.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$n \leq 100$</span>, the
+          number of symbols in the original message is at most
+          <span class="tex2jax_process">$1\, 000$</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints.</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+noj
+vk
+mmbv
+</pre>
+</td>
+<td>
+<pre>vbmmkvjon
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+gi
+htak
+s
+leg
+e
+</pre>
+</td>
+<td>
+<pre>egelskathig
+</pre>
+</td>
+</tr>
+</table>
+</div>

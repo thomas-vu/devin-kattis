@@ -1,0 +1,191 @@
+<div class="problembody">
+<p>The <i class="itshape">Shinomiya</i> corporation is Japan’s
+    biggest family-owned conglomerate, with a portfolio of multiple
+    businesses in railway, trade and retail. With a family of such
+    high esteem, it is important to maintain their status and
+    image, paramount to stereotypical Asian culture.</p>
+<p>The family has a daughter by the name of <i class="itshape">Kaguya</i>, who is in love with and currently dating
+    her student council president <i class="itshape">Miyuki
+    Shirogane</i>.</p>
+<p>However, there is a big issue. <i class="itshape">Miyuki’s</i> family is not very well to do and his
+    father works multiple jobs to make ends meet. Upon the
+    <i class="itshape">Shinomiya</i> family finding out about this,
+    they expressed great displeasure over <i class="itshape">Kaguya</i> and <i class="itshape">Miyuki</i>’s
+    relationship. In their eyes, <i class="itshape">Kaguya</i>
+    should marry someone of similar status and not lower herself,
+    indirectly destroying the family’s reputation.</p>
+<p>Much to the annoyance of <i class="itshape">Kaguya’s</i>
+    parents, the couple want to stay together due to their undying
+    love for one another. Henceforth, <i class="itshape">Kaguya’s</i> parents have devised a scheme to prevent
+    <i class="itshape">Miyuki</i> from visiting <i class="itshape">Kaguya</i>.</p>
+<p>It is a well known fact that the <i class="itshape">Shinomiya</i> family’s house is located on an
+    extremely large plot of land in <i class="itshape">Tokyo</i>.
+    More formally, it is modelled as a plot of land with
+    <span class="tex2jax_process">$N$</span> junctions and
+    <span class="tex2jax_process">$E$</span> roads. Since the
+    entire plot of land is owned by the family, it is guaranteed
+    that there is a path between any <span class="tex2jax_process">$2$</span> junctions and there is at most one
+    road between <span class="tex2jax_process">$2$</span> adjacent
+    junctions.</p>
+<p>The <span class="tex2jax_process">$i$</span>th road is
+    <span class="tex2jax_process">$w_{i}$</span> units long, for
+    every <span class="tex2jax_process">$i = 1 \dots E$</span>.
+    Knowing that <i class="itshape">Miyuki</i> frequently commutes
+    on his bicycle and will take a significant amount of energy to
+    travel between <span class="tex2jax_process">$2$</span>
+    locations, <i class="itshape">Kaguya’s</i> family’s have
+    devised a plan. They will hire a contractor to increase the
+    length of some subset of roads. The family wants to increase
+    the length of a subset of roads in such a way that <b class="bfseries">increases</b> the total amount of time Miyuki will
+    take to travel from the entrance to the actual family house. In
+    a single operation, the contractor can increase the duration
+    needed to travel through any road by exactly <span class="tex2jax_process">$1$</span> unit of time.</p>
+<p>Furthermore, <i class="itshape">Miyuki</i> will always take
+    a route from the entrance to the family’s house that can be
+    covered in the least amount of time possible.</p>
+<p>Being business-minded people, the family are willing to pay
+    you a fortune for you to devise a scheme that uses the
+    <b class="bfseries">minimum</b> number of operations to
+    increase the time that <i class="itshape">Miyuki</i> will take
+    to travel from the entrance of the compound to <i class="itshape">Shinomiya’s</i> family’s house. Can you help
+    them?</p>
+<h2>Input</h2>
+<p>The first line contains <span class="tex2jax_process">$4$</span> integers, <span class="tex2jax_process">$1 \le N \le 2000$</span>, the number of
+    junctions, <span class="tex2jax_process">$1 \le E \le 40\,
+    000$</span>, the number of roads, and <span class="tex2jax_process">$1 \leq s, d \leq N$</span>, (<span class="tex2jax_process">$s \neq d$</span>), the junctions where the
+    entrance to the compound, and the <i class="itshape">Shinomiya</i> house, is located, respectively.</p>
+<p>The next <span class="tex2jax_process">$E$</span> lines
+    contain the roads, each on one line. Each road is given in the
+    form <span class="tex2jax_process">$u\, v\, w$</span> where
+    <span class="tex2jax_process">$u,v$</span> are the <span class="tex2jax_process">$2$</span> endpoints of an road (<span class="tex2jax_process">$1 \leq u,v \leq N$</span>) and <span class="tex2jax_process">$w$</span> is the time it takes to traverse
+    the road (<span class="tex2jax_process">$1 \le w \le
+    10^{9}$</span>). The road can be traversed in both
+    directions.</p>
+<h2>Output</h2>
+<p>On <span class="tex2jax_process">$1$</span> line, print the
+    minimum number of operations required.</p>
+<p>For every road in which the operation is applied at least
+    once, print it on a single line in the form of <span class="tex2jax_process">$u\, v\, f$</span> where <span class="tex2jax_process">$u$</span> and <span class="tex2jax_process">$v$</span> are the endpoints of the edge and
+    <span class="tex2jax_process">$f$</span> is the number of times
+    the operation is applied.</p>
+<p>Each road should be included in the output at most once.
+    Roads where the operation is applied <span class="tex2jax_process">$0$</span> times need not be printed.</p>
+<p>If there are multiple solutions, print any one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>8 8 7 1
+6 7 1
+8 4 2
+2 6 2
+1 7 9
+2 5 6
+8 5 4
+3 2 5
+5 4 6
+</pre>
+</td>
+<td>
+<pre>1
+7 1 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2 1 1 2
+2 1 6
+</pre>
+</td>
+<td>
+<pre>1
+1 2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>8 10 8 2
+1 6 8
+2 4 3
+7 8 8
+4 5 7
+3 1 10
+1 4 9
+2 8 4
+3 6 9
+6 8 1
+3 4 9
+</pre>
+</td>
+<td>
+<pre>1
+8 2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>5 6 1 5
+1 2 1
+1 3 3
+2 3 1
+2 5 3
+3 5 1
+4 5 1
+</pre>
+</td>
+<td>
+<pre>1
+1 2 1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>5 6 1 5
+1 2 1
+1 3 2
+1 4 1
+2 3 1
+2 5 2
+3 5 1
+</pre>
+</td>
+<td>
+<pre>2
+1 2 1
+1 3 1
+</pre>
+</td>
+</tr>
+</table>
+</div>

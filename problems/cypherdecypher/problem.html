@@ -1,0 +1,124 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/cypherdecypher/file/statement/en/img-0001.jpeg" class="illustration" src="/problems/cypherdecypher/file/statement/en/img-0001.jpeg"/>
+<div class="description">
+        A spy from Bowser’s army.
+      </div>
+</div>
+<p>Princess Peach is trying to organize the armies of Mushroom
+    Kingdom to repel Bowser’s attack. However, her orders keep
+    getting intercepted by Bowser’s top spy Mr. L. Peach has tried
+    multiple encryption methods, but Mr. L has cleverly decrypted
+    all attempts. However, Peach’s espionage unit has just found
+    out that Mr. L doesn’t know how to multiply numbers! They
+    quickly designed a cypher to exploit this.</p>
+<p>The MKIA (Mushroom Kingdom Intelligence Agency) has designed
+    the following mapping from numbers to characters: <span class="tex2jax_process">$0-25$</span> corresponds to <span class="tex2jax_process">$A-Z$</span>, and this pattern repeats
+    forever: <span class="tex2jax_process">$26-51:A-Z, 52-77:A-Z,
+    \ldots $</span>. The MKIA first selects some secret sequence of
+    numbers <span class="tex2jax_process">$s_1s_2\ldots s_
+    l$</span> Given the secret number string, the MKIA can encrypt
+    a message as follows:</p>
+<ol class="enumerate">
+<li>
+<p>For each character in the message, use the MKIA mapping
+        to find its corresponding number.</p>
+</li>
+<li>
+<p>Multiply that number with the corresponding digit in the
+        secret number string.</p>
+</li>
+<li>
+<p>Use the MKIA mapping to transform this result back into
+        a character for the encrypted result.</p>
+</li>
+</ol>
+<p>Given a number string and a series of messages, return the
+    encrypted messages after applying the previous algorithm.</p>
+<h2>Input</h2>
+<p>The first line is a sequence of digits representing the
+    multiplier in each position of the test cases. This has length
+    <span class="tex2jax_process">$l$</span> where <span class="tex2jax_process">$1 \leq l \leq 100$</span>. The second line
+    represents <span class="tex2jax_process">$n$</span>, the number
+    of test cases. <span class="tex2jax_process">$1 \leq n \leq 1\,
+    000$</span> The next <span class="tex2jax_process">$n$</span>
+    lines are the messages to be encoded. These messages are
+    guaranteed to have length <span class="tex2jax_process">$l$</span>.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$n$</span> lines
+    containing the encoded strings.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>17247
+2
+HELLO
+WORLD
+</pre>
+</td>
+<td>
+<pre>HCWSU
+WUISV
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>010281
+3
+THANKS
+TOJANE
+STREET
+</pre>
+</td>
+<td>
+<pre>AHAACS
+AOAAAE
+ATAIGT
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>0102
+8
+ONEF
+ISHT
+WOFI
+SHRE
+DFIS
+HBLU
+EFIS
+HHHH
+</pre>
+</td>
+<td>
+<pre>ANAK
+ASAM
+AOAQ
+AHAI
+AFAK
+ABAO
+AFAK
+AHAO
+</pre>
+</td>
+</tr>
+</table>
+</div>

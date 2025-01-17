@@ -1,0 +1,74 @@
+<div class="problembody">
+<p>The Great Lord Pooty likes trees and orders his subordinates
+    to have them colored black and white. The trees have
+    <span class="tex2jax_process">$n$</span> vertices labeled from
+    <span class="tex2jax_process">$0$</span> to <span class="tex2jax_process">$n-1$</span>, are rooted at vertex
+    <span class="tex2jax_process">$0$</span>, and have a peculiar
+    structure elaborated on below.</p>
+<p>A tree has a fixed branching factor <span class="tex2jax_process">$k \geq 1$</span>, meaning that every vertex
+    labeled <span class="tex2jax_process">$v$</span> that is not
+    the root (<span class="tex2jax_process">$v &gt; 0$</span>) will
+    have vertex <span class="tex2jax_process">$\lfloor
+    \frac{v-1}{k}\rfloor $</span> as its parent. For example, if
+    <span class="tex2jax_process">$k = 2$</span>, the tree is a
+    complete binary tree.</p>
+<p>Then, the tree would have its vertices colored either black
+    or white. After every vertex is colored, <b class="bfseries">all edges connecting vertices of different colors
+    will be removed</b>, resulting in a forest with many trees. We
+    call a coloring <span class="tex2jax_process">$c$</span>-good,
+    if the final result is a forest with <em>exactly</em>
+<span class="tex2jax_process">$c$</span> trees.</p>
+<p>The Great Lord would like to ask you: given a tree of
+    <span class="tex2jax_process">$n$</span> vertices with
+    branching factor <span class="tex2jax_process">$k$</span>, how
+    many <span class="tex2jax_process">$c$</span>-good coloring is
+    possible? Note that two colorings are considered different if
+    and only if there exists a vertex that is colored
+    differently.</p>
+<p>Since the answer can be huge, output it modulo <span class="tex2jax_process">$10^{10} + 3233 = 10\, 000\, 003\,
+    233$</span>.</p>
+<p>Of course, one tree is too simple. Since you had boldly
+    claimed you are the smartest one in His Empire, Lord Pooty, in
+    all his magnificent glory, demands you to answer for
+    <span class="tex2jax_process">$C$</span> trees or face a
+    gruesome end under his fist of absolute terror.</p>
+<h2>Input</h2>
+<p>The input starts with a line containing an integer
+    <span class="tex2jax_process">$C$</span>, denoting the number
+    of test cases (<span class="tex2jax_process">$1 \leq C \leq
+    200\, 000$</span>).</p>
+<p>Each test case consists of three integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$k$</span>, and <span class="tex2jax_process">$c$</span>, denoting the number of vertices
+    of the tree, the branching factor, and the number of trees in
+    the resulting forest (<span class="tex2jax_process">$1 \leq
+    n,k,c \leq 10^{18}$</span>).</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing the number of
+    <span class="tex2jax_process">$c$</span>-good colorings of the
+    tree, modulo <span class="tex2jax_process">$10\, 000\, 003\,
+    233$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+3 2 1
+7 6 4
+5 7 3
+4 2 4
+1000000000000000000 3233 3233
+</pre>
+</td>
+<td>
+<pre>2
+40
+12
+2
+8112035382
+</pre>
+</td>
+</tr>
+</table>
+</div>

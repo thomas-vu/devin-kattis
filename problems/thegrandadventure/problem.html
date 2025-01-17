@@ -1,0 +1,114 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/thegrandadventure/file/statement/en/img-0001.png" class="illustration" src="/problems/thegrandadventure/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>Our hero, Jim, is about to embark on his grand adventure.
+    On his way, he’ll encounter three different types of objects:
+    money, incense, and gems. When he encounters an object, he will
+    always put it into his backpack. Unfortunately, he’ll also
+    encounter villains along the way. More specifically, the Banker
+    (who will demand money), the Trader (who demand incense), and
+    the Jeweler (who will demand, of course, jewels). Jim must give
+    each villain one of the kind of item they demand as he
+    encounters them, or else he fails and his adventure is over.
+    Unfortunately, Jim’s backpack isn’t very ergonomic and so he
+    can only reach the item he most recently put in it. In other
+    words, the items below are inaccessible until he’s given away
+    the one on top. Jim would also like arrive at his destination
+    with no extra items in his bag. If he does have items at the
+    end, he’ll consider his adventure a failure.
+    <p>We’d like to know if Jim will be able to complete his
+    adventure before he even starts!</p>
+<h2>Input</h2>
+<p>The first line contains a single integer <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$1
+    \le n \le 5$</span>, the number of adventures. Each of the next
+    <span class="tex2jax_process">$n$</span> lines contains a
+    single string <span class="tex2jax_process">$a$</span>, a
+    sequence of <span class="tex2jax_process">$\{ \$ , *, |, t, j,
+    b, .\} $</span>. An example of this adventure string is:</p>
+<pre>
+....$...$...*..*...|...t...j..j...b..b...
+</pre>
+<p>where,</p>
+<ul class="itemize">
+<li>
+<p><tt class="ttfamily">$</tt> represents Money</p>
+</li>
+<li>
+<p><tt class="ttfamily">|</tt> represents Incense</p>
+</li>
+<li>
+<p><tt class="ttfamily">*</tt> represents Gem</p>
+</li>
+<li>
+<p><tt class="ttfamily">t</tt> represents a Trader</p>
+</li>
+<li>
+<p><tt class="ttfamily">j</tt> represents a Jeweler</p>
+</li>
+<li>
+<p><tt class="ttfamily">b</tt> represents a Banker</p>
+</li>
+<li>
+<p><tt class="ttfamily">.</tt> represents the Ground
+        (nothing)</p>
+</li>
+</ul>
+<p>and <span class="tex2jax_process">$1 \leq |a| \leq
+    100$</span> where <span class="tex2jax_process">$|a|$</span> is
+    the length of string <span class="tex2jax_process">$a$</span>.
+    There is no limit on the number of items Jim may place in his
+    backpack.</p>
+<h2>Output</h2>
+<p>Print <tt class="ttfamily">YES</tt> if Jim is able to finish
+    his adventure and print <tt class="ttfamily">NO</tt> if he is
+    unable to.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+.$.b.|.t.*.j.................$$$$$bbbbb||....tt.....
+.$.b.|.t.*.j..
+................................
+.......$....$......*....*.....|......t........j...j.....b..b........
+...$.$.$..*..*..*...*..|..*..b.....*******...
+</pre>
+</td>
+<td>
+<pre>YES
+YES
+YES
+YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+........$b...$$..t...*..*...j.........j...
+.........*****jjjj...............|tj....
+.$.|.*.$.|.*.$.|.*.j.t.b.j.t.b.j.t.b.
+...$$..$$..$$..|..$$..b......b....t..bbbbbb.....j...
+</pre>
+</td>
+<td>
+<pre>NO
+YES
+YES
+NO
+</pre>
+</td>
+</tr>
+</table>
+</div>

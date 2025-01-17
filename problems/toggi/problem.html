@@ -1,0 +1,122 @@
+<div class="problembody">
+<p>Toggi loves the number <span class="tex2jax_process">$\pi
+    $</span>. Toggi quite likes making his computer calulate
+    <span class="tex2jax_process">$\pi $</span> but that can take
+    quite a long time, depends a bit on the number of digits he
+    wants to calculate. If he calculates the first <span class="tex2jax_process">$n$</span> digits of <span class="tex2jax_process">$\pi $</span> it takes <span class="tex2jax_process">$n \log _{10}(n) / 10^6$</span> seconds,
+    where <span class="tex2jax_process">$\log _{10}$</span> denotes
+    a logarithm of base <span class="tex2jax_process">$10$</span>.
+    He wants to know to how many digits of <span class="tex2jax_process">$\pi $</span> he can calculate in the time he
+    has. Help him find out.</p>
+<h2>Input</h2>
+<p>You are given an integer <span class="tex2jax_process">$C$</span>, the number of seconds Toggi
+    has.</p>
+<h2>Output</h2>
+<p>One line containing the integer <span class="tex2jax_process">$n$</span>, the maximum number of digits of
+    <span class="tex2jax_process">$\pi $</span> that Toggi can
+    calculate in <span class="tex2jax_process">$C$</span>
+    seconds.</p>
+<h2>Explanation of Sample Inputs</h2>
+<p>Toggi can calculate <span class="tex2jax_process">$189481$</span> digits in one second
+    because</p><span class="tex2jax_process">\[ 189481 \log
+    _{10}(189481) / 10^6 \approx 0.9999984203540794 \leq 1
+    \]</span>
+<p>But he can’t calculate more digits in a single seond
+    beause</p><span class="tex2jax_process">\[ 189482 \log
+    _{10}(189482) / 10^6 \approx 1.0000041322153754 &gt; 1
+    \]</span>
+<h2>Scoring</h2>
+<p>The solution will be tested on input data of varying
+    difficulty and the data is divided into groups as shown in the
+    table below. The solution will then be scored according to how
+    many groups are solved.</p>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le C \leq
+          5$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le C \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>3</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>30</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le C \leq
+          2000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>4</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$ 1 \le C \leq
+          10^4$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>5</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>20</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$ 1 \le C \leq
+          10^9$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1
+</pre>
+</td>
+<td>
+<pre>189481
+</pre>
+</td>
+</tr>
+</table>
+</div>

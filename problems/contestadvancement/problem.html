@@ -1,0 +1,66 @@
+<div class="problembody">
+<p>You are the RCD for your regional contest. It just ended and
+    you now need to decide which teams qualify for the next level
+    of competition. The teams are uniquely ranked (there are no
+    ties). The next level has a limit on how many teams from any
+    given school can participate. However, if that limit causes
+    there to be not enough teams advancing, the remaining slots
+    will be filled by teams from schools over the limit. If this
+    happens, you will always give preference to higher-ranking
+    teams, even if it means many teams from the same school
+    advancing.</p>
+<p>Output, in rank order, the teams that qualify for the next
+    contest.</p>
+<h2>Input</h2>
+<p>The first line of input contains three integers <span class="tex2jax_process">$n$</span>, <span class="tex2jax_process">$k$</span> (<span class="tex2jax_process">$1
+    \leq k &lt; n \leq 10^5$</span>) and <span class="tex2jax_process">$c$</span> (<span class="tex2jax_process">$ 1
+    \leq c \leq n$</span>), where <span class="tex2jax_process">$n$</span> is the number of teams in the
+    competition, <span class="tex2jax_process">$k$</span> is the
+    number of teams that will advance, and <span class="tex2jax_process">$c$</span> is the limit on the number of
+    teams that may advance from any given school.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains two integers <span class="tex2jax_process">$t$</span> and <span class="tex2jax_process">$s$</span> (<span class="tex2jax_process">$1
+    \le t,s \le n$</span>). Each line describes a team, with
+    <span class="tex2jax_process">$t$</span> being the team’s
+    unique ID, and <span class="tex2jax_process">$s$</span>
+    indicating the team’s school. All team IDs will be distinct.
+    The teams will be listed in rank order, with the highest
+    ranking teams first.</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$k$</span> lines. On
+    each line output a single integer, which is the ID of a team.
+    List the IDs of the teams that qualified to advance in rank
+    order.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10 7 3
+3 9
+1 9
+4 9
+5 9
+9 7
+2 7
+6 7
+7 7
+8 5
+10 5
+</pre>
+</td>
+<td>
+<pre>3
+1
+4
+9
+2
+6
+8
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,104 @@
+<div class="problembody">
+<p>Even though she saw Zvonko steal Mirko’s microprocessor in
+    the second task, Mirko’s sister Ivana did not tell Mirko
+    because she likes Zvonko. She suggested to him that they go see
+    a movie together so that she would “forget” about the
+    incident.</p>
+<p>Zvonko does not care much for girls because they take away
+    precious time he usually spends practicing his math-fu. He
+    suggested that the two of them play a game and, if Ivana wins,
+    they will go see a movie together. Ivana agreed, being good at
+    jump rope and she sometimes even kicks a football around with
+    her two brothers.</p>
+<p>Zvonko laid <span class="tex2jax_process">$N$</span>
+    positive integers in a circle on the floor and explained the
+    rules:</p>
+<ul class="itemize">
+<li>
+<p>The first player takes any number.</p>
+</li>
+<li>
+<p>The second player takes either of the two numbers
+        adjacent to the one the first player took.</p>
+</li>
+<li>
+<p>The next player takes a number adjacent to any of the
+        numbers taken so far, and so on until they run out of
+        numbers. The player to take more odd numbers (not divisible
+        by 2) wins.</p>
+</li>
+</ul>
+<p>Zvonko plays optimally; he always looks for a strategy that
+    leads to certain victory or a draw. Zvonko does not know how
+    well Ivana plays. Being a true cavalier, he let Ivana have the
+    first move. But Ivana only cares about sitting next to Zvonko
+    in front of the big screen so she seeks help playing.</p>
+<p>Write a program that finds how many different first moves
+    Ivana can make, so that she has a chance of winning
+    afterwards.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 100)$</span>, how many numbers there are in the
+    circle. The second line contains <span class="tex2jax_process">$N$</span> integers separated by single
+    spaces. All numbers will be between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$1\, 000$</span> (inclusive). No two numbers
+    will be the same.</p>
+<h2>Output</h2>
+<p>Output the desired number on a single line.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+3 1 5
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+1 2 3 4
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+4 10 5 2 9 8 1 7
+</pre>
+</td>
+<td>
+<pre>
+5
+</pre>
+</td>
+</tr>
+</table>
+</div>

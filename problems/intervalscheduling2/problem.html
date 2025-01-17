@@ -1,0 +1,96 @@
+<div class="problembody">
+<p>Many couples will dine out on Valentine’s day. To serve as
+    many customers as possible, a particular Western restaurant
+    adopts the "Staggered Seating" strategy on the night of
+    Valentine’s day.</p>
+<p>The strategy works as follows: The restaurant divides its
+    opening hours into <span class="tex2jax_process">$N$</span>
+    non-overlapping time intervals, called a *wave*. In each wave,
+    a group of customers are served and they must complete their
+    meal (and leave the restaurant) within that time interval. Two
+    intervals are said to be non-overlapping if the ending time of
+    the first interval is not later than the starting time of the
+    second interval (in chronological order).</p>
+<p>The manager drafted the schedule of each wave. However, you
+    discovered that some intervals are extremely short - customers
+    are unable to enjoy the meal given the limited time.</p>
+<p>You decided to come up with a better schedule, with the
+    following conditions:</p>
+<ol class="enumerate">
+<li>
+<p>The amended time interval for each wave must be
+        inclusive of the original time interval of that wave.
+        Informally speaking, you are only allowed to extend the
+        time intervals. Customers will feel unhappy if the time
+        intervals are shortened.</p>
+</li>
+<li>
+<p>The opening and closing time of the restaurant remains
+        unchanged. That is, you cannot change the starting time of
+        the first interval or the ending time of the last
+        interval.</p>
+</li>
+<li>
+<p>You would like to maximize the length of the shortest
+        time interval across all waves.</p>
+</li>
+</ol>
+<p>Can you help the manager to come up with a better
+    schedule?</p>
+<h2>Input</h2>
+<p>The first line of input consists of a single positive
+    integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(2 \leq N \leq 200)$</span>.</p>
+<p><span class="tex2jax_process">$N$</span> lines follow. Each
+    line consists of a time interval in the format <tt class="ttfamily">HH:MM - HH:MM</tt>. It is guaranteed that the time
+    intervals are non-overlapping and given in chronological
+    order.</p>
+<p>It is also guaranteed that the time intervals are all within
+    the same day, between <tt class="ttfamily">16:00</tt> and
+    <tt class="ttfamily">23:59</tt> (inclusive).</p>
+<h2>Output</h2>
+<p>Output <span class="tex2jax_process">$N$</span> lines, the
+    amended schedule of the staggered seating plan. The format
+    should be exactly same as that in the input.</p>
+<p>If there are multiple solutions, you may output any of
+    them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+19:00 - 20:00
+21:08 - 21:24
+22:00 - 22:46
+</pre>
+</td>
+<td>
+<pre>19:00 - 20:15
+20:15 - 21:30
+21:31 - 22:46
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>2
+19:01 - 19:02
+19:03 - 19:04
+</pre>
+</td>
+<td>
+<pre>19:01 - 19:03
+19:03 - 19:04
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,110 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/smil/file/statement/en/img-0001.jpg" class="illustration" src="/problems/smil/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        SMIL’s 2048 word carousel memory. Teknikens och sjöfartens
+        hus in Malmö, Sweden (2013). Photo by Fredrik Tersmeden,
+        Wikimedia Commons, CC-BY-SA-3.0.
+      </div>
+</div>
+<p><em>Siffermaskinen i Lund</em> (SMIL, “The Number Machine in
+    Lund”) was a first-generation computer built at Lund
+    University, in operation from 1956 to 1970. It was based on the
+    computer architecture developed by John von Neumann at the
+    Institute of Advanced Studies at Princeton.</p>
+<p>Your task is to find the smiles in the memory of SMIL. A
+    <em>smile</em> is sequence of symbols of the form “<tt class="ttfamily">:)</tt>”, “<tt class="ttfamily">;)</tt>”,
+    “<tt class="ttfamily">:-)</tt>”, or “<tt class="ttfamily">;-)</tt>”.</p>
+<h2>Input</h2>
+<p>A single line of at most <span class="tex2jax_process">$2048$</span> symbols, such as letters from
+    the English alphabet, digits, space, and many punctuation
+    marks. (To be precise, the symbols are from the ASCII range
+    <span class="tex2jax_process">$32$</span> to <span class="tex2jax_process">$126$</span>.) The line contains at least one
+    “<tt class="ttfamily">:)</tt>”.</p>
+<h2>Output</h2>
+<p>A nonempty sequence of integers, separated by whitespace, of
+    memory addresses at which a smile appears. The order is not
+    important. The <em>address</em> of a smile is the address of
+    the “eyes,” i.e., the first symbol. SMIL’s memory addresses are
+    enumerated <span class="tex2jax_process">$0$</span>,
+    <span class="tex2jax_process">$1$</span>, <span class="tex2jax_process">$\ldots $</span>, <span class="tex2jax_process">$2047$</span>. The input line starts at
+    address <span class="tex2jax_process">$0$</span>.</p>
+<p>Here is sample input 1:</p>
+<center>
+<img alt="\includegraphics[width=0.7\textwidth ]{img/smil-sample-1.pdf}" src="/problems/smil/file/statement/en/img-0002.png" style="width:70.00%"/>
+</center>
+<h2>Scoring</h2>
+<p>You receive 1 point for every smile you can find. There
+    are at most 100 smiles.</p>
+<p>Your answer is judged <em>wrong</em> if it is empty or
+    contains an address without a smile.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>:)xsy:-&gt;&gt;;-)::)3
+</pre>
+</td>
+<td>
+<pre>0
+9
+13
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>:-):);-):)
+</pre>
+</td>
+<td>
+<pre>0
+3
+5
+8
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>::))(:
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>):):
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

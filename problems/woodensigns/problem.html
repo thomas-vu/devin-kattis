@@ -1,0 +1,130 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/woodensigns/file/statement/en/img-0001.png" class="illustration" src="/problems/woodensigns/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>A carpenter has received an order for a wooden directional
+    sign. Each board must be aligned vertically with the previous
+    one, either to the basis of the previous arrowhead or to the
+    opposite side, being fixed there with a specially designed
+    screw. The two boards must overlap.</p>
+<p>The carpenter wrote down a sequence of integers to encode
+    the sketch sent by the designer but the sequence does not
+    determine a unique model and he has thrown away the original
+    sketch. What looked like a trivial task turned out a big jigsaw
+    to him.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.85\textwidth ]{Setas_explain_3.png}" src="/problems/woodensigns/file/statement/en/img-0002.png" style="width:85.00%"/>
+</center>
+</div>
+<p>The sequence (with <span class="tex2jax_process">$1+N$</span> elements) encodes the
+    (<span class="tex2jax_process">$N$</span>) arrows from the
+    bottom to the top of the sign. The first element is the
+    position of the left side of the bottom arrow. The remaining
+    <span class="tex2jax_process">$N$</span> elements define the
+    positions where the arrowheads start, from bottom to top: the
+    <span class="tex2jax_process">$i$</span>-th element is the
+    position where the <span class="tex2jax_process">$i$</span>-th
+    arrowhead basis is. For instance, the two signs depicted (on
+    the left and on the right) could be encoded by <tt>2 6 5 1
+    4</tt>.</p>
+<p>Since a board must be aligned vertically with the previous
+    one (either to the basis of the previous arrowhead or to the
+    opposite side), if the sequence was <tt>2 6 5 1 4 3</tt>, the
+    fifth arrow could be fixed (in any of the depicted signs) with
+    a screw either at <span class="tex2jax_process">$1$</span>
+    (pointing to the right) or at <span class="tex2jax_process">$4$</span> (pointing to the left), with the
+    arrowhead basis at <span class="tex2jax_process">$3$</span>.</p>
+<p>If the sequence was <tt>2 3 1</tt>, the second arrow could
+    only be fixed with a screw at <span class="tex2jax_process">$3$</span>, pointing to the left, because
+    consecutive boards must overlap.</p>
+<div class="figure">
+<center>
+<img alt="\includegraphics[width=0.3\textwidth ]{Setas_explain_231_overlap.png}" src="/problems/woodensigns/file/statement/en/img-0003.png" style="width:30.00%"/>
+</center>
+</div>
+<p>All arrowheads are similar and the designer told the
+    carpenter that their bases stand in different vertical lines,
+    as well as the left side of the bottom arrow, altogether
+    forming a permutation of <span class="tex2jax_process">$1
+    \ldots (N+1)$</span>. That is why the carpenter overlooked the
+    details and just wrote down the permutation (e.g., <tt>2 6 5 1
+    4 3</tt>).</p>
+<h2>Task</h2>
+<p>Given the sequence of numbers the carpenter wrote down,
+    compute the number of directional arrows signs that can be
+    crafted. Since the number can be very large, you must write it
+    modulo <span class="tex2jax_process">$2^{31}-1 =2\, 147\, 483\,
+    647$</span>. The second integer in the sequence is always
+    greater than the first one (the bottom arrow points to the
+    right always).</p>
+<h2>Input</h2>
+<p>The first line has one integer <span class="tex2jax_process">$N$</span> and the second line contains a
+    permutation of the integers from <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$N+1$</span>. Integers in the same line are
+    separated by a single space.</p>
+<h2>Constraints</h2>
+<p><span class="tex2jax_process">$1 \leq N &lt; 2000$</span> —
+    The number of Arrows.</p>
+<h2>Output</h2>
+<p>The output has a single line with the number (<b class="bf">modulo <span class="tex2jax_process">$2^{31}-1 =2\, 147\,
+    483\, 647$</span></b>) of distinct signs that can be described
+    by the given permutation.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+2 6 5 1 4 3
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+2 3 1
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+20
+3 21 10 15 6 9 2 5 20 13 17 19 14 7 11 18 16 12 1 8 4
+</pre>
+</td>
+<td>
+<pre>
+1887
+</pre>
+</td>
+</tr>
+</table>
+</div>

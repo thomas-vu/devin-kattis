@@ -1,0 +1,55 @@
+<div class="problembody">
+<h2>Input</h2>
+<p>The input consists of at most ten test cases. Each test case
+    begins with an integer <span class="tex2jax_process">$n$</span>
+    on a line of its own, indicating the number of patterns. Then
+    follow <span class="tex2jax_process">$n$</span> lines, each
+    containing a non-empty <tt class="ttfamily">pattern</tt>. The
+    total length of all patterns in a test case is no more than
+    <span class="tex2jax_process">$100\, 000$</span>. Then comes a
+    line containing a non-empty <tt class="ttfamily">text</tt> (of
+    length at most <span class="tex2jax_process">$200\,
+    000$</span>). Input is terminated by end-of-file.</p>
+<h2>Output</h2>
+<p>For each test case, output <span class="tex2jax_process">$n$</span> lines, where the <span class="tex2jax_process">$i$</span>’th line contains the positions of
+    all the occurrences of the <span class="tex2jax_process">$i$</span>’th <tt class="ttfamily">pattern</tt> in <tt class="ttfamily">text</tt>, from
+    first to last, separated by a single space.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+p
+pup
+Popup
+2
+You
+peek a boo
+you speek a bootiful language
+4
+anas
+ana
+an
+a
+bananananaspaj
+</pre>
+</td>
+<td>
+<pre>
+2 4
+2
+
+5
+7
+1 3 5 7
+1 3 5 7
+1 3 5 7 9 12
+</pre>
+</td>
+</tr>
+</table>
+</div>

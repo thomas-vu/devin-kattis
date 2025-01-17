@@ -1,0 +1,73 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/numbers/file/statement/en/img-0001.png" class="illustration" src="/problems/numbers/file/statement/en/img-0001.png"/>
+<div class="description">
+<a href="https://commons.wikimedia.org/wiki/File:2048_Monotonicity.png">
+        Image</a> from wikipedia commons cc by-sa 3.0
+      </div>
+</div>If you are familiar with the game 2048, this problem may
+    make sense right away.
+
+    <p>Either way, we will define our own one-dimensional version
+    of the game:</p>
+<p>You are given a list of numbers containing only powers of
+    <span class="tex2jax_process">$2$</span>. You can “compress”
+    this list by “pushing” it to the right. If two identical
+    numbers are next to each other, push will cause them to merge.
+    The “merge” in this context means that the two numbers are
+    replaced by their sum. Each number can be merged only once—if
+    they can merge with either of their neighbors, they merge with
+    the one to the right. This process is evaluated from the right.
+    For example, the list <span class="tex2jax_process">$[2, 2, 2,
+    2]$</span> will become <span class="tex2jax_process">$[4,4]$</span> after one push. For another
+    example, given a list <span class="tex2jax_process">$[2,2,2]$</span>, after a push, we end up
+    with a new list <span class="tex2jax_process">$[2, 4]$</span>
+    and we cannot change it further by “pushing”.</p>
+<p>Now, some of these lists, after some number of pushes, may
+    end up with a single element. Using the example: <span class="tex2jax_process">$[8, 2, 2, 4] \Rightarrow [8, 4, 4]
+    \Rightarrow [8, 8] \Rightarrow [16]$</span>.</p>
+<p>If the list can be reduced to a single element list only by
+    “pushing”, we call such a list <b class="bfseries">nice</b>.</p>
+<p>Your task is to take a given list and make it <b class="bfseries">nice</b> by adding some (maybe zero) elements from
+    <span class="tex2jax_process">$\{ 2, 4, 8\} $</span>. To make
+    this problem a bit easier, the initial list can contain only
+    numbers in the set <span class="tex2jax_process">$\{ 2, 4, 8\}
+    $</span>.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single positive integer
+    <span class="tex2jax_process">$T \leq 100$</span> indicating
+    the number of test cases. Next <span class="tex2jax_process">$T$</span> lines each contains a string of
+    length <span class="tex2jax_process">$1 \leq L \leq
+    100$</span>, composed entirely of digits from the set
+    <span class="tex2jax_process">$\{ 2, 4, 8\} $</span> (our
+    representation of the given list).</p>
+<h2>Output</h2>
+<p>For each test case, output a line containing the shortest
+    <b class="bfseries">nice</b> list built out of the input list
+    by inserting zero or more of digits from the set <span class="tex2jax_process">$\{ 2, 4, 8\} $</span>. If there are multiple
+    optimal solutions, output the lexicographically smallest
+    one.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+3
+222
+8224
+42424
+</pre>
+</td>
+<td>
+<pre>
+2222
+8224
+422422448
+</pre>
+</td>
+</tr>
+</table>
+</div>

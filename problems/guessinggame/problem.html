@@ -1,0 +1,64 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/guessinggame/file/statement/en/img-0001.png" class="illustration" src="/problems/guessinggame/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>
+<p>Stan and Ollie are playing a guessing game. Stan thinks of a
+    number between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$10$</span> (inclusive) and Ollie
+    guesses what the number might be. After each guess, Stan
+    indicates whether Ollie’s guess is too high, too low, or right
+    on.</p>
+<p>After playing several rounds, Ollie has become suspicious
+    that Stan cheats; that is, that he changes the number between
+    Ollie’s guesses. To prepare his case against Stan, Ollie has
+    recorded a transcript of several games. You are to determine
+    whether or not each transcript proves that Stan is
+    cheating.</p>
+<h2>Input</h2>
+<p>Standard input consists of several transcripts. Each
+    transcript consists of a number of paired guesses and
+    responses. A guess is a line containing single integer between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$10$</span> (inclusive), and a response is a
+    line containing “too high”, “too low”, or “right on”. Each game
+    ends with “right on”. A line containing <span class="tex2jax_process">$0$</span> follows the last transcript. There
+    are at most <span class="tex2jax_process">$2500$</span>
+    guess-response pairs in total.</p>
+<h2>Output</h2>
+<p>For each game, output a line “<tt class="ttfamily">Stan is
+    dishonest</tt>” if Stan’s responses are inconsistent with the
+    final guess and response. Otherwise, print “<tt class="ttfamily">Stan may be honest</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+10
+too high
+3
+too low
+4
+too high
+2
+right on
+5
+too low
+7
+too high
+6
+right on
+0
+</pre>
+</td>
+<td>
+<pre>
+Stan is dishonest
+Stan may be honest
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,68 @@
+<div class="problembody">
+<p>There are <span class="tex2jax_process">$n$</span>
+    mathemagicians standing in a circle. Each mathemagician wears
+    either a blue hat or a red hat. A mathemagician can cast a
+    color change charm which changes the color of their hat to the
+    same color as the hat of the mathemagician directly to the left
+    or to the right of them (the caster of the spell may choose
+    which one of them). Note that mathemagicians are polite people
+    and do not like interrupting each other, so only one
+    mathemagician at a time may perform mathemagic.</p>
+<p>The mathemagicians are not happy with their current hat
+    configuration, so they would like to use the color change charm
+    repeatedly to enter another hat configuration. Time isn’t an
+    issue because they can conjure cookies to eat.</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$3
+    \leq n \leq 10^5$</span>), the number of mathemagicians. The
+    next contains a string of length <span class="tex2jax_process">$n$</span>. If the <span class="tex2jax_process">$i$</span>th mathemagician wears a blue hat
+    in the beginning, the <span class="tex2jax_process">$i$</span>th character of the string is
+    ‘<tt class="ttfamily">B</tt>’, otherwise the <span class="tex2jax_process">$i$</span>th character is ‘<tt class="ttfamily">R</tt>’. Finally, the third line contains a string
+    of length <span class="tex2jax_process">$n$</span>. If the
+    <span class="tex2jax_process">$i$</span>th mathemagician would
+    like to wear a blue hat in the end, the <span class="tex2jax_process">$i$</span>th character of the string is
+    ‘<tt class="ttfamily">B</tt>’, otherwise the <span class="tex2jax_process">$i$</span>th character is ‘<tt class="ttfamily">R</tt>’.</p>
+<p>It is guaranteed that not every mathemagician is happy with
+    their hat color in the beginning.</p>
+<h2>Output</h2>
+<p>Output “<tt class="ttfamily">yes</tt>” if it is possible for
+    the mathemagicians to achieve the desired hat configuration
+    after a finite number of color change charms, otherwise output
+    “<tt class="ttfamily">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+BRBBR
+RBBRR
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>6
+RBRBRB
+BRBRBR
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

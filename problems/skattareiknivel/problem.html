@@ -1,0 +1,261 @@
+<div class="problembody">
+<p>Sigurjón was chosen employee of the month at Krabbaborgarar
+    for twelve months in a row, and therefore got a big raise.
+    However, Sigurjón knows that he will not directly receive all
+    of his salary, first he must pay into a pension fund and a
+    supplementary pension fund, and then he has to pay income tax
+    and communal tax of the rest. Sigurjón also knows that he gets
+    a personal tax exemption every month that can be deducted from
+    the total tax, and if he does not use all of his personal tax
+    exemption one month, he can use the rest of it the following
+    month! Sigurjón wants to know how much of his salary he will
+    receive after paying all fees and taxes, but the calculations
+    are too complicated for him. Can you help Sigurjón?</p>
+<p>Taxes of individual’s salary are calculated as follows:</p>
+<p>First you have to pay into a pension fund and a
+    supplementary pension fund. The fees are calculated as a
+    percentage of the total salary before tax. The total salary
+    minus the fund fees are called tax base, which is rounded down
+    to the nearest integer. We represent this using <span class="tex2jax_process">$\lfloor x \rfloor $</span>, therefore
+    <span class="tex2jax_process">$\lfloor 11.3 \rfloor =
+    11$</span> and <span class="tex2jax_process">$\lfloor 25.99
+    \rfloor = 25$</span>. For example, if an individual’s monthly
+    salary is <span class="tex2jax_process">$500\, 000$</span> ISK,
+    and he pays <span class="tex2jax_process">$4\% $</span> into a
+    pension fund, and <span class="tex2jax_process">$1\% $</span>
+    into a supplementary pension fund, then the individual pays
+    <span class="tex2jax_process">$\lfloor 500\, 000 \cdot 0.04
+    \rfloor = 20\, 000$</span> ISK into a pension fund and
+    <span class="tex2jax_process">$\lfloor 500\, 000 \cdot 0.01
+    \rfloor = 5\, 000$</span> ISK into a supplementary pension
+    fund. The tax base is then <span class="tex2jax_process">$500\,
+    000 - 20\, 000 - 5\, 000 = 475\, 000$</span> ISK.</p>
+<p>It is necessary to pay income tax, and communal tax of the
+    tax base to the state, and to the municipality that the
+    individual lives in, respectively. The income tax is divided
+    into different tax brackets, and in each bracket it is
+    necessary to pay a certain percentage of the tax base that is
+    covered by the bracket. The communal tax is not divided into
+    brackets. The sum of the income tax and the communal tax is
+    called withholding tax, which is also rounded down to the
+    nearest integer.</p>
+<p>In 2023, we have the following three tax brackets in Iceland
+    and we assume mean communal tax of <span class="tex2jax_process">$14.67\% $</span>:</p>
+<div class="table">
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="text-align:left">
+<p>Bracket</p>
+</td>
+<td style="text-align:left">
+<p>Salary</p>
+</td>
+<td style="text-align:left">
+<p>Tax rate</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$1$</span></p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$0$</span> ISK. –
+            <span class="tex2jax_process">$409\, 986$</span>
+            ISK.</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left">
+<p><span class="tex2jax_process">$31.45\% $</span>,
+            which includes <span class="tex2jax_process">$16.78\%
+            $</span> income tax</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$2$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$409\, 987$</span>
+            ISK. – <span class="tex2jax_process">$1\, 151\,
+            012$</span> ISK.</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$37.95\% $</span>,
+            which includes <span class="tex2jax_process">$23.28\%
+            $</span> income tax</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$3$</span></p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$1\, 151\, 013$</span>
+            ISK. and over</p>
+</td>
+<td style="text-align:left">
+<p><span class="tex2jax_process">$46.25\% $</span>,
+            which includes <span class="tex2jax_process">$31.58\%
+            $</span> income tax</p>
+</td>
+</tr>
+</table>
+</div>
+<p>If the tax base is <span class="tex2jax_process">$475\,
+    000$</span> ISK, then it completely covers the first bracket,
+    <span class="tex2jax_process">$409\, 986$</span> ISK in that
+    bracket, and partially covers the second bracket, <span class="tex2jax_process">$65\, 014$</span> ISK in that bracket. The
+    individual therefore pays <span class="tex2jax_process">$31.45\% $</span> of the first <span class="tex2jax_process">$409\, 986$</span> ISK, and <span class="tex2jax_process">$37.95\% $</span> of the remaining
+    <span class="tex2jax_process">$65\, 014$</span> ISK. The total
+    withholding tax is then <span class="tex2jax_process">$\lfloor
+    0.3145 \cdot 409\, 986 + 0.3795 \cdot 65\, 014 \rfloor = 153\,
+    613$</span> ISK.</p>
+<p>Finally, the personal tax exemption is deducted from the
+    withholding tax, and the result is the amount that the
+    individual has to pay in taxes of the tax base. If the
+    withholding tax is lower than the personal tax exemption, then
+    the personal tax exemption is accrued (but not retroactively).
+    In 2023, the personal tax exemption is <span class="tex2jax_process">$59\, 665$</span> ISK per month. For example,
+    if the withholding tax is <span class="tex2jax_process">$153\,
+    613$</span> ISK, then the individual has to pay <span class="tex2jax_process">$153\, 613 - 59\, 665 = 93\, 948$</span> ISK
+    of the tax base, and therefore receives a salary of
+    <span class="tex2jax_process">$475\, 000 - 93\, 948 = 381\,
+    052$</span> ISK after paying all fees and taxes. In this case,
+    the personal tax exemption was fully used, and nothing is
+    carried over to the next month.</p>
+<p>Had the withholding tax been <span class="tex2jax_process">$30\, 000$</span> ISK, and the personal tax
+    exemption still <span class="tex2jax_process">$59\, 665$</span>
+    ISK, then the individual would not have needed to pay anything
+    of the tax base, and <span class="tex2jax_process">$59\, 665 -
+    30\, 000 = 29\, 665$</span> ISK of the personal tax exemption
+    would have carried over to the next month. The invididual would
+    therefore have a personal tax exemption of <span class="tex2jax_process">$59\, 665 + 29\, 665 = 89\, 330$</span> ISK
+    the following month.</p>
+<h2>Input</h2>
+<p>The first line contains a real number <span class="tex2jax_process">$l$</span>, where <span class="tex2jax_process">$0 \leq l \leq 4$</span>, the contribution
+    percentage to a pension fund.</p>
+<p>The second line contains a real number <span class="tex2jax_process">$s$</span>, where <span class="tex2jax_process">$0 \leq s \leq 4$</span>, the contribution
+    percentage to a private property fund.</p>
+<p>The real numbers are given with exactly two digits after the
+    decimal point.</p>
+<p>Following that are twelve lines. Each line contains one
+    integer <span class="tex2jax_process">$m_{i}$</span>, where
+    <span class="tex2jax_process">$0 \leq m_ i \leq 10^8$</span>
+    for each <span class="tex2jax_process">$i$</span>, denoting
+    Sigurjón’s salary for month <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>The output should contain one integer <span class="tex2jax_process">$h$</span>, the sum of Sigurjón’s monthly
+    salaries over the year after he has paid all fees and
+    taxes.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>100</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4.00
+1.00
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+</pre>
+</td>
+<td>
+<pre>570000
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4.00
+1.00
+1000000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+</pre>
+</td>
+<td>
+<pre>1198290
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>4.00
+1.00
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+50000
+1000000
+</pre>
+</td>
+<td>
+<pre>1472500
+</pre>
+</td>
+</tr>
+</table>
+</div>

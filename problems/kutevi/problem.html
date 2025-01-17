@@ -1,0 +1,89 @@
+<div class="problembody">
+<p>One day Mirko was cleaning up his room and found a ruler and
+    a compass. He went to the school the next day and challenged
+    his friend Slavko to a geometric construction battle. Mirko
+    knows how to construct some angles using the ruler and compass
+    and knows how to subtract and add any two angles he constructs.
+    Slavko now shouts random angles and Mirko must draw them as
+    fast as possible.</p>
+<p>You are observing this battle and would like to know if
+    Mirko can construct the angles Slavko shouts at all.</p>
+<div class="figure" id="fig:sample1">
+<center>
+<img alt="\includegraphics[width=0.25\textwidth ]{sample1.jpg}" src="/problems/kutevi/file/statement/en/img-0001.jpg" style="width:25.00%"/>
+<div class="caption">
+<b>Figure 1</b>: First example
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$1
+    \leq N \leq 10$</span>), number of angles Mirko knows how to
+    construct initially and <span class="tex2jax_process">$K$</span> (<span class="tex2jax_process">$1
+    \leq K \leq 10$</span>), the number of angles Slavko
+    selected.</p>
+<p>The second line of input contains <span class="tex2jax_process">$N$</span> positive integers, all smaller
+    than <span class="tex2jax_process">$360$</span>, the angles
+    Mirko knows how to construct initially.</p>
+<p>The third line contains <span class="tex2jax_process">$K$</span> positive integers, all smaller
+    than <span class="tex2jax_process">$360$</span>, the angles
+    Slavko selected.</p>
+<h2>Output</h2>
+<p>Output consists of <span class="tex2jax_process">$K$</span>
+    lines, one for each angle Slavko selected. The <span class="tex2jax_process">$i$</span>-th line should contain “<tt class="ttfamily">YES</tt>” if Mirko can construct the <span class="tex2jax_process">$i$</span>-th angle, and “<tt class="ttfamily">NO</tt>” otherwise.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 1
+30 70
+40
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>1 1
+100
+60
+</pre>
+</td>
+<td>
+<pre>YES
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 2
+10 20 30
+5 70
+</pre>
+</td>
+<td>
+<pre>NO
+YES
+</pre>
+</td>
+</tr>
+</table>
+</div>

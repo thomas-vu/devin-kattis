@@ -1,0 +1,78 @@
+<div class="problembody">
+<p>Bash just woke up from his sweetest dream ever. In his
+    dream, he became the best Pokenom trainer — like no one ever
+    was. It was on the date …</p>
+<p>Unfortunately, Bash forgot the exact date. He only
+    remembered that the date was written in format ‘DD MM YYYY’
+    with exactly <span class="tex2jax_process">$8$</span> digits.
+    He also remembers these <span class="tex2jax_process">$8$</span> digits (but he does not remember
+    their order). Of course, the date must be a valid date.</p>
+<p>Since Bash was born on Jan 1st, 2000, he knows that the date
+    was on or after Jan 1st, 2000. (Note that the date can be Jan
+    1st, 2000 — it means Bash is destined to be the best Pokenom
+    trainer since he was born!).</p>
+<p>Bash really wants to know the date when he become the best
+    Pokenom trainer. How many possible valid dates could there be?
+    What is the earliest valid date that Bash could become the best
+    Pokenom trainer?</p>
+<h2>Notes</h2>
+<p>On a leap year, February has <span class="tex2jax_process">$29$</span> days. Following are the rules for
+    determining leap years:</p>
+<ul class="itemize">
+<li>
+<p>A year divisible by <span class="tex2jax_process">$400$</span> is a leap year,</p>
+</li>
+<li>
+<p>A year divisible by <span class="tex2jax_process">$100$</span> but not by <span class="tex2jax_process">$400$</span> is NOT a leap year,</p>
+</li>
+<li>
+<p>A year divisible by <span class="tex2jax_process">$4$</span> but not by <span class="tex2jax_process">$100$</span> is a leap year,</p>
+</li>
+<li>
+<p>A year not divisible by <span class="tex2jax_process">$4$</span> is NOT a leap year.</p>
+</li>
+</ul>
+<h2>Input</h2>
+<ul class="itemize">
+<li>
+<p>The first line contains one integer <span class="tex2jax_process">$t$</span> <span class="tex2jax_process">$(1 \leq t \leq 50)$</span> — the number
+        of test cases.</p>
+</li>
+<li>
+<p>Each of the next <span class="tex2jax_process">$t$</span> lines describes one test case,
+        contains eight digits in the format ‘XX XX XXXX’ (eight
+        digits, separated by two blank spaces). Note that the input
+        might not represent a valid date.</p>
+</li>
+</ul>
+<p>Note that the first month of the year is represented by
+    <span class="tex2jax_process">$01$</span>, and the first day of
+    the month by <span class="tex2jax_process">$01$</span>.</p>
+<h2>Output</h2>
+<p>For each test case, output a single line containing the
+    number of possible dates and the earliest date which Bash could
+    become the best Pokenom trainer, in the format ‘DD MM YYYY’. If
+    there are no valid dates, print a single line containing
+    ‘<span class="tex2jax_process">$0$</span>’ (zero) instead.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3
+04 11 2018
+23 45 6789
+01 01 0002
+</pre>
+</td>
+<td>
+<pre>524 18 11 2004
+0
+4 01 01 2000
+</pre>
+</td>
+</tr>
+</table>
+</div>

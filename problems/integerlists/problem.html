@@ -1,0 +1,82 @@
+<div class="problembody">
+<p>The programming language <em>Better And Portable Code</em>
+    (BAPC) is a language for working with lists of integers. The
+    language has two built-in functions: ‘<tt>R</tt>’
+    (<em>reverse</em>) and ‘<tt>D</tt>’ (<em>drop</em>).</p>
+<p>The function ‘<tt>R</tt>’ reverses its input list, and
+    ’<tt>D</tt>’ drops the first element of its input and returns
+    the rest, or gives an error in case its input is an empty list.
+    To get more advanced behavior, functions can be composed:
+    “<tt>AB</tt>" is the function that first applies ‘<tt>A</tt>’
+    to its input and then ‘<tt>B</tt>’ to the resulting list. For
+    example, “<tt>RDD</tt>" is a function that reverses a list and
+    then drops the first two elements.</p>
+<p>Unfortunately, our BAPC interpreter has bit rotted, so we
+    ask you to write a new one. Given a BAPC program and its input,
+    return its output or “<tt>error</tt>" in case ‘<tt>D</tt>’ is
+    applied to an empty list. Lists are represented as the
+    character ‘<tt>[</tt>’ followed by a comma-separated list of
+    integers followed by the character ‘<tt>]</tt>’. Notice that
+    the input and output lists can be quite long.</p>
+<h2>Input</h2>
+<p>On the first line one positive number: the number of test
+    cases, at most 100. After that per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with a string <span class="tex2jax_process">$p$</span> <span class="tex2jax_process">$(1\le \text {length}(p) \le 100\,
+        000)$</span>: a BAPC program, consisting of the characters
+        ‘<tt>R</tt>’ and ‘<tt>D</tt>’.</p>
+</li>
+<li>
+<p>one line with an integer <span class="tex2jax_process">$n$</span> <span class="tex2jax_process">$(0\le n \le 100\, 000)$</span>: the
+        number of elements in the input.</p>
+</li>
+<li>
+<p>one line with a list of <span class="tex2jax_process">$n$</span> integers in the form
+        <span class="tex2jax_process">$[x_1, \ldots ,x_ n]$</span>
+<span class="tex2jax_process">$(1\le x_ i \le 100)$</span>:
+        the input list.</p>
+</li>
+</ul>
+<h2>Output</h2>
+<p>Per test case:</p>
+<ul class="itemize">
+<li>
+<p>one line with the resulting integer list or
+        “<tt>error</tt>" in case of an error.</p>
+</li>
+</ul>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+RDD
+4
+[1,2,3,4]
+DD
+1
+[42]
+RRD
+6
+[1,1,2,3,5,8]
+D
+0
+[]
+</pre>
+</td>
+<td>
+<pre>
+[2,1]
+error
+[1,2,3,5,8]
+error
+</pre>
+</td>
+</tr>
+</table>
+</div>

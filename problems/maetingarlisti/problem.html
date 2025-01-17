@@ -1,0 +1,117 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/maetingarlisti/file/statement/en/img-0001.jpg" class="illustration" src="/problems/maetingarlisti/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Classroom (image from <a href="https://flic.kr/p/BTRZe">flickr.com</a>)
+      </div>
+</div>
+<p>An attendance list is passed around a classroom with each
+    student writing their name below the name of the last student
+    who had the list (the first person writes their name at the
+    top). The classroom consists of <span class="tex2jax_process">$r$</span> rows where each row has
+    <span class="tex2jax_process">$c$</span> chairs. The class is
+    popular enough that every chair will be filled. Your assignment
+    is to write a program which finds out whether the attendance
+    list was passed from left to right or from right to left for
+    each row in the classroom.</p>
+<h2>Input</h2>
+<p>The first line of the input contains three integers
+    <span class="tex2jax_process">$4 \leq n \leq 10^5$</span>,
+    <span class="tex2jax_process">$r$</span>, and <span class="tex2jax_process">$c$</span>, where <span class="tex2jax_process">$n = r \cdot c$</span>. Then there are
+    <span class="tex2jax_process">$r$</span> lines, each line with
+    <span class="tex2jax_process">$c$</span> names, where each line
+    denotes a single row of students. Then there are <span class="tex2jax_process">$n$</span> lines, each line with a single
+    name, denoting the attendance list.</p>
+<p>Each name consists of <span class="tex2jax_process">$2$</span> to <span class="tex2jax_process">$20$</span> English lowercase letters and
+    <span class="tex2jax_process">$c \geq 2$</span>.</p>
+<h2>Output</h2>
+<p>Print <span class="tex2jax_process">$r$</span> lines, where
+    line <span class="tex2jax_process">$i$</span> is either
+    <tt class="ttfamily">left</tt> if the attendance list was
+    passed from left to right in the <span class="tex2jax_process">$i$</span>-th row, but print <tt class="ttfamily">right</tt> otherwise.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>10</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$4 \leq n \leq
+          50$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>90</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>No further constraints</p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>6 2 3
+benni arnar unnar
+bjarki atli hannes
+benni
+arnar
+unnar
+hannes
+atli
+bjarki
+</pre>
+</td>
+<td>
+<pre>left
+right
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 2 2
+patryk anna
+karl unnsteinn
+patryk
+anna
+karl
+unnsteinn
+</pre>
+</td>
+<td>
+<pre>left
+left
+</pre>
+</td>
+</tr>
+</table>
+</div>

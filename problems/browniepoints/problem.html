@@ -1,0 +1,72 @@
+<div class="problembody">
+<div class="illustration" style="width:20.00%">
+<img alt="/problems/browniepoints/file/statement/en/img-0001.jpg" class="illustration" src="/problems/browniepoints/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>Stan and Ollie play the game of Odd Brownie Points. Some
+    brownie points are located in the plane, at integer
+    coordinates. Stan plays first and places a vertical line in the
+    plane. The line must go through a brownie point and may cross
+    many (with the same <span class="tex2jax_process">$x$</span>-coordinate). Then Ollie places a
+    horizontal line that must cross a brownie point already crossed
+    by the vertical line.</p>
+<p>Those lines divide the plane into four quadrants. The
+    quadrant containing points with arbitrarily large positive
+    coordinates is the top-right quadrant.</p>
+<p>The players score according to the number of brownie points
+    in the quadrants. If a brownie point is crossed by a line, it
+    does not count. Stan gets a point for each (uncrossed) brownie
+    point in the top-right and bottom-left quadrants. Ollie gets a
+    point for each (uncrossed) brownie point in the top-left and
+    bottom-right quadrants.</p>
+<p>Your task is to compute the scores of Stan and Ollie given
+    the point through which they draw their lines.</p>
+<h2>Input</h2>
+<p>Input contains a number of test cases, at most <span class="tex2jax_process">$15$</span>. The data of each test case
+    appear on a sequence of input lines. The first line of each
+    test case contains a positive odd integer <span class="tex2jax_process">$1 \le n \le 20\, 000$</span> which is the
+    number of brownie points. Each of the following <span class="tex2jax_process">$n$</span> lines contains two integers, the
+    horizontal (<span class="tex2jax_process">$x$</span>) and
+    vertical (<span class="tex2jax_process">$y$</span>) coordinates
+    of a brownie point. All coordinates are at most <span class="tex2jax_process">$10^6$</span> in absolute value. No two
+    brownie points occupy the same place. The input ends with a
+    line containing <span class="tex2jax_process">$0$</span>
+    (instead of the <span class="tex2jax_process">$n$</span> of a
+    test).</p>
+<h2>Output</h2>
+<p>For each test case of input, print a line with two numbers
+    separated by a single space. The first number is Stan’s score,
+    the second is the score of Ollie when their lines cross the
+    point whose coordinates are given at the center of the input
+    sequence of points for this case.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+11
+3 2
+3 3
+3 4
+3 6
+2 -2
+1 -3
+0 0
+-3 -3
+-3 -2
+-3 -4
+3 -7
+0
+</pre>
+</td>
+<td>
+<pre>
+6 3
+</pre>
+</td>
+</tr>
+</table>
+</div>

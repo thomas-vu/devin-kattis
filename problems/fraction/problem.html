@@ -1,0 +1,67 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/fraction/file/statement/en/img-0001.jpg" class="illustration" src="/problems/fraction/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>The (simple) continued fraction representation of a real
+    number <span class="tex2jax_process">$r$</span> is an
+    expression obtained by an iterative process of representing
+    <span class="tex2jax_process">$r$</span> as the sum of its
+    integer part and the reciprocal of another number, then writing
+    this other number as the sum of its integer part and another
+    reciprocal, and so on. In other words, a continued fraction
+    representation of <span class="tex2jax_process">$r$</span> is
+    of the form <span class="tex2jax_process">\begin{equation*} r =
+    a_0 + \cfrac {1}{a_1 + \cfrac {1}{a_2 + \cfrac {1}{a_3+\dots
+    }}} \end{equation*}</span>
+<p>where <span class="tex2jax_process">$a_0, a_1, a_2, \dots
+    $</span> are integers and <span class="tex2jax_process">$a_1,
+    a_2, \dots &gt; 0$</span>. We call the <span class="tex2jax_process">$a_ i$</span>-values <i class="itshape">partial quotients</i>. For example, in the continued
+    fraction representation of <span class="tex2jax_process">$5.4$</span>, the partial quotients are
+    <span class="tex2jax_process">$a_0 = 5, a_1 = 2, a_2 =
+    2$</span>. This representation of a real number has several
+    applications in theory and practice. If <span class="tex2jax_process">$r$</span> is a rational number, the partial
+    quotients are eventually all zero, so we only need to consider
+    a finite number of partial quotients.</p>
+<p>Given two rational numbers in continued fraction
+    representation, your task is to perform the four elementary
+    arithmetic operations on these numbers and display the results
+    in continued fraction representation.</p>
+<h2>Input</h2>
+<p>The input consists of a single test case. The test case
+    consists of three lines. The first line contains two integers
+    <span class="tex2jax_process">$n_1$</span> and <span class="tex2jax_process">$n_2$</span>, where <span class="tex2jax_process">$1 \le n_ i \le 9$</span> is the number of
+    partial quotients of rational number <span class="tex2jax_process">$r_ i$</span> for <span class="tex2jax_process">$1 \le i \le 2$</span>. The second line
+    contains the partial quotients of <span class="tex2jax_process">$r_1$</span> and the third line contains the
+    partial quotients of <span class="tex2jax_process">$r_2$</span>. The absolute values of the
+    quotients are not more than 10 and you may assume that
+    <span class="tex2jax_process">$r_1 &gt; r_2 &gt; 0$</span>.</p>
+<h2>Output</h2>
+<p>Display the partial quotients of the continued fraction
+    representations of <span class="tex2jax_process">$r_1+r_2$</span>, <span class="tex2jax_process">$r_1-r_2$</span>, <span class="tex2jax_process">$r_1 \times r_2$</span>, and <span class="tex2jax_process">$r_1 / r_2$</span>, in order, each in a line.
+    Consecutive partial quotients on each line are separated by a
+    single space. Do not print any trailing zero partial
+    quotients.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4 3
+5 1 1 2
+5 2 2
+</pre>
+</td>
+<td>
+<pre>
+11
+0 5
+30 4 6
+1 27
+</pre>
+</td>
+</tr>
+</table>
+</div>

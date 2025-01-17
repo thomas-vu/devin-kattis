@@ -1,0 +1,201 @@
+<div class="problembody">
+<div class="illustration" style="width:50.00%">
+<img alt="/problems/recipes/file/statement/en/img-0001.png" class="illustration" src="/problems/recipes/file/statement/en/img-0001.png"/>
+<div class="description"></div>
+</div>A recipe is a list of ingredients and a set of
+    instructions to prepare a dish. It is often written for a
+    particular number of portions. If you have a recipe for 4
+    portions and you want to make 6 portions, it turns out that
+    simply multiplying the amounts for each ingredient by 1.5 is
+    often wrong! The reason is that the original recipe may have
+    been rounded to the nearest teaspoon, gram, etc., and the
+    rounding errors magnify when a recipe is scaled.
+
+    <p>Some recipes are specifically written to ease the task of
+    scaling. These recipes are developed using “Baker’s
+    percentages.” Each ingredient is listed not only by weight (in
+    grams), but also as a percentage relative to the “main
+    ingredient.” The main ingredient will always have a 100%
+    Baker’s percentage. Note that the sum of the Baker’s
+    percentages from all ingredients is greater than 100%, and that
+    the Baker’s percentages of some ingredients may exceed
+    100%.</p>
+<div class="table" id="a0000000004">
+<center>
+<div class="caption">
+<b>Table 1</b>: Example Recipe
+        </div>
+<table cellspacing="0" class="tabular">
+<tr>
+<td colspan="1" style="text-align:center">
+<p>Ingredient</p>
+</td>
+<td colspan="1" style="text-align:center">
+<p>Weight (g)</p>
+</td>
+<td colspan="1" style="text-align:center">
+<p>Percentage (%)</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+<p>Olive Oil</p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>50.9</p>
+</td>
+<td style="border-top-style:solid; text-align:right; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+<p>11.2</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Garlic</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>12.0</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>2.7</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Beef</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>453.6</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>100.0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Onions</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>1134.0</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>250.0</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border-right:1px solid black; border-left:1px solid black">
+<p>Raisins</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>82.5</p>
+</td>
+<td style="text-align:right; border-right:1px solid black">
+<p>18.2</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; text-align:center; border-bottom-color:black">
+<p>Bouillon</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:right; border-bottom-style:solid; border-right:1px solid black">
+<p>10.0</p>
+</td>
+<td style="border-bottom-color:black; border-bottom-width:1px; text-align:right; border-bottom-style:solid; border-right:1px solid black">
+<p>2.2</p>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<p>To scale a recipe:</p>
+<ol class="enumerate">
+<li>
+<p>determine the scaling factor by dividing the number of
+        desired portions by the number of portions for which the
+        recipe is written;</p>
+</li>
+<li>
+<p>multiply the weight of the main ingredient with a 100%
+        Baker’s percentage by the scaling factor. This is the
+        scaled weight of the main ingredient;</p>
+</li>
+<li>
+<p>calculate the scaled weight of every other ingredient by
+        multiplying its Baker’s percentage by the scaled weight of
+        the main ingredient.</p>
+</li>
+</ol>
+<h2>Input</h2>
+<p>The first line of input specifies a positive integer
+    <span class="tex2jax_process">$T \leq 1000$</span>, consisting
+    of the cases to follow. Each case starts with a line with three
+    integers <span class="tex2jax_process">$R$</span>, <span class="tex2jax_process">$P$</span>, and <span class="tex2jax_process">$D$</span>: <span class="tex2jax_process">$1
+    \leq R \leq 20$</span> is the number of ingredients,
+    <span class="tex2jax_process">$1 \leq P \leq 12$</span> is the
+    number of portions for which the recipe is written, and
+    <span class="tex2jax_process">$1 \leq D \leq 1000$</span> is
+    the number of desired portions. Each of the next <span class="tex2jax_process">$R$</span> lines is of the form</p>
+<pre>
+   &lt;name&gt;   &lt;weight&gt;   &lt;percentage&gt;
+</pre>
+<p>where <tt>&lt;name&gt;</tt> is the name of the ingredient
+    (an alphabetic string of up to <span class="tex2jax_process">$20$</span> characters with no embedded
+    spaces), <tt>&lt;weight&gt;</tt> is the weight in grams for
+    that ingredient, and <tt>&lt;percentage&gt;</tt> is its Baker’s
+    percentage. Both <tt>&lt;weight&gt;</tt> and
+    <tt>&lt;percentage&gt;</tt> are floating-point numbers with
+    exactly one digit after the decimal point. Each recipe will
+    only have one ingredient with a Baker’s percentage of 100%.</p>
+<h2>Output</h2>
+<p>For each case, print <tt>Recipe #</tt> followed by a space
+    and the appropriate case number (see sample output below). This
+    is followed by the list of ingredients and their scaled weights
+    in grams. The name of the ingredient and its weight should be
+    separated by a single space. Each ingredient is listed on its
+    own line, in the same order as in the input. After each case,
+    print a line of <span class="tex2jax_process">$40$</span>
+    dashes (’<tt>-</tt>’). Answers within <span class="tex2jax_process">$0.1$</span>g of the correct result are
+    acceptable.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+6 4 20
+oliveoil 50.9 11.2
+garlic 12.0 2.7
+beef 453.6 100.0
+onions 1134.0 250.0
+raisins 82.5 18.2
+bouillon 10.0 2.2
+4 5 8
+Milk 265.0 93.0
+SodiumCitrate 11.0 4.0
+WhiteCheddar 285.0 100.0
+DryMacaroni 240.0 84.0
+</pre>
+</td>
+<td>
+<pre>
+Recipe # 1
+oliveoil 254.0
+garlic 61.2
+beef 2268.0
+onions 5670.0
+raisins 412.8
+bouillon 49.9
+----------------------------------------
+Recipe # 2
+Milk 424.1
+SodiumCitrate 18.2
+WhiteCheddar 456.0
+DryMacaroni 383.0
+----------------------------------------
+</pre>
+</td>
+</tr>
+</table>
+</div>

@@ -1,0 +1,108 @@
+<div class="problembody">
+<p>Since you have learned Modular Arithmetic, you know how to
+    work with quotients and remainders. For every pair of integers
+    <span class="tex2jax_process">$a$</span> and <span class="tex2jax_process">$m$</span> with <span class="tex2jax_process">$m&gt;0$</span>, there exist unique integers
+    <span class="tex2jax_process">$q$</span> and <span class="tex2jax_process">$r$</span> such that <span class="tex2jax_process">$a = m\cdot q+r$</span> and <span class="tex2jax_process">$0 \leq r &lt; m$</span>. But this is a bit
+    simple, you wonder if you can do something more interesting
+    with this theory.</p>
+<p>Right now, you are holding a handful of consecutive cards
+    numbered from <span class="tex2jax_process">$L$</span> to
+    <span class="tex2jax_process">$R$</span>. You lay the cards out
+    side-by-side to create a single large number (i.e.
+    concatenating the digits of your cards). You would like to know
+    the remainder (which is the <span class="tex2jax_process">$r$</span> in <span class="tex2jax_process">$a = m\cdot q + r$</span>) when this number
+    is divided by <span class="tex2jax_process">$9$</span>. For
+    example, <span class="tex2jax_process">$L = 9$</span> and
+    <span class="tex2jax_process">$R = 11$</span> means you are
+    holding cards <span class="tex2jax_process">$9, 10, 11$</span>.
+    Concatenating these numbers produces the number <span class="tex2jax_process">$91011$</span>. The remainder <span class="tex2jax_process">$r$</span> left upon dividing this number by
+    <span class="tex2jax_process">$9$</span> would be <span class="tex2jax_process">$r = 3$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of a single line containing two integers
+    <span class="tex2jax_process">$L$</span> (<span class="tex2jax_process">$1 \leq L \leq 10^{12}$</span>) and
+    <span class="tex2jax_process">$R$</span> (<span class="tex2jax_process">$L \leq R \leq 10^{12}$</span>). This means
+    you are holding the cards with numbers from <span class="tex2jax_process">$L$</span> to <span class="tex2jax_process">$R$</span>, inclusive.</p>
+<h2>Output</h2>
+<p>Display a single line containing the remainder of the
+    concatenated number if you were to divide it by <span class="tex2jax_process">$9$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2 5
+</pre>
+</td>
+<td>
+<pre>5
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3 10
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3 100
+</pre>
+</td>
+<td>
+<pre>7
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>1000000000 1000000007
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 5</th>
+<th>Sample Output 5</th>
+</tr>
+<tr>
+<td>
+<pre>9 11
+</pre>
+</td>
+<td>
+<pre>3
+</pre>
+</td>
+</tr>
+</table>
+</div>

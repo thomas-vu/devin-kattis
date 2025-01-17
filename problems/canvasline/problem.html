@@ -1,0 +1,137 @@
+<div class="problembody">
+<p>Your friend Charmion asked you to hang some canvases out to
+    dry on a straight washing line for an art project she has been
+    working on. The canvases are artfully arranged such that none
+    of them overlap, although they may touch along the edges. For
+    stability, each canvas must be held by two pegs, but because
+    the canvases are very rigid, they can be held from
+    anywhere.</p>
+<p>Each canvas is an integral number of centimetres wide (at
+    least <span class="tex2jax_process">$10$</span> cm). Each peg
+    is slightly less than <span class="tex2jax_process">$1$</span>
+    cm wide. Canvases and pegs are all placed at integral
+    centimetre positions along the line.</p>
+<p>Unnecessary things touching any canvas is a smudge risk,
+    thus every canvas should be held by exactly two pegs, no more
+    and no less. Given all of the pegs that are already attached to
+    the line, place as few as possible additional pegs as necessary
+    to hold all of the canvases.</p>
+<div class="figure" id="fig:collage">
+<center>
+<img alt="\includegraphics[width=1.0\textwidth ]{sample}" src="/problems/canvasline/file/statement/en/img-0001.png" style="width:100.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration of a solution to Sample
+          Input 2. Pre-existing pegs are marked in white.
+        </div>
+</center>
+</div>
+<h2>Input</h2>
+<p>The input consists of:</p>
+<ul class="itemize">
+<li>
+<p>One line with an integer <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \leq n \leq 10^3$</span>), the number
+        of canvases on the line.</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$n$</span> lines, the
+        <span class="tex2jax_process">$i$</span>th of which
+        contains two integers <span class="tex2jax_process">$\ell _
+        i$</span> and <span class="tex2jax_process">$r_ i$</span>
+        (<span class="tex2jax_process">$0 \leq \ell _ i &lt; r_ i
+        \leq 10^9$</span> and <span class="tex2jax_process">$\ell _
+        i + 10 \le r_ i$</span>), the positions of the left and the
+        right end of the <span class="tex2jax_process">$i$</span>th
+        canvas in centimetres.</p>
+</li>
+<li>
+<p>One line with an integer <span class="tex2jax_process">$p$</span> (<span class="tex2jax_process">$0 \leq p \leq 2 \cdot 10^3$</span>), the
+        number of pegs already used.</p>
+</li>
+<li>
+<p>One line with <span class="tex2jax_process">$p$</span>
+        integers <span class="tex2jax_process">$x_1, \ldots , x_
+        p$</span> (<span class="tex2jax_process">$0 \leq x_ i &lt;
+        x_{i+1} \leq 10^9$</span> for each <span class="tex2jax_process">$i$</span>), the position of each
+        existing peg in centimetres.</p>
+</li>
+</ul>
+<p>Canvases are given from left to right and may touch only at
+    edges, that is <span class="tex2jax_process">$r_ i \le \ell
+    _{i+1}$</span> for each <span class="tex2jax_process">$i$</span>.</p>
+<h2>Output</h2>
+<p>If the canvases can be secured, output the smallest number
+    of extra pegs needed to secure all of the canvases while
+    touching each exactly twice. On the next line output the
+    integer positions of all of the new pegs.</p>
+<p>Otherwise, output “<tt class="ttfamily">impossible</tt>”.</p>
+<p>If there are multiple optimal solutions, you may output any
+    one of them.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>4
+0 18
+18 28
+28 40
+49 60
+4
+6 12 35 60
+</pre>
+</td>
+<td>
+<pre>3
+28 19 49
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>5
+2 15
+15 25
+25 40
+42 52
+52 62
+3
+5 29 52
+</pre>
+</td>
+<td>
+<pre>4
+15 25 49 58
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+0 60
+60 120
+120 140
+4
+20 60 80 120
+</pre>
+</td>
+<td>
+<pre>impossible
+</pre>
+</td>
+</tr>
+</table>
+</div>

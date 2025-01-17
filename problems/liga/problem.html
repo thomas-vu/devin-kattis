@@ -1,0 +1,60 @@
+<div class="problembody">
+<p>While the players are resting between sets, the station puts
+    on tedious commercials. Zvonko fires up the teletext feature on
+    his TV set and is reviewing the latest scores and standings in
+    the football league. Always sharp, he has come up with a new
+    mathematical game.</p>
+<p>The standings table contains five statistics for each team:
+    the total number of games played, how many of those games the
+    team won, drew and lost, and points earned. A team earns 3
+    points for every win and 1 point for every draw.</p>
+<p>Zvonko noticed that the values of some fields can be
+    determined from the others. Write a program that takes in a
+    table in which the values of some fields are unknown, and fills
+    in the missing fields.</p>
+<p>The data for different teams is not related. For example, it
+    is possible that the table says all teams have won all their
+    games (although that is not possible in a real league).</p>
+<p>Each team will have played at most <span class="tex2jax_process">$100$</span> games (even though that can be
+    one of the missing fields).</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$N$</span> <span class="tex2jax_process">$(1
+    \leq N \leq 1000)$</span>, the number of teams in the
+    league.</p>
+<p>Each of the following <span class="tex2jax_process">$N$</span> lines contains the <span class="tex2jax_process">$5$</span> fields for one team separated by
+    single spaces, containing the <span class="tex2jax_process">$5$</span> pieces of data as described in the
+    problem statement. Each field contains an integer (at least
+    <span class="tex2jax_process">$0$</span>), or the character
+    ‘<tt>?</tt>’ (question mark) if the value is not known.</p>
+<p>The input will be consistent and there will be a unique way
+    to determine the values of the missing fields.</p>
+<h2>Output</h2>
+<p>Output the table with the missing fields filled in.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+27 21 3 3 66
+27 18 6 3 ?
+? 15 5 7 50
+? 14 7 5 ?
+? 14 ? 8 47
+</pre>
+</td>
+<td>
+<pre>
+27 21 3 3 66
+27 18 6 3 60
+27 15 5 7 50
+26 14 7 5 49
+27 14 5 8 47
+</pre>
+</td>
+</tr>
+</table>
+</div>

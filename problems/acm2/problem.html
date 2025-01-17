@@ -1,0 +1,149 @@
+<div class="problembody">
+<p>ACM (Association for Computing Machinery) organizes the
+    International Collegiate Programming Contest (ICPC) worldwide
+    every year.</p>
+<p>In the ICPC, a team of three students is presented with a
+    problem set that contains <span class="tex2jax_process">$N$</span> problems<a class="footnote" href="#a0000000005"><sup class="footnotemark">1</sup></a> of
+    varying types and difficulty levels. The teams are not told
+    which problems are easier (or harder). As there is only one
+    single computer per team, each team has to decide which one of
+    the <span class="tex2jax_process">$N!$</span> possible problem
+    solving orders that the team wants to use. This is called the
+    “contest strategy” and teams who are expecting to do well in an
+    ICPC should use the optimal contest strategy for their
+    team.</p>
+<p>However, when a contest has ‘First to Solve Problem
+    [‘A’/‘B’/.../‘A’<span class="tex2jax_process">$+(N-1)$</span>]
+    award’ — like this ICPC SG Regional Contest 15 — sponsored by
+    Kattis, then some of the teams may throw the optimal contest
+    strategy out of the window in order to grab the (smaller)
+    award.</p>
+<h2>Input</h2>
+<p>The input describes a hypothetical scenario of a
+    <span class="tex2jax_process">$300$</span> minute contest.</p>
+<p>The first line contains two non-negative integers
+    <span class="tex2jax_process">$2 \leq N \leq 13$</span> and
+    <span class="tex2jax_process">$0 \leq p \leq N-1$</span>. The
+    integer <span class="tex2jax_process">$N$</span> describes the
+    number of problems in the problem set of this ACM ICPC and the
+    integer <span class="tex2jax_process">$p$</span> is a 0-based
+    index that describes the problem id that your team wants to
+    solve first before attempting the other <span class="tex2jax_process">$N-1$</span> problems.</p>
+<p>The next line contains <span class="tex2jax_process">$N$</span> integers in the range between
+    <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$999$</span>, inclusive. Each integer
+    <span class="tex2jax_process">$i$</span> describes the
+    estimated number of minutes to solve problem id <span class="tex2jax_process">$i$</span> according to your team. You have
+    discussed with your team mates that your team will not put the
+    same estimation for two different problems, so there is no
+    ambiguity.</p>
+<p>As an ACM ICPC duration is <span class="tex2jax_process">$5$</span> hours, or <span class="tex2jax_process">$300$</span> minutes, any estimation of
+    strictly larger than <span class="tex2jax_process">$300$</span>
+    minutes for a certain problem <span class="tex2jax_process">$j$</span> basically says that you estimate
+    that your team cannot solve problem <span class="tex2jax_process">$j$</span> during contest time.</p>
+<p>In this problem, you can assume that all your team’s
+    estimations are perfectly accurate, i.e. if your team
+    estimates that your team needs <span class="tex2jax_process">$30$</span> minutes to solve problem
+    <span class="tex2jax_process">$k$</span>, <span class="tex2jax_process">$270$</span> minutes to solve another problem
+    <span class="tex2jax_process">$l$</span>, and have no idea how
+    to solve the rest, and decides to solve problem <span class="tex2jax_process">$k$</span> first followed by <span class="tex2jax_process">$l$</span>, then after <span class="tex2jax_process">$30$</span> minutes have elapsed from the
+    start of contest, your team really gets an ‘Accepted’ verdict
+    from Kattis for problem <span class="tex2jax_process">$k$</span>, immediately switches to problem
+    <span class="tex2jax_process">$l$</span> for the next
+    <span class="tex2jax_process">$270$</span> minutes, gets
+    another ‘Accepted’ verdict from Kattis for problem <span class="tex2jax_process">$l$</span> at exactly <span class="tex2jax_process">$300$</span> minutes (in this problem,
+    submission at minute <span class="tex2jax_process">$300$</span>
+    is a valid submission<a class="footnote" href="#a0000000006"><sup class="footnotemark">2</sup></a>). Thus you
+    have <span class="tex2jax_process">$2$</span> Accepted problems
+    and the total penalty time of <span class="tex2jax_process">$30+300 = 330$</span> minutes as per the ICPC
+    rules.</p>
+<h2>Output</h2>
+<p>Print two integers <span class="tex2jax_process">$Num\_
+    AC$</span> and <span class="tex2jax_process">$Penalty\_
+    Time$</span> separated by a single space in one line.</p>
+<p><span class="tex2jax_process">$Num\_ AC$</span> is the
+    <em>highest</em> number of problems that your team can solve
+    and <span class="tex2jax_process">$Penalty\_ Time$</span> is
+    the <em>lowest</em> penalty minutes that your team can get in
+    order to solve <span class="tex2jax_process">$Num\_ AC$</span>
+    problems in this <span class="tex2jax_process">$300$</span>
+    minutes ACM ICPC <b class="bfseries">if</b> your team insists
+    to solve problem <span class="tex2jax_process">$p$</span> first
+    from the start of the contest and then use the remaining time
+    to work on the other <span class="tex2jax_process">$N-1$</span>
+    problems.</p>
+<p>For the example scenario above, if your team decides to
+    solve problem <span class="tex2jax_process">$l$</span> first
+    followed by <span class="tex2jax_process">$k$</span>, then your
+    team still solves <span class="tex2jax_process">$Num\_ AC =
+    2$</span> Accepted problems, but with the total penalty of
+    <span class="tex2jax_process">$270+300 = 570$</span>
+    minutes.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>7 0
+30 270 995 996 997 998 999
+</pre>
+</td>
+<td>
+<pre>2 330
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>7 1
+30 270 995 996 997 998 999
+</pre>
+</td>
+<td>
+<pre>2 570
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>7 2
+30 270 995 996 997 998 999
+</pre>
+</td>
+<td>
+<pre>0 0
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 4</th>
+<th>Sample Output 4</th>
+</tr>
+<tr>
+<td>
+<pre>3 0
+1 300 299
+</pre>
+</td>
+<td>
+<pre>2 301
+</pre>
+</td>
+</tr>
+</table>
+</div>

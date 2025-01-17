@@ -1,0 +1,127 @@
+<div class="problembody">
+<p>Luke likes to ride on public transit in different cities he
+    visits, just for fun. He tries to find unique ways to travel in
+    loops: leaving from one transit station, traveling along the
+    transit connections to at least one other station, and
+    returning to the station where he started. He is finding lots
+    of loops, and he wants to know just how many there are in
+    different transit systems. There may be so many he won’t ever
+    have time to try them all, but he’ll find some satisfaction in
+    knowing they are there.</p>
+<p>He’s particularly interested in counting <em>simple
+    loops</em>. A simple loop is a sequence of unique transit
+    stations <span class="tex2jax_process">$t_1, t_2, \ldots , t_
+    j$</span>, where there’s a way to connect directly from
+    <span class="tex2jax_process">$t_ i$</span> to <span class="tex2jax_process">$t_{i+1}$</span> for <span class="tex2jax_process">$1 \leq i &lt; j$</span> and also from
+    <span class="tex2jax_process">$t_ j$</span> to <span class="tex2jax_process">$t_1$</span>. Of course, we can write down a
+    simple loop starting with of the stations in the loop,
+    therefore we consider any cyclic shift of such a sequence to be
+    the same simple loop. However, two simple loops which visit the
+    same set of transit stations in a different order are
+    considered distinct.</p>
+<p>Help Luke by writing a program to count how many unique
+    simple loops there are in each transit system. The following
+    figures illustrate the transit stations (numbered ovals) and
+    one-way connections (arrows) of the sample input.</p>
+<center>
+<img alt="\includegraphics[width=0.35\textwidth ]{sampleInput1}" src="/problems/loopytransit/file/statement/en/img-0001.png" style="width:35.00%"/> <img alt="\includegraphics[width=0.35\textwidth ]{sampleInput2}" src="/problems/loopytransit/file/statement/en/img-0002.png" style="width:35.00%"/> <img alt="\includegraphics[width=0.2\textwidth ]{sampleInput3}" src="/problems/loopytransit/file/statement/en/img-0003.png" style="width:20.00%"/>
+</center>
+<h2>Input</h2>
+<p>Input contains a description of one transit system. The
+    description begins with a line containing an integer
+    <span class="tex2jax_process">$3 \leq m \leq 9$</span>
+    indicating the number of transit stations in the system.
+    Stations are numbered <span class="tex2jax_process">$0$</span>
+    to <span class="tex2jax_process">$m-1$</span>. The next line
+    contains an integer <span class="tex2jax_process">$1 \leq n
+    \leq m(m-1)$</span> indicating the number of connections that
+    follow, one connection per line. Each connection is a pair of
+    integers <span class="tex2jax_process">$s~ t$</span>
+    (<span class="tex2jax_process">$0 \leq s &lt; m$</span>,
+    <span class="tex2jax_process">$0 \leq t &lt; m$</span>,
+    <span class="tex2jax_process">$s \neq t$</span>), indicating
+    that there is a one-way connection from station <span class="tex2jax_process">$s$</span> to station <span class="tex2jax_process">$t$</span>.</p>
+<h2>Output</h2>
+<p>Print the number of unique simple loops in the transit
+    system.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5
+5
+0 1
+1 2
+2 3
+3 4
+4 2
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+8
+10
+0 1
+1 2
+2 3
+3 4
+4 5
+5 0
+2 6
+6 0
+3 7
+7 0
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+8
+0 1
+1 2
+2 3
+3 0
+1 0
+2 1
+3 2
+0 3
+</pre>
+</td>
+<td>
+<pre>
+6
+</pre>
+</td>
+</tr>
+</table>
+</div>

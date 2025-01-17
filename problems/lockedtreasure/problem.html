@@ -1,0 +1,67 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/lockedtreasure/file/statement/en/img-0001.png" class="illustration" src="/problems/lockedtreasure/file/statement/en/img-0001.png"/>
+<div class="description">
+        Picture from Wikimedia Commons
+      </div>
+</div>
+<p>A group of <span class="tex2jax_process">$n$</span>
+    (<span class="tex2jax_process">$1 \leq n \leq 30$</span>)
+    bandits hid their stolen treasure in a room. The treasure needs
+    to be locked away until there is a need to retrieve it. Since
+    the bandits do not trust each other, they wanted to ensure that
+    at least <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$1 \leq m \leq n$</span>) of the bandits must
+    agree in order to retrieve the treasure.</p>
+<p>They have decided to place multiple locks on the door such
+    that the door can be opened if and only if all the locks are
+    opened. Each lock may have up to <span class="tex2jax_process">$n$</span> keys, distributed to a subset of
+    the bandits. A group of bandits can open a particular lock if
+    and only if someone in the group has a key to that lock.</p>
+<p>Given <span class="tex2jax_process">$n$</span> and
+    <span class="tex2jax_process">$m$</span>, how many locks are
+    needed such that if the keys to the locks are distributed to
+    the bandits properly, then every group of bandits of size at
+    least <span class="tex2jax_process">$m$</span> can open all the
+    locks, and no smaller group of bandits can open all the
+    locks?</p>
+<p>For example, if <span class="tex2jax_process">$n = 3$</span>
+    and <span class="tex2jax_process">$m = 2$</span>, only 3 locks
+    are needed—keys to lock 1 can be given to bandits 1 and 2, keys
+    to lock 2 can be given to bandits 1 and 3, and keys to lock 3
+    can be given to bandits 2 and 3. No single bandit can open all
+    the locks, but any group of 2 bandits can open all the locks.
+    You should also convince yourself that it is not possible to
+    satisfy the requirements with only 2 locks.</p>
+<h2>Input</h2>
+<p>The first line of input contains a positive integer
+    indicating the number of cases to follow. Each case is
+    specified by the two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> on one line.</p>
+<h2>Output</h2>
+<p>For each line of input, print on one line the minimum number
+    of locks needed.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+4
+3 2
+5 1
+10 7
+5 3
+</pre>
+</td>
+<td>
+<pre>
+3
+1
+210
+10
+</pre>
+</td>
+</tr>
+</table>
+</div>

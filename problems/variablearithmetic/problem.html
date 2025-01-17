@@ -1,0 +1,77 @@
+<div class="problembody">
+<p>Computers are great at helping humans perform mathematical
+    operations. A person can define names (aka variables) to
+    represent numbers, and then write statements that have deeper
+    semantic meaning. For example, rather than ‘<span class="tex2jax_process">$3$</span> + <span class="tex2jax_process">$8$</span>’, one could write ‘length +
+    width’. Assuming the computer knows the correct values of the
+    variables length and width, the computer will arrive at the
+    correct answer.</p>
+<p>Write a program that allows a user to define integer
+    variables and enter arithmetic sums. The program should record
+    the variable definitions and re-print simplified versions of
+    the arithmetic sums. A variable definition has the following
+    format: <span class="tex2jax_process">$x = y$</span>, where
+    <span class="tex2jax_process">$x$</span> is the variable name,
+    and <span class="tex2jax_process">$y$</span> is a positive
+    integer. Each variable name is a sequence of lowercase
+    characters. An arithmetic sum is a sequence of variables and
+    positive integers separated by plus signs.</p>
+<p>Keep track of variable definitions (and re-definitions) over
+    time, as the user enters them. Each variable definition affects
+    subsequent statements which use that variable.</p>
+<p>Simplify the arithmetic statements as much as possible,
+    substituting the values for any variables that have been
+    previously defined. Then print the numeric value of the portion
+    of the statement that can be simplified, if it is non-zero
+    (with one exception, see below). Then, if any variables
+    referenced in the statement haven’t yet been defined, print
+    those in the order given in the input, with arithmetic
+    operations intact. If the numeric value is zero and there are
+    no undefined variables, then print <span class="tex2jax_process">$0$</span>.</p>
+<h2>Input</h2>
+<p>Input consists of a sequence of up to <span class="tex2jax_process">$2\, 000$</span> lines, where each line is a
+    variable definition or an arithmetic statement using integers
+    or variables. All variable names use <span class="tex2jax_process">$1$</span> to <span class="tex2jax_process">$15$</span> lowercase letters (a–z), and all
+    numbers are in the range <span class="tex2jax_process">$[0,100]$</span>. Arithmetic sums contain up
+    to <span class="tex2jax_process">$100$</span> terms, excluding
+    the plus signs. All input tokens are separated by single
+    spaces. The last test case is followed by a line containing
+    only the number <span class="tex2jax_process">$0$</span>.</p>
+<h2>Output</h2>
+<p>For each arithmetic statement, print a line with the
+    simplified form of that statement, following the guidelines
+    given earlier.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 + 2
+length + width + 3 + depth
+length = 3
+length + width + 3 + depth
+width = 7
+length + width + 3 + depth
+depth = 2
+length + width + 3 + depth
+depth = 1
+length + width + 3 + depth
+computercost + televisioncost
+0
+</pre>
+</td>
+<td>
+<pre>3
+3 + length + width + depth
+6 + width + depth
+13 + depth
+15
+14
+computercost + televisioncost
+</pre>
+</td>
+</tr>
+</table>
+</div>

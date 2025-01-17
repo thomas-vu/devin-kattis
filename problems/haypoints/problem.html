@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Each employee of a bureaucracy has a <em>job
+    description</em> – a few paragraphs that describe the
+    responsibilities of the job. The employee’s job description,
+    combined with other factors, such as seniority, is used to
+    determine his or her salary.</p>
+<p>The <em>Hay Point</em> system frees the Human Resources
+    department from having to make an intelligent judgement as to
+    the value of the employee; the job description is merely
+    scanned for words and phrases that indicate responsibility. In
+    particular, job descriptions that indicate control over a large
+    budget or management over a large number of people yield high
+    Hay Point scores.</p>
+<p>You are to implement a simplified Hay Point system. You will
+    be given a Hay Point dictionary and a number of job
+    descriptions. For each job description you are to compute the
+    salary associated with the job, according to the system.</p>
+<h2>Input</h2>
+<p>The first line of input contains 2 positive integers:
+    <span class="tex2jax_process">$m\leq 10\, 000$</span>, the
+    number of words in the Hay Point dictionary, and <span class="tex2jax_process">$n\leq 100$</span>, the number of job
+    descriptions. <span class="tex2jax_process">$m$</span> lines
+    follow; each contains a word (a string of up to <span class="tex2jax_process">$16$</span> lower-case letters) and a dollar
+    value (an integer between <span class="tex2jax_process">$0$</span> and <span class="tex2jax_process">$1\, 000\, 000$</span>). The <span class="tex2jax_process">$m$</span> words in the dictionary are
+    distinct. Following the dictionary are the <span class="tex2jax_process">$n$</span> job descriptions. Each job
+    description consists of between <span class="tex2jax_process">$1$</span> and <span class="tex2jax_process">$200$</span> lines of text; for your
+    convenience the text has been converted to lower case and has
+    no characters other than letters, numbers, and spaces. Each
+    line is at most <span class="tex2jax_process">$200$</span>
+    characters long. Each job description is terminated by a line
+    containing a period.</p>
+<h2>Output</h2>
+<p>For each job description, output the corresponding salary
+    computed as the sum of the Hay Point values for all words that
+    appear in the description. Words that do not appear in the
+    dictionary have a value of <span class="tex2jax_process">$0$</span>.</p>
+<p>You may assume that every answer is less than <span class="tex2jax_process">$2\, 000\, 000\, 000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+7 2
+administer 100000
+spending 200000
+manage 50000
+responsibility 25000
+expertise 100
+skill 50
+money 75000
+the incumbent will administer the spending of kindergarden milk money
+and exercise responsibility for making change he or she will share
+responsibility for the task of managing the money with the assistant
+whose skill and expertise shall ensure the successful spending exercise
+.
+this individual must have the skill to perform a heart transplant and
+expertise in rocket science
+.
+</pre>
+</td>
+<td>
+<pre>
+700150
+150
+</pre>
+</td>
+</tr>
+</table>
+</div>

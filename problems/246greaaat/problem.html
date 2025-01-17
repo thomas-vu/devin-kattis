@@ -1,0 +1,118 @@
+<div class="problembody">
+<p>Against her wishes, Rainbow Dash was put in charge of coach
+    the buckball halftime cheerleading squad. While she doesn’t
+    have the slightest care for cheerleading (she’d much rather
+    coach the team), she’s determined to give it her all to show
+    everypony in the squad how much she cares about them.</p>
+<div class="figure" id="a0000000004">
+<center>
+<img alt="\includegraphics[width=0.43\textwidth ]{TBO_RainbowCrowd.png}" src="/problems/246greaaat/file/statement/en/img-0001.png" style="width:43.00%"/>
+<div class="caption">
+<b>Figure 1</b>: Illustration by <a href="https://www.twitter.com/ModularPon/status/1271880016830164992/photo/1">
+          Kyle Coate</a>.
+        </div>
+</center>
+</div>
+<p>One of the most important things in cheerleading is
+    regulating the crowd’s <i class="itshape">level of
+    enthusiasm</i>. By instructing the squad to execute different
+    cheers, she can raise or lower this level; for example, less
+    lively cheers temper the level of enthusiasm, while other, more
+    exciting cheers raise it.</p>
+<p>At the beginning, the crowd’s level of enthusiasm is zero.
+    To prime the crowd for the second half of the game, she wants
+    the level of enthusiasm after all the cheers to be <i class="itshape">exactly</i> <span class="tex2jax_process">$T$</span>.
+    Note that it is possible for the crowd’s level of enthusiasm to
+    dip below zero or exceed <span class="tex2jax_process">$T$</span> in between the cheers.</p>
+<p>There are <span class="tex2jax_process">$N+1$</span> cheers
+    at Rainbow Dash’s disposal. The <span class="tex2jax_process">$i^\text {th}$</span> of these cheers changes
+    the level of enthusiasm by <span class="tex2jax_process">$S_
+    i$</span>, and has a level of difficulty <span class="tex2jax_process">$D_ i$</span>—a higher difficulty requires
+    more practice and is harder to execute correctly. The first of
+    these cheers is always a standard cheer with <span class="tex2jax_process">$S_1 = 1$</span> and <span class="tex2jax_process">$D_1 = 1$</span>; the other <span class="tex2jax_process">$N$</span> non-standard cheers are possibly
+    more complicated.</p>
+<p>Help Rainbow Dash plan out a sequence of cheers such that
+    the crowd’s level of enthusiasm after all the cheers is exactly
+    <span class="tex2jax_process">$T$</span>. Note that the same
+    cheer can be executed multiple times, and the order of the
+    cheers can be rearranged as necessary; moreover, the existence
+    of the standard cheer ensures that this goal is always
+    attainable.</p>
+<p>Among all such sequences, she wants the total level of
+    difficulty to be minimized in order to reduce the amount of
+    practice the squad will need—time is of the essence and we need
+    to make the most use of it. If a cheer appears multiple times
+    in the sequence, its level of difficulty must be included in
+    the total that many times.</p>
+<h2>Input</h2>
+<p>The first line of input contains two integers, <span class="tex2jax_process">$N$</span> (<span class="tex2jax_process">$0
+    \leq N \leq 500$</span>) and <span class="tex2jax_process">$T$</span> (<span class="tex2jax_process">$1
+    \leq T \leq 200\, 000$</span>), the number of non-standard
+    cheers at Rainbow Dash’s disposal and the required level of
+    enthusiasm, respectively.</p>
+<p>The next <span class="tex2jax_process">$N$</span> lines of
+    input contain the descriptions of the non-standard cheers. In
+    particular, the <span class="tex2jax_process">$i^\text
+    {th}$</span> of these lines contains two integers <span class="tex2jax_process">$S_{i+1}$</span> (<span class="tex2jax_process">$-T \leq S_{i+1} \leq T$</span>) and
+    <span class="tex2jax_process">$D_{i+1}$</span> (<span class="tex2jax_process">$1 \leq D_{i+1} \leq 10^9$</span>), denoting
+    that the <span class="tex2jax_process">$(i+1)^\text
+    {th}$</span> cheer changes the level of enthusiasm by
+    <span class="tex2jax_process">$S_{i+1}$</span> and has a level
+    of difficulty of <span class="tex2jax_process">$D_{i+1}$</span>.</p>
+<h2>Output</h2>
+<p>On the first line, output a single integer <span class="tex2jax_process">$c$</span>, the number of cheers in the
+    sequence.</p>
+<p>On the second line, output <span class="tex2jax_process">$c$</span> integers <span class="tex2jax_process">$d_1, d_2, \dots , d_ c$</span> (<span class="tex2jax_process">$1 \leq d_ i \leq N+1$</span>), denoting the
+    cheers the squad should execute. In particular, the
+    <span class="tex2jax_process">$i^\text {th}$</span> cheer the
+    squad should execute is the <span class="tex2jax_process">${d_
+    i}^\text {th}$</span> one. This sequence of cheers should
+    satisfy the stipulated requirements, and, among all such
+    sequences of cheers, have the minimum total level of
+    difficulty.</p>
+<p>If there are multiple correct answers, you can output any of
+    them.</p>
+<p>The input will be such that a solution exists with
+    <span class="tex2jax_process">$c \leq 200\, 000$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>3 20
+7 3
+10 8
+-2 1
+</pre>
+</td>
+<td>
+<pre>5
+1 2 2 2 4
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4 3333
+10 2
+100 3
+1000 4
+3333 3332
+</pre>
+</td>
+<td>
+<pre>12
+1 1 1 2 2 2 3 3 3 4 4 4
+</pre>
+</td>
+</tr>
+</table>
+</div>

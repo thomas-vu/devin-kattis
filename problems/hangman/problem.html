@@ -1,0 +1,109 @@
+<div class="problembody">
+<div class="illustration" style="width:35.00%">
+<img alt="/problems/hangman/file/statement/en/img-0001.png" class="illustration" src="/problems/hangman/file/statement/en/img-0001.png"/>
+<div class="description">
+        Image by <a href="https://www.shutterstock.com/image-illustration/illustration-hangman-game-386156509?src=TR5CgMWfNPvVvmMDx8_OlA-1-2">
+        Victoria M. Gardner (Shutterstock)</a>, Used under license
+      </div>
+</div>
+<p>Hangman is a (somewhat macabre) word-guessing game that can
+    be played by two people. Player <span class="tex2jax_process">$1$</span> thinks of a word consisting of
+    <span class="tex2jax_process">$n$</span> letters, and draws a
+    row of <span class="tex2jax_process">$n$</span> dashes on a
+    piece of paper. These dashes correspond to the letters of the
+    word, in the same order. Player <span class="tex2jax_process">$2$</span> then attempts to discover the word
+    by making a sequence of letter guesses. For each letter guessed
+    by Player <span class="tex2jax_process">$2$</span>:</p>
+<ul class="itemize">
+<li>
+<p>If the letter occurs one or more times in the word,
+        Player <span class="tex2jax_process">$1$</span> writes
+        the letter above each corresponding dash.</p>
+</li>
+<li>
+<p>If the letter does not occur in the word,
+        Player <span class="tex2jax_process">$1$</span> adds
+        one component to a drawing of a stick-figure man hanging on
+        a gallows. The drawing (initially empty) has <span class="tex2jax_process">$10$</span> possible components: base,
+        vertical beam, horizontal beam, rope, head, torso, right
+        leg, left leg, right arm, left arm.</p>
+</li>
+</ul>
+<p>If Player <span class="tex2jax_process">$2$</span>
+    guesses all the letters in the word before the drawing of the
+    hanging man is complete, then Player <span class="tex2jax_process">$2$</span> wins (and Player <span class="tex2jax_process">$1$</span> loses). Otherwise,
+    Player <span class="tex2jax_process">$2$</span> loses (and
+    Player <span class="tex2jax_process">$1$</span> wins).</p>
+<p>Ned loves playing hangman, especially as
+    Player <span class="tex2jax_process">$2$</span>, but he
+    finds that he is not a very good letter guesser. To improve his
+    chances, he decides to adopt a new strategy. For each word
+    selected by Player <span class="tex2jax_process">$1$</span>, Ned chooses a random permutation
+    of the letters of the alphabet, and then simply guesses letters
+    in that order until he either wins or loses. Given the word and
+    Ned’s permutation of the alphabet, determine the outcome of the
+    game.</p>
+<h2>Input</h2>
+<p>The input consists of two lines representing a single game
+    of Hangman. The first line contains the word to be guessed, a
+    non-empty string of uppercase English alphabet letters
+    (<tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>) of
+    maximum length <span class="tex2jax_process">$16$</span>. The
+    second line contains a permutation of the <span class="tex2jax_process">$26$</span> letters of the English alphabet,
+    also uppercase.</p>
+<h2>Output</h2>
+<p>If Ned wins the game by guessing letters in the order given
+    by the permutation (proceeding from left to right), output
+    “<tt class="ttfamily">WIN</tt>”. Otherwise, output “<tt class="ttfamily">LOSE</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>HANGMAN
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+</pre>
+</td>
+<td>
+<pre>WIN
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>BANANA
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+</pre>
+</td>
+<td>
+<pre>LOSE
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>RAINBOWS
+USIANBVLOJRKWXZCTQGHPFMYDE
+</pre>
+</td>
+<td>
+<pre>WIN
+</pre>
+</td>
+</tr>
+</table>
+</div>

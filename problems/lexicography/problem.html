@@ -1,0 +1,76 @@
+<div class="problembody">
+<p>An anagram of a string is any string that can be formed
+    using the same letters as the original. (We consider the
+    original string an anagram of itself as well.) For example, the
+    string ACM has the following 6 anagrams, as given in
+    alphabetical order:</p>
+<pre>
+ACM
+AMC
+CAM
+CMA
+MAC
+MCA
+</pre>
+<p>As another example, the string <tt class="ttfamily">ICPC</tt> has the following 12 anagrams (in
+    alphabetical order):</p>
+<pre>
+CCIP
+CCPI
+CICP
+CIPC
+CPCI
+CPIC
+ICCP
+ICPC
+IPCC
+PCCI
+PCIC
+PICC
+</pre>
+<p>Given a string and a rank <span class="tex2jax_process">$K$</span>, you are to determine the
+    <span class="tex2jax_process">$K^{\text {th}}$</span> such
+    anagram according to alphabetical order.</p>
+<h2>Input</h2>
+<p>The input is composed of <span class="tex2jax_process">$T$</span> test cases (<span class="tex2jax_process">$1 \leqslant T \leqslant 50$</span>).</p>
+<p>Each test case will be designated on a single line
+    containing the original word followed by the desired rank
+    <span class="tex2jax_process">$K$</span>. Words will use
+    uppercase letters (i.e., <tt class="ttfamily">A</tt> through
+    <tt class="ttfamily">Z</tt>) and will have length at most 16.
+    The value of <span class="tex2jax_process">$K$</span> will be
+    in the range from 1 to the number of distinct anagrams of the
+    given word.</p>
+<p>A line of the form <tt># 0</tt> designates the end of the
+    input.</p>
+<p><b class="bfseries">Warning:</b> The value of <span class="tex2jax_process">$K$</span> could be almost <span class="tex2jax_process">$2^{45}$</span> in the largest tests, so you
+    should use type <tt class="ttfamily">long</tt> in Java, or type
+    <tt class="ttfamily">long long</tt> in C++ to store
+    <span class="tex2jax_process">$K$</span>.</p>
+<h2>Output</h2>
+<p>For each test, display the <span class="tex2jax_process">$K^{\text {th}}$</span> anagram of the
+    original string.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+ACM 5
+ICPC 12
+REGION 274
+# 0
+</pre>
+</td>
+<td>
+<pre>
+MAC
+PICC
+IGNORE
+</pre>
+</td>
+</tr>
+</table>
+</div>

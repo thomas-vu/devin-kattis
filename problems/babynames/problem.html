@@ -1,0 +1,129 @@
+<div class="problembody">
+<p>Kattis is having a baby! O.o. However, she does not know
+    what to name her baby. Thankfully, her friends have many ideas,
+    giving suggestions for both genders.<br/></p>
+<p>Given <span class="tex2jax_process">$\textbf{N}$</span>
+    distinct baby name suggestions (each <i class="itshape">babyName</i> string consists of only UPPERCASE
+    alphabet characters of no more than <span class="tex2jax_process">$30$</span> characters) and the <i class="itshape">genderSuitability</i> of that name (integer
+    <span class="tex2jax_process">$\textbf{1}$</span> for
+    <span class="tex2jax_process">$\textbf{male}$</span> or integer
+    <span class="tex2jax_process">$\textbf{2}$</span> for
+    <span class="tex2jax_process">$\textbf{female}$</span>) and
+    given <span class="tex2jax_process">$\textbf{Q}$</span>
+    queries, tell Kattis how many baby names start with a prefix
+    that is inside a given query interval <span class="tex2jax_process">$[\textbf{start} \ldots
+    \textbf{end})$</span>, where <span class="tex2jax_process">$\textbf{start} &lt; \textbf{end}$</span>,
+    and both are strings.</p>
+<p><i class="itshape">Note: A prefix of a string <span class="tex2jax_process">$T = T_{0}T_{1} \ldots T_{n-1}$</span> is
+    string <span class="tex2jax_process">$P = T_{0}T_{1} \ldots
+    T_{m-1}$</span> where <span class="tex2jax_process">$m \le
+    n$</span></i><br/></p>
+<p>There will be <span class="tex2jax_process">$4$</span> types
+    of commands:</p>
+<ol class="enumerate">
+<li>
+<p><b class="bfseries">Stop</b>: This will be indicated by
+        a <span class="tex2jax_process">$0$</span>. Stop your
+        program upon encountering this.</p>
+</li>
+<li>
+<p><b class="bfseries">Add Suggestion</b>: This will be
+        indicated by a starting integer <span class="tex2jax_process">$1$</span> followed by a string <i class="itshape">babyName</i> and an integer <i class="itshape">genderSuitability</i>, e.g. <span class="tex2jax_process">$1$</span> SIMBA <span class="tex2jax_process">$1$</span>.</p>
+</li>
+<li>
+<p><b class="bfseries">Remove Suggestion</b>: This will be
+        indicated by a starting integer <span class="tex2jax_process">$2$</span> followed by a string:
+        <i class="itshape">babyName</i>, e.g. <span class="tex2jax_process">$2$</span> SIMBA. The <i class="itshape">babyName</i> is guaranteed to have already been
+        suggested earlier.</p>
+</li>
+<li>
+<p><b class="bfseries">Query</b>: This will be indicated by
+        a starting integer <span class="tex2jax_process">$3$</span>
+        followed by two strings: <i class="itshape">start</i>,
+        <i class="itshape">end</i>, and an integer <i class="itshape">genderSuitability</i>. Your job is to return the
+        number of names that is inside the interval <span class="tex2jax_process">$[\textbf{start} \ldots
+        \textbf{end})$</span> subject to the following
+        criteria.</p>
+<ul class="itemize">
+<li>
+<p>If <i class="itshape">genderSuitability</i> =
+            <span class="tex2jax_process">$0$</span>: report number
+            of names for both genders</p>
+</li>
+<li>
+<p>If <i class="itshape">genderSuitability</i> =
+            <span class="tex2jax_process">$1$</span>: report number
+            of male names</p>
+</li>
+<li>
+<p>If <i class="itshape">genderSuitability</i> =
+            <span class="tex2jax_process">$2$</span>: report number
+            of female names</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2>Input</h2>
+<p>Each line will be a certain command. The program terminates
+    when it encounters <span class="tex2jax_process">$0$</span>.
+    There are up to <span class="tex2jax_process">$200\,
+    000$</span> <i class="itshape">babyName</i> suggestions and
+    <span class="tex2jax_process">$Q$</span> is up to <span class="tex2jax_process">$500\, 000$</span>.</p>
+<h2>Output</h2>
+<p>Each time the <span class="tex2jax_process">$\textbf{Query}$</span> command is
+    encountered, the number of suitable names should be
+    printed.</p>
+<h2>Subtasks</h2>
+<ol class="enumerate">
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 20$</span>, <span class="tex2jax_process">$1 \le Q \le
+        10$</span>, and all baby names have distinct first
+        letters</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(30
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 20\, 000$</span>, <span class="tex2jax_process">$1 \le
+        Q \le 20\, 000$</span></p>
+</li>
+<li>
+<p><span class="tex2jax_process">$\textbf{(40
+        points)}$</span>: <span class="tex2jax_process">$1 \le N
+        \le 200\, 000$</span>, <span class="tex2jax_process">$1 \le
+        Q \le 500\, 000$</span></p>
+</li>
+</ol>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>1 KATTISJR 2
+1 OLIVER 1
+1 SIMBA 1
+3 A Z 0
+3 A Z 1
+3 A Z 2
+2 SIMBA
+3 A Z 0
+3 A Z 1
+3 A Z 2
+0
+</pre>
+</td>
+<td>
+<pre>3
+2
+1
+2
+1
+1
+</pre>
+</td>
+</tr>
+</table>
+</div>

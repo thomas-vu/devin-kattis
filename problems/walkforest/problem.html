@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Jimmy experiences a lot of stress at work these days,
+    especially since his accident made working difficult. To relax
+    after a hard day, he likes to walk home. To make things even
+    nicer, his office is on one side of a forest, and his house is
+    on the other. A nice walk through the forest, seeing the birds
+    and chipmunks is quite enjoyable.</p>
+<p>The forest is beautiful, and Jimmy wants to take a different
+    route everyday. He also wants to get home before dark, so he
+    always takes a path to make progress towards his house. He
+    considers taking a path from <span class="tex2jax_process">$A$</span> to <span class="tex2jax_process">$B$</span> to be progress if there exists a
+    route from <span class="tex2jax_process">$B$</span> to his home
+    that is shorter than any possible route from <span class="tex2jax_process">$A$</span>. Calculate how many different
+    routes through the forest Jimmy might take.</p>
+<h2>Input</h2>
+<p>Input contains several test cases (at most <span class="tex2jax_process">$10$</span>) followed by a line containing
+    <span class="tex2jax_process">$0$</span>. Jimmy has numbered
+    each intersection or joining of paths starting with
+    <span class="tex2jax_process">$1$</span>. His office is
+    numbered <span class="tex2jax_process">$1$</span>, and his
+    house is numbered <span class="tex2jax_process">$2$</span>. The
+    first line of each test case gives the number of intersections
+    <span class="tex2jax_process">$N$</span>, <span class="tex2jax_process">$1 &lt; N \le 1000$</span>, and the number of
+    paths <span class="tex2jax_process">$M$</span>. The following
+    <span class="tex2jax_process">$M$</span> lines each contain a
+    pair of intersections <span class="tex2jax_process">$a,
+    b$</span> and an integer distance <span class="tex2jax_process">$1 \le d \le 1000000$</span> indicating a
+    path of length <span class="tex2jax_process">$d$</span> between
+    intersection <span class="tex2jax_process">$a$</span> and a
+    different intersection <span class="tex2jax_process">$b$</span>. Jimmy may walk a path any
+    direction he chooses. There is at most one direct path between
+    any pair of intersections.</p>
+<h2>Output</h2>
+<p>For each test case, output a single integer indicating the
+    number of different routes through the forest. You may assume
+    that this number does not exceed <span class="tex2jax_process">$2147483647$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 6
+1 3 2
+1 4 2
+3 4 3
+1 5 12
+4 2 34
+5 2 24
+7 8
+1 3 1
+1 4 1
+3 7 1
+7 4 1
+7 5 1
+6 7 1
+5 2 1
+6 2 1
+0
+</pre>
+</td>
+<td>
+<pre>
+2
+4
+</pre>
+</td>
+</tr>
+</table>
+</div>

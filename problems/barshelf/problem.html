@@ -1,0 +1,111 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/barshelf/file/statement/en/img-0001.png" class="illustration" src="/problems/barshelf/file/statement/en/img-0001.png"/>
+<div class="description">
+        A perfectly civilised arrangement of bottles. Detail from
+        <em>Dictionnaire encyclopédique de l’épicerie et des
+        industries annexes</em> by Albert Seigneurie, 1904,
+        p. 117. Public domain.
+      </div>
+</div>
+<p>Organ pipes, the von Trapp children, staircases—oh, how
+    Quark loves these things. For they are neatly arranged
+    ascending order, the very signal of cleanliness, structure,
+    <em>civilisation</em>. Quark is your fellow bartender at
+    <em>Meson</em>, the longest bar in the galaxy. Were it up to
+    Quark, the bottles on the bar shelf would all be neatly and
+    properly ordered, left-to-right, and in ascending order.</p>
+<p>You disagree with Quark. As far as you can tell, the bar’s
+    patrons appreciate <em>Meson</em>’s welcoming atmosphere of
+    carefully orchestrated insouciance. Surely, a certain amount
+    messiness on the bar shelf is important for that image.</p>
+<p>This has led to long discussions between you and Quark about
+    how messy the shelf can be. He concedes that a bottle placed to
+    the left of one that is just slightly smaller doesn’t look very
+    messy at all. On the other hand, you have to admit that very
+    big size differences do look way too messy. Finally, you have
+    agreed on the following rule: Three bottles, not necessarily
+    adjacent, are a <em>messy trio</em> if the one to the left is
+    at least twice as large as the middle one, which in turn is at
+    least twice as large as the one to the right.</p>
+<p>For instance, in the image below, the bottles have height
+    <span class="tex2jax_process">$4$</span>, <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$2$</span>, <span class="tex2jax_process">$1$</span>, and <span class="tex2jax_process">$3$</span>, from left to right. The bottles
+    of height <span class="tex2jax_process">$4$</span>,
+    <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$1$</span> form a messy trio (because
+    <span class="tex2jax_process">$\frac12 \cdot 4 \geq 2\geq
+    2\cdot 1$</span>), and so do <span class="tex2jax_process">$5$</span>, <span class="tex2jax_process">$2$</span>, and <span class="tex2jax_process">$1$</span>. The messiness of the entire shelf
+    is the number of messy trios, in this case <span class="tex2jax_process">$2$</span>.</p>
+<p><img alt="\includegraphics[width= 0.3\textwidth ]{img/messy_bottles.png}" src="/problems/barshelf/file/statement/en/img-0002.png" style="width:30.00%"/></p>
+<h2>Input</h2>
+<p>The input consists of two lines. On the first line, the
+    number <span class="tex2jax_process">$n$</span> of bottles on
+    the shelf, with <span class="tex2jax_process">$n\geq 1$</span>.
+    On the second line, <span class="tex2jax_process">$n$</span>
+    integers, separated by space, giving the height (in nanometres)
+    of each bottle from left to right. Each height is an integer
+    between <span class="tex2jax_process">$1$</span> and
+    <span class="tex2jax_process">$10^9$</span>.</p>
+<h2>Output</h2>
+<p>Output a single integer: the messiness of the shelf. Note
+    that this number can be quite large, but no larger than
+    <span class="tex2jax_process">$\binom {n}{3}$</span>, which for
+    our largest input is bounded by <span class="tex2jax_process">$2 \cdot 10^{15}$</span>.</p>
+<h2>Scoring</h2>
+<p>Your score depends on the length of the shelf that you can
+    handle within the time limit. You get one point for
+    <span class="tex2jax_process">$n\leq 100$</span>, another for
+    <span class="tex2jax_process">$n\leq 5\, 000$</span>, and yet
+    another for <span class="tex2jax_process">$n\leq 200\,
+    000$</span>. The maximum score is <span class="tex2jax_process">$3$</span> points.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>5
+4 5 2 1 3
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>4
+10 5 5 2
+</pre>
+</td>
+<td>
+<pre>2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>3
+1 2 4
+</pre>
+</td>
+<td>
+<pre>0
+</pre>
+</td>
+</tr>
+</table>
+</div>

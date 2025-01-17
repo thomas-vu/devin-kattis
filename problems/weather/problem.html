@@ -1,0 +1,80 @@
+<div class="problembody">
+<div class="illustration" style="width:40.00%">
+<img alt="/problems/weather/file/statement/en/img-0001.jpg" class="illustration" src="/problems/weather/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>You have been hired by the Association for Climatological
+    Measurement, a scientific organization interested in tracking
+    global weather trends over a long period of time. Of course,
+    this is no easy task. They have deployed many small devices
+    around the world, designed to take periodic measurements of the
+    local weather conditions. These are cheap devices with somewhat
+    restricted capabilities. Every day they observe which of the
+    four standard kinds of weather occurred: <em>Sunny</em>,
+    <em>Cloudy</em>, <em>Rainy</em>, or <em>Frogs</em>. After every
+    <span class="tex2jax_process">$n$</span> of these observations
+    have been made, the results are reported to the main server for
+    analysis. However, the massive number of devices has caused the
+    available communication bandwidth to be overloaded. The
+    Association needs your help to come up with a method of
+    compressing these reports into fewer bits.
+
+    <p>For a particular device’s location, you may assume that the
+    weather each day is an independent random event, and you are
+    given the predicted probabilities of the four possible weather
+    types. Each of the <span class="tex2jax_process">$4^ n$</span>
+    possible weather reports for a device must be encoded as a
+    unique sequence of bits, such that no sequence is a prefix of
+    any other sequence (an important property, or else the server
+    would not know when each sequence ends). The goal is to use an
+    encoding that minimizes the expected number of transmitted
+    bits.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$1 \le n \le 20$</span>, the number of
+    observations that go into each report. The second line contains
+    four positive floating-point numbers, <span class="tex2jax_process">$p_{\text {sunny}}$</span>, <span class="tex2jax_process">$p_{\text {cloudy}}$</span>, <span class="tex2jax_process">$p_{\text {rainy}}$</span>, and <span class="tex2jax_process">$p_{\text {frogs}}$</span>, representing the
+    respective weather probabilities. These probabilities have at
+    most 6 digits after the decimal point and sum
+    to 1.</p>
+<h2>Output</h2>
+<p>Display the minimum expected number of bits in the encoding
+    of a report, with an absolute or relative error of at most
+    <span class="tex2jax_process">$10^{-4}$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+0.9 0.049999 0.05 0.000001
+</pre>
+</td>
+<td>
+<pre>
+1.457510
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+20
+0.25 0.25 0.25 0.25
+</pre>
+</td>
+<td>
+<pre>
+40.000000
+</pre>
+</td>
+</tr>
+</table>
+</div>

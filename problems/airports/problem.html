@@ -1,0 +1,125 @@
+<div class="problembody">
+<p>An airline company offers flights out of <span class="tex2jax_process">$n$</span> airports. The flight time between
+    any given pair of airports is known, but may differ on
+    direction due to things like wind or geography. Upon landing at
+    a given airport, a plane must be inspected before it can be
+    flown again. This inspection time is dependent on the airport
+    at which the inspection is taking place.</p>
+<p>Given a set of <span class="tex2jax_process">$m$</span>
+    flights that the airline company must realize, determine the
+    minimum number of planes that the company needs to purchase.
+    The airline may add unscheduled flights to move the airplanes
+    around if that would reduce the total number of planes
+    needed.</p>
+<h2>Input</h2>
+<p>Each input will consist of a single test case. Note that
+    your program may be run multiple times on different inputs. The
+    first line of input contains two integers <span class="tex2jax_process">$n$</span> and <span class="tex2jax_process">$m$</span> (<span class="tex2jax_process">$2
+    \le n, m \le 500$</span>). The next line contains <span class="tex2jax_process">$n$</span> space-separated nonnegative
+    integers less than or equal to <span class="tex2jax_process">$10^6$</span>, where the <span class="tex2jax_process">$i^{\text {th}}$</span> integer denotes the
+    amount of time (in minutes) that an inspection takes at airport
+    <span class="tex2jax_process">$i$</span>.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains <span class="tex2jax_process">$n$</span>
+    space-separated nonnegative integers less than or equal to
+    <span class="tex2jax_process">$10^6$</span>. On the
+    <span class="tex2jax_process">$i^{\text {th}}$</span> line, The
+    <span class="tex2jax_process">$j^{\text {th}}$</span> integer
+    indicates the amount of time it takes to fly from airport
+    <span class="tex2jax_process">$i$</span> to airport
+    <span class="tex2jax_process">$j$</span>. It takes no time to
+    fly from an airport to itself. Note that the flight time from
+    airport <span class="tex2jax_process">$i$</span> to
+    <span class="tex2jax_process">$j$</span> is not necessarily the
+    same as the flight time from airport <span class="tex2jax_process">$j$</span> to <span class="tex2jax_process">$i$</span>.</p>
+<p>The next <span class="tex2jax_process">$m$</span> lines
+    contain three space-separated integers, <span class="tex2jax_process">$s$</span>, <span class="tex2jax_process">$f$</span>, and <span class="tex2jax_process">$t$</span>, (<span class="tex2jax_process">$1
+    \le s, f \le n$</span>, <span class="tex2jax_process">$s \ne
+    f$</span>, <span class="tex2jax_process">$1 \le t \le
+    10^6)$</span> indicating that a flight must start at airport
+    <span class="tex2jax_process">$s$</span>, end at airport
+    <span class="tex2jax_process">$f$</span>, and fly out from
+    airport <span class="tex2jax_process">$s$</span> at exactly
+    time <span class="tex2jax_process">$t$</span> heading directly
+    to airport <span class="tex2jax_process">$f$</span>.</p>
+<h2>Output</h2>
+<p>Output a single positive integer indicating the minimum
+    number of planes the airline company must purchase in order to
+    realize the <span class="tex2jax_process">$m$</span> requested
+    flights.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+1 1
+0 1
+1 0
+1 2 1
+2 1 1
+</pre>
+</td>
+<td>
+<pre>
+2
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 2
+1 1
+0 1
+1 0
+1 2 1
+2 1 3
+</pre>
+</td>
+<td>
+<pre>
+1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+5 5
+72 54 71 94 23
+0 443 912 226 714
+18 0 776 347 810
+707 60 0 48 923
+933 373 881 0 329
+39 511 151 364 0
+4 2 174
+2 1 583
+4 3 151
+1 4 841
+4 3 993
+</pre>
+</td>
+<td>
+<pre>
+3
+</pre>
+</td>
+</tr>
+</table>
+</div>

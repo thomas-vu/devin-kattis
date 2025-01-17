@@ -1,0 +1,117 @@
+<div class="problembody">
+<div class="illustration" style="width:30.00%">
+<img alt="/problems/vefthjonatjon/file/statement/en/img-0001.jpg" class="illustration" src="/problems/vefthjonatjon/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        Image from <a href="https://flic.kr/p/4H1hyC">flickr.com</a>
+</div>
+</div>Bjarki has had his hands full setting up web servers for
+    NWERC and is borrowing <span class="tex2jax_process">$N$</span>
+    computers from the IT department of The University of Reykjavík
+    to do so. The problem, which Bjarki didn’t realize right away,
+    is that some of the computers are missing parts and thus he
+    can’t set up as many web servers as he intended.
+    <p>A web server needs three pieces to work: a CPU, memory and a
+    hard drive. If one or more of these are missing, the web server
+    won’t work.</p>
+<p>Bjarki had the idea that he could take parts from some of
+    the servers and put them into others. For example if one
+    webserver has a CPU and hard drive, but no memory, he could
+    take the memory from a different web server to make this one
+    work. Bjarki started to wonder how many web servers he could
+    get going by doing this.</p>
+<p>Could you help Bjarki figure out how many webservers he can
+    set up if he gives you a list of web servers and what parts are
+    missing from each?</p>
+<h2>Input</h2>
+<p>The first line contains an integer <span class="tex2jax_process">$n$</span>, the number of web servers Bjarki
+    has.<br/>
+    The next <span class="tex2jax_process">$n$</span> lines each
+    contain a description of a web server, each line containing
+    three letters which are either “J” or “N”.<br/>
+    The first letter in line <span class="tex2jax_process">$i$</span> denotes whether there is a CPU in
+    web server number <span class="tex2jax_process">$i$</span>,
+    second letter denotes whether there is memory present in web
+    server <span class="tex2jax_process">$i$</span> and finally the
+    third denotes whether there is a hard drive in web server
+    <span class="tex2jax_process">$i$</span>. “J” denotes that the
+    component is present while “N” denotes that it is not
+    present.</p>
+<h2>Output</h2>
+<p>Print the maximum number of web servers Bjarki can get
+    going.</p>
+<h2>Scoring</h2>
+<table cellspacing="0" class="tabular">
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>Group</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Points</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>Constraints</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black">
+<p>1</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          1000$</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>2</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p>50</p>
+</td>
+<td style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:left; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px">
+<p><span class="tex2jax_process">$1 \leq n \leq
+          10^5$</span></p>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>2
+J J N
+N N J
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>3
+J N N
+N J N
+N N J
+</pre>
+</td>
+<td>
+<pre>1
+</pre>
+</td>
+</tr>
+</table>
+</div>

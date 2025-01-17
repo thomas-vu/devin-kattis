@@ -1,0 +1,98 @@
+<div class="problembody">
+<div class="illustration" style="width:44.50%">
+<img alt="/problems/compass/file/statement/en/img-0001.jpg" class="illustration" src="/problems/compass/file/statement/en/img-0001.jpg"/>
+<div class="description">
+        cc-by NCPC 2016
+      </div>
+</div>Jonas is developing the JUxtaPhone and is tasked with
+    animating the compass needle. The API is simple: the compass
+    needle is currently in some direction
+    (between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$359$</span> degrees,
+    with north being <span class="tex2jax_process">$0$</span>,
+    east being <span class="tex2jax_process">$90$</span>), and
+    is being animated by giving the degrees to spin it. If the
+    needle is pointing north, and you give the compass an input
+    of <span class="tex2jax_process">$90$</span>, it will spin
+    clockwise (positive numbers mean clockwise direction) to stop
+    at east, whereas an input of <span class="tex2jax_process">$-45$</span> would spin it counterclockwise
+    to stop at north west.
+
+    <p>The compass gives the current direction the phone is
+    pointing and Jonas’ task is to animate the needle taking the
+    <em>shortest path</em> from the current needle direction to the
+    correct direction. Many <tt class="ttfamily">if</tt>s, moduli,
+    and even an arctan later, he is still not convinced his
+    <tt class="ttfamily">minimumDistance</tt> function is correct;
+    he calls you on the phone.</p>
+<h2>Input</h2>
+<p>The first line of input contains an integer <span class="tex2jax_process">$n_1$</span> (<span class="tex2jax_process">$0 \le n_1 \le 359$</span>), the current
+    direction of the needle. The second line of input contains an
+    integer <span class="tex2jax_process">$n_2$</span>
+    (<span class="tex2jax_process">$0 \le n_2 \le 359$</span>), the
+    correct direction of the needle.</p>
+<h2>Output</h2>
+<p>Output the change in direction that would make the needle
+    spin the shortest distance from <span class="tex2jax_process">$n_1$</span> to <span class="tex2jax_process">$n_2$</span>. A positive change indicates
+    spinning the needle clockwise, and a negative change indicates
+    spinning the needle counter-clockwise. If the two input numbers
+    are diametrically opposed, the needle should travel clockwise.
+    I.e., in this case, output <span class="tex2jax_process">$180$</span> rather than <span class="tex2jax_process">$-180$</span>.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+315
+45
+</pre>
+</td>
+<td>
+<pre>
+90
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>
+180
+270
+</pre>
+</td>
+<td>
+<pre>
+90
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>
+45
+270
+</pre>
+</td>
+<td>
+<pre>
+-135
+</pre>
+</td>
+</tr>
+</table>
+</div>

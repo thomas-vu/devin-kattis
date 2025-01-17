@@ -1,0 +1,72 @@
+<div class="problembody">
+<p>Match sticks can be used to form digital numbers. The
+    arrangement of matches that forms each digit between
+    ‘<tt class="tt">0</tt>’ and ‘<tt class="tt">9</tt>’ is
+    illustrated in the figure.</p>
+<div class="illustration" style="width:60.00%">
+<img alt="/problems/matchgame/file/statement/en/img-0001.jpg" class="illustration" src="/problems/matchgame/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>You are given two sequences of digits <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span>. There are matches that have been
+    arranged to form the digits in <span class="tex2jax_process">$X$</span>. Can you move <i class="it">exactly</i> one match from them, so that the resulting
+    matches form the other sequence <span class="tex2jax_process">$Y$</span>?</p>
+<h2>Input</h2>
+<p>The input contains one line with two sequences of digits
+    <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span>. It is guaranteed that
+    <span class="tex2jax_process">$X$</span> and <span class="tex2jax_process">$Y$</span> have the same length but are
+    different sequences. Each sequence contains digits between
+    ‘<tt class="tt">0</tt>’ and ‘<tt class="tt">9</tt>’ and has at
+    least one and no more than <span class="tex2jax_process">$12$</span> digits. A sequence may contain
+    leading zeros.</p>
+<h2>Output</h2>
+<p>Output “<tt class="tt">yes</tt>” if it is possible to move
+    exactly one match to change <span class="tex2jax_process">$X$</span> into <span class="tex2jax_process">$Y$</span>. Otherwise output “<tt class="tt">no</tt>”.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>60 58
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>046 040
+</pre>
+</td>
+<td>
+<pre>yes
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 3</th>
+<th>Sample Output 3</th>
+</tr>
+<tr>
+<td>
+<pre>1178 1140
+</pre>
+</td>
+<td>
+<pre>no
+</pre>
+</td>
+</tr>
+</table>
+</div>

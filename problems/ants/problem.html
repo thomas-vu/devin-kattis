@@ -1,0 +1,58 @@
+<div class="problembody">
+<div class="illustration" style="width:25.00%">
+<img alt="/problems/ants/file/statement/en/img-0001.jpg" class="illustration" src="/problems/ants/file/statement/en/img-0001.jpg"/>
+<div class="description"></div>
+</div>
+<p>An army of ants walk on a horizontal pole of length
+    <span class="tex2jax_process">$l$</span> cm, each with a
+    constant speed of <span class="tex2jax_process">$1$</span>
+    cm/s. When a walking ant reaches an end of the pole, it
+    immediatelly falls off it. When two ants meet they turn back
+    and start walking in opposite directions. We know the original
+    positions of ants on the pole, unfortunately, we do not know
+    the directions in which the ants are walking. Your task is to
+    compute the earliest and the latest possible times needed for
+    all ants to fall off the pole.</p>
+<h2>Input</h2>
+<p>The first line of input contains one integer giving the
+    number of cases that follow, at most 100. The data for each
+    case start with two integer numbers: the length <span class="tex2jax_process">$l$</span> of the pole (in cm) and
+    <span class="tex2jax_process">$n$</span>, the number of ants
+    residing on the pole. These two numbers are followed by
+    <span class="tex2jax_process">$n$</span> integers giving the
+    position of each ant on the pole as the distance measured from
+    the left end of the pole, in no particular order. All input
+    integers are between <span class="tex2jax_process">$0$</span>
+    and <span class="tex2jax_process">$1\, 000\, 000$</span> and
+    they are separated by whitespace.</p>
+<h2>Output</h2>
+<p>For each case of input, output two numbers separated by a
+    single space. The first number is the earliest possible time
+    when all ants fall off the pole (if the directions of their
+    walks are chosen appropriately) and the second number is the
+    latest possible such time.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2
+10 3
+2 6 7
+214 7
+11 12 7 13
+176 23 191
+</pre>
+</td>
+<td>
+<pre>
+4 8
+38 207
+</pre>
+</td>
+</tr>
+</table>
+</div>

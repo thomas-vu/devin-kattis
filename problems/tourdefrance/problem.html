@@ -1,0 +1,69 @@
+<div class="problembody">
+<p>A racing bicycle is driven by a chain connecting two
+    sprockets. Sprockets are grouped into two clusters: the front
+    cluster (typically consisting of 2 or 3 sprockets) and the rear
+    cluster (typically consisting of between 5 and 10 sprockets).
+    At any time the chain connects one of the front sprockets to
+    one of the rear sprockets. The drive ratio – the ratio of the
+    angular velocity of the pedals to that of the wheels – is
+    <span class="tex2jax_process">$n/m$</span> where <span class="tex2jax_process">$n$</span> is the number of teeth on the rear
+    sprocket and <span class="tex2jax_process">$m$</span> is the
+    number of teeth on the front sprocket. Two drive ratios
+    <span class="tex2jax_process">$d_1 &lt; d_2$</span> are
+    adjacent if there is no other drive ratio <span class="tex2jax_process">$d_1 &lt; d_3 &lt; d_2$</span>. The spread
+    between a pair of drive ratios <span class="tex2jax_process">$d_1 &lt; d_2$</span> is their quotient:
+    <span class="tex2jax_process">$d_2/d_1$</span>. You are to
+    compute the maximum spread between two adjacent drive ratios
+    achieved by a particular pair of front and rear clusters.</p>
+<h2>Input</h2>
+<p>Input consists of several test cases, followed by a line
+    containing 0. Each test case is specified by the following
+    input:</p>
+<ul class="itemize">
+<li>
+<p><span class="tex2jax_process">$f$</span>: the number of
+        sprockets in the front cluster;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$r$</span>: the number of
+        sprockets in the rear cluster;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$f$</span> integers, each
+        giving the number of teeth on one of the gears in the front
+        cluster;</p>
+</li>
+<li>
+<p><span class="tex2jax_process">$r$</span> integers, each
+        giving the number of teeth on one of the gears in the rear
+        cluster.</p>
+</li>
+</ul>
+<p>You may assume that no cluster has more than <span class="tex2jax_process">$10$</span> sprockets and that no gear has
+    fewer than <span class="tex2jax_process">$10$</span> or more
+    than <span class="tex2jax_process">$100$</span> teeth.</p>
+<h2>Output</h2>
+<p>For each test case, output the maximum spread rounded to two
+    decimal places.</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>
+2 4
+40 50
+12 14 16 19
+0
+</pre>
+</td>
+<td>
+<pre>
+1.19
+</pre>
+</td>
+</tr>
+</table>
+</div>

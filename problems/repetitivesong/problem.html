@@ -1,0 +1,114 @@
+<div class="problembody">
+<p>Your younger sibling is obsessed with a fairly repetitive
+    song. They claim that it is not repetitive, so you decided to
+    prove your point by finding the longest (in terms of the number
+    of words) subsequence of the song that your sibling cannot
+    definitively identify within the full song lyrics.</p>
+<p>More formally, a length-<span class="tex2jax_process">$\ell
+    $</span> subsequence of a song with <span class="tex2jax_process">$n$</span> words is a tuple of <span class="tex2jax_process">$\ell $</span> integers <span class="tex2jax_process">$1 \leq s_1 &lt; s_2 &lt; \cdots &lt; s_\ell
+    \leq n$</span> identifying the words in the subsequence. The
+    subsequence is non-identifiable if there exists a different
+    length-<span class="tex2jax_process">$\ell $</span> subsequence
+    <span class="tex2jax_process">$1 \leq t_1 &lt; t_2 &lt; \cdots
+    &lt; t_ L \leq n$</span> (with <span class="tex2jax_process">$s_ i \neq t_ i$</span> for at least one
+    index <span class="tex2jax_process">$i$</span>) where word
+    <span class="tex2jax_process">$s_1$</span> in the song is
+    identical to word <span class="tex2jax_process">$t_1$</span>,
+    word <span class="tex2jax_process">$s_2$</span> is identical to
+    word <span class="tex2jax_process">$t_2$</span>, etc.</p>
+<p>Given the lyrics for a song, print the length of the longest
+    non-identifiable subsequence.</p>
+<h2>Input</h2>
+<p>The first line of input contains a single integer
+    <span class="tex2jax_process">$n$</span> (<span class="tex2jax_process">$1 \le n \leq 10^5$</span>) specifying the
+    number of words in the song lyrics.</p>
+<p>Each of the next <span class="tex2jax_process">$n$</span>
+    lines contains one word of the song lyrics, given in order.
+    Each word consists of up to 20 uppercase (<tt class="ttfamily">A</tt>–<tt class="ttfamily">Z</tt>) and lowercase
+    (<tt class="ttfamily">a</tt>–<tt class="ttfamily">z</tt>)
+    letters. The same word may appear on multiple lines. If two
+    words do not match exactly (including the use of upper and
+    lower case) then they are considered to be different words.</p>
+<h2>Output</h2>
+<p>Output a single integer <span class="tex2jax_process">$\ell
+    $</span>, the number of words in the longest non-identifiable
+    song subsequence. If all of the song’s subsequences are
+    identifiable, print <span class="tex2jax_process">$0$</span>.
+    When determining if a subsequence is identifiable, treat two
+    words in the lyrics as identical if each of their corresponding
+    characters are identical (in other words, case <em>does</em>
+    matter).</p>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 1</th>
+<th>Sample Output 1</th>
+</tr>
+<tr>
+<td>
+<pre>10
+bow
+bow
+chick
+chicka
+chicka
+bow
+bow
+chick
+chicka
+chicka
+</pre>
+</td>
+<td>
+<pre>9
+</pre>
+</td>
+</tr>
+</table>
+<table class="sample" summary="sample data">
+<tr>
+<th>Sample Input 2</th>
+<th>Sample Output 2</th>
+</tr>
+<tr>
+<td>
+<pre>31
+head
+shoulders
+knees
+and
+toes
+knees
+and
+toes
+head
+shoulders
+knees
+and
+toes
+knees
+and
+toes
+eyes
+and
+ears
+and
+mouth
+and
+nose
+head
+shoulders
+knees
+and
+toes
+knees
+and
+toes
+</pre>
+</td>
+<td>
+<pre>29
+</pre>
+</td>
+</tr>
+</table>
+</div>
