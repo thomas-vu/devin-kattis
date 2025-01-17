@@ -21,7 +21,8 @@ def run_kattis_test(problem_dir):
             ['kattis', 'test'],
             cwd=str(problem_dir),
             capture_output=True,
-            text=True
+            text=True,
+            timeout=5
         )
 
         print(result.stdout)
@@ -49,6 +50,9 @@ def run_kattis_test(problem_dir):
         # All test cases must pass
         return test_cases > 0 and test_cases == correct_results
 
+    except subprocess.TimeoutExpired:
+        print(f"{RED}Error: Test timed out after 5 seconds{RESET}", file=sys.stderr)
+        return False
     except subprocess.SubprocessError as e:
         print(f"Error running tests for {problem_dir}: {e}", file=sys.stderr)
         return False
